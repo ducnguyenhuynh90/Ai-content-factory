@@ -159,25 +159,14 @@
       "act": "context",
       "narration": "To understand what happened, you have to look at the South Sea Company. It was founded in seventeen eleven to trade with South America, but its real business was government debt. In seventeen twenty it offered to swap the nation's debt for its own shares. And the shares began to climb.",
       "visual": {
-        "type": "timeline",
-        "title": "The South Sea Company",
-        "events": [
-          {
-            "year": "1711",
-            "text": "Company founded",
-            "cue": "founded"
-          },
-          {
-            "year": "1720",
-            "text": "Offers shares for the nation's debt",
-            "cue": "swap"
-          },
-          {
-            "year": "Summer 1720",
-            "text": "Shares near £1,000",
-            "cue": "climb"
-          }
-        ]
+        "type": "metaphor",
+        "kind": "ship",
+        "kicker": "Founded 1711",
+        "caption": "The South Sea Company",
+        "destination": "South America",
+        "cue": "America",
+        "cargo": "Real cargo: debt",
+        "cargo_cue": "debt"
       },
       "sources": [
         "ssc"
@@ -265,9 +254,14 @@
       "act": "story",
       "narration": "Newton owned shares early. And in the spring, as the price ran far ahead of anything the company could earn, he did the sensible thing. He sold, for a handsome profit.",
       "visual": {
-        "type": "statement",
+        "type": "metaphor",
+        "kind": "crowd",
+        "mode": "climb",
+        "hero": "Newton",
+        "cue": "sold",
+        "gain": "+ profit",
         "kicker": "Spring 1720",
-        "text": "Newton sells. A handsome profit.",
+        "caption": "Newton sells. A handsome profit.",
         "highlight": [
           "sells"
         ]
@@ -281,9 +275,13 @@
       "act": "turn",
       "narration": "Then he watched. His friends kept buying. The price kept rising. Every week, the people who had stayed in looked smarter than he did.",
       "visual": {
-        "type": "statement",
+        "type": "metaphor",
+        "kind": "crowd",
+        "mode": "watch",
+        "hero": "Newton",
+        "cue": "rising",
         "kicker": "Summer 1720",
-        "text": "Watching others win.",
+        "caption": "Watching others win.",
         "highlight": [
           "others win"
         ]
@@ -370,19 +368,32 @@
       "act": "complication",
       "narration": "Then came September. The bubble burst. By December, a share was worth under two hundred pounds.",
       "visual": {
-        "type": "stat",
-        "label": "One share, summer to December 1720",
-        "from": 1000,
-        "value": 185,
+        "type": "metaphor",
+        "kind": "bubble",
         "prefix": "£",
-        "note": "roughly four fifths of the value, gone",
-        "cue": "September"
+        "from": 1000,
+        "peak": 1000,
+        "to": 185,
+        "cue": "burst",
+        "after": "December 1720",
+        "kicker": "One share · 1720",
+        "caption": "The bubble bursts.",
+        "highlight": [
+          "bursts"
+        ]
       },
       "sources": [
         "harvard",
         "ssc"
       ],
-      "certainty": "estimate"
+      "certainty": "estimate",
+      "sfx": [
+        {
+          "kind": "pop",
+          "cue": "burst",
+          "gain_db": -2
+        }
+      ]
     },
     {
       "id": "b10",
@@ -432,11 +443,17 @@
       "act": "principle",
       "narration": "Lesson one. As Warren Buffett would later put it, price is what you pay, value is what you get. The South Sea Company never earned anything close to justifying a thousand pounds a share. When price runs far ahead of value, the gap eventually closes.",
       "visual": {
-        "type": "principle",
-        "n": 1,
-        "name": "Price is not value",
-        "line": "Price is what you pay; value is what you get.",
-        "line_cue": "price is what"
+        "type": "metaphor",
+        "kind": "balance",
+        "left": "Price",
+        "right": "Value",
+        "cue": "pay",
+        "close_cue": "closes",
+        "kicker": "Lesson 1",
+        "caption": "Price is not value",
+        "highlight": [
+          "not"
+        ]
       },
       "sources": [
         "buffett2008"
@@ -447,11 +464,17 @@
       "act": "principle",
       "narration": "Lesson two. The crowd is not evidence. Newton's own judgment told him to sell. What pulled him back was watching other people get rich. A rising price feels like proof. It isn't.",
       "visual": {
-        "type": "principle",
-        "n": 2,
-        "name": "The crowd is not evidence",
-        "line": "A rising price feels like proof. It isn't.",
-        "line_cue": "a rising price"
+        "type": "metaphor",
+        "kind": "crowd",
+        "mode": "follow",
+        "label": "£ ↑",
+        "hero_in_crowd": true,
+        "cue": "proof",
+        "kicker": "Lesson 2",
+        "caption": "The crowd is not evidence",
+        "highlight": [
+          "not"
+        ]
       }
     },
     {
@@ -459,11 +482,20 @@
       "act": "example",
       "narration": "Two centuries later, Benjamin Graham gave investors a defence. In nineteen forty nine he described a moody partner, Mr. Market, who offers you a price every day. Some days euphoric, some days despairing. You never have to accept his offer.",
       "visual": {
-        "type": "portrait",
-        "name": "Benjamin Graham",
-        "years": "1894 – 1976",
-        "role": "The Intelligent Investor, 1949",
-        "initials": "BG"
+        "type": "metaphor",
+        "kind": "mood",
+        "up_cue": "euphoric",
+        "down_cue": "despairing",
+        "decline_cue": "never",
+        "prices": [
+          "£££",
+          "£"
+        ],
+        "kicker": "Benjamin Graham · 1949",
+        "caption": "Meet Mr. Market",
+        "highlight": [
+          "Mr. Market"
+        ]
       },
       "sources": [
         "graham1949"
@@ -474,14 +506,36 @@
       "act": "principle",
       "narration": "Lesson three. Set your rules before the market tests them. Graham's rule was a margin of safety. Estimate what a business is worth, soberly, and only buy when the price sits well below it. Decide that in calm, and it protects you in the frenzy.",
       "visual": {
-        "type": "principle",
-        "n": 3,
-        "name": "Set your rules before the test",
-        "line": "Margin of safety: buy well below a sober estimate of value.",
-        "line_cue": "margin of safety"
+        "type": "metaphor",
+        "kind": "lock",
+        "title": "Margin of safety",
+        "items": [
+          {
+            "text": "Estimate value, soberly",
+            "cue": "estimate"
+          },
+          {
+            "text": "Buy well below it",
+            "cue": "only buy"
+          }
+        ],
+        "cue": "before",
+        "test_cue": "frenzy",
+        "kicker": "Lesson 3",
+        "caption": "Set your rules before the test",
+        "highlight": [
+          "before"
+        ]
       },
       "sources": [
         "graham1949"
+      ],
+      "sfx": [
+        {
+          "kind": "tick",
+          "cue": "before",
+          "gain_db": -2
+        }
       ]
     },
     {
@@ -529,8 +583,13 @@
       "act": "close",
       "narration": "Newton could predict the orbit of a comet. He could not predict his own reaction to watching other people get rich. That is the real risk in investing. Not the market. Us.",
       "visual": {
-        "type": "statement",
-        "text": "The real risk isn't the market. It's us.",
+        "type": "metaphor",
+        "kind": "mirror",
+        "cue": "Us",
+        "comet_cue": "comet",
+        "caption_cue": "real risk",
+        "label": "The risk",
+        "caption": "The real risk isn't the market. It's us.",
         "highlight": [
           "us"
         ]

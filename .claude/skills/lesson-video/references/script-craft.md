@@ -38,7 +38,7 @@ Learned from the hook-writing skill (thecraighewitt/skills) and HyperFrames' "fi
 | **Escalation** | 4-6 | The story step by step, each beat a little more surprising. Numbers, named specifics, a chart. AND… AND… |
 | **Complication** | 1-2 | BUT: the cost, the reversal, the irony. This is where the principle is born. |
 | **Truth vs. legend** | 0-1 | When the popular version is wrong, show both. It teaches source-thinking. |
-| **Principles** | 2-4 (lint) | THEREFORE: one beat per principle: name it in ≤ 6 words, then tie it to the story in one sentence, then generalise in one sentence. |
+| **Principles** | 2-4 (lint) | THEREFORE: one beat per principle, shown as a picture (§3b): name it in ≤ 6 words, then tie it to the story in one sentence, then generalise in one sentence. |
 | **Bridge / second case** | 0-1 | A later figure who solved the problem (e.g. Graham after Newton). Transfer needs a second example. |
 | **Retrieval question** (lint) | 1 | Pause and think: a new situation, 3 choices, 4-6 s countdown, then the answer. Testing beats re-reading. |
 | **Recap** (lint) | 1 | The principles again, in the same words. |
@@ -65,6 +65,38 @@ that… until finally… ever since…) for biographies; **And-But-Therefore** f
 - **Redundancy:** on-screen text = the key phrase or number, never the sentence being spoken (lint).
 - **Segmenting:** one scene per idea; the progress bar and series rail show where we are.
 - **Contiguity:** labels sit on the chart point they describe, not in a legend.
+
+## 3b. Show the idea: concrete metaphors (lint)
+
+Charts and numbers prove; pictures make an idea stick. Dual coding: an idea held as words and as an image is
+remembered far better than either alone, and the image is what the viewer replays later ("the scale tipping",
+"the people walking off the edge"). The test from HyperFrames' story guide: **watch the pictures with the sound
+off and they still tell the story.**
+
+- **Every principle is a picture** (lint), its name as the caption. Never a principle as words on a dark slide.
+- **Every turn of the story is a picture**: who did what, drawn with people and objects, not a sentence on screen.
+- **No three text-only scenes in a row** (lint): statement, stat, quote, compare and list are words; break the run
+  with a metaphor, a chart or a timeline.
+- **One metaphor per idea, and keep it.** If the crowd is people on a staircase of rising prices, it stays a staircase
+  when the hero steps off it and when he watches them climb. A recurring image is a promise the viewer can follow.
+- **The action lands on the word** (`cue`): the bubble bursts on "burst", the lock snaps on "before".
+- **Draw, don't fake.** Line art in the brand look; no generated likenesses of real people; no invented numbers on a
+  price tag (use £££ / £ when the picture means "high / low", not a figure).
+
+Library (`visual.type: "metaphor"`, `kind`):
+
+| Idea | kind | Key action (`cue`) |
+|---|---|---|
+| A price inflating, then collapsing | `bubble` (`from`/`peak`/`to`, `prefix`) | bursts; the number drops to its new value |
+| Following the crowd; selling early; watching others win | `crowd` (`mode`: `climb` · `watch` · `follow`, `hero`) | hero steps off with the profit · crowd keeps climbing with coins · the front walks off the edge |
+| Price vs value, hype, margin of safety | `balance` (`left`, `right`, `close_cue`) | the price side floats up as hype inflates · the gap closes |
+| Trade, expeditions, what a company really carries | `ship` (`destination`, `cargo`, `cargo_cue`) | the route reaches the destination · the real cargo is tagged |
+| Mr. Market, moods, emotional prices | `mood` (`up_cue`, `down_cue`, `decline_cue`, `prices`) | euphoric · despairing · "No, thanks" |
+| Rules made in calm, discipline, commitments | `lock` (`items`, `test_cue`) | the lock snaps shut · the frenzy strikes and the card holds |
+| The risk is us, self-knowledge, bias | `mirror` (`label`, `comet_cue`) | the reflection lights up |
+
+Missing an image the idea needs? Add a kind to `vfactory/lesson/metaphors.py` (same contract: SVG + GSAP, one key
+action on a cue, the picture above 70% of the height) rather than falling back to words.
 
 ## 4. Facts
 

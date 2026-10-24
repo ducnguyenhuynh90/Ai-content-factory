@@ -36,7 +36,11 @@ VISUALS = {
     "list": {"required": ["items"], "optional": ["title", "check"]},
     "question": {"required": ["question"], "optional": ["choices", "answer", "think_seconds"]},
     "end": {"required": ["title"], "optional": ["cta", "next", "sources_line", "disclaimer"]},
+    # the idea as a concrete moving picture (vfactory/lesson/metaphors.py); `cue` lands its key action
+    "metaphor": {"required": ["kind"], "optional": ["caption", "highlight", "kicker", "caption_cue", "cue"]},
 }
+METAPHORS = ("bubble", "crowd", "balance", "ship", "mood", "lock", "mirror")
+TEXT_ONLY = ("statement", "stat", "quote", "principle", "compare", "list")  # words or one number, no picture
 WPM = 150.0  # documentary narration pace (Vox guide; Kokoro at speed 0.95 lands close)
 
 
@@ -72,6 +76,8 @@ def validate(L: dict) -> None:
         for r in VISUALS[t]["required"]:
             if r not in v:
                 raise LessonError(f"{where}: visual '{t}' needs '{r}'")
+        if t == "metaphor" and v["kind"] not in METAPHORS:
+            raise LessonError(f"{where}: metaphor kind must be one of {METAPHORS}")
         for s in b.get("sources", []):
             if s not in src_ids:
                 raise LessonError(f"{where}: unknown source '{s}'")
@@ -112,6 +118,7 @@ def lint(L: dict) -> dict:
     principles = L.get("principles", [])
     if not 2 <= len(principles) <= 4:
         warns.append(f"{len(principles)} principles: aim for 2-4 (cognitive load); one big idea per lesson, its principles as steps")
+    warns += picture_warnings(beats)
     for b in beats:
         n = len(words(b["narration"]))
         if n > 70:
@@ -184,9 +191,32 @@ def hook_warnings(beats: list[dict]) -> list[str]:
     return w
 
 
+def picture_warnings(beats: list[dict]) -> list[str]:
+    """Charts prove numbers; pictures make ideas stick (dual coding; HyperFrames: watch the pictures alone and
+    they tell the same story). Every principle and every turn of the story should have a concrete image."""
+    w = []
+    types = [b["visual"]["type"] for b in beats]
+    narrated = [b for b in beats if b["narration"].strip()]
+    if len(narrated) >= 8 and "metaphor" not in types:
+        w.append("no visual metaphors: the lesson is all text and data; draw the ideas (visual type 'metaphor': "
+                 f"{', '.join(METAPHORS)})")
+    for b in beats:
+        if b["act"] == "principle" and b["visual"]["type"] == "principle":
+            w.append(f"{b['id']}: principle shown as words only; show it as a picture (metaphor) with the name as its caption")
+    run = []
+    for b in beats + [None]:
+        if b is not None and b["visual"]["type"] in TEXT_ONLY and b["act"] not in ("recap",):
+            run.append(b["id"])
+            continue
+        if len(run) >= 3:
+            w.append(f"{run[0]}..{run[-1]}: {len(run)} text-only scenes in a row; turn one into a picture (metaphor, chart or timeline)")
+        run = []
+    return w
+
+
 def _screen_text(v: dict) -> str:
     parts = []
-    for k in ("title", "text", "label", "subtitle", "name", "line", "question"):
+    for k in ("title", "text", "label", "subtitle", "name", "line", "question", "caption"):
         if isinstance(v.get(k), str):
             parts.append(v[k])
     for k in ("items",):

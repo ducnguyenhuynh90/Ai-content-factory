@@ -26,18 +26,20 @@ local Kokoro TTS; music is synthesized. Nothing is uploaded.
    `certainty`: `established`, `estimate`, `disputed` or `attributed`, and SAY the uncertainty in narration
    ("about", "historians estimate", "it's attributed to him"). Popular myths are gifts: correct them on camera.
    If a site can't be reached, say so and use what can be cross-checked; never invent a figure.
-4. **Write the hook first** (`references/script-craft.md` §0): three candidate hooks, each ≤ 16 words with a
+4. **Find the pictures.** For each idea, the concrete image that carries it (a bubble, a crowd on a staircase, a
+   scale, a lock) — pick from the metaphor library or add a kind. Keep one image per idea for the whole lesson.
+5. **Write the hook first** (`references/script-craft.md` §0): three candidate hooks, each ≤ 16 words with a
    paradox, a concrete anchor and stakes; pick the one whose picture can show it in frame 0. Then the open loop.
-5. **Write `lesson.json`** (`python -m vfactory.lesson new lessons/<series>/<nnn-slug> --title ...` scaffolds it;
+6. **Write `lesson.json`** (`python -m vfactory.lesson new lessons/<series>/<nnn-slug> --title ...` scaffolds it;
    schema in `vfactory/lesson/schema.py`). Follow the beat arc in `references/script-craft.md`.
-6. **Lint**: `python -m vfactory.lesson lint <lesson.json>`. Fix every error; treat warnings as notes from an
+7. **Lint**: `python -m vfactory.lesson lint <lesson.json>`. Fix every error; treat warnings as notes from an
    editor. It writes `script.md`, the approval view (beats, principles, sources). Show it to the person and
    wait for approval or edits unless they asked for no stops.
-7. **Build**: `python -m vfactory.lesson build <lesson.json> [--out DIR]` (draft render) → voice per beat, timing
+8. **Build**: `python -m vfactory.lesson build <lesson.json> [--out DIR]` (draft render) → voice per beat, timing
    from real audio length, scenes, mix, `hyperframes check` (must be clean), snapshots, render.
    Look at `build/hf/.hyperframes/artifacts/snapshots/*/contact-sheet-*.jpg`, then at frames decoded from the
    MP4 near the end of every scene (`python -m vfactory vision <mp4> --detail balanced`). Fix and rebuild.
-8. **Final**: `--final` for delivery quality. Report path, duration, resolution, LUFS, the sources list and
+9. **Final**: `--final` for delivery quality. Report path, duration, resolution, LUFS, the sources list and
    any claims marked estimate/disputed/attributed.
 
 ## Scene types (visual.type)
@@ -49,7 +51,13 @@ narration: a silent sting) · · `statement` (key phrase, highlighted words unde
 "attributed"` shows an ATTRIBUTED · NOT VERIFIED badge) · `portrait` (engraved medallion with initials — never a
 generated likeness of a real person) · `principle` · `compare` · `list` (recap with checks) · `question` (pause
 and think, countdown, answer) · `end` (next episode, CTA, sources, disclaimer).
+· `metaphor` (the idea as a moving picture, `kind`: `bubble`, `crowd`, `balance`, `ship`, `mood`, `lock`, `mirror`; its
+key action lands on `cue`, the key phrase is the `caption`; see `references/script-craft.md` §3b).
 `cue` fields name a word in that beat's narration; the visual lands when the word is spoken.
+
+**Pictures, not just numbers.** Charts prove; metaphors make the idea stick. Every principle and every turn of the
+story is a picture (lint), and no three text-only scenes run in a row (lint). Sound-off test: the pictures alone
+tell the story.
 
 ## Hard rules
 

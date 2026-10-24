@@ -90,8 +90,55 @@ def test_every_scene_type_renders_markup():
         assert f'data-composition-id="{b["id"]}"' in html and f'window.__timelines["{b["id"]}"]' in html
         assert "font-size:1px" not in html
         seen.add(b["visual"]["type"])
-    assert {"title", "chart", "timeline", "quote", "portrait", "principle", "question", "list", "end"} <= seen
+    assert {"title", "chart", "quote", "portrait", "question", "list", "end", "metaphor"} <= seen
+    for v in ({"type": "timeline", "events": [{"year": "1711", "text": "Founded"}]}, {"type": "principle", "n": 1, "name": "x"}):
+        assert "__timelines" in scenes.scene_file(look, "zz", v, 6.0, lambda w, d: d, 5.0, last=False)
     assert look.fs(0.01) >= 28  # type floor
+
+
+METAPHOR_CASES = [
+    {"kind": "bubble", "prefix": "£", "from": 128, "peak": 1000, "to": 185, "cue": "burst", "after": "Dec"},
+    {"kind": "crowd", "mode": "climb", "hero": "Newton", "cue": "sold"},
+    {"kind": "crowd", "mode": "watch", "hero": "Newton", "cue": "rising"},
+    {"kind": "crowd", "mode": "follow", "cue": "proof", "hero_in_crowd": True},
+    {"kind": "balance", "cue": "pay", "close_cue": "closes"},
+    {"kind": "balance"},
+    {"kind": "ship", "destination": "South America", "cargo": "Debt", "cue": "America", "cargo_cue": "debt"},
+    {"kind": "mood", "up_cue": "euphoric", "down_cue": "despairing", "decline_cue": "never"},
+    {"kind": "mood"},
+    {"kind": "lock", "items": ["a", {"text": "b", "cue": "b"}], "cue": "before", "test_cue": "frenzy"},
+    {"kind": "mirror", "cue": "us", "comet_cue": "comet"},
+]
+
+
+@pytest.mark.parametrize("v", METAPHOR_CASES, ids=lambda v: v["kind"] + "-" + v.get("mode", ""))
+def test_every_metaphor_renders(v):
+    from vfactory.lesson import metaphors
+    look = scenes.Look({"font": "Inter"}, 1440, 1080)
+    v = {"type": "metaphor", "caption": "Price is not value", "highlight": ["not"], "kicker": "Lesson 1", **v}
+    html = scenes.scene_file(look, "m1", v, 9.0, lambda w, d: d, 8.0, last=False)
+    assert '<svg id="m1-svg"' in html and 'window.__timelines["m1"]' in html
+    assert "nan" not in html.lower().replace("nanosec", "")  # no broken geometry
+    assert "repeat: -1" not in html  # HyperFrames: finite repeats only
+    assert set(metaphors.KINDS) == set(schema.METAPHORS)
+
+
+def test_lint_asks_for_pictures():
+    L = _mini()
+    L["beats"] += [{"id": f"s{i}", "act": "story", "narration": "And then it rose.", "visual": {"type": "statement", "text": "x"}}
+                   for i in range(5)]
+    L["beats"].append({"id": "p1", "act": "principle", "narration": "Lesson one.", "visual": {"type": "principle", "n": 1, "name": "x"}})
+    w = schema.lint(L)["warnings"]
+    assert any("no visual metaphors" in x for x in w)
+    assert any("p1: principle shown as words only" in x for x in w)
+    assert any("text-only scenes in a row" in x for x in w)
+    L["beats"][-1]["visual"] = {"type": "metaphor", "kind": "balance", "caption": "x"}
+    L["beats"][6]["visual"] = {"type": "metaphor", "kind": "crowd", "mode": "follow"}
+    w = schema.lint(L)["warnings"]
+    assert not any("metaphor" in x or "text-only" in x for x in w)
+    L["beats"][6]["visual"]["kind"] = "unicorn"
+    with pytest.raises(schema.LessonError):
+        schema.validate(L)
 
 
 def test_hook_rules_reject_slow_title_first_openings():

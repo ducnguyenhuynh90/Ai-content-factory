@@ -213,6 +213,8 @@ def script_markdown(L: dict) -> str:
     for b in L["beats"]:
         v = b["visual"]
         screen = v.get("title") or v.get("text") or v.get("name") or v.get("question") or v.get("label") or v["type"]
+        if v["type"] == "metaphor":  # the picture first: that's what the reviewer has to imagine
+            screen = f"{v['kind']}{' (' + v['mode'] + ')' if v.get('mode') else ''} — {v.get('caption', '')}"
         flag = f" _({b['certainty']})_" if b.get("certainty") in ("disputed", "attributed", "estimate") else ""
         rows.append(f"| {b['id']} | {b['act']} | {b['narration']}{flag} | {v['type']}: {screen} |")
     rep = schema.lint(L)

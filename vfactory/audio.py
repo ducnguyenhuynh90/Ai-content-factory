@@ -98,7 +98,20 @@ def tick(seed: int = 4) -> tuple[np.ndarray, float]:
     return _normalize(np.stack([y, y], axis=1), -12), 0.0
 
 
-SFX = {"whoosh": whoosh, "hit": hit, "riser": riser, "tick": tick}
+def pop(seed: int = 5) -> tuple[np.ndarray, float]:
+    """A bubble bursting: a bright snap with a short airy tail."""
+    rng = np.random.default_rng(seed)
+    n = int(SR * 0.35)
+    t = np.arange(n) / SR
+    snap = _noise(n, rng) * np.exp(-t * 140)
+    f = 900 * np.exp(-t * 30) + 220
+    tone = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t * 45) * 0.7
+    air = _lowpass(_noise(n, rng), 0.25) * np.exp(-t * 14) * 0.35
+    y = snap + tone + air
+    return _normalize(np.stack([y, y], axis=1), -4), 0.0
+
+
+SFX = {"whoosh": whoosh, "hit": hit, "riser": riser, "tick": tick, "pop": pop}
 
 
 def _normalize(x: np.ndarray, peak_db: float) -> np.ndarray:

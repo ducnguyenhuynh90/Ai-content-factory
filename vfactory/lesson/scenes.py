@@ -415,7 +415,30 @@ def hook(L, sid, v, dur, cue):
     return m, css, tw
 
 
-GENERATORS = {"hook": hook, "title": title, "statement": statement, "stat": stat, "chart": chart, "timeline": timeline, "quote": quote,
+def metaphor(L, sid, v, dur, cue):
+    """The idea as a picture (see metaphors.py), with its key phrase as a caption under it."""
+    from . import metaphors as M
+    svg, css, tw = M.KINDS[v["kind"]](L, sid, v, dur, cue)
+    cap = E(v.get("caption", ""))
+    for i, h in enumerate(v.get("highlight") or []):
+        hh = E(h)
+        if hh in cap:
+            cap = cap.replace(hh, f'<span class="acc">{hh}</span>', 1)
+    m = f"""<div id="{sid}-c" style="position:absolute;inset:0;">
+      <svg id="{sid}-svg" width="{L.w}" height="{L.h}" viewBox="0 0 {L.w} {L.h}" style="position:absolute;left:0;top:0;overflow:visible">{svg}</svg>
+      <div id="{sid}-cap" style="position:absolute;left:{L.px(0.08)}px;right:{L.px(0.08)}px;top:{int(L.h * 0.74)}px;text-align:center;">
+        {f'<div id="{sid}-k" class="kicker" style="margin-bottom:{L.px(0.018)}px">{E(v["kicker"])}</div>' if v.get('kicker') else ''}
+        {f'<div id="{sid}-t" class="serif" style="font-size:{L.fs(0.062)}px;line-height:1.15;text-wrap:balance;">{cap}</div>' if cap else ''}</div></div>"""
+    at = cue(v["caption_cue"], 0.5) if v.get("caption_cue") else 0.35
+    tw = list(tw)
+    if v.get("kicker"):
+        tw.append(_fade(f"#{sid}-k", 0.15))
+    if cap:
+        tw.append(_rise(f"#{sid}-t", at, 0.6, 20))
+    return m, M.base_css(L, sid) + css, tw
+
+
+GENERATORS = {"metaphor": metaphor, "hook": hook, "title": title, "statement": statement, "stat": stat, "chart": chart, "timeline": timeline, "quote": quote,
               "portrait": portrait, "principle": principle, "compare": compare, "list": list_, "question": question, "end": end}
 
 
