@@ -1,0 +1,10 @@
+{
+  "primary_color": "#FF4F00",
+  "secondary_color": "#0E0E0E",
+  "font": "Inter",
+  "source": "chosen by the editor at the director's request (Chris Do-style principles: reduced palette, high contrast, one ownable accent); edit freely",
+  "updated": "2026-10-24T08:07:42",
+  "caption_accent": "#FF4F00",
+  "text_color": "#FFFFFF",
+  "rationale": "Signal orange accent on a rich off-black foundation; Inter for legibility at reel sizes."
+}

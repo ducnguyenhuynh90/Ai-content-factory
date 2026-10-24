@@ -144,12 +144,12 @@ def captions_scene(words: list[dict], *, width: int, height: int, duration: floa
             cls = "w em" if wi == emph else "w"
             spans.append(f'<span id="cw{gi}-{wi}" class="{cls}">{html.escape(txt)}</span>')
         parts.append(f'<div id="cg{gi}" class="group clip" data-start="{start:.3f}" data-duration="{end - start:.3f}">'
-                     f'<div id="cgi{gi}" class="inner">{" ".join(spans)}</div></div>')
+                     f'<div id="cgi{gi}" class="inner">{"".join(spans)}</div></div>')  # spacing via CSS, not whitespace nodes
         rel_end = end - start
         tweens.append(f'tl.fromTo("#cgi{gi}", {{opacity: 0, y: 14}}, {{opacity: 1, y: 0, duration: 0.14, ease: "power3.out"}}, {start:.3f});')
         if emph is not None:
             wt = max(start, g[emph]["start"])
-            tweens.append(f'tl.fromTo("#cw{gi}-{emph}", {{scale: 1}}, {{scale: 1.08, duration: 0.12, ease: "back.out(2)"}}, {wt:.3f});')
+            tweens.append(f'tl.fromTo("#cw{gi}-{emph}", {{y: 0}}, {{y: -6, duration: 0.14, ease: "back.out(2)"}}, {wt:.3f});')  # a lift, not a scale: scaling crowds neighbours
         tweens.append(f'tl.fromTo("#cgi{gi}", {{opacity: 1}}, {{opacity: 0, duration: 0.1, ease: "power2.in", immediateRender: false}}, {start + rel_end - 0.1:.3f});')
     scrim_css = ("background: rgba(0,0,0,0.38); padding: 6px 18px; border-radius: 14px;" if scrim else "")
     return f"""<template>
@@ -162,6 +162,7 @@ def captions_scene(words: list[dict], *, width: int, height: int, duration: floa
       font-size: {size}px; line-height: 1.12; color: {text_color}; {scrim_css}
       text-shadow: 0 2px 10px rgba(0,0,0,0.45); }}
     #captions .w {{ display: inline-block; }}
+    #captions .w + .w {{ margin-left: 0.27em; }}
     #captions .em {{ color: {accent}; }}
   </style>
   <div id="root" data-composition-id="captions" data-width="{width}" data-height="{height}">
