@@ -61,6 +61,8 @@ Override anything per film: `"look_overrides": {"grain": 0, "letterbox": null, "
 |---|---|
 | `.claude/skills/video-factory` | Creative-director workflow: inventory → look → first cut → direct the recipe → preview → self-review → final |
 | `.claude/skills/video-vision` | Let Claude *see* a video: structure first (cuts, silences, motion, exposure, loudness), then a budgeted set of timestamped scene-aware frames, a filmstrip, and filmstrip+waveform drill-downs (`vision`, `vision-timeline`) |
+| `.claude/skills/lesson-video` | Research → script (lint enforces misconception-first, retrieval question, recap, sourced facts, spoken uncertainty) → local voice → HyperFrames scenes → render |
+| `.claude/skills/video-editor` | Your persistent editor for raw recordings: protected originals, Whisper transcript, retakes, pauses, reframing, brand captions, edit log |
 | `.claude/skills/trend-research` | What's trending in the last N days across Reddit, Hacker News, YouTube and GitHub → stories clustered across platforms → Claude judges and writes video concepts (hook, format, look, opening, ending) |
 
 ```bash
@@ -85,6 +87,21 @@ python -m vfactory trends "ai video editing" --days 30 --subreddit editors
 
 Full rules: [`docs/CREATIVE_PLAYBOOK.md`](docs/CREATIVE_PLAYBOOK.md). What we learned from other projects:
 [`docs/RESEARCH.md`](docs/RESEARCH.md).
+
+## Lesson videos (`python -m vfactory.lesson`)
+
+Story-driven 3–5 minute lessons (4:3 by default) on any topic, written with learning-science rules and fact
+sources, narrated locally with Kokoro TTS and animated with HyperFrames (charts that draw themselves, timelines,
+quotes with "attributed" badges, principles, a pause-and-think question, recap, end card).
+
+```bash
+pip install -e .[lesson]
+python -m vfactory.lesson lint  lessons/investing/001-newton-south-sea-bubble/lesson.json   # -> script.md for approval
+python -m vfactory.lesson build lessons/investing/001-newton-south-sea-bubble/lesson.json --final
+```
+
+Craft rules: `.claude/skills/lesson-video/references/script-craft.md`; investing series bible:
+`.claude/skills/lesson-video/references/investing-series.md`.
 
 ## Captions
 

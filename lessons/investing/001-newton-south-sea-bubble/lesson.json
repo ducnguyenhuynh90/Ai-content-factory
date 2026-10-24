@@ -1,0 +1,514 @@
+{
+  "meta": {
+    "series": "Lessons from Market History · No. 1",
+    "title": "The Genius and the Bubble",
+    "subtitle": "What Isaac Newton's worst trade teaches every investor",
+    "topic": "investing",
+    "angle": "history",
+    "audience": "curious beginners who want principles, not tips",
+    "aspect": "4:3",
+    "target_minutes": [
+      3,
+      5
+    ],
+    "voice": "bm_george",
+    "speed": 0.95,
+    "music": "reflective",
+    "disclaimer": "Educational content only, not financial advice. Historical prices are approximate.",
+    "learning_goals": [
+      "Explain the difference between price and value with a real historical example",
+      "Recognise how watching others profit can override your own analysis",
+      "Describe Benjamin Graham's margin of safety and why rules must be set before the market tests them"
+    ]
+  },
+  "sources": [
+    {
+      "id": "odlyzko2019",
+      "cite": "Andrew Odlyzko, 'Newton's financial misadventures in the South Sea Bubble', Notes and Records of the Royal Society 73(1), 2019",
+      "url": "https://www-users.cse.umn.edu/~odlyzko/doc/mania13.pdf"
+    },
+    {
+      "id": "harvard",
+      "cite": "Harvard Business School, Baker Library: The South Sea Bubble, 'The Crash'",
+      "url": "https://curiosity.lib.harvard.edu/south-sea-bubble/feature/the-crash"
+    },
+    {
+      "id": "ssc",
+      "cite": "South Sea Company (founded 1711; 1720 national debt conversion scheme)",
+      "url": "https://en.wikipedia.org/wiki/South_Sea_Company"
+    },
+    {
+      "id": "mint",
+      "cite": "Isaac Newton: Warden (1696) and Master (1700-1727) of the Royal Mint",
+      "url": "https://en.wikipedia.org/wiki/Isaac_Newton"
+    },
+    {
+      "id": "graham1949",
+      "cite": "Benjamin Graham, The Intelligent Investor (1949): 'Mr. Market' and 'Margin of Safety'",
+      "url": ""
+    },
+    {
+      "id": "buffett2008",
+      "cite": "Warren Buffett, Berkshire Hathaway shareholder letter, 2008: 'Price is what you pay; value is what you get.'",
+      "url": "https://www.berkshirehathaway.com/letters/2008ltr.pdf"
+    }
+  ],
+  "principles": [
+    {
+      "name": "Price is not value",
+      "line": "When price runs far ahead of what a business can earn, the gap eventually closes."
+    },
+    {
+      "name": "The crowd is not evidence",
+      "line": "Other people getting rich is a feeling, not a fact about the asset."
+    },
+    {
+      "name": "Set your rules before the test",
+      "line": "A margin of safety, decided in calm, protects you from yourself in the frenzy."
+    }
+  ],
+  "beats": [
+    {
+      "id": "b01",
+      "act": "hook",
+      "narration": "In the spring of seventeen twenty, the smartest man in England made a fortune in the stock market. Then he gave it back. And then some.",
+      "visual": {
+        "type": "title",
+        "kicker": "Lessons from Market History · No. 1",
+        "title": "The Genius and the Bubble",
+        "subtitle": "What Isaac Newton's worst trade teaches every investor"
+      },
+      "sources": [
+        "odlyzko2019"
+      ]
+    },
+    {
+      "id": "b02",
+      "act": "misconception",
+      "narration": "We like to believe bubbles only catch fools. That intelligence is protection. That if you understand money, the crowd can't fool you. This story says otherwise.",
+      "visual": {
+        "type": "statement",
+        "kicker": "The myth",
+        "text": "Bubbles only catch fools.",
+        "highlight": [
+          "fools"
+        ]
+      }
+    },
+    {
+      "id": "b03",
+      "act": "context",
+      "narration": "Isaac Newton gave us gravity, calculus and the laws of motion. But by seventeen twenty he also ran the Royal Mint. He understood money better than almost anyone alive.",
+      "visual": {
+        "type": "portrait",
+        "name": "Isaac Newton",
+        "years": "1643 – 1727",
+        "role": "Master of the Royal Mint",
+        "initials": "IN"
+      },
+      "sources": [
+        "mint"
+      ]
+    },
+    {
+      "id": "b04",
+      "act": "context",
+      "narration": "To understand what happened, you have to look at the South Sea Company. It was founded in seventeen eleven to trade with South America, but its real business was government debt. In seventeen twenty it offered to swap the nation's debt for its own shares. And the shares began to climb.",
+      "visual": {
+        "type": "timeline",
+        "title": "The South Sea Company",
+        "events": [
+          {
+            "year": "1711",
+            "text": "Company founded",
+            "cue": "founded"
+          },
+          {
+            "year": "1720",
+            "text": "Offers shares for the nation's debt",
+            "cue": "swap"
+          },
+          {
+            "year": "Summer 1720",
+            "text": "Shares near £1,000",
+            "cue": "climb"
+          }
+        ]
+      },
+      "sources": [
+        "ssc"
+      ]
+    },
+    {
+      "id": "b05",
+      "act": "story",
+      "narration": "In January, a share cost about a hundred and twenty eight pounds. By early summer it traded around a thousand. Nothing about the company's actual business had changed that much.",
+      "visual": {
+        "type": "chart",
+        "title": "South Sea stock, 1720 (approximate, £ per share)",
+        "unit": "£",
+        "points": [
+          [
+            "Jan",
+            128
+          ],
+          [
+            "Feb",
+            170
+          ],
+          [
+            "Mar",
+            330
+          ],
+          [
+            "Apr",
+            340
+          ],
+          [
+            "May",
+            550
+          ],
+          [
+            "Jun",
+            1000
+          ],
+          [
+            "Jul",
+            950
+          ],
+          [
+            "Aug",
+            800
+          ],
+          [
+            "Sep",
+            300
+          ],
+          [
+            "Oct",
+            210
+          ],
+          [
+            "Nov",
+            200
+          ],
+          [
+            "Dec",
+            185
+          ]
+        ],
+        "annotations": [
+          {
+            "at": 0,
+            "text": "£128",
+            "cue": "January"
+          },
+          {
+            "at": 5,
+            "text": "~£1,000",
+            "cue": "thousand"
+          }
+        ]
+      },
+      "sources": [
+        "harvard",
+        "ssc"
+      ],
+      "certainty": "estimate"
+    },
+    {
+      "id": "b06",
+      "act": "story",
+      "narration": "Newton owned shares early. And in the spring, as the price ran far ahead of anything the company could earn, he did the sensible thing. He sold, for a handsome profit.",
+      "visual": {
+        "type": "statement",
+        "kicker": "Spring 1720",
+        "text": "Newton sells. A handsome profit.",
+        "highlight": [
+          "sells"
+        ]
+      },
+      "sources": [
+        "odlyzko2019"
+      ]
+    },
+    {
+      "id": "b07",
+      "act": "turn",
+      "narration": "Then he watched. His friends kept buying. The price kept rising. Every week, the people who had stayed in looked smarter than he did.",
+      "visual": {
+        "type": "statement",
+        "kicker": "Summer 1720",
+        "text": "Watching others win.",
+        "highlight": [
+          "others win"
+        ]
+      }
+    },
+    {
+      "id": "b08",
+      "act": "complication",
+      "narration": "So in June, near the very top, Newton bought back in, at roughly twice the price he had sold at. And according to historian Andrew Odlyzko, it was not a small bet. Much of his fortune went in.",
+      "visual": {
+        "type": "chart",
+        "title": "Sold in spring, bought back near the top",
+        "unit": "£",
+        "points": [
+          [
+            "Jan",
+            128
+          ],
+          [
+            "Feb",
+            170
+          ],
+          [
+            "Mar",
+            330
+          ],
+          [
+            "Apr",
+            340
+          ],
+          [
+            "May",
+            550
+          ],
+          [
+            "Jun",
+            1000
+          ],
+          [
+            "Jul",
+            950
+          ],
+          [
+            "Aug",
+            800
+          ],
+          [
+            "Sep",
+            300
+          ],
+          [
+            "Oct",
+            210
+          ],
+          [
+            "Nov",
+            200
+          ],
+          [
+            "Dec",
+            185
+          ]
+        ],
+        "annotations": [
+          {
+            "at": 3,
+            "text": "Sells",
+            "cue": "Newton"
+          },
+          {
+            "at": 5,
+            "text": "Buys back",
+            "cue": "bought back"
+          }
+        ]
+      },
+      "sources": [
+        "odlyzko2019"
+      ],
+      "certainty": "estimate"
+    },
+    {
+      "id": "b09",
+      "act": "complication",
+      "narration": "Then came September. The bubble burst. By December, a share was worth under two hundred pounds.",
+      "visual": {
+        "type": "stat",
+        "label": "One share, summer to December 1720",
+        "from": 1000,
+        "value": 185,
+        "prefix": "£",
+        "note": "roughly four fifths of the value, gone",
+        "cue": "September"
+      },
+      "sources": [
+        "harvard",
+        "ssc"
+      ],
+      "certainty": "estimate"
+    },
+    {
+      "id": "b10",
+      "act": "story",
+      "narration": "How much did Newton lose? Family legend says twenty thousand pounds. Odlyzko rebuilt his accounts from bank records, and estimates the loss at more than ten thousand. Worse, had Newton simply kept his early profits, he would have ended up more than twice as rich.",
+      "visual": {
+        "type": "compare",
+        "title": "How much did he lose?",
+        "left": {
+          "title": "The legend",
+          "items": [
+            "£20,000 lost",
+            "Told by his family, printed decades later"
+          ]
+        },
+        "right": {
+          "title": "The records",
+          "items": [
+            "Over £10,000 lost (estimate)",
+            "Holding his early gains: more than 2x richer"
+          ]
+        }
+      },
+      "sources": [
+        "odlyzko2019"
+      ],
+      "certainty": "estimate"
+    },
+    {
+      "id": "b11",
+      "act": "story",
+      "narration": "He is said to have remarked that he could calculate the motions of the heavenly bodies, but not the madness of people. It is a perfect line. It is also attributed, and historians have never traced it to Newton himself.",
+      "visual": {
+        "type": "quote",
+        "text": "I can calculate the motions of the heavenly bodies, but not the madness of people.",
+        "by": "attributed to Isaac Newton",
+        "attribution": "attributed",
+        "badge_cue": "attributed"
+      },
+      "sources": [
+        "odlyzko2019"
+      ],
+      "certainty": "attributed"
+    },
+    {
+      "id": "b12",
+      "act": "principle",
+      "narration": "Lesson one. As Warren Buffett would later put it, price is what you pay, value is what you get. The South Sea Company never earned anything close to justifying a thousand pounds a share. When price runs far ahead of value, the gap eventually closes.",
+      "visual": {
+        "type": "principle",
+        "n": 1,
+        "name": "Price is not value",
+        "line": "Price is what you pay; value is what you get.",
+        "line_cue": "price is what"
+      },
+      "sources": [
+        "buffett2008"
+      ]
+    },
+    {
+      "id": "b13",
+      "act": "principle",
+      "narration": "Lesson two. The crowd is not evidence. Newton's own judgment told him to sell. What pulled him back was watching other people get rich. A rising price feels like proof. It isn't.",
+      "visual": {
+        "type": "principle",
+        "n": 2,
+        "name": "The crowd is not evidence",
+        "line": "A rising price feels like proof. It isn't.",
+        "line_cue": "a rising price"
+      }
+    },
+    {
+      "id": "b14",
+      "act": "example",
+      "narration": "Two centuries later, Benjamin Graham gave investors a defence. In nineteen forty nine he described a moody partner, Mr. Market, who offers you a price every day. Some days euphoric, some days despairing. You never have to accept his offer.",
+      "visual": {
+        "type": "portrait",
+        "name": "Benjamin Graham",
+        "years": "1894 – 1976",
+        "role": "The Intelligent Investor, 1949",
+        "initials": "BG"
+      },
+      "sources": [
+        "graham1949"
+      ]
+    },
+    {
+      "id": "b15",
+      "act": "principle",
+      "narration": "Lesson three. Set your rules before the market tests them. Graham's rule was a margin of safety. Estimate what a business is worth, soberly, and only buy when the price sits well below it. Decide that in calm, and it protects you in the frenzy.",
+      "visual": {
+        "type": "principle",
+        "n": 3,
+        "name": "Set your rules before the test",
+        "line": "Margin of safety: buy well below a sober estimate of value.",
+        "line_cue": "margin of safety"
+      },
+      "sources": [
+        "graham1949"
+      ]
+    },
+    {
+      "id": "b16",
+      "act": "question",
+      "narration": "Now test yourself. A stock you own has doubled in a month, and everyone you know is buying. Which question matters most?",
+      "visual": {
+        "type": "question",
+        "question": "Your stock doubled in a month. Everyone is buying. Which question matters most?",
+        "choices": [
+          "How much higher can it go?",
+          "What is the business actually worth?",
+          "Who else is buying it?"
+        ],
+        "answer": "What is the business actually worth? Price is not value.",
+        "think_seconds": 5
+      }
+    },
+    {
+      "id": "b17",
+      "act": "recap",
+      "narration": "So, three lessons from the genius and the bubble. Price is not value. The crowd is not evidence. And set your rules before the test.",
+      "visual": {
+        "type": "list",
+        "title": "Three lessons",
+        "check": true,
+        "items": [
+          {
+            "text": "Price is not value",
+            "cue": "price is not"
+          },
+          {
+            "text": "The crowd is not evidence",
+            "cue": "the crowd"
+          },
+          {
+            "text": "Set your rules before the test",
+            "cue": "set your rules"
+          }
+        ]
+      }
+    },
+    {
+      "id": "b18",
+      "act": "close",
+      "narration": "Newton could predict the orbit of a comet. He could not predict his own reaction to watching other people get rich. That is the real risk in investing. Not the market. Us.",
+      "visual": {
+        "type": "statement",
+        "text": "The real risk isn't the market. It's us.",
+        "highlight": [
+          "us"
+        ]
+      }
+    },
+    {
+      "id": "b19",
+      "act": "close",
+      "narration": "Next time: tulip mania, and why the most famous bubble in history may not have happened the way you think.",
+      "visual": {
+        "type": "end",
+        "kicker": "Lessons from Market History",
+        "title": "The Genius and the Bubble",
+        "next": "Tulip Mania: what really happened in 1637",
+        "cta": "Follow for the next lesson",
+        "sources_line": "Sources: Odlyzko (Notes & Records of the Royal Society, 2019); Harvard Baker Library; Graham, The Intelligent Investor (1949); Buffett, 2008 letter.",
+        "disclaimer": "Educational content only, not financial advice. 1720 prices are approximate."
+      }
+    }
+  ],
+  "pronounce": {
+    "Odlyzko": "Odd-lizz-ko",
+    "Graham": "Gray-um"
+  }
+}
