@@ -104,6 +104,17 @@ HyperFrames skills: `/hyperframes` (contract, work loop), `/hyperframes-registry
 hand-building), `/hyperframes-cli` (check/snapshot/render), `/media-use` (grades, transcripts, audio). GSAP is
 vendored into each project's `assets/vendor/` so renders never fetch from a CDN.
 
+### Optional Skillry motion skills
+
+[Skillry](https://skillry.dev) sells and hosts agent skills, among them the CreatorMotion library (title takeovers,
+text behind a subject, split-screen charts, explainer B-roll for vertical video), e.g. slug
+`bs-creatormotion-type-title-takeover`. Installing needs the person's own Skillry account (browser device login,
+token kept in the macOS Keychain / Windows Credential Manager); some skills are paid. So:
+- Never log in, buy or install a Skillry skill for them. If they want one, give them the two commands to run
+  themselves: `npx skillry-cli@latest login`, then `npx skillry-cli@latest install <slug> --agent claude-code`.
+- If one is already installed (`~/.claude/skills/<slug>/SKILL.md`, or `~/.agents/skills/<slug>` linked in), read
+  its SKILL.md and use it for that one effect, inside this skill's rules (brand, safe areas, no uploads, gates).
+
 ## N. Edit decision log
 
 Every `ve edit` writes `final/<name>.edit.md` and `.edit.json`: source, platform, CTA, aspect, takes kept and

@@ -62,5 +62,11 @@ if [ -d "$HOME/.agents/skills" ]; then
   done
 fi
 
-echo "== 6. Verify"
+echo "== 6. Optional: Skillry skills (your account, your decision)"
+echo "  Skillry skills need your own login (browser device flow; token stays in your OS keychain) and some are paid,"
+echo "  so this script never logs in or installs them. To add one yourself (macOS/Windows):"
+echo "    npx skillry-cli@latest login"
+echo "    npx skillry-cli@latest install <slug> --agent claude-code     # e.g. bs-creatormotion-type-title-takeover"
+
+echo "== 7. Verify"
 "$SKILLS/video-editor/scripts/ve" doctor
