@@ -40,6 +40,13 @@ local Kokoro TTS; music is synthesized. Nothing is uploaded.
 8. **Final**: `--final` for delivery quality. Report path, duration, resolution, LUFS, the sources list and
    any claims marked estimate/disputed/attributed.
 
+## Vietnamese (and other non-English) lessons
+
+Set `meta.lang: "vi"`, `meta.voice: "piper:vi_VN-vais1000-medium"` (local Piper voice with all six tones; Kokoro has
+no Vietnamese) and `meta.speed: 0.82` (~220 syllables/min). Numbers in narration as Vietnamese words; English names go
+in `pronounce` respelled for Vietnamese ("Jim Collins": "Gim Côn lin"). Labels and number format follow `lang`.
+`music: "chill"` gives a lo-fi bed; `meta.look` overrides the palette. Example: `lessons/books/001-good-to-great`.
+
 ## Scene types (visual.type)
 
 `hook` (frame-0 claim over the data; on `crash_cue` the line falls, the flash + second line + sound hit land on the
