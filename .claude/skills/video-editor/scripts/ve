@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Run the video editor engine from the repo this skill lives in (works through the ~/.claude/skills symlink).
+set -euo pipefail
+SKILL_DIR="$(cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")/.." && pwd)"
+REPO="$(cd "$SKILL_DIR/../../.." && pwd)"
+export VIDEO_EDITOR_CONFIG="${VIDEO_EDITOR_CONFIG:-$SKILL_DIR/config}"
+export PYTHONPATH="$REPO${PYTHONPATH:+:$PYTHONPATH}"
+exec python3 -m vfactory.editor "$@"
