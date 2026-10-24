@@ -14,10 +14,18 @@ import math
 
 E = html.escape
 
+LABELS = {
+    "en": {"think": "Pause and think", "answer": "Answer:", "next": "Next:", "attributed": "ATTRIBUTED · NOT VERIFIED",
+           "done": "Lesson complete", "principle": "Principle", "locale": "en-US"},
+    "vi": {"think": "Dừng lại và nghĩ", "answer": "Đáp án:", "next": "Tập sau:", "attributed": "ĐƯỢC CHO LÀ · CHƯA KIỂM CHỨNG",
+           "done": "Hết bài", "principle": "Bài học", "locale": "vi-VN"},
+}
+
 
 class Look:
-    def __init__(self, brand: dict, width: int, height: int):
+    def __init__(self, brand: dict, width: int, height: int, lang: str = "en"):
         self.w, self.h = width, height
+        self.t = LABELS.get(lang, LABELS["en"])
         self.accent = brand.get("primary_color", "#FF4F00")
         self.bg = brand.get("secondary_color", "#0E0E0E")
         self.ink = brand.get("text_color", "#F2EDE4")
@@ -100,8 +108,11 @@ def statement(L, sid, v, dur, cue):
     return m, css, tw
 
 
-def _fmt_num(x: float, decimals: int) -> str:
-    return f"{x:,.{decimals}f}"
+def _fmt_num(x: float, decimals: int, locale: str = "en-US") -> str:
+    s = f"{x:,.{decimals}f}"
+    if locale != "en-US":  # 1.435 / 6,9: dot groups thousands, comma marks decimals
+        s = s.replace(",", "\0").replace(".", ",").replace("\0", ".")
+    return s
 
 
 def stat(L, sid, v, dur, cue):
@@ -111,14 +122,14 @@ def stat(L, sid, v, dur, cue):
     pre, suf = E(v.get("prefix", "")), E(v.get("suffix", ""))
     m = f"""<div id="{sid}-c" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
       <div id="{sid}-l" class="kicker">{E(v['label'])}</div>
-      <div id="{sid}-n" class="serif" style="font-size:{L.fs(0.22)}px;line-height:1;margin:{L.px(0.03)}px 0;font-variant-numeric:tabular-nums;">{pre}<span id="{sid}-v">{_fmt_num(from_v, dec)}</span>{suf}</div>
+      <div id="{sid}-n" class="serif" style="font-size:{L.fs(0.22)}px;line-height:1;margin:{L.px(0.03)}px 0;font-variant-numeric:tabular-nums;">{pre}<span id="{sid}-v">{_fmt_num(from_v, dec, L.t['locale'])}</span>{suf}</div>
       <div id="{sid}-no" class="muted" style="font-size:{L.fs(0.034)}px;max-width:{L.px(1.0)}px;">{E(v.get('note', ''))}</div></div>"""
     t0 = cue(v.get("cue", ""), 0.6) if v.get("cue") else 0.6
     count = min(2.6, max(1.2, dur * 0.45))
     tw = [_fade(f"#{sid}-l", 0.1), _rise(f"#{sid}-n", 0.3, 0.7, 30),
           f'const {sid}P = {{ v: {from_v} }};',
           f'tl.fromTo({sid}P, {{ v: {from_v} }}, {{ v: {to_v}, duration: {count:.2f}, ease: "power2.out", '
-          f'onUpdate: () => {{ document.getElementById("{sid}-v").textContent = {sid}P.v.toLocaleString("en-US", '
+          f'onUpdate: () => {{ document.getElementById("{sid}-v").textContent = {sid}P.v.toLocaleString("{L.t['locale']}", '
           f'{{minimumFractionDigits: {dec}, maximumFractionDigits: {dec}}}); }} }}, {t0:.3f});',
           _rise(f"#{sid}-no", t0 + count * 0.7)]
     return m, "", tw
@@ -215,7 +226,7 @@ def quote(L, sid, v, dur, cue):
     badge = ""
     if attributed:
         badge = (f'<div id="{sid}-b" style="display:inline-block;margin-top:{L.px(0.03)}px;padding:6px 14px;border:2px solid {L.accent};'
-                 f'color:{L.accent};font-weight:700;font-size:{L.fs(0.019)}px;letter-spacing:0.2em;">ATTRIBUTED · NOT VERIFIED</div>')
+                 f'color:{L.accent};font-weight:700;font-size:{L.fs(0.019)}px;letter-spacing:0.2em;">{E(L.t['attributed'])}</div>')
     m = f"""<div id="{sid}-c" style="position:absolute;left:{L.px(0.12)}px;right:{L.px(0.12)}px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;">
       <div id="{sid}-q" class="serif acc" style="font-size:{L.fs(0.2)}px;line-height:0.6;height:{L.px(0.09)}px;">&ldquo;</div>
       <div id="{sid}-t" class="serif" style="font-size:{L.fs(0.062)}px;line-height:1.22;font-style:italic;">{E(v['text'])}</div>
@@ -258,7 +269,7 @@ def portrait(L, sid, v, dur, cue):
 def principle(L, sid, v, dur, cue):
     m = f"""<div id="{sid}-c" style="position:absolute;left:{L.px(0.1)}px;right:{L.px(0.1)}px;top:0;bottom:0;display:flex;align-items:center;gap:{L.px(0.06)}px;">
       <div id="{sid}-num" class="serif" style="font-size:{L.fs(0.34)}px;line-height:1;color:#2A1A10;-webkit-text-stroke:2px {L.accent};">{int(v['n']):02d}</div>
-      <div><div id="{sid}-k" class="kicker">Principle {int(v['n'])}</div>
+      <div><div id="{sid}-k" class="kicker">{E(L.t['principle'])} {int(v['n'])}</div>
         <div id="{sid}-nm" class="serif" style="font-size:{L.fs(0.08)}px;line-height:1.08;margin:{L.px(0.02)}px 0;">{E(v['name'])}</div>
         <div id="{sid}-ln" class="muted" style="font-size:{L.fs(0.032)}px;line-height:1.4;">{E(v.get('line', ''))}</div></div></div>"""
     tw = [_ft(f"#{sid}-num", "opacity: 0, x: -30", 'opacity: 1, x: 0, duration: 0.8, ease: "expo.out"', 0.2),
@@ -321,12 +332,12 @@ def question(L, sid, v, dur, cue, narr: float = 0.0):
                  f'border:2px solid {L.muted};border-radius:10px;"><b class="acc">{chr(65 + i)}</b>&nbsp;&nbsp;{E(c)}</div>'
                  for i, c in enumerate(choices))
     m = f"""<div id="{sid}-c" style="position:absolute;left:{L.px(0.12)}px;right:{L.px(0.12)}px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;">
-      <div id="{sid}-k" class="kicker">Pause and think</div>
+      <div id="{sid}-k" class="kicker">{E(L.t['think'])}</div>
       <div id="{sid}-q" class="serif" style="font-size:{L.fs(0.064)}px;line-height:1.18;margin:{L.px(0.03)}px 0;">{E(v['question'])}</div>
       {ch}
       <div style="margin-top:{L.px(0.045)}px;height:6px;background:rgba(255,255,255,0.12);border-radius:3px;">
         <div id="{sid}-bar" style="height:6px;width:100%;background:{L.accent};border-radius:3px;transform-origin:0 50%;"></div></div>
-      {f'<div id="{sid}-a" style="margin-top:{L.px(0.03)}px;font-size:{L.fs(0.034)}px;font-weight:700;"><span class="acc">Answer:</span> {E(v["answer"])}</div>' if v.get('answer') else ''}
+      {f'<div id="{sid}-a" style="margin-top:{L.px(0.03)}px;font-size:{L.fs(0.034)}px;font-weight:700;"><span class="acc">{E(L.t['answer'])}</span> {E(v["answer"])}</div>' if v.get('answer') else ''}
       </div>"""
     t_think = narr + 0.2
     tw = [_fade(f"#{sid}-k", 0.1), _rise(f"#{sid}-q", 0.3, 0.8)]
@@ -340,9 +351,9 @@ def question(L, sid, v, dur, cue, narr: float = 0.0):
 
 def end(L, sid, v, dur, cue):
     m = f"""<div id="{sid}-c" style="position:absolute;left:{L.px(0.1)}px;right:{L.px(0.1)}px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;">
-      <div id="{sid}-k" class="kicker">{E(v.get('kicker', 'Lesson complete'))}</div>
+      <div id="{sid}-k" class="kicker">{E(v.get('kicker', L.t['done']))}</div>
       <div id="{sid}-t" class="serif" style="font-size:{L.fs(0.085)}px;line-height:1.08;margin:{L.px(0.025)}px 0;">{E(v['title'])}</div>
-      {f'<div id="{sid}-n" style="font-size:{L.fs(0.032)}px;"><span class="muted">Next:</span> {E(v["next"])}</div>' if v.get('next') else ''}
+      {f'<div id="{sid}-n" style="font-size:{L.fs(0.032)}px;"><span class="muted">{E(L.t['next'])}</span> {E(v["next"])}</div>' if v.get('next') else ''}
       {f'<div id="{sid}-cta" style="display:inline-block;align-self:flex-start;margin-top:{L.px(0.035)}px;padding:{L.px(0.014)}px {L.px(0.03)}px;background:{L.accent};color:#0B0B0B;font-weight:800;font-size:{L.fs(0.028)}px;border-radius:999px;">{E(v["cta"])}</div>' if v.get('cta') else ''}
       <div id="{sid}-src" class="muted" style="position:absolute;left:0;right:0;bottom:{L.px(0.09)}px;font-size:{L.fs(0.019)}px;line-height:1.45;">
         {E(v.get('sources_line', ''))}<br/>{E(v.get('disclaimer', ''))}</div></div>"""
@@ -358,10 +369,13 @@ def end(L, sid, v, dur, cue):
 def hook(L, sid, v, dur, cue):
     """The first five seconds. Frame 0 is already a composed claim over the data (it is the thumbnail).
     On the cue word the line crashes: flash, shake, and the second line slams in, all on the same beat
-    as the narration and the sound hit (spoken, visual and on-screen text carry one hook)."""
+    as the narration and the sound hit (spoken, visual and on-screen text carry one hook).
+    `split` (default: the peak) is the point where the accent segment starts, so a breakout (flat, then a climb)
+    uses the same beat: the climb is the accent line and `peak_label` marks the turning point."""
     pts = v.get("points") or [[i, x] for i, x in enumerate([128, 170, 330, 340, 550, 1000, 950, 800, 300, 210, 200, 185])]
     vals = [float(p[1]) for p in pts]
-    peak = vals.index(max(vals))
+    breakout = "split" in v  # the label sits left of the turning point, clear of the climbing line
+    peak = int(v.get("split", vals.index(max(vals))))
     W, H = L.w * 0.86, L.h * 0.46
     x0, y0 = L.w * 0.07, L.h * 0.47  # below the two-line headline
     xs = [x0 + W * i / (len(vals) - 1) for i in range(len(vals))]
@@ -384,7 +398,7 @@ def hook(L, sid, v, dur, cue):
         <path id="{sid}-down" d="{path(peak, len(vals) - 1)}" fill="none" stroke="{L.accent}" stroke-width="{max(6, L.px(0.01))}"
           stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="{down_len:.0f}" stroke-dashoffset="{down_len:.0f}"/>
         <circle id="{sid}-pk" cx="{xs[peak]:.1f}" cy="{ys[peak]:.1f}" r="{L.px(0.013)}" fill="{L.ink}" opacity="0"/>
-        <text id="{sid}-pkl" x="{xs[peak]:.1f}" y="{ys[peak] - L.px(0.035):.1f}" text-anchor="middle" fill="{L.ink}" font-family="Inter"
+        <text id="{sid}-pkl" x="{xs[peak] - (L.px(0.02) if breakout else 0):.1f}" y="{ys[peak] - L.px(0.035):.1f}" text-anchor="{'end' if breakout else 'middle'}" fill="{L.ink}" font-family="Inter"
           font-weight="700" font-size="{L.fs(0.03)}">{E(v.get('peak_label', ''))}</text>
         <text id="{sid}-endl" x="{xs[-1]:.1f}" y="{ys[-1] - L.px(0.035):.1f}" text-anchor="end" fill="{L.accent}" font-family="Inter"
           font-weight="800" font-size="{L.fs(0.034)}">{E(v.get('end_label', ''))}</text>

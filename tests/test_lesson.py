@@ -123,3 +123,45 @@ def test_silent_title_beat_is_allowed_only_with_hold():
     L["beats"][1]["visual"].pop("hold")
     with pytest.raises(schema.LessonError):
         schema.validate(L)
+
+
+VI_LESSON = Path(__file__).resolve().parents[1] / "lessons" / "books" / "001-good-to-great" / "lesson.json"
+
+
+def test_vietnamese_lesson_is_valid_and_lint_clean():
+    L = schema.load(VI_LESSON)
+    rep = schema.lint(L)
+    assert rep["errors"] == [] and rep["warnings"] == []
+    assert 3 <= rep["stats"]["est_minutes"] <= 5
+    assert L["meta"]["lang"] == "vi" and L["meta"]["voice"].startswith("piper:")
+
+
+def test_vietnamese_words_timing_and_hook_rules():
+    assert schema.words("Từ tốt đến vĩ đại") == ["Từ", "tốt", "đến", "vĩ", "đại"]
+    # Vietnamese syllables are short: the same count reads faster than English words
+    assert schema.est_seconds("một " * 27, 1.0, "vi") < schema.est_seconds("one " * 27, 1.0, "en")
+    L = _mini()
+    L["meta"]["lang"] = "vi"
+    L["beats"][0]["narration"] = "Xin chào các bạn, hôm nay chúng ta nói về sách."
+    assert any("preamble" in e for e in schema.lint(L)["errors"])
+    wt = voice.word_times("Chỉ mười một công ty đi được từ tốt đến vĩ đại.", 4.0)
+    assert 0 < voice.find_word(wt, "mười một") < voice.find_word(wt, "vĩ đại")
+
+
+def test_vietnamese_labels_and_numbers():
+    look = scenes.Look({"primary_color": "#E8B06A", "secondary_color": "#12100E", "font": "Inter"}, 1440, 1080, "vi")
+    html = scenes.scene_file(look, "q1", {"type": "question", "question": "Q?", "choices": ["a"], "answer": "a"}, 9.0,
+                             lambda w, d: d, 3.0, last=False)
+    assert "Dừng lại và nghĩ" in html and "Đáp án:" in html and "Pause and think" not in html
+    html = scenes.scene_file(look, "s1", {"type": "stat", "value": 6.9, "decimals": 1, "label": "x"}, 5.0, lambda w, d: d, 3.0, last=False)
+    assert 'toLocaleString("vi-VN"' in html
+    assert scenes._fmt_num(1435, 0, "vi-VN") == "1.435" and scenes._fmt_num(6.9, 1, "vi-VN") == "6,9"
+    assert scenes._fmt_num(1435.5, 1) == "1,435.5"
+
+
+def test_chill_bed_has_a_soft_pulse(tmp_path):
+    from vfactory.lesson import music
+    import soundfile as sf
+
+    y, sr = sf.read(str(music.bed(6.0, tmp_path / "c.wav", mood="chill")))
+    assert len(y) == int(sr * 6.0) and 0.3 < abs(y).max() <= 0.71

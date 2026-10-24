@@ -1,7 +1,7 @@
 """lesson.json: the contract between the writer (Claude, via the lesson-video skill) and the renderer.
 
 {
-  "meta": {"series": "...", "title": "...", "subtitle": "...", "topic": "investing", "angle": "history|person|concept",
+  "meta": {"series": "...", "title": "...", "subtitle": "...", "topic": "investing", "angle": "history|person|concept", "lang": "en|vi",
            "audience": "...", "aspect": "4:3", "target_minutes": [3, 5], "voice": "bm_george", "speed": 0.95,
            "disclaimer": "Educational content, not financial advice.", "learning_goals": ["..."]},
   "sources": [{"id": "odlyzko2019", "cite": "Odlyzko, Notes and Records 73(1), 2019", "url": "..."}],
@@ -38,6 +38,8 @@ VISUALS = {
     "end": {"required": ["title"], "optional": ["cta", "next", "sources_line", "disclaimer"]},
 }
 WPM = 150.0  # documentary narration pace (Vox guide; Kokoro at speed 0.95 lands close)
+# words (Vietnamese: syllables) per minute at speed 1.0; Piper vi_VN-vais1000 measured ~270, so speed 0.82 ≈ 220
+WPM_BY_LANG = {"en": WPM, "vi": 270.0}
 
 
 class LessonError(ValueError):
@@ -78,11 +80,11 @@ def validate(L: dict) -> None:
 
 
 def words(text: str) -> list[str]:
-    return re.findall(r"[A-Za-z0-9'’£$€%-]+", text)
+    return re.findall(r"[\w'’£$€%-]+", text)
 
 
-def est_seconds(text: str, speed: float = 1.0) -> float:
-    return len(words(text)) / (WPM * speed) * 60
+def est_seconds(text: str, speed: float = 1.0, lang: str = "en") -> float:
+    return len(words(text)) / (WPM_BY_LANG.get(lang, WPM) * speed) * 60
 
 
 def lint(L: dict) -> dict:
@@ -91,8 +93,9 @@ def lint(L: dict) -> dict:
     meta = L["meta"]
     beats = L["beats"]
     speed = float(meta.get("speed", 1.0))
+    lang = meta.get("lang", "en")
     total_words = sum(len(words(b["narration"])) for b in beats)
-    est = sum(est_seconds(b["narration"], speed) for b in beats) + sum(
+    est = sum(est_seconds(b["narration"], speed, lang) for b in beats) + sum(
         float(b["visual"].get("think_seconds", 3.0)) for b in beats if b["visual"]["type"] == "question")
     lo, hi = meta.get("target_minutes", [3, 5])
     if est < lo * 60 * 0.9:
@@ -100,7 +103,7 @@ def lint(L: dict) -> dict:
     if est > hi * 60 * 1.05:
         errors.append(f"estimated {est / 60:.1f} min is over the {hi} min target: cut words, not scenes")
     acts = [b["act"] for b in beats]
-    errors += hook_errors(beats)
+    errors += hook_errors(beats, lang)
     warns += hook_warnings(beats)
     if "misconception" not in acts and not any("misconception" in b.get("tags", []) for b in beats):
         warns.append("no misconception beat: name the wrong idea the viewer probably holds, then correct it "
@@ -114,7 +117,7 @@ def lint(L: dict) -> dict:
         warns.append(f"{len(principles)} principles: aim for 2-4 (cognitive load); one big idea per lesson, its principles as steps")
     for b in beats:
         n = len(words(b["narration"]))
-        if n > 70:
+        if n > 70 * WPM_BY_LANG.get(lang, WPM) / WPM:
             warns.append(f"{b['id']}: {n} words in one beat; split it (one idea per scene)")
         if re.search(r"\d", b["narration"]) and not b.get("allow_digits"):
             warns.append(f"{b['id']}: digits in narration; write numbers as they are spoken ('seventeen twenty', 'a thousand pounds')")
@@ -125,11 +128,13 @@ def lint(L: dict) -> dict:
             ov = _overlap(screen, b["narration"])
             if ov > 0.85 and len(words(screen)) > 8:
                 warns.append(f"{b['id']}: on-screen text repeats the narration word for word; show the key phrase instead")
-        claims = re.search(r"\b(19|20|17|16)\d\d\b|£|\$|percent|million|billion|thousand|pounds", b["narration"] + screen, re.I)
+        claims = re.search(r"\b(19|20|17|16)\d\d\b|£|\$|percent|million|billion|thousand|pounds|phần trăm|triệu|tỷ|nghìn",
+                           b["narration"] + screen, re.I)
         if claims and not b.get("sources") and b["act"] not in ("question", "recap", "close", "principle"):
             warns.append(f"{b['id']}: contains a number or date with no source id")
         if b.get("certainty") in ("disputed", "attributed") and not re.search(
-                r"\b(reportedly|attributed|legend|lore|probably|may have|story goes|is said|disputed|estimate|about|roughly)\b",
+                r"\b(reportedly|attributed|legend|lore|probably|may have|story goes|is said|disputed|estimate|about|roughly|"
+                r"khoảng|ước tính|được cho là|tương truyền|có lẽ|người ta kể|gây tranh cãi|chưa kiểm chứng)\b",
                 b["narration"], re.I):
             errors.append(f"{b['id']}: marked {b['certainty']} but the narration states it as fact; say so out loud")
     if meta.get("topic", "").lower() in ("investing", "investment", "finance", "money") and not meta.get("disclaimer"):
@@ -144,24 +149,31 @@ def lint(L: dict) -> dict:
                       "principles": len(principles), "acts": acts}}
 
 
-TENSION = re.compile(r"\b(but|then|yet|until|lost|lose|never|wrong|failed|crash\w*|ruin\w*|gone|instead|except|why|how)\b|\?", re.I)
+# English, then Vietnamese
+TENSION = re.compile(r"\b(but|then|yet|until|lost|lose|never|wrong|failed|crash\w*|ruin\w*|gone|instead|except|why|how|"
+                     r"nhưng|vậy mà|thế mà|rồi|chỉ|mất|không bao giờ|sai|thất bại|sụp đổ|phá sản|kẻ thù|tại sao|vì sao)\b|\?", re.I)
 SPECIFIC = re.compile(r"\b([A-Z][a-z]+|one|two|three|four|five|six|seven|eight|nine|ten|hundred|thousand|million|billion|"
-                      r"seventeen|eighteen|nineteen|twenty|percent)\b")
+                      r"seventeen|eighteen|nineteen|twenty|percent|"
+                      r"một|hai|ba|bốn|năm|sáu|bảy|tám|chín|mười|mươi|trăm|nghìn|ngàn|triệu|tỷ|phần trăm)\b")
 PROMISE = re.compile(r"\b(you'?ll|you will|by the end|in the next|here'?s (how|why|what)|three|two|four|rules?|lessons?|"
-                     r"principles?|the reason|stop it|avoid)\b", re.I)
+                     r"principles?|the reason|stop it|avoid|"
+                     r"bạn sẽ|đến cuối|trong vài phút|ba|bốn|bài học|nguyên tắc|lý do|cách)\b", re.I)
+PREAMBLE = re.compile(r"\b(today we|in this video|welcome|let'?s talk about|hi everyone|hey guys|"
+                      r"hôm nay chúng ta|trong video này|xin chào|chào mừng|chào các bạn)\b", re.I)
 
 
-def hook_errors(beats: list[dict]) -> list[str]:
+def hook_errors(beats: list[dict], lang: str = "en") -> list[str]:
     """The first five seconds decide whether anyone sees the rest (hook-writing skill; HyperFrames vertical guide)."""
     e = []
     if beats[0]["act"] != "hook":
         e.append("the first beat must be the hook (start inside the story, never 'today we will...')")
         return e
     h = beats[0]
-    if re.search(r"\b(today we|in this video|welcome|let'?s talk about|hi everyone|hey guys)\b", h["narration"], re.I):
+    if PREAMBLE.search(h["narration"]):
         e.append("the hook opens with a preamble; start mid-story with a concrete fact, image or question")
-    if est_seconds(h["narration"], float(h.get("speed", 1.0))) > 7.5:
-        e.append(f"the hook takes ~{est_seconds(h['narration']):.0f}s to say; the paradox must land inside ~5s (≤ 16 words)")
+    hs = est_seconds(h["narration"], float(h.get("speed", 1.0)), lang)
+    if hs > 7.5:
+        e.append(f"the hook takes ~{hs:.0f}s to say; the paradox must land inside ~5s (≤ 16 words)")
     if h["visual"]["type"] in ("title", "end"):
         e.append("frame 0 is a title card: open on the hook image/claim (visual type 'hook' or 'statement'); the title comes after")
     return e

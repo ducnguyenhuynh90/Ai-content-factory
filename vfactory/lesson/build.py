@@ -112,7 +112,7 @@ def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: 
         stems.append({"file": str(out / "sfx.wav"), "role": "sfx", "gain_db": -8})
     mix_stems(stems, total, str(proj / "assets" / "mix.wav"), voice_lufs=-16.0, target_lufs=-16.0)
     # 3. scenes
-    look = Look(brand(), W, Hh)
+    look = Look({**brand(), **meta.get("look", {})}, W, Hh, meta.get("lang", "en"))
     H.ensure_gsap(proj / "assets" / "vendor")
     grain_png(proj / "assets" / "grain.png")
     hosts = []
@@ -132,7 +132,7 @@ def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: 
                      f'data-track-kind="graphics" data-width="{W}" data-height="{Hh}" style="z-index:10"></div>')
     series = meta.get("series", "")
     index = f"""<!doctype html>
-<html lang="en">
+<html lang="{meta.get('lang', 'en')}">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width={W}, height={Hh}" />

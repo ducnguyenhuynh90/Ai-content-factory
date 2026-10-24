@@ -1,7 +1,9 @@
-"""Narration with local TTS (Kokoro-82M, Apache-2.0, offline). One clip per beat, cached by content.
+"""Narration with local TTS. One clip per beat, cached by content.
 
-Model files are fetched once from the kokoro-onnx GitHub release into ~/.cache/vfactory/kokoro;
-no text or audio ever leaves the machine.
+English: Kokoro-82M (Apache-2.0), fetched once from the kokoro-onnx GitHub release into ~/.cache/vfactory/kokoro.
+Other languages: Piper VITS voices named "piper:<voice>" (e.g. "piper:vi_VN-vais1000-medium", which speaks all six
+Vietnamese tones), fetched once from the sherpa-onnx `tts-models` GitHub release into ~/.cache/vfactory/piper.
+No text or audio ever leaves the machine.
 """
 
 from __future__ import annotations
@@ -17,8 +19,12 @@ import numpy as np
 MODEL_DIR = Path.home() / ".cache" / "vfactory" / "kokoro"
 RELEASE = "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0"
 FILES = ("kokoro-v1.0.onnx", "voices-v1.0.bin")
+PIPER_DIR = Path.home() / ".cache" / "vfactory" / "piper"
+PIPER_RELEASE = "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models"
 SR = 24000
+SENTENCE_GAP = 0.32  # seconds of air between Piper sentences
 _ENGINE = None
+_PIPER: dict = {}
 
 
 class VoiceUnavailable(RuntimeError):
@@ -48,6 +54,45 @@ def engine():
     return _ENGINE
 
 
+def piper_engine(name: str):
+    """A Piper voice by name; the model is downloaded once (sherpa-onnx packs it with its config)."""
+    if name not in _PIPER:
+        try:
+            from piper import PiperVoice  # type: ignore
+        except ImportError as e:
+            raise VoiceUnavailable("pip install piper-tts soundfile") from e
+        d = PIPER_DIR / f"vits-piper-{name}"
+        model = d / f"{name}.onnx"
+        if not model.exists():
+            PIPER_DIR.mkdir(parents=True, exist_ok=True)
+            r = subprocess.run(f'curl -sSfL "{PIPER_RELEASE}/vits-piper-{name}.tar.bz2" | tar xj -C "{PIPER_DIR}"',
+                               shell=True, capture_output=True, text=True)
+            if r.returncode != 0 or not model.exists():
+                raise VoiceUnavailable(f"could not download Piper voice {name}: {r.stderr.strip()[:200]}")
+        _PIPER[name] = PiperVoice.load(str(model))
+    return _PIPER[name]
+
+
+def _resample(y: np.ndarray, sr_in: int, sr_out: int) -> np.ndarray:
+    if sr_in == sr_out:
+        return y
+    n = int(round(len(y) * sr_out / sr_in))
+    return np.interp(np.arange(n) * sr_in / sr_out, np.arange(len(y)), y).astype("float32")
+
+
+def piper_create(text: str, name: str, speed: float) -> tuple[np.ndarray, int]:
+    from piper import SynthesisConfig  # type: ignore
+
+    pv = piper_engine(name)
+    sr = pv.config.sample_rate
+    gap = np.zeros(int(SENTENCE_GAP * sr), dtype="float32")
+    parts = []
+    for chunk in pv.synthesize(text, syn_config=SynthesisConfig(length_scale=1.0 / speed)):
+        parts += [_trim(np.frombuffer(chunk.audio_int16_bytes, dtype=np.int16).astype("float32") / 32768.0, pad=600), gap]
+    y = np.concatenate(parts[:-1]) if parts else np.zeros(1, dtype="float32")
+    return _resample(y, sr, SR), SR
+
+
 def apply_pronunciations(text: str, pronounce: dict[str, str]) -> str:
     for k, v in (pronounce or {}).items():
         text = re.sub(rf"\b{re.escape(k)}\b", v, text)
@@ -71,9 +116,12 @@ def synth(text: str, out: Path, voice: str = "bm_george", speed: float = 0.95, l
     meta = out.with_suffix(".json")
     if out.exists() and meta.exists() and json.loads(meta.read_text()).get("key") == key:
         return json.loads(meta.read_text())["duration"]
-    if voice.startswith(("bf_", "bm_")) and lang == "en-us":
-        lang = "en-gb"
-    samples, sr = engine().create(spoken, voice=voice, speed=speed, lang=lang)
+    if voice.startswith("piper:"):
+        samples, sr = piper_create(spoken, voice.split(":", 1)[1], speed)
+    else:
+        if voice.startswith(("bf_", "bm_")) and lang == "en-us":
+            lang = "en-gb"
+        samples, sr = engine().create(spoken, voice=voice, speed=speed, lang=lang)
     y = _trim(np.asarray(samples, dtype="float32"))
     out.parent.mkdir(parents=True, exist_ok=True)
     sf.write(str(out), y, sr)
