@@ -23,6 +23,7 @@ from pathlib import Path
 ACTS = ("hook", "context", "story", "misconception", "complication", "turn", "principle", "example", "question",
         "recap", "close")
 VISUALS = {
+    "hook": {"required": ["lines"], "optional": ["points", "crash_cue", "peak_label", "end_label", "kicker"]},
     "title": {"required": ["title"], "optional": ["kicker", "subtitle"]},
     "statement": {"required": ["text"], "optional": ["highlight", "kicker"]},
     "stat": {"required": ["value", "label"], "optional": ["from", "prefix", "suffix", "note"]},
@@ -62,10 +63,10 @@ def validate(L: dict) -> None:
         ids.add(b["id"])
         if b.get("act") not in ACTS:
             raise LessonError(f"{where}: act must be one of {ACTS}")
-        if not b.get("narration", "").strip():
-            raise LessonError(f"{where}: empty narration")
         v = b.get("visual") or {}
         t = v.get("type")
+        if not b.get("narration", "").strip() and not (t in ("title", "end") and v.get("hold")):
+            raise LessonError(f"{where}: empty narration (only a title/end card with 'hold' seconds may be silent)")
         if t not in VISUALS:
             raise LessonError(f"{where}: visual.type must be one of {list(VISUALS)}")
         for r in VISUALS[t]["required"]:
@@ -99,12 +100,8 @@ def lint(L: dict) -> dict:
     if est > hi * 60 * 1.05:
         errors.append(f"estimated {est / 60:.1f} min is over the {hi} min target: cut words, not scenes")
     acts = [b["act"] for b in beats]
-    if acts[0] != "hook":
-        errors.append("the first beat must be the hook (start inside the story, never 'today we will...')")
-    if re.search(r"\b(today we|in this video|welcome|let'?s talk about|hi everyone)\b", beats[0]["narration"], re.I):
-        errors.append("the hook opens with a preamble; start with a concrete fact, image or question")
-    if len(words(beats[0]["narration"])) > 45:
-        warns.append("hook is long: the first line should land in ~10 seconds")
+    errors += hook_errors(beats)
+    warns += hook_warnings(beats)
     if "misconception" not in acts and not any("misconception" in b.get("tags", []) for b in beats):
         warns.append("no misconception beat: name the wrong idea the viewer probably holds, then correct it "
                      "(Muller: confronting misconceptions roughly doubled learning vs. clear exposition alone)")
@@ -145,6 +142,46 @@ def lint(L: dict) -> dict:
     return {"errors": errors, "warnings": warns,
             "stats": {"beats": len(beats), "words": total_words, "est_minutes": round(est / 60, 2),
                       "principles": len(principles), "acts": acts}}
+
+
+TENSION = re.compile(r"\b(but|then|yet|until|lost|lose|never|wrong|failed|crash\w*|ruin\w*|gone|instead|except|why|how)\b|\?", re.I)
+SPECIFIC = re.compile(r"\b([A-Z][a-z]+|one|two|three|four|five|six|seven|eight|nine|ten|hundred|thousand|million|billion|"
+                      r"seventeen|eighteen|nineteen|twenty|percent)\b")
+PROMISE = re.compile(r"\b(you'?ll|you will|by the end|in the next|here'?s (how|why|what)|three|two|four|rules?|lessons?|"
+                     r"principles?|the reason|stop it|avoid)\b", re.I)
+
+
+def hook_errors(beats: list[dict]) -> list[str]:
+    """The first five seconds decide whether anyone sees the rest (hook-writing skill; HyperFrames vertical guide)."""
+    e = []
+    if beats[0]["act"] != "hook":
+        e.append("the first beat must be the hook (start inside the story, never 'today we will...')")
+        return e
+    h = beats[0]
+    if re.search(r"\b(today we|in this video|welcome|let'?s talk about|hi everyone|hey guys)\b", h["narration"], re.I):
+        e.append("the hook opens with a preamble; start mid-story with a concrete fact, image or question")
+    if est_seconds(h["narration"], float(h.get("speed", 1.0))) > 7.5:
+        e.append(f"the hook takes ~{est_seconds(h['narration']):.0f}s to say; the paradox must land inside ~5s (≤ 16 words)")
+    if h["visual"]["type"] in ("title", "end"):
+        e.append("frame 0 is a title card: open on the hook image/claim (visual type 'hook' or 'statement'); the title comes after")
+    return e
+
+
+def hook_warnings(beats: list[dict]) -> list[str]:
+    w = []
+    if beats[0]["act"] != "hook":
+        return w
+    h = beats[0]["narration"]
+    if not TENSION.search(h):
+        w.append("hook has no tension: add the turn (but/then/lost/never/why...) that makes it a paradox, not a fact")
+    if not SPECIFIC.search(h):
+        w.append("hook has no concrete anchor: name the person, the year or the number")
+    if len(beats) > 1 and not PROMISE.search(beats[1]["narration"]):
+        w.append("beat 2 should open a loop: promise the payoff for staying ('by the end you'll see... and three rules...')")
+    for i, b in enumerate(beats[2:], 2):
+        if b["visual"]["type"] == "title" and i > 3:
+            w.append("the title card comes late; keep it within the first ~20 seconds, right after the hook")
+    return w
 
 
 def _screen_text(v: dict) -> str:

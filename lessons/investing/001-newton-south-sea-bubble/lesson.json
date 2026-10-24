@@ -69,17 +69,61 @@
   ],
   "beats": [
     {
-      "id": "b01",
+      "id": "h1",
       "act": "hook",
-      "narration": "In the spring of seventeen twenty, the smartest man in England made a fortune in the stock market. Then he gave it back. And then some.",
+      "narration": "Isaac Newton explained gravity. Then, in seventeen twenty, he lost a fortune to it.",
+      "visual": {
+        "type": "hook",
+        "lines": [
+          "He explained gravity.",
+          "Then it took his fortune."
+        ],
+        "crash_cue": "lost",
+        "peak_label": "1720",
+        "end_label": "−80%",
+        "kicker": "Isaac Newton · 1720"
+      },
+      "sfx": [
+        {
+          "kind": "hit",
+          "cue": "lost",
+          "gain_db": -2
+        }
+      ],
+      "sources": [
+        "odlyzko2019",
+        "harvard"
+      ]
+    },
+    {
+      "id": "h2",
+      "act": "context",
+      "narration": "Not to fraud. Not to bad luck. To a mistake you have probably made yourself. In the next four minutes, you'll see how it happened, and three rules that stop it.",
+      "visual": {
+        "type": "statement",
+        "kicker": "In the next four minutes",
+        "text": "One mistake. Three rules.",
+        "highlight": [
+          "Three rules"
+        ]
+      }
+    },
+    {
+      "id": "t0",
+      "act": "context",
+      "narration": "",
       "visual": {
         "type": "title",
         "kicker": "Lessons from Market History · No. 1",
         "title": "The Genius and the Bubble",
-        "subtitle": "What Isaac Newton's worst trade teaches every investor"
+        "hold": 3.0
       },
-      "sources": [
-        "odlyzko2019"
+      "sfx": [
+        {
+          "kind": "whoosh",
+          "at": 0.0,
+          "gain_db": -10
+        }
       ]
     },
     {
@@ -343,7 +387,7 @@
     {
       "id": "b10",
       "act": "story",
-      "narration": "How much did Newton lose? Family legend says twenty thousand pounds. Odlyzko rebuilt his accounts from bank records, and estimates the loss at more than ten thousand. Worse, had Newton simply kept his early profits, he would have ended up more than twice as rich.",
+      "narration": "How much did Newton lose? The number everyone quotes is wrong. Family legend says twenty thousand pounds. Historian Andrew Odlyzko rebuilt his accounts from bank records, and estimates the loss at more than ten thousand. Worse, had Newton simply kept his early profits, he would have ended up more than twice as rich.",
       "visual": {
         "type": "compare",
         "title": "How much did he lose?",

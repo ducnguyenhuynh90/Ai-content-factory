@@ -36,22 +36,28 @@ def grain_png(path: Path, size: int = 384, seed: int = 1) -> Path:
     return path
 
 
+def lead_of(b: dict) -> float:
+    """The hook speaks almost at once: the first words must land inside the first second."""
+    return float(b.get("lead", 0.1 if b["act"] == "hook" else LEAD))
+
+
 def plan_timing(L: dict, durs: dict[str, float]) -> list[dict]:
     t, out = 0.0, []
     for b in L["beats"]:
         v = b["visual"]
         narr = durs[b["id"]]
-        d = LEAD + narr + TAIL
+        lead = lead_of(b)
+        d = lead + narr + TAIL if narr else float(v.get("hold", 3.0))
         if v["type"] == "question":
             ans = len(v.get("answer", "").split())
             d += float(v.get("think_seconds", 4.0)) + ((0.9 + 0.5 + 0.3 * ans) if ans else 0.4)  # answer readable
-        if v["type"] == "title":
+        if v["type"] == "title" and narr:
             d = max(d, 4.5)
         if v["type"] == "end":
             d = max(d + 1.5, 6.0)
         if v["type"] in ("chart", "timeline", "list", "compare"):
             d += 0.8  # let the viewer read the finished graphic
-        out.append({"id": b["id"], "start": round(t, 3), "dur": round(d, 3), "narr": narr})
+        out.append({"id": b["id"], "start": round(t, 3), "dur": round(d, 3), "narr": narr, "lead": lead})
         t += d
     return out
 
@@ -75,7 +81,10 @@ def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: 
     durs, times = {}, {}
     for b in L["beats"]:
         p = vo_dir / f"{b['id']}.wav"
-        durs[b["id"]] = voice.synth(b["narration"], p, v_name, speed, pronounce=L.get("pronounce"))
+        if not b["narration"].strip():  # a silent beat (title sting): picture and sound only
+            durs[b["id"]], times[b["id"]] = 0.0, []
+            continue
+        durs[b["id"]] = voice.synth(b["narration"], p, v_name, float(b.get("speed", speed)), pronounce=L.get("pronounce"))
         times[b["id"]] = voice.word_times(b["narration"], durs[b["id"]])
         log(f"  voice {b['id']}: {durs[b['id']]:.1f}s")
     timing = plan_timing(L, durs)
@@ -85,15 +94,23 @@ def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: 
     track = np.zeros(int(sr * (total + 1)), dtype="float32")
     import soundfile as sf
 
-    for tm in timing:
-        y, _ = sf.read(str(vo_dir / f"{tm['id']}.wav"), dtype="float32")
-        s = int((tm["start"] + LEAD) * sr)
-        track[s:s + len(y)] += y[: max(0, len(track) - s)]
+    sfx_events = []
+    for b, tm in zip(L["beats"], timing):
+        if tm["narr"]:
+            y, _ = sf.read(str(vo_dir / f"{tm['id']}.wav"), dtype="float32")
+            s = int((tm["start"] + tm["lead"]) * sr)
+            track[s:s + len(y)] += y[: max(0, len(track) - s)]
+        for fx in b.get("sfx", []):  # designed sound on a visible event: a word cue or a time in the beat
+            at = tm["start"] + (tm["lead"] + voice.find_word(times[b["id"]], fx["cue"], 0.0) if fx.get("cue") else float(fx.get("at", 0.0)))
+            sfx_events.append({"kind": fx.get("kind", "hit"), "at": round(at, 3), "gain_db": float(fx.get("gain_db", -4))})
     narr_wav = out / "narration.wav"
     sf.write(str(narr_wav), track[: int(sr * total)], sr)
-    bed = music.bed(total, out / "score.wav", mood=meta.get("music", "reflective"))
-    mix_stems([{"file": str(narr_wav), "role": "voice"}, {"file": str(bed), "role": "music", "gain_db": -3}],
-                    total, str(proj / "assets" / "mix.wav"), voice_lufs=-16.0, target_lufs=-16.0)
+    bed = music.bed(total, out / "score.wav", mood=meta.get("music", "reflective"), fade_in=0.25)
+    stems = [{"file": str(narr_wav), "role": "voice"}, {"file": str(bed), "role": "music", "gain_db": -3}]
+    if sfx_events:
+        A.build_sfx_track(sfx_events, total, out / "sfx.wav")
+        stems.append({"file": str(out / "sfx.wav"), "role": "sfx", "gain_db": -8})
+    mix_stems(stems, total, str(proj / "assets" / "mix.wav"), voice_lufs=-16.0, target_lufs=-16.0)
     # 3. scenes
     look = Look(brand(), W, Hh)
     H.ensure_gsap(proj / "assets" / "vendor")
@@ -103,13 +120,13 @@ def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: 
         sid = b["id"]
         wt = times[sid]
 
-        def cue(word: str, default: float, wt=wt) -> float:
-            if not word:
+        def cue(word: str, default: float, wt=wt, lead=tm["lead"]) -> float:
+            if not word or not wt:
                 return default
-            return LEAD + voice.find_word(wt, word, default - LEAD)
+            return lead + voice.find_word(wt, word, default - lead)
 
         (proj / "compositions" / f"{sid}.html").write_text(
-            scene_file(look, sid, b["visual"], tm["dur"], cue, LEAD + tm["narr"], last=i == len(L["beats"]) - 1))
+            scene_file(look, sid, b["visual"], tm["dur"], cue, tm["lead"] + tm["narr"], last=i == len(L["beats"]) - 1))
         hosts.append(f'<div id="{sid}" data-composition-id="{sid}" data-composition-src="compositions/{sid}.html" '
                      f'data-start="{tm["start"]:.3f}" data-duration="{tm["dur"]:.3f}" data-track-index="{10 + i % 2}" '
                      f'data-track-kind="graphics" data-width="{W}" data-height="{Hh}" style="z-index:10"></div>')
@@ -180,6 +197,9 @@ def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: 
         target = out / f"{name}_{meta.get('aspect', '4:3').replace(':', 'x')}{'' if render == 'final' else '_draft'}.mp4"
         log(f"  rendering ({render}) -> {target}")
         H.render(proj, target, render)
+        thumb = target.with_name(target.stem + "_thumbnail.png")
+        ff.extract_frame(target, 0.0, thumb)  # frame 0 is the thumbnail on most players: it shows the hook
+        result["thumbnail"] = str(thumb)
         info = ff.probe(target)
         result.update(video=str(target), video_info={"w": info.width, "h": info.height, "duration": info.duration},
                       loudness=A.measure(target))

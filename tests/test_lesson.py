@@ -22,7 +22,7 @@ def _mini():
             "sources": [{"id": "s1", "cite": "x"}],
             "principles": [{"name": "a"}, {"name": "b"}],
             "beats": [{"id": "b1", "act": "hook", "narration": "In seventeen twenty a genius lost a fortune.",
-                       "visual": {"type": "title", "title": "T"}, "sources": ["s1"]},
+                       "visual": {"type": "statement", "text": "T"}, "sources": ["s1"]},
                       {"id": "b2", "act": "misconception", "narration": "We think smart people are safe.", "visual": {"type": "statement", "text": "Smart = safe?"}},
                       {"id": "b3", "act": "question", "narration": "Which matters most?", "visual": {"type": "question", "question": "Which?"}},
                       {"id": "b4", "act": "recap", "narration": "Price is not value.", "visual": {"type": "list", "items": ["Price is not value"]}}]}
@@ -92,3 +92,34 @@ def test_every_scene_type_renders_markup():
         seen.add(b["visual"]["type"])
     assert {"title", "chart", "timeline", "quote", "portrait", "principle", "question", "list", "end"} <= seen
     assert look.fs(0.01) >= 28  # type floor
+
+
+def test_hook_rules_reject_slow_title_first_openings():
+    slow = [{"id": "b1", "act": "hook", "narration": "In the spring of seventeen twenty, the smartest man in England made a "
+             "fortune in the stock market. Then he gave it back. And then some.", "visual": {"type": "title", "title": "x"}},
+            {"id": "b2", "act": "misconception", "narration": "We like to believe bubbles only catch fools.",
+             "visual": {"type": "statement", "text": "x"}}]
+    errs = schema.hook_errors(slow)
+    assert any("title card" in e for e in errs) and any("5s" in e for e in errs)
+    assert any("open a loop" in w for w in schema.hook_warnings(slow))
+    L = schema.load(LESSON)
+    assert schema.hook_errors(L["beats"]) == [] and schema.hook_warnings(L["beats"]) == []
+    assert L["beats"][0]["visual"]["type"] == "hook"
+
+
+def test_hook_scene_has_frame_zero_content_and_impact_on_cue():
+    look = scenes.Look({"primary_color": "#FF4F00", "secondary_color": "#0E0E0E", "font": "Inter"}, 1440, 1080)
+    v = {"type": "hook", "lines": ["He explained gravity.", "Then he lost a fortune to it."], "crash_cue": "lost"}
+    html = scenes.scene_file(look, "h1", v, 6.0, lambda w, d: 3.0 if w == "lost" else d, 5.0, last=False)
+    assert "He explained gravity." in html  # line 1 is in the markup with no entrance: visible at frame 0
+    assert 'tl.fromTo("#h1-l1"' not in html
+    assert '"#h1-l2", {opacity: 0, scale: 1.35}' in html and "3.000);" in html  # slam lands on the word
+
+
+def test_silent_title_beat_is_allowed_only_with_hold():
+    L = _mini()
+    L["beats"].insert(1, {"id": "t0", "act": "context", "narration": "", "visual": {"type": "title", "title": "T", "hold": 3}})
+    schema.validate(L)
+    L["beats"][1]["visual"].pop("hold")
+    with pytest.raises(schema.LessonError):
+        schema.validate(L)

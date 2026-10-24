@@ -17,7 +17,8 @@ PROGRESSIONS = {
 }
 
 
-def bed(duration: float, out: str | Path, mood: str = "reflective", bpm: float = 72.0, seed: int = 3) -> Path:
+def bed(duration: float, out: str | Path, mood: str = "reflective", bpm: float = 72.0, seed: int = 3,
+        fade_in: float = 2.0) -> Path:
     sr = audio.SR
     n = int(sr * (duration + 1.0))
     t = np.arange(n) / sr
@@ -56,7 +57,7 @@ def bed(duration: float, out: str | Path, mood: str = "reflective", bpm: float =
     left = y
     right = np.concatenate([np.zeros(d, dtype="float32"), y[:-d]]) * 0.95 + y * 0.05
     st = np.stack([left, right], axis=1)
-    fade_in, fade_out = int(2.0 * sr), int(3.0 * sr)
+    fade_in, fade_out = max(1, int(fade_in * sr)), int(3.0 * sr)  # a hook needs music from frame 0
     st[:fade_in] *= np.linspace(0, 1, fade_in)[:, None]
     st[-fade_out:] *= np.linspace(1, 0, fade_out)[:, None]
     st = st[: int(sr * duration)]

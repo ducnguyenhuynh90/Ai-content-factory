@@ -47,8 +47,9 @@ def _fade(sel, at, dur=0.5):
     return _ft(sel, "opacity: 0", f'opacity: 1, duration: {dur}, ease: "power2.out"', at)
 
 
-def _exit(sel, dur_scene, d=0.35):
-    return _ft(sel, "opacity: 1", f'opacity: 0, duration: {d}, ease: "power2.in"', dur_scene - d - 0.05, later=True)
+def _exit(sel, dur_scene, d=0.22):
+    # a quick exit; the next scene starts drawing almost at once, so cuts never leave a dead, empty frame
+    return _ft(sel, "opacity: 1", f'opacity: 0, duration: {d}, ease: "power2.in"', dur_scene - d - 0.02, later=True)
 
 
 def base_css(L: Look, sid: str) -> str:
@@ -72,8 +73,9 @@ def title(L, sid, v, dur, cue):
       <div id="{sid}-t" class="serif" style="font-size:{L.fs(0.105)}px;line-height:1.02;margin-top:{L.px(0.03)}px;">{E(v['title'])}</div>
       <div id="{sid}-r" style="width:{L.px(0.14)}px;height:{max(3, L.px(0.005))}px;background:{L.accent};margin:{L.px(0.035)}px 0;transform-origin:0 50%;"></div>
       <div id="{sid}-s" class="muted" style="font-size:{L.fs(0.034)}px;line-height:1.35;max-width:{L.px(1.0)}px;">{E(v.get('subtitle', ''))}</div></div>"""
-    tw = [_fade(f"#{sid}-k", 0.2), _rise(f"#{sid}-t", 0.45, 0.9, 30),
-          _ft(f"#{sid}-r", "scaleX: 0", 'scaleX: 1, duration: 0.8, ease: "expo.out"', 1.0), _rise(f"#{sid}-s", 1.3)]
+    fast = 0.4 if v.get("hold") else 1.0  # a silent title sting lands at once, on its sound accent
+    tw = [_fade(f"#{sid}-k", 0.05), _rise(f"#{sid}-t", 0.1, 0.9 * fast + 0.2, 30),
+          _ft(f"#{sid}-r", "scaleX: 0", 'scaleX: 1, duration: 0.8, ease: "expo.out"', 0.6 * fast), _rise(f"#{sid}-s", 1.0 * fast)]
     return m, "", tw
 
 
@@ -92,7 +94,7 @@ def statement(L, sid, v, dur, cue):
     css = f"""#{sid}-wrap .hl {{ position: relative; color: {L.accent}; }}
     #{sid}-wrap .ul {{ position: absolute; left: 0; right: 0; bottom: -{L.px(0.006)}px; height: {max(3, L.px(0.005))}px;
       background: {L.accent}; transform-origin: 0 50%; }}"""
-    tw = ([_fade(f"#{sid}-k", 0.1)] if v.get("kicker") else []) + [_rise(f"#{sid}-t", 0.25, 0.8, 26)]
+    tw = ([_fade(f"#{sid}-k", 0.04)] if v.get("kicker") else []) + [_rise(f"#{sid}-t", 0.1, 0.7, 26)]
     for i, h in spans:
         tw.append(_ft(f"#{sid}-u{i}", "scaleX: 0", 'scaleX: 1, duration: 0.5, ease: "power3.out"', max(0.9, cue(h, 1.0 + i))))
     return m, css, tw
@@ -353,7 +355,67 @@ def end(L, sid, v, dur, cue):
     return m, "", tw
 
 
-GENERATORS = {"title": title, "statement": statement, "stat": stat, "chart": chart, "timeline": timeline, "quote": quote,
+def hook(L, sid, v, dur, cue):
+    """The first five seconds. Frame 0 is already a composed claim over the data (it is the thumbnail).
+    On the cue word the line crashes: flash, shake, and the second line slams in, all on the same beat
+    as the narration and the sound hit (spoken, visual and on-screen text carry one hook)."""
+    pts = v.get("points") or [[i, x] for i, x in enumerate([128, 170, 330, 340, 550, 1000, 950, 800, 300, 210, 200, 185])]
+    vals = [float(p[1]) for p in pts]
+    peak = vals.index(max(vals))
+    W, H = L.w * 0.86, L.h * 0.46
+    x0, y0 = L.w * 0.07, L.h * 0.47  # below the two-line headline
+    xs = [x0 + W * i / (len(vals) - 1) for i in range(len(vals))]
+    ys = [y0 + H - H * val / (max(vals) * 1.08) for val in vals]
+
+    def path(a, b):
+        return "M " + " L ".join(f"{xs[i]:.1f} {ys[i]:.1f}" for i in range(a, b + 1))
+
+    def plen(a, b):
+        return sum(math.hypot(xs[i + 1] - xs[i], ys[i + 1] - ys[i]) for i in range(a, b)) + 8
+
+    up_len, down_len = plen(0, peak), plen(peak, len(vals) - 1)
+    # the impact (flash, slam, sound hit) lands ON the cue word; the fall starts just before it
+    t_crash = max(0.9, cue(v.get("crash_cue", ""), dur * 0.55) - 0.45)
+    lines = v["lines"]
+    m = f"""<div id="{sid}-c" style="position:absolute;inset:0;">
+      <svg width="{L.w}" height="{L.h}" style="position:absolute;left:0;top:0;overflow:visible">
+        <path id="{sid}-up" d="{path(0, peak)}" fill="none" stroke="{L.ink}" stroke-opacity="0.8" stroke-width="{max(5, L.px(0.008))}"
+          stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="{up_len:.0f}" stroke-dashoffset="{up_len * 0.12:.0f}"/>
+        <path id="{sid}-down" d="{path(peak, len(vals) - 1)}" fill="none" stroke="{L.accent}" stroke-width="{max(6, L.px(0.01))}"
+          stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="{down_len:.0f}" stroke-dashoffset="{down_len:.0f}"/>
+        <circle id="{sid}-pk" cx="{xs[peak]:.1f}" cy="{ys[peak]:.1f}" r="{L.px(0.013)}" fill="{L.ink}" opacity="0"/>
+        <text id="{sid}-pkl" x="{xs[peak]:.1f}" y="{ys[peak] - L.px(0.035):.1f}" text-anchor="middle" fill="{L.ink}" font-family="Inter"
+          font-weight="700" font-size="{L.fs(0.03)}">{E(v.get('peak_label', ''))}</text>
+        <text id="{sid}-endl" x="{xs[-1]:.1f}" y="{ys[-1] - L.px(0.035):.1f}" text-anchor="end" fill="{L.accent}" font-family="Inter"
+          font-weight="800" font-size="{L.fs(0.034)}">{E(v.get('end_label', ''))}</text>
+      </svg>
+      <div id="{sid}-t" style="position:absolute;left:{L.px(0.08)}px;right:{L.px(0.06)}px;top:{L.h * 0.08:.0f}px;">
+        <div id="{sid}-k" class="kicker" style="margin-bottom:{L.px(0.02)}px">{E(v.get('kicker', ''))}</div>
+        <div id="{sid}-l1" class="serif" style="font-size:{L.fs(0.12)}px;line-height:1.02;">{E(lines[0])}</div>
+        <div id="{sid}-l2" class="serif acc" style="font-size:{L.fs(0.12)}px;line-height:1.02;text-wrap:balance;margin-top:{L.px(0.01)}px;">{E(lines[1]) if len(lines) > 1 else ''}</div>
+      </div>
+      <div id="{sid}-flash" data-layout-ignore style="position:absolute;inset:0;background:{L.accent};opacity:0;"></div>
+    </div>"""
+    tw = [
+        # frame 0: line 1 and part of the rising curve are already there; the rise keeps moving
+        _ft(f"#{sid}-up", f"strokeDashoffset: {up_len * 0.12:.0f}", f'strokeDashoffset: 0, duration: {max(0.8, t_crash - 0.3):.2f}, ease: "power2.in"', 0),
+        _ft(f"#{sid}-pkl", "opacity: 0", 'opacity: 1, duration: 0.25, ease: "power2.out"', max(0.6, t_crash - 0.3)),
+        _ft(f"#{sid}-pk", "opacity: 0", 'opacity: 1, duration: 0.15, ease: "power2.out"', max(0.6, t_crash - 0.3)),
+        # the crash
+        _ft(f"#{sid}-down", f"strokeDashoffset: {down_len:.0f}", 'strokeDashoffset: 0, duration: 0.55, ease: "power4.in"', t_crash),
+        _ft(f"#{sid}-flash", "opacity: 0", 'opacity: 0.28, duration: 0.06, ease: "none"', t_crash + 0.5),
+        _ft(f"#{sid}-flash", "opacity: 0.28", 'opacity: 0, duration: 0.45, ease: "power2.out"', t_crash + 0.56, later=True),
+        _ft(f"#{sid}-t", "x: 0", 'x: -14, duration: 0.05, ease: "none"', t_crash + 0.5),
+        _ft(f"#{sid}-t", "x: -14", 'x: 9, duration: 0.07, ease: "none"', t_crash + 0.55, later=True),
+        _ft(f"#{sid}-t", "x: 9", 'x: 0, duration: 0.25, ease: "elastic.out(1, 0.4)"', t_crash + 0.62, later=True),
+        _ft(f"#{sid}-l2", "opacity: 0, scale: 1.35", 'opacity: 1, scale: 1, duration: 0.35, ease: "expo.out"', t_crash + 0.45),
+        _ft(f"#{sid}-endl", "opacity: 0, y: -10", 'opacity: 1, y: 0, duration: 0.3, ease: "back.out(2)"', t_crash + 0.6),
+    ]
+    css = f"#{sid}-l2 {{ transform-origin: 0 60%; }}"
+    return m, css, tw
+
+
+GENERATORS = {"hook": hook, "title": title, "statement": statement, "stat": stat, "chart": chart, "timeline": timeline, "quote": quote,
               "portrait": portrait, "principle": principle, "compare": compare, "list": list_, "question": question, "end": end}
 
 

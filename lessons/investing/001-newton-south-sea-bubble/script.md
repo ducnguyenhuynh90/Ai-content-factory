@@ -1,5 +1,5 @@
 # The Genius and the Bubble
-_Lessons from Market History · No. 1 · 617 words · ~4.41 min · 4:3_
+_Lessons from Market History · No. 1 · 644 words · ~4.6 min · 4:3_
 
 ## Learning goals
 - Explain the difference between price and value with a real historical example
@@ -14,7 +14,9 @@ _Lessons from Market History · No. 1 · 617 words · ~4.41 min · 4:3_
 ## Script
 | # | act | narration | on screen |
 |---|---|---|---|
-| b01 | hook | In the spring of seventeen twenty, the smartest man in England made a fortune in the stock market. Then he gave it back. And then some. | title: The Genius and the Bubble |
+| h1 | hook | Isaac Newton explained gravity. Then, in seventeen twenty, he lost a fortune to it. | hook: hook |
+| h2 | context | Not to fraud. Not to bad luck. To a mistake you have probably made yourself. In the next four minutes, you'll see how it happened, and three rules that stop it. | statement: One mistake. Three rules. |
+| t0 | context |  | title: The Genius and the Bubble |
 | b02 | misconception | We like to believe bubbles only catch fools. That intelligence is protection. That if you understand money, the crowd can't fool you. This story says otherwise. | statement: Bubbles only catch fools. |
 | b03 | context | Isaac Newton gave us gravity, calculus and the laws of motion. But by seventeen twenty he also ran the Royal Mint. He understood money better than almost anyone alive. | portrait: Isaac Newton |
 | b04 | context | To understand what happened, you have to look at the South Sea Company. It was founded in seventeen eleven to trade with South America, but its real business was government debt. In seventeen twenty it offered to swap the nation's debt for its own shares. And the shares began to climb. | timeline: The South Sea Company |
@@ -23,7 +25,7 @@ _Lessons from Market History · No. 1 · 617 words · ~4.41 min · 4:3_
 | b07 | turn | Then he watched. His friends kept buying. The price kept rising. Every week, the people who had stayed in looked smarter than he did. | statement: Watching others win. |
 | b08 | complication | So in June, near the very top, Newton bought back in, at roughly twice the price he had sold at. And according to historian Andrew Odlyzko, it was not a small bet. Much of his fortune went in. _(estimate)_ | chart: Sold in spring, bought back near the top |
 | b09 | complication | Then came September. The bubble burst. By December, a share was worth under two hundred pounds. _(estimate)_ | stat: One share, summer to December 1720 |
-| b10 | story | How much did Newton lose? Family legend says twenty thousand pounds. Odlyzko rebuilt his accounts from bank records, and estimates the loss at more than ten thousand. Worse, had Newton simply kept his early profits, he would have ended up more than twice as rich. _(estimate)_ | compare: How much did he lose? |
+| b10 | story | How much did Newton lose? The number everyone quotes is wrong. Family legend says twenty thousand pounds. Historian Andrew Odlyzko rebuilt his accounts from bank records, and estimates the loss at more than ten thousand. Worse, had Newton simply kept his early profits, he would have ended up more than twice as rich. _(estimate)_ | compare: How much did he lose? |
 | b11 | story | He is said to have remarked that he could calculate the motions of the heavenly bodies, but not the madness of people. It is a perfect line. It is also attributed, and historians have never traced it to Newton himself. _(attributed)_ | quote: I can calculate the motions of the heavenly bodies, but not the madness of people. |
 | b12 | principle | Lesson one. As Warren Buffett would later put it, price is what you pay, value is what you get. The South Sea Company never earned anything close to justifying a thousand pounds a share. When price runs far ahead of value, the gap eventually closes. | principle: Price is not value |
 | b13 | principle | Lesson two. The crowd is not evidence. Newton's own judgment told him to sell. What pulled him back was watching other people get rich. A rising price feels like proof. It isn't. | principle: The crowd is not evidence |
