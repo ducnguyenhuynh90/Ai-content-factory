@@ -44,6 +44,18 @@ def figure(fid, x, gy, h, cls="fig"):
             f'<path d="{d}" class="ln"/></g></g>')
 
 
+def xf(x, y, scale=1.0, rot=0.0):
+    """An SVG transform turning/scaling about (x, y). Scene templates are built before layout, so GSAP's
+    bbox-based origins (transformOrigin, svgOrigin) can be wrong; tween this as an attribute instead."""
+    return f"translate({x:.1f} {y:.1f}) rotate({rot:.2f}) scale({scale:.3f}) translate({-x:.1f} {-y:.1f})"
+
+
+def _xf(sel, x, y, frm, to, at, dur, ease="power2.out", later=False):
+    """Tween an element's transform attribute from (scale, rot) `frm` to `to` about (x, y)."""
+    return _ft(sel, f'attr: {{ transform: "{xf(x, y, *frm)}" }}', f'attr: {{ transform: "{xf(x, y, *to)}" }}, duration: {dur:.2f}, '
+               f'ease: "{ease}"', at, later)
+
+
 def coin(cid, x, y, r, L):
     return (f'<g id="{cid}"><circle cx="{x:.1f}" cy="{y:.1f}" r="{r:.1f}" fill="{L.accent}"/>'
             f'<text x="{x:.1f}" y="{y + r * 0.36:.1f}" text-anchor="middle" font-family="{L.serif}" font-weight="700" '
@@ -103,7 +115,7 @@ def bubble(L, sid, v, dur, cue):
     svg = f"""
       <line x1="{W * 0.12:.0f}" y1="{gy:.0f}" x2="{W * 0.88:.0f}" y2="{gy:.0f}" stroke="{L.muted}" stroke-width="2" opacity="0.6"/>
       {people}
-      <g id="{sid}-bub">
+      <g id="{sid}-bub" transform="{xf(cx, cy, 0.75)}">
         <circle cx="{cx:.1f}" cy="{cy:.1f}" r="{R:.1f}" fill="{L.accent}" fill-opacity="0.10" stroke="{L.accent}" stroke-width="{max(3, L.px(0.005))}"/>
         <path d="M{cx - R * 0.62:.1f} {cy - R * 0.38:.1f} A{R * 0.75:.1f} {R * 0.75:.1f} 0 0 1 {cx - R * 0.2:.1f} {cy - R * 0.7:.1f}"
           stroke="{L.ink}" stroke-opacity="0.55" stroke-width="{max(3, L.px(0.006))}" fill="none" stroke-linecap="round"/>
@@ -114,12 +126,13 @@ def bubble(L, sid, v, dur, cue):
       {_label(f"{sid}-after", cx, cy + H * 0.07 + fs * 0.33 + L.fs(0.06), v.get("after", ""), L, 0.028, L.muted)}"""
     # inflate (with a slight wobble), the price counting up with it
     grow = max(0.6, t_pop - 0.35)
-    tw = [_ft(f"#{sid}-bub", "scale: 0.55", f'scale: 1, duration: {grow:.2f}, ease: "power1.in", svgOrigin: "{cx:.0f} {cy:.0f}"', 0.05),
-          _ft(f"#{sid}-bub", "scale: 1", f'scale: 1.1, duration: 0.07, ease: "power2.out", svgOrigin: "{cx:.0f} {cy:.0f}"', t_pop - 0.07, later=True),
+    tw = [_xf(f"#{sid}-bub", cx, cy, (0.75,), (1.0,), 0.05, grow, "power1.in"),
+          _xf(f"#{sid}-bub", cx, cy, (1.0,), (1.1,), t_pop - 0.07, 0.07, later=True),
           _ft(f"#{sid}-bub", "opacity: 1", 'opacity: 0, duration: 0.05, ease: "none"', t_pop),
-          _ft(f"#{sid}-ring", "opacity: 0, scale: 1", f'opacity: 0.8, scale: 1.05, duration: 0.05, ease: "none", svgOrigin: "{cx:.0f} {cy:.0f}"', t_pop),
-          _ft(f"#{sid}-ring", "opacity: 0.8, scale: 1.05", f'opacity: 0, scale: 1.7, duration: 0.5, ease: "power2.out", svgOrigin: "{cx:.0f} {cy:.0f}"', t_pop + 0.05, later=True),
-          _ft(f"#{sid}-val", "y: 0, rotation: 0", f'y: {H * 0.07:.1f}, rotation: -4, duration: 0.6, ease: "bounce.out", svgOrigin: "{cx:.0f} {cy:.0f}"', t_pop + 0.05),
+          _ft(f"#{sid}-ring", "opacity: 0", 'opacity: 0.8, duration: 0.05, ease: "none"', t_pop),
+          _ft(f"#{sid}-ring", "opacity: 0.8", 'opacity: 0, duration: 0.5, ease: "power2.out"', t_pop + 0.05, later=True),
+          _ft(f"#{sid}-ring", "attr: { r: %.1f }" % R, 'attr: { r: %.1f }, duration: 0.55, ease: "power2.out"' % (R * 1.35), t_pop),
+          _ft(f"#{sid}-val", "y: 0", f'y: {H * 0.07:.1f}, duration: 0.6, ease: "bounce.out"', t_pop + 0.05),
           _ft(f"#{sid}-after", "opacity: 0, y: 10", 'opacity: 1, y: 0, duration: 0.35, ease: "power2.out"', t_pop + 0.7)]
     for i in range(5):
         tw.append(_ft(f"#{sid}-p{i}-b", "y: 0", f'y: 6, duration: 0.18, ease: "power2.out"', t_pop + 0.02 * i))
@@ -215,17 +228,18 @@ def crowd(L, sid, v, dur, cue):
         for j in range(n):
             x = W * 0.08 + gap * j
             fid = f"{sid}-m{j}"
-            parts.append(figure(fid, x, gy, fh, "fig hero" if j == 1 and v.get("hero_in_crowd") else "fig"))
+            fig_svg = figure(fid, x, gy, fh, "fig hero" if j == 1 and v.get("hero_in_crowd") else "fig")
+            parts.append(f'<g id="{fid}-tip">{fig_svg}</g>' if j >= n - 3 else fig_svg)
             tw.append(_ft(f"#{fid}", "x: 0", f'x: {walk:.1f}, duration: {t_stop - 0.1:.2f}, ease: "none"', 0.1))
             tw.append(_bob(f"#{fid}-b", 0.1, t_stop, fh * 0.05))
             if j >= n - 3:  # the front three keep walking, one after another, off the edge
                 k = n - 1 - j
                 to_edge = edge - (x + walk) + gap * 0.25
-                at = t_stop + 0.3 * k
-                step = max(0.25, to_edge / (walk / max(0.5, t_stop - 0.1)))
+                at = t_stop + 0.25 * k
+                step = 0.45 + 0.3 * k  # they hurry: the last ones follow the first over the edge
                 tw.append(_ft(f"#{fid}", f"x: {walk:.1f}", f'x: {walk + to_edge:.1f}, duration: {step:.2f}, ease: "none"', at, later=True))
-                tw.append(_ft(f"#{fid}", "y: 0, rotation: 0", f'y: {H * 0.06:.1f}, rotation: 70, duration: 0.45, '
-                              f'ease: "power2.in", svgOrigin: "{x:.0f} {gy:.0f}"', at + step, later=True))
+                tw.append(_xf(f"#{fid}-tip", edge + gap * 0.25, gy, (1.0, 0.0), (1.0, 75.0), at + step, 0.45, "power2.in"))
+                tw.append(_ft(f"#{fid}", "y: 0", f'y: {H * 0.05:.1f}, duration: 0.45, ease: "power2.in"', at + step + 0.1, later=True))
                 tw.append(_ft(f"#{fid}", "opacity: 1", 'opacity: 0, duration: 0.2, ease: "none"', at + step + 0.3, later=True))
     return "".join(parts), "", tw
 
