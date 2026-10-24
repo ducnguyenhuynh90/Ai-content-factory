@@ -68,6 +68,17 @@ class TitleBase(Animation):
         arr[..., 3] = a
         return Image.fromarray(arr, "RGBA")
 
+    def _ink_top(self, line_center: float) -> float:
+        """Screen y of the cap tops for a line pasted centred ('mm') at line_center."""
+        f = self.ts.pil()
+        asc, desc = f.getmetrics()
+        return line_center - (asc + desc) / 2 + f.getbbox("H")[1]
+
+    def _ink_bottom(self, line_center: float) -> float:
+        f = self.ts.pil()
+        asc, desc = f.getmetrics()
+        return line_center - (asc + desc) / 2 + f.getbbox("H")[3]
+
     def out_p(self, t: float) -> float:
         """0 during intro/hold, ramps 0->1 over the outro."""
         return E.progress(t, self.duration - self.outro, self.outro)
@@ -233,7 +244,8 @@ class Slam(TitleBase):
                 p = E.out_expo(E.progress(t, last + delay, 0.5))
                 im = g.render(alpha=p * (1 - E.in_cubic(o)), color=self.pal.accent if dy < 0 else self.pal.fg,
                               tracking=self.ty.kicker_tracking + 0.3 * (1 - p))
-                y = top - self.u * 0.06 if dy < 0 else top + lh * len(self.words) + self.u * 0.05
+                y = (self._ink_top(top + lh * 0.5) - self.u * 0.035 if dy < 0
+                     else self._ink_bottom(top + lh * (len(self.words) - 0.5)) + self.u * 0.04)
                 paste(img, im, self.width / 2, y, "mm")
         if self.look.flash_on_hits and not self.opaque:
             fa = max((math.exp(-(t - h) * 18) for h in self.hits if t >= h), default=0) * 0.35
