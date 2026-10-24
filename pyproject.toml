@@ -1,0 +1,28 @@
+[project]
+name = "vfactory"
+version = "0.1.0"
+description = "AI video factory: raw footage -> studio-grade edit with cinematic openings, titles, grading, sound and end cards"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "pillow>=10.0"]
+
+[project.optional-dependencies]
+transcribe = ["faster-whisper>=1.0"]
+youtube = ["yt-dlp"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+vfactory = "vfactory.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["vfactory*"]
+
+[tool.setuptools.package-data]
+vfactory = ["assets/fonts/*.ttf", "assets/fonts/licenses/*.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

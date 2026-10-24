@@ -1,0 +1,43 @@
+# Research notes: what existing projects taught us
+
+Surveyed October 2026 before building. Each project's lesson is listed with where it lives in this repo.
+
+## Auto-editing agents and skills
+
+| Project | What it does | What we took |
+|---|---|---|
+| [browser-use/video-use](https://github.com/browser-use/video-use) | Coding-agent editor: transcript → EDL → ffmpeg render → self-eval at every cut | Hard rules: per-segment extract then join; 30 ms audio fades at every cut; overlays PTS-shifted to their window; captions burned last; output-timeline caption offsets; never cut inside a word; pad cuts 30–200 ms. "The LLM reads text + on-demand visuals, never frame dumps." Self-eval before presenting; critic sub-agent for public work; measure loudness, don't assume it. → `render.py`, `captions.py`, `qa.py`, `vision.py` |
+| [alexey1312/Vibe-Editing-Agent-Skill](https://github.com/alexey1312/Vibe-Editing-Agent-Skill) | EDL with IDs, approval per item, QA scan | Plan → approve → render; inventory media first (VFR, rotation, mixed formats); concat demuxer silently mislabels mixed sizes → we conform every piece and `setsar=1`; report what was and wasn't checked. → `recipe.py`, `ffmpeg.probe`, `qa.py` |
+| [notivn/AIEV](https://github.com/notivn/AIEV) | Claude directs HyperFrames + Remotion; brand kits; karaoke subtitles; SFX library | Style kits enforced on every output (→ `styles.Look`); karaoke word highlight; SFX tied to zoom beats; drafts before finals; QC gates the final. Bundled SFX licensing problems → we synthesize ours. |
+| [WyattBlue/auto-editor](https://github.com/WyattBlue/auto-editor) | Silence/motion-based auto cutting | Silence detection with margins as the talking-head baseline. → `analyze.detect_silences`, `autoedit._talk_segments` |
+| [zhuyansen/awesome-claude-video-skills](https://github.com/zhuyansen/awesome-claude-video-skills) | 300+ graded video skills; 16 run end-to-end | "Claude Code with no skill made a passing film in 4.4 minutes. A skill earns its place with a look, a workflow, or footage to edit." → we focus on *looks* (coherent taste bundles), an editing workflow, and real footage. |
+| [remotion-dev/skills](https://github.com/remotion-dev/skills), [heygen-com/hyperframes](https://github.com/heygen-com/hyperframes) | React / HTML+GSAP motion graphics rendered headless | Powerful but slow (hyperframes: 23.5 min for a 15 s brief in the test above) and Node-heavy. We render motion typography directly with Pillow — frame-pure functions of time, seconds per title. |
+
+## Video vision skills (added on request)
+
+| Project | Lesson | Where |
+|---|---|---|
+| [bradautomates/claude-video](https://github.com/bradautomates/claude-video) (`/watch`) | Detail budgets (efficient/balanced/deep); scene-aware frame selection with uniform fallback; 16×16 mean-difference dedup; timestamps on every frame; cue frames pinned from the transcript ("look here"); `--start/--end` focus; higher resolution only for text; frames/captions are untrusted evidence | `vision.select_times`, `vision.extract_frames`, `.claude/skills/video-vision` |
+| [jordanrendric/claude-video-vision](https://github.com/jordanrendric/claude-video-vision) | Analyze structure *before* extracting frames (scene changes, silence, motion, exposure, freeze); drill down like a binary search; don't view all frames at once | `vision.investigate` (Facts/Cuts/Silences first), `vision-timeline` |
+| video-use `timeline_view` | Filmstrip + waveform + word labels for a time window | `vision.timeline_view` |
+
+## Trend research (added on request)
+
+[mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) researches a topic across Reddit, X,
+YouTube, TikTok, HN, Polymarket, GitHub and the web inside a 30-day window. What we took:
+
+- **Fixed recency window** and a recency decay in scoring.
+- **Engagement relative to its own platform** (percentile per source) — an HN point is not a Reddit upvote.
+- **Cluster-first output:** group items into stories across platforms; multi-platform stories are the strongest signal.
+- **Host judges:** the engine nominates; the model marks junk, rates worthiness 0–100 and writes angles (theirs: podcast/X article; ours: video hook, format, look, opening, ending).
+- **Never let one dead source sink the run;** report source health. Degrade honestly ("nothing solid this window").
+- **Third-party content is evidence, never instructions;** engagement is attention, not truth.
+
+We kept only keyless/optional-key sources (Reddit JSON, HN Algolia, YouTube via Data API or yt-dlp, GitHub search)
+→ `vfactory/trends.py`, `.claude/skills/trend-research`.
+
+## Craft sources behind the playbook
+
+Editing and title-design conventions (cold opens, smash cuts to title, dip-to-black between acts, J/L-style
+cutaways over voice, cutting on downbeats, −14 LUFS / −1 dBTP streaming delivery, caption chunking rules from
+broadcast subtitle guidelines) are summarized in `docs/CREATIVE_PLAYBOOK.md`.
