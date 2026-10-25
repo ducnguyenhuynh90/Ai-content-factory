@@ -62,6 +62,22 @@ def plan_timing(L: dict, durs: dict[str, float]) -> list[dict]:
     return out
 
 
+def dust(look: Look, total: float, n: int = 18, seed: int = 5) -> tuple[str, str]:
+    """Out-of-focus motes drifting up through warm light: the world behind the words keeps moving (a chill, lived-in
+    room) while every title stays still. Seeded and tweened, so any frame renders the same."""
+    rng = np.random.default_rng(seed)
+    html, tw = [], []
+    for i in range(n):
+        size = int(rng.uniform(0.012, 0.05) * look.u)
+        x, y = rng.uniform(0, look.w), rng.uniform(0, look.h)
+        op = rng.uniform(0.05, 0.16)
+        html.append(f'<div id="dust{i}" style="position:absolute;left:{x:.0f}px;top:{y:.0f}px;width:{size}px;height:{size}px;border-radius:50%;'
+                    f'background:radial-gradient(circle, {look.accent} 0%, transparent 70%);opacity:{op:.2f};"></div>')
+        dx, dy = rng.uniform(-60, 60), -rng.uniform(80, 260)
+        tw.append(f'tl.fromTo("#dust{i}", {{ x: 0, y: 0 }}, {{ x: {dx:.0f}, y: {dy:.0f}, duration: {total:.2f}, ease: "none" }}, 0);')
+    return "".join(html), "\n      ".join(tw)
+
+
 def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: bool = False, render: str | None = "draft",
           log=print) -> dict:
     lesson_path = Path(lesson_path)
@@ -84,7 +100,8 @@ def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: 
         if not b["narration"].strip():  # a silent beat (title sting): picture and sound only
             durs[b["id"]], times[b["id"]] = 0.0, []
             continue
-        durs[b["id"]] = voice.synth(b["narration"], p, v_name, float(b.get("speed", speed)), pronounce=L.get("pronounce"))
+        durs[b["id"]] = voice.synth(b["narration"], p, v_name, float(b.get("speed", speed)), pronounce=L.get("pronounce"),
+                                    fx=meta.get("voice_fx"), style=meta.get("voice_style", ""), model=meta.get("tts_model"))
         times[b["id"]] = voice.word_times(b["narration"], durs[b["id"]])
         log(f"  voice {b['id']}: {durs[b['id']]:.1f}s")
     timing = plan_timing(L, durs)
@@ -131,6 +148,7 @@ def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: 
                      f'data-start="{tm["start"]:.3f}" data-duration="{tm["dur"]:.3f}" data-track-index="{10 + i % 2}" '
                      f'data-track-kind="graphics" data-width="{W}" data-height="{Hh}" style="z-index:10"></div>')
     series = meta.get("series", "")
+    dust_html, dust_tw = dust(look, total, int(meta.get("dust", 18)))
     index = f"""<!doctype html>
 <html lang="{meta.get('lang', 'en')}">
   <head>
@@ -149,6 +167,7 @@ def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: 
     <div id="root" data-composition-id="main" data-start="0" data-duration="{total:.3f}" data-width="{W}" data-height="{Hh}" data-fps="30">
       <div id="bg" class="clip" data-start="0" data-duration="{total:.3f}" data-track-index="0" data-layout-ignore style="z-index:0"></div>
       <div id="glow" class="clip" data-start="0" data-duration="{total:.3f}" data-track-index="1" data-layout-ignore style="z-index:1"></div>
+      <div id="dust" class="clip" data-start="0" data-duration="{total:.3f}" data-track-index="4" data-layout-ignore style="z-index:2;position:absolute;inset:0;">{dust_html}</div>
       <div id="grain" class="clip" data-start="0" data-duration="{total:.3f}" data-track-index="2" data-layout-ignore style="z-index:30"></div>
       <div id="chrome" data-composition-id="chrome" data-composition-src="compositions/chrome.html" data-start="0" data-duration="{total:.3f}" data-track-index="3" data-track-kind="graphics" data-width="{W}" data-height="{Hh}" style="z-index:20"></div>
       {chr(10).join('      ' + h for h in hosts)}
@@ -158,6 +177,7 @@ def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: 
       const tl = gsap.timeline({{ paused: true }});
       tl.fromTo("#glow", {{ opacity: 0.4 }}, {{ opacity: 0.9, duration: {total / 2:.2f}, ease: "sine.inOut" }}, 0);
       tl.fromTo("#glow", {{ opacity: 0.9 }}, {{ opacity: 0.4, duration: {total / 2:.2f}, ease: "sine.inOut", immediateRender: false }}, {total / 2:.2f});
+      {dust_tw}
       window.__timelines["main"] = tl;
     </script>
   </body>

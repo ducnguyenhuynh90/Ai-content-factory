@@ -25,7 +25,7 @@ ACTS = ("hook", "context", "story", "misconception", "complication", "turn", "pr
 VISUALS = {
     "hook": {"required": ["lines"], "optional": ["points", "crash_cue", "peak_label", "end_label", "kicker"]},
     "title": {"required": ["title"], "optional": ["kicker", "subtitle"]},
-    "statement": {"required": ["text"], "optional": ["highlight", "kicker"]},
+    "statement": {"required": ["text"], "optional": ["highlight", "kicker", "strike", "replace", "strike_cue"]},
     "stat": {"required": ["value", "label"], "optional": ["from", "prefix", "suffix", "note"]},
     "chart": {"required": ["points"], "optional": ["title", "unit", "annotations", "y_label", "x_label"]},
     "timeline": {"required": ["events"], "optional": ["title"]},
@@ -36,6 +36,14 @@ VISUALS = {
     "list": {"required": ["items"], "optional": ["title", "check"]},
     "question": {"required": ["question"], "optional": ["choices", "answer", "think_seconds"]},
     "end": {"required": ["title"], "optional": ["cta", "next", "sources_line", "disclaimer"]},
+    # metaphor scenes (metaphors.py): the object on screen is the explanation
+    "funnel": {"required": ["total"], "optional": ["keep", "label", "keep_label", "keep_cue", "cue", "start_full", "stat", "cols", "seed"]},
+    "ladder": {"required": ["levels"], "optional": ["kicker", "heading", "top_cue", "tags"]},
+    "venn": {"required": ["circles"], "optional": ["kicker", "heading", "center_label", "center_cue"]},
+    "flywheel": {"required": [], "optional": ["kicker", "heading", "name", "line", "line_cue", "marks", "push_cues", "fast_cue",
+                                             "from_angle", "to_angle", "ease", "spokes", "enter"]},
+    "halo": {"required": ["items"], "optional": ["kicker", "heading", "label", "label_cue"]},
+    "swap": {"required": ["from", "to"], "optional": ["kicker", "heading", "cue", "line", "line_cue"]},
 }
 WPM = 150.0  # documentary narration pace (Vox guide; Kokoro at speed 0.95 lands close)
 # words (Vietnamese: syllables) per minute at speed 1.0; Piper vi_VN-vais1000 measured ~270, so speed 0.82 ≈ 220

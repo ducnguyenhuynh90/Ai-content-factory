@@ -56,8 +56,9 @@ def _fade(sel, at, dur=0.5):
 
 
 def _exit(sel, dur_scene, d=0.22):
-    # a quick exit; the next scene starts drawing almost at once, so cuts never leave a dead, empty frame
-    return _ft(sel, "opacity: 1", f'opacity: 0, duration: {d}, ease: "power2.in"', dur_scene - d - 0.02, later=True)
+    # a quick blur-swap exit; the next scene starts drawing almost at once, so cuts never leave a dead, empty frame
+    return _ft(sel, 'opacity: 1, filter: "blur(0px)"', f'opacity: 0, filter: "blur(8px)", duration: {d}, ease: "power2.in"',
+               dur_scene - d - 0.02, later=True)
 
 
 def base_css(L: Look, sid: str) -> str:
@@ -87,24 +88,72 @@ def title(L, sid, v, dur, cue):
     return m, "", tw
 
 
+def _phrase_at(words: list[str], phrase: str) -> int:
+    pw = phrase.split()
+    norm = lambda w: w.strip(".,;:!?…\"'“”").lower()  # noqa: E731
+    for j in range(len(words) - len(pw) + 1):
+        if [norm(w) for w in words[j:j + len(pw)]] == [norm(w) for w in pw]:
+            return j
+    return -1
+
+
 def statement(L, sid, v, dur, cue):
-    text = E(v["text"])
-    hl = v.get("highlight") or []
+    """The key phrase, word by word out of a blur (one of HyperFrames' title entrances). A highlight underlines on
+    its cue word. A myth: `strike` names the wrong phrase, which is struck through on `strike_cue` while `replace`
+    writes the correction over it."""
+    words = v["text"].split()
+    groups = {}  # start index -> (end index, kind, i, phrase)
     spans = []
-    for i, h in enumerate(hl):
-        hh = E(h)
-        if hh in text:
-            text = text.replace(hh, f'<span id="{sid}-h{i}" class="hl">{hh}<span id="{sid}-u{i}" class="ul"></span></span>', 1)
+    for i, h in enumerate(v.get("highlight") or []):
+        j = _phrase_at(words, h)
+        if j >= 0:
+            groups[j] = (j + len(h.split()), "hl", i, h)
             spans.append((i, h))
+    if v.get("strike"):
+        j = _phrase_at(words, v["strike"])
+        if j >= 0:
+            groups[j] = (j + len(v["strike"].split()), "st", 0, v["strike"])
+    out, k, wi = [], 0, 0
+    while k < len(words):
+        if k in groups:
+            end, kind, i, _ = groups[k]
+            inner = " ".join(f'<span id="{sid}-w{wi + n}" class="w">{E(w)}</span>' for n, w in enumerate(words[k:end]))
+            wi += end - k
+            if kind == "hl":
+                out.append(f'<span id="{sid}-h{i}" class="hl">{inner}<span id="{sid}-u{i}" class="ul"></span></span>')
+            else:
+                out.append(f'<span id="{sid}-st" class="st">{inner}<span id="{sid}-sl" class="sl"></span>'
+                           f'<span id="{sid}-rp" class="rp">{E(v.get("replace", ""))}</span></span>')
+            k = end
+        else:
+            out.append(f'<span id="{sid}-w{wi}" class="w">{E(words[k])}</span>')
+            wi += 1
+            k += 1
+    text = " ".join(out)
     m = f"""<div id="{sid}-c" style="position:absolute;left:{L.px(0.1)}px;right:{L.px(0.1)}px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;">
       {f'<div id="{sid}-k" class="kicker" style="margin-bottom:{L.px(0.03)}px">{E(v["kicker"])}</div>' if v.get('kicker') else ''}
       <div id="{sid}-t" class="serif" style="font-size:{L.fs(0.075)}px;line-height:1.18;">{text}</div></div>"""
     css = f"""#{sid}-wrap .hl {{ position: relative; color: {L.accent}; }}
+    #{sid}-wrap .w {{ display: inline-block; }}
     #{sid}-wrap .ul {{ position: absolute; left: 0; right: 0; bottom: -{L.px(0.006)}px; height: {max(3, L.px(0.005))}px;
-      background: {L.accent}; transform-origin: 0 50%; }}"""
-    tw = ([_fade(f"#{sid}-k", 0.04)] if v.get("kicker") else []) + [_rise(f"#{sid}-t", 0.1, 0.7, 26)]
+      background: {L.accent}; transform-origin: 0 50%; }}
+    #{sid}-wrap .st {{ position: relative; display: inline-block; }}
+    #{sid}-wrap .sl {{ position: absolute; left: -4%; right: -4%; top: 55%; height: {max(4, L.px(0.008))}px; background: #E77A5F;
+      transform-origin: 0 50%; border-radius: 4px; }}
+    #{sid}-wrap .rp {{ position: absolute; left: 0; top: 102%; white-space: nowrap; color: {L.accent}; font-style: italic;
+      font-size: 0.8em; }}"""
+    tw = ([_fade(f"#{sid}-k", 0.04)] if v.get("kicker") else [])
+    for n in range(wi):  # per word: blur 6 px -> 0 and opacity 0 -> 1, ~0.09 s apart, no translate
+        tw.append(_ft(f"#{sid}-w{n}", 'opacity: 0, filter: "blur(6px)"', 'opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.out"',
+                      0.12 + 0.09 * n))
     for i, h in spans:
         tw.append(_ft(f"#{sid}-u{i}", "scaleX: 0", 'scaleX: 1, duration: 0.5, ease: "power3.out"', max(0.9, cue(h, 1.0 + i))))
+    if v.get("strike") and f'id="{sid}-st"' in text:
+        ts = max(1.0, cue(v.get("strike_cue", ""), dur * 0.6))
+        tw.append(_ft(f"#{sid}-sl", "scaleX: 0", 'scaleX: 1, duration: 0.3, ease: "power3.out"', ts))
+        tw.append(_ft(f"#{sid}-st .w", "opacity: 1", 'opacity: 0.4, duration: 0.3, ease: "power2.out"', ts + 0.15, later=True))
+        tw.append(_ft(f"#{sid}-rp", 'opacity: 0, filter: "blur(8px)", y: 10', 'opacity: 1, filter: "blur(0px)", y: 0, duration: 0.4, ease: "expo.out"',
+                      ts + 0.35))
     return m, css, tw
 
 
@@ -433,13 +482,17 @@ GENERATORS = {"hook": hook, "title": title, "statement": statement, "stat": stat
               "portrait": portrait, "principle": principle, "compare": compare, "list": list_, "question": question, "end": end}
 
 
+from .metaphors import METAPHORS  # noqa: E402  (metaphors builds on the helpers above)
+
+GENERATORS.update(METAPHORS)
+
+
 def scene_file(L: Look, sid: str, visual: dict, dur: float, cue, narr: float, last: bool) -> str:
     gen = GENERATORS[visual["type"]]
     if visual["type"] == "question":
         markup, css, tweens = gen(L, sid, visual, dur, cue, narr)
     else:
         markup, css, tweens = gen(L, sid, visual, dur, cue)
-    tweens.insert(0, _ft(f"#{sid}-c", "scale: 1", f'scale: 1.035, duration: {dur:.2f}, ease: "sine.inOut"', 0))
     if not last:
         tweens.append(_exit(f"#{sid}-c", dur))
     return f"""<template>

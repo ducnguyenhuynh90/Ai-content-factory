@@ -165,3 +165,44 @@ def test_chill_bed_has_a_soft_pulse(tmp_path):
 
     y, sr = sf.read(str(music.bed(6.0, tmp_path / "c.wav", mood="chill")))
     assert len(y) == int(sr * 6.0) and 0.3 < abs(y).max() <= 0.71
+
+
+def test_metaphor_scenes_render_and_validate():
+    L = schema.load(VI_LESSON)
+    look = scenes.Look({"primary_color": "#E8B06A", "secondary_color": "#12100E", "font": "Inter"}, 1440, 1080, "vi")
+    kinds = set()
+    for b in L["beats"]:
+        t = b["visual"]["type"]
+        if t in ("funnel", "ladder", "venn", "flywheel", "halo", "swap") or b["visual"].get("strike"):
+            html = scenes.scene_file(look, b["id"], b["visual"], 9.0, lambda w, d: d, 7.0, last=False)
+            assert "window.__timelines" in html and "Math.random" not in html
+            kinds.add(t)
+    assert {"funnel", "ladder", "venn", "flywheel", "halo", "swap", "statement"} <= kinds
+    funnel = scenes.scene_file(look, "f1", {"type": "funnel", "total": 100, "keep": 3, "seed": 1}, 6.0, lambda w, d: d, 5.0, last=False)
+    assert funnel.count('id="f1-s') == 3  # the survivors are their own elements, gathered on cue
+
+
+def test_gemini_voice_is_cached_and_needs_a_key(tmp_path, monkeypatch):
+    import base64
+
+    import numpy as np
+
+    monkeypatch.delenv("GEMINI_API_KEY", raising=False)
+    monkeypatch.delenv("GOOGLE_API_KEY", raising=False)
+    with pytest.raises(voice.VoiceUnavailable):
+        voice.synth("Xin chào", tmp_path / "a.wav", "gemini:Charon", style="Đọc chậm rãi.", model="m")
+    monkeypatch.setenv("GEMINI_API_KEY", "test")
+    calls = []
+    pcm = (np.sin(np.arange(24000) / 10) * 8000).astype(np.int16).tobytes()
+
+    def fake(url, body=None, timeout=180):
+        calls.append((url, body))
+        return {"candidates": [{"content": {"parts": [{"inlineData": {"data": base64.b64encode(pcm).decode()}}]}}]}
+
+    monkeypatch.setattr(voice, "_http_json", fake)
+    d = voice.synth("Tốt là kẻ thù của vĩ đại.", tmp_path / "b.wav", "gemini:Charon", style="Đọc chậm rãi.", model="m")
+    assert 0.9 < d <= 1.0 and calls[0][0].endswith("/models/m:generateContent")
+    assert calls[0][1]["generationConfig"]["speechConfig"]["voiceConfig"]["prebuiltVoiceConfig"]["voiceName"] == "Charon"
+    assert calls[0][1]["contents"][0]["parts"][0]["text"].startswith("Đọc chậm rãi.")
+    voice.synth("Tốt là kẻ thù của vĩ đại.", tmp_path / "b.wav", "gemini:Charon", style="Đọc chậm rãi.", model="m")
+    assert len(calls) == 1  # cached by content: a rebuild pays only for changed lines
