@@ -115,6 +115,21 @@ def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: 
     look = Look(brand(), W, Hh)
     H.ensure_gsap(proj / "assets" / "vendor")
     grain_png(proj / "assets" / "grain.png")
+    from . import assets as AS, stage as ST
+    pics = set()
+    for b in L["beats"]:
+        v = b["visual"]
+        if v["type"] == "stage":
+            pics |= ST.assets_used(v)
+        for it in v.get("items", []) if v["type"] == "list" else []:
+            if isinstance(it, dict) and it.get("icon"):
+                pics.add(it["icon"])
+    if pics:
+        AS.install(pics, proj)
+        for b in L["beats"]:  # MIT notice travels with the project; the credit goes on the end card
+            v = b["visual"]
+            if v["type"] == "end" and AS.CREDIT not in v.get("sources_line", ""):
+                v["sources_line"] = (v.get("sources_line", "") + " · " + AS.CREDIT).strip(" ·")
     hosts = []
     for i, (b, tm) in enumerate(zip(L["beats"], timing)):
         sid = b["id"]
@@ -167,7 +182,8 @@ def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: 
   <style>
     #root {{ position: absolute; inset: 0; }}
     #chrome-rail {{ position: absolute; left: {look.px(0.05)}px; top: {look.px(0.045)}px; font-family: '{brand()['font']}';
-      font-weight: 700; font-size: {look.fs(0.026)}px; letter-spacing: 0.28em; text-transform: uppercase; color: {look.muted}; }}
+      font-weight: 700; font-size: {look.fs(0.026)}px; letter-spacing: 0.28em; text-transform: uppercase; color: #CFC8BC;
+      background: rgba(10,10,10,0.55); padding: {look.px(0.006)}px {look.px(0.016)}px; border-radius: 999px; }}
     #chrome-prog {{ position: absolute; left: 0; bottom: 0; width: {W}px; height: 6px; background: {look.accent}; transform-origin: 0 50%; }}
   </style>
   <div id="root" data-composition-id="chrome" data-width="{W}" data-height="{Hh}">
@@ -213,8 +229,9 @@ def script_markdown(L: dict) -> str:
     for b in L["beats"]:
         v = b["visual"]
         screen = v.get("title") or v.get("text") or v.get("name") or v.get("question") or v.get("label") or v["type"]
-        if v["type"] == "metaphor":  # the picture first: that's what the reviewer has to imagine
-            screen = f"{v['kind']}{' (' + v['mode'] + ')' if v.get('mode') else ''} — {v.get('caption', '')}"
+        if v["type"] == "stage":  # the picture first: that's what the reviewer has to imagine
+            cast = ", ".join(f"{a['asset']}{' ×' + str(a['repeat']) if a.get('repeat', 1) > 1 else ''}" for a in v["actors"])
+            screen = f"{v.get('world', 'meadow')}: {cast} — {v.get('caption', '')}"
         flag = f" _({b['certainty']})_" if b.get("certainty") in ("disputed", "attributed", "estimate") else ""
         rows.append(f"| {b['id']} | {b['act']} | {b['narration']}{flag} | {v['type']}: {screen} |")
     rep = schema.lint(L)

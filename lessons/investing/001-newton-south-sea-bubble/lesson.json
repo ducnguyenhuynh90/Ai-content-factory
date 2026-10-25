@@ -131,11 +131,64 @@
       "act": "misconception",
       "narration": "We like to believe bubbles only catch fools. That intelligence is protection. That if you understand money, the crowd can't fool you. This story says otherwise.",
       "visual": {
-        "type": "statement",
+        "type": "stage",
+        "world": "meadow",
         "kicker": "The myth",
-        "text": "Bubbles only catch fools.",
+        "caption": "Bubbles only catch fools?",
         "highlight": [
           "fools"
+        ],
+        "actors": [
+          {
+            "id": "bal",
+            "asset": "Balloon",
+            "x": 0.3,
+            "y": 0.42,
+            "size": 0.22,
+            "cue": "bubbles",
+            "do": [
+              {
+                "act": "fly",
+                "to": [
+                  0.7,
+                  0.42
+                ],
+                "cue": "otherwise",
+                "dur": 1.2
+              }
+            ]
+          },
+          {
+            "id": "fool",
+            "asset": "Clown face",
+            "x": 0.3,
+            "y": 0.68,
+            "size": 0.2,
+            "label": "Fools",
+            "cue": "fools"
+          },
+          {
+            "id": "smart",
+            "asset": "Nerd face",
+            "x": 0.7,
+            "y": 0.68,
+            "size": 0.2,
+            "label": "Smart people",
+            "cue": "intelligence",
+            "do": [
+              {
+                "act": "swap",
+                "asset": "Face screaming in fear",
+                "cue": "otherwise",
+                "delay": 1.1
+              },
+              {
+                "act": "shake",
+                "cue": "otherwise",
+                "delay": 1.15
+              }
+            ]
+          }
         ]
       }
     },
@@ -144,11 +197,81 @@
       "act": "context",
       "narration": "Isaac Newton gave us gravity, calculus and the laws of motion. But by seventeen twenty he also ran the Royal Mint. He understood money better than almost anyone alive.",
       "visual": {
-        "type": "portrait",
-        "name": "Isaac Newton",
-        "years": "1643 – 1727",
-        "role": "Master of the Royal Mint",
-        "initials": "IN"
+        "type": "stage",
+        "world": "meadow",
+        "kicker": "1643–1727 · Master of the Royal Mint",
+        "caption": "A genius with money",
+        "highlight": [
+          "money"
+        ],
+        "actors": [
+          {
+            "id": "tree",
+            "asset": "Deciduous tree",
+            "x": 0.2,
+            "y": 0.68,
+            "size": 0.44,
+            "enter": "rise",
+            "at": 0.1,
+            "still": true
+          },
+          {
+            "id": "apple",
+            "asset": "Red apple",
+            "x": 0.26,
+            "y": 0.38,
+            "size": 0.07,
+            "z": 9,
+            "at": 0.4,
+            "still": true,
+            "do": [
+              {
+                "act": "fall",
+                "to": 0.3,
+                "cue": "gravity",
+                "dur": 0.9
+              }
+            ]
+          },
+          {
+            "id": "newton",
+            "asset": "Man scientist",
+            "x": 0.5,
+            "y": 0.68,
+            "size": 0.34,
+            "label": "Isaac Newton",
+            "at": 0.2,
+            "do": [
+              {
+                "act": "say",
+                "text": "Gravity!",
+                "cue": "gravity",
+                "delay": 0.8,
+                "hold": 2.2
+              },
+              {
+                "act": "jump",
+                "cue": "gravity",
+                "delay": 0.8
+              }
+            ]
+          },
+          {
+            "id": "coin",
+            "asset": "Coin",
+            "x": 0.8,
+            "y": 0.68,
+            "size": 0.12,
+            "enter": "drop",
+            "cue": "Mint",
+            "repeat": 3,
+            "dx": 0,
+            "dy": -0.06,
+            "stagger": 0.25,
+            "label": "Royal Mint",
+            "still": true
+          }
+        ]
       },
       "sources": [
         "mint"
@@ -159,14 +282,61 @@
       "act": "context",
       "narration": "To understand what happened, you have to look at the South Sea Company. It was founded in seventeen eleven to trade with South America, but its real business was government debt. In seventeen twenty it offered to swap the nation's debt for its own shares. And the shares began to climb.",
       "visual": {
-        "type": "metaphor",
-        "kind": "ship",
+        "type": "stage",
+        "world": "sea",
         "kicker": "Founded 1711",
         "caption": "The South Sea Company",
-        "destination": "South America",
-        "cue": "America",
-        "cargo": "Real cargo: debt",
-        "cargo_cue": "debt"
+        "actors": [
+          {
+            "id": "ship",
+            "asset": "Sailboat",
+            "x": 0.16,
+            "y": 0.7,
+            "size": 0.3,
+            "enter": "slide-left",
+            "at": 0.1,
+            "do": [
+              {
+                "act": "walk",
+                "to": 0.5,
+                "cue": "trade",
+                "dur": 2.4
+              }
+            ]
+          },
+          {
+            "id": "land",
+            "asset": "Desert island",
+            "x": 0.84,
+            "y": 0.69,
+            "size": 0.24,
+            "label": "South America",
+            "cue": "America"
+          },
+          {
+            "id": "debt",
+            "asset": "Scroll",
+            "x": 0.5,
+            "y": 0.36,
+            "size": 0.15,
+            "label": "Real cargo: debt",
+            "cue": "debt",
+            "do": [
+              {
+                "act": "bounce",
+                "cue": "swap"
+              }
+            ]
+          },
+          {
+            "id": "up",
+            "asset": "Chart increasing",
+            "x": 0.2,
+            "y": 0.34,
+            "size": 0.15,
+            "cue": "climb"
+          }
+        ]
       },
       "sources": [
         "ssc"
@@ -254,16 +424,80 @@
       "act": "story",
       "narration": "Newton owned shares early. And in the spring, as the price ran far ahead of anything the company could earn, he did the sensible thing. He sold, for a handsome profit.",
       "visual": {
-        "type": "metaphor",
-        "kind": "crowd",
-        "mode": "climb",
-        "hero": "Newton",
-        "cue": "sold",
-        "gain": "+ profit",
+        "type": "stage",
+        "world": "meadow",
         "kicker": "Spring 1720",
         "caption": "Newton sells. A handsome profit.",
         "highlight": [
           "sells"
+        ],
+        "actors": [
+          {
+            "id": "newton",
+            "asset": "Man scientist",
+            "x": 0.28,
+            "y": 0.68,
+            "size": 0.32,
+            "label": "Newton",
+            "at": 0.2,
+            "do": [
+              {
+                "act": "say",
+                "text": "Sold!",
+                "cue": "sold",
+                "hold": 2.0
+              },
+              {
+                "act": "bounce",
+                "cue": "profit"
+              }
+            ]
+          },
+          {
+            "id": "bal",
+            "asset": "Balloon",
+            "x": 0.44,
+            "y": 0.42,
+            "size": 0.18,
+            "label": "Shares",
+            "cue": "shares",
+            "do": [
+              {
+                "act": "grow",
+                "to": 1.4,
+                "cue": "price",
+                "dur": 2.0,
+                "origin": "center"
+              },
+              {
+                "act": "fly",
+                "to": [
+                  0.76,
+                  0.36
+                ],
+                "cue": "sold",
+                "dur": 1.0
+              }
+            ]
+          },
+          {
+            "id": "buyer",
+            "asset": "Person",
+            "x": 0.78,
+            "y": 0.68,
+            "size": 0.3,
+            "cue": "sensible"
+          },
+          {
+            "id": "bag",
+            "asset": "Money bag",
+            "x": 0.46,
+            "y": 0.68,
+            "size": 0.15,
+            "enter": "drop",
+            "cue": "sold",
+            "delay": 0.6
+          }
         ]
       },
       "sources": [
@@ -275,15 +509,103 @@
       "act": "turn",
       "narration": "Then he watched. His friends kept buying. The price kept rising. Every week, the people who had stayed in looked smarter than he did.",
       "visual": {
-        "type": "metaphor",
-        "kind": "crowd",
-        "mode": "watch",
-        "hero": "Newton",
-        "cue": "rising",
+        "type": "stage",
+        "world": "meadow",
         "kicker": "Summer 1720",
         "caption": "Watching others win.",
         "highlight": [
           "others win"
+        ],
+        "actors": [
+          {
+            "id": "newton",
+            "asset": "Man scientist",
+            "x": 0.16,
+            "y": 0.68,
+            "size": 0.3,
+            "label": "Newton",
+            "at": 0.1,
+            "do": [
+              {
+                "act": "say",
+                "text": "Hmm…",
+                "cue": "watched",
+                "hold": 1.8
+              },
+              {
+                "act": "say",
+                "text": "Should I…?",
+                "cue": "smarter",
+                "hold": 2.4
+              }
+            ]
+          },
+          {
+            "id": "f",
+            "asset": "Woman",
+            "x": 0.48,
+            "y": 0.68,
+            "size": 0.26,
+            "cue": "friends",
+            "do": [
+              {
+                "act": "bounce",
+                "cue": "smarter"
+              }
+            ]
+          },
+          {
+            "id": "g",
+            "asset": "Man",
+            "x": 0.65,
+            "y": 0.68,
+            "size": 0.26,
+            "cue": "friends",
+            "delay": 0.2,
+            "do": [
+              {
+                "act": "bounce",
+                "cue": "smarter",
+                "delay": 0.1
+              }
+            ]
+          },
+          {
+            "id": "h",
+            "asset": "Old woman",
+            "x": 0.82,
+            "y": 0.68,
+            "size": 0.26,
+            "cue": "friends",
+            "delay": 0.4,
+            "do": [
+              {
+                "act": "bounce",
+                "cue": "smarter",
+                "delay": 0.2
+              }
+            ]
+          },
+          {
+            "id": "bal",
+            "asset": "Balloon",
+            "x": 0.48,
+            "y": 0.36,
+            "size": 0.13,
+            "repeat": 3,
+            "dx": 0.17,
+            "stagger": 0.2,
+            "cue": "buying",
+            "do": [
+              {
+                "act": "grow",
+                "to": 1.7,
+                "cue": "rising",
+                "dur": 2.6,
+                "origin": "center"
+              }
+            ]
+          }
         ]
       }
     },
@@ -368,18 +690,83 @@
       "act": "complication",
       "narration": "Then came September. The bubble burst. By December, a share was worth under two hundred pounds.",
       "visual": {
-        "type": "metaphor",
-        "kind": "bubble",
-        "prefix": "£",
-        "from": 1000,
-        "peak": 1000,
-        "to": 185,
-        "cue": "burst",
-        "after": "December 1720",
+        "type": "stage",
+        "world": "sky",
         "kicker": "One share · 1720",
         "caption": "The bubble bursts.",
         "highlight": [
           "bursts"
+        ],
+        "actors": [
+          {
+            "id": "bal",
+            "asset": "Balloon",
+            "x": 0.5,
+            "y": 0.6,
+            "size": 0.44,
+            "at": 0.05,
+            "do": [
+              {
+                "act": "count",
+                "from": 1000,
+                "to": 1000,
+                "prefix": "£",
+                "at": 0.1,
+                "pos": 0.36
+              },
+              {
+                "act": "wobble",
+                "cue": "September"
+              },
+              {
+                "act": "pop",
+                "cue": "burst"
+              }
+            ]
+          },
+          {
+            "id": "coin",
+            "asset": "Coin",
+            "x": 0.5,
+            "y": 0.68,
+            "size": 0.14,
+            "enter": "drop",
+            "cue": "burst",
+            "delay": 0.25,
+            "label": "£185 by December"
+          },
+          {
+            "id": "a",
+            "asset": "Star-struck",
+            "x": 0.18,
+            "y": 0.68,
+            "size": 0.18,
+            "at": 0.3,
+            "do": [
+              {
+                "act": "swap",
+                "asset": "Loudly crying face",
+                "cue": "burst",
+                "delay": 0.1
+              }
+            ]
+          },
+          {
+            "id": "b",
+            "asset": "Grinning face",
+            "x": 0.82,
+            "y": 0.68,
+            "size": 0.18,
+            "at": 0.4,
+            "do": [
+              {
+                "act": "swap",
+                "asset": "Face screaming in fear",
+                "cue": "burst",
+                "delay": 0.15
+              }
+            ]
+          }
         ]
       },
       "sources": [
@@ -443,16 +830,55 @@
       "act": "principle",
       "narration": "Lesson one. As Warren Buffett would later put it, price is what you pay, value is what you get. The South Sea Company never earned anything close to justifying a thousand pounds a share. When price runs far ahead of value, the gap eventually closes.",
       "visual": {
-        "type": "metaphor",
-        "kind": "balance",
-        "left": "Price",
-        "right": "Value",
-        "cue": "pay",
-        "close_cue": "closes",
+        "type": "stage",
+        "world": "sky",
         "kicker": "Lesson 1",
         "caption": "Price is not value",
         "highlight": [
           "not"
+        ],
+        "actors": [
+          {
+            "id": "price",
+            "asset": "Balloon",
+            "x": 0.34,
+            "y": 0.62,
+            "size": 0.28,
+            "label": "Price",
+            "cue": "price is",
+            "do": [
+              {
+                "act": "grow",
+                "to": 1.35,
+                "cue": "runs",
+                "dur": 1.4,
+                "origin": "center"
+              },
+              {
+                "act": "shrink",
+                "to": 0.5,
+                "cue": "closes",
+                "dur": 0.8,
+                "ease": "back.in(1.5)",
+                "origin": "center"
+              }
+            ]
+          },
+          {
+            "id": "value",
+            "asset": "Coin",
+            "x": 0.68,
+            "y": 0.64,
+            "size": 0.15,
+            "label": "Value",
+            "cue": "value is",
+            "do": [
+              {
+                "act": "bounce",
+                "cue": "get"
+              }
+            ]
+          }
         ]
       },
       "sources": [
@@ -464,16 +890,91 @@
       "act": "principle",
       "narration": "Lesson two. The crowd is not evidence. Newton's own judgment told him to sell. What pulled him back was watching other people get rich. A rising price feels like proof. It isn't.",
       "visual": {
-        "type": "metaphor",
-        "kind": "crowd",
-        "mode": "follow",
-        "label": "£ ↑",
-        "hero_in_crowd": true,
-        "cue": "proof",
+        "type": "stage",
+        "world": "meadow",
         "kicker": "Lesson 2",
         "caption": "The crowd is not evidence",
         "highlight": [
           "not"
+        ],
+        "actors": [
+          {
+            "id": "lead",
+            "asset": "Ram",
+            "x": 0.56,
+            "y": 0.68,
+            "size": 0.2,
+            "flip": true,
+            "enter": "slide-left",
+            "at": 0.2,
+            "do": [
+              {
+                "act": "say",
+                "text": "Follow me!",
+                "cue": "crowd",
+                "hold": 2.4
+              },
+              {
+                "act": "walk",
+                "by": 0.14,
+                "cue": "judgment",
+                "dur": 3.0
+              }
+            ]
+          },
+          {
+            "id": "s",
+            "asset": "Ewe",
+            "x": 0.1,
+            "y": 0.68,
+            "size": 0.16,
+            "flip": true,
+            "repeat": 4,
+            "dx": 0.11,
+            "stagger": 0.12,
+            "enter": "slide-left",
+            "at": 0.3,
+            "do": [
+              {
+                "act": "walk",
+                "by": 0.14,
+                "cue": "judgment",
+                "dur": 3.0
+              }
+            ]
+          },
+          {
+            "id": "newton",
+            "asset": "Man scientist",
+            "x": 0.09,
+            "y": 0.68,
+            "size": 0.22,
+            "label": "Newton",
+            "enter": "slide-left",
+            "cue": "pulled",
+            "do": [
+              {
+                "act": "walk",
+                "by": 0.1,
+                "cue": "rich",
+                "dur": 1.2
+              }
+            ]
+          },
+          {
+            "id": "bal",
+            "asset": "Balloon",
+            "x": 0.88,
+            "y": 0.4,
+            "size": 0.16,
+            "cue": "rising",
+            "do": [
+              {
+                "act": "pop",
+                "cue": "isn't"
+              }
+            ]
+          }
         ]
       }
     },
@@ -482,19 +983,73 @@
       "act": "example",
       "narration": "Two centuries later, Benjamin Graham gave investors a defence. In nineteen forty nine he described a moody partner, Mr. Market, who offers you a price every day. Some days euphoric, some days despairing. You never have to accept his offer.",
       "visual": {
-        "type": "metaphor",
-        "kind": "mood",
-        "up_cue": "euphoric",
-        "down_cue": "despairing",
-        "decline_cue": "never",
-        "prices": [
-          "£££",
-          "£"
-        ],
+        "type": "stage",
+        "world": "room",
         "kicker": "Benjamin Graham · 1949",
         "caption": "Meet Mr. Market",
         "highlight": [
           "Mr. Market"
+        ],
+        "actors": [
+          {
+            "id": "mm",
+            "asset": "Neutral face",
+            "x": 0.36,
+            "y": 0.64,
+            "size": 0.3,
+            "label": "Mr. Market",
+            "cue": "Market",
+            "do": [
+              {
+                "act": "swap",
+                "asset": "Star-struck",
+                "cue": "euphoric"
+              },
+              {
+                "act": "say",
+                "text": "Buy at £££!",
+                "cue": "euphoric",
+                "hold": 1.6
+              },
+              {
+                "act": "swap",
+                "asset": "Loudly crying face",
+                "cue": "despairing"
+              },
+              {
+                "act": "say",
+                "text": "Sell for £!",
+                "cue": "despairing",
+                "hold": 1.6
+              },
+              {
+                "act": "bounce",
+                "cue": "euphoric"
+              },
+              {
+                "act": "shake",
+                "cue": "despairing"
+              }
+            ]
+          },
+          {
+            "id": "you",
+            "asset": "Person",
+            "x": 0.78,
+            "y": 0.68,
+            "size": 0.3,
+            "label": "You",
+            "cue": "offers",
+            "do": [
+              {
+                "act": "say",
+                "text": "No, thanks!",
+                "cue": "never",
+                "side": "left",
+                "hold": 0
+              }
+            ]
+          }
         ]
       },
       "sources": [
@@ -506,25 +1061,62 @@
       "act": "principle",
       "narration": "Lesson three. Set your rules before the market tests them. Graham's rule was a margin of safety. Estimate what a business is worth, soberly, and only buy when the price sits well below it. Decide that in calm, and it protects you in the frenzy.",
       "visual": {
-        "type": "metaphor",
-        "kind": "lock",
-        "title": "Margin of safety",
-        "items": [
-          {
-            "text": "Estimate value, soberly",
-            "cue": "estimate"
-          },
-          {
-            "text": "Buy well below it",
-            "cue": "only buy"
-          }
-        ],
-        "cue": "before",
-        "test_cue": "frenzy",
+        "type": "stage",
+        "world": "room",
         "kicker": "Lesson 3",
         "caption": "Set your rules before the test",
         "highlight": [
           "before"
+        ],
+        "actors": [
+          {
+            "id": "book",
+            "asset": "Ledger",
+            "x": 0.4,
+            "y": 0.66,
+            "size": 0.28,
+            "label": "My rules",
+            "at": 0.3
+          },
+          {
+            "id": "lock",
+            "asset": "Locked",
+            "x": 0.53,
+            "y": 0.6,
+            "size": 0.14,
+            "enter": "drop",
+            "cue": "before",
+            "do": [
+              {
+                "act": "bounce",
+                "cue": "protects"
+              }
+            ]
+          },
+          {
+            "id": "calm",
+            "asset": "Smiling face with sunglasses",
+            "x": 0.8,
+            "y": 0.68,
+            "size": 0.2,
+            "cue": "calm"
+          },
+          {
+            "id": "storm",
+            "asset": "Cloud with lightning",
+            "x": 0.46,
+            "y": 0.3,
+            "size": 0.2,
+            "enter": "drop",
+            "cue": "frenzy",
+            "do": [
+              {
+                "act": "shake",
+                "cue": "frenzy",
+                "delay": 0.6
+              }
+            ]
+          }
         ]
       },
       "sources": [
@@ -565,15 +1157,18 @@
         "items": [
           {
             "text": "Price is not value",
-            "cue": "price is not"
+            "cue": "price is not",
+            "icon": "Balloon"
           },
           {
             "text": "The crowd is not evidence",
-            "cue": "the crowd"
+            "cue": "the crowd",
+            "icon": "Ewe"
           },
           {
             "text": "Set your rules before the test",
-            "cue": "set your rules"
+            "cue": "set your rules",
+            "icon": "Locked"
           }
         ]
       }
@@ -583,15 +1178,82 @@
       "act": "close",
       "narration": "Newton could predict the orbit of a comet. He could not predict his own reaction to watching other people get rich. That is the real risk in investing. Not the market. Us.",
       "visual": {
-        "type": "metaphor",
-        "kind": "mirror",
-        "cue": "Us",
-        "comet_cue": "comet",
-        "caption_cue": "real risk",
-        "label": "The risk",
+        "type": "stage",
+        "world": "night",
         "caption": "The real risk isn't the market. It's us.",
         "highlight": [
           "us"
+        ],
+        "caption_cue": "real risk",
+        "actors": [
+          {
+            "id": "comet",
+            "asset": "Comet",
+            "x": 0.16,
+            "y": 0.3,
+            "size": 0.14,
+            "enter": "fade",
+            "cue": "comet",
+            "do": [
+              {
+                "act": "fly",
+                "to": [
+                  0.82,
+                  0.16
+                ],
+                "cue": "comet",
+                "delay": 0.2,
+                "dur": 2.6
+              }
+            ]
+          },
+          {
+            "id": "newton",
+            "asset": "Man scientist",
+            "x": 0.3,
+            "y": 0.68,
+            "size": 0.32,
+            "label": "Newton",
+            "at": 0.2,
+            "do": [
+              {
+                "act": "say",
+                "text": "It's me!",
+                "cue": "Us",
+                "hold": 0
+              }
+            ]
+          },
+          {
+            "id": "mirror",
+            "asset": "Mirror",
+            "x": 0.66,
+            "y": 0.68,
+            "size": 0.44,
+            "at": 0.3,
+            "still": true
+          },
+          {
+            "id": "me",
+            "asset": "Man scientist",
+            "x": 0.66,
+            "y": 0.56,
+            "size": 0.17,
+            "flip": true,
+            "enter": "fade",
+            "cue": "reaction",
+            "z": 20,
+            "do": [
+              {
+                "act": "glow",
+                "cue": "Us"
+              },
+              {
+                "act": "bounce",
+                "cue": "Us"
+              }
+            ]
+          }
         ]
       }
     },

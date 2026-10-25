@@ -36,10 +36,9 @@ VISUALS = {
     "list": {"required": ["items"], "optional": ["title", "check"]},
     "question": {"required": ["question"], "optional": ["choices", "answer", "think_seconds"]},
     "end": {"required": ["title"], "optional": ["cta", "next", "sources_line", "disclaimer"]},
-    # the idea as a concrete moving picture (vfactory/lesson/metaphors.py); `cue` lands its key action
-    "metaphor": {"required": ["kind"], "optional": ["caption", "highlight", "kicker", "caption_cue", "cue"]},
+    # the idea acted out by familiar pictures in a picture-book world (vfactory/lesson/stage.py)
+    "stage": {"required": ["actors"], "optional": ["world", "caption", "highlight", "kicker", "caption_cue"]},
 }
-METAPHORS = ("bubble", "crowd", "balance", "ship", "mood", "lock", "mirror")
 TEXT_ONLY = ("statement", "stat", "quote", "principle", "compare", "list")  # words or one number, no picture
 WPM = 150.0  # documentary narration pace (Vox guide; Kokoro at speed 0.95 lands close)
 
@@ -76,11 +75,33 @@ def validate(L: dict) -> None:
         for r in VISUALS[t]["required"]:
             if r not in v:
                 raise LessonError(f"{where}: visual '{t}' needs '{r}'")
-        if t == "metaphor" and v["kind"] not in METAPHORS:
-            raise LessonError(f"{where}: metaphor kind must be one of {METAPHORS}")
+        if t == "stage":
+            _validate_stage(where, v)
         for s in b.get("sources", []):
             if s not in src_ids:
                 raise LessonError(f"{where}: unknown source '{s}'")
+
+
+def _validate_stage(where: str, v: dict) -> None:
+    from . import assets, stage
+    if v.get("world", "meadow") not in stage.WORLDS:
+        raise LessonError(f"{where}: world must be one of {list(stage.WORLDS)}")
+    ids = set()
+    for a in v["actors"]:
+        if not a.get("id") or a["id"] in ids:
+            raise LessonError(f"{where}: every actor needs a unique id")
+        ids.add(a["id"])
+        names = [a.get("asset", "")] + [d.get("asset", "") for d in a.get("do", []) if d.get("act") == "swap"]
+        for n in names:
+            if not assets.exists(n):
+                raise LessonError(f"{where}: no picture called {n!r}; try one of {assets.search(n.split()[0] if n else 'face')[:8]}")
+        if a.get("enter", "pop") not in stage.ENTERS:
+            raise LessonError(f"{where}: actor {a['id']} enter must be one of {stage.ENTERS}")
+        for d in a.get("do", []):
+            if d.get("act") not in stage.ACTS:
+                raise LessonError(f"{where}: actor {a['id']} act must be one of {stage.ACTS}")
+            if d["act"] == "say" and len(words(d.get("text", ""))) > 4:
+                raise LessonError(f"{where}: speech bubbles hold at most 4 words ({d.get('text')!r})")
 
 
 def words(text: str) -> list[str]:
@@ -197,19 +218,19 @@ def picture_warnings(beats: list[dict]) -> list[str]:
     w = []
     types = [b["visual"]["type"] for b in beats]
     narrated = [b for b in beats if b["narration"].strip()]
-    if len(narrated) >= 8 and "metaphor" not in types:
-        w.append("no visual metaphors: the lesson is all text and data; draw the ideas (visual type 'metaphor': "
-                 f"{', '.join(METAPHORS)})")
+    if len(narrated) >= 8 and "stage" not in types:
+        w.append("no pictures: the lesson is all text and data; act the ideas out (visual type 'stage': a world, "
+                 "familiar characters and objects, one clear action each)")
     for b in beats:
         if b["act"] == "principle" and b["visual"]["type"] == "principle":
-            w.append(f"{b['id']}: principle shown as words only; show it as a picture (metaphor) with the name as its caption")
+            w.append(f"{b['id']}: principle shown as words only; act it out as a picture (stage) with the name as its caption")
     run = []
     for b in beats + [None]:
         if b is not None and b["visual"]["type"] in TEXT_ONLY and b["act"] not in ("recap",):
             run.append(b["id"])
             continue
         if len(run) >= 3:
-            w.append(f"{run[0]}..{run[-1]}: {len(run)} text-only scenes in a row; turn one into a picture (metaphor, chart or timeline)")
+            w.append(f"{run[0]}..{run[-1]}: {len(run)} text-only scenes in a row; turn one into a picture (stage, chart or timeline)")
         run = []
     return w
 

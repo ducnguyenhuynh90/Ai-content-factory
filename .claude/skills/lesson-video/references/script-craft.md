@@ -66,37 +66,49 @@ that… until finally… ever since…) for biographies; **And-But-Therefore** f
 - **Segmenting:** one scene per idea; the progress bar and series rail show where we are.
 - **Contiguity:** labels sit on the chart point they describe, not in a legend.
 
-## 3b. Show the idea: concrete metaphors (lint)
+## 3b. Show the idea so a four-year-old gets it (lint)
 
 Charts and numbers prove; pictures make an idea stick. Dual coding: an idea held as words and as an image is
-remembered far better than either alone, and the image is what the viewer replays later ("the scale tipping",
-"the people walking off the edge"). The test from HyperFrames' story guide: **watch the pictures with the sound
-off and they still tell the story.**
+remembered far better than either alone, and the image is what the viewer replays later ("the balloon popped and
+only the coin was left"). Two tests for every picture scene:
 
-- **Every principle is a picture** (lint), its name as the caption. Never a principle as words on a dark slide.
-- **Every turn of the story is a picture**: who did what, drawn with people and objects, not a sentence on screen.
-- **No three text-only scenes in a row** (lint): statement, stat, quote, compare and list are words; break the run
-  with a metaphor, a chart or a timeline.
-- **One metaphor per idea, and keep it.** If the crowd is people on a staircase of rising prices, it stays a staircase
-  when the hero steps off it and when he watches them climb. A recurring image is a promise the viewer can follow.
-- **The action lands on the word** (`cue`): the bubble bursts on "burst", the lock snaps on "before".
-- **Draw, don't fake.** Line art in the brand look; no generated likenesses of real people; no invented numbers on a
-  price tag (use £££ / £ when the picture means "high / low", not a figure).
+- **Sound off:** watch the pictures alone and they still tell the story (HyperFrames story rule).
+- **Four-year-old:** a small child could say what happened ("the sheep followed the sheep", "the face was happy,
+  then crying"). Abstract shapes, stick figures and diagrams fail this test; familiar things with faces pass it.
 
-Library (`visual.type: "metaphor"`, `kind`):
+Rules:
 
-| Idea | kind | Key action (`cue`) |
-|---|---|---|
-| A price inflating, then collapsing | `bubble` (`from`/`peak`/`to`, `prefix`) | bursts; the number drops to its new value |
-| Following the crowd; selling early; watching others win | `crowd` (`mode`: `climb` · `watch` · `follow`, `hero`) | hero steps off with the profit · crowd keeps climbing with coins · the front walks off the edge |
-| Price vs value, hype, margin of safety | `balance` (`left`, `right`, `close_cue`) | the price side floats up as hype inflates · the gap closes |
-| Trade, expeditions, what a company really carries | `ship` (`destination`, `cargo`, `cargo_cue`) | the route reaches the destination · the real cargo is tagged |
-| Mr. Market, moods, emotional prices | `mood` (`up_cue`, `down_cue`, `decline_cue`, `prices`) | euphoric · despairing · "No, thanks" |
-| Rules made in calm, discipline, commitments | `lock` (`items`, `test_cue`) | the lock snaps shut · the frenzy strikes and the card holds |
-| The risk is us, self-knowledge, bias | `mirror` (`label`, `comet_cue`) | the reflection lights up |
+- **Familiar things only:** balloons, coins, sheep, faces, a lock, a mirror, a tree, a boat — never a diagram of an idea.
+- **Feelings on faces:** a happy face turning into a crying face beats any arrow. Characters react to what happens.
+- **One action per scene, on the word** (`cue`): the balloon pops on "burst", the lock drops on "before".
+- **One picture per idea, kept for the whole lesson.** If price is a balloon, it is a balloon in the story, in the
+  lesson, and in the recap icon. A recurring picture is a promise the viewer can follow.
+- **Every principle and every turn of the story is a stage scene** (lint); no three text-only scenes in a row (lint).
+- **Speech bubbles carry at most four words** (validation): "Sold!", "Follow me!", "No, thanks!".
+- **No likenesses:** a real person is played by a generic emoji character (Newton = Man scientist) with their name as
+  a label; never a generated face meant to look like them. No invented numbers on screen: "£££" / "£" mean high / low.
 
-Missing an image the idea needs? Add a kind to `vfactory/lesson/metaphors.py` (same contract: SVG + GSAP, one key
-action on a cue, the picture above 70% of the height) rather than falling back to words.
+`visual.type: "stage"` (engine: `vfactory/lesson/stage.py`) = a **world** (`meadow`, `sky`, `sea`, `room`, `night`,
+`plain`) + **actors** (any of 1,594 Fluent Emoji 3D pictures; `python -c "from vfactory.lesson import assets;
+print(assets.search('crying'))"`) that **enter** (`pop`, `drop`, `rise`, `slide-left`, `slide-right`, `fade`) and **act**
+(`bounce`, `jump`, `shake`, `wobble`, `grow`, `shrink`, `pop`, `fall`, `walk`, `fly`, `swap`, `say`, `count`, `fade`, `tilt`,
+`glow`) on cue words. `repeat` makes a row (a flock). Layout: feet on the ground line (y 0.68), 2-6 actors, sizes
+0.12-0.44 of the frame height, nothing above y 0.1 (the series rail), the caption band below.
+
+Picture bank (any topic):
+
+| Idea | Picture |
+|---|---|
+| Price vs value; hype; a bubble | a **balloon** (price, all air) next to a **coin** (value); it grows, then pops or shrinks to coin size |
+| A crash, a loss | the balloon pops; happy faces swap to crying faces |
+| Following the crowd, FOMO | **sheep** following a ram that says "Follow me!" toward a balloon that pops |
+| Selling early, watching others win | the hero hands the balloon to a buyer and gets a money bag; then watches friends' balloons grow |
+| Moods, volatility (Mr. Market) | a **face** that swaps from star-struck ("Buy at £££!") to crying ("Sell for £!"); "You" says "No, thanks!" |
+| Rules, discipline, margin of safety | a rule book; a **lock** drops onto it; a storm cloud shakes but the book holds |
+| The risk is us, biases | a **mirror**: the hero sees himself |
+| A company, a voyage, trade | a **boat** sailing to an island; a scroll for the real cargo |
+| Growth, compounding | a seedling → a tree; a snowball rolling bigger |
+| Risk, safety | an umbrella in the rain; eggs in one basket |
 
 ## 4. Facts
 

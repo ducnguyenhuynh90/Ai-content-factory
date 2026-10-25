@@ -90,37 +90,43 @@ def test_every_scene_type_renders_markup():
         assert f'data-composition-id="{b["id"]}"' in html and f'window.__timelines["{b["id"]}"]' in html
         assert "font-size:1px" not in html
         seen.add(b["visual"]["type"])
-    assert {"title", "chart", "quote", "portrait", "question", "list", "end", "metaphor"} <= seen
-    for v in ({"type": "timeline", "events": [{"year": "1711", "text": "Founded"}]}, {"type": "principle", "n": 1, "name": "x"}):
+    assert {"title", "chart", "quote", "question", "list", "end", "stage"} <= seen
+    for v in ({"type": "timeline", "events": [{"year": "1711", "text": "Founded"}]}, {"type": "principle", "n": 1, "name": "x"},
+              {"type": "portrait", "name": "Isaac Newton"}):
         assert "__timelines" in scenes.scene_file(look, "zz", v, 6.0, lambda w, d: d, 5.0, last=False)
     assert look.fs(0.01) >= 28  # type floor
 
 
-METAPHOR_CASES = [
-    {"kind": "bubble", "prefix": "£", "from": 128, "peak": 1000, "to": 185, "cue": "burst", "after": "Dec"},
-    {"kind": "crowd", "mode": "climb", "hero": "Newton", "cue": "sold"},
-    {"kind": "crowd", "mode": "watch", "hero": "Newton", "cue": "rising"},
-    {"kind": "crowd", "mode": "follow", "cue": "proof", "hero_in_crowd": True},
-    {"kind": "balance", "cue": "pay", "close_cue": "closes"},
-    {"kind": "balance"},
-    {"kind": "ship", "destination": "South America", "cargo": "Debt", "cue": "America", "cargo_cue": "debt"},
-    {"kind": "mood", "up_cue": "euphoric", "down_cue": "despairing", "decline_cue": "never"},
-    {"kind": "mood"},
-    {"kind": "lock", "items": ["a", {"text": "b", "cue": "b"}], "cue": "before", "test_cue": "frenzy"},
-    {"kind": "mirror", "cue": "us", "comet_cue": "comet"},
-]
-
-
-@pytest.mark.parametrize("v", METAPHOR_CASES, ids=lambda v: v["kind"] + "-" + v.get("mode", ""))
-def test_every_metaphor_renders(v):
-    from vfactory.lesson import metaphors
+def test_every_stage_act_renders():
+    from vfactory.lesson import stage
     look = scenes.Look({"font": "Inter"}, 1440, 1080)
-    v = {"type": "metaphor", "caption": "Price is not value", "highlight": ["not"], "kicker": "Lesson 1", **v}
-    html = scenes.scene_file(look, "m1", v, 9.0, lambda w, d: d, 8.0, last=False)
-    assert '<svg id="m1-svg"' in html and 'window.__timelines["m1"]' in html
-    assert "nan" not in html.lower().replace("nanosec", "")  # no broken geometry
-    assert "repeat: -1" not in html  # HyperFrames: finite repeats only
-    assert set(metaphors.KINDS) == set(schema.METAPHORS)
+    acts = [{"act": a, "at": 1.0} for a in stage.ACTS if a not in ("swap", "say", "count", "walk", "fly")] + [
+        {"act": "swap", "asset": "Loudly crying face", "cue": "burst"}, {"act": "say", "text": "No, thanks!", "cue": "never"},
+        {"act": "count", "from": 1000, "to": 185, "prefix": "£"}, {"act": "walk", "by": 0.2}, {"act": "fly", "to": [0.8, 0.3]}]
+    for world in stage.WORLDS:
+        v = {"type": "stage", "world": world, "caption": "Price is not value", "highlight": ["not"], "kicker": "Lesson 1",
+             "actors": [{"id": "a", "asset": "Balloon", "do": acts}, {"id": "s", "asset": "Ewe", "repeat": 3, "enter": "slide-left"}]}
+        schema._validate_stage("t", v)
+        html = scenes.scene_file(look, "m1", v, 9.0, lambda w, d: d, 8.0, last=False)
+        assert 'window.__timelines["m1"]' in html and "assets/img/balloon.png" in html and "assets/img/collision.png" in html
+        assert html.count('id="m1-s') >= 3 and "repeat: -1" not in html and "nan" not in html.lower()
+    assert stage.assets_used(v) >= {"Balloon", "Ewe", "Loudly crying face", "Collision"}
+
+
+def test_stage_validation_catches_unknown_pictures_and_long_bubbles():
+    v = {"type": "stage", "actors": [{"id": "a", "asset": "Hologram unicorn"}]}
+    with pytest.raises(schema.LessonError, match="no picture"):
+        schema._validate_stage("t", v)
+    v = {"type": "stage", "actors": [{"id": "a", "asset": "Ewe", "do": [{"act": "say", "text": "this is far too many words"}]}]}
+    with pytest.raises(schema.LessonError, match="4 words"):
+        schema._validate_stage("t", v)
+
+
+def test_asset_catalogue():
+    from vfactory.lesson import assets
+    assert len(assets.catalog()) > 1500 and assets.exists("man scientist") and not assets.exists("hologram")
+    assert "Loudly crying face" in assets.search("crying")
+    assert assets.catalog()["man scientist"] == "Man scientist/Default/3D/man_scientist_3d_default.png"
 
 
 def test_lint_asks_for_pictures():
@@ -129,14 +135,14 @@ def test_lint_asks_for_pictures():
                    for i in range(5)]
     L["beats"].append({"id": "p1", "act": "principle", "narration": "Lesson one.", "visual": {"type": "principle", "n": 1, "name": "x"}})
     w = schema.lint(L)["warnings"]
-    assert any("no visual metaphors" in x for x in w)
+    assert any("no pictures" in x for x in w)
     assert any("p1: principle shown as words only" in x for x in w)
     assert any("text-only scenes in a row" in x for x in w)
-    L["beats"][-1]["visual"] = {"type": "metaphor", "kind": "balance", "caption": "x"}
-    L["beats"][6]["visual"] = {"type": "metaphor", "kind": "crowd", "mode": "follow"}
+    L["beats"][-1]["visual"] = {"type": "stage", "caption": "x", "actors": [{"id": "a", "asset": "Balloon"}]}
+    L["beats"][6]["visual"] = {"type": "stage", "actors": [{"id": "s", "asset": "Ewe", "repeat": 4}]}
     w = schema.lint(L)["warnings"]
-    assert not any("metaphor" in x or "text-only" in x for x in w)
-    L["beats"][6]["visual"]["kind"] = "unicorn"
+    assert not any("picture" in x or "text-only" in x for x in w)
+    L["beats"][6]["visual"]["world"] = "unicorn"
     with pytest.raises(schema.LessonError):
         schema.validate(L)
 

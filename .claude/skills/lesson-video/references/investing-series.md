@@ -43,15 +43,8 @@ Tone: calm, curious, a little wry. Never hype. Principles, not picks.
 Each episode: one story, one misconception, 2-4 principles (at least one reused from earlier episodes so the
 series builds a vocabulary), one retrieval question, next-episode tease.
 
-## Picture bank (investing ideas → metaphors)
+## Picture bank
 
-| Idea | Picture |
-|---|---|
-| A mania, a price far above earnings | `bubble` inflating over small people, bursting on the cue |
-| Herding, FOMO, "everyone is buying" | `crowd` climbing a staircase of rising prices; `follow` toward the edge |
-| Selling early, then watching others win | `crowd` `climb` (hero steps off with the profit) → `watch` (hero on the ground) |
-| Price vs value, intrinsic value, margin of safety | `balance`: hype inflates the price pan; the gap closes |
-| Mr. Market, volatility as mood | `mood`: euphoric / despairing, "No, thanks" |
-| Rules, checklists, discipline, pre-commitment | `lock` on the rules card; the frenzy strikes and it holds |
-| Behavioural risk, overconfidence | `mirror`: the risk is the reflection |
-| A company's story vs its real business | `ship` with its real cargo tagged |
+Use the shared bank in `script-craft.md` §3b. Series constants: price = a **balloon**, value = a **coin**, the crowd =
+**sheep**, Mr. Market = a **face** that changes mood, discipline = a **lock** on a rule book, the investor = "You"
+(Person). Keep them identical across episodes so returning viewers read them instantly.

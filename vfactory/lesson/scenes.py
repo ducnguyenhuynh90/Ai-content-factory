@@ -12,6 +12,8 @@ from __future__ import annotations
 import html
 import math
 
+from .assets import slug as _slug
+
 E = html.escape
 
 
@@ -301,7 +303,10 @@ def list_(L, sid, v, dur, cue):
                    f'<svg width="{L.px(0.05)}" height="{L.px(0.05)}" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="none" stroke="{L.accent}" stroke-width="3"/>'
                    f'<path id="{sid}-ck{i}" d="M11 21 L18 28 L30 13" fill="none" stroke="{L.accent}" stroke-width="4" stroke-linecap="round" '
                    f'stroke-dasharray="30" stroke-dashoffset="30"/></svg>'
-                   f'<div class="serif" style="font-size:{L.fs(0.05)}px;line-height:1.15;">{E(t)}</div></div>' for i, t in enumerate(items))
+                   + (f'<img src="assets/img/{_slug(it["icon"])}.png" alt="" style="width:{L.px(0.1)}px;height:{L.px(0.1)}px;object-fit:contain">'
+                      if isinstance(it, dict) and it.get("icon") else "")
+                   + f'<div class="serif" style="font-size:{L.fs(0.05)}px;line-height:1.15;">{E(t)}</div></div>'
+                   for i, (t, it) in enumerate(zip(items, v["items"])))
     m = f"""<div id="{sid}-c" style="position:absolute;left:{L.px(0.12)}px;right:{L.px(0.1)}px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;">
       <div id="{sid}-ti" class="kicker">{E(v.get('title', ''))}</div>{rows}</div>"""
     tw = [_fade(f"#{sid}-ti", 0.1)]
@@ -415,30 +420,28 @@ def hook(L, sid, v, dur, cue):
     return m, css, tw
 
 
-def metaphor(L, sid, v, dur, cue):
-    """The idea as a picture (see metaphors.py), with its key phrase as a caption under it."""
-    from . import metaphors as M
-    svg, css, tw = M.KINDS[v["kind"]](L, sid, v, dur, cue)
+def stage(L, sid, v, dur, cue):
+    """A picture-book scene (stage.py) with the key phrase as a caption on the ground band under it."""
+    from . import stage as S
+    pic, css, tw = S.stage(L, sid, v, dur, cue)
     cap = E(v.get("caption", ""))
-    for i, h in enumerate(v.get("highlight") or []):
+    for h in v.get("highlight") or []:
         hh = E(h)
         if hh in cap:
             cap = cap.replace(hh, f'<span class="acc">{hh}</span>', 1)
-    m = f"""<div id="{sid}-c" style="position:absolute;inset:0;">
-      <svg id="{sid}-svg" width="{L.w}" height="{L.h}" viewBox="0 0 {L.w} {L.h}" style="position:absolute;left:0;top:0;overflow:visible">{svg}</svg>
-      <div id="{sid}-cap" style="position:absolute;left:{L.px(0.08)}px;right:{L.px(0.08)}px;top:{int(L.h * 0.74)}px;text-align:center;">
-        {f'<div id="{sid}-k" class="kicker" style="margin-bottom:{L.px(0.018)}px">{E(v["kicker"])}</div>' if v.get('kicker') else ''}
+    m = f"""<div id="{sid}-c" style="position:absolute;inset:0;">{pic}
+      <div id="{sid}-cap" style="position:absolute;left:{L.px(0.08)}px;right:{L.px(0.08)}px;top:{int(L.h * 0.775)}px;text-align:center;z-index:50;">
+        {f'<div id="{sid}-k" class="kicker" style="margin-bottom:{L.px(0.016)}px">{E(v["kicker"])}</div>' if v.get('kicker') else ''}
         {f'<div id="{sid}-t" class="serif" style="font-size:{L.fs(0.062)}px;line-height:1.15;text-wrap:balance;">{cap}</div>' if cap else ''}</div></div>"""
     at = cue(v["caption_cue"], 0.5) if v.get("caption_cue") else 0.35
-    tw = list(tw)
     if v.get("kicker"):
         tw.append(_fade(f"#{sid}-k", 0.15))
     if cap:
         tw.append(_rise(f"#{sid}-t", at, 0.6, 20))
-    return m, M.base_css(L, sid) + css, tw
+    return m, css, tw
 
 
-GENERATORS = {"metaphor": metaphor, "hook": hook, "title": title, "statement": statement, "stat": stat, "chart": chart, "timeline": timeline, "quote": quote,
+GENERATORS = {"stage": stage, "hook": hook, "title": title, "statement": statement, "stat": stat, "chart": chart, "timeline": timeline, "quote": quote,
               "portrait": portrait, "principle": principle, "compare": compare, "list": list_, "question": question, "end": end}
 
 

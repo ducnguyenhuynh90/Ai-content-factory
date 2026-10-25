@@ -26,8 +26,8 @@ local Kokoro TTS; music is synthesized. Nothing is uploaded.
    `certainty`: `established`, `estimate`, `disputed` or `attributed`, and SAY the uncertainty in narration
    ("about", "historians estimate", "it's attributed to him"). Popular myths are gifts: correct them on camera.
    If a site can't be reached, say so and use what can be cross-checked; never invent a figure.
-4. **Find the pictures.** For each idea, the concrete image that carries it (a bubble, a crowd on a staircase, a
-   scale, a lock) — pick from the metaphor library or add a kind. Keep one image per idea for the whole lesson.
+4. **Find the pictures.** For each idea, the familiar thing a four-year-old knows that carries it (a balloon, sheep,
+   a crying face, a lock) — start from the picture bank in `references/script-craft.md` §3b. Keep one picture per idea.
 5. **Write the hook first** (`references/script-craft.md` §0): three candidate hooks, each ≤ 16 words with a
    paradox, a concrete anchor and stakes; pick the one whose picture can show it in frame 0. Then the open loop.
 6. **Write `lesson.json`** (`python -m vfactory.lesson new lessons/<series>/<nnn-slug> --title ...` scaffolds it;
@@ -51,18 +51,20 @@ narration: a silent sting) · · `statement` (key phrase, highlighted words unde
 "attributed"` shows an ATTRIBUTED · NOT VERIFIED badge) · `portrait` (engraved medallion with initials — never a
 generated likeness of a real person) · `principle` · `compare` · `list` (recap with checks) · `question` (pause
 and think, countdown, answer) · `end` (next episode, CTA, sources, disclaimer).
-· `metaphor` (the idea as a moving picture, `kind`: `bubble`, `crowd`, `balance`, `ship`, `mood`, `lock`, `mirror`; its
-key action lands on `cue`, the key phrase is the `caption`; see `references/script-craft.md` §3b).
+· `stage` (a picture-book world where familiar 3D characters and objects act the idea out on cue words: a balloon
+that pops, sheep that follow, a face that cries; see `references/script-craft.md` §3b).
 `cue` fields name a word in that beat's narration; the visual lands when the word is spoken.
 
-**Pictures, not just numbers.** Charts prove; metaphors make the idea stick. Every principle and every turn of the
-story is a picture (lint), and no three text-only scenes run in a row (lint). Sound-off test: the pictures alone
-tell the story.
+**Pictures a four-year-old understands.** Charts prove; pictures make the idea stick. Every principle and every turn
+of the story is a `stage` scene (lint), no three text-only scenes run in a row (lint), and each idea keeps one familiar
+picture for the whole lesson (price = a balloon, value = a coin, the crowd = sheep). Sound-off test: the pictures alone
+tell the story. Pictures are Fluent Emoji 3D (MIT), fetched once and cached; credit them on the end card.
 
 ## Hard rules
 
 - No invented facts, quotes or numbers. Uncertainty is spoken, not hidden in a footnote.
-- No generated faces or voices imitating real people; a portrait is a typographic medallion.
+- No generated faces or voices imitating real people: a real person is played by a generic emoji character with
+  their name as a label (or a typographic medallion).
 - Investing lessons teach principles, never tips: no tickers to buy, no predictions, no "guaranteed". Every
   investing video carries the disclaimer (the linter enforces it).
 - On-screen text is the key phrase, not the narration (redundancy principle); minimum 28 px at 1080.
