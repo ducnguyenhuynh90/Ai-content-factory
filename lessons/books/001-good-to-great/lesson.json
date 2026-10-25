@@ -12,8 +12,8 @@
    3,
    5
   ],
-  "voice": "piper:vi_VN-vais1000-medium",
-  "speed": 0.82,
+  "voice": "omnivoice:male, middle-aged, low pitch",
+  "speed": 0.92,
   "music": "chill",
   "look": {
    "primary_color": "#E8B06A",
@@ -24,7 +24,8 @@
    "Giải thích ba ý lớn: lãnh đạo cấp 5, khái niệm con nhím, bánh đà",
    "Nhận ra giới hạn của cuốn sách (hiệu ứng hào quang) và áp dụng bánh đà vào việc của chính mình"
   ],
-  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người dẫn chương trình sách lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính."
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người dẫn chương trình sách lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)"
  },
  "sources": [
   {

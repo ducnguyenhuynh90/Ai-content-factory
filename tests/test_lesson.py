@@ -206,3 +206,24 @@ def test_gemini_voice_is_cached_and_needs_a_key(tmp_path, monkeypatch):
     assert calls[0][1]["contents"][0]["parts"][0]["text"].startswith("Đọc chậm rãi.")
     voice.synth("Tốt là kẻ thù của vĩ đại.", tmp_path / "b.wav", "gemini:Charon", style="Đọc chậm rãi.", model="m")
     assert len(calls) == 1  # cached by content: a rebuild pays only for changed lines
+
+
+def test_omnivoice_designs_one_narrator_then_clones_it(tmp_path, monkeypatch):
+    import numpy as np
+
+    torch = pytest.importorskip("torch")  # noqa: F841
+    calls = []
+
+    class Fake:
+        def generate(self, **kw):
+            calls.append(kw)
+            return [np.zeros(24000, dtype="float32") + 0.1]
+
+    monkeypatch.setattr(voice, "_OMNI", Fake())
+    monkeypatch.setattr(voice, "OMNI_DIR", tmp_path / "omni")
+    for i, line in enumerate(["Tốt là kẻ thù của vĩ đại.", "Đẩy bánh đà mỗi ngày."]):
+        voice.synth(line, tmp_path / f"{i}.wav", "omnivoice:male, middle-aged, low pitch", 0.9, lang="vi")
+    design = [c for c in calls if "instruct" in c]
+    clones = [c for c in calls if c.get("ref_audio")]
+    assert len(design) == 1 and design[0]["instruct"] == "male, middle-aged, low pitch" and design[0]["language"] == "vi"
+    assert len(clones) == 2 and len({c["ref_audio"] for c in clones}) == 1 and clones[0]["speed"] == 0.9

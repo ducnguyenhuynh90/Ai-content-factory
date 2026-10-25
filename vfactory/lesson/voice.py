@@ -4,6 +4,10 @@ English: Kokoro-82M (Apache-2.0), fetched once from the kokoro-onnx GitHub relea
 Studio narration: "gemini:<Voice>" (e.g. "gemini:Charon") uses Gemini TTS, which speaks Vietnamese (vi-VN) and follows a
 spoken style direction (pace, warmth, storyteller tone). It needs GEMINI_API_KEY and sends the narration text to Google;
 clips are cached by content, so a rebuild only pays for changed lines.
+Offline studio narration: "omnivoice:<speaker attributes>" (e.g. "omnivoice:male, middle-aged, low pitch") uses OmniVoice
+(k2-fsa, Apache-2.0; ~8,500 h of Vietnamese in training). The narrator is designed once from the attributes with a fixed
+seed, saved, then cloned for every line so the whole video keeps one voice; or clone your own `ref` clip. Weights come
+from Hugging Face (k2-fsa/OmniVoice) on first use.
 Other languages offline: Piper VITS voices named "piper:<voice>" (e.g. "piper:vi_VN-vais1000-medium", which speaks all six
 Vietnamese tones), fetched once from the sherpa-onnx `tts-models` GitHub release into ~/.cache/vfactory/piper.
 No text or audio ever leaves the machine.
@@ -143,6 +147,57 @@ def gemini_create(text: str, voice_name: str, style: str = "", model: str | None
     return y, 24000
 
 
+OMNI_DIR = Path.home() / ".cache" / "vfactory" / "omnivoice"
+OMNI_NARRATOR_TEXT = {"vi": "Có những cuốn sách đọc một lần là đủ. Và có những cuốn sách đi theo ta suốt cả cuộc đời.",
+                      "en": "Some books you read once. Others stay with you for the rest of your life."}
+_OMNI = None
+
+
+def omni_engine():
+    global _OMNI
+    if _OMNI is None:
+        try:
+            import torch
+            from omnivoice import OmniVoice  # type: ignore
+        except ImportError as e:
+            raise VoiceUnavailable("pip install omnivoice") from e
+        dev = "cuda:0" if torch.cuda.is_available() else "cpu"
+        try:
+            _OMNI = OmniVoice.from_pretrained("k2-fsa/OmniVoice", device_map=dev,
+                                              dtype=torch.float16 if dev.startswith("cuda") else torch.float32)
+        except Exception as e:  # noqa: BLE001  (network or hub errors surface as many types)
+            raise VoiceUnavailable(f"could not load k2-fsa/OmniVoice (Hugging Face reachable?): {str(e)[:200]}") from e
+    return _OMNI
+
+
+def omni_narrator(instruct: str, lang: str, seed: int = 7) -> tuple[Path, str]:
+    """Design the narrator once from speaker attributes and keep the clip: every line then clones it, so the voice
+    never drifts between beats (voice design alone samples a new speaker each call)."""
+    import soundfile as sf
+    import torch
+
+    text = OMNI_NARRATOR_TEXT.get(lang[:2], OMNI_NARRATOR_TEXT["en"])
+    key = hashlib.sha1(json.dumps([instruct, lang, seed, text]).encode()).hexdigest()[:10]
+    ref = OMNI_DIR / f"narrator_{key}.wav"
+    if not ref.exists():
+        OMNI_DIR.mkdir(parents=True, exist_ok=True)
+        torch.manual_seed(seed)
+        audio = omni_engine().generate(text=text, language=lang[:2], instruct=instruct)
+        sf.write(str(ref), audio[0], 24000)
+    return ref, text
+
+
+def omni_create(text: str, instruct: str, speed: float, lang: str, ref: str | None = None, ref_text: str | None = None,
+                seed: int = 7) -> tuple[np.ndarray, int]:
+    import torch
+
+    if not ref:
+        ref, ref_text = omni_narrator(instruct, lang, seed)
+    torch.manual_seed(seed)
+    audio = omni_engine().generate(text=text, language=lang[:2], ref_audio=str(ref), ref_text=ref_text, speed=speed)
+    return np.asarray(audio[0], dtype="float32"), 24000
+
+
 def piper_create(text: str, name: str, speed: float) -> tuple[np.ndarray, int]:
     from piper import SynthesisConfig  # type: ignore
 
@@ -198,21 +253,26 @@ def apply_fx(y: np.ndarray, sr: int, fx: dict) -> np.ndarray:
 
 
 def synth(text: str, out: Path, voice: str = "bm_george", speed: float = 0.95, lang: str = "en-us",
-          pronounce: dict | None = None, fx: dict | None = None, style: str = "", model: str | None = None) -> float:
+          pronounce: dict | None = None, fx: dict | None = None, style: str = "", model: str | None = None,
+          ref: str | None = None, ref_text: str | None = None) -> float:
     """Write a 24 kHz mono WAV; returns its duration in seconds. Cached by (text, voice, speed, fx)."""
     import soundfile as sf
 
     spoken = apply_pronunciations(text, pronounce or {})
     key = hashlib.sha1(json.dumps([spoken, voice, speed, lang] + ([fx] if fx else []) +
-                                  ([style, model] if voice.startswith("gemini:") else [])).encode()).hexdigest()[:12]
+                                  ([style, model] if voice.startswith("gemini:") else []) +
+                                  ([ref, ref_text] if voice.startswith("omnivoice:") else [])).encode()).hexdigest()[:12]
     meta = out.with_suffix(".json")
     if out.exists() and meta.exists() and json.loads(meta.read_text()).get("key") == key:
         return json.loads(meta.read_text())["duration"]
-    if voice.startswith("gemini:"):  # pace comes from the style direction, not a speed knob
+    if voice.startswith("omnivoice:"):
+        samples, sr = omni_create(spoken, voice.split(":", 1)[1].strip(), speed, lang, ref, ref_text)
+    elif voice.startswith("gemini:"):  # pace comes from the style direction, not a speed knob
         samples, sr = gemini_create(spoken, voice.split(":", 1)[1], style, model)
     elif voice.startswith("piper:"):
         samples, sr = piper_create(spoken, voice.split(":", 1)[1], speed)
     else:
+        lang = "en-us" if lang == "en" else lang
         if voice.startswith(("bf_", "bm_")) and lang == "en-us":
             lang = "en-gb"
         samples, sr = engine().create(spoken, voice=voice, speed=speed, lang=lang)

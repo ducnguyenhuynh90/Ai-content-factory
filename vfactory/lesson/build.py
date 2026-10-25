@@ -101,7 +101,8 @@ def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: 
             durs[b["id"]], times[b["id"]] = 0.0, []
             continue
         durs[b["id"]] = voice.synth(b["narration"], p, v_name, float(b.get("speed", speed)), pronounce=L.get("pronounce"),
-                                    fx=meta.get("voice_fx"), style=meta.get("voice_style", ""), model=meta.get("tts_model"))
+                                    fx=meta.get("voice_fx"), style=meta.get("voice_style", ""), model=meta.get("tts_model"),
+                                    ref=meta.get("voice_ref"), ref_text=meta.get("voice_ref_text"), lang=meta.get("lang", "en-us"))
         times[b["id"]] = voice.word_times(b["narration"], durs[b["id"]])
         log(f"  voice {b['id']}: {durs[b['id']]:.1f}s")
     timing = plan_timing(L, durs)
