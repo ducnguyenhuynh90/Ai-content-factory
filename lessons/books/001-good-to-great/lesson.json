@@ -211,7 +211,7 @@
       "highlight": [
        "Ba bài học"
       ],
-      "cue": "trong vài"
+      "cue": "khác biệt"
      }
     ]
    }
@@ -437,7 +437,7 @@
        "icon": "tissue",
        "cue": "giấy tiêu dùng"
       },
-      "cue": "và smith"
+      "cue": "bán sạch"
      }
     ]
    },
@@ -588,7 +588,7 @@
        "icon": "store",
        "cue": "để dời"
       },
-      "cue": "đóng cả",
+      "cue": "họ còn",
       "line": "Một thước đo cho mọi quyết định."
      }
     ]
@@ -869,7 +869,7 @@
     "disclaimer": "Tóm tắt và cảm nhận cá nhân; số liệu theo sách, đã làm tròn.",
     "next_cue": "tập sau",
     "cta_cue": "nếu thấy",
-    "sources_cue": "hẹn gặp"
+    "sources_cue": "nếu thấy"
    }
   }
  ],
