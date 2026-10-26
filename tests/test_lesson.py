@@ -1,5 +1,6 @@
 import copy
 import json
+import re
 from pathlib import Path
 
 import pytest
@@ -171,13 +172,17 @@ def test_metaphor_scenes_render_and_validate():
     L = schema.load(VI_LESSON)
     look = scenes.Look({"primary_color": "#E8B06A", "secondary_color": "#12100E", "font": "Inter"}, 1440, 1080, "vi")
     kinds = set()
+    visuals = []
     for b in L["beats"]:
-        t = b["visual"]["type"]
-        if t in ("funnel", "ladder", "venn", "flywheel", "halo", "swap") or b["visual"].get("strike"):
-            html = scenes.scene_file(look, b["id"], b["visual"], 9.0, lambda w, d: d, 7.0, last=False)
+        v = b["visual"]
+        visuals += [(f'{b["id"]}s{i}', sh) for i, sh in enumerate(v["shots"])] if v["type"] == "shots" else [(b["id"], v)]
+    for vid, v in visuals:
+        t = v["type"]
+        if t in ("funnel", "ladder", "venn", "flywheel", "halo", "swap", "company", "rise", "trio", "icon", "book") or v.get("strike"):
+            html = scenes.scene_file(look, vid, v, 9.0, lambda w, d: d, 7.0, last=False)
             assert "window.__timelines" in html and "Math.random" not in html
             kinds.add(t)
-    assert {"funnel", "ladder", "venn", "flywheel", "halo", "swap", "statement"} <= kinds
+    assert {"funnel", "ladder", "venn", "flywheel", "halo", "swap", "statement", "company", "rise", "trio", "icon", "book"} <= kinds
     funnel = scenes.scene_file(look, "f1", {"type": "funnel", "total": 100, "keep": 3, "seed": 1}, 6.0, lambda w, d: d, 5.0, last=False)
     assert funnel.count('id="f1-s') == 3  # the survivors are their own elements, gathered on cue
 
@@ -227,3 +232,44 @@ def test_omnivoice_designs_one_narrator_then_clones_it(tmp_path, monkeypatch):
     clones = [c for c in calls if c.get("ref_audio")]
     assert len(design) == 1 and design[0]["instruct"] == "male, middle-aged, low pitch" and design[0]["language"] == "vi"
     assert len(clones) == 2 and len({c["ref_audio"] for c in clones}) == 1 and clones[0]["speed"] == 0.9
+
+
+def test_shots_shift_each_picture_to_its_cue():
+    look = scenes.Look({"primary_color": "#E8B06A", "secondary_color": "#12100E", "font": "Inter"}, 1440, 1080, "vi")
+    v = {"type": "shots", "shots": [{"type": "statement", "text": "Một"}, {"type": "trio", "items": [{"icon": "bulb", "label": "Hai"}], "cue": "hai"}]}
+    html = scenes.scene_file(look, "b1", v, 10.0, lambda w, d: 6.0 if w == "hai" else d, 9.0, last=False)
+    assert 'id="b1s0-shot"' in html and 'id="b1s1-shot"' in html
+    # the second shot's own tweens are moved onto the beat timeline at its cue (6 s), never before it
+    t = [float(x) for x in re.findall(r'tl\.fromTo\("#b1s1-i0".*, (\d+\.\d+)\);', html)]
+    assert t and min(t) >= 6.0
+    bad = {"type": "shots", "shots": [{"type": "question", "question": "?"}]}
+    L = _mini()
+    L["beats"][0]["visual"] = bad
+    with pytest.raises(schema.LessonError):
+        schema.validate(L)
+
+
+def test_caption_groups_break_on_punctuation_without_orphans():
+    wt = voice.word_times("Không nhờ may mắn. Cũng không nhờ một vị giám đốc hào nhoáng nào cả.", 6.0)
+    g = build.caption_groups(wt, max_words=7)
+    assert [w["word"] for w in g[0]] == ["Không", "nhờ", "may", "mắn."]
+    assert all(len(x) > 1 for x in g) and sum(len(x) for x in g) == len(wt)
+
+
+def test_align_falls_back_cleanly_without_whisper(tmp_path, monkeypatch):
+    import builtins
+
+    import numpy as np
+    import soundfile as sf
+
+    wav = tmp_path / "a.wav"
+    sf.write(str(wav), np.zeros(24000, dtype="float32"), 24000)
+    real = builtins.__import__
+
+    def no_fw(name, *a, **k):
+        if name.startswith("faster_whisper"):
+            raise ImportError(name)
+        return real(name, *a, **k)
+
+    monkeypatch.setattr(builtins, "__import__", no_fw)
+    assert voice.align(wav, "Một hai ba.") is None

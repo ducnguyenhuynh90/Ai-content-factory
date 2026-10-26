@@ -254,19 +254,19 @@ def apply_fx(y: np.ndarray, sr: int, fx: dict) -> np.ndarray:
 
 def synth(text: str, out: Path, voice: str = "bm_george", speed: float = 0.95, lang: str = "en-us",
           pronounce: dict | None = None, fx: dict | None = None, style: str = "", model: str | None = None,
-          ref: str | None = None, ref_text: str | None = None) -> float:
+          ref: str | None = None, ref_text: str | None = None, seed: int = 7) -> float:
     """Write a 24 kHz mono WAV; returns its duration in seconds. Cached by (text, voice, speed, fx)."""
     import soundfile as sf
 
     spoken = apply_pronunciations(text, pronounce or {})
     key = hashlib.sha1(json.dumps([spoken, voice, speed, lang] + ([fx] if fx else []) +
                                   ([style, model] if voice.startswith("gemini:") else []) +
-                                  ([ref, ref_text] if voice.startswith("omnivoice:") else [])).encode()).hexdigest()[:12]
+                                  ([ref, ref_text] + ([seed] if seed != 7 else []) if voice.startswith("omnivoice:") else [])).encode()).hexdigest()[:12]
     meta = out.with_suffix(".json")
     if out.exists() and meta.exists() and json.loads(meta.read_text()).get("key") == key:
         return json.loads(meta.read_text())["duration"]
     if voice.startswith("omnivoice:"):
-        samples, sr = omni_create(spoken, voice.split(":", 1)[1].strip(), speed, lang, ref, ref_text)
+        samples, sr = omni_create(spoken, voice.split(":", 1)[1].strip(), speed, lang, ref, ref_text, seed)
     elif voice.startswith("gemini:"):  # pace comes from the style direction, not a speed knob
         samples, sr = gemini_create(spoken, voice.split(":", 1)[1], style, model)
     elif voice.startswith("piper:"):
@@ -305,6 +305,69 @@ def word_times(text: str, duration: float) -> list[dict]:
         out.append({"word": tok, "start": round(t, 3), "end": round(t + d * 0.8, 3)})
         t += d
     return out
+
+
+_WHISPER = None
+
+
+def _norm(w: str) -> str:
+    import unicodedata
+
+    return re.sub(r"[^\w]", "", unicodedata.normalize("NFC", w).lower())
+
+
+def align(wav: Path, text: str, lang: str = "vi", model: str = "small") -> list[dict] | None:
+    """Real word timings: Whisper listens to the clip, its words are matched to the script's words in order, and
+    script words it heard differently (respelled names) are spread between the nearest matched neighbours.
+    Returns the word_times() format, or None when faster-whisper is unavailable. Cached next to the clip."""
+    global _WHISPER
+    wav = Path(wav)
+    cache = wav.with_suffix(".align.json")
+    key = hashlib.sha1(json.dumps([text, wav.stat().st_size, wav.stat().st_mtime_ns, model]).encode()).hexdigest()[:12]
+    if cache.exists() and json.loads(cache.read_text()).get("key") == key:
+        return json.loads(cache.read_text())["times"]
+    try:
+        from faster_whisper import WhisperModel  # type: ignore
+    except ImportError:
+        return None
+    import soundfile as sf
+
+    if _WHISPER is None:
+        _WHISPER = WhisperModel(model, device="cpu", compute_type="int8")
+    y, sr = sf.read(str(wav), dtype="float32")
+    y = _resample(y if y.ndim == 1 else y.mean(axis=1), sr, 16000)  # handed over as samples: no decoder dependency
+    segs, _ = _WHISPER.transcribe(y, language=lang[:2], word_timestamps=True, beam_size=5, vad_filter=False)
+    heard = [(w.word.strip(), w.start, w.end) for sg in segs for w in (sg.words or [])]
+    toks = re.findall(r"\S+", text)
+    dur = sf.info(str(wav)).duration
+    times: list[dict | None] = [None] * len(toks)
+    import difflib
+
+    sm = difflib.SequenceMatcher(None, [_norm(t) for t in toks], [_norm(h[0]) for h in heard], autojunk=False)
+    for blk in sm.get_matching_blocks():
+        for k in range(blk.size):
+            _, a, b = heard[blk.b + k]
+            times[blk.a + k] = {"word": toks[blk.a + k], "start": round(a, 3), "end": round(b, 3)}
+    # spread unmatched runs between their matched neighbours, by length
+    i = 0
+    while i < len(toks):
+        if times[i] is not None:
+            i += 1
+            continue
+        j = i
+        while j < len(toks) and times[j] is None:
+            j += 1
+        lo = times[i - 1]["end"] if i > 0 else 0.0
+        hi = times[j]["start"] if j < len(toks) else dur
+        w = [len(_norm(t)) + 1 for t in toks[i:j]]
+        acc = lo
+        for k, t in enumerate(toks[i:j]):
+            d = (hi - lo) * w[k] / sum(w)
+            times[i + k] = {"word": t, "start": round(acc, 3), "end": round(acc + d * 0.85, 3)}
+            acc += d
+        i = j
+    cache.write_text(json.dumps({"key": key, "times": times, "matched": sum(b.size for b in sm.get_matching_blocks())}))
+    return times
 
 
 def find_word(times: list[dict], needle: str, default: float = 0.0) -> float:

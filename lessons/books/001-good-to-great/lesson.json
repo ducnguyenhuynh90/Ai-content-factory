@@ -25,7 +25,8 @@
    "Nhận ra giới hạn của cuốn sách (hiệu ứng hào quang) và áp dụng bánh đà vào việc của chính mình"
   ],
   "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người dẫn chương trình sách lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
-  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)"
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true
  },
  "sources": [
   {
@@ -176,11 +177,41 @@
    "act": "context",
    "narration": "Không nhờ may mắn. Cũng không nhờ một vị giám đốc hào nhoáng. Pha một tách trà nhé. Trong vài phút tới, bạn sẽ thấy điều gì thật sự tạo ra khác biệt, và ba bài học mang về được cho chính cuộc đời mình.",
    "visual": {
-    "type": "statement",
-    "kicker": "Trong vài phút tới",
-    "text": "Một câu hỏi. Ba bài học.",
-    "highlight": [
-     "Ba bài học"
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Không phải nhờ…",
+      "cross": true,
+      "items": [
+       {
+        "icon": "star",
+        "label": "May mắn",
+        "cue": "may mắn"
+       },
+       {
+        "icon": "rocket",
+        "label": "Giám đốc hào nhoáng",
+        "cue": "giám đốc"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "tea",
+      "steam": true,
+      "line": "Pha một tách trà nhé.",
+      "cue": "pha một"
+     },
+     {
+      "type": "statement",
+      "kicker": "Trong vài phút tới",
+      "text": "Một câu hỏi. Ba bài học.",
+      "highlight": [
+       "Ba bài học"
+      ],
+      "cue": "trong vài"
+     }
     ]
    }
   },
@@ -211,12 +242,39 @@
    "act": "misconception",
    "narration": "Chúng ta hay nghĩ sự vĩ đại đến từ một khoảnh khắc bùng nổ. Một ý tưởng thiên tài. Một người lãnh đạo đầy sức hút. Một cú lội ngược dòng ngoạn mục. Cuốn sách này kể một câu chuyện khác hẳn.",
    "visual": {
-    "type": "statement",
-    "kicker": "Điều ta hay tin",
-    "text": "Vĩ đại là một cú bùng nổ.",
-    "strike": "một cú bùng nổ.",
-    "replace": "từng bước nhỏ",
-    "strike_cue": "cuốn sách này"
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Điều ta hay tin",
+      "items": [
+       {
+        "icon": "bulb",
+        "label": "Ý tưởng thiên tài",
+        "cue": "ý tưởng"
+       },
+       {
+        "icon": "star",
+        "label": "Lãnh đạo đầy sức hút",
+        "cue": "người lãnh"
+       },
+       {
+        "icon": "rocket",
+        "label": "Cú lội ngược dòng",
+        "cue": "cú lội"
+       }
+      ]
+     },
+     {
+      "type": "statement",
+      "kicker": "Điều ta hay tin",
+      "text": "Vĩ đại là một cú bùng nổ.",
+      "strike": "một cú bùng nổ.",
+      "replace": "từng bước nhỏ",
+      "strike_cue": "cuốn sách",
+      "cue": "cuốn sách"
+     }
+    ]
    }
   },
   {
@@ -224,9 +282,39 @@
    "act": "context",
    "narration": "Năm hai nghìn lẻ một, Jim Collins công bố kết quả của khoảng năm năm nghiên cứu, cùng một nhóm khoảng hai mươi người. Họ sàng lọc một nghìn bốn trăm ba mươi lăm công ty từng có mặt trong danh sách Fortune năm trăm.",
    "visual": {
-    "type": "funnel",
-    "total": 1435,
-    "label": "công ty được sàng lọc"
+    "type": "shots",
+    "shots": [
+     {
+      "type": "book",
+      "title": "Good to Great",
+      "author": "Jim Collins",
+      "year": "2001",
+      "kicker": "Nghiên cứu",
+      "facts": [
+       {
+        "big": "2001",
+        "text": "Sách ra đời",
+        "cue": "năm hai"
+       },
+       {
+        "big": "~5 năm",
+        "text": "nghiên cứu",
+        "cue": "năm năm"
+       },
+       {
+        "big": "~20",
+        "text": "nhà nghiên cứu",
+        "cue": "hai mươi"
+       }
+      ]
+     },
+     {
+      "type": "funnel",
+      "total": 1435,
+      "label": "công ty được sàng lọc",
+      "cue": "họ sàng"
+     }
+    ]
    },
    "sources": [
     "collins2001",
@@ -325,18 +413,32 @@
    "act": "story",
    "narration": "Khi ấy, cổ phiếu công ty đã tụt sau thị trường khoảng ba mươi sáu phần trăm trong hai mươi năm. Và Smith làm một việc mà báo chí gọi là ngu ngốc: bán sạch các nhà máy giấy, trái tim của công ty, để dồn toàn lực vào giấy tiêu dùng như khăn giấy và tã em bé.",
    "visual": {
-    "type": "swap",
-    "kicker": "Quyết định bị gọi là ngu ngốc",
-    "from": {
-     "label": "Nhà máy giấy",
-     "icon": "factory"
-    },
-    "to": {
-     "label": "Khăn giấy · Tã em bé",
-     "icon": "tissue",
-     "cue": "giấy tiêu dùng"
-    },
-    "cue": "bán sạch"
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stat",
+      "value": 36,
+      "prefix": "−",
+      "suffix": "%",
+      "label": "cổ phiếu tụt sau thị trường",
+      "note": "20 năm trước khi Smith nhậm chức",
+      "cue": "ba mươi"
+     },
+     {
+      "type": "swap",
+      "kicker": "Quyết định bị gọi là ngu ngốc",
+      "from": {
+       "label": "Nhà máy giấy",
+       "icon": "factory"
+      },
+      "to": {
+       "label": "Khăn giấy · Tã em bé",
+       "icon": "tissue",
+       "cue": "giấy tiêu dùng"
+      },
+      "cue": "và smith"
+     }
+    ]
    },
    "sources": [
     "hbr2001",
@@ -446,11 +548,48 @@
    "act": "example",
    "narration": "Bài học thứ hai đến từ một con nhím. Con cáo biết nhiều thứ, con nhím chỉ biết một điều lớn. Chuỗi nhà thuốc Walgreens chọn một thước đo duy nhất: lợi nhuận trên mỗi lượt khách ghé thăm. Họ còn sẵn sàng đóng cả cửa hàng đang có lãi, để dời sang góc phố thuận tiện hơn.",
    "visual": {
-    "type": "statement",
-    "kicker": "Walgreens",
-    "text": "Lợi nhuận trên mỗi lượt khách.",
-    "highlight": [
-     "mỗi lượt khách"
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Nhà triết học & con nhím",
+      "items": [
+       {
+        "icon": "fox",
+        "label": "Con cáo: biết nhiều thứ",
+        "cue": "con cáo"
+       },
+       {
+        "icon": "hedgehog",
+        "label": "Con nhím: một điều lớn",
+        "cue": "con nhím chỉ"
+       }
+      ]
+     },
+     {
+      "type": "statement",
+      "kicker": "Walgreens · chuỗi nhà thuốc",
+      "text": "Lợi nhuận trên mỗi lượt khách.",
+      "highlight": [
+       "mỗi lượt khách"
+      ],
+      "cue": "chuỗi nhà"
+     },
+     {
+      "type": "swap",
+      "kicker": "Sẵn sàng đóng cửa hàng đang có lãi",
+      "from": {
+       "label": "Cửa hàng đang lãi",
+       "icon": "store"
+      },
+      "to": {
+       "label": "Góc phố thuận tiện hơn",
+       "icon": "store",
+       "cue": "để dời"
+      },
+      "cue": "đóng cả",
+      "line": "Một thước đo cho mọi quyết định."
+     }
     ]
    },
    "sources": [
@@ -492,15 +631,43 @@
    "act": "story",
    "narration": "Và đây là phần mình thích nhất. Không công ty nào trong số đó có một khoảnh khắc thần kỳ. Không có hành động quyết định duy nhất, không có chương trình hoành tráng, không có cú may mắn đơn lẻ. Chỉ có một chiếc bánh đà khổng lồ, được đẩy từng vòng, từng vòng một.",
    "visual": {
-    "type": "flywheel",
-    "kicker": "Bánh đà",
-    "name": "Không có khoảnh khắc thần kỳ.",
-    "from_angle": 0,
-    "to_angle": 120,
-    "ease": "power1.in",
-    "push_cues": [
-     "được đẩy",
-     "từng vòng một"
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Không có…",
+      "cross": true,
+      "items": [
+       {
+        "icon": "bulb",
+        "label": "Hành động quyết định duy nhất",
+        "cue": "hành động"
+       },
+       {
+        "icon": "rocket",
+        "label": "Chương trình hoành tráng",
+        "cue": "chương trình"
+       },
+       {
+        "icon": "star",
+        "label": "Cú may mắn đơn lẻ",
+        "cue": "cú may"
+       }
+      ]
+     },
+     {
+      "type": "flywheel",
+      "kicker": "Bánh đà",
+      "name": "Không có khoảnh khắc thần kỳ.",
+      "from_angle": 0,
+      "to_angle": 120,
+      "ease": "power1.in",
+      "push_cues": [
+       "được đẩy",
+       "từng vòng một"
+      ],
+      "cue": "chỉ có một"
+     }
     ]
    },
    "sources": [
@@ -579,11 +746,40 @@
    "act": "turn",
    "narration": "Vậy cuốn sách sai sao? Không hẳn. Nó chưa bao giờ hứa rằng vĩ đại là mãi mãi, và chính Collins sau đó viết hẳn một cuốn về cách những gã khổng lồ sụp đổ. Hãy đọc nó như một tấm bản đồ về kỷ luật, đừng đọc như một công thức làm giàu.",
    "visual": {
-    "type": "statement",
-    "kicker": "Đọc thế nào cho đúng",
-    "text": "Bản đồ, không phải công thức.",
-    "highlight": [
-     "Bản đồ"
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Vậy",
+      "text": "Cuốn sách sai sao?",
+      "highlight": [
+       "sai"
+      ]
+     },
+     {
+      "type": "book",
+      "title": "How the Mighty Fall",
+      "author": "Jim Collins",
+      "year": "2009",
+      "kicker": "Chính tác giả viết tiếp",
+      "cue": "chính collins",
+      "facts": [
+       {
+        "big": "5",
+        "text": "giai đoạn của sự sụp đổ",
+        "cue": "gã khổng"
+       }
+      ]
+     },
+     {
+      "type": "statement",
+      "kicker": "Đọc thế nào cho đúng",
+      "text": "Bản đồ, không phải công thức.",
+      "highlight": [
+       "Bản đồ"
+      ],
+      "cue": "hãy đọc"
+     }
     ]
    },
    "sources": [
@@ -635,10 +831,23 @@
    "act": "close",
    "narration": "Câu mở đầu của cuốn sách là: tốt là kẻ thù của vĩ đại. Không phải vì cái tốt là xấu. Mà vì nó đủ dễ chịu để ta dừng lại. Vậy hôm nay, bánh đà của bạn là gì?",
    "visual": {
-    "type": "statement",
-    "text": "Tốt là kẻ thù của vĩ đại.",
-    "highlight": [
-     "kẻ thù"
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Câu mở đầu của sách",
+      "text": "Tốt là kẻ thù của vĩ đại.",
+      "highlight": [
+       "kẻ thù"
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "tea",
+      "steam": true,
+      "line": "Bánh đà của bạn là gì?",
+      "cue": "dừng lại"
+     }
     ]
    },
    "sources": [
@@ -656,7 +865,10 @@
     "next": "Atomic Habits — Thay đổi tí hon, hiệu quả bất ngờ",
     "cta": "Lưu lại & gửi một người bạn",
     "sources_line": "Nguồn: Collins, Good to Great (2001) & 'Level 5 Leadership', HBR 2001 · Rosenzweig, The Halo Effect (2007) · jimcollins.com",
-    "disclaimer": "Tóm tắt và cảm nhận cá nhân; số liệu theo sách, đã làm tròn."
+    "disclaimer": "Tóm tắt và cảm nhận cá nhân; số liệu theo sách, đã làm tròn.",
+    "next_cue": "tập sau",
+    "cta_cue": "nếu thấy",
+    "sources_cue": "hẹn gặp"
    }
   }
  ],

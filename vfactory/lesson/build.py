@@ -78,6 +78,75 @@ def dust(look: Look, total: float, n: int = 18, seed: int = 5) -> tuple[str, str
     return "".join(html), "\n      ".join(tw)
 
 
+def caption_groups(times: list[dict], max_words: int = 7) -> list[list[dict]]:
+    """Phrases for the screen: break after punctuation, or at max_words, never leaving a one-word orphan."""
+    groups, cur = [], []
+    for w in times:
+        cur.append(w)
+        if w["word"][-1:] in ".,;:?!…" or len(cur) >= max_words:
+            groups.append(cur)
+            cur = []
+    if cur:
+        if len(cur) == 1 and groups:
+            groups[-1] += cur
+        else:
+            groups.append(cur)
+    return groups
+
+
+def captions_file(look: Look, L: dict, timing: list[dict], times: dict, total: float, W: int, Hh: int) -> str:
+    """Kinetic captions in one sub-composition: one phrase on screen at a time, opened just before its first word
+    and hard-killed after it; each word lights from dim to ink as it is spoken (and the beat's highlight words in
+    the accent). Sits in a soft band at the bottom so it never fights the picture."""
+    from html import escape as E
+
+    fs = look.fs(0.036)
+    items, tw = [], []
+    k = 0
+    for b, tm in zip(L["beats"], timing):
+        if not tm["narr"] or b.get("captions") is False or b["visual"]["type"] == "end":
+            continue
+        base = tm["start"] + tm["lead"]
+        hl = {h.lower() for h in (b["visual"].get("highlight") or [])}
+        groups = caption_groups(times[b["id"]])
+        for gi, g in enumerate(groups):
+            gid = f"cap{k}"
+            t_in = base + g[0]["start"] - 0.08
+            nxt = (base + groups[gi + 1][0]["start"] - 0.1) if gi + 1 < len(groups) else (base + g[-1]["end"] + 0.35)
+            t_out = min(nxt, tm["start"] + tm["dur"] - 0.05)
+            words = []
+            for wi, w in enumerate(g):
+                wid = f"{gid}w{wi}"
+                acc = any(w["word"].lower().strip(".,;:?!…") in h.split() for h in hl)
+                words.append(f'<span id="{wid}" class="cw">{E(w["word"])}</span>')
+                tw.append(f'tl.fromTo("#{wid}", {{ color: "rgba(242,237,228,0.42)" }}, {{ color: "{look.accent if acc else look.ink}", duration: 0.12, ease: "none" }}, {base + w["start"]:.3f});')
+            items.append(f'<div id="{gid}" class="clip cap" data-start="{t_in:.3f}" data-duration="{max(0.3, t_out - t_in):.3f}" data-track-index="0">'
+                         f'<div id="{gid}i" class="capi">{" ".join(words)}</div></div>')
+            tw.append(f'tl.fromTo("#{gid}i", {{ opacity: 0, y: 10, filter: "blur(6px)" }}, {{ opacity: 1, y: 0, filter: "blur(0px)", duration: 0.18, ease: "power2.out" }}, {t_in:.3f});')
+            k += 1
+    return f"""<template>
+  <style>
+    #root {{ position: absolute; inset: 0; }}
+    #capband {{ position: absolute; left: 0; right: 0; bottom: 0; height: {int(Hh * 0.16)}px;
+      background: linear-gradient(to top, rgba(8,7,6,0.78), rgba(8,7,6,0)); }}
+    .cap {{ position: absolute; left: {int(W * 0.08)}px; right: {int(W * 0.08)}px; bottom: {int(Hh * 0.045)}px; text-align: center; }}
+    .capi {{ display: inline-block; font-family: '{look.sans.strip("'")}'; font-weight: 600; font-size: {fs}px; line-height: 1.3;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.85); }}
+    .cw {{ color: rgba(242,237,228,0.42); }}
+  </style>
+  <div id="root" data-composition-id="captions" data-width="{W}" data-height="{Hh}">
+    <div id="capband"></div>
+    {"".join(items)}
+  </div>
+  <script>
+    const tl = gsap.timeline({{ paused: true }});
+    {chr(10).join('    ' + t for t in tw)}
+    window.__timelines["captions"] = tl;
+  </script>
+</template>
+"""
+
+
 def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: bool = False, render: str | None = "draft",
           log=print) -> dict:
     lesson_path = Path(lesson_path)
@@ -102,8 +171,10 @@ def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: 
             continue
         durs[b["id"]] = voice.synth(b["narration"], p, v_name, float(b.get("speed", speed)), pronounce=L.get("pronounce"),
                                     fx=meta.get("voice_fx"), style=meta.get("voice_style", ""), model=meta.get("tts_model"),
-                                    ref=meta.get("voice_ref"), ref_text=meta.get("voice_ref_text"), lang=meta.get("lang", "en-us"))
-        times[b["id"]] = voice.word_times(b["narration"], durs[b["id"]])
+                                    ref=meta.get("voice_ref"), ref_text=meta.get("voice_ref_text"), lang=meta.get("lang", "en-us"),
+                                    seed=int(meta.get("voice_seed", 7)))
+        times[b["id"]] = ((voice.align(p, b["narration"], meta.get("lang", "en")) if meta.get("align", True) else None)
+                          or voice.word_times(b["narration"], durs[b["id"]]))
         log(f"  voice {b['id']}: {durs[b['id']]:.1f}s")
     timing = plan_timing(L, durs)
     total = round(timing[-1]["start"] + timing[-1]["dur"], 3)
@@ -150,6 +221,12 @@ def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: 
                      f'data-track-kind="graphics" data-width="{W}" data-height="{Hh}" style="z-index:10"></div>')
     series = meta.get("series", "")
     dust_html, dust_tw = dust(look, total, int(meta.get("dust", 18)))
+    captions_host = ""
+    if meta.get("captions"):
+        (proj / "compositions" / "captions.html").write_text(captions_file(look, L, timing, times, total, W, Hh))
+        captions_host = (f'<div id="captions" data-composition-id="captions" data-composition-src="compositions/captions.html" data-start="0" '
+                         f'data-duration="{total:.3f}" data-track-index="6" data-track-kind="captions" data-width="{W}" data-height="{Hh}" '
+                         f'style="z-index:25"></div>')
     index = f"""<!doctype html>
 <html lang="{meta.get('lang', 'en')}">
   <head>
@@ -171,6 +248,7 @@ def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: 
       <div id="dust" class="clip" data-start="0" data-duration="{total:.3f}" data-track-index="4" data-layout-ignore style="z-index:2;position:absolute;inset:0;">{dust_html}</div>
       <div id="grain" class="clip" data-start="0" data-duration="{total:.3f}" data-track-index="2" data-layout-ignore style="z-index:30"></div>
       <div id="chrome" data-composition-id="chrome" data-composition-src="compositions/chrome.html" data-start="0" data-duration="{total:.3f}" data-track-index="3" data-track-kind="graphics" data-width="{W}" data-height="{Hh}" style="z-index:20"></div>
+      {captions_host}
       {chr(10).join('      ' + h for h in hosts)}
       <audio id="mix" class="clip" src="assets/mix.wav" data-start="0" data-duration="{total:.3f}" data-track-index="5" data-volume="1"></audio>
     </div>

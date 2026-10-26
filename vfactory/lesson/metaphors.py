@@ -335,7 +335,8 @@ def swap(L, sid, v, dur, cue):
     tw.append(_ft(f"#{sid}-a", "opacity: 0, y: 20", 'opacity: 1, y: 0, duration: 0.6, ease: "expo.out"', 0.3))
     t = cue(v.get("cue", ""), dur * 0.35)
     tw.append(_ft(f"#{sid}-x", f"strokeDashoffset: {s * 1.6:.0f}", 'strokeDashoffset: 0, duration: 0.35, ease: "power3.out"', t))
-    tw.append(_ft(f"#{sid}-a", "opacity: 1, y: 0, rotation: 0", 'opacity: 0.35, y: 40, rotation: -6, duration: 0.9, ease: "power3.in"', t + 0.45, later=True))
+    tw.append(_ft(f"#{sid}-a", "opacity: 1, y: 0, rotation: 0", 'opacity: 0.35, y: 40, rotation: -6, duration: 0.9, ease: "power3.in"',
+                  max(t + 0.45, 0.3 + 0.6 + 0.5 + 0.3 * len(a["label"].split())), later=True))
     tw.append(_ft(f"#{sid}-arw", f"strokeDashoffset: {L.w:.0f}", 'strokeDashoffset: 0, duration: 0.7, ease: "power2.inOut"', t + 0.6))
     tb = max(t + 1.1, cue(b.get("cue", ""), t + 1.2))
     tw.append(_ft(f"#{sid}-b", "opacity: 0, scale: 0.7", 'opacity: 1, scale: 1, duration: 0.6, ease: "back.out(1.6)"', tb))
@@ -521,5 +522,133 @@ def rise(L, sid, v, dur, cue):
     return m, "", tw
 
 
+def _st(s, c, k=.035):
+    return f'fill="none" stroke="{c}" stroke-width="{s * k:.1f}" stroke-linecap="round" stroke-linejoin="round"'
+
+
+ICONS.update({
+    "bulb": lambda s, c: (f'<path d="M{s * .34} {s * .62} C{s * .1} {s * .45} {s * .18} {s * .08} {s * .5} {s * .08} C{s * .82} {s * .08} {s * .9} {s * .45} '
+                          f'{s * .66} {s * .62} L{s * .64} {s * .74} L{s * .36} {s * .74} Z" fill="{c}" fill-opacity="0.15" {_st(s, c)}/>'
+                          f'<path d="M{s * .38} {s * .84} L{s * .62} {s * .84} M{s * .42} {s * .93} L{s * .58} {s * .93}" {_st(s, c)}/>'),
+    "star": lambda s, c: ('<path d="' + " ".join(
+        f'{"M" if k == 0 else "L"}{s * (.5 + (.42 if k % 2 == 0 else .18) * math.sin(math.pi * k / 5)):.1f} '
+        f'{s * (.52 - (.42 if k % 2 == 0 else .18) * math.cos(math.pi * k / 5)):.1f}' for k in range(10)) + f' Z" fill="{c}" fill-opacity="0.15" {_st(s, c)}/>'),
+    "rocket": lambda s, c: (f'<path d="M{s * .5} {s * .05} C{s * .72} {s * .22} {s * .7} {s * .55} {s * .62} {s * .7} L{s * .38} {s * .7} '
+                            f'C{s * .3} {s * .55} {s * .28} {s * .22} {s * .5} {s * .05} Z" fill="{c}" fill-opacity="0.15" {_st(s, c)}/>'
+                            f'<circle cx="{s * .5}" cy="{s * .35}" r="{s * .07}" {_st(s, c)}/>'
+                            f'<path d="M{s * .38} {s * .55} L{s * .22} {s * .76} L{s * .4} {s * .7} M{s * .62} {s * .55} L{s * .78} {s * .76} L{s * .6} {s * .7} '
+                            f'M{s * .44} {s * .8} L{s * .5} {s * .96} L{s * .56} {s * .8}" {_st(s, c)}/>'),
+    "fox": lambda s, c: (f'<path d="M{s * .12} {s * .1} L{s * .32} {s * .4} L{s * .68} {s * .4} L{s * .88} {s * .1} L{s * .86} {s * .5} '
+                         f'L{s * .5} {s * .92} L{s * .14} {s * .5} Z" fill="{c}" fill-opacity="0.15" {_st(s, c)}/>'
+                         f'<circle cx="{s * .37}" cy="{s * .55}" r="{s * .035}" fill="{c}"/><circle cx="{s * .63}" cy="{s * .55}" r="{s * .035}" fill="{c}"/>'
+                         f'<circle cx="{s * .5}" cy="{s * .8}" r="{s * .04}" fill="{c}"/>'),
+    "hedgehog": lambda s, c: ('<path d="M' + " L".join(
+        f'{s * (.5 + (.46 if k % 2 == 0 else .34) * math.cos(math.pi + math.pi * k / 16)):.1f} '
+        f'{s * (.72 + (.46 if k % 2 == 0 else .34) * math.sin(math.pi + math.pi * k / 16)):.1f}' for k in range(17)) +
+        f' Z" fill="{c}" fill-opacity="0.15" {_st(s, c)}/>'
+        f'<path d="M{s * .82} {s * .72} C{s * .98} {s * .7} {s * .98} {s * .86} {s * .82} {s * .86} L{s * .2} {s * .86} C{s * .1} {s * .86} {s * .1} {s * .72} {s * .2} {s * .72}" {_st(s, c)}/>'
+        f'<circle cx="{s * .86}" cy="{s * .77}" r="{s * .025}" fill="{c}"/>'),
+    "store": lambda s, c: (f'<path d="M{s * .1} {s * .4} L{s * .1} {s * .92} L{s * .9} {s * .92} L{s * .9} {s * .4}" fill="{c}" fill-opacity="0.08" {_st(s, c)}/>'
+                           f'<path d="M{s * .05} {s * .4} L{s * .15} {s * .15} L{s * .85} {s * .15} L{s * .95} {s * .4} Z" fill="{c}" fill-opacity="0.25" {_st(s, c)}/>'
+                           f'<path d="M{s * .5} {s * .2} L{s * .5} {s * .36} M{s * .42} {s * .28} L{s * .58} {s * .28}" {_st(s, c, .05)}/>'
+                           f'<rect x="{s * .4}" y="{s * .6}" width="{s * .2}" height="{s * .32}" {_st(s, c)}/>'),
+    "tea": lambda s, c: (f'<path d="M{s * .16} {s * .45} L{s * .7} {s * .45} L{s * .64} {s * .82} C{s * .62} {s * .9} {s * .24} {s * .9} {s * .22} {s * .82} Z" '
+                         f'fill="{c}" fill-opacity="0.15" {_st(s, c)}/>'
+                         f'<path d="M{s * .68} {s * .52} C{s * .9} {s * .5} {s * .9} {s * .72} {s * .65} {s * .72}" {_st(s, c)}/>'
+                         f'<path d="M{s * .08} {s * .93} L{s * .82} {s * .93}" {_st(s, c)}/>'),
+    "book": lambda s, c: (f'<path d="M{s * .5} {s * .2} C{s * .38} {s * .12} {s * .2} {s * .12} {s * .08} {s * .18} L{s * .08} {s * .86} C{s * .2} {s * .8} '
+                          f'{s * .38} {s * .8} {s * .5} {s * .88} C{s * .62} {s * .8} {s * .8} {s * .8} {s * .92} {s * .86} L{s * .92} {s * .18} '
+                          f'C{s * .8} {s * .12} {s * .62} {s * .12} {s * .5} {s * .2} Z M{s * .5} {s * .2} L{s * .5} {s * .88}" fill="{c}" fill-opacity="0.1" {_st(s, c)}/>'),
+})
+
+
+def trio(L, sid, v, dur, cue):
+    """Two to four ideas as pictures in a row, each popping in on its word; `cross` strikes each one out as it
+    lands (the things that did NOT make the difference)."""
+    items = v["items"][:4]
+    n = len(items)
+    s_ = L.px(0.17)
+    gap = (L.w * 0.84 - n * s_) / max(1, n - 1) if n > 1 else 0
+    x0 = L.w * 0.08 + (L.w * 0.84 - (n * s_ + (n - 1) * gap)) / 2
+    y = L.h * 0.36
+    head, tw = _head(L, sid, v, 0.12)
+    cells = ""
+    cross = bool(v.get("cross"))
+    for i, it in enumerate(items):
+        x = x0 + i * (s_ + gap)
+        icon = ICONS.get(it.get("icon", ""), lambda s, c: "")(s_, L.accent)
+        cells += (f'<div id="{sid}-i{i}" style="position:absolute;left:{x - L.px(0.04):.0f}px;top:{y:.0f}px;width:{s_ + L.px(0.08)}px;text-align:center;">'
+                  f'<svg width="{s_}" height="{s_}" style="overflow:visible">{icon}'
+                  + (f'<path id="{sid}-x{i}" d="M{-s_ * .05:.0f} {-s_ * .05:.0f} L{s_ * 1.05:.0f} {s_ * 1.05:.0f} M{s_ * 1.05:.0f} {-s_ * .05:.0f} L{-s_ * .05:.0f} {s_ * 1.05:.0f}" '
+                     f'stroke="#E77A5F" stroke-width="{L.px(0.01)}" stroke-linecap="round" stroke-dasharray="{s_ * 3:.0f}" stroke-dashoffset="{s_ * 3:.0f}"/>' if cross else "")
+                  + f'</svg><div style="font-size:{L.fs(0.03)}px;line-height:1.25;margin-top:{L.px(0.02)}px;font-weight:600;">{E(it["label"])}</div></div>')
+        at = max(0.3 + 0.2 * i, cue(it.get("cue", ""), 0.5 + (dur - 1.5) * i / n))
+        tw.append(_ft(f"#{sid}-i{i}", "opacity: 0, y: 30, scale: 0.85", 'opacity: 1, y: 0, scale: 1, duration: 0.5, ease: "back.out(1.7)"', at))
+        if cross:
+            # read it first, then strike it: the label holds ~0.5 s + 0.3 s a word before anything touches it
+            hold = 0.5 + 0.3 * len(it["label"].split())
+            tw.append(_ft(f"#{sid}-x{i}", f"strokeDashoffset: {s_ * 3:.0f}", 'strokeDashoffset: 0, duration: 0.35, ease: "power3.out"', at + hold))
+            tw.append(_ft(f"#{sid}-i{i}", "opacity: 1", 'opacity: 0.55, duration: 0.4, ease: "power2.out"', at + hold + 0.4, later=True))
+    foot = ""
+    if v.get("line"):
+        foot = (f'<div id="{sid}-ln" class="serif" style="position:absolute;left:0;right:0;top:{L.h * 0.72:.0f}px;text-align:center;font-size:{L.fs(0.06)}px;">'
+                f'{E(v["line"])}</div>')
+        tw.append(_blur_in(f"#{sid}-ln", max(1.0, cue(v.get("line_cue", ""), dur * 0.75)), 0.45))
+    return f'<div id="{sid}-c" style="position:absolute;inset:0;">{head}{cells}{foot}</div>', "", tw
+
+
+def icon(L, sid, v, dur, cue):
+    """One drawn object, big, with its own small life (steam from a cup), and the line it stands for."""
+    s_ = L.px(0.3)
+    x, y = (L.w - s_) / 2, L.h * 0.2
+    head, tw = _head(L, sid, v, 0.12)
+    art = ICONS.get(v.get("icon", ""), lambda s, c: "")(s_, L.accent)
+    steam = ""
+    if v.get("steam"):
+        for k in range(3):
+            pid = f"{sid}-sm{k}"
+            sx = s_ * (0.3 + 0.13 * k)
+            steam += (f'<path id="{pid}" d="M{sx:.0f} {s_ * .38:.0f} c {-s_ * .05:.0f} {-s_ * .06:.0f} {s_ * .05:.0f} {-s_ * .1:.0f} 0 {-s_ * .18:.0f} '
+                      f'c {-s_ * .05:.0f} {-s_ * .06:.0f} {s_ * .05:.0f} {-s_ * .1:.0f} 0 {-s_ * .16:.0f}" fill="none" stroke="{L.ink}" stroke-width="{s_ * .02:.1f}" '
+                      f'stroke-linecap="round" opacity="0"/>')
+            for rep in range(int(dur / 2.2) + 1):
+                at = 0.4 + k * 0.7 + rep * 2.2
+                tw.append(_ft(f"#{pid}", "opacity: 0, y: 10", 'opacity: 0.6, y: -6, duration: 1.0, ease: "sine.out"', at, later=rep > 0))
+                tw.append(_ft(f"#{pid}", "opacity: 0.6, y: -6", f'opacity: 0, y: -{L.px(0.04)}, duration: 1.0, ease: "sine.in"', at + 1.0, later=True))
+    m = f"""<div id="{sid}-c" style="position:absolute;inset:0;">{head}
+      <svg id="{sid}-ic" width="{s_}" height="{s_}" style="position:absolute;left:{x:.0f}px;top:{y:.0f}px;overflow:visible">{art}{steam}</svg>
+      {f'<div id="{sid}-ln" class="serif" style="position:absolute;left:{L.px(0.08)}px;right:{L.px(0.08)}px;top:{y + s_ + L.px(0.06):.0f}px;text-align:center;font-size:{L.fs(0.065)}px;line-height:1.15;">{E(v["line"])}</div>' if v.get('line') else ''}
+    </div>"""
+    tw.insert(0, _ft(f"#{sid}-ic", "opacity: 0, scale: 0.8, y: 20", 'opacity: 1, scale: 1, y: 0, duration: 0.7, ease: "back.out(1.5)"', 0.1))
+    if v.get("line"):
+        tw.append(_blur_in(f"#{sid}-ln", max(0.5, cue(v.get("line_cue", ""), 0.7)), 0.45))
+    return m, "", tw
+
+
+def book(L, sid, v, dur, cue):
+    """A drawn book cover (title, author, year) with the facts about it landing beside it on their words."""
+    bw, bh = L.px(0.36), L.px(0.5)
+    bx, by = L.w * 0.1, L.h * 0.24
+    head, tw = _head(L, sid, v, 0.12)
+    cover = f"""<div id="{sid}-bk" style="position:absolute;left:{bx:.0f}px;top:{by:.0f}px;width:{bw}px;height:{bh}px;border-radius:6px {L.px(0.02)}px {L.px(0.02)}px 6px;
+      background:linear-gradient(135deg, {L.accent} 0%, #B9844A 100%);box-shadow:{L.px(0.02)}px {L.px(0.02)}px {L.px(0.05)}px rgba(0,0,0,0.55), inset {L.px(0.018)}px 0 0 rgba(0,0,0,0.18);
+      color:#17130E;padding:{L.px(0.04)}px {L.px(0.035)}px;display:flex;flex-direction:column;">
+      <div style="font-size:{L.fs(0.02)}px;letter-spacing:0.3em;font-weight:800;opacity:0.7;">{E(v.get('year', ''))}</div>
+      <div class="serif" style="font-size:{L.fs(0.07)}px;line-height:1;margin-top:{L.px(0.05)}px;">{E(v['title'])}</div>
+      <div style="height:3px;width:40%;background:#17130E;margin:{L.px(0.03)}px 0;opacity:0.6;"></div>
+      <div style="font-size:{L.fs(0.026)}px;font-weight:700;margin-top:auto;">{E(v.get('author', ''))}</div></div>"""
+    tw.append(_ft(f"#{sid}-bk", "opacity: 0, rotationY: -35, x: -40", 'opacity: 1, rotationY: 0, x: 0, duration: 0.8, ease: "expo.out"', 0.15))
+    rx = bx + bw + L.px(0.08)
+    facts = ""
+    for i, f in enumerate(v.get("facts", [])):
+        facts += (f'<div id="{sid}-f{i}" style="display:flex;gap:{L.px(0.02)}px;align-items:baseline;margin-top:{L.px(0.03)}px;">'
+                  f'<span class="serif acc" style="font-size:{L.fs(0.06)}px;min-width:{L.px(0.17)}px;white-space:nowrap;">{E(f.get("big", ""))}</span>'
+                  f'<span style="font-size:{L.fs(0.03)}px;line-height:1.3;">{E(f["text"])}</span></div>')
+        tw.append(_rise(f"#{sid}-f{i}", max(0.6, cue(f.get("cue", ""), 1.0 + 1.2 * i)), 0.5, 14))
+    m = (f'<div id="{sid}-c" style="position:absolute;inset:0;perspective:{L.px(1.5)}px;">{head}{cover}'
+         f'<div style="position:absolute;left:{rx:.0f}px;right:{L.px(0.06)}px;top:{by + L.px(0.02):.0f}px;">{facts}</div></div>')
+    return m, "", tw
+
+
 METAPHORS = {"funnel": funnel, "ladder": ladder, "venn": venn, "flywheel": flywheel, "halo": halo, "swap": swap,
-             "company": company, "rise": rise}
+             "company": company, "rise": rise, "trio": trio, "icon": icon, "book": book}

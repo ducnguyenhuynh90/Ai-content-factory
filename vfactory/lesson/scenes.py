@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import html
 import math
+import re
 
 E = html.escape
 
@@ -407,11 +408,13 @@ def end(L, sid, v, dur, cue):
       <div id="{sid}-src" class="muted" style="position:absolute;left:0;right:0;bottom:{L.px(0.09)}px;font-size:{L.fs(0.019)}px;line-height:1.45;">
         {E(v.get('sources_line', ''))}<br/>{E(v.get('disclaimer', ''))}</div></div>"""
     tw = [_fade(f"#{sid}-k", 0.1), _rise(f"#{sid}-t", 0.3, 0.8)]
+    t_next = max(0.9, cue(v.get("next_cue", ""), 0.9))
+    t_cta = max(t_next + 0.5, cue(v.get("cta_cue", ""), 1.3))
     if v.get("next"):
-        tw.append(_rise(f"#{sid}-n", 0.9))
+        tw.append(_rise(f"#{sid}-n", t_next))
     if v.get("cta"):
-        tw.append(_ft(f"#{sid}-cta", "opacity: 0, scale: 0.85", 'opacity: 1, scale: 1, duration: 0.5, ease: "back.out(2)"', 1.3))
-    tw.append(_fade(f"#{sid}-src", 1.6, 0.8))
+        tw.append(_ft(f"#{sid}-cta", "opacity: 0, scale: 0.85", 'opacity: 1, scale: 1, duration: 0.5, ease: "back.out(2)"', t_cta))
+    tw.append(_fade(f"#{sid}-src", max(1.6, cue(v.get("sources_cue", ""), t_cta + 1.5)), 0.8))
     return m, "", tw
 
 
@@ -485,6 +488,46 @@ GENERATORS = {"hook": hook, "title": title, "statement": statement, "stat": stat
 from .metaphors import METAPHORS  # noqa: E402  (metaphors builds on the helpers above)
 
 GENERATORS.update(METAPHORS)
+
+
+_AT = re.compile(r", (-?\d+(?:\.\d+)?)\);$")
+
+
+def _shift(tween: str, by: float) -> str:
+    """Move a tl.fromTo line later on the timeline (its position is the last argument)."""
+    if not tween.startswith("tl.fromTo"):
+        return tween
+    return _AT.sub(lambda m: f", {float(m.group(1)) + by:.3f});", tween)
+
+
+def shots(L, sid, v, dur, cue):
+    """Several pictures for one spoken line: each shot is any visual type, enters on its cue word (blur swap) and
+    gives way to the next. Keeps a new picture on screen every few seconds while the voice runs on (a narrated
+    explainer holds one framing for ~19 spoken words, and something inside it moves every 2-3 s)."""
+    items = v["shots"]
+    n = len(items)
+    starts = [0.0]
+    for i, sh in enumerate(items[1:], 1):
+        default = dur * i / n
+        starts.append(max(starts[-1] + 1.5, min(dur - 1.5, cue(sh.get("cue", ""), default) if sh.get("cue") else default)))
+    ends = starts[1:] + [dur]
+    m, css, tw = [], [], []
+    for i, (sh, t0, t1) in enumerate(zip(items, starts, ends)):
+        ssid = f"{sid}s{i}"
+        local = (lambda w, d, t0=t0: (cue(w, d + t0) - t0) if w else d)
+        gm, gcss, gtw = GENERATORS[sh["type"]](L, ssid, sh, t1 - t0, local)
+        m.append(f'<div id="{ssid}-shot" style="position:absolute;inset:0;"><div id="{ssid}-wrap" style="position:absolute;inset:0;">{gm}</div></div>')
+        css.append(gcss)
+        tw += [_shift(t, t0) for t in gtw]
+        if i:
+            tw.append(_ft(f"#{ssid}-shot", 'opacity: 0, filter: "blur(8px)"', 'opacity: 1, filter: "blur(0px)", duration: 0.25, ease: "power2.out"', t0))
+        if i < n - 1:
+            tw.append(_ft(f"#{ssid}-shot", 'opacity: 1, filter: "blur(0px)"', 'opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power2.in"',
+                          t1 - 0.05, later=True))
+    return f'<div id="{sid}-c" style="position:absolute;inset:0;">{"".join(m)}</div>', "\n".join(css), tw
+
+
+GENERATORS["shots"] = shots
 
 
 def scene_file(L: Look, sid: str, visual: dict, dur: float, cue, narr: float, last: bool) -> str:

@@ -35,7 +35,7 @@ VISUALS = {
     "compare": {"required": ["left", "right"], "optional": ["title"]},
     "list": {"required": ["items"], "optional": ["title", "check"]},
     "question": {"required": ["question"], "optional": ["choices", "answer", "think_seconds"]},
-    "end": {"required": ["title"], "optional": ["cta", "next", "sources_line", "disclaimer"]},
+    "end": {"required": ["title"], "optional": ["cta", "next", "sources_line", "disclaimer", "next_cue", "cta_cue", "sources_cue"]},
     # metaphor scenes (metaphors.py): the object on screen is the explanation
     "funnel": {"required": ["total"], "optional": ["keep", "label", "keep_label", "keep_cue", "cue", "start_full", "stat", "cols", "seed"]},
     "ladder": {"required": ["levels"], "optional": ["kicker", "heading", "top_cue", "tags"]},
@@ -44,6 +44,10 @@ VISUALS = {
                                              "from_angle", "to_angle", "ease", "spokes", "enter"]},
     "halo": {"required": ["items"], "optional": ["kicker", "heading", "label", "label_cue"]},
     "swap": {"required": ["from", "to"], "optional": ["kicker", "heading", "cue", "line", "line_cue"]},
+    "shots": {"required": ["shots"], "optional": []},
+    "trio": {"required": ["items"], "optional": ["kicker", "heading", "cross", "line", "line_cue"]},
+    "icon": {"required": ["icon"], "optional": ["kicker", "heading", "line", "line_cue", "steam"]},
+    "book": {"required": ["title"], "optional": ["kicker", "heading", "author", "year", "facts"]},
     "company": {"required": ["name"], "optional": ["kicker", "heading", "art", "facts", "card"]},
     "rise": {"required": ["value"], "optional": ["kicker", "heading", "value_text", "value_label", "base_label", "cue", "stamp", "ranking",
                                                "pass_cue", "products", "why", "why_kicker", "why_cue"]},
@@ -85,6 +89,13 @@ def validate(L: dict) -> None:
         for r in VISUALS[t]["required"]:
             if r not in v:
                 raise LessonError(f"{where}: visual '{t}' needs '{r}'")
+        for j, sh in enumerate(v.get("shots", []) if t == "shots" else []):
+            st = sh.get("type")
+            if st not in VISUALS or st in ("shots", "question", "hook"):
+                raise LessonError(f"{where}: shot {j} type must be a picture type, not {st!r}")
+            for r in VISUALS[st]["required"]:
+                if r not in sh:
+                    raise LessonError(f"{where}: shot {j} '{st}' needs '{r}'")
         for s in b.get("sources", []):
             if s not in src_ids:
                 raise LessonError(f"{where}: unknown source '{s}'")
