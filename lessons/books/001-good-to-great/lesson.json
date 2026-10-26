@@ -12,7 +12,7 @@
    3,
    5
   ],
-  "voice": "omnivoice:male, middle-aged, low pitch",
+  "voice": "omnivoice:male, elderly, very low pitch",
   "speed": 0.92,
   "music": "chill",
   "look": {
@@ -71,6 +71,11 @@
    "id": "collins2009",
    "cite": "Jim Collins, How the Mighty Fall, 2009",
    "url": "https://www.jimcollins.com/books/how-the-mighty-fall.html"
+  },
+  {
+   "id": "kc_history",
+   "cite": "Kimberly-Clark Corporation history (Neenah, Wisconsin, 1872; Huggies 1978): encyclopedia.com; company-histories.com",
+   "url": "https://www.encyclopedia.com/books/politics-and-business-magazines/kimberly-clark-corporation"
   }
  ],
  "principles": [
@@ -211,7 +216,7 @@
     "text": "Vĩ đại là một cú bùng nổ.",
     "strike": "một cú bùng nổ.",
     "replace": "từng bước nhỏ",
-    "strike_cue": "khác hẳn"
+    "strike_cue": "cuốn sách này"
    }
   },
   {
@@ -274,7 +279,7 @@
     "stat": {
      "text": "≈ 6,9×",
      "label": "lợi nhuận cộng dồn so với thị trường · 15 năm",
-     "cue": "sáu phẩy"
+     "cue": "và trung bình"
     }
    },
    "sources": [
@@ -284,16 +289,35 @@
   {
    "id": "b05",
    "act": "context",
-   "narration": "Hãy gặp một trong số họ. Năm một nghìn chín trăm bảy mươi mốt, hãng giấy lâu đời Kimberly-Clark chọn một luật sư nội bộ hiền lành làm giám đốc điều hành. Tên ông là Darwin Smith.",
+   "narration": "Hãy gặp một trong số họ. Kimberly-Clark, một hãng giấy ra đời từ năm một nghìn tám trăm bảy mươi hai ở Wisconsin, nước Mỹ. Năm một nghìn chín trăm bảy mươi mốt, họ chọn một luật sư nội bộ hiền lành làm giám đốc điều hành: Darwin Smith.",
    "visual": {
-    "type": "portrait",
-    "name": "Darwin E. Smith",
-    "years": "CEO Kimberly-Clark · 1971–1991",
-    "initials": "DS"
+    "type": "company",
+    "name": "Kimberly-Clark",
+    "art": "mill",
+    "kicker": "Một trong 11 công ty",
+    "facts": [
+     {
+      "big": "1872",
+      "text": "Hãng giấy ra đời ở Neenah, Wisconsin (Mỹ)",
+      "cue": "một nghìn tám"
+     },
+     {
+      "big": "~100 năm",
+      "text": "Sống bằng nhà máy giấy, cổ phiếu tụt sau thị trường",
+      "cue": "nước mỹ"
+     }
+    ],
+    "card": {
+     "kicker": "1971 · CEO MỚI",
+     "title": "Darwin E. Smith",
+     "sub": "Luật sư nội bộ, hiền lành, ít người biết",
+     "cue": "năm một nghìn chín"
+    }
    },
    "sources": [
     "hbr2001",
-    "collins2001"
+    "collins2001",
+    "kc_history"
    ]
   },
   {
@@ -324,13 +348,49 @@
    "act": "story",
    "narration": "Giới phân tích hạ xếp hạng cổ phiếu. Nhưng sau hai mươi năm dưới tay Smith, lợi nhuận cổ phiếu cộng dồn của Kimberly-Clark gấp khoảng bốn phẩy một lần thị trường, và họ vượt qua cả những đối thủ lớn như Scott Paper và Procter and Gamble.",
    "visual": {
-    "type": "stat",
+    "type": "rise",
+    "kicker": "Vì sao Kimberly-Clark thắng",
     "value": 4.1,
-    "decimals": 1,
-    "suffix": "×",
-    "label": "Kimberly-Clark so với thị trường",
-    "note": "20 năm dưới thời Darwin Smith",
-    "cue": "bốn phẩy"
+    "value_text": "4,1×",
+    "value_label": "lợi nhuận cộng dồn · 20 năm",
+    "cue": "nhưng sau",
+    "stamp": {
+     "text": "PHÂN TÍCH: HẠ XẾP HẠNG ↓",
+     "cue": "giới phân"
+    },
+    "ranking": [
+     {
+      "name": "Procter & Gamble"
+     },
+     {
+      "name": "Scott Paper"
+     },
+     {
+      "name": "Kimberly-Clark",
+      "hero": true
+     }
+    ],
+    "pass_cue": "vượt qua",
+    "products": [
+     {
+      "icon": "tissue",
+      "label": "Khăn giấy",
+      "cue": "bốn phẩy"
+     },
+     {
+      "icon": "diaper",
+      "label": "Tã Huggies · 1978",
+      "cue": "bốn phẩy"
+     },
+     {
+      "icon": "roll",
+      "label": "Giấy vệ sinh",
+      "cue": "bốn phẩy"
+     }
+    ],
+    "why_kicker": "Vì sao thắng",
+    "why": "Dồn toàn lực vào thứ có thể giỏi nhất thế giới.",
+    "why_cue": "và họ"
    },
    "sources": [
     "hbr2001",
@@ -614,6 +674,7 @@
   "Fannie Mae": "Phen ni Mây",
   "Phil Rosenzweig": "Phin Râu dần quai",
   "review": "ri viu",
-  "Atomic Habits": "Ơ tô mích Ha bít"
+  "Atomic Habits": "Ơ tô mích Ha bít",
+  "Wisconsin": "Uýt cân xin"
  }
 }

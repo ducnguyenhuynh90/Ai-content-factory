@@ -1,5 +1,5 @@
 # Từ Tốt Đến Vĩ Đại
-_Review sách · Tập 1 · 884 words · ~3.64 min · 4:3_
+_Review sách · Tập 1 · 896 words · ~3.69 min · 4:3_
 
 ## Learning goals
 - Kể lại được nghiên cứu của Collins: 1.435 công ty, 11 công ty vượt qua bộ lọc
@@ -21,9 +21,9 @@ _Review sách · Tập 1 · 884 words · ~3.64 min · 4:3_
 | b02 | context | Năm hai nghìn lẻ một, Jim Collins công bố kết quả của khoảng năm năm nghiên cứu, cùng một nhóm khoảng hai mươi người. Họ sàng lọc một nghìn bốn trăm ba mươi lăm công ty từng có mặt trong danh sách Fortune năm trăm. _(estimate)_ | funnel: công ty được sàng lọc |
 | b03 | story | Bộ lọc rất khắt khe. Mười lăm năm bình thường, cổ phiếu ngang hoặc thua thị trường. Rồi một điểm chuyển mình. Rồi mười lăm năm tiếp theo, lợi nhuận cộng dồn gấp ít nhất ba lần thị trường. | timeline: Bộ lọc của Collins |
 | b04 | story | Chỉ mười một công ty vượt qua. Và trung bình, trong mười lăm năm sau điểm chuyển mình, lợi nhuận cổ phiếu cộng dồn của họ gấp khoảng sáu phẩy chín lần thị trường chung. | funnel: Bộ lọc của Collins |
-| b05 | context | Hãy gặp một trong số họ. Năm một nghìn chín trăm bảy mươi mốt, hãng giấy lâu đời Kimberly-Clark chọn một luật sư nội bộ hiền lành làm giám đốc điều hành. Tên ông là Darwin Smith. | portrait: Darwin E. Smith |
+| b05 | context | Hãy gặp một trong số họ. Kimberly-Clark, một hãng giấy ra đời từ năm một nghìn tám trăm bảy mươi hai ở Wisconsin, nước Mỹ. Năm một nghìn chín trăm bảy mươi mốt, họ chọn một luật sư nội bộ hiền lành làm giám đốc điều hành: Darwin Smith. | company: Kimberly-Clark |
 | b06 | story | Khi ấy, cổ phiếu công ty đã tụt sau thị trường khoảng ba mươi sáu phần trăm trong hai mươi năm. Và Smith làm một việc mà báo chí gọi là ngu ngốc: bán sạch các nhà máy giấy, trái tim của công ty, để dồn toàn lực vào giấy tiêu dùng như khăn giấy và tã em bé. | swap: swap |
-| b07 | story | Giới phân tích hạ xếp hạng cổ phiếu. Nhưng sau hai mươi năm dưới tay Smith, lợi nhuận cổ phiếu cộng dồn của Kimberly-Clark gấp khoảng bốn phẩy một lần thị trường, và họ vượt qua cả những đối thủ lớn như Scott Paper và Procter and Gamble. | stat: Kimberly-Clark so với thị trường |
+| b07 | story | Giới phân tích hạ xếp hạng cổ phiếu. Nhưng sau hai mươi năm dưới tay Smith, lợi nhuận cổ phiếu cộng dồn của Kimberly-Clark gấp khoảng bốn phẩy một lần thị trường, và họ vượt qua cả những đối thủ lớn như Scott Paper và Procter and Gamble. | rise: rise |
 | b08 | story | Khi được hỏi về thành tích của mình, ông chỉ nói: tôi chưa bao giờ ngừng cố gắng để xứng đáng với công việc này. | quote: Tôi chưa bao giờ ngừng cố gắng để xứng đáng với công việc này. |
 | b09 | principle | Bài học thứ nhất. Collins gọi đó là lãnh đạo cấp năm: khiêm nhường với bản thân, nhưng quyết liệt với mục tiêu. Smith không cần ánh đèn sân khấu. Ông chỉ không bao giờ buông điều quan trọng. | ladder: ladder |
 | b10 | example | Bài học thứ hai đến từ một con nhím. Con cáo biết nhiều thứ, con nhím chỉ biết một điều lớn. Chuỗi nhà thuốc Walgreens chọn một thước đo duy nhất: lợi nhuận trên mỗi lượt khách ghé thăm. Họ còn sẵn sàng đóng cả cửa hàng đang có lãi, để dời sang góc phố thuận tiện hơn. | statement: Lợi nhuận trên mỗi lượt khách. |
@@ -47,5 +47,6 @@ _Review sách · Tập 1 · 884 words · ~3.64 min · 4:3_
 - [rosenzweig2007] Phil Rosenzweig, The Halo Effect, Free Press, 2007; Knowledge at Wharton interview — https://knowledge.wharton.upenn.edu/article/the-halo-effect-debunking-some-hot-business-books-with-one-of-his-own/
 - [wiki] Wikipedia, Good to Great (criticism: Levitt 2008; Circuit City bankruptcy 2008; Fannie Mae conservatorship 2008) — https://en.wikipedia.org/wiki/Good_to_Great
 - [collins2009] Jim Collins, How the Mighty Fall, 2009 — https://www.jimcollins.com/books/how-the-mighty-fall.html
+- [kc_history] Kimberly-Clark Corporation history (Neenah, Wisconsin, 1872; Huggies 1978): encyclopedia.com; company-histories.com — https://www.encyclopedia.com/books/politics-and-business-magazines/kimberly-clark-corporation
 
 ## Lint

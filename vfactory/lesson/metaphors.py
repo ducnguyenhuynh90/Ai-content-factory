@@ -7,6 +7,8 @@ Each one is a small machine whose working is the idea, built up one part per spo
 - flywheel a heavy wheel pushed turn by turn, accelerating until speed lines appear and it runs on its own
 - halo     cards wearing a halo; on the cue the halo fails and the verdict stamps over the card
 - swap     one thing is let go (struck and dropped) so another can take its place
+- company  who the company is, as a picture: its world drawn (a paper mill), facts on their words, a news clipping
+- rise     why it won: the doubters' stamp, the climb against a flat market, rivals passed, products on the shelf
 
 Same contract as scenes.py: ids prefixed with the beat id, fromTo tweens only, everything a function of timeline time,
 deterministic (seeded) layouts.
@@ -342,4 +344,182 @@ def swap(L, sid, v, dur, cue):
     return m, "", tw
 
 
-METAPHORS = {"funnel": funnel, "ladder": ladder, "venn": venn, "flywheel": flywheel, "halo": halo, "swap": swap}
+ICONS["diaper"] = lambda s, c: (
+    f'<path d="M{s * .06} {s * .3} L{s * .94} {s * .3} L{s * .9} {s * .5} C{s * .78} {s * .55} {s * .66} {s * .7} {s * .62} {s * .92} '
+    f'L{s * .38} {s * .92} C{s * .34} {s * .7} {s * .22} {s * .55} {s * .1} {s * .5} Z" fill="{c}" fill-opacity="0.15" stroke="{c}" '
+    f'stroke-width="{s * .035:.1f}" stroke-linejoin="round"/>'
+    f'<rect x="{s * .08}" y="{s * .3}" width="{s * .14}" height="{s * .1}" rx="{s * .02}" fill="{c}"/>'
+    f'<rect x="{s * .78}" y="{s * .3}" width="{s * .14}" height="{s * .1}" rx="{s * .02}" fill="{c}"/>')
+ICONS["roll"] = lambda s, c: (
+    f'<rect x="{s * .22}" y="{s * .2}" width="{s * .56}" height="{s * .7}" rx="{s * .04}" fill="{c}" fill-opacity="0.12" stroke="{c}" stroke-width="{s * .035:.1f}"/>'
+    f'<ellipse cx="{s * .5}" cy="{s * .2}" rx="{s * .28}" ry="{s * .08}" fill="none" stroke="{c}" stroke-width="{s * .035:.1f}"/>'
+    f'<ellipse cx="{s * .5}" cy="{s * .2}" rx="{s * .08}" ry="{s * .025}" fill="{c}"/>')
+
+
+def _mill_art(L, sid, x, y, w, h) -> tuple[str, list[str]]:
+    """A paper mill by a river, drawn in line: brick hall with a sawtooth roof, two stacks breathing smoke, logs
+    waiting at the door and a finished roll of paper. Built in three strokes (ground, building, details)."""
+    ink, acc = L.ink, L.accent
+    sw = max(3, L.px(0.005))
+    gy = y + h * 0.78  # ground line
+    bx, bw, bh = x + w * 0.12, w * 0.56, h * 0.42
+    by = gy - bh
+    teeth = 4
+    tw_ = bw / teeth
+    roof = " ".join(f"L{bx + tw_ * k:.0f} {by - h * 0.1:.0f} L{bx + tw_ * (k + 1):.0f} {by:.0f}" for k in range(teeth))
+    bricks = "".join(f'<line x1="{bx:.0f}" y1="{by + bh * f:.0f}" x2="{bx + bw:.0f}" y2="{by + bh * f:.0f}" stroke="{ink}" stroke-opacity="0.12" stroke-width="2"/>'
+                     for f in (0.25, 0.5, 0.75))
+    wins = "".join(f'<rect x="{bx + bw * (0.1 + 0.22 * k):.0f}" y="{by + bh * 0.3:.0f}" width="{bw * 0.12:.0f}" height="{bh * 0.22:.0f}" rx="4" '
+                   f'fill="{acc}" fill-opacity="0.55"/>' for k in range(4))
+    stacks, smoke, tw = "", "", []
+    for k, sx in enumerate((bx + bw * 0.78, bx + bw * 0.92)):
+        sh = h * (0.36 if k == 0 else 0.3)
+        stacks += f'<rect x="{sx - w * 0.025:.0f}" y="{by - sh:.0f}" width="{w * 0.05:.0f}" height="{sh:.0f}" fill="{L.bg}" stroke="{ink}" stroke-width="{sw}"/>'
+        for j in range(3):  # puffs rise, swell and fade on their own clocks: the mill is working
+            pid = f"{sid}-pf{k}{j}"
+            smoke += f'<circle id="{pid}" cx="{sx:.0f}" cy="{by - sh - L.px(0.02):.0f}" r="{L.px(0.022)}" fill="{ink}" opacity="0"/>'
+            t0 = 0.6 + j * 1.3 + k * 0.5
+            for rep in range(4):
+                at = t0 + rep * 3.9
+                tw.append(_ft(f"#{pid}", "opacity: 0.35, x: 0, y: 0, scale: 0.6", f'opacity: 0, x: {L.px(0.05)}, y: -{L.px(0.16)}, scale: 1.8, '
+                              f'duration: 3.6, ease: "sine.out"', at, later=rep > 0))
+    door = f'<rect x="{bx + bw * 0.42:.0f}" y="{gy - bh * 0.38:.0f}" width="{bw * 0.16:.0f}" height="{bh * 0.38:.0f}" fill="{ink}" fill-opacity="0.15" stroke="{ink}" stroke-width="{sw}"/>'
+    # a log pile: three on the ground, two resting on top
+    pile = [(0.05 + 0.045 * k, 0.02) for k in range(3)] + [(0.0725, 0.055), (0.1175, 0.055)]
+    logs = "".join(f'<circle cx="{x + w * fx:.0f}" cy="{gy - L.px(fy):.0f}" r="{L.px(0.02)}" fill="none" stroke="{ink}" stroke-opacity="0.7" '
+                   f'stroke-width="{sw}"/>' for fx, fy in pile)
+    rx_ = bx + bw + w * 0.12
+    roll = (f'<rect x="{rx_ - L.px(0.045):.0f}" y="{gy - L.px(0.11):.0f}" width="{L.px(0.09)}" height="{L.px(0.11)}" fill="{acc}" fill-opacity="0.2" stroke="{acc}" stroke-width="{sw}"/>'
+            f'<ellipse cx="{rx_:.0f}" cy="{gy - L.px(0.11):.0f}" rx="{L.px(0.045)}" ry="{L.px(0.016)}" fill="{L.bg}" stroke="{acc}" stroke-width="{sw}"/>'
+            f'<ellipse cx="{rx_:.0f}" cy="{gy - L.px(0.11):.0f}" rx="{L.px(0.012)}" ry="{L.px(0.005)}" fill="{acc}"/>')
+    river = "".join(f'<path d="M{x:.0f} {gy + h * (0.08 + 0.06 * k):.0f} q {w * 0.06:.0f} -{L.px(0.012)} {w * 0.12:.0f} 0 t {w * 0.12:.0f} 0 t {w * 0.12:.0f} 0 '
+                    f't {w * 0.12:.0f} 0 t {w * 0.12:.0f} 0 t {w * 0.12:.0f} 0 t {w * 0.12:.0f} 0 t {w * 0.12:.0f} 0" fill="none" stroke="{acc}" '
+                    f'stroke-opacity="{0.45 - 0.12 * k:.2f}" stroke-width="2"/>' for k in range(3))
+    m = f"""<g id="{sid}-g0" opacity="0"><line x1="{x:.0f}" y1="{gy:.0f}" x2="{x + w:.0f}" y2="{gy:.0f}" stroke="{ink}" stroke-opacity="0.5" stroke-width="{sw}"/>{river}</g>
+      <g id="{sid}-g1" opacity="0">{stacks}<path d="M{bx:.0f} {gy:.0f} L{bx:.0f} {by:.0f} {roof} L{bx + bw:.0f} {gy:.0f}" fill="{ink}" fill-opacity="0.05"
+        stroke="{ink}" stroke-width="{sw}" stroke-linejoin="round"/>{bricks}{door}</g>
+      <g id="{sid}-g2" opacity="0">{wins}{logs}{roll}</g>{smoke}"""
+    tw = [_ft(f"#{sid}-g0", "opacity: 0", 'opacity: 1, duration: 0.5, ease: "power2.out"', 0.1),
+          _ft(f"#{sid}-g1", "opacity: 0, y: 30", 'opacity: 1, y: 0, duration: 0.8, ease: "expo.out"', 0.3),
+          _ft(f"#{sid}-g2", "opacity: 0", 'opacity: 1, duration: 0.6, ease: "power2.out"', 0.9)] + tw
+    return m, tw
+
+
+ART = {"mill": _mill_art}
+
+
+def company(L, sid, v, dur, cue):
+    """Who the company is, as a picture: its world drawn on the left, its facts landing on their words, and the
+    turning point arriving as a newspaper clipping."""
+    aw, ah = L.w * 0.56, L.h * 0.56
+    ax, ay = L.w * 0.04, L.h * 0.3
+    art_m, tw = ART.get(v.get("art", "mill"), _mill_art)(L, sid, ax, ay, aw, ah)
+    head, htw = _head(L, sid, v, 0.1)
+    tw += htw
+    rx = L.w * 0.62
+    facts = ""
+    for i, f in enumerate(v.get("facts", [])):
+        facts += (f'<div id="{sid}-f{i}" style="display:flex;gap:{L.px(0.015)}px;align-items:baseline;margin-top:{L.px(0.02)}px;">'
+                  f'<span class="serif acc" style="font-size:{L.fs(0.045)}px;min-width:{L.px(0.17)}px;white-space:nowrap;">{E(f.get("big", ""))}</span>'
+                  f'<span style="font-size:{L.fs(0.027)}px;line-height:1.3;">{E(f["text"])}</span></div>')
+        tw.append(_rise(f"#{sid}-f{i}", max(0.8, cue(f.get("cue", ""), 1.2 + i)), 0.5, 14))
+    card = ""
+    c = v.get("card")
+    if c:
+        card = f"""<div id="{sid}-cd" style="position:absolute;left:{rx - L.px(0.02):.0f}px;right:{L.px(0.05)}px;top:{L.h * 0.62:.0f}px;
+          background:#EDE4D3;color:#1A1712;padding:{L.px(0.025)}px {L.px(0.03)}px;border-radius:4px;box-shadow:0 {L.px(0.012)}px {L.px(0.04)}px rgba(0,0,0,0.5);">
+          <div style="font-size:{L.fs(0.02)}px;letter-spacing:0.25em;font-weight:800;border-bottom:2px solid #1A1712;padding-bottom:{L.px(0.008)}px;">{E(c.get('kicker', ''))}</div>
+          <div class="serif" style="font-size:{L.fs(0.05)}px;line-height:1.08;margin-top:{L.px(0.012)}px;">{E(c['title'])}</div>
+          <div style="font-size:{L.fs(0.026)}px;margin-top:{L.px(0.008)}px;opacity:0.75;">{E(c.get('sub', ''))}</div></div>"""
+        tw.append(_ft(f"#{sid}-cd", "opacity: 0, y: 40, rotation: 6", 'opacity: 1, y: 0, rotation: -2, duration: 0.7, ease: "back.out(1.4)"',
+                      max(1.5, cue(c.get("cue", ""), dur * 0.6))))
+    name = (f'<div id="{sid}-nm" class="serif" style="font-size:{L.fs(0.06)}px;line-height:1;white-space:nowrap;">{E(v["name"])}</div>'
+            if v.get("name") else "")
+    if name:
+        tw.append(_blur_in(f"#{sid}-nm", 0.4, 0.5))
+    m = f"""<div id="{sid}-c" style="position:absolute;inset:0;">{head}
+      <svg width="{L.w}" height="{L.h}" style="position:absolute;left:0;top:0;overflow:visible">{art_m}</svg>
+      <div style="position:absolute;left:{rx:.0f}px;right:{L.px(0.04)}px;top:{L.h * 0.22:.0f}px;">{name}{facts}</div>{card}</div>"""
+    return m, "", tw
+
+
+def rise(L, sid, v, dur, cue):
+    """Why it won, as a picture: the doubters' stamp, the climb against a flat market, the rivals it passed, and
+    the products that carried it."""
+    head, tw = _head(L, sid, v, 0.1)
+    # left: the climb, ratio to the market (market = flat 1x line)
+    cx0, cx1, cy0, cy1 = L.w * 0.07, L.w * 0.52, L.h * 0.36, L.h * 0.68
+    top = float(v.get("value", 4.0))
+    yv = lambda r: cy1 - (cy1 - cy0) * (r - 0.5) / (top - 0.5)  # noqa: E731
+    n = 12
+    pts = [(cx0 + (cx1 - cx0) * i / (n - 1), yv(1 + (top - 1) * (i / (n - 1)) ** 1.8)) for i in range(n)]
+    path = "M " + " L ".join(f"{x:.0f} {y:.0f}" for x, y in pts)
+    ln = sum(math.hypot(pts[i + 1][0] - pts[i][0], pts[i + 1][1] - pts[i][1]) for i in range(n - 1)) + 10
+    t_line = max(0.8, cue(v.get("cue", ""), dur * 0.35))
+    stamp = v.get("stamp")
+    m = f"""<div id="{sid}-c" style="position:absolute;inset:0;">{head}
+      <svg width="{L.w}" height="{L.h}" style="position:absolute;left:0;top:0;overflow:visible">
+        <line x1="{cx0:.0f}" y1="{yv(1):.0f}" x2="{cx1:.0f}" y2="{yv(1):.0f}" stroke="{L.muted}" stroke-width="2" stroke-dasharray="8 8"/>
+        <text x="{cx1:.0f}" y="{yv(1) + L.px(0.035):.0f}" text-anchor="end" fill="{L.muted}" font-family="Inter" font-size="{L.fs(0.022)}">{E(v.get('base_label', 'thị trường = 1×'))}</text>
+        <path id="{sid}-ln" d="{path}" fill="none" stroke="{L.accent}" stroke-width="{max(5, L.px(0.008))}" stroke-linecap="round" stroke-linejoin="round"
+          stroke-dasharray="{ln:.0f}" stroke-dashoffset="{ln:.0f}"/>
+        <text id="{sid}-v" x="{cx1 - L.px(0.02):.0f}" y="{pts[-1][1] - L.px(0.07):.0f}" text-anchor="end" fill="{L.accent}" font-family="EB Garamond" font-size="{L.fs(0.11)}" opacity="0">{E(v.get('value_text', ''))}</text>
+        <text id="{sid}-vl" x="{cx1 - L.px(0.02):.0f}" y="{pts[-1][1] - L.px(0.035):.0f}" text-anchor="end" fill="{L.ink}" font-family="Inter" font-size="{L.fs(0.022)}" opacity="0">{E(v.get('value_label', ''))}</text>
+      </svg>
+      {f'<div id="{sid}-st" style="position:absolute;left:{cx0 + L.px(0.01):.0f}px;top:{L.h * 0.47:.0f}px;padding:{L.px(0.008)}px {L.px(0.02)}px;border:3px solid #D8664B;color:#E77A5F;font-weight:800;letter-spacing:0.08em;font-size:{L.fs(0.026)}px;opacity:0;">{E(stamp["text"])}</div>' if stamp else ''}
+    """
+    tw.append(_ft(f"#{sid}-ln", f"strokeDashoffset: {ln:.0f}", f'strokeDashoffset: 0, duration: {min(2.6, dur * 0.3):.2f}, ease: "power2.in"', t_line))
+    tw.append(_blur_in(f"#{sid}-v", t_line + min(2.6, dur * 0.3) - 0.2, 0.4))
+    tw.append(_fade(f"#{sid}-vl", t_line + min(2.6, dur * 0.3) + 0.1, 0.4))
+    if stamp:
+        ts = max(0.4, cue(stamp.get("cue", ""), 0.6))
+        tw.append(_ft(f"#{sid}-st", "opacity: 0, scale: 1.6, rotation: -10", 'opacity: 1, scale: 1, rotation: -6, duration: 0.3, ease: "expo.out"', ts))
+        # proven wrong by the climb: the doubters' verdict leaves the frame
+        tw.append(_ft(f"#{sid}-st", 'opacity: 1, filter: "blur(0px)"', 'opacity: 0, filter: "blur(6px)", duration: 0.6, ease: "power2.in"',
+                      t_line + 0.6, later=True))
+    # right: the ranking it climbed
+    rk = v.get("ranking") or []
+    rx, rw, rh = L.w * 0.6, L.w * 0.33, L.px(0.075)
+    ry0 = L.h * 0.3
+    hero = next((i for i, r in enumerate(rk) if r.get("hero")), len(rk) - 1)
+    rows = ""
+    for i, r in enumerate(rk):
+        is_h = i == hero
+        rows += (f'<div id="{sid}-r{i}" style="position:absolute;left:{rx:.0f}px;top:{ry0 + i * (rh + L.px(0.015)):.0f}px;width:{rw:.0f}px;height:{rh}px;'
+                 f'border-radius:{L.px(0.012)}px;display:flex;align-items:center;padding-left:{L.px(0.025)}px;font-size:{L.fs(0.03)}px;'
+                 f'font-weight:{800 if is_h else 500};color:{"#14110D" if is_h else L.muted};background:{L.accent if is_h else "rgba(255,255,255,0.05)"};'
+                 f'border:2px solid {L.accent if is_h else L.muted + "44"};">{E(r["name"])}</div>')
+        tw.append(_ft(f"#{sid}-r{i}", "opacity: 0, x: 30", 'opacity: 1, x: 0, duration: 0.5, ease: "expo.out"', 0.5 + 0.15 * i))
+    if rk:
+        t_pass = max(1.5, cue(v.get("pass_cue", ""), dur * 0.75))
+        step = rh + L.px(0.015)
+        tw.append(_ft(f"#{sid}-r{hero}", "y: 0", f'y: {-hero * step:.0f}, duration: 0.9, ease: "power3.inOut"', t_pass, later=True))
+        for i in range(hero):
+            tw.append(_ft(f"#{sid}-r{i}", "y: 0", f'y: {step:.0f}, duration: 0.9, ease: "power3.inOut"', t_pass, later=True))
+    # bottom: the products that carried it, on a shelf
+    prods = v.get("products") or []
+    ps = L.px(0.09)
+    gap = L.px(0.08)
+    shelf_y = L.h * 0.84
+    px0 = L.w * 0.6
+    shelf = f'<div style="position:absolute;left:{px0 - L.px(0.02):.0f}px;width:{L.w * 0.35:.0f}px;top:{shelf_y:.0f}px;height:3px;background:{L.muted};opacity:0.5;"></div>'
+    for i, pr in enumerate(prods):
+        x = px0 + i * (ps + gap)
+        shelf += (f'<div id="{sid}-p{i}" style="position:absolute;left:{x:.0f}px;top:{shelf_y - ps - L.px(0.005):.0f}px;width:{ps}px;text-align:center;">'
+                  f'<svg width="{ps}" height="{ps}" style="overflow:visible">{ICONS.get(pr.get("icon", ""), lambda s, c: "")(ps, L.accent)}</svg>'
+                  f'<div style="position:absolute;top:{ps + L.px(0.015)}px;left:-{gap / 2 - 4:.0f}px;right:-{gap / 2 - 4:.0f}px;font-size:{L.fs(0.02)}px;'
+                  f'line-height:1.25;color:{L.ink};">{E(pr["label"])}</div></div>')
+        tw.append(_ft(f"#{sid}-p{i}", "opacity: 0, y: 24", 'opacity: 1, y: 0, duration: 0.5, ease: "back.out(1.6)"',
+                      max(1.0, cue(pr.get("cue", ""), dur * 0.45 + 0.4 * i))))
+    why = ""
+    if v.get("why"):
+        why = (f'<div id="{sid}-wy" style="position:absolute;left:{cx0:.0f}px;width:{L.w * 0.47:.0f}px;top:{L.h * 0.76:.0f}px;">'
+               f'<div class="kicker">{E(v.get("why_kicker", ""))}</div>'
+               f'<div class="serif" style="font-size:{L.fs(0.042)}px;line-height:1.2;margin-top:{L.px(0.012)}px;">{E(v["why"])}</div></div>')
+        tw.append(_blur_in(f"#{sid}-wy", max(1.5, cue(v.get("why_cue", ""), dur * 0.82)), 0.45))
+    m += shelf + "".join([rows, why]) + "</div>"
+    return m, "", tw
+
+
+METAPHORS = {"funnel": funnel, "ladder": ladder, "venn": venn, "flywheel": flywheel, "halo": halo, "swap": swap,
+             "company": company, "rise": rise}

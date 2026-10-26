@@ -133,7 +133,7 @@ def test_vietnamese_lesson_is_valid_and_lint_clean():
     rep = schema.lint(L)
     assert rep["errors"] == [] and rep["warnings"] == []
     assert 3 <= rep["stats"]["est_minutes"] <= 5
-    assert L["meta"]["lang"] == "vi" and L["meta"]["voice"].startswith("piper:")
+    assert L["meta"]["lang"] == "vi" and L["meta"]["voice"].startswith(("piper:", "omnivoice:", "gemini:"))
 
 
 def test_vietnamese_words_timing_and_hook_rules():

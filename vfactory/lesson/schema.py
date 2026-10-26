@@ -44,6 +44,9 @@ VISUALS = {
                                              "from_angle", "to_angle", "ease", "spokes", "enter"]},
     "halo": {"required": ["items"], "optional": ["kicker", "heading", "label", "label_cue"]},
     "swap": {"required": ["from", "to"], "optional": ["kicker", "heading", "cue", "line", "line_cue"]},
+    "company": {"required": ["name"], "optional": ["kicker", "heading", "art", "facts", "card"]},
+    "rise": {"required": ["value"], "optional": ["kicker", "heading", "value_text", "value_label", "base_label", "cue", "stamp", "ranking",
+                                               "pass_cue", "products", "why", "why_kicker", "why_cue"]},
 }
 WPM = 150.0  # documentary narration pace (Vox guide; Kokoro at speed 0.95 lands close)
 # words (Vietnamese: syllables) per minute at speed 1.0; Piper vi_VN-vais1000 measured ~270, so speed 0.82 ≈ 220
