@@ -12,7 +12,7 @@
    3,
    5
   ],
-  "voice": "omnivoice:male, elderly, very low pitch",
+  "voice": "omnivoice:male, middle-aged, very low pitch",
   "speed": 0.92,
   "music": "chill",
   "look": {
@@ -26,7 +26,8 @@
   ],
   "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người dẫn chương trình sách lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
   "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
-  "captions": true
+  "captions": true,
+  "voice_seed": 99
  },
  "sources": [
   {
