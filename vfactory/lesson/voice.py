@@ -188,12 +188,13 @@ def omni_narrator(instruct: str, lang: str, seed: int = 7) -> tuple[Path, str]:
 
 
 def omni_create(text: str, instruct: str, speed: float, lang: str, ref: str | None = None, ref_text: str | None = None,
-                seed: int = 7) -> tuple[np.ndarray, int]:
+                seed: int = 7, take: int = 0) -> tuple[np.ndarray, int]:
+    """`take` re-samples one line (same narrator) when a take drops or slurs words."""
     import torch
 
     if not ref:
         ref, ref_text = omni_narrator(instruct, lang, seed)
-    torch.manual_seed(seed)
+    torch.manual_seed(seed + 1000 * take)
     audio = omni_engine().generate(text=text, language=lang[:2], ref_audio=str(ref), ref_text=ref_text, speed=speed)
     return np.asarray(audio[0], dtype="float32"), 24000
 
@@ -254,19 +255,19 @@ def apply_fx(y: np.ndarray, sr: int, fx: dict) -> np.ndarray:
 
 def synth(text: str, out: Path, voice: str = "bm_george", speed: float = 0.95, lang: str = "en-us",
           pronounce: dict | None = None, fx: dict | None = None, style: str = "", model: str | None = None,
-          ref: str | None = None, ref_text: str | None = None, seed: int = 7) -> float:
+          ref: str | None = None, ref_text: str | None = None, seed: int = 7, take: int = 0) -> float:
     """Write a 24 kHz mono WAV; returns its duration in seconds. Cached by (text, voice, speed, fx)."""
     import soundfile as sf
 
     spoken = apply_pronunciations(text, pronounce or {})
     key = hashlib.sha1(json.dumps([spoken, voice, speed, lang] + ([fx] if fx else []) +
                                   ([style, model] if voice.startswith("gemini:") else []) +
-                                  ([ref, ref_text] + ([seed] if seed != 7 else []) if voice.startswith("omnivoice:") else [])).encode()).hexdigest()[:12]
+                                  ([ref, ref_text] + ([seed] if seed != 7 else []) + ([take] if take else []) if voice.startswith("omnivoice:") else [])).encode()).hexdigest()[:12]
     meta = out.with_suffix(".json")
     if out.exists() and meta.exists() and json.loads(meta.read_text()).get("key") == key:
         return json.loads(meta.read_text())["duration"]
     if voice.startswith("omnivoice:"):
-        samples, sr = omni_create(spoken, voice.split(":", 1)[1].strip(), speed, lang, ref, ref_text, seed)
+        samples, sr = omni_create(spoken, voice.split(":", 1)[1].strip(), speed, lang, ref, ref_text, seed, take)
     elif voice.startswith("gemini:"):  # pace comes from the style direction, not a speed knob
         samples, sr = gemini_create(spoken, voice.split(":", 1)[1], style, model)
     elif voice.startswith("piper:"):
