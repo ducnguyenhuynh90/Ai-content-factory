@@ -172,7 +172,8 @@ def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: 
         durs[b["id"]] = voice.synth(b["narration"], p, v_name, float(b.get("speed", speed)), pronounce=L.get("pronounce"),
                                     fx=meta.get("voice_fx"), style=meta.get("voice_style", ""), model=meta.get("tts_model"),
                                     ref=meta.get("voice_ref"), ref_text=meta.get("voice_ref_text"), lang=meta.get("lang", "en-us"),
-                                    seed=int(meta.get("voice_seed", 7)), take=int(b.get("take", 0)))
+                                    seed=int(meta.get("voice_seed", 7)), take=int(b.get("take", 0)),
+                                    pauses=meta.get("voice_pauses"))
         times[b["id"]] = ((voice.align(p, b["narration"], meta.get("lang", "en")) if meta.get("align", True) else None)
                           or voice.word_times(b["narration"], durs[b["id"]]))
         log(f"  voice {b['id']}: {durs[b['id']]:.1f}s")

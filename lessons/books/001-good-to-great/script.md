@@ -1,5 +1,5 @@
 # Từ Tốt Đến Vĩ Đại
-_Review sách · Tập 1 · 896 words · ~3.69 min · 4:3_
+_Review sách · Tập 1 · 896 words · ~3.85 min · 4:3_
 
 ## Learning goals
 - Kể lại được nghiên cứu của Collins: 1.435 công ty, 11 công ty vượt qua bộ lọc

@@ -13,7 +13,7 @@
    5
   ],
   "voice": "omnivoice:male, middle-aged, very low pitch",
-  "speed": 0.92,
+  "speed": 0.88,
   "music": "chill",
   "look": {
    "primary_color": "#E8B06A",
@@ -626,8 +626,7 @@
    "sources": [
     "jc_hedgehog",
     "collins2001"
-   ],
-   "take": 1
+   ]
   },
   {
    "id": "b12",
