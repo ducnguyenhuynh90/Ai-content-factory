@@ -27,7 +27,8 @@
   "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người dẫn chương trình sách lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
   "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
   "captions": true,
-  "voice_seed": 99
+  "voice_seed": 99,
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively. Measured with Whisper on 12 names: Vietnamese respellings scored 0.76, original spelling 0.95."
  },
  "sources": [
   {
@@ -873,21 +874,5 @@
    }
   }
  ],
- "pronounce": {
-  "Jim Collins": "Gim Côn lin",
-  "Collins": "Côn lin",
-  "Kimberly-Clark": "Kim bơ li Cờ lác",
-  "Darwin Smith": "Đa uyn Xờ mít",
-  "Smith": "Xờ mít",
-  "Fortune": "Pho chuần",
-  "Walgreens": "Uôn grin",
-  "Scott Paper": "Xcốt Pây pơ",
-  "Procter and Gamble": "Próc tơ en Gem bồ",
-  "Circuit City": "Xơ kít Xi ti",
-  "Fannie Mae": "Phen ni Mây",
-  "Phil Rosenzweig": "Phin Râu dần quai",
-  "review": "ri viu",
-  "Atomic Habits": "Ơ tô mích Ha bít",
-  "Wisconsin": "Uýt cân xin"
- }
+ "pronounce": {}
 }

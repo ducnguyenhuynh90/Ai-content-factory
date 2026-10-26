@@ -56,7 +56,8 @@ that… until finally… ever since…) for biographies; **And-But-Therefore** f
 - Name sources in the narration when it matters: "historian Andrew Odlyzko, rebuilding his accounts…".
 - Uncertainty out loud (lint): "about", "estimates", "is said to", "attributed".
 - Personalisation: "you" sparingly and deliberately ("Now test yourself.").
-- Read every beat aloud. If you stumble, the TTS will too. Add tricky names to `pronounce`.
+- Read every beat aloud. If you stumble, the TTS will too. Add tricky names to `pronounce` only when the voice
+  cannot read their language (a Vietnamese narration on OmniVoice keeps English names as written; see SKILL.md).
 
 ## 3. Screen rules (Mayer)
 

@@ -47,8 +47,13 @@ Set `meta.lang: "vi"` and pick a narrator (Kokoro has no Vietnamese):
   narrator is designed once, then cloned for every line; `meta.voice_ref` + `voice_ref_text` clone your own clip instead.
   `speed` ~0.92 for a calm book-review pace.
 - `"gemini:Charon"` + `meta.voice_style` (spoken direction): needs `GEMINI_API_KEY`; sends text to Google.
-- `"piper:vi_VN-vais1000-medium"` (female, fully offline, robotic) with `speed: 0.82`. Numbers in narration as Vietnamese words; English names go
-in `pronounce` respelled for Vietnamese ("Jim Collins": "Gim Côn lin"). Labels and number format follow `lang`.
+- `"piper:vi_VN-vais1000-medium"` (female, fully offline, robotic) with `speed: 0.82`.
+
+Numbers in narration as Vietnamese words. English names (people, companies, book titles): with OmniVoice or Gemini
+keep them in their original spelling and leave `pronounce` empty: OmniVoice reads them natively. Measured on 12 names
+with Whisper as the listener: Vietnamese respellings ("Gim Côn lin") scored 0.76, the original spelling 0.95. Respell
+only for Piper, which cannot read English. Where a Vietnamese phrase serves the viewer better, say that instead.
+Labels and number format follow `lang`.
 `music: "chill"` gives a lo-fi bed; `meta.look` overrides the palette. Example: `lessons/books/001-good-to-great`.
 
 ## Scene types (visual.type)
