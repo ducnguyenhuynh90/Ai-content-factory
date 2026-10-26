@@ -62,6 +62,7 @@ Override anything per film: `"look_overrides": {"grain": 0, "letterbox": null, "
 | `.claude/skills/video-factory` | Creative-director workflow: inventory → look → first cut → direct the recipe → preview → self-review → final |
 | `.claude/skills/video-vision` | Let Claude *see* a video: structure first (cuts, silences, motion, exposure, loudness), then a budgeted set of timestamped scene-aware frames, a filmstrip, and filmstrip+waveform drill-downs (`vision`, `vision-timeline`) |
 | `.claude/skills/lesson-video` | Research → script (lint enforces misconception-first, retrieval question, recap, sourced facts, spoken uncertainty) → local voice → HyperFrames scenes → render |
+| `.claude/skills/motion-stack` | The code-to-video toolbox: 20 repos in six stages (skills, design, animate, 2D, 3D, sound/render), a pick-the-stack table by video idea, and rules for exportable animation |
 | `.claude/skills/video-editor` | Your persistent editor for raw recordings: protected originals, Whisper transcript, retakes, pauses, reframing, brand captions, edit log |
 | `.claude/skills/trend-research` | What's trending in the last N days across Reddit, Hacker News, YouTube and GitHub → stories clustered across platforms → Claude judges and writes video concepts (hook, format, look, opening, ending) |
 
