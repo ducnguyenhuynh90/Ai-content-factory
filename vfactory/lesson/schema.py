@@ -35,7 +35,8 @@ VISUALS = {
     "compare": {"required": ["left", "right"], "optional": ["title"]},
     "list": {"required": ["items"], "optional": ["title", "check"]},
     "question": {"required": ["question"], "optional": ["choices", "answer", "think_seconds"]},
-    "end": {"required": ["title"], "optional": ["cta", "next", "sources_line", "disclaimer", "next_cue", "cta_cue", "sources_cue"]},
+    "end": {"required": ["title"], "optional": ["cta", "next", "sources_line", "disclaimer", "next_cue", "cta_cue", "sources_cue",
+                                               "ask", "ask_cue", "ask_hint"]},
     # metaphor scenes (metaphors.py): the object on screen is the explanation
     "funnel": {"required": ["total"], "optional": ["keep", "label", "keep_label", "keep_cue", "cue", "start_full", "stat", "cols", "seed"]},
     "ladder": {"required": ["levels"], "optional": ["kicker", "heading", "top_cue", "tags"]},

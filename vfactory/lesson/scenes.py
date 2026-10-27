@@ -399,11 +399,24 @@ def question(L, sid, v, dur, cue, narr: float = 0.0):
     return m, "", tw
 
 
+def _ask_bubble(L, sid, v) -> str:
+    dot = "".join(f'<span id="{sid}-d{k}" style="display:inline-block;width:{L.px(0.014)}px;height:{L.px(0.014)}px;border-radius:50%;'
+                  f'background:{L.ink};margin-right:{L.px(0.01)}px;opacity:0.25;"></span>' for k in range(3))
+    return (f'<div id="{sid}-ab" style="position:relative;align-self:flex-start;max-width:{L.px(1.0)}px;margin-top:{L.px(0.03)}px;'
+            f'padding:{L.px(0.025)}px {L.px(0.035)}px;border-radius:{L.px(0.03)}px {L.px(0.03)}px {L.px(0.03)}px 6px;'
+            f'background:rgba(255,255,255,0.07);border:2px solid {L.accent}88;">'
+            f'<div id="{sid}-dots" style="position:absolute;left:{L.px(0.035)}px;top:{L.px(0.035)}px;">{dot}</div>'
+            f'<div id="{sid}-aq" class="serif" style="font-size:{L.fs(0.045)}px;line-height:1.2;">{E(v["ask"])}</div>'
+            + (f'<div id="{sid}-ah" class="muted" style="font-size:{L.fs(0.024)}px;margin-top:{L.px(0.012)}px;">{E(v["ask_hint"])}</div>'
+               if v.get("ask_hint") else "") + '</div>')
+
+
 def end(L, sid, v, dur, cue):
     m = f"""<div id="{sid}-c" style="position:absolute;left:{L.px(0.1)}px;right:{L.px(0.1)}px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;">
       <div id="{sid}-k" class="kicker">{E(v.get('kicker', L.t['done']))}</div>
       <div id="{sid}-t" class="serif" style="font-size:{L.fs(0.085)}px;line-height:1.08;margin:{L.px(0.025)}px 0;">{E(v['title'])}</div>
       {f'<div id="{sid}-n" style="font-size:{L.fs(0.032)}px;"><span class="muted">{E(L.t['next'])}</span> {E(v["next"])}</div>' if v.get('next') else ''}
+      {_ask_bubble(L, sid, v) if v.get('ask') else ''}
       {f'<div id="{sid}-cta" style="display:inline-block;align-self:flex-start;margin-top:{L.px(0.035)}px;padding:{L.px(0.014)}px {L.px(0.03)}px;background:{L.accent};color:#0B0B0B;font-weight:800;font-size:{L.fs(0.028)}px;border-radius:999px;">{E(v["cta"])}</div>' if v.get('cta') else ''}
       <div id="{sid}-src" class="muted" style="position:absolute;left:0;right:0;bottom:{L.px(0.09)}px;font-size:{L.fs(0.019)}px;line-height:1.45;">
         {E(v.get('sources_line', ''))}<br/>{E(v.get('disclaimer', ''))}</div></div>"""
@@ -412,6 +425,16 @@ def end(L, sid, v, dur, cue):
     t_cta = max(t_next + 0.5, cue(v.get("cta_cue", ""), 1.3))
     if v.get("next"):
         tw.append(_rise(f"#{sid}-n", t_next))
+    if v.get("ask"):  # the viewer is asked, not told: typing dots, then the question lands in a comment bubble
+        t_ask = max(0.8, cue(v.get("ask_cue", ""), 0.9))
+        tw.append(_ft(f"#{sid}-ab", "opacity: 0, y: 24, scale: 0.92", 'opacity: 1, y: 0, scale: 1, duration: 0.5, ease: "back.out(1.6)"', t_ask))
+        for k in range(3):
+            tw.append(_ft(f"#{sid}-d{k}", "opacity: 0.25", 'opacity: 1, duration: 0.18, ease: "power1.inOut"', t_ask + 0.25 + 0.12 * k))
+            tw.append(_ft(f"#{sid}-d{k}", "opacity: 1", 'opacity: 0.25, duration: 0.18, ease: "power1.inOut"', t_ask + 0.43 + 0.12 * k, later=True))
+        tw.append(_ft(f"#{sid}-dots", "opacity: 1", 'opacity: 0, duration: 0.15, ease: "power2.in"', t_ask + 0.9, later=True))
+        tw.append(_ft(f"#{sid}-aq", 'opacity: 0, filter: "blur(6px)"', 'opacity: 1, filter: "blur(0px)", duration: 0.35, ease: "power2.out"', t_ask + 1.0))
+        if v.get("ask_hint"):
+            tw.append(_fade(f"#{sid}-ah", t_ask + 1.8, 0.5))
     if v.get("cta"):
         tw.append(_ft(f"#{sid}-cta", "opacity: 0, scale: 0.85", 'opacity: 1, scale: 1, duration: 0.5, ease: "back.out(2)"', t_cta))
     tw.append(_fade(f"#{sid}-src", max(1.6, cue(v.get("sources_cue", ""), t_cta + 1.5)), 0.8))

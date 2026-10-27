@@ -859,18 +859,19 @@
   {
    "id": "b19",
    "act": "close",
-   "narration": "Tập sau, mình sẽ review Atomic Habits, cuốn sách biến chiếc bánh đà thành những thói quen tí hon mỗi ngày. Nếu thấy hay, lưu lại và gửi cho một người bạn nhé. Hẹn gặp bạn.",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Nếu thấy hay, lưu lại và gửi cho một người bạn. Hẹn gặp bạn.",
    "visual": {
     "type": "end",
     "kicker": "Review sách · Tập 1",
     "title": "Từ Tốt Đến Vĩ Đại",
-    "next": "Atomic Habits — Thay đổi tí hon, hiệu quả bất ngờ",
-    "cta": "Lưu lại & gửi một người bạn",
+    "cta": "Bình luận · Lưu lại · Gửi một người bạn",
     "sources_line": "Nguồn: Collins, Good to Great (2001) & 'Level 5 Leadership', HBR 2001 · Rosenzweig, The Halo Effect (2007) · jimcollins.com",
     "disclaimer": "Tóm tắt và cảm nhận cá nhân; số liệu theo sách, đã làm tròn.",
-    "next_cue": "tập sau",
     "cta_cue": "nếu thấy",
-    "sources_cue": "nếu thấy"
+    "sources_cue": "hẹn gặp",
+    "ask": "Bạn muốn clip tiếp theo về cuốn sách nào?",
+    "ask_hint": "Một cuốn sách · một nhà đầu tư · một câu hỏi về tư duy",
+    "ask_cue": "còn bạn"
    }
   }
  ],

@@ -1,5 +1,5 @@
 # Từ Tốt Đến Vĩ Đại
-_Review sách · Tập 1 · 896 words · ~3.85 min · 4:3_
+_Review sách · Tập 1 · 898 words · ~3.86 min · 4:3_
 
 ## Learning goals
 - Kể lại được nghiên cứu của Collins: 1.435 công ty, 11 công ty vượt qua bộ lọc
@@ -35,7 +35,7 @@ _Review sách · Tập 1 · 896 words · ~3.85 min · 4:3_
 | b16 | question | Giờ thử một chút nhé. Bạn muốn nói tiếng Anh trôi chảy sau một năm. Cách nào giống chiếc bánh đà nhất? | question: Muốn nói tiếng Anh trôi chảy sau 1 năm. Cách nào là bánh đà? |
 | b17 | recap | Vậy là ba bài học từ Từ Tốt Đến Vĩ Đại. Khiêm tốn, nhưng quyết liệt. Tìm con nhím của bạn. Và đẩy bánh đà mỗi ngày. | list: Ba bài học |
 | b18 | close | Câu mở đầu của cuốn sách là: tốt là kẻ thù của vĩ đại. Không phải vì cái tốt là xấu. Mà vì nó đủ dễ chịu để ta dừng lại. Vậy hôm nay, bánh đà của bạn là gì? | shots: shots |
-| b19 | close | Tập sau, mình sẽ review Atomic Habits, cuốn sách biến chiếc bánh đà thành những thói quen tí hon mỗi ngày. Nếu thấy hay, lưu lại và gửi cho một người bạn nhé. Hẹn gặp bạn. | end: Từ Tốt Đến Vĩ Đại |
+| b19 | close | Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Nếu thấy hay, lưu lại và gửi cho một người bạn. Hẹn gặp bạn. | end: Từ Tốt Đến Vĩ Đại |
 
 ## Sources
 - [collins2001] Jim Collins, Good to Great: Why Some Companies Make the Leap… and Others Don't, HarperBusiness, 2001 (ch. 1, 2, 5, 8 & appendix)
