@@ -3,6 +3,7 @@
   new DIR --title T [--series S] [--topic investing] [--angle history|person|concept]   scaffold a lesson.json
   lint LESSON.json                 learning-science + fact checks; writes script.md (the approval view)
   build LESSON.json [--draft|--final|--no-render] [--force]   voice -> scenes -> mix -> check -> render
+  gate LESSON.json --out BUILD_DIR [--no-check] [--no-listen]   objective checks + evidence for the video-gatekeeper
 """
 
 from __future__ import annotations
@@ -36,7 +37,15 @@ def main(argv=None) -> int:
     p = sub.add_parser("build"); p.add_argument("lesson"); p.add_argument("--out")
     g = p.add_mutually_exclusive_group(); g.add_argument("--final", action="store_true"); g.add_argument("--no-render", action="store_true")
     p.add_argument("--force", action="store_true")
+    p = sub.add_parser("gate"); p.add_argument("lesson"); p.add_argument("--out", required=True)
+    p.add_argument("--no-check", action="store_true"); p.add_argument("--no-listen", action="store_true")
     a = ap.parse_args(argv)
+    if a.cmd == "gate":
+        from . import gate
+
+        r = gate.run(a.lesson, a.out, check=not a.no_check, listen=not a.no_listen)
+        print(json.dumps({k: r[k] for k in ("verdict", "fails", "warnings", "evidence")}, ensure_ascii=False, indent=1))
+        return 0 if r["verdict"] != "block" else 3
     if a.cmd == "new":
         d = Path(a.dir)
         d.mkdir(parents=True, exist_ok=True)

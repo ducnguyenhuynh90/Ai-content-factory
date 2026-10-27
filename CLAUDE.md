@@ -11,3 +11,5 @@
 - Taste rules live in `docs/CREATIVE_PLAYBOOK.md`; read it before directing.
 - Run `python -m pytest -q` after changing engine code; `python -m vfactory demo --preview` for an end-to-end check.
 - Outputs belong next to the user's footage, never inside this repo.
+- **No video is delivered before it passes the gate**: run the `video-gatekeeper` agent/skill after every build
+  (`python -m vfactory.lesson gate <lesson.json> --out <build dir>`); it reviews, fixes and rebuilds until PASS.

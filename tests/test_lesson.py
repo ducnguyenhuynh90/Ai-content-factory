@@ -279,3 +279,16 @@ def test_align_falls_back_cleanly_without_whisper(tmp_path, monkeypatch):
 
     monkeypatch.setattr(builtins, "__import__", no_fw)
     assert voice.align(wav, "Một hai ba.") is None
+
+
+def test_gate_copy_lint_and_fonts(tmp_path):
+    from vfactory.lesson import gate
+
+    L = _mini()
+    L["beats"][1]["narration"] = "Chúng ta ta hay nghĩ  rằng có 3 cách ."
+    issues = gate.copy_lint(L)
+    assert any("doubled" in x for x in issues) and any("digits" in x for x in issues)
+    assert any("whitespace" in x for x in issues) and any("before punctuation" in x for x in issues)
+    fc = gate.font_coverage({"beats": [{"narration": "Tốt là kẻ thù của vĩ đại", "visual": {"type": "statement", "text": "ồ ắ ữ"}}]})
+    if fc.get("checked"):
+        assert fc["missing"] == {}
