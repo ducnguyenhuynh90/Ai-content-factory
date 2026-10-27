@@ -1,0 +1,938 @@
+{
+ "meta": {
+  "series": "Review sách · Tập 7",
+  "title": "Siêu Dự Báo",
+  "subtitle": "Superforecasting — Philip E. Tetlock & Dan Gardner (2015)",
+  "topic": "books",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt thích đọc sách, muốn suy nghĩ rõ ràng hơn về tương lai, công việc và đầu tư",
+  "aspect": "4:3",
+  "target_minutes": [
+   3,
+   5
+  ],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
+  "learning_goals": [
+   "Kể lại được câu chuyện 'tinh tinh ném phi tiêu' và nửa sau bị bỏ quên: con cáo đoán tốt hơn con nhím",
+   "Giải thích giải đấu dự báo IARPA (2011–2015) và siêu dự báo viên (khoảng 2% giỏi nhất)",
+   "Áp dụng ba ý: nhìn từ bên ngoài trước, cập nhật từng bước nhỏ, ghi điểm cho dự đoán của mình; biết giới hạn của dự báo"
+  ],
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người dẫn chương trình sách lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively."
+ },
+ "sources": [
+  {
+   "id": "tetlock2015",
+   "cite": "Philip E. Tetlock & Dan Gardner, Superforecasting: The Art and Science of Prediction, Crown, 2015 (ch. 1: chimp line, GJP beat the control group by 60% in year 1 and 78% in year 2; ch. 3 Brier score 0 / 0.5 / 2.0; ch. 4 'about 2%'; ch. 7 perpetual beta ~3x intelligence; ch. 11 on Taleb and long horizons)"
+  },
+  {
+   "id": "tetlock2005",
+   "cite": "Philip E. Tetlock, Expert Political Judgment: How Good Is It? How Can We Know?, Princeton University Press, 2005 (284 experts, ~28,000 forecasts, foxes vs hedgehogs)",
+   "url": "https://press.princeton.edu/books/paperback/9780691175973/expert-political-judgment"
+  },
+  {
+   "id": "cato2011",
+   "cite": "Dan Gardner & Philip Tetlock, 'Overcoming Our Aversion to Acknowledging Our Ignorance', Cato Unbound, Jul 2011 (EPJ: 284 experts, ~28,000 predictions; chimp comparison; foxes vs hedgehogs)",
+   "url": "https://www.cato-unbound.org/2011/07/11/dan-gardner-philip-tetlock/overcoming-our-aversion-acknowledging-our-ignorance/"
+  },
+  {
+   "id": "longnow2007",
+   "cite": "Philip Tetlock, 'Why Foxes Are Better Forecasters Than Hedgehogs', Long Now Foundation seminar, 2007",
+   "url": "https://longnow.org/talks/02007-tetlock/"
+  },
+  {
+   "id": "aiimpacts",
+   "cite": "AI Impacts, 'Evidence on good forecasting practices from the Good Judgment Project' (IARPA ACE 2011–2015; five teams; others dropped after two years; ~25–30% vs the IC prediction market; ~2,800 volunteers yr 1, 60 top forecasters Brier 0.25 vs 0.37)",
+   "url": "https://aiimpacts.org/evidence-on-good-forecasting-practices-from-the-good-judgment-project/"
+  },
+  {
+   "id": "ignatius2013",
+   "cite": "David Ignatius, 'More chatter than needed', The Washington Post, Nov 2013 (top forecasters ~30% better than the average intelligence analyst with access to classified data); reprint at Belfer Center",
+   "url": "https://www.belfercenter.org/publication/more-chatter-needed"
+  },
+  {
+   "id": "gj_site",
+   "cite": "Good Judgment Inc., 'The first championship season' & superforecaster selection (top 2% per condition)",
+   "url": "https://goodjudgment.com/resources/the-superforecasters-track-record/the-first-championship-season/"
+  },
+  {
+   "id": "iireview",
+   "cite": "Institutional Investor, 'Book review: Superforecasting sheds light on the art of prediction' (Bill Flack, retired USDA employee, Nebraska; 2% of participants)",
+   "url": "https://www.institutionalinvestor.com/article/b14z9y2t23pnng/book-review-superforecasting-sheds-light-on-the-art-of-prediction"
+  },
+  {
+   "id": "prh",
+   "cite": "Penguin Random House, Superforecasting publisher description ('from former ballroom dancers to retired computer programmers')",
+   "url": "https://www.randomhousebooks.com/books/227815"
+  },
+  {
+   "id": "ijf2022",
+   "cite": "Tetlock, Lu & Mellers, 'False Dichotomy Alert' (reply to Taleb, Bar-Yam & Cirillo), International Journal of Forecasting, 2022",
+   "url": "https://faculty.wharton.upenn.edu/wp-content/uploads/2022/03/SSRN-id4013831.pdf"
+  },
+  {
+   "id": "brier1950",
+   "cite": "Glenn W. Brier, 'Verification of forecasts expressed in terms of probability', Monthly Weather Review 78(1), 1950"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Nhìn từ bên ngoài trước",
+   "line": "Bắt đầu từ tỷ lệ nền: chuyện giống thế này, bình thường xảy ra bao nhiêu lần? Rồi mới chỉnh theo chi tiết."
+  },
+  {
+   "name": "Cập nhật từng bước nhỏ",
+   "line": "Tin mới đến thì dịch niềm tin từng chút, không nhảy vọt, cũng không đứng yên."
+  },
+  {
+   "name": "Ghi điểm cho dự đoán",
+   "line": "Viết ra con số, chấm điểm khi có kết quả, và luôn ở 'bản beta'."
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Khoảng hai mươi tám nghìn dự đoán của chuyên gia. Kết quả: ngang một con tinh tinh ném phi tiêu?",
+   "visual": {
+    "type": "hook",
+    "lines": [
+     "~28.000 dự đoán.",
+     "Ngang tinh tinh ném phi tiêu?"
+    ],
+    "crash_cue": "ngang",
+    "points": [
+     [
+      0,
+      1.0
+     ],
+     [
+      1,
+      1.5
+     ],
+     [
+      2,
+      2.2
+     ],
+     [
+      3,
+      3.0
+     ],
+     [
+      4,
+      3.9
+     ],
+     [
+      5,
+      4.8
+     ],
+     [
+      6,
+      5.6
+     ],
+     [
+      7,
+      6.2
+     ],
+     [
+      8,
+      2.2
+     ],
+     [
+      9,
+      1.6
+     ],
+     [
+      10,
+      1.5
+     ]
+    ],
+    "peak_label": "độ tự tin",
+    "end_label": "≈ đoán bừa",
+    "kicker": "Superforecasting · Tetlock & Gardner"
+   },
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "ngang",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "tetlock2005",
+    "tetlock2015",
+    "cato2011"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Câu đùa ấy nổi tiếng khắp thế giới, và nó bị hiểu sai. Đặt ấm nước lên đi, mình kể chậm thôi. Trong vài phút tới, bạn sẽ gặp những người bình thường đoán tương lai giỏi đến bất ngờ, và ba bài học để nghĩ như họ.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Một câu đùa nổi tiếng",
+      "text": "Nổi tiếng, và bị hiểu sai.",
+      "highlight": [
+       "hiểu sai."
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "tea",
+      "steam": true,
+      "line": "Đặt ấm nước lên đi.",
+      "cue": "đặt ấm"
+     },
+     {
+      "type": "trio",
+      "kicker": "Trong vài phút tới",
+      "items": [
+       {
+        "icon": "people",
+        "label": "Người bình thường",
+        "cue": "những người"
+       },
+       {
+        "icon": "target",
+        "label": "Đoán giỏi bất ngờ",
+        "cue": "đoán tương"
+       },
+       {
+        "icon": "bulb",
+        "label": "Ba bài học",
+        "cue": "ba bài"
+       }
+      ],
+      "cue": "trong vài"
+     }
+    ]
+   }
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Review sách · Tập 7",
+    "title": "Siêu Dự Báo",
+    "subtitle": "Superforecasting — Philip E. Tetlock & Dan Gardner (2015)",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ],
+   "sources": [
+    "tetlock2015"
+   ]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Ta hay nghĩ chỉ có hai kiểu người đoán tương lai. Chuyên gia nói chắc nịch trên truyền hình, hoặc kẻ đoán bừa. Và nếu chuyên gia cũng trật, thì tương lai là thứ không ai đoán được. Tetlock nghĩ khác.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Điều ta hay tin",
+      "items": [
+       {
+        "icon": "mask",
+        "label": "Chuyên gia chắc nịch",
+        "cue": "chuyên gia"
+       },
+       {
+        "icon": "dice",
+        "label": "Kẻ đoán bừa",
+        "cue": "hoặc kẻ"
+       }
+      ]
+     },
+     {
+      "type": "statement",
+      "kicker": "Điều ta hay tin",
+      "text": "Tương lai là không thể đoán.",
+      "strike": "không thể đoán.",
+      "replace": "đoán được, một phần",
+      "strike_cue": "tetlock",
+      "cue": "và nếu"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "Năm một nghìn chín trăm tám mươi tư, nhà tâm lý học Philip Tetlock bắt đầu một nghiên cứu kéo dài khoảng hai mươi năm. Hai trăm tám mươi tư chuyên gia, khoảng hai mươi tám nghìn dự đoán về kinh tế và chính trị thế giới. Năm hai nghìn lẻ năm, ông công bố kết quả.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Philip E. Tetlock",
+      "initials": "PT",
+      "role": "Nhà tâm lý học",
+      "years": "Nghiên cứu từ 1984"
+     },
+     {
+      "type": "book",
+      "title": "Expert Political Judgment",
+      "author": "Philip E. Tetlock",
+      "year": "2005",
+      "kicker": "Nghiên cứu ~20 năm",
+      "cue": "hai trăm",
+      "facts": [
+       {
+        "big": "284",
+        "text": "chuyên gia",
+        "cue": "hai trăm"
+       },
+       {
+        "big": "~28.000",
+        "text": "dự đoán",
+        "cue": "khoảng hai mươi tám"
+       },
+       {
+        "big": "2005",
+        "text": "công bố kết quả",
+        "cue": "năm hai nghìn"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "tetlock2005",
+    "cato2011"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b03",
+   "act": "story",
+   "narration": "Kết luận được trích nhiều nhất: chuyên gia trung bình đoán đúng gần như ngang một con tinh tinh ném phi tiêu. Câu ấy lan khắp báo chí. Nhưng Tetlock kể rằng người ta đã bỏ quên nửa sau của kết quả.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "halo",
+      "kicker": "Câu được trích nhiều nhất",
+      "items": [
+       {
+        "name": "Chuyên gia trung bình",
+        "before": "trên TV · rất tự tin",
+        "after": "≈ TINH TINH NÉM PHI TIÊU",
+        "cue": "tinh tinh"
+       }
+      ]
+     },
+     {
+      "type": "statement",
+      "kicker": "Nhưng",
+      "text": "Nửa sau bị bỏ quên.",
+      "highlight": [
+       "Nửa sau"
+      ],
+      "cue": "nhưng"
+     }
+    ]
+   },
+   "sources": [
+    "tetlock2015",
+    "tetlock2005"
+   ]
+  },
+  {
+   "id": "b04",
+   "act": "story",
+   "narration": "Nửa sau là đây. Có hai kiểu chuyên gia. Con nhím bám một ý tưởng lớn, và giải thích mọi thứ bằng nó. Con cáo gom nhiều góc nhìn, và sẵn sàng nói: có lẽ mình sai. Con cáo đoán tốt hơn rõ rệt.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Hai kiểu chuyên gia",
+      "items": [
+       {
+        "icon": "hedgehog",
+        "label": "Nhím: một ý tưởng lớn",
+        "cue": "con nhím"
+       },
+       {
+        "icon": "fox",
+        "label": "Cáo: nhiều góc nhìn",
+        "cue": "con cáo gom"
+       }
+      ]
+     },
+     {
+      "type": "statement",
+      "kicker": "Nửa sau của kết quả",
+      "text": "Con cáo đoán tốt hơn.",
+      "highlight": [
+       "cáo"
+      ],
+      "cue": "con cáo đoán"
+     }
+    ]
+   },
+   "sources": [
+    "tetlock2005",
+    "longnow2007",
+    "tetlock2015"
+   ]
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Ở tập một, Jim Collins khen con nhím: biết một điều lớn để xây công ty. Còn khi đoán tương lai, Tetlock thấy con cáo thắng. Hai điều không hề mâu thuẫn. Một hướng đi rõ ràng, nhưng một cái đầu luôn mở.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "compare",
+      "title": "Nhím hay cáo?",
+      "left": {
+       "title": "Collins · xây công ty",
+       "items": [
+        "Con nhím: một điều lớn"
+       ]
+      },
+      "right": {
+       "title": "Tetlock · đoán tương lai",
+       "items": [
+        "Con cáo: nhiều góc nhìn"
+       ]
+      }
+     },
+     {
+      "type": "statement",
+      "kicker": "Không mâu thuẫn",
+      "text": "Hướng đi rõ. Đầu óc mở.",
+      "highlight": [
+       "Đầu óc mở."
+      ],
+      "cue": "hai điều"
+     }
+    ]
+   },
+   "sources": [
+    "tetlock2005"
+   ]
+  },
+  {
+   "id": "b06",
+   "act": "story",
+   "narration": "Rồi năm hai nghìn mười một, IARPA, một cơ quan nghiên cứu của tình báo Mỹ, mở một giải đấu dự báo. Năm đội trả lời những câu hỏi thật về thế giới, có hạn chót rõ ràng. Tetlock lập đội Good Judgment Project, với hàng nghìn tình nguyện viên.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "timeline",
+      "title": "Giải đấu dự báo IARPA",
+      "events": [
+       {
+        "year": "2011",
+        "text": "Giải đấu bắt đầu",
+        "cue": "năm hai"
+       },
+       {
+        "year": "5 đội",
+        "text": "Câu hỏi thật, có hạn chót",
+        "cue": "năm đội"
+       },
+       {
+        "year": "2015",
+        "text": "Kết thúc",
+        "cue": "có hạn"
+       }
+      ]
+     },
+     {
+      "type": "trio",
+      "kicker": "Good Judgment Project",
+      "items": [
+       {
+        "icon": "people",
+        "label": "Hàng nghìn tình nguyện viên",
+        "cue": "hàng nghìn"
+       },
+       {
+        "icon": "target",
+        "label": "Đoán bằng xác suất",
+        "cue": "tình nguyện"
+       }
+      ],
+      "cue": "tetlock lập"
+     }
+    ]
+   },
+   "sources": [
+    "tetlock2015",
+    "aiimpacts"
+   ]
+  },
+  {
+   "id": "b07",
+   "act": "story",
+   "narration": "Năm đầu, đội của Tetlock chính xác hơn nhóm đối chứng khoảng sáu mươi phần trăm. Năm thứ hai, bảy mươi tám phần trăm. Họ dẫn xa đến mức, sau hai năm, các đội còn lại bị dừng.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stat",
+      "value": 60,
+      "prefix": "≈ ",
+      "suffix": "%",
+      "label": "chính xác hơn nhóm đối chứng · năm 1",
+      "note": "đo bằng điểm Brier",
+      "cue": "sáu mươi"
+     },
+     {
+      "type": "statement",
+      "kicker": "Năm thứ hai",
+      "text": "Hơn nhóm đối chứng 78%.",
+      "highlight": [
+       "78%."
+      ],
+      "cue": "năm thứ"
+     },
+     {
+      "type": "funnel",
+      "total": 5,
+      "keep": 1,
+      "start_full": true,
+      "cols": 5,
+      "label": "đội trong giải",
+      "keep_label": "1 đội ở lại",
+      "keep_cue": "bị dừng",
+      "cue": "họ dẫn"
+     }
+    ]
+   },
+   "sources": [
+    "tetlock2015",
+    "aiimpacts"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b08",
+   "act": "story",
+   "narration": "Trong đội ấy, có khoảng hai phần trăm người giỏi vượt trội, năm này qua năm khác. Tetlock gọi họ là siêu dự báo viên. Họ không phải thiên tài hay điệp viên: một người về hưu từ Bộ Nông nghiệp Mỹ, một lập trình viên đã nghỉ, cả một cựu vũ công.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "funnel",
+      "total": 200,
+      "keep": 4,
+      "label": "tình nguyện viên (minh họa)",
+      "keep_label": "≈ 2% · siêu dự báo viên",
+      "keep_cue": "hai phần"
+     },
+     {
+      "type": "trio",
+      "kicker": "Không phải thiên tài",
+      "items": [
+       {
+        "icon": "compass",
+        "label": "Về hưu · Bộ Nông nghiệp",
+        "cue": "một người"
+       },
+       {
+        "icon": "brain",
+        "label": "Lập trình viên đã nghỉ",
+        "cue": "một lập"
+       },
+       {
+        "icon": "star",
+        "label": "Cựu vũ công",
+        "cue": "cả một"
+       }
+      ],
+      "cue": "họ không"
+     }
+    ]
+   },
+   "sources": [
+    "tetlock2015",
+    "iireview",
+    "prh",
+    "gj_site"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b09",
+   "act": "complication",
+   "narration": "Bạn có thể từng nghe: họ giỏi hơn cả chuyên gia tình báo có thông tin mật, ba mươi phần trăm. Con số ấy đến từ một bài báo năm hai nghìn mười ba, và cách so sánh phức tạp hơn câu khẩu hiệu. Hãy nhớ nó như một ước tính.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stat",
+      "value": 30,
+      "prefix": "≈ ",
+      "suffix": "%",
+      "label": "hơn nhà phân tích có tin mật",
+      "note": "theo một bài báo, 2013",
+      "cue": "ba mươi"
+     },
+     {
+      "type": "statement",
+      "kicker": "Đọc con số thế nào",
+      "text": "Một ước tính, không phải kỷ lục.",
+      "highlight": [
+       "ước tính,"
+      ],
+      "cue": "hãy nhớ"
+     }
+    ]
+   },
+   "sources": [
+    "ignatius2013",
+    "aiimpacts",
+    "tetlock2015"
+   ],
+   "certainty": "disputed"
+  },
+  {
+   "id": "b10",
+   "act": "principle",
+   "narration": "Vậy họ nghĩ khác thế nào? Bài học thứ nhất: nhìn từ bên ngoài trước. Trước khi say mê chi tiết câu chuyện, hãy hỏi: chuyện giống thế này, bình thường xảy ra bao nhiêu lần? Tỷ lệ nền ấy là điểm xuất phát.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "binoculars",
+      "kicker": "Bài học 1 · Nhìn từ bên ngoài trước",
+      "line": "Bình thường, bao nhiêu lần?",
+      "line_cue": "hãy hỏi"
+     },
+     {
+      "type": "statement",
+      "kicker": "Điểm xuất phát",
+      "text": "Tỷ lệ nền trước. Chi tiết sau.",
+      "highlight": [
+       "Tỷ lệ nền"
+      ],
+      "cue": "tỷ lệ"
+     }
+    ]
+   },
+   "sources": [
+    "tetlock2015"
+   ]
+  },
+  {
+   "id": "b11",
+   "act": "principle",
+   "narration": "Bài học thứ hai: cập nhật từng bước nhỏ. Khi có tin mới, siêu dự báo viên không nhảy từ hai mươi lên chín mươi phần trăm. Họ dịch lên hai mươi lăm, rồi ba mươi. Không nhảy vọt, nhưng cũng không đứng yên.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Bài học 2 · Cập nhật từng bước nhỏ",
+      "text": "Không nhảy 20% → 90%.",
+      "strike": "→ 90%.",
+      "replace": "→ 25%",
+      "strike_cue": "họ dịch"
+     },
+     {
+      "type": "chart",
+      "title": "Cập nhật từng bước (minh họa)",
+      "unit": "",
+      "points": [
+       [
+        "Ban đầu",
+        20
+       ],
+       [
+        "Tin 1",
+        25
+       ],
+       [
+        "Tin 2",
+        30
+       ],
+       [
+        "Tin 3",
+        27
+       ],
+       [
+        "Tin 4",
+        35
+       ],
+       [
+        "Tin 5",
+        42
+       ]
+      ],
+      "annotations": [
+       {
+        "at": 1,
+        "text": "25%",
+        "cue": "hai mươi lăm"
+       },
+       {
+        "at": 2,
+        "text": "30%",
+        "cue": "rồi ba"
+       },
+       {
+        "at": 5,
+        "text": "Không nhảy vọt",
+        "cue": "không nhảy vọt"
+       }
+      ],
+      "cue": "họ dịch"
+     }
+    ]
+   },
+   "sources": [
+    "tetlock2015"
+   ]
+  },
+  {
+   "id": "b12",
+   "act": "principle",
+   "narration": "Bài học thứ ba: ghi điểm cho dự đoán. Tetlock dùng điểm Brier, giống điểm golf: càng thấp càng tốt. Không điểm là hoàn hảo. Lúc nào cũng đoán năm mươi năm mươi được không phẩy năm. Tự tin tuyệt đối mà sai hết thì hai điểm.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "target",
+      "kicker": "Bài học 3 · Ghi điểm cho dự đoán",
+      "line": "Điểm Brier: như điểm golf",
+      "line_cue": "brier"
+     },
+     {
+      "type": "timeline",
+      "title": "Điểm Brier · càng thấp càng tốt",
+      "events": [
+       {
+        "year": "0",
+        "text": "Hoàn hảo",
+        "cue": "không điểm"
+       },
+       {
+        "year": "0,5",
+        "text": "Luôn đoán 50/50",
+        "cue": "lúc nào"
+       },
+       {
+        "year": "2",
+        "text": "Tự tin tuyệt đối, sai hết",
+        "cue": "tự tin"
+       }
+      ],
+      "cue": "không điểm"
+     }
+    ]
+   },
+   "sources": [
+    "tetlock2015",
+    "brier1950"
+   ]
+  },
+  {
+   "id": "b13",
+   "act": "example",
+   "narration": "Và điều dự báo ai sẽ thành siêu dự báo viên không phải trí thông minh. Theo Tetlock, mạnh nhất là tinh thần luôn ở bản beta: luôn cập nhật, luôn sửa mình. Nó mạnh gấp khoảng ba lần trí thông minh.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Điều gì tạo ra siêu dự báo viên?",
+      "items": [
+       {
+        "icon": "brain",
+        "label": "Trí thông minh",
+        "cue": "trí thông"
+       },
+       {
+        "icon": "snowball",
+        "label": "Luôn ở bản beta",
+        "cue": "bản beta"
+       }
+      ]
+     },
+     {
+      "type": "stat",
+      "value": 3,
+      "prefix": "≈ ",
+      "suffix": "×",
+      "label": "sức dự báo của 'bản beta' so với trí thông minh",
+      "note": "theo Tetlock & Gardner, 2015",
+      "cue": "gấp"
+     }
+    ]
+   },
+   "sources": [
+    "tetlock2015"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b14",
+   "act": "complication",
+   "narration": "Nhưng đừng thần thánh hoá. Câu hỏi trong giải đấu thường chỉ xa vài tháng, cùng lắm khoảng một năm. Càng nhìn xa, độ chính xác càng tụt, đến khoảng ba tới năm năm thì gần như đoán mò. Và Nassim Taleb nhắc: những thiên nga đen, hiếm mà lớn, vẫn nằm ngoài tầm chấm điểm.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "timeline",
+      "title": "Càng xa, càng mờ",
+      "events": [
+       {
+        "year": "Vài tháng",
+        "text": "Giải đấu đo ở đây",
+        "cue": "vài tháng"
+       },
+       {
+        "year": "~1 năm",
+        "text": "Vẫn còn kỹ năng",
+        "cue": "một năm"
+       },
+       {
+        "year": "3–5 năm",
+        "text": "Gần như đoán mò",
+        "cue": "ba tới"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "swan",
+      "kicker": "Phản biện của Nassim Taleb",
+      "line": "Thiên nga đen: hiếm, nhưng lớn.",
+      "cue": "và nassim"
+     }
+    ]
+   },
+   "sources": [
+    "tetlock2015",
+    "aiimpacts",
+    "ijf2022"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b15",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Bạn đoán chín mươi phần trăm đội bóng mình thích sẽ thắng. Họ thua. Bạn nên làm gì?",
+   "visual": {
+    "type": "question",
+    "question": "Bạn đoán 90% đội mình thắng. Họ thua. Nên làm gì?",
+    "choices": [
+     "Kết luận: mình đoán dở",
+     "Ghi lại; xem những lần đoán 90% có trúng chừng 9/10 không",
+     "Lần sau chỉ nói “có thể” cho an toàn"
+    ],
+    "answer": "B — một lần trật chưa nói gì; hãy chấm điểm cả chuỗi dự đoán.",
+    "think_seconds": 5
+   }
+  },
+  {
+   "id": "b16",
+   "act": "recap",
+   "narration": "Vậy là ba bài học từ Superforecasting. Nhìn từ bên ngoài trước. Cập nhật từng bước nhỏ. Và ghi điểm cho dự đoán.",
+   "visual": {
+    "type": "list",
+    "title": "Ba bài học",
+    "check": true,
+    "items": [
+     {
+      "text": "Nhìn từ bên ngoài trước",
+      "cue": "nhìn từ"
+     },
+     {
+      "text": "Cập nhật từng bước nhỏ",
+      "cue": "cập nhật"
+     },
+     {
+      "text": "Ghi điểm cho dự đoán",
+      "cue": "và ghi"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b17",
+   "act": "close",
+   "narration": "Con tinh tinh ném phi tiêu chỉ là một nửa câu chuyện. Nửa còn lại, Tetlock viết: khả năng nhìn trước không phải món quà bẩm sinh, mà là sản phẩm của những cách nghĩ cụ thể. Nghĩa là, nó tập được. Vậy bạn sẽ ghi điểm cho dự đoán nào đầu tiên?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Quay lại câu đùa",
+      "text": "Chỉ là một nửa câu chuyện.",
+      "highlight": [
+       "một nửa"
+      ]
+     },
+     {
+      "type": "quote",
+      "text": "Khả năng nhìn trước không phải món quà bẩm sinh, mà là sản phẩm của những cách nghĩ cụ thể.",
+      "by": "Tetlock & Gardner, Superforecasting (lược dịch)",
+      "cue": "nửa còn"
+     },
+     {
+      "type": "icon",
+      "icon": "tea",
+      "steam": true,
+      "line": "Dự đoán nào bạn sẽ ghi điểm đầu tiên?",
+      "cue": "nghĩa là"
+     }
+    ]
+   },
+   "sources": [
+    "tetlock2015"
+   ]
+  },
+  {
+   "id": "b18",
+   "act": "close",
+   "narration": "Còn bạn, bạn muốn mình review cuốn sách nào tiếp theo về cách suy nghĩ? Để lại bình luận cho mình nhé. Nếu thấy hay, lưu lại và gửi cho một người bạn hay đoán mò. Hẹn gặp bạn.",
+   "visual": {
+    "type": "end",
+    "kicker": "Review sách · Tập 7",
+    "title": "Siêu Dự Báo",
+    "ask": "Cuốn sách về cách suy nghĩ nào bạn muốn nghe tiếp?",
+    "ask_hint": "Một cuốn về xác suất · một nhà dự báo · một câu hỏi của bạn",
+    "ask_cue": "còn bạn",
+    "cta": "Bình luận · Lưu lại · Gửi một người bạn",
+    "cta_cue": "nếu thấy",
+    "sources_line": "Nguồn: Tetlock & Gardner, Superforecasting (2015) · Tetlock, Expert Political Judgment (2005) · Good Judgment Project · Ignatius, Washington Post (2013)",
+    "disclaimer": "Tóm tắt và cảm nhận cá nhân; số liệu theo sách, đã làm tròn.",
+    "sources_cue": "hẹn gặp"
+   }
+  }
+ ],
+ "pronounce": {}
+}

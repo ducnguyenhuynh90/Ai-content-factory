@@ -1,0 +1,835 @@
+{
+ "meta": {
+  "series": "Review sách · Tập 6",
+  "title": "Tư Duy Đặt Cược",
+  "subtitle": "Thinking in Bets — Annie Duke (2018)",
+  "topic": "books",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt thích đọc sách, muốn ra quyết định tốt hơn trong công việc, đầu tư và cuộc sống",
+  "aspect": "4:3",
+  "target_minutes": [
+   3,
+   5
+  ],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
+  "learning_goals": [
+   "Kể lại được ví dụ mở đầu sách: lệnh chuyền bóng của Pete Carroll ở Super Bowl XLIX (2015) và lập luận của Annie Duke",
+   "Giải thích 'resulting' và ba ý: tách quyết định khỏi kết quả, nghĩ bằng xác suất, hỏi 'cược không?'",
+   "Nhận ra giới hạn: 'xui' dễ thành cái cớ, và kết quả vẫn là thông tin cần đọc kỹ"
+  ],
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người dẫn chương trình sách lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively."
+ },
+ "sources": [
+  {
+   "id": "duke2018",
+   "cite": "Annie Duke, Thinking in Bets: Making Smarter Decisions When You Don't Have All the Facts, Portfolio/Penguin, 2018 (Introduction & ch. 1 'Life Is Poker, Not Chess'; ch. 2 'Wanna Bet?'; ch. 3 on self-serving bias; ch. 4 on truth-seeking groups)"
+  },
+  {
+   "id": "fp_excerpt",
+   "cite": "First Principles, 'Separate Your Results From Your Decisions' (quotes Duke: 66 passes from the 1-yard line that season, 0 intercepted; ~2% over the previous 15 seasons)",
+   "url": "https://www.firstprinciples.ventures/insights/separate-your-results-from-your-decisions"
+  },
+  {
+   "id": "si2015",
+   "cite": "Sports Illustrated, 'Inexplicable call costs Seahawks a second straight Super Bowl title', 2 Feb 2015 (2nd-and-goal at the 1, 26 s left, Butler interception, 28-24)",
+   "url": "https://www.si.com/nfl/2015/02/02/super-bowl-xlix-seattle-seahawks-pete-carroll-new-england-patriots-malcolm-butler"
+  },
+  {
+   "id": "nfl2015",
+   "cite": "NFL.com, 'Pete Carroll concedes \"worst result of a call ever\"' (Today show interview, Feb 2015)",
+   "url": "https://www.nfl.com/news/pete-carroll-concedes-worst-result-of-a-call-ever-0ap3000000469003"
+  },
+  {
+   "id": "cbs2015",
+   "cite": "CBS New York, 'Worst Play Call Ever? Seahawks Players Criticize Disastrous Decision By Carroll', Feb 2015",
+   "url": "https://www.cbsnews.com/newyork/news/worst-play-call-ever-seahawks-players-criticize-disastrous-decision-by-carroll/"
+  },
+  {
+   "id": "si2023",
+   "cite": "Sports Illustrated, 'Pete Carroll Still Won't Admit He Called Wrong Play in Super Bowl XLIX', Aug 2023 (one timeout; one play had to be a throw)",
+   "url": "https://www.si.com/extra-mustard/2023/08/22/pete-carroll-wont-admit-wrong-play-super-bowl-xlix-patriots-marshawn-lynch"
+  },
+  {
+   "id": "wharton_bio",
+   "cite": "Wharton Executive Education, faculty profile: Annie Duke (NSF fellowship in cognitive psychology at Penn; WSOP bracelet 2004; NBC National Heads-Up Championship 2010; retired 2012)",
+   "url": "https://executiveeducation.wharton.upenn.edu/faculty/annie-duke-2/"
+  },
+  {
+   "id": "ritholtz2018",
+   "cite": "Barry Ritholtz, Masters in Business, transcript: Annie Duke, Apr 2018",
+   "url": "https://ritholtz.com/2018/04/transcript-annie-duke/"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Tách quyết định khỏi kết quả",
+   "line": "Kết quả = chất lượng quyết định + may rủi. Chọn tốt vẫn có thể thua."
+  },
+  {
+   "name": "Nghĩ bằng xác suất",
+   "line": "Thay 'chắc chắn' bằng 'mình tin khoảng bao nhiêu phần trăm', để chừa chỗ cho việc học."
+  },
+  {
+   "name": "Hỏi: cược không?",
+   "line": "Nếu phải đặt tiền thật vào niềm tin này, mình còn tự tin đến thế không?"
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Lệnh gọi bóng bị chê là tệ nhất lịch sử Super Bowl. Nhưng có thể, đó là một quyết định đúng.",
+   "visual": {
+    "type": "hook",
+    "lines": [
+     "“Tệ nhất lịch sử.”",
+     "Nhưng có thể là quyết định đúng."
+    ],
+    "crash_cue": "nhưng",
+    "points": [
+     [
+      0,
+      1.0
+     ],
+     [
+      1,
+      1.4
+     ],
+     [
+      2,
+      2.0
+     ],
+     [
+      3,
+      2.7
+     ],
+     [
+      4,
+      3.5
+     ],
+     [
+      5,
+      4.3
+     ],
+     [
+      6,
+      5.0
+     ],
+     [
+      7,
+      5.6
+     ],
+     [
+      8,
+      1.4
+     ],
+     [
+      9,
+      0.9
+     ]
+    ],
+    "peak_label": "còn 1 yard",
+    "end_label": "bị cắt bóng",
+    "kicker": "Thinking in Bets · Annie Duke"
+   },
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "nhưng",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "duke2018",
+    "cbs2015"
+   ]
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Bạn có bao giờ tự trách mình chỉ vì một kết quả xấu? Rót một tách trà ấm nhé. Trong vài phút tới, bạn sẽ thấy vì sao kết quả tệ chưa chắc là lựa chọn sai, và ba bài học từ một tay chơi poker chuyên nghiệp.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Một câu hỏi",
+      "text": "Kết quả xấu = chọn sai?",
+      "highlight": [
+       "chọn sai?"
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "tea",
+      "steam": true,
+      "line": "Rót một tách trà ấm nhé.",
+      "cue": "rót"
+     },
+     {
+      "type": "trio",
+      "kicker": "Trong vài phút tới",
+      "items": [
+       {
+        "icon": "dice",
+        "label": "Một ván cược",
+        "cue": "vì sao"
+       },
+       {
+        "icon": "bulb",
+        "label": "Ba bài học",
+        "cue": "ba bài"
+       }
+      ],
+      "cue": "trong vài"
+     }
+    ]
+   }
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Review sách · Tập 6",
+    "title": "Tư Duy Đặt Cược",
+    "subtitle": "Thinking in Bets — Annie Duke (2018)",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ],
+   "sources": [
+    "duke2018"
+   ]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Chúng ta hay chấm điểm một quyết định bằng kết quả của nó. Thắng thì là chọn giỏi. Thua thì là chọn dở. Nghe rất hợp lý. Nhưng chính thói quen ấy khiến ta học sai bài học từ chính cuộc đời mình.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Điều ta hay tin",
+      "items": [
+       {
+        "icon": "star",
+        "label": "Thắng → chọn giỏi",
+        "cue": "thắng"
+       },
+       {
+        "icon": "dice",
+        "label": "Thua → chọn dở",
+        "cue": "thua"
+       }
+      ]
+     },
+     {
+      "type": "statement",
+      "kicker": "Điều ta hay tin",
+      "text": "Kết quả tốt = quyết định tốt.",
+      "strike": "= quyết định tốt.",
+      "replace": "≠ quyết định tốt",
+      "strike_cue": "nhưng",
+      "cue": "nghe rất"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "Annie Duke từng học tâm lý học nhận thức ở Đại học Pennsylvania, rồi rẽ sang chơi poker chuyên nghiệp. Năm hai nghìn lẻ bốn, bà giành chiếc vòng vàng World Series of Poker đầu tiên. Năm hai nghìn mười tám, bà viết Thinking in Bets.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Annie Duke",
+      "initials": "AD",
+      "role": "Tâm lý học nhận thức · Poker",
+      "years": "Vòng vàng WSOP · 2004"
+     },
+     {
+      "type": "book",
+      "title": "Thinking in Bets",
+      "author": "Annie Duke",
+      "year": "2018",
+      "kicker": "Cuốn sách",
+      "cue": "năm hai nghìn mười",
+      "facts": [
+       {
+        "big": "2004",
+        "text": "Vòng vàng WSOP đầu tiên",
+        "cue": "năm hai nghìn mười"
+       },
+       {
+        "big": "2018",
+        "text": "Sách ra đời",
+        "cue": "bà viết"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "wharton_bio",
+    "duke2018"
+   ]
+  },
+  {
+   "id": "b03",
+   "act": "story",
+   "narration": "Cuốn sách mở đầu bằng trận Super Bowl năm hai nghìn mười lăm. Seattle Seahawks đang thua New England Patriots bốn điểm. Còn hai mươi sáu giây. Bóng nằm cách vạch ghi điểm chỉ một yard, chưa tới một mét.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Super Bowl XLIX · 2015",
+      "text": "Patriots 28 · Seahawks 24",
+      "highlight": [
+       "24"
+      ]
+     },
+     {
+      "type": "stat",
+      "value": 26,
+      "suffix": " giây",
+      "label": "còn lại trên đồng hồ",
+      "note": "Seattle có lượt tấn công thứ hai",
+      "cue": "còn hai"
+     },
+     {
+      "type": "icon",
+      "icon": "target",
+      "kicker": "Vạch ghi điểm",
+      "line": "Chỉ còn 1 yard.",
+      "cue": "bóng nằm"
+     }
+    ]
+   },
+   "sources": [
+    "duke2018",
+    "si2015"
+   ]
+  },
+  {
+   "id": "b04",
+   "act": "story",
+   "narration": "Ai cũng chờ một pha chạy bóng cho Marshawn Lynch. Nhưng huấn luyện viên Pete Carroll, nhà vô địch năm trước, cho chuyền. Malcolm Butler cắt được bóng. Patriots vô địch. Và báo chí gọi đó là lệnh gọi tệ nhất lịch sử.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "swap",
+      "kicker": "Điều ai cũng chờ",
+      "from": {
+       "label": "Chạy bóng · Lynch",
+       "icon": "people"
+      },
+      "to": {
+       "label": "Chuyền bóng",
+       "icon": "lightning",
+       "cue": "cho chuyền"
+      },
+      "cue": "nhưng"
+     },
+     {
+      "type": "halo",
+      "kicker": "Sáng hôm sau",
+      "items": [
+       {
+        "name": "Pete Carroll",
+        "before": "Vô địch năm trước",
+        "after": "“TỆ NHẤT LỊCH SỬ”",
+        "cue": "tệ nhất"
+       }
+      ],
+      "label": "Phán xét theo kết quả",
+      "label_cue": "lịch sử",
+      "cue": "malcolm"
+     }
+    ]
+   },
+   "sources": [
+    "si2015",
+    "cbs2015",
+    "duke2018"
+   ]
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Vài ngày sau, chính Carroll nói trên truyền hình: đó là kết quả tệ nhất của một lệnh gọi, từ trước đến nay. Để ý nhé. Ông nói kết quả, chứ không nói quyết định.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "quote",
+      "text": "Đó là kết quả tệ nhất của một lệnh gọi, từ trước đến nay.",
+      "by": "Pete Carroll, 2015 (lược dịch)"
+     },
+     {
+      "type": "statement",
+      "kicker": "Để ý nhé",
+      "text": "Kết quả, không phải quyết định.",
+      "highlight": [
+       "Kết quả,"
+      ],
+      "cue": "để ý"
+     }
+    ]
+   },
+   "sources": [
+    "nfl2015",
+    "duke2018"
+   ]
+  },
+  {
+   "id": "b06",
+   "act": "story",
+   "narration": "Annie Duke nhìn lại bằng con số. Mùa giải ấy, có sáu mươi sáu đường chuyền từ vạch một yard, không đường nào bị cắt. Mười lăm mùa trước đó, tỷ lệ bị cắt chỉ khoảng hai phần trăm. Và một đường chuyền hỏng còn dừng đồng hồ, cho Seattle thêm lượt chạy bóng.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stat",
+      "value": 66,
+      "label": "đường chuyền từ vạch 1 yard · mùa ấy",
+      "note": "0 đường bị cắt",
+      "cue": "sáu mươi"
+     },
+     {
+      "type": "statement",
+      "kicker": "15 mùa trước đó",
+      "text": "Chỉ khoảng 2% bị cắt.",
+      "highlight": [
+       "2%"
+      ],
+      "cue": "mười lăm"
+     },
+     {
+      "type": "trio",
+      "kicker": "Nếu chuyền hỏng",
+      "items": [
+       {
+        "icon": "clock",
+        "label": "Đồng hồ dừng",
+        "cue": "dừng"
+       },
+       {
+        "icon": "people",
+        "label": "Thêm lượt chạy bóng",
+        "cue": "thêm"
+       }
+      ],
+      "cue": "và một"
+     }
+    ]
+   },
+   "sources": [
+    "duke2018",
+    "fp_excerpt",
+    "si2023"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b07",
+   "act": "story",
+   "narration": "Dân poker có một từ cho thói quen kia: resulting. Tức là chấm điểm quyết định bằng kết quả. Carroll không chọn được kết quả. Ông chỉ chọn một ván cược, và lần này, lá bài rơi xấu.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "scale",
+      "kicker": "Thuật ngữ của dân poker",
+      "line": "Resulting",
+      "line_cue": "resulting"
+     },
+     {
+      "type": "statement",
+      "kicker": "Resulting",
+      "text": "Chấm quyết định bằng kết quả.",
+      "highlight": [
+       "bằng kết quả."
+      ],
+      "cue": "tức là"
+     },
+     {
+      "type": "icon",
+      "icon": "dice",
+      "line": "Một ván cược. Lá bài rơi xấu.",
+      "cue": "ông chỉ"
+     }
+    ]
+   },
+   "sources": [
+    "duke2018"
+   ]
+  },
+  {
+   "id": "b08",
+   "act": "principle",
+   "narration": "Bài học thứ nhất: tách quyết định khỏi kết quả. Mỗi kết quả là sự pha trộn của hai thứ: chất lượng quyết định, và may rủi. Nên chọn tốt vẫn có thể thua. Và chọn dở vẫn có thể thắng.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Bài học 1 · Tách quyết định khỏi kết quả",
+      "items": [
+       {
+        "icon": "brain",
+        "label": "Chất lượng quyết định",
+        "cue": "chất lượng"
+       },
+       {
+        "icon": "dice",
+        "label": "May rủi",
+        "cue": "may rủi"
+       }
+      ],
+      "line": "= Kết quả",
+      "line_cue": "may rủi"
+     },
+     {
+      "type": "compare",
+      "title": "Vì thế",
+      "left": {
+       "title": "Chọn tốt",
+       "items": [
+        "Vẫn có thể thua"
+       ]
+      },
+      "right": {
+       "title": "Chọn dở",
+       "items": [
+        "Vẫn có thể thắng"
+       ]
+      },
+      "cue": "nên chọn"
+     }
+    ]
+   },
+   "sources": [
+    "duke2018"
+   ]
+  },
+  {
+   "id": "b09",
+   "act": "principle",
+   "narration": "Bài học thứ hai: nghĩ bằng xác suất. Duke khuyên ta bớt nói chắc chắn, hay không thể. Hãy nói: mình tin khoảng bảy mươi phần trăm. Con số ấy nhắc rằng mình có thể sai, và mở cửa cho việc học thêm.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Bài học 2 · Nghĩ bằng xác suất",
+      "text": "Chắc chắn đúng.",
+      "strike": "Chắc chắn",
+      "replace": "Khoảng 70%",
+      "strike_cue": "hãy nói"
+     },
+     {
+      "type": "stat",
+      "value": 70,
+      "prefix": "≈ ",
+      "suffix": "%",
+      "label": "mức tin của mình",
+      "note": "con số ví dụ",
+      "cue": "bảy mươi"
+     },
+     {
+      "type": "icon",
+      "icon": "compass",
+      "line": "Chừa chỗ để học thêm.",
+      "cue": "con số"
+     }
+    ]
+   },
+   "sources": [
+    "duke2018"
+   ]
+  },
+  {
+   "id": "b10",
+   "act": "principle",
+   "narration": "Bài học thứ ba gói trong hai chữ: cược không? Khi ai đó nói chắc nịch, dân poker hỏi ngay: wanna bet? Câu hỏi ấy buộc ta dừng lại. Nếu phải đặt tiền thật, mình còn tự tin đến thế không? Không để thắng tranh luận, mà để tìm ra điều đúng.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "coins",
+      "kicker": "Bài học 3",
+      "line": "“Cược không?”",
+      "line_cue": "cược"
+     },
+     {
+      "type": "statement",
+      "kicker": "Wanna bet?",
+      "text": "Nếu phải đặt tiền thật?",
+      "highlight": [
+       "tiền thật?"
+      ],
+      "cue": "câu hỏi"
+     },
+     {
+      "type": "icon",
+      "icon": "target",
+      "line": "Tìm điều đúng, không phải thắng cãi.",
+      "cue": "không để"
+     }
+    ]
+   },
+   "sources": [
+    "duke2018"
+   ]
+  },
+  {
+   "id": "b11",
+   "act": "example",
+   "narration": "Duke còn gợi ý: tìm vài người bạn, hẹn nhau soi quyết định, chứ không soi kết quả. Mỗi lần, cùng hỏi: lúc đó mình biết gì, và may rủi chiếm bao nhiêu? Một nhóm như thế giúp ta thấy những điều mình tự che mắt.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Một nhóm nhỏ cùng soi",
+      "items": [
+       {
+        "icon": "people",
+        "label": "Vài người bạn",
+        "cue": "tìm vài"
+       },
+       {
+        "icon": "binoculars",
+        "label": "Soi quyết định",
+        "cue": "soi quyết"
+       },
+       {
+        "icon": "dice",
+        "label": "May rủi bao nhiêu?",
+        "cue": "may rủi"
+       }
+      ]
+     },
+     {
+      "type": "statement",
+      "kicker": "Vì sao cần bạn bè",
+      "text": "Thấy điều mình tự che mắt.",
+      "highlight": [
+       "tự che mắt."
+      ],
+      "cue": "một nhóm"
+     }
+    ]
+   },
+   "sources": [
+    "duke2018"
+   ]
+  },
+  {
+   "id": "b12",
+   "act": "complication",
+   "narration": "Nhưng cẩn thận. Chữ xui rất dễ biến thành cái cớ. Chính Duke chỉ ra: ta hay nhận mình giỏi khi thắng, và đổ cho xui khi thua. Còn trận đấu kia vẫn gây tranh cãi: chuyền có thể hợp lý, nhưng chuyền kiểu nào, vào chỗ đông người ra sao, là chuyện khác.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "compare",
+      "title": "Cái bẫy tự bào chữa",
+      "left": {
+       "title": "Khi thắng",
+       "items": [
+        "Nhờ mình giỏi"
+       ]
+      },
+      "right": {
+       "title": "Khi thua",
+       "items": [
+        "Tại xui"
+       ]
+      }
+     },
+     {
+      "type": "statement",
+      "kicker": "Vẫn gây tranh cãi",
+      "text": "Chuyền: hợp lý. Chuyền kiểu nào?",
+      "highlight": [
+       "kiểu nào?"
+      ],
+      "cue": "còn trận"
+     }
+    ]
+   },
+   "sources": [
+    "duke2018",
+    "si2015",
+    "si2023"
+   ],
+   "certainty": "disputed"
+  },
+  {
+   "id": "b13",
+   "act": "turn",
+   "narration": "Vậy cứ mặc kệ kết quả sao? Không. Kết quả vẫn là thông tin, chỉ là thông tin có nhiễu. Hãy hỏi: phần nào do mình, phần nào do may? Rồi mới rút bài học. Một trận thua không nói hết về bạn, một trận thắng cũng vậy.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Vậy thì",
+      "text": "Mặc kệ kết quả?",
+      "strike": "Mặc kệ",
+      "replace": "Đọc kỹ",
+      "strike_cue": "không"
+     },
+     {
+      "type": "icon",
+      "icon": "binoculars",
+      "line": "Phần nào do mình? Phần nào do may?",
+      "cue": "hãy hỏi"
+     },
+     {
+      "type": "compare",
+      "title": "Một ván không nói hết",
+      "left": {
+       "title": "Một trận thua",
+       "items": [
+        "Chưa chắc bạn dở"
+       ]
+      },
+      "right": {
+       "title": "Một trận thắng",
+       "items": [
+        "Chưa chắc bạn giỏi"
+       ]
+      },
+      "cue": "một trận thua"
+     }
+    ]
+   },
+   "sources": [
+    "duke2018"
+   ]
+  },
+  {
+   "id": "b14",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Bạn đi con đường quen, thường là nhanh nhất. Hôm nay có tai nạn, bạn trễ họp. Nghĩ thế nào mới tránh được bẫy resulting?",
+   "visual": {
+    "type": "question",
+    "question": "Đường quen, thường nhanh nhất. Hôm nay kẹt xe, trễ họp. Nghĩ sao cho đúng?",
+    "choices": [
+     "Mình chọn đường ngu quá",
+     "Xét lại: lúc đi, đó có phải lựa chọn tốt nhất không?",
+     "Từ mai bỏ hẳn con đường này"
+    ],
+    "answer": "B — chấm quyết định theo những gì bạn biết lúc chọn.",
+    "think_seconds": 5
+   }
+  },
+  {
+   "id": "b15",
+   "act": "recap",
+   "narration": "Vậy là ba bài học từ Thinking in Bets. Tách quyết định khỏi kết quả. Nghĩ bằng xác suất. Và hỏi: cược không?",
+   "visual": {
+    "type": "list",
+    "title": "Ba bài học",
+    "check": true,
+    "items": [
+     {
+      "text": "Tách quyết định khỏi kết quả",
+      "cue": "tách"
+     },
+     {
+      "text": "Nghĩ bằng xác suất",
+      "cue": "nghĩ bằng"
+     },
+     {
+      "text": "Hỏi: cược không?",
+      "cue": "và hỏi"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b16",
+   "act": "close",
+   "narration": "Lệnh gọi tệ nhất lịch sử? Có thể chỉ là kết quả tệ nhất. Duke viết: đời giống ván bài hơn ván cờ, luôn có những lá ta không thấy. Vậy lần tới thua một ván, bạn sẽ chấm điểm lá bài, hay cách mình chơi?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Quay lại trận đấu",
+      "text": "Lệnh gọi tệ nhất lịch sử?",
+      "strike": "Lệnh gọi",
+      "replace": "Kết quả",
+      "strike_cue": "có thể"
+     },
+     {
+      "type": "statement",
+      "kicker": "Duke viết",
+      "text": "Đời là ván bài, không phải ván cờ.",
+      "highlight": [
+       "ván bài,"
+      ],
+      "cue": "duke"
+     },
+     {
+      "type": "icon",
+      "icon": "tea",
+      "steam": true,
+      "line": "Lá bài, hay cách mình chơi?",
+      "cue": "vậy lần"
+     }
+    ]
+   },
+   "sources": [
+    "duke2018"
+   ]
+  },
+  {
+   "id": "b17",
+   "act": "close",
+   "narration": "Còn bạn, quyết định nào gần đây bạn đã chấm điểm hơi vội? Hay bạn muốn clip tiếp theo về cuốn sách nào? Để lại bình luận cho mình nhé. Nếu thấy hay, lưu lại và gửi cho một người bạn. Hẹn gặp bạn.",
+   "visual": {
+    "type": "end",
+    "kicker": "Review sách · Tập 6",
+    "title": "Tư Duy Đặt Cược",
+    "ask": "Bạn muốn clip tiếp theo về cuốn sách nào?",
+    "ask_hint": "Một cuốn về quyết định · một nhà đầu tư · một câu hỏi của bạn",
+    "ask_cue": "còn bạn",
+    "cta": "Bình luận · Lưu lại · Gửi một người bạn",
+    "cta_cue": "nếu thấy",
+    "sources_line": "Nguồn: Duke, Thinking in Bets (2018) · NFL.com & Sports Illustrated (2015) · Wharton (tiểu sử A. Duke)",
+    "disclaimer": "Tóm tắt và cảm nhận cá nhân; số liệu theo sách, đã làm tròn.",
+    "sources_cue": "hẹn gặp"
+   }
+  }
+ ],
+ "pronounce": {}
+}

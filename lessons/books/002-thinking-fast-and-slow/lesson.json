@@ -1,0 +1,806 @@
+{
+ "meta": {
+  "series": "Review sách · Tập 2",
+  "title": "Tư Duy Nhanh Và Chậm",
+  "subtitle": "Thinking, Fast and Slow — Daniel Kahneman (2011)",
+  "topic": "books",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt thích đọc sách, muốn suy nghĩ tỉnh táo hơn trong công việc, tiền bạc và cuộc sống",
+  "aspect": "4:3",
+  "target_minutes": [
+   3,
+   5
+  ],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
+  "learning_goals": [
+   "Giải được câu đố cây gậy và quả bóng, và giải thích vì sao câu trả lời mười xu bật ra trước",
+   "Phân biệt Hệ thống 1 (nhanh, tự động) và Hệ thống 2 (chậm, tốn sức), và biết đó là hai nhân vật hư cấu, không phải hai vùng não",
+   "Nhận ra hiệu ứng mỏ neo và né tránh mất mát trong một quyết định của chính mình"
+  ],
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người dẫn chương trình sách lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively. Measured with Whisper on 12 names: Vietnamese respellings scored 0.76, original spelling 0.95."
+ },
+ "sources": [
+  {
+   "id": "kahneman2011",
+   "cite": "Daniel Kahneman, Thinking, Fast and Slow, Farrar, Straus and Giroux, Oct 2011 (Introduction; ch. 1 'The Characters of the Story' — 17 × 24, billboards, 'fictitious characters'; ch. 3 'The Lazy Controller' — bat and ball, >50% Harvard/MIT/Princeton, >80% less selective universities; ch. 11 'Anchors'; ch. 26 'Prospect Theory' — coin toss −$100/+$150, loss aversion ratio 1.5–2.5; ch. 31 'Risk Policies' — broad framing)"
+  },
+  {
+   "id": "frederick2005",
+   "cite": "Shane Frederick, 'Cognitive Reflection and Decision Making', Journal of Economic Perspectives 19(4), 2005 (origin of the bat-and-ball item)",
+   "url": "https://www.aeaweb.org/articles?id=10.1257/089533005775196732"
+  },
+  {
+   "id": "tk1974",
+   "cite": "Amos Tversky & Daniel Kahneman, 'Judgment under Uncertainty: Heuristics and Biases', Science 185, 1974 (wheel of fortune stopping at 10 or 65; median estimates 25 and 45)",
+   "url": "https://www.science.org/doi/10.1126/science.185.4157.1124"
+  },
+  {
+   "id": "princeton2024",
+   "cite": "Princeton University news, 'Daniel Kahneman, pioneering behavioral psychologist, Nobel laureate and giant in the field, dies at 90', 28 Mar 2024 (died 27 Mar 2024; Nobel 2002 for work with Tversky, who died in 1996)",
+   "url": "https://www.princeton.edu/news/2024/03/28/daniel-kahneman-pioneering-behavioral-psychologist-nobel-laureate-and-giant-field"
+  },
+  {
+   "id": "ap2024",
+   "cite": "Associated Press, 'Nobelist Daniel Kahneman, a pioneer of behavioral economics, is dead at 90', 28 Mar 2024",
+   "url": "https://www.news4jax.com/news/national/2024/03/28/nobelist-daniel-kahneman-a-pioneer-of-behavioral-economics-is-dead-at-90/"
+  },
+  {
+   "id": "nobel2002",
+   "cite": "NobelPrize.org, The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel 2002 (Daniel Kahneman, shared with Vernon L. Smith)",
+   "url": "https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/facts/"
+  },
+  {
+   "id": "schimmack2017",
+   "cite": "Schimmack, Heene & Kesavan, 'Reconstruction of a Train Wreck: How Priming Research Went off the Rails', Replicability-Index, Feb 2017, with Daniel Kahneman's reply in the comments ('I placed too much faith in underpowered studies')",
+   "url": "https://replicationindex.com/2017/02/02/reconstruction-of-a-train-wreck-how-priming-research-went-of-the-rails/"
+  },
+  {
+   "id": "mindhacks2017",
+   "cite": "Mind Hacks, 'The Social Priming Studies in Thinking Fast and Slow are not very replicable', 16 Feb 2017 (quotes Kahneman's reply)",
+   "url": "https://mindhacks.com/2017/02/16/how-replicable-are-the-social-priming-studies-in-thinking-fast-and-slow/"
+  },
+  {
+   "id": "alpha_vn",
+   "cite": "Bản tiếng Việt 'Tư Duy Nhanh Và Chậm', Alpha Books (bản quyền tiếng Việt Công ty Sách Alpha)",
+   "url": "https://24hmoney.vn/books/tu-duy-nhanh-va-cham-c34a2013592.html"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Chậm lại trước quyết định lớn",
+   "line": "Câu trả lời đến quá dễ là lúc nên kiểm tra lại: gọi Hệ thống 2 vào việc."
+  },
+  {
+   "name": "Cảnh giác con số đầu tiên",
+   "line": "Một con số, dù vô lý, vẫn kéo phán đoán về phía nó: tự ước lượng trước khi nghe."
+  },
+  {
+   "name": "Nhìn cả ván bài",
+   "line": "Nỗi đau mất mát nặng hơn niềm vui được: đánh giá cả chuỗi quyết định, không chỉ khoản lỗ trước mắt."
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Một cây gậy và một quả bóng giá một đô la mười. Hơn nửa sinh viên Harvard, MIT và Princeton trả lời sai.",
+   "visual": {
+    "type": "statement",
+    "kicker": "Thinking, Fast and Slow · Daniel Kahneman",
+    "text": "Gậy + bóng = 1,10 đô. Hơn nửa trả lời sai.",
+    "highlight": [
+     "sai."
+    ]
+   },
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "sai",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "kahneman2011",
+    "frederick2005"
+   ]
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Cây gậy đắt hơn quả bóng đúng một đô la. Vậy quả bóng giá bao nhiêu? Giữ câu trả lời trong đầu nhé, và rót một tách trà. Vài phút tới, bạn sẽ gặp hai nhân vật sống trong đầu mình, và ba bài học để bớt bị chúng đánh lừa.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Câu đố",
+      "text": "Gậy đắt hơn bóng 1 đô. Bóng giá bao nhiêu?",
+      "highlight": [
+       "Bóng giá bao nhiêu?"
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "tea",
+      "steam": true,
+      "line": "Giữ câu trả lời trong đầu.",
+      "cue": "giữ câu"
+     },
+     {
+      "type": "trio",
+      "kicker": "Hai nhân vật · ba bài học",
+      "cue": "vài phút",
+      "items": [
+       {
+        "icon": "lightning",
+        "label": "Nhanh",
+        "cue": "hai nhân"
+       },
+       {
+        "icon": "turtle",
+        "label": "Chậm",
+        "cue": "mình và"
+       }
+      ],
+      "line": "Ba bài học",
+      "line_cue": "ba bài"
+     }
+    ]
+   },
+   "sources": [
+    "kahneman2011"
+   ]
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Review sách · Tập 2",
+    "title": "Tư Duy Nhanh Và Chậm",
+    "subtitle": "Thinking, Fast and Slow — Daniel Kahneman (2011)",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ],
+   "sources": [
+    "kahneman2011"
+   ]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Chúng ta hay nghĩ sai lầm đến từ thiếu hiểu biết. Người càng thông minh thì càng ít bị lừa. Vậy mà với câu đố này, con số bật ra trong đầu hầu hết mọi người là mười xu. Và nó sai.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Điều ta hay tin",
+      "text": "Thông minh thì ít bị lừa.",
+      "strike": "ít bị lừa.",
+      "replace": "vẫn bị lừa",
+      "strike_cue": "vậy mà"
+     },
+     {
+      "type": "stat",
+      "value": 10,
+      "suffix": " xu",
+      "label": "câu trả lời bật ra ngay",
+      "note": "nhanh, tự tin… và sai",
+      "cue": "con số"
+     }
+    ]
+   },
+   "sources": [
+    "kahneman2011"
+   ]
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "Câu đố ấy nằm trong cuốn sách năm hai nghìn mười một của Daniel Kahneman. Một nhà tâm lý học, nhưng lại nhận giải Nobel kinh tế năm hai nghìn lẻ hai, cho nghiên cứu làm cùng người bạn Amos Tversky.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "book",
+      "title": "Thinking, Fast and Slow",
+      "author": "Daniel Kahneman",
+      "year": "2011",
+      "kicker": "Tư Duy Nhanh Và Chậm",
+      "facts": [
+       {
+        "big": "2011",
+        "text": "Sách ra đời",
+        "cue": "năm hai nghìn mười"
+       },
+       {
+        "big": "Alpha",
+        "text": "Bản tiếng Việt",
+        "cue": "của daniel"
+       }
+      ]
+     },
+     {
+      "type": "portrait",
+      "name": "Daniel Kahneman",
+      "initials": "DK",
+      "role": "Nhà tâm lý học · Nobel kinh tế 2002",
+      "years": "1934 – 2024",
+      "cue": "một nhà"
+     }
+    ]
+   },
+   "sources": [
+    "kahneman2011",
+    "nobel2002",
+    "princeton2024",
+    "alpha_vn"
+   ]
+  },
+  {
+   "id": "b03",
+   "act": "context",
+   "narration": "Tversky mất năm một nghìn chín trăm chín mươi sáu, nên không thể cùng nhận giải. Còn Kahneman ra đi vào tháng ba năm hai nghìn hai mươi tư, ở tuổi chín mươi.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Amos Tversky",
+      "initials": "AT",
+      "role": "Người bạn · cộng sự",
+      "years": "mất 1996"
+     },
+     {
+      "type": "timeline",
+      "title": "Kahneman & Tversky",
+      "events": [
+       {
+        "year": "1996",
+        "text": "Amos Tversky qua đời"
+       },
+       {
+        "year": "2002",
+        "text": "Nobel kinh tế cho Kahneman",
+        "cue": "nhận giải"
+       },
+       {
+        "year": "2024",
+        "text": "Kahneman mất, 90 tuổi",
+        "cue": "tháng ba"
+       }
+      ],
+      "cue": "nên không"
+     }
+    ]
+   },
+   "sources": [
+    "princeton2024",
+    "ap2024",
+    "nobel2002"
+   ]
+  },
+  {
+   "id": "b04",
+   "act": "story",
+   "narration": "Quay lại câu đố. Nếu bóng giá mười xu, gậy sẽ giá một đô la mười, cộng lại thành một đô la hai mươi. Đáp án đúng là năm xu. Chỉ cần vài giây kiểm tra, nhưng phần lớn chúng ta bỏ qua.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Thử kiểm tra",
+      "text": "0,10 + 1,10 = 1,20 đô",
+      "highlight": [
+       "1,20 đô"
+      ]
+     },
+     {
+      "type": "statement",
+      "kicker": "Đáp án",
+      "text": "Bóng giá 10 xu.",
+      "strike": "10 xu.",
+      "replace": "5 xu",
+      "strike_cue": "đáp án",
+      "cue": "đáp án"
+     },
+     {
+      "type": "icon",
+      "icon": "hourglass",
+      "line": "Vài giây kiểm tra",
+      "cue": "chỉ cần"
+     }
+    ]
+   },
+   "sources": [
+    "kahneman2011",
+    "frederick2005"
+   ]
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Kahneman kể rằng hơn năm mươi phần trăm sinh viên ở Harvard, MIT và Princeton đưa ra câu trả lời trực giác ấy. Ở những trường ít chọn lọc hơn, tỉ lệ không chịu kiểm tra còn vượt quá tám mươi phần trăm.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stat",
+      "value": 50,
+      "prefix": ">",
+      "suffix": "%",
+      "label": "Harvard · MIT · Princeton",
+      "note": "trả lời 10 xu",
+      "cue": "hơn năm"
+     },
+     {
+      "type": "funnel",
+      "total": 100,
+      "start_full": true,
+      "keep": 20,
+      "keep_cue": "tám mươi",
+      "label": "Trường ít chọn lọc hơn",
+      "keep_label": "> 80% không kiểm tra",
+      "cue": "ở những"
+     }
+    ]
+   },
+   "sources": [
+    "kahneman2011"
+   ]
+  },
+  {
+   "id": "b06",
+   "act": "story",
+   "narration": "Kahneman đặt tên cho hai nhân vật. Hệ thống một: nhanh, tự động, không tốn sức, như khi bạn đọc chữ trên một tấm biển quảng cáo. Hệ thống hai: chậm và tốn sức, như khi bạn nhân mười bảy với hai mươi tư.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Hai nhân vật",
+      "items": [
+       {
+        "icon": "lightning",
+        "label": "Hệ thống 1: nhanh, tự động",
+        "cue": "hệ thống một"
+       },
+       {
+        "icon": "turtle",
+        "label": "Hệ thống 2: chậm, tốn sức",
+        "cue": "hệ thống hai"
+       }
+      ]
+     },
+     {
+      "type": "statement",
+      "kicker": "Hệ thống 2 đang làm việc",
+      "text": "17 × 24 = ?",
+      "highlight": [
+       "?"
+      ],
+      "cue": "nhân mười"
+     }
+    ]
+   },
+   "sources": [
+    "kahneman2011"
+   ]
+  },
+  {
+   "id": "b07",
+   "act": "story",
+   "narration": "Hệ thống một làm việc suốt ngày, và thường làm rất tốt. Vấn đề là nó luôn có sẵn một câu trả lời, kể cả khi câu hỏi quá khó. Còn hệ thống hai thì lười, hay gật đầu với câu trả lời đầu tiên.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "lightning",
+      "kicker": "Hệ thống 1",
+      "line": "Luôn có sẵn một câu trả lời",
+      "line_cue": "luôn có"
+     },
+     {
+      "type": "icon",
+      "icon": "turtle",
+      "kicker": "Hệ thống 2 · kẻ lười biếng",
+      "line": "Gật đầu với câu đầu tiên",
+      "line_cue": "gật đầu",
+      "cue": "còn hệ"
+     }
+    ]
+   },
+   "sources": [
+    "kahneman2011"
+   ]
+  },
+  {
+   "id": "b08",
+   "act": "principle",
+   "narration": "Bài học thứ nhất: chậm lại trước quyết định lớn. Câu trả lời mười xu không sai vì bạn kém, mà vì nó đến quá dễ. Khi một quyết định quan trọng mà câu trả lời lại hiện ra ngay, hãy dừng vài giây và hỏi: mình đã kiểm tra chưa?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "swap",
+      "kicker": "Bài học 1 · Chậm lại trước quyết định lớn",
+      "from": {
+       "label": "Trả lời ngay",
+       "icon": "lightning"
+      },
+      "to": {
+       "label": "Dừng lại, kiểm tra",
+       "icon": "hourglass",
+       "cue": "dừng vài"
+      },
+      "cue": "khi một"
+     },
+     {
+      "type": "statement",
+      "kicker": "Trước mỗi quyết định lớn",
+      "text": "Mình đã kiểm tra chưa?",
+      "highlight": [
+       "kiểm tra"
+      ],
+      "cue": "mình đã"
+     }
+    ]
+   },
+   "sources": [
+    "kahneman2011"
+   ]
+  },
+  {
+   "id": "b09",
+   "act": "story",
+   "narration": "Bài học thứ hai bắt đầu bằng một vòng quay. Kahneman và Tversky dùng một vòng quay số từ không đến một trăm, được chỉnh để chỉ dừng ở mười hoặc sáu mươi lăm. Rồi họ hỏi: các nước châu Phi chiếm bao nhiêu phần trăm Liên Hợp Quốc?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "dice",
+      "kicker": "Một vòng quay",
+      "line": "0 → 100, nhưng chỉ dừng ở 10 hoặc 65",
+      "line_cue": "được chỉnh"
+     },
+     {
+      "type": "statement",
+      "kicker": "Rồi họ hỏi",
+      "text": "Châu Phi chiếm bao nhiêu % Liên Hợp Quốc?",
+      "highlight": [
+       "bao nhiêu %"
+      ],
+      "cue": "rồi họ"
+     }
+    ]
+   },
+   "sources": [
+    "tk1974",
+    "kahneman2011"
+   ]
+  },
+  {
+   "id": "b10",
+   "act": "story",
+   "narration": "Một con số ngẫu nhiên, chẳng liên quan gì. Vậy mà nhóm thấy số mười đoán khoảng hai mươi lăm phần trăm. Nhóm thấy số sáu mươi lăm đoán khoảng bốn mươi lăm phần trăm.",
+   "visual": {
+    "type": "compare",
+    "title": "Con số neo kéo câu trả lời",
+    "left": {
+     "title": "Vòng quay dừng ở 10",
+     "items": [
+      "Đoán ≈ 25%"
+     ]
+    },
+    "right": {
+     "title": "Vòng quay dừng ở 65",
+     "items": [
+      "Đoán ≈ 45%"
+     ]
+    }
+   },
+   "sources": [
+    "tk1974",
+    "kahneman2011"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b11",
+   "act": "principle",
+   "narration": "Đó là hiệu ứng mỏ neo. Con số đầu tiên bạn nghe, dù vô lý, vẫn kéo phán đoán của bạn về phía nó. Giá niêm yết. Mức lương đầu tiên được đề nghị. Giá bạn từng mua một món đồ. Bài học thứ hai: cảnh giác con số đầu tiên.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Tên của nó",
+      "text": "Hiệu ứng mỏ neo.",
+      "highlight": [
+       "mỏ neo."
+      ]
+     },
+     {
+      "type": "trio",
+      "kicker": "Bài học 2 · Cảnh giác con số đầu tiên",
+      "items": [
+       {
+        "icon": "store",
+        "label": "Giá niêm yết",
+        "cue": "giá niêm"
+       },
+       {
+        "icon": "coins",
+        "label": "Lương được đề nghị",
+        "cue": "mức lương"
+       },
+       {
+        "icon": "chart",
+        "label": "Giá mình từng mua",
+        "cue": "giá bạn"
+       }
+      ],
+      "line": "Tự ước lượng trước khi nghe.",
+      "line_cue": "bài học",
+      "cue": "giá niêm"
+     }
+    ]
+   },
+   "sources": [
+    "kahneman2011"
+   ]
+  },
+  {
+   "id": "b12",
+   "act": "story",
+   "narration": "Bài học thứ ba là một ván tung đồng xu. Sấp, bạn mất một trăm đô. Ngửa, bạn được một trăm năm mươi đô. Bạn có chơi không? Với phần lớn mọi người, nỗi sợ mất một trăm lớn hơn niềm hy vọng được một trăm năm mươi.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "coin",
+      "kicker": "Một ván tung đồng xu",
+      "line": "Sấp −100 đô · Ngửa +150 đô",
+      "line_cue": "sấp"
+     },
+     {
+      "type": "statement",
+      "kicker": "Phần lớn mọi người",
+      "text": "Bạn có chơi không?",
+      "highlight": [
+       "chơi"
+      ],
+      "cue": "bạn có"
+     },
+     {
+      "type": "trio",
+      "kicker": "Phần lớn mọi người",
+      "cross": false,
+      "cue": "với phần",
+      "items": [
+       {
+        "icon": "shield",
+        "label": "Sợ mất 100",
+        "cue": "nỗi sợ"
+       },
+       {
+        "icon": "star",
+        "label": "Mong được 150",
+        "cue": "niềm hy"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "kahneman2011"
+   ]
+  },
+  {
+   "id": "b13",
+   "act": "principle",
+   "narration": "Kahneman gọi đó là né tránh mất mát. Trong nhiều thí nghiệm, nỗi đau khi mất nặng khoảng một phẩy năm đến hai phẩy năm lần niềm vui khi được. Bài học thứ ba: nhìn cả ván bài. Đánh giá cả chuỗi quyết định, đừng chỉ nhìn một khoản lỗ.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stat",
+      "value": 2.5,
+      "from": 1.5,
+      "decimals": 1,
+      "prefix": "1,5 – ",
+      "suffix": "×",
+      "label": "Mất mát nặng hơn được",
+      "note": "ước tính từ nhiều thí nghiệm",
+      "cue": "một phẩy"
+     },
+     {
+      "type": "icon",
+      "icon": "scale",
+      "kicker": "Bài học 3 · Nhìn cả ván bài",
+      "line": "Cả chuỗi quyết định, không chỉ một khoản lỗ",
+      "line_cue": "đánh giá",
+      "cue": "bài học"
+     }
+    ]
+   },
+   "sources": [
+    "kahneman2011"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b14",
+   "act": "complication",
+   "narration": "Nhưng cuốn sách cũng có một chương đã lung lay. Chương về hiệu ứng mồi, priming, dựa trên nhiều nghiên cứu nhỏ mà sau này khó lặp lại. Năm hai nghìn mười bảy, chính Kahneman viết: tôi đã đặt quá nhiều niềm tin vào những nghiên cứu thiếu sức mạnh thống kê.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "halo",
+      "kicker": "Một chương lung lay",
+      "items": [
+       {
+        "name": "Hiệu ứng mồi",
+        "before": "2011 · chương 4",
+        "after": "KHÓ LẶP LẠI",
+        "cue": "khó lặp"
+       }
+      ],
+      "label": "Priming",
+      "label_cue": "priming"
+     },
+     {
+      "type": "quote",
+      "text": "Tôi đã đặt quá nhiều niềm tin vào những nghiên cứu thiếu sức mạnh thống kê.",
+      "by": "Daniel Kahneman (lược dịch)",
+      "year": "2017",
+      "cue": "năm hai"
+     }
+    ]
+   },
+   "sources": [
+    "schimmack2017",
+    "mindhacks2017"
+   ]
+  },
+  {
+   "id": "b15",
+   "act": "turn",
+   "narration": "Và một hiểu lầm phổ biến: hệ thống một và hai không phải hai vùng trong não. Kahneman gọi chúng là những nhân vật hư cấu, để dễ kể, dễ nhớ. Hãy đọc sách như tấm gương soi thói quen suy nghĩ, đừng đọc như sách giải phẫu.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Hiểu lầm phổ biến",
+      "text": "Hệ thống 1 và 2 là hai vùng não.",
+      "strike": "hai vùng não.",
+      "replace": "hai nhân vật hư cấu",
+      "strike_cue": "nhân vật"
+     },
+     {
+      "type": "icon",
+      "icon": "brain",
+      "kicker": "Đọc thế nào cho đúng",
+      "line": "Tấm gương, không phải bản đồ não",
+      "line_cue": "tấm gương",
+      "cue": "hãy đọc"
+     }
+    ]
+   },
+   "sources": [
+    "kahneman2011"
+   ]
+  },
+  {
+   "id": "b16",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Bạn đi xem một căn hộ. Người môi giới mở lời ngay: chủ nhà muốn bốn tỷ. Trước khi trả giá, bạn nên làm gì?",
+   "visual": {
+    "type": "question",
+    "question": "Môi giới mở lời: “Chủ nhà muốn 4 tỷ.” Bạn nên làm gì trước?",
+    "choices": [
+     "Trả bớt 10% từ con số 4 tỷ",
+     "Tự ước giá từ các căn tương tự, rồi mới nói",
+     "Đồng ý ngay kẻo mất"
+    ],
+    "answer": "B — cảnh giác con số đầu tiên, và chậm lại một nhịp.",
+    "think_seconds": 5
+   }
+  },
+  {
+   "id": "b17",
+   "act": "recap",
+   "narration": "Vậy là ba bài học từ Tư Duy Nhanh Và Chậm. Chậm lại trước quyết định lớn. Cảnh giác con số đầu tiên. Và nhìn cả ván bài.",
+   "visual": {
+    "type": "list",
+    "title": "Ba bài học",
+    "check": true,
+    "items": [
+     {
+      "text": "Chậm lại trước quyết định lớn",
+      "cue": "chậm lại"
+     },
+     {
+      "text": "Cảnh giác con số đầu tiên",
+      "cue": "cảnh giác"
+     },
+     {
+      "text": "Nhìn cả ván bài",
+      "cue": "và nhìn"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b18",
+   "act": "close",
+   "narration": "Quay lại quả bóng năm xu. Câu đố ấy không đo bạn thông minh đến đâu. Nó đo một khoảnh khắc: lúc bạn chịu dừng lại để hỏi, câu trả lời này từ đâu ra? Lần tới, khi một ý nghĩ bật ra quá nhanh, hãy mời hệ thống hai vào phòng.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Quả bóng giá 5 xu",
+      "text": "Không đo trí thông minh. Đo một khoảnh khắc dừng lại.",
+      "highlight": [
+       "dừng lại."
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "tea",
+      "steam": true,
+      "line": "Mời Hệ thống 2 vào phòng.",
+      "cue": "lần tới"
+     }
+    ]
+   },
+   "sources": [
+    "kahneman2011"
+   ]
+  },
+  {
+   "id": "b19",
+   "act": "close",
+   "narration": "Còn bạn, thiên kiến nào từng đánh lừa bạn nhiều nhất? Và bạn muốn mình review cuốn sách nào tiếp theo? Để lại bình luận cho mình nhé. Nếu thấy hay, lưu lại và gửi cho một người bạn. Hẹn gặp bạn.",
+   "visual": {
+    "type": "end",
+    "kicker": "Review sách · Tập 2",
+    "title": "Tư Duy Nhanh Và Chậm",
+    "ask": "Thiên kiến nào từng đánh lừa bạn nhiều nhất?",
+    "ask_hint": "Mỏ neo · Sợ mất · Cuốn sách bạn muốn xem tiếp",
+    "ask_cue": "còn bạn",
+    "cta": "Bình luận · Lưu lại · Gửi một người bạn",
+    "cta_cue": "nếu thấy",
+    "sources_line": "Nguồn: Kahneman, Thinking, Fast and Slow (2011) · Tversky & Kahneman, Science (1974) · Frederick (2005) · Replicability-Index (2017)",
+    "disclaimer": "Tóm tắt và cảm nhận cá nhân; số liệu theo sách, đã làm tròn.",
+    "sources_cue": "hẹn gặp"
+   }
+  }
+ ],
+ "pronounce": {}
+}

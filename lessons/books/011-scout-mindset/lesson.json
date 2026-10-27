@@ -1,0 +1,846 @@
+{
+ "meta": {
+  "series": "Review sách · Tập 11",
+  "title": "Tư Duy Truy Tìm Sự Thật",
+  "subtitle": "The Scout Mindset — Julia Galef (2021)",
+  "topic": "books",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt thích đọc sách, muốn nhìn mọi việc rõ hơn và quyết định tỉnh táo hơn",
+  "aspect": "4:3",
+  "target_minutes": [
+   3,
+   5
+  ],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
+  "learning_goals": [
+   "Kể lại vụ Dreyfus và vai trò của Georges Picquart như Julia Galef kể trong sách",
+   "Phân biệt tư duy người lính (bảo vệ niềm tin) và tư duy người trinh sát (vẽ bản đồ đúng)",
+   "Dùng câu hỏi 'điều gì là thật?', các phép thử đổi phe, và giữ bản sắc nhẹ trong một quyết định của chính mình"
+  ],
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người dẫn chương trình sách lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively. Measured with Whisper on 12 names: Vietnamese respellings scored 0.76, original spelling 0.95."
+ },
+ "sources": [
+  {
+   "id": "galef2021",
+   "cite": "Julia Galef, The Scout Mindset: Why Some People See Things Clearly and Others Don't, Portfolio, 13 Apr 2021 (ch. 1 'Two Types of Thinking' — Dreyfus, Picquart, Gilovich's 'Can I believe it? / Must I believe it?'; ch. 2 — what the soldier protects: comfort, self-esteem, morale; ch. 5 — thought experiments: double standard, outsider, conformity, selective skeptic, status quo; Part V 'Rethinking Identity' — hold your identity lightly)"
+  },
+  {
+   "id": "wiki_scout",
+   "cite": "Wikipedia, The Scout Mindset (publication 13 Apr 2021, Portfolio; scout vs soldier; Galef co-founded CFAR in 2012; host of Rationally Speaking)",
+   "url": "https://en.wikipedia.org/wiki/The_Scout_Mindset"
+  },
+  {
+   "id": "ea_outline",
+   "cite": "Effective Altruism Forum, 'Outline of Galef's Scout Mindset' (chapter-by-chapter outline: Dreyfus/Picquart, Gilovich, the five tests)",
+   "url": "https://forum.effectivealtruism.org/posts/HDAXztEbjJsyHLKP7/outline-of-galef-s-scout-mindset"
+  },
+  {
+   "id": "galef_ted",
+   "cite": "Julia Galef, 'Why you think you're right — even if you're wrong', TEDxPSU 2016 (Dreyfus affair; Picquart 'at least casually anti-Semitic')",
+   "url": "https://www.ted.com/talks/julia_galef_why_you_think_you_re_right_even_if_you_re_wrong"
+  },
+  {
+   "id": "picquart_bio",
+   "cite": "Georges Picquart: head of the Statistical Section from July 1895; found the 'petit bleu' addressed to Esterhazy in March 1896; sent to Tunisia late 1896; Minister of War 25 Oct 1906 – 24 Jul 1909 (Wikipedia 'Georges Picquart'; Chemins de mémoire, French Ministry of the Armed Forces)",
+   "url": "https://www.cheminsdememoire.gouv.fr/en/georges-picquart"
+  },
+  {
+   "id": "history_dreyfus",
+   "cite": "History.com, 'What Was the Dreyfus Affair?' (convicted 22 Dec 1894, life on Devil's Island; Picquart jailed; Rennes retrial and pardon 1899; annulment 12 Jul 1906; Picquart war minister 1906–1909)",
+   "url": "https://www.history.com/articles/what-was-the-dreyfus-affair"
+  },
+  {
+   "id": "ebsco_dreyfus",
+   "cite": "EBSCO Research Starters, 'French Court Declares Alfred Dreyfus Innocent of Treason' (12 Jul 1906)",
+   "url": "https://www.ebsco.com/research-starters/history/french-court-declares-alfred-dreyfus-innocent-treason"
+  },
+  {
+   "id": "vn_edition",
+   "cite": "Bản tiếng Việt 'Tư duy truy tìm sự thật' (Diễn đàn Doanh nghiệp, 'Sách hay cuối tuần', 12/06/2022)",
+   "url": "https://diendandoanhnghiep.vn/tu-duy-truy-tim-su-that-224208.html"
+  },
+  {
+   "id": "graham2009",
+   "cite": "Paul Graham, 'Keep Your Identity Small', 2009 (the essay Galef builds on in Part V)",
+   "url": "http://www.paulgraham.com/identity.html"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Hỏi: điều gì là thật?",
+   "line": "Đừng hỏi 'mình có được phép tin không?' hay 'mình có buộc phải tin không?': hỏi bằng chứng thật sự nói gì."
+  },
+  {
+   "name": "Thử đổi phe trong đầu",
+   "line": "Nếu bằng chứng ủng hộ phe kia, nếu người khác ở chỗ mình, nếu mọi người đổi ý: mình còn nghĩ vậy không?"
+  },
+  {
+   "name": "Giữ bản sắc thật nhẹ",
+   "line": "Quan điểm là một mô tả, không phải lá cờ phải bảo vệ đến cùng."
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Năm một nghìn tám trăm chín mươi tư, những sĩ quan giỏi nhất nước Pháp kết án sai một người vô tội.",
+   "visual": {
+    "type": "statement",
+    "kicker": "The Scout Mindset · Julia Galef",
+    "text": "Paris, 1894. Kết án sai một người vô tội.",
+    "highlight": [
+     "sai"
+    ]
+   },
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "sai",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "galef2021",
+    "history_dreyfus"
+   ]
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Họ không ngu. Phần lớn họ thật lòng tin mình đúng. Họ chỉ làm điều mà ai trong chúng ta cũng làm mỗi ngày. Pha một ấm trà nhé. Vài phút tới, bạn sẽ gặp hai kiểu tư duy, và ba bài học để nhìn mọi thứ rõ hơn.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Không phải vì…",
+      "cross": true,
+      "items": [
+       {
+        "icon": "brain",
+        "label": "Ngu ngốc",
+        "cue": "không ngu"
+       },
+       {
+        "icon": "mask",
+        "label": "Cố tình dối trá",
+        "cue": "phần lớn"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "tea",
+      "steam": true,
+      "line": "Pha một ấm trà nhé.",
+      "cue": "pha một"
+     },
+     {
+      "type": "statement",
+      "kicker": "Trong vài phút tới",
+      "text": "Hai kiểu tư duy. Ba bài học.",
+      "highlight": [
+       "Ba bài học."
+      ],
+      "cue": "vài phút"
+     }
+    ]
+   }
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Review sách · Tập 11",
+    "title": "Tư Duy Truy Tìm Sự Thật",
+    "subtitle": "The Scout Mindset — Julia Galef (2021)",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ],
+   "sources": [
+    "galef2021"
+   ]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Ta hay nghĩ người thông minh sẽ nhìn ra sự thật, chỉ cần đủ dữ kiện. Nhưng Julia Galef cho rằng điều quyết định không phải bạn thông minh đến đâu, mà là bạn đang muốn điều gì.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Điều ta hay tin",
+      "items": [
+       {
+        "icon": "brain",
+        "label": "Đủ thông minh",
+        "cue": "thông minh"
+       },
+       {
+        "icon": "book",
+        "label": "Đủ dữ kiện",
+        "cue": "dữ kiện"
+       }
+      ]
+     },
+     {
+      "type": "statement",
+      "kicker": "Julia Galef",
+      "text": "Thấy rõ nhờ thông minh hơn.",
+      "strike": "thông minh hơn.",
+      "replace": "muốn thấy sự thật",
+      "strike_cue": "muốn",
+      "cue": "nhưng julia"
+     }
+    ]
+   },
+   "sources": [
+    "galef2021",
+    "wiki_scout"
+   ]
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "Galef là người dẫn podcast Rationally Speaking, và đồng sáng lập Center for Applied Rationality năm hai nghìn mười hai. Năm hai nghìn hai mươi mốt, cô xuất bản The Scout Mindset. Ở Việt Nam, sách có tên Tư Duy Truy Tìm Sự Thật.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Julia Galef",
+      "initials": "JG",
+      "role": "Tác giả · người dẫn podcast",
+      "years": "Rationally Speaking · CFAR 2012"
+     },
+     {
+      "type": "book",
+      "title": "The Scout Mindset",
+      "author": "Julia Galef",
+      "year": "2021",
+      "kicker": "Tư Duy Truy Tìm Sự Thật",
+      "cue": "năm hai nghìn hai",
+      "facts": [
+       {
+        "big": "2021",
+        "text": "Sách ra đời",
+        "cue": "cô xuất"
+       },
+       {
+        "big": "VN",
+        "text": "Tư Duy Truy Tìm Sự Thật",
+        "cue": "ở việt"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "wiki_scout",
+    "galef2021",
+    "vn_edition"
+   ]
+  },
+  {
+   "id": "b03",
+   "act": "context",
+   "narration": "Galef chia tư duy làm hai kiểu. Người lính: mục tiêu là bảo vệ niềm tin của mình, như giữ một pháo đài. Người trinh sát: mục tiêu là vẽ một tấm bản đồ đúng nhất, kể cả khi nó không như ý.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Hai kiểu tư duy",
+      "items": [
+       {
+        "icon": "shield",
+        "label": "Người lính: bảo vệ",
+        "cue": "người lính"
+       },
+       {
+        "icon": "binoculars",
+        "label": "Trinh sát: khám phá",
+        "cue": "người trinh"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "compass",
+      "kicker": "Người trinh sát",
+      "line": "Một tấm bản đồ đúng nhất",
+      "cue": "vẽ một"
+     }
+    ]
+   },
+   "sources": [
+    "galef2021",
+    "wiki_scout"
+   ]
+  },
+  {
+   "id": "b04",
+   "act": "story",
+   "narration": "Quay lại năm một nghìn tám trăm chín mươi tư. Một người dọn dẹp làm việc cho tình báo Pháp lấy được một mảnh giấy xé vụn trong sứ quán Đức ở Paris. Trên đó liệt kê những tài liệu quân sự sắp được trao cho Đức.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Paris · 1894",
+      "text": "Một mảnh giấy xé vụn trong sứ quán Đức.",
+      "highlight": [
+       "mảnh giấy"
+      ]
+     },
+     {
+      "type": "trio",
+      "kicker": "Trên mảnh giấy",
+      "cue": "trên đó",
+      "items": [
+       {
+        "icon": "mask",
+        "label": "Có kẻ phản bội",
+        "cue": "liệt kê"
+       },
+       {
+        "icon": "people",
+        "label": "Trong bộ tham mưu?",
+        "cue": "sắp được"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "galef2021",
+    "history_dreyfus"
+   ]
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Nghi ngờ đổ ngay lên Alfred Dreyfus, sĩ quan Do Thái duy nhất trong bộ tổng tham mưu. Chữ viết chỉ hơi giống. Một chuyên gia nói không khớp, họ gạt đi. Không tìm thấy gì trong nhà anh, họ bảo anh đã kịp tiêu hủy.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Alfred Dreyfus",
+      "initials": "AD",
+      "role": "Đại úy pháo binh",
+      "years": "1859 – 1935"
+     },
+     {
+      "type": "trio",
+      "kicker": "Bằng chứng được đọc thế nào",
+      "cue": "chữ viết",
+      "items": [
+       {
+        "icon": "scale",
+        "label": "Chữ hơi giống",
+        "cue": "chữ viết"
+       },
+       {
+        "icon": "people",
+        "label": "Chuyên gia bị gạt đi",
+        "cue": "một chuyên"
+       },
+       {
+        "icon": "hourglass",
+        "label": "Không thấy gì = “đã tiêu hủy”",
+        "cue": "không tìm"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "galef2021",
+    "ea_outline"
+   ]
+  },
+  {
+   "id": "b06",
+   "act": "story",
+   "narration": "Tháng mười hai năm ấy, Dreyfus bị kết tội phản quốc. Anh bị tước quân hàm trước đám đông, rồi bị đày ra Đảo Quỷ, ngoài khơi Guyane thuộc Pháp, với bản án chung thân.",
+   "visual": {
+    "type": "timeline",
+    "title": "Vụ án Dreyfus",
+    "events": [
+     {
+      "year": "12/1894",
+      "text": "Kết tội phản quốc",
+      "cue": "tháng mười"
+     },
+     {
+      "year": "1/1895",
+      "text": "Bị tước quân hàm",
+      "cue": "tước"
+     },
+     {
+      "year": "1895",
+      "text": "Đày ra Đảo Quỷ · chung thân",
+      "cue": "đảo quỷ"
+     }
+    ]
+   },
+   "sources": [
+    "history_dreyfus",
+    "galef2021"
+   ]
+  },
+  {
+   "id": "b07",
+   "act": "story",
+   "narration": "Galef mượn một ý của nhà tâm lý học Tom Gilovich. Khi muốn tin điều gì, ta hỏi: mình có được phép tin không? Một lý do là đủ. Khi không muốn tin, ta hỏi: mình có buộc phải tin không? Và lý do nào cũng chưa đủ.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "scale",
+      "kicker": "Tom Gilovich",
+      "line": "Hai câu hỏi, hai cán cân",
+      "line_cue": "khi muốn"
+     },
+     {
+      "type": "compare",
+      "title": "Cùng một bằng chứng",
+      "cue": "một lý",
+      "left": {
+       "title": "Khi muốn tin",
+       "items": [
+        "“Có được phép tin không?”",
+        "Một lý do là đủ"
+       ]
+      },
+      "right": {
+       "title": "Khi không muốn tin",
+       "items": [
+        "“Có buộc phải tin không?”",
+        "Lý do nào cũng chưa đủ"
+       ]
+      }
+     }
+    ]
+   },
+   "sources": [
+    "galef2021",
+    "ea_outline"
+   ]
+  },
+  {
+   "id": "b08",
+   "act": "story",
+   "narration": "Tháng bảy năm một nghìn tám trăm chín mươi lăm, Georges Picquart lên nắm bộ phận tình báo. Năm sau, ông tìm thấy một bức thư gửi thiếu tá Ferdinand Esterhazy. Ông đặt chữ của Esterhazy cạnh mảnh giấy cũ: giống hệt.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Georges Picquart",
+      "initials": "GP",
+      "role": "Trưởng tình báo · 7/1895",
+      "years": "1854 – 1914"
+     },
+     {
+      "type": "statement",
+      "kicker": "1896 · một bức thư",
+      "text": "Chữ của Esterhazy = mảnh giấy cũ.",
+      "highlight": [
+       "="
+      ],
+      "cue": "năm sau"
+     },
+     {
+      "type": "icon",
+      "icon": "target",
+      "line": "Giống hệt.",
+      "cue": "giống hệt"
+     }
+    ]
+   },
+   "sources": [
+    "picquart_bio",
+    "galef2021"
+   ]
+  },
+  {
+   "id": "b09",
+   "act": "story",
+   "narration": "Picquart báo lên cấp trên. Họ đáp lại bằng cách điều ông đi Tunisia, rồi sau đó bắt giam ông. Còn Esterhazy được tòa án binh tuyên trắng án. Vì tin Esterhazy có tội nghĩa là thừa nhận cả quân đội đã sai.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "halo",
+      "kicker": "Phần thưởng cho sự thật",
+      "items": [
+       {
+        "name": "Picquart",
+        "before": "Trưởng tình báo",
+        "after": "ĐIỀU ĐI · BẮT GIAM",
+        "cue": "điều ông"
+       },
+       {
+        "name": "Esterhazy",
+        "before": "Thủ phạm thật",
+        "after": "TRẮNG ÁN · 1898",
+        "cue": "trắng án"
+       }
+      ]
+     },
+     {
+      "type": "statement",
+      "kicker": "Vì sao",
+      "text": "Thừa nhận là cả quân đội đã sai.",
+      "highlight": [
+       "đã sai."
+      ],
+      "cue": "vì tin"
+     }
+    ]
+   },
+   "sources": [
+    "picquart_bio",
+    "history_dreyfus",
+    "galef2021"
+   ]
+  },
+  {
+   "id": "b10",
+   "act": "principle",
+   "narration": "Bài học thứ nhất: hỏi điều gì là thật. Picquart không hỏi kết luận nào có lợi cho quân đội, cũng không hỏi mình có được phép tin không. Ông hỏi: bằng chứng thật sự nói gì?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "swap",
+      "kicker": "Bài học 1 · Hỏi: điều gì là thật?",
+      "from": {
+       "label": "Có lợi cho phe mình?",
+       "icon": "shield"
+      },
+      "to": {
+       "label": "Bằng chứng nói gì?",
+       "icon": "binoculars",
+       "cue": "ông hỏi"
+      },
+      "cue": "picquart không"
+     },
+     {
+      "type": "statement",
+      "kicker": "Câu hỏi của người trinh sát",
+      "text": "Điều gì là thật?",
+      "highlight": [
+       "thật?"
+      ],
+      "cue": "bằng chứng"
+     }
+    ]
+   },
+   "sources": [
+    "galef2021"
+   ]
+  },
+  {
+   "id": "b11",
+   "act": "story",
+   "narration": "Sự thật đến chậm. Năm một nghìn tám trăm chín mươi chín, Dreyfus được ân xá. Năm một nghìn chín trăm lẻ sáu, tòa án tối cao minh oan cho ông. Cũng năm đó, Picquart trở thành Bộ trưởng Chiến tranh.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Vụ Dreyfus",
+      "text": "Sự thật đến chậm.",
+      "highlight": [
+       "chậm."
+      ]
+     },
+     {
+      "type": "ladder",
+      "levels": [
+       "Picquart bị bắt giam · 1898",
+       "Dreyfus được ân xá · 1899",
+       "Dreyfus được minh oan · 1906",
+       "Picquart: Bộ trưởng Chiến tranh"
+      ],
+      "top_cue": "picquart trở",
+      "tags": [
+       {
+        "text": "12/7/1906",
+        "cue": "minh oan"
+       },
+       {
+        "text": "10/1906",
+        "cue": "bộ trưởng"
+       }
+      ],
+      "cue": "năm một"
+     }
+    ]
+   },
+   "sources": [
+    "history_dreyfus",
+    "ebsco_dreyfus",
+    "picquart_bio"
+   ]
+  },
+  {
+   "id": "b12",
+   "act": "complication",
+   "narration": "Nhưng đây là chi tiết khiến câu chuyện đáng nhớ. Picquart không phải người bênh vực người Do Thái. Chính Galef kể rằng ông cũng mang định kiến bài Do Thái, như nhiều sĩ quan thời ấy. Ông chỉ không để định kiến thắng bằng chứng.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Huyền thoại & sự thật",
+      "text": "Người hùng không hề có định kiến.",
+      "strike": "không hề có định kiến.",
+      "replace": "có định kiến, vẫn chọn bằng chứng",
+      "strike_cue": "chính galef"
+     },
+     {
+      "type": "icon",
+      "icon": "scale",
+      "line": "Bằng chứng nặng hơn định kiến",
+      "cue": "ông chỉ"
+     }
+    ]
+   },
+   "sources": [
+    "galef2021",
+    "galef_ted"
+   ]
+  },
+  {
+   "id": "b13",
+   "act": "principle",
+   "narration": "Bài học thứ hai: thử đổi phe trong đầu. Galef gợi ý vài phép thử. Nếu bằng chứng này ủng hộ phe bên kia, mình có tin không? Nếu người khác ở chỗ mình, mình sẽ khuyên họ gì? Nếu mọi người đổi ý, mình còn nghĩ vậy không?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Bài học 2",
+      "text": "Thử đổi phe trong đầu.",
+      "highlight": [
+       "đổi phe"
+      ]
+     },
+     {
+      "type": "trio",
+      "kicker": "Galef gợi ý vài phép thử",
+      "items": [
+       {
+        "icon": "scale",
+        "label": "Bằng chứng cho phe kia?",
+        "cue": "nếu bằng"
+       },
+       {
+        "icon": "people",
+        "label": "Người ngoài sẽ làm gì?",
+        "cue": "nếu người"
+       },
+       {
+        "icon": "compass",
+        "label": "Không ai đồng tình?",
+        "cue": "nếu mọi"
+       }
+      ],
+      "cue": "nếu bằng"
+     }
+    ]
+   },
+   "sources": [
+    "galef2021",
+    "ea_outline"
+   ]
+  },
+  {
+   "id": "b14",
+   "act": "principle",
+   "narration": "Bài học thứ ba: giữ bản sắc thật nhẹ. Khi một quan điểm trở thành con người bạn, mỗi lần nó bị thách thức, bạn sẽ thấy như chính mình bị tấn công. Hãy coi nhãn mác là một mô tả, đừng coi nó là lá cờ phải giữ đến cùng.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "shield",
+      "kicker": "Bài học 3 · Giữ bản sắc thật nhẹ",
+      "line": "Quan điểm = con người mình?",
+      "line_cue": "khi một"
+     },
+     {
+      "type": "statement",
+      "kicker": "Paul Graham & Julia Galef",
+      "text": "Nhãn mác là mô tả, không phải lá cờ.",
+      "highlight": [
+       "mô tả,"
+      ],
+      "cue": "hãy coi"
+     }
+    ]
+   },
+   "sources": [
+    "galef2021",
+    "graham2009"
+   ]
+  },
+  {
+   "id": "b15",
+   "act": "turn",
+   "narration": "Vậy tư duy người lính luôn xấu sao? Không hẳn. Galef thừa nhận nó mang lại nhiều thứ: sự an tâm, lòng tự trọng, tinh thần. Nhưng cô cho rằng ta có thể có những điều đó mà không cần tự lừa mình.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Vậy",
+      "text": "Người lính luôn sai?",
+      "highlight": [
+       "sai?"
+      ]
+     },
+     {
+      "type": "trio",
+      "kicker": "Người lính bảo vệ…",
+      "cue": "galef thừa",
+      "items": [
+       {
+        "icon": "tea",
+        "label": "Sự an tâm",
+        "cue": "sự an"
+       },
+       {
+        "icon": "star",
+        "label": "Lòng tự trọng",
+        "cue": "lòng tự"
+       },
+       {
+        "icon": "rocket",
+        "label": "Tinh thần",
+        "cue": "tinh thần"
+       }
+      ],
+      "line": "Có được, mà không tự lừa mình",
+      "line_cue": "nhưng cô"
+     }
+    ]
+   },
+   "sources": [
+    "galef2021",
+    "wiki_scout"
+   ]
+  },
+  {
+   "id": "b16",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Bạn đang giữ một cổ phiếu mình rất tin. Một bài phân tích chỉ ra ba điểm yếu của công ty. Phản ứng nào giống người trinh sát nhất?",
+   "visual": {
+    "type": "question",
+    "question": "Một bài phân tích chỉ ra 3 điểm yếu của cổ phiếu bạn tin. Trinh sát sẽ…",
+    "choices": [
+     "Tìm ngay lý do để bác bỏ",
+     "Hỏi: nếu bài này khen, mình có tin lý lẽ ấy không?",
+     "Lờ đi, người viết chẳng hiểu gì"
+    ],
+    "answer": "B — thử đổi phe, rồi hỏi: điều gì là thật?",
+    "think_seconds": 5
+   }
+  },
+  {
+   "id": "b17",
+   "act": "recap",
+   "narration": "Vậy là ba bài học từ Tư Duy Truy Tìm Sự Thật. Hỏi: điều gì là thật? Thử đổi phe trong đầu. Và giữ bản sắc thật nhẹ.",
+   "visual": {
+    "type": "list",
+    "title": "Ba bài học",
+    "check": true,
+    "items": [
+     {
+      "text": "Hỏi: điều gì là thật?",
+      "cue": "hỏi"
+     },
+     {
+      "text": "Thử đổi phe trong đầu",
+      "cue": "thử đổi"
+     },
+     {
+      "text": "Giữ bản sắc thật nhẹ",
+      "cue": "và giữ"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b18",
+   "act": "close",
+   "narration": "Picquart không phải thánh nhân. Nhưng khi bằng chứng chỉ sang hướng khác, ông đi theo bằng chứng. Có lẽ đó là điều đáng học nhất: không cần hoàn hảo, chỉ cần muốn thấy đúng. Hôm nay, bạn đang là người lính, hay người trinh sát?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Picquart",
+      "text": "Không cần hoàn hảo. Chỉ cần muốn thấy đúng.",
+      "highlight": [
+       "muốn thấy đúng."
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "binoculars",
+      "line": "Lính, hay trinh sát?",
+      "cue": "hôm nay"
+     }
+    ]
+   },
+   "sources": [
+    "galef2021"
+   ]
+  },
+  {
+   "id": "b19",
+   "act": "close",
+   "narration": "Còn bạn, có niềm tin nào bạn từng phải đổi, dù rất khó? Và bạn muốn mình review cuốn sách nào tiếp theo? Để lại bình luận cho mình nhé. Nếu thấy hay, lưu lại và gửi cho một người bạn. Hẹn gặp bạn.",
+   "visual": {
+    "type": "end",
+    "kicker": "Review sách · Tập 11",
+    "title": "Tư Duy Truy Tìm Sự Thật",
+    "ask": "Niềm tin nào bạn từng phải đổi, dù rất khó?",
+    "ask_hint": "Một niềm tin · một quyết định · cuốn sách bạn muốn xem tiếp",
+    "ask_cue": "còn bạn",
+    "cta": "Bình luận · Lưu lại · Gửi một người bạn",
+    "cta_cue": "nếu thấy",
+    "sources_line": "Nguồn: Galef, The Scout Mindset (2021) · Galef, TEDxPSU (2016) · lịch sử vụ Dreyfus: History.com, EBSCO, Chemins de mémoire",
+    "disclaimer": "Tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư.",
+    "sources_cue": "hẹn gặp"
+   }
+  }
+ ],
+ "pronounce": {}
+}
