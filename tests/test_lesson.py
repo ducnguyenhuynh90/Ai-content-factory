@@ -322,4 +322,5 @@ def test_gate_vietnamese_numbers():
     said = "Một nghìn bốn trăm ba mươi lăm công ty, năm hai nghìn lẻ một, ba mươi sáu phần trăm, sáu phẩy chín lần."
     assert g.misread_numbers(said, "1.435 công ty, năm 2001, 36%, 6,9 lần.") == []
     assert g.misread_numbers(said, "1 435 công ty, năm 2001, 36 %, 6 ,9 lần.") == []
+    assert g.misread_numbers("hơn chín mươi nghìn đô mỗi tháng.", "hơn 90 .000 đô mỗi tháng.") == []
     assert g.misread_numbers(said, "1, 4, 35 công ty, năm 2001, 36%, 6,9 lần.") == ["một nghìn bốn trăm ba mươi năm"]

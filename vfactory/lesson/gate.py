@@ -132,7 +132,7 @@ def _vi_digits_to_words(text: str) -> str:
         w = vi_number(int(re.sub(r"\D", "", whole)))
         return w + (" phẩy " + " ".join(VI_DIGITS[int(c)] for c in frac) if frac else "")
     text = text.replace("%", " phần trăm")
-    return re.sub(r"(\d{1,3}(?:[. ]\d{3})+(?!\d)|\d+)(?:\s?,(\d+))?", one, text)
+    return re.sub(r"(\d{1,3}(?: ?[. ]\d{3})+(?!\d)|\d+)(?:\s?,(\d+))?", one, text)
 
 
 def _vi_canon(tokens: list[str]) -> list[str]:

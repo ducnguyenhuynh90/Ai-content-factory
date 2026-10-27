@@ -29,7 +29,37 @@
   "captions": true,
   "voice_seed": 99,
   "pronounce_note": "English names stay in English: OmniVoice reads them natively. Measured with Whisper on 12 names: Vietnamese respellings scored 0.76, original spelling 0.95.",
-  "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư."
+  "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư.",
+  "brief": {
+   "target_viewer": "Người Việt 20–40 tuổi, tò mò, thích đọc sách, mới bắt đầu tiết kiệm và đầu tư; có thể đã nghe tên Tâm Lý Học Về Tiền nhưng chưa đọc; tin rằng làm giàu cần giỏi tính toán, bằng cấp hoặc một mã cổ phiếu đúng (giả định của người gác cổng, chủ kênh xác nhận lại)",
+   "format": "Phân tích sách (book analysis), 4–5 phút, 4:3, minh họa icon vẽ tay, một giọng đọc",
+   "central_question": "Vì sao một người lao công để lại hơn tám triệu đô, còn một giám đốc Merrill Lynch học Harvard lại phá sản, và điều đó nói gì về cách mình cư xử với tiền?",
+   "transformation": "Trước khi xem, họ nghĩ làm giàu là chuyện trí tuệ và kiến thức. Sau khi xem, họ kể lại được câu chuyện Ronald Read và Richard Fuscone, giải thích ba ý (biết thế nào là đủ, lãi kép cần thời gian, chừa chỗ cho sai lầm), nhận ra giới hạn của một câu chuyện thành công (người thắng ta nhìn thấy), và chọn được phương án có khoảng đệm khi được tăng lương.",
+   "discovery_goal": "Tìm kiếm (\"Tâm Lý Học Về Tiền tóm tắt\", \"The Psychology of Money review\", \"Morgan Housel\", \"Ronald Read\") và đề xuất từ video sách/tài chính cá nhân; khán giả của tập 1 và 2",
+   "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn clip tiếp theo về cuốn sách nào?\" (lựa chọn của chủ kênh)",
+   "share_recipient": "Một người bạn vừa được tăng lương hoặc mới đi làm, đang muốn thuê nhà đắt hơn hay vay mua xe: câu chuyện Fuscone và câu hỏi tăng lương hai mươi phần trăm nói đúng lựa chọn của họ",
+   "evidence": "Housel 2020 (Lời mở đầu, ch. 2, 3, 4, Room for Error); AP/NBC News và Rutland Herald 2015 (Ronald Read); CNBC/Entrepreneur trích WSJ 2015 (95 mã); Vonnegut, The New Yorker 2005; CNBC 2024 và TIP351 (Buffett sau 65 tuổi). Chi tiết về Fuscone chỉ có nguồn là sách (và LittleSis, thứ cấp). Xem gate/claims.md.",
+   "constraints": "4–5 phút, 4:3, icon vẽ (không footage, không khuôn mặt người thật), một giọng đọc OmniVoice seed 99 speed 0.88, tên tiếng Anh giữ nguyên chính tả, số đọc bằng chữ, không khuyến nghị đầu tư, giữ lời miễn trừ"
+  },
+  "youtube": {
+   "title": "Tâm Lý Học Về Tiền: vì sao thông minh thôi chưa đủ?",
+   "thumbnail_text": "Lao công: 8 triệu $. Giám đốc: phá sản.",
+   "description": "Một người lao công ở Vermont để lại khoảng tám triệu đô. Một giám đốc Merrill Lynch học Harvard thì phá sản. Từ hai câu chuyện mở đầu The Psychology of Money (Tâm Lý Học Về Tiền) của Morgan Housel, video đi qua ba bài học: biết thế nào là đủ, lãi kép cần thời gian, chừa chỗ cho sai lầm, và lời cảnh báo của chính tác giả về những câu chuyện thành công quá đẹp.\n\nNội dung giáo dục, không phải lời khuyên đầu tư. Số liệu theo sách và báo chí, bằng đô la Mỹ danh nghĩa, đã làm tròn. Chi tiết về Richard Fuscone theo lời kể trong sách.\n\nChương:\n0:00 Lao công để lại 8 triệu đô, giám đốc phá sản\n0:18 Điều ta hay tin: làm giàu là chuyện toán học\n0:31 Morgan Housel và cuốn sách\n0:46 Ronald Read, người lao công ở Vermont\n1:26 Richard Fuscone, giám đốc Merrill Lynch\n1:58 Vì sao người không bằng cấp lại thắng?\n2:09 Bài học 1: biết thế nào là đủ\n2:42 Bài học 2: lãi kép cần thời gian\n3:11 Bài học 3: chừa chỗ cho sai lầm\n3:26 Cẩn thận với câu chuyện quá đẹp\n3:42 Vậy bài học là gì?\n3:59 Thử một chút: được tăng lương 20%\n4:16 Ba bài học và câu hỏi cho bạn\n\nNguồn:\n- Morgan Housel, The Psychology of Money, Harriman House, 2020 (Lời mở đầu; ch. 2, 3, 4; Room for Error); bản tiếng Việt: Tâm Lý Học Về Tiền: https://harriman-house.com/psychologyofmoney\n- AP / NBC News, 02/2015, Ronald Read: https://www.nbcnews.com/news/us-news/vermont-ex-janitor-bequeaths-secret-millions-library-hospital-n301396\n- Rutland Herald, 2015: https://www.rutlandherald.com/news/145-frugal-146-man-leaves-6-million-in-bequests/article_f3ac1462-837b-5a70-a0d6-fa4e09d7e9a8.html\n- CNBC / Entrepreneur (trích The Wall Street Journal 2015, 95 mã cổ phiếu): https://www.entrepreneur.com/article/281646\n- Kurt Vonnegut, \"Joe Heller\", The New Yorker, 05/2005\n- CNBC, 03/05/2024, tài sản của Buffett sau tuổi 65: https://www.cnbc.com/2024/05/03/most-of-warren-buffetts-wealth-came-after-age-65-heres-why.html\n- The Investor's Podcast TIP351 (phỏng vấn Morgan Housel): https://www.theinvestorspodcast.com/episodes/psychology-of-money-w-morgan-housel/\n\nBạn muốn clip tiếp theo về cuốn sách nào? Để lại bình luận nhé.",
+   "tags": [
+    "Tâm Lý Học Về Tiền",
+    "The Psychology of Money",
+    "Morgan Housel",
+    "review sách",
+    "tóm tắt sách",
+    "Ronald Read",
+    "tài chính cá nhân",
+    "lãi kép",
+    "biết đủ",
+    "quỹ dự phòng",
+    "thiên kiến người sống sót",
+    "đầu tư dài hạn"
+   ]
+  }
  },
  "sources": [
   {
@@ -92,61 +122,25 @@
    "act": "hook",
    "narration": "Một người lao công để lại tám triệu đô. Một giám đốc Merrill Lynch thì phá sản.",
    "visual": {
-    "type": "hook",
-    "lines": [
-     "Lao công: 8 triệu $.",
-     "Giám đốc: phá sản."
-    ],
-    "crash_cue": "phá sản",
-    "points": [
-     [
-      0,
-      1.0
-     ],
-     [
-      1,
-      1.5
-     ],
-     [
-      2,
-      2.3
-     ],
-     [
-      3,
-      3.3
-     ],
-     [
-      4,
-      4.6
-     ],
-     [
-      5,
-      6.0
-     ],
-     [
-      6,
-      7.2
-     ],
-     [
-      7,
-      8.0
-     ],
-     [
-      8,
-      4.2
-     ],
-     [
-      9,
-      1.6
-     ],
-     [
-      10,
-      0.6
-     ]
-    ],
-    "peak_label": "2008",
-    "end_label": "phá sản",
-    "kicker": "The Psychology of Money · Morgan Housel"
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "coins",
+      "motion": "grow",
+      "kicker": "The Psychology of Money · Morgan Housel",
+      "line": "Lao công: 8 triệu $."
+     },
+     {
+      "type": "icon",
+      "icon": "house",
+      "kicker": "Merrill Lynch · Harvard · MBA",
+      "line": "Giám đốc: phá sản.",
+      "motion": "shake",
+      "motion_cue": "phá sản",
+      "cue": "một giám"
+     }
+    ]
    },
    "sfx": [
     {
@@ -267,7 +261,7 @@
        "cue": "hành vi"
       },
       "line": "Và hành vi khó dạy hơn nhiều.",
-      "line_cue": "khó dạy"
+      "line_cue": "và hành"
      }
     ]
    },
@@ -442,11 +436,11 @@
       ]
      },
      {
-      "type": "icon",
-      "icon": "pie",
-      "kicker": "Theo The Wall Street Journal",
-      "line": "≥ 95 mã cổ phiếu lúc qua đời",
-      "line_cue": "chín mươi",
+      "type": "stat",
+      "value": 95,
+      "prefix": "≥ ",
+      "label": "Theo The Wall Street Journal",
+      "note": "mã cổ phiếu ông nắm lúc qua đời",
       "cue": "theo the"
      }
     ]
@@ -459,7 +453,7 @@
   {
    "id": "b06",
    "act": "story",
-   "narration": "Giờ gặp người thứ hai. Richard Fuscone học Harvard, có bằng MBA, từng là lãnh đạo cấp cao ở Merrill Lynch. Ông nghỉ hưu sớm, rồi vay nặng để mở rộng một biệt thự ở Greenwich, với mười một phòng tắm và chi phí hơn chín mươi nghìn đô mỗi tháng.",
+   "narration": "Giờ gặp người thứ hai trong sách. Richard Fuscone học Harvard, có bằng MBA, từng là lãnh đạo cấp cao ở Merrill Lynch. Ông nghỉ hưu sớm, rồi vay nặng để mở rộng một biệt thự ở Greenwich, với mười một phòng tắm, và riêng tiền duy trì đã hơn một triệu đô mỗi năm.",
    "visual": {
     "type": "shots",
     "shots": [
@@ -472,7 +466,7 @@
      },
      {
       "type": "trio",
-      "kicker": "Biệt thự ở Greenwich",
+      "kicker": "Theo sách · biệt thự ở Greenwich",
       "cue": "ông nghỉ",
       "items": [
        {
@@ -483,7 +477,7 @@
        {
         "icon": "house",
         "label": "Biệt thự · 11 phòng tắm",
-        "cue": "mười một"
+        "cue": "mở rộng"
        }
       ]
      },
@@ -491,18 +485,19 @@
       "type": "icon",
       "icon": "coins",
       "motion": "sink",
-      "motion_cue": "mỗi tháng",
-      "kicker": "Chi phí",
-      "line": "> 90.000 $ mỗi tháng",
-      "line_cue": "chín mươi",
-      "cue": "chín mươi"
+      "motion_cue": "mỗi năm",
+      "kicker": "Tiền duy trì · > 90.000 $ mỗi tháng",
+      "line": "> 1 triệu $ mỗi năm",
+      "line_cue": "hơn một",
+      "cue": "và riêng"
      }
     ]
    },
    "sources": [
     "housel2020",
     "littlesis"
-   ]
+   ],
+   "take": 2
   },
   {
    "id": "b07",
@@ -620,12 +615,12 @@
       "icon": "target",
       "kicker": "Bài học 1 · Biết thế nào là đủ",
       "line": "Cột mốc ngừng dịch chuyển.",
-      "line_cue": "cột mốc"
+      "line_cue": "khó nhất"
      },
      {
       "type": "swap",
       "kicker": "Một cuộc đổi không đáng",
-      "cue": "fuscone",
+      "cue": "đã liều",
       "from": {
        "label": "Thứ có & cần",
        "icon": "shield"
@@ -664,7 +659,7 @@
       "name": "Warren Buffett",
       "initials": "WB",
       "role": "Berkshire Hathaway",
-      "years": "≈ 84,5 tỷ $ (2020)"
+      "years": "≈ 84,5 tỷ $ · lúc Housel viết sách"
      },
      {
       "type": "trio",
@@ -679,11 +674,11 @@
        {
         "icon": "coins",
         "label": "Sau tuổi 65: ≈ 81 tỷ $",
-        "cue": "sinh nhật"
+        "cue": "mươi mốt"
        }
       ],
       "line": "≈ 96% đến sau sinh nhật thứ 65",
-      "line_cue": "sáu mươi"
+      "line_cue": "đến sau"
      }
     ]
    },
@@ -747,7 +742,7 @@
       "icon": "shield",
       "kicker": "Bài học 3 · Chừa chỗ cho sai lầm",
       "line": "Fuscone thiếu một khoảng đệm.",
-      "line_cue": "ông thiếu"
+      "line_cue": "trí tuệ"
      },
      {
       "type": "trio",
@@ -777,7 +772,7 @@
       "kicker": "Housel khuyên",
       "line": "Kế hoạch cho cả lúc không như ý.",
       "line_cue": "hãy lên",
-      "cue": "housel"
+      "cue": "khuyên"
      }
     ]
    },
@@ -862,7 +857,7 @@
      {
       "type": "trio",
       "kicker": "Housel viết: không hẳn là…",
-      "cue": "housel",
+      "cue": "viết",
       "items": [
        {
         "icon": "coin",
@@ -993,19 +988,17 @@
   {
    "id": "b19",
    "act": "close",
-   "narration": "Còn bạn, cuốn sách về tiền nào bạn muốn mình review tiếp theo? Kể cho mình nghe trong phần bình luận nhé. Nếu thấy có ích, lưu lại và gửi cho một người bạn. Hẹn gặp bạn.",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
    "visual": {
     "type": "end",
     "kicker": "Review sách · Tập 3",
     "title": "Tâm Lý Học Về Tiền",
-    "ask": "Cuốn sách về tiền nào bạn muốn nghe tiếp?",
+    "ask": "Bạn muốn clip tiếp theo về cuốn sách nào?",
     "ask_hint": "Một cuốn sách · một nhà đầu tư · một thói quen tiền bạc",
     "ask_cue": "còn bạn",
-    "cta": "Bình luận · Lưu lại · Gửi một người bạn",
-    "cta_cue": "nếu thấy",
-    "sources_line": "Nguồn: Housel, The Psychology of Money (2020) · AP/NBC News & Rutland Herald 2015 · Vonnegut, The New Yorker 2005 · CNBC 2024",
+    "sources_line": "Nguồn: Housel, The Psychology of Money (2020) · AP/NBC News 2015 · CNBC 2024 · chi tiết trong mô tả",
     "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư. Số liệu theo sách và báo chí, đã làm tròn.",
-    "sources_cue": "hẹn gặp"
+    "sources_cue": "còn bạn"
    }
   }
  ],

@@ -1,5 +1,5 @@
 # Tâm Lý Học Về Tiền
-_Review sách · Tập 3 · 872 words · ~3.75 min · 4:3_
+_Review sách · Tập 3 · 869 words · ~3.74 min · 4:3_
 
 ## Learning goals
 - Kể lại được câu chuyện Ronald Read và Richard Fuscone, và vì sao Housel mở sách bằng nó
@@ -14,7 +14,7 @@ _Review sách · Tập 3 · 872 words · ~3.75 min · 4:3_
 ## Script
 | # | act | narration | on screen |
 |---|---|---|---|
-| h1 | hook | Một người lao công để lại tám triệu đô. Một giám đốc Merrill Lynch thì phá sản. | hook: hook |
+| h1 | hook | Một người lao công để lại tám triệu đô. Một giám đốc Merrill Lynch thì phá sản. | shots: shots |
 | h2 | context | Không phải vì bằng cấp. Cũng không nhờ một mã cổ phiếu thần kỳ. Đến cuối clip, bạn sẽ có ba bài học về tiền, và không cần một công thức nào cả. | shots: shots |
 | t0 | context |  | title: Tâm Lý Học Về Tiền |
 | b01 | misconception | Chúng ta hay nghĩ làm giàu là chuyện của toán học. Giỏi tính hơn. Đọc nhiều biểu đồ hơn. Biết nhiều hơn. Morgan Housel cho rằng tiền là chuyện của hành vi, và hành vi thì khó dạy hơn nhiều. | shots: shots |
@@ -22,7 +22,7 @@ _Review sách · Tập 3 · 872 words · ~3.75 min · 4:3_
 | b03 | story | Hãy gặp Ronald Read, ở bang Vermont, nước Mỹ. Ông sửa xe, bơm xăng khoảng hai mươi lăm năm, rồi làm lao công ở cửa hàng J.C. Penney mười bảy năm. Không thừa kế. Không trúng số. _(estimate)_ | shots: shots |
 | b04 | story | Năm hai nghìn mười bốn, ông mất ở tuổi chín mươi hai. Cả thị trấn sững sờ: ông để lại hơn tám triệu đô la. Hơn sáu triệu trong số đó được tặng cho bệnh viện và thư viện địa phương. | shots: shots |
 | b05 | story | Bí quyết của ông? Chẳng có gì bí ẩn. Ông tiết kiệm từng chút, mua cổ phiếu của những công ty lớn, quen thuộc, rồi giữ rất lâu. Theo The Wall Street Journal, lúc mất, ông nắm ít nhất chín mươi lăm mã cổ phiếu. | shots: shots |
-| b06 | story | Giờ gặp người thứ hai. Richard Fuscone học Harvard, có bằng MBA, từng là lãnh đạo cấp cao ở Merrill Lynch. Ông nghỉ hưu sớm, rồi vay nặng để mở rộng một biệt thự ở Greenwich, với mười một phòng tắm và chi phí hơn chín mươi nghìn đô mỗi tháng. | shots: shots |
+| b06 | story | Giờ gặp người thứ hai trong sách. Richard Fuscone học Harvard, có bằng MBA, từng là lãnh đạo cấp cao ở Merrill Lynch. Ông nghỉ hưu sớm, rồi vay nặng để mở rộng một biệt thự ở Greenwich, với mười một phòng tắm, và riêng tiền duy trì đã hơn một triệu đô mỗi năm. | shots: shots |
 | b07 | story | Rồi khủng hoảng năm hai nghìn lẻ tám ập đến. Nợ nhiều, tài sản khó bán, Fuscone phải tuyên bố phá sản cá nhân. Căn biệt thự bị bán đấu giá, thấp hơn khoảng bảy mươi lăm phần trăm so với mức một hãng bảo hiểm từng định giá. _(estimate)_ | shots: shots |
 | b08 | turn | Housel hỏi: còn lĩnh vực nào mà một người không bằng cấp, không quan hệ, lại vượt xa người được đào tạo tốt nhất? Ông nói mình khó nghĩ ra lĩnh vực thứ hai. | quote: Còn lĩnh vực nào mà người không bằng cấp lại vượt xa người được đào tạo tốt nhất? |
 | b09 | example | Bài học thứ nhất bắt đầu ở một bữa tiệc. Nhà văn Kurt Vonnegut trêu bạn mình, Joseph Heller: chủ nhà, một tỷ phú, có lẽ chỉ trong một ngày đã kiếm nhiều hơn mọi thứ cuốn tiểu thuyết nổi tiếng nhất của Heller từng mang lại. Heller đáp: tôi có thứ ông ta không bao giờ có. Đó là: đủ. | shots: shots |
@@ -35,7 +35,7 @@ _Review sách · Tập 3 · 872 words · ~3.75 min · 4:3_
 | b16 | question | Giờ thử một chút nhé. Bạn vừa được tăng lương hai mươi phần trăm. Cách nào chừa nhiều chỗ cho sai lầm nhất? | question: Vừa được tăng lương 20%. Cách nào chừa chỗ cho sai lầm? |
 | b17 | recap | Vậy là ba bài học từ Tâm Lý Học Về Tiền. Biết thế nào là đủ. Lãi kép cần thời gian. Và chừa chỗ cho sai lầm. | list: Ba bài học |
 | b18 | close | Người lao công không học nhiều hơn vị giám đốc. Ông chỉ biết đủ, đủ kiên nhẫn, và không bao giờ đặt cược thứ mình cần. Vậy câu hỏi không phải bạn giỏi đến đâu, mà là: bạn cư xử với tiền thế nào? | shots: shots |
-| b19 | close | Còn bạn, cuốn sách về tiền nào bạn muốn mình review tiếp theo? Kể cho mình nghe trong phần bình luận nhé. Nếu thấy có ích, lưu lại và gửi cho một người bạn. Hẹn gặp bạn. | end: Tâm Lý Học Về Tiền |
+| b19 | close | Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau. | end: Tâm Lý Học Về Tiền |
 
 ## Sources
 - [housel2020] Morgan Housel, The Psychology of Money: Timeless lessons on wealth, greed, and happiness, Harriman House, Sept 2020 (Introduction 'The Greatest Show on Earth'; ch. 2 Luck & Risk; ch. 3 Never Enough; ch. 4 Confounding Compounding; Room for Error) — https://harriman-house.com/psychologyofmoney
