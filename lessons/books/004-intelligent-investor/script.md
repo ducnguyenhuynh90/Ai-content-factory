@@ -1,5 +1,5 @@
 # Nhà Đầu Tư Thông Minh
-_Review sách · Tập 4 · 783 words · ~3.38 min · 4:3_
+_Review sách · Tập 4 · 787 words · ~3.4 min · 4:3_
 
 ## Learning goals
 - Kể lại được câu chuyện Graham mất khoảng 70% vốn giai đoạn 1929–1932 và cuốn sách ra đời từ bài học đó
@@ -22,7 +22,7 @@ _Review sách · Tập 4 · 783 words · ~3.38 min · 4:3_
 | b03 | context | Đầu năm một nghìn chín trăm năm mươi, một chàng trai mười chín tuổi đọc bản đầu tiên. Sau này Warren Buffett viết: khi ấy tôi nghĩ đây là cuốn sách về đầu tư hay nhất từng được viết. Và tôi vẫn nghĩ vậy. | shots: shots |
 | b04 | story | Nhưng câu chuyện thật bắt đầu sớm hơn. Tháng một năm một nghìn chín trăm hai mươi chín, quỹ của Graham có khoảng hai phẩy năm triệu đô la. Ông đang thắng lớn. Và ông có dùng một phần tiền vay để mua thêm cổ phiếu. _(estimate)_ | shots: shots |
 | b05 | story | Rồi thị trường sụp đổ. Quỹ mất khoảng hai mươi phần trăm năm hai mươi chín. Khoảng một nửa năm ba mươi. Rồi tiếp tục mất. Đến năm ba mươi hai, gần bảy mươi phần trăm số vốn đã biến mất. _(estimate)_ | shots: shots |
-| b06 | story | Graham không bỏ chạy. Theo thỏa thuận, ông không được nhận phí cho đến khi gỡ lại khoản lỗ cho nhà đầu tư. Phải đến khoảng năm ba mươi lăm, quỹ mới hồi lại. Và từ đó, ông tránh xa tiền vay. _(estimate)_ | shots: shots |
+| b06 | story | Graham không bỏ chạy. Theo thỏa thuận, ông không được nhận phí cho đến khi gỡ lại khoản lỗ cho nhà đầu tư. Phải đến khoảng năm một nghìn chín trăm ba mươi lăm, quỹ mới hồi lại. Và từ đó, ông tránh xa tiền vay. _(estimate)_ | shots: shots |
 | b06b | turn | Từ nỗi đau ấy, cả cuốn sách xoay quanh một câu hỏi: làm sao để người bình thường không bị chính mình đánh bại? Graham viết: vấn đề chính của nhà đầu tư, thậm chí kẻ thù tệ nhất của họ, nhiều khả năng là chính họ. | shots: shots |
 | b07 | principle | Bài học thứ nhất. Hãy tưởng tượng bạn có một người cộng sự tên Mr. Market. Mỗi ngày ông ấy ra giá: mua lại phần của bạn, hoặc bán thêm cho bạn. Có hôm hưng phấn, có hôm hoảng loạn. Và bạn không bắt buộc phải nghe theo. | shots: shots |
 | b08 | example | Năm một nghìn chín trăm tám mươi bảy, Buffett viết lại ý ấy gọn hơn: Mr. Market ở đó để phục vụ bạn, không phải để dẫn đường cho bạn. | quote: Mr. Market ở đó để phục vụ bạn, không phải để dẫn đường cho bạn. |

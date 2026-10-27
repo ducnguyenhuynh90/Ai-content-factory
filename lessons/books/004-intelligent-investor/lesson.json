@@ -37,6 +37,25 @@
    "share_recipient": "Một người bạn mới mở tài khoản chứng khoán, đang dùng margin hoặc đang hoảng vì danh mục đỏ: câu chuyện Graham dùng tiền vay rồi mất gần bảy mươi phần trăm, và câu hỏi 'giá rơi ba mươi phần trăm trong một tuần' nói đúng tình huống của họ",
    "evidence": "Graham 1949/1973 (ch. 1, 8, 20; Lời giới thiệu); Buffett, lời tựa ấn bản thứ tư; thư cổ đông Berkshire 1987; Graham, Memoirs (1996) qua beyondbengraham và Novel Investor (vốn ~2,5 triệu USD 1/1929, −20%/−50%/−16%/−3%, margin, hồi phục ~1935); Columbia finding aid; FAJ 1976. Xem gate/claims.md.",
    "constraints": "4–5 phút, 4:3, icon vẽ (không footage, không khuôn mặt người thật), một giọng đọc OmniVoice seed 99 speed 0.88, tên tiếng Anh giữ nguyên chính tả, số đọc bằng chữ, đường cong minh họa ghi 'minh họa', không khuyến nghị đầu tư, giữ lời miễn trừ"
+  },
+  "youtube": {
+   "title": "Nhà Đầu Tư Thông Minh: 3 bài học để giữ cái đầu lạnh",
+   "thumbnail_text": "Sách hay nhất về đầu tư. Tác giả từng mất ~70%.",
+   "description": "Warren Buffett gọi The Intelligent Investor (Nhà Đầu Tư Thông Minh) là cuốn sách về đầu tư hay nhất từng được viết. Vậy mà tác giả của nó, Benjamin Graham, từng mất gần 70% số vốn trong giai đoạn 1929–1932. Video kể lại cú sập ấy, rồi đi qua ba bài học của cuốn sách: Mr. Market, biên an toàn, đầu tư khác đầu cơ, và điều nhiều bài review bỏ qua: năm 1976 chính Graham nói ông không còn ủng hộ những kỹ thuật phân tích cầu kỳ.\n\nNội dung giáo dục, không phải lời khuyên đầu tư. Số liệu về quỹ của Graham là ước tính theo hồi ký của ông và các nguồn thứ cấp, bằng đô la Mỹ danh nghĩa, đã làm tròn; các nguồn ghi mức lỗ từng năm hơi khác nhau. Đường cong ở đầu video là minh họa, không phải dữ liệu.\n\nChương:\n0:00 Sách hay nhất, tác giả từng mất gần 70%\n0:20 Điều ta hay tin về đầu tư giỏi\n0:36 Benjamin Graham và cuốn sách năm 1949\n0:52 Buffett đọc nó năm 19 tuổi\n1:06 1929: quỹ 2,5 triệu đô và tiền vay\n1:20 Cú sập 1929–1932\n1:33 Graham không bỏ chạy\n1:46 Kẻ thù tệ nhất là chính mình\n2:00 Bài học 1: Mr. Market\n2:25 Bài học 2: biên an toàn\n2:40 Bài học 3: đầu tư hay đầu cơ\n2:55 Điều nhiều bài review bỏ qua\n3:11 Vậy cuốn sách còn giá trị gì?\n3:24 Thử một chút: giá rơi 30% trong một tuần\n3:43 Ba bài học và câu hỏi cho bạn\n\nNguồn:\n- Benjamin Graham, The Intelligent Investor: A Book of Practical Counsel, 1949; bản sửa 1973 (ch. 1, 8, 20): https://openlibrary.org/books/OL273184W\n- Benjamin Graham & Jason Zweig, The Intelligent Investor, bản 2003: https://jasonzweig.com/books/the-intelligent-investor/\n- Warren Buffett, lời tựa ấn bản thứ tư: https://stockhead.com.au/news/investment-wisdom-from-buffetts-mentor\n- Warren Buffett, thư cổ đông Berkshire Hathaway 1987: https://www.berkshirehathaway.com/letters/1987.html\n- Benjamin Graham, The Memoirs of the Dean of Wall Street (1996), qua Beyond Ben Graham: https://beyondbengraham.com/loss-amid-luxury-the-private-crash-of-benjamin-graham-26/\n- Novel Investor, The Rise and Fall and Rise of Ben Graham: https://novelinvestor.com/rise-fall-rise-ben-graham/\n- Columbia University Libraries, Benjamin Graham papers: https://findingaids.library.columbia.edu/archives/cul-17325026\n- A Conversation with Benjamin Graham, Financial Analysts Journal, 1976: https://www.marketmisbehavior.com/blog/funl7ljtyn3s1607j7siti9ppuvgau\n\nBạn muốn clip tiếp theo về cuốn sách nào? Để lại bình luận nhé.",
+   "tags": [
+    "Nhà Đầu Tư Thông Minh",
+    "The Intelligent Investor",
+    "Benjamin Graham",
+    "review sách",
+    "tóm tắt sách",
+    "Warren Buffett",
+    "Mr. Market",
+    "biên an toàn",
+    "margin of safety",
+    "đầu tư giá trị",
+    "đầu tư hay đầu cơ",
+    "đầu tư chứng khoán cho người mới"
+   ]
   }
  },
  "sources": [
@@ -149,8 +168,8 @@
       33
      ]
     ],
-    "peak_label": "1/1929",
-    "end_label": "≈ −70% · 1932 (minh họa)",
+    "peak_label": "1/1929 (minh họa)",
+    "end_label": "≈ −70%",
     "kicker": "Theo Warren Buffett · The Intelligent Investor"
    },
    "sfx": [
@@ -180,24 +199,26 @@
       "items": [
        {
         "icon": "brain",
-        "label": "Thiếu hiểu biết",
-        "cue": "thiếu"
+        "label": "Thiếu hiểu biết"
        }
       ]
      },
      {
-      "type": "swap",
+      "type": "trio",
       "kicker": "Một bài học đắt giá",
-      "cue": "và chính",
-      "from": {
-       "label": "Cái giá đắt ấy",
-       "icon": "coins"
-      },
-      "to": {
-       "label": "Thành sách",
-       "icon": "book",
-       "cue": "làm nên"
-      }
+      "cue": "cái giá",
+      "items": [
+       {
+        "icon": "coins",
+        "label": "Cái giá đắt ấy",
+        "cue": "cái giá"
+       },
+       {
+        "icon": "book",
+        "label": "Làm nên cuốn sách này",
+        "cue": "làm nên"
+       }
+      ]
      },
      {
       "type": "trio",
@@ -207,12 +228,12 @@
        {
         "icon": "brain",
         "label": "Giữ cái đầu lạnh",
-        "cue": "cái đầu"
+        "cue": "ba bài"
        },
        {
         "icon": "bubble",
         "label": "Khi thị trường nóng lên",
-        "cue": "thị trường"
+        "cue": "giữ"
        }
       ]
      }
@@ -469,7 +490,7 @@
   {
    "id": "b06",
    "act": "story",
-   "narration": "Graham không bỏ chạy. Theo thỏa thuận, ông không được nhận phí cho đến khi gỡ lại khoản lỗ cho nhà đầu tư. Phải đến khoảng năm ba mươi lăm, quỹ mới hồi lại. Và từ đó, ông tránh xa tiền vay.",
+   "narration": "Graham không bỏ chạy. Theo thỏa thuận, ông không được nhận phí cho đến khi gỡ lại khoản lỗ cho nhà đầu tư. Phải đến khoảng năm một nghìn chín trăm ba mươi lăm, quỹ mới hồi lại. Và từ đó, ông tránh xa tiền vay.",
    "visual": {
     "type": "shots",
     "shots": [
@@ -607,21 +628,21 @@
      },
      {
       "type": "trio",
-      "kicker": "Luôn chừa biên an toàn",
+      "kicker": "Ví dụ minh họa · số giả định",
       "items": [
        {
         "icon": "scale",
-        "label": "Ước tính giá trị",
+        "label": "Giá trị ước tính: 100",
         "cue": "ước tính"
        },
        {
         "icon": "coin",
-        "label": "Chỉ mua khi rẻ hơn hẳn",
+        "label": "Chỉ mua khi giá ≤ 70",
         "cue": "chỉ mua"
        },
        {
         "icon": "umbrella",
-        "label": "Tấm đệm khi tính sai, khi gặp xui",
+        "label": "Đệm 30: khi tính sai, khi gặp xui",
         "cue": "tấm đệm"
        }
       ],
