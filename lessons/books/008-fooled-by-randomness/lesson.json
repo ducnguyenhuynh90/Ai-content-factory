@@ -1,0 +1,357 @@
+{
+ "meta": {
+  "series": "Review sách · Tập 8",
+  "title": "Bị Đánh Lừa Bởi Ngẫu Nhiên",
+  "subtitle": "Fooled by Randomness — Nassim Nicholas Taleb (2001)",
+  "topic": "books",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt thích đọc sách, muốn phân biệt may mắn với tài năng trong tiền bạc và cuộc sống",
+  "aspect": "4:3",
+  "target_minutes": [3, 5],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {"primary_color": "#E8B06A", "secondary_color": "#12100E"},
+  "learning_goals": [
+   "Kể lại trò tung đồng xu của Taleb: 10.000 người, 313 người thắng 5 năm liền chỉ nhờ may",
+   "Giải thích ba ý lớn: hỏi về những người đã biến mất, bớt nhìn để bớt nhiễu, tránh mọi trò cò quay Nga",
+   "Nhận ra thiên lệch kẻ sống sót trong một câu chuyện thành công mình nghe được"
+  ],
+  "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư.",
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người dẫn chương trình sách lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively."
+ },
+ "sources": [
+  {"id": "taleb2001", "cite": "Nassim Nicholas Taleb, Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets, 2001; 2nd ed. Random House, 2004 (the 10,000 managers; the retired dentist; Russian roulette and alternative histories; the problem of induction and the black swan)", "url": "https://www.penguinrandomhouse.com/books/176225/fooled-by-randomness-by-nassim-nicholas-taleb/9781400067930/"},
+  {"id": "wiki_fbr", "cite": "Wikipedia, Fooled by Randomness (first published 2001; first volume of the Incerto)", "url": "https://en.wikipedia.org/wiki/Fooled_by_Randomness"},
+  {"id": "wiki_taleb", "cite": "Wikipedia, Nassim Nicholas Taleb (born 1960, Amioun, Lebanon; former option trader; The Black Swan, 2007)", "url": "https://en.wikipedia.org/wiki/Nassim_Nicholas_Taleb"},
+  {"id": "managers", "cite": "Bankers Anonymous, 'Book Review: Fooled by Randomness' (10,000 managers, 50% odds, losers out: 5,000 → 1,250 → 313 after five years)", "url": "https://www.bankers-anonymous.com/book/book-review-fooled-by-randomness/"},
+  {"id": "dentist", "cite": "Fooled by Randomness, ch. 3 (the retired dentist: 15% above T-bills, 10% error rate a year; 93% chance of a positive year, 50.02% for any second) — quoted on Goodreads; worked through on R-bloggers", "url": "https://www.r-bloggers.com/2020/06/fooled-by-randomness/"},
+  {"id": "fs_alt", "cite": "Farnam Street, 'Nassim Taleb: Alternative Histories' (Russian roulette for $10 million, six histories; 'reality is far more vicious than Russian roulette'; roulette money vs. dentistry money)", "url": "https://fs.blog/2014/03/nassim-taleb-alternative-history/"},
+  {"id": "wiki_swan", "cite": "Wikipedia, Black swan theory (Willem de Vlamingh's expedition saw black swans in Western Australia, 1697; Taleb discussed black swans in Fooled by Randomness, 2001, before The Black Swan, 2007)", "url": "https://en.wikipedia.org/wiki/Black_swan_theory"},
+  {"id": "ltcm", "cite": "Wikipedia, Long-Term Capital Management (founded 1994; Scholes and Merton on the board, Nobel 1997; lost $4.6 billion in under four months in 1998; $3.6 billion recapitalisation by 14 institutions, 23 Sept 1998)", "url": "https://en.wikipedia.org/wiki/Long-Term_Capital_Management"},
+  {"id": "lowenstein", "cite": "Roger Lowenstein, When Genius Failed: The Rise and Fall of Long-Term Capital Management, Random House, 2000", "url": "https://en.wikipedia.org/wiki/When_Genius_Failed"}
+ ],
+ "principles": [
+  {"name": "Hỏi ai đã biến mất", "line": "Trước khi học theo người thắng, hỏi bao nhiêu người đã làm y hệt và thua."},
+  {"name": "Bớt nhìn, bớt nhiễu", "line": "Ở khung thời gian ngắn, thứ ta thấy gần như toàn là ngẫu nhiên."},
+  {"name": "Tránh mọi trò cò quay Nga", "line": "Một chiến lược thắng nhiều lần vẫn tệ, nếu một lần thua là mất tất cả."}
+ ],
+ "beats": [
+  {
+   "id": "h1", "act": "hook",
+   "narration": "Mười nghìn người tung đồng xu. Năm năm sau, chỉ còn ba trăm mười ba người. Và họ được gọi là thiên tài.",
+   "visual": {
+    "type": "hook",
+    "kicker": "Fooled by Randomness · Nassim Taleb",
+    "lines": ["10.000 người tung đồng xu.", "313 \"thiên tài\"."],
+    "crash_cue": "ba trăm",
+    "points": [[0, 10000], [1, 5000], [2, 2500], [3, 1250], [4, 625], [5, 313]],
+    "peak_label": "10.000",
+    "end_label": "313 sau 5 năm"
+   },
+   "sfx": [{"kind": "hit", "cue": "ba trăm", "gain_db": -6}],
+   "sources": ["taleb2001", "managers"]
+  },
+  {
+   "id": "h2", "act": "context",
+   "narration": "Không ai trong số họ giỏi hơn ai. Họ chỉ may. Hãy pha một ấm trà, ngồi xuống cùng mình. Đến cuối clip, bạn sẽ có ba bài học để tách bạch may mắn với tài năng, trong tiền bạc lẫn cuộc đời.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {"type": "statement", "kicker": "Họ không giỏi hơn", "text": "Họ chỉ may.", "highlight": ["may"]},
+     {"type": "icon", "icon": "tea", "steam": true, "line": "Pha một ấm trà nhé.", "cue": "hãy pha"},
+     {"type": "trio", "kicker": "Ba bài học để tách bạch", "cue": "đến cuối",
+      "items": [
+       {"icon": "dice", "label": "May mắn", "cue": "may mắn"},
+       {"icon": "target", "label": "Tài năng", "cue": "tài năng"}
+      ]}
+    ]
+   }
+  },
+  {
+   "id": "t0", "act": "context", "narration": "",
+   "visual": {"type": "title", "kicker": "Review sách · Tập 8", "title": "Bị Đánh Lừa Bởi Ngẫu Nhiên",
+              "subtitle": "Fooled by Randomness — Nassim Nicholas Taleb (2001)", "hold": 3.0},
+   "sfx": [{"kind": "whoosh", "at": 0.0, "gain_db": -12}],
+   "sources": ["taleb2001"]
+  },
+  {
+   "id": "b01", "act": "misconception",
+   "narration": "Chúng ta hay tin: ai thắng nhiều năm liền thì hẳn là giỏi. Người giàu hẳn đã làm đúng điều gì đó. Kết quả tốt nghĩa là quyết định tốt. Taleb muốn bạn nghi ngờ chính điều ấy.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {"type": "trio", "kicker": "Điều ta hay tin",
+      "items": [
+       {"icon": "star", "label": "Thắng nhiều năm = giỏi", "cue": "ai thắng"},
+       {"icon": "coins", "label": "Giàu = làm đúng", "cue": "người giàu"},
+       {"icon": "target", "label": "Kết quả tốt", "cue": "kết quả"}
+      ]},
+     {"type": "statement", "kicker": "Điều ta hay tin", "cue": "taleb",
+      "text": "Kết quả tốt là quyết định tốt.", "strike": "quyết định tốt.", "replace": "có khi chỉ là may", "strike_cue": "nghi ngờ"}
+    ]
+   }
+  },
+  {
+   "id": "b02", "act": "context",
+   "narration": "Nassim Nicholas Taleb sinh năm một nghìn chín trăm sáu mươi ở Liban. Ông làm trader quyền chọn nhiều năm, rồi trở thành một nhà tư tưởng về sự bất định. Cuốn sách này ra đời năm hai nghìn lẻ một, là tập đầu tiên trong bộ Incerto, trước cả The Black Swan.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {"type": "portrait", "name": "Nassim Nicholas Taleb", "initials": "NT", "role": "Cựu trader quyền chọn", "years": "sinh 1960 · Liban"},
+     {"type": "book", "title": "Fooled by Randomness", "author": "Nassim Nicholas Taleb", "year": "2001", "kicker": "Tập 1 của bộ Incerto", "cue": "cuốn sách",
+      "facts": [
+       {"big": "2001", "text": "Sách ra đời", "cue": "năm hai"},
+       {"big": "2007", "text": "The Black Swan ra sau", "cue": "trước cả"}
+      ]}
+    ]
+   },
+   "sources": ["wiki_taleb", "wiki_fbr"]
+  },
+  {
+   "id": "b03", "act": "story",
+   "narration": "Trò chơi của Taleb thế này. Mỗi năm, mỗi người có năm mươi phần trăm cơ hội thắng. Ai thua là bị loại. Sau một năm, còn năm nghìn. Sau ba năm, một nghìn hai trăm năm mươi. Sau năm năm, ba trăm mười ba.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {"type": "trio", "kicker": "Luật chơi",
+      "items": [
+       {"icon": "coin", "label": "50% thắng mỗi năm", "cue": "mỗi người"},
+       {"icon": "dice", "label": "Thua là bị loại", "cue": "ai thua"}
+      ]},
+     {"type": "chart", "title": "Số người chưa thua lần nào", "cue": "sau một",
+      "points": [["Bắt đầu", 10000], ["Năm 1", 5000], ["Năm 2", 2500], ["Năm 3", 1250], ["Năm 4", 625], ["Năm 5", 313]],
+      "annotations": [
+       {"at": 1, "text": "5.000", "cue": "năm nghìn"},
+       {"at": 3, "text": "1.250", "cue": "một nghìn"},
+       {"at": 5, "text": "313", "cue": "ba trăm"}
+      ]}
+    ]
+   },
+   "sources": ["taleb2001", "managers"]
+  },
+  {
+   "id": "b04", "act": "story",
+   "narration": "Giờ hãy nhìn ba trăm mười ba người đó. Năm năm liền không thua. Người ta sẽ khen họ, đi tìm bí quyết của họ. Còn chín nghìn sáu trăm tám mươi bảy người kia thì biến mất, không ai kể về họ. Đó là thiên lệch kẻ sống sót.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {"type": "halo", "kicker": "313 người thắng 5 năm liền",
+      "items": [
+       {"name": "Người thắng A", "before": "5 năm · không thua", "after": "CHỈ LÀ MAY", "cue": "người ta"},
+       {"name": "Người thắng B", "before": "5 năm · không thua", "after": "CHỈ LÀ MAY", "cue": "bí quyết"}
+      ]},
+     {"type": "stat", "value": 9687, "label": "người đã biến mất", "note": "không ai kể về họ", "cue": "còn chín"},
+     {"type": "statement", "kicker": "Tên gọi", "cue": "đó là", "text": "Thiên lệch kẻ sống sót", "highlight": ["kẻ sống sót"]}
+    ]
+   },
+   "sources": ["taleb2001", "managers"]
+  },
+  {
+   "id": "b05", "act": "principle",
+   "narration": "Bài học thứ nhất: hãy hỏi ai đã biến mất. Trước khi học theo một người thắng, hãy hỏi: bao nhiêu người đã làm y hệt, và thua? Taleb viết rằng số người có thành tích đẹp phụ thuộc vào số người tham gia, nhiều hơn là vào tài năng.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {"type": "icon", "icon": "binoculars", "kicker": "Bài học 1 · Hỏi ai đã biến mất", "line": "Bao nhiêu người làm y hệt, và thua?", "line_cue": "bao nhiêu"},
+     {"type": "statement", "kicker": "Taleb viết (lược dịch)", "cue": "taleb",
+      "text": "Số người thắng phụ thuộc số người chơi.", "highlight": ["số người chơi"]}
+    ]
+   },
+   "sources": ["taleb2001", "managers"]
+  },
+  {
+   "id": "b06", "act": "example",
+   "narration": "Taleb còn kể về một nha sĩ đã nghỉ hưu, tự đầu tư ở nhà. Danh mục của ông được kỳ vọng lời hơn lãi tín phiếu kho bạc mười lăm phần trăm mỗi năm, với độ dao động mười phần trăm. Nếu mỗi năm chỉ xem một lần, khoảng chín mươi ba phần trăm số lần ông sẽ thấy lãi.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {"type": "statement", "kicker": "Thí nghiệm tưởng tượng", "text": "Một nha sĩ đầu tư ở nhà", "highlight": ["nha sĩ"]},
+     {"type": "trio", "kicker": "Danh mục của nha sĩ", "cue": "danh mục",
+      "items": [
+       {"icon": "chart", "label": "+15%/năm kỳ vọng", "cue": "mười lăm"},
+       {"icon": "lightning", "label": "Dao động 10%", "cue": "độ dao"}
+      ]},
+     {"type": "stat", "value": 93, "suffix": "%", "label": "khả năng thấy lãi", "note": "nếu mỗi năm xem một lần", "cue": "nếu mỗi"}
+    ]
+   },
+   "sources": ["taleb2001", "dentist"],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b07", "act": "story",
+   "narration": "Nhưng nếu xem mỗi ngày, con số chỉ còn khoảng năm mươi tư phần trăm. Xem từng giây, năm mươi phẩy không hai. Gần như tung đồng xu. Cùng một danh mục, chỉ khác tần suất nhìn. Và Taleb nhắc: nỗi đau khi lỗ nặng hơn niềm vui khi lãi.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {"type": "chart", "title": "Khả năng thấy lãi, theo tần suất nhìn (%)",
+      "points": [["Năm", 93], ["Quý", 77], ["Tháng", 67], ["Ngày", 54], ["Giờ", 51.3], ["Phút", 50.17], ["Giây", 50.02]],
+      "annotations": [
+       {"at": 0, "text": "93%"},
+       {"at": 3, "text": "54%", "cue": "năm mươi tư"},
+       {"at": 6, "text": "50,02%", "cue": "xem từng"}
+      ]},
+     {"type": "swap", "kicker": "Cùng một danh mục", "cue": "cùng một",
+      "from": {"label": "Niềm vui khi lãi", "icon": "star"},
+      "to": {"label": "Nỗi đau khi lỗ", "icon": "lightning", "cue": "nỗi đau"},
+      "line": "Nhìn càng nhiều, càng đau.", "line_cue": "niềm vui"}
+    ]
+   },
+   "sources": ["taleb2001", "dentist"],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b08", "act": "principle",
+   "narration": "Bài học thứ hai: bớt nhìn, bớt nhiễu. Ở khung thời gian ngắn, thứ bạn thấy gần như toàn là ngẫu nhiên. Tín hiệu thật chỉ hiện ra khi bạn lùi xa.",
+   "visual": {
+    "type": "swap", "kicker": "Bài học 2 · Bớt nhìn, bớt nhiễu", "cue": "ở khung",
+    "from": {"label": "Mỗi giây: nhiễu", "icon": "clock"},
+    "to": {"label": "Mỗi năm: tín hiệu", "icon": "hourglass", "cue": "tín hiệu"},
+    "line": "Lùi xa để thấy rõ.", "line_cue": "lùi xa"
+   },
+   "sources": ["taleb2001"]
+  },
+  {
+   "id": "b09", "act": "story",
+   "narration": "Giờ đến thí nghiệm ám ảnh nhất. Một người lạ trả bạn mười triệu đô la để chơi cò quay Nga: một viên đạn, sáu ổ. Có sáu lịch sử có thể xảy ra. Năm lịch sử bạn giàu to, một lịch sử bạn mất mạng. Người ngoài chỉ thấy người thắng.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {"type": "stat", "value": 10, "prefix": "$", "suffix": " triệu", "label": "để bóp cò một lần", "note": "một viên đạn · sáu ổ", "cue": "mười triệu"},
+     {"type": "trio", "kicker": "Sáu lịch sử có thể xảy ra", "cue": "có sáu",
+      "items": [
+       {"icon": "coins", "label": "5 lịch sử: giàu to", "cue": "năm lịch"},
+       {"icon": "dice", "label": "1 lịch sử: mất mạng", "cue": "một lịch"}
+      ]},
+     {"type": "statement", "kicker": "Điều người ngoài thấy", "cue": "người ngoài", "text": "Chỉ thấy người thắng.", "highlight": ["người thắng"]}
+    ]
+   },
+   "sources": ["taleb2001", "fs_alt"]
+  },
+  {
+   "id": "b10", "act": "story",
+   "narration": "Và Taleb viết: thực tế còn tàn nhẫn hơn cò quay Nga. Nó hiếm khi nổ súng, như một khẩu súng có hàng trăm, hàng nghìn ổ đạn.",
+   "visual": {
+    "type": "quote",
+    "text": "Thực tế còn tàn nhẫn hơn cò quay Nga: nó hiếm khi nổ, như khẩu súng có hàng nghìn ổ đạn.",
+    "by": "Nassim N. Taleb (lược dịch)"
+   },
+   "sources": ["taleb2001", "fs_alt"]
+  },
+  {
+   "id": "b11", "act": "example",
+   "narration": "Chuyện này không chỉ là lý thuyết. Năm một nghìn chín trăm chín mươi tám, quỹ Long-Term Capital Management, có hai nhà kinh tế đoạt giải Nobel trong ban lãnh đạo, mất khoảng bốn phẩy sáu tỷ đô la trong chưa đầy bốn tháng. Nhiều năm thắng đều đặn, rồi một viên đạn.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {"type": "timeline", "title": "Long-Term Capital Management",
+      "events": [
+       {"year": "1994", "text": "Quỹ ra đời", "cue": "quỹ"},
+       {"year": "1997", "text": "Hai thành viên đoạt Nobel", "cue": "hai nhà"},
+       {"year": "1998", "text": "Mất ~4,6 tỷ USD", "cue": "mất khoảng"}
+      ]},
+     {"type": "statement", "kicker": "Ba năm trước khi sách ra đời", "cue": "nhiều năm", "text": "Nhiều năm thắng, rồi một viên đạn.", "highlight": ["một viên đạn"]}
+    ]
+   },
+   "sources": ["ltcm", "lowenstein"],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b12", "act": "principle",
+   "narration": "Bài học thứ ba: tránh mọi trò cò quay Nga. Một chiến lược có thể thắng chín mươi chín lần, nhưng nếu lần thứ một trăm xoá sổ bạn, nó vẫn là chiến lược tệ. Hãy hỏi: nếu điều tệ nhất xảy ra, mình còn ở lại cuộc chơi không?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {"type": "icon", "icon": "umbrella", "kicker": "Bài học 3 · Tránh mọi trò cò quay Nga", "line": "Sống sót trước đã.", "line_cue": "một chiến"},
+     {"type": "statement", "kicker": "Câu hỏi trước mỗi quyết định", "cue": "hãy hỏi", "text": "Mình còn ở lại cuộc chơi không?", "highlight": ["ở lại"]}
+    ]
+   },
+   "sources": ["taleb2001"]
+  },
+  {
+   "id": "b13", "act": "complication",
+   "narration": "Một điều nhiều người nhầm: thiên nga đen không bắt đầu từ cuốn The Black Swan năm hai nghìn lẻ bảy. Nó đã có trong cuốn sách này. Châu Âu từng tin mọi con thiên nga đều trắng, cho đến năm một nghìn sáu trăm chín mươi bảy, khi đoàn thám hiểm của Willem de Vlamingh thấy thiên nga đen ở Tây Úc.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {"type": "statement", "kicker": "Điều nhiều người nhầm", "text": "Thiên nga đen ra đời năm 2007", "strike": "năm 2007", "replace": "đã có từ 2001",
+      "strike_cue": "nó đã"},
+     {"type": "icon", "icon": "swan", "kicker": "1697 · Tây Úc", "cue": "châu âu", "line": "Một con đen là đủ.", "line_cue": "khi đoàn"}
+    ]
+   },
+   "sources": ["wiki_swan", "taleb2001"]
+  },
+  {
+   "id": "b14", "act": "turn",
+   "narration": "Nhưng đừng đọc sai Taleb. Ông không nói tài năng không tồn tại. Mười triệu đô từ cò quay Nga không giống mười triệu đô từ nghề nha sĩ. Điều ông muốn là sự khiêm tốn: trước khi gọi ai là thiên tài, kể cả chính mình, hãy hỏi phần nào là may.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {"type": "compare", "title": "Cùng 10 triệu đô",
+      "left": {"title": "Cò quay Nga", "items": ["May rủi quyết định", "Không lặp lại được"]},
+      "right": {"title": "Nghề nha sĩ", "items": ["Tay nghề, đều đặn", "Làm lại được mỗi ngày"]}},
+     {"type": "statement", "kicker": "Điều Taleb muốn", "cue": "điều ông", "text": "Phần nào là may?", "highlight": ["may"]}
+    ]
+   },
+   "sources": ["taleb2001", "fs_alt"]
+  },
+  {
+   "id": "b15", "act": "question",
+   "narration": "Giờ thử một chút nhé. Một người bạn khoe: ba tháng đầu tư, lời gấp đôi. Câu hỏi nào giống Taleb nhất?",
+   "visual": {
+    "type": "question",
+    "question": "Bạn khoe: 3 tháng, lời gấp đôi. Câu hỏi nào giống Taleb nhất?",
+    "choices": ["Mình làm theo ngay được không?", "Bao nhiêu người làm y vậy đã mất tiền?", "Bạn ấy học trường nào?"],
+    "answer": "B — hỏi về những người đã biến mất.",
+    "think_seconds": 5
+   }
+  },
+  {
+   "id": "b16", "act": "recap",
+   "narration": "Vậy là ba bài học từ Fooled by Randomness. Hỏi ai đã biến mất. Bớt nhìn, bớt nhiễu. Và tránh mọi trò cò quay Nga.",
+   "visual": {
+    "type": "list", "title": "Ba bài học", "check": true,
+    "items": [
+     {"text": "Hỏi ai đã biến mất", "cue": "hỏi"},
+     {"text": "Bớt nhìn, bớt nhiễu", "cue": "bớt"},
+     {"text": "Tránh mọi trò cò quay Nga", "cue": "và tránh"}
+    ]
+   }
+  },
+  {
+   "id": "b17", "act": "close",
+   "narration": "Ba trăm mười ba người được gọi là thiên tài. Có thể vài người giỏi thật. Nhưng câu hỏi khôn ngoan là: chín nghìn người kia đâu rồi? Lần tới nghe một câu chuyện thành công, hãy nhớ đến họ.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {"type": "statement", "kicker": "313 \"thiên tài\"", "text": "Chín nghìn người kia đâu rồi?", "highlight": ["đâu rồi"], "cue": "nhưng"},
+     {"type": "icon", "icon": "tea", "steam": true, "line": "Hãy nhớ đến họ.", "cue": "lần tới"}
+    ]
+   },
+   "sources": ["taleb2001"]
+  },
+  {
+   "id": "b18", "act": "close",
+   "narration": "Còn bạn, bạn từng thấy mình bị may mắn đánh lừa chưa? Kể cho mình nghe trong phần bình luận nhé, và gợi ý cuốn sách bạn muốn nghe tiếp. Nếu thấy hay, lưu lại và gửi cho một người bạn. Hẹn gặp bạn.",
+   "visual": {
+    "type": "end",
+    "kicker": "Review sách · Tập 8",
+    "title": "Bị Đánh Lừa Bởi Ngẫu Nhiên",
+    "ask": "Bạn từng bị may mắn đánh lừa chưa?",
+    "ask_hint": "Một lần đầu tư · một lần thi cử · một cuốn sách muốn nghe tiếp",
+    "ask_cue": "còn bạn",
+    "cta": "Bình luận · Lưu lại · Gửi một người bạn",
+    "cta_cue": "nếu thấy",
+    "sources_line": "Nguồn: Taleb, Fooled by Randomness (2001; 2004) · Lowenstein, When Genius Failed (2000) · Wikipedia: LTCM, Black swan theory",
+    "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư.",
+    "sources_cue": "hẹn gặp"
+   }
+  }
+ ],
+ "pronounce": {}
+}
