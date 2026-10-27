@@ -1,5 +1,5 @@
 # Niên Giám Của Charlie Munger
-_Review sách · Tập 5 · 854 words · ~3.68 min · 4:3_
+_Review sách · Tập 5 · 852 words · ~3.67 min · 4:3_
 
 ## Learning goals
 - Kể lại bài nói năm 1986 của Munger: đơn thuốc cho một cuộc đời khốn khổ, và câu chuyện người nhà quê
@@ -15,8 +15,8 @@ _Review sách · Tập 5 · 854 words · ~3.68 min · 4:3_
 | # | act | narration | on screen |
 |---|---|---|---|
 | h1 | hook | Charlie Munger hay đùa: tôi chỉ muốn biết mình sẽ chết ở đâu. Để không bao giờ đến đó. | hook: hook |
-| h2 | context | Nghe như một câu đùa. Nhưng đằng sau nó là cả một cách nghĩ. Trong vài phút tới, mình kể bạn nghe về cuốn niên giám của một ông già chín mươi chín tuổi, và ba bài học để bạn nghĩ sáng suốt hơn. | shots: shots |
-| t0 | context |  | title: Niên Giám Của Charlie Munger |
+| h2 | context | Nghe như một câu đùa. Nhưng đằng sau nó là cả một cách nghĩ. Trong vài phút tới, mình kể bạn nghe về cuốn niên giám của một người sống gần trọn một thế kỷ, và ba bài học để bạn nghĩ sáng suốt hơn. | shots: shots |
+| t0 | context |  | title: Niên Giám Của Charlie Munger |
 | b01 | misconception | Chúng ta hay nghĩ người khôn ngoan là người biết thật nhiều. Một bộ óc thiên tài. Một chuyên gia giỏi nhất ngành. Một công thức bí mật. Munger nghĩ khác: khôn ngoan bắt đầu từ việc tránh những điều dại dột. | shots: shots |
 | b02 | context | Charlie Munger sinh năm một nghìn chín trăm hai mươi tư ở Omaha, nước Mỹ. Từ năm một nghìn chín trăm bảy mươi tám, ông là phó chủ tịch Berkshire Hathaway, người cộng sự lâu năm của Warren Buffett. Ông mất cuối năm hai nghìn không trăm hai mươi ba, chỉ hơn một tháng trước sinh nhật thứ một trăm. | shots: shots |
 | b03 | context | Cuốn sách này không do Munger tự viết. Năm hai nghìn lẻ năm, người bạn lâu năm Peter Kaufman gom các bài nói của ông thành một cuốn sách dày. Cái tên là một lời chào tới Benjamin Franklin và cuốn Poor Richard's Almanack. | shots: shots |
@@ -27,14 +27,14 @@ _Review sách · Tập 5 · 854 words · ~3.68 min · 4:3_
 | b08 | context | Tám năm sau, ở trường kinh doanh USC, Munger nói về thứ ông gọi là mạng lưới mô hình tư duy. Ông nhắc một câu tục ngữ: với người chỉ có cái búa, vấn đề nào trông cũng giống cái đinh. | shots: shots |
 | b09 | principle | Bài học thứ hai: xây một mạng lưới mô hình. Lấy những ý lớn từ nhiều ngành: toán xác suất, kế toán, kỹ thuật, tâm lý học. Khi chúng đan vào nhau, bạn nhìn một vấn đề từ nhiều phía, chứ không chỉ từ góc nghề của mình. | shots: shots |
 | b10 | story | Năm một nghìn chín trăm chín mươi lăm, ở Harvard, Munger nói về tâm lý học của những phán đoán sai lầm. Bản viết lại trong sách liệt kê hai mươi lăm khuynh hướng khiến người thông minh vẫn nghĩ sai. | shots: shots |
-| b11 | example | Một ví dụ nổi tiếng của ông là FedEx. Ca đêm ở trung tâm phân loại cứ chậm mãi. Khuyên nhủ, nhắc nhở đều vô ích. Rồi họ đổi cách trả lương: không trả theo giờ nữa, mà trả theo ca, xong việc là được về. Vấn đề được giải quyết. | shots: shots |
+| b11 | example | Một ví dụ nổi tiếng của ông là FedEx. Ca đêm ở trung tâm phân loại cứ chậm mãi. Khuyên nhủ, nhắc nhở đều vô ích. Vậy cuối cùng họ làm gì? Họ đổi cách trả lương: không trả theo giờ nữa, mà trả theo ca, xong việc là được về. Vấn đề được giải quyết. | shots: shots |
 | b12 | principle | Bài học thứ ba: biết mình dễ sai ở đâu. Phần thưởng, nỗi sợ mất mát, áp lực đám đông. Mỗi thứ đủ làm ta lệch. Khi nhiều thứ cùng đẩy một hướng, Munger gọi đó là hiệu ứng lollapalooza. Vậy hãy giữ một danh sách những cái bẫy, và rà nó trước mỗi quyết định lớn. | shots: shots |
 | b13 | complication | Nhưng đừng thần thánh hoá Munger. Ông nói thẳng: những sai lầm đắt nhất của ông là những việc đã không làm. Năm hai nghìn không trăm mười bảy, ông còn xin lỗi cổ đông vì đã bỏ lỡ Google. Người giỏi nhất cũng sai. Điều khác biệt là ông nhìn thẳng vào nó. | shots: shots |
 | b14 | turn | Vậy đọc cuốn này thế nào cho đúng? Đừng sưu tầm mô hình như sưu tầm tem. Hãy chọn một quyết định thật của mình tuần này, và hỏi ngược lại: điều gì sẽ làm nó hỏng? | shots: shots |
 | b15 | question | Giờ thử một chút nhé. Bạn muốn giữ sức khoẻ trong năm tới. Câu hỏi nào là cách nghĩ lật ngược? | question: Muốn khoẻ trong năm tới. Câu hỏi nào là lật ngược? |
 | b16 | recap | Vậy là ba bài học từ cuốn niên giám của Charlie Munger. Lật ngược vấn đề. Xây mạng lưới mô hình. Và biết mình dễ sai ở đâu. | list: Ba bài học |
 | b17 | close | Người nhà quê ấy muốn biết chỗ mình sẽ chết. Nghe thì buồn cười. Nhưng có lẽ đó là câu hỏi khôn ngoan nhất. Vậy hôm nay, đâu là nơi bạn nên tránh? | shots: shots |
-| b18 | close | Còn bạn, bạn muốn mình review cuốn sách nào của một nhà tư duy lớn tiếp theo? Để lại bình luận cho mình nhé. Nếu thấy hay, lưu lại và gửi cho một người bạn. Hẹn gặp bạn. | end: Niên Giám Của Charlie Munger |
+| b18 | close | Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau. | end: Niên Giám Của Charlie Munger |
 
 ## Sources
 - [pca] Peter D. Kaufman (ed.), Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger, Donning Company, 2005; abridged Stripe Press edition, 5 Dec 2023 (foreword by John Collison) — https://press.stripe.com/poor-charlies-almanack

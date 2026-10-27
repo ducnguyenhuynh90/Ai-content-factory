@@ -28,7 +28,18 @@
   "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
   "captions": true,
   "voice_seed": 99,
-  "pronounce_note": "English names stay in English: OmniVoice reads them natively."
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively.",
+  "brief": {
+   "target_viewer": "Người Việt 20–40 tuổi, tò mò, thích đọc sách, muốn suy nghĩ sáng suốt hơn trong công việc, cuộc sống và đầu tư; có thể đã nghe tên Charlie Munger hay 'mô hình tư duy' nhưng chưa đọc cuốn sách dày này (giả định của người gác cổng, chủ kênh xác nhận lại)",
+   "format": "Phân tích sách (book analysis), 4–5 phút, 4:3, minh họa icon vẽ tay, một giọng đọc",
+   "central_question": "Vì sao Munger tin rằng muốn khôn ngoan thì trước hết phải biết tránh điều dại dột, và làm sao dùng cách hỏi ngược ấy cho một quyết định thật?",
+   "transformation": "Trước khi xem, họ nghĩ người khôn ngoan là người biết thật nhiều. Sau khi xem, họ kể lại được bài nói 'đơn thuốc cho một cuộc đời khốn khổ' năm 1986 và câu chuyện người nhà quê, giải thích được ba ý: lật ngược vấn đề, mạng lưới mô hình (cái búa và cái đinh), biết mình dễ sai ở đâu (FedEx, lollapalooza), biết rằng chính Munger cũng sai (bỏ lỡ Google), và tự hỏi 'điều gì sẽ làm quyết định này hỏng?'",
+   "discovery_goal": "Tìm kiếm (\"Poor Charlie's Almanack\", \"Charlie Munger\", \"tư duy ngược\", \"mô hình tư duy\", \"lật ngược vấn đề\") và đề xuất từ video sách/tư duy/đầu tư; khán giả của tập 1–4",
+   "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn clip tiếp theo về cuốn sách nào?\" (lựa chọn của chủ kênh)",
+   "share_recipient": "Một người bạn đang đứng trước một quyết định lớn (đổi việc, mở quán, xuống tiền một khoản đầu tư) và chỉ toàn hỏi 'làm sao để thành công': câu hỏi ngược 'điều gì sẽ làm nó hỏng?' và đơn thuốc khốn khổ của Munger giúp hai người cùng rà rủi ro",
+   "evidence": "Munger, Harvard School 13/6/1986 (Carson, bốn đơn thuốc, người nhà quê, Jacobi); USC 1994 (mạng lưới mô hình, cái búa); Harvard 1995 + bản viết lại 25 khuynh hướng trong Poor Charlie's Almanack (FedEx, lollapalooza); Berkshire 2017 (Google), 2001 (sai lầm do bỏ sót); Wikipedia/Bloomberg (tiểu sử). Xem gate/claims.md.",
+   "constraints": "4–5 phút, 4:3, icon vẽ (không footage, không khuôn mặt người thật), một giọng đọc OmniVoice seed 99 speed 0.88, tên tiếng Anh giữ nguyên chính tả, số đọc bằng chữ, đường cong minh họa ghi 'minh họa', không khuyến nghị đầu tư, giữ lời miễn trừ"
+  }
  },
  "sources": [
   {
@@ -159,7 +170,7 @@
       0.3
      ]
     ],
-    "peak_label": "vực thẳm phía trước",
+    "peak_label": "chỗ cần tránh (minh họa)",
     "end_label": "→ lật ngược"
    },
    "sfx": [
@@ -177,7 +188,7 @@
   {
    "id": "h2",
    "act": "context",
-   "narration": "Nghe như một câu đùa. Nhưng đằng sau nó là cả một cách nghĩ. Trong vài phút tới, mình kể bạn nghe về cuốn niên giám của một ông già chín mươi chín tuổi, và ba bài học để bạn nghĩ sáng suốt hơn.",
+   "narration": "Nghe như một câu đùa. Nhưng đằng sau nó là cả một cách nghĩ. Trong vài phút tới, mình kể bạn nghe về cuốn niên giám của một người sống gần trọn một thế kỷ, và ba bài học để bạn nghĩ sáng suốt hơn.",
    "visual": {
     "type": "shots",
     "shots": [
@@ -192,7 +203,7 @@
       "to": {
        "label": "Cả một cách nghĩ",
        "icon": "brain",
-       "cue": "cách nghĩ"
+       "cue": "đằng sau"
       }
      },
      {
@@ -202,8 +213,7 @@
       "items": [
        {
         "icon": "book",
-        "label": "Một cuốn niên giám",
-        "cue": "cuốn niên"
+        "label": "Một cuốn niên giám"
        },
        {
         "icon": "bulb",
@@ -222,7 +232,7 @@
    "visual": {
     "type": "title",
     "kicker": "Review sách · Tập 5",
-    "title": "Niên Giám Của Charlie Munger",
+    "title": "Niên Giám Của Charlie Munger",
     "subtitle": "Poor Charlie's Almanack — Charlie Munger (2005)",
     "hold": 3.0
    },
@@ -251,24 +261,24 @@
        {
         "icon": "brain",
         "label": "Bộ óc thiên tài",
-        "cue": "bộ óc"
+        "cue": "một bộ"
        },
        {
         "icon": "star",
         "label": "Chuyên gia giỏi nhất ngành",
-        "cue": "chuyên gia"
+        "cue": "một chuyên"
        },
        {
         "icon": "key",
         "label": "Công thức bí mật",
-        "cue": "công thức"
+        "cue": "một công"
        }
       ]
      },
      {
       "type": "swap",
       "kicker": "Munger nghĩ khác",
-      "cue": "munger nghĩ",
+      "cue": "khác",
       "from": {
        "label": "Biết thật nhiều",
        "icon": "book"
@@ -438,8 +448,7 @@
       "items": [
        {
         "icon": "clock",
-        "label": "Thiếu tin cậy",
-        "cue": "sống thiếu"
+        "label": "Thiếu tin cậy"
        },
        {
         "icon": "mirror",
@@ -596,15 +605,15 @@
      {
       "type": "venn",
       "kicker": "Bài học 2 · Xây mạng lưới mô hình",
-      "cue": "khi chúng",
+      "cue": "đan",
       "circles": [
        {
         "label": "Toán",
-        "cue": "khi chúng"
+        "cue": "đan"
        },
        {
         "label": "Tâm lý",
-        "cue": "đan"
+        "cue": "vào nhau"
        },
        {
         "label": "Kỹ thuật",
@@ -628,17 +637,11 @@
     "type": "shots",
     "shots": [
      {
-      "type": "book",
-      "title": "The Psychology of Human Misjudgment",
-      "author": "Charles T. Munger",
-      "year": "1995",
-      "kicker": "Bài nói ở Harvard",
-      "facts": [
-       {
-        "big": "1995",
-        "text": "Bài nói đầu tiên",
-        "cue": "năm một"
-       }
+      "type": "statement",
+      "kicker": "1995 · Bài nói ở Harvard",
+      "text": "Tâm lý học của những phán đoán sai lầm",
+      "highlight": [
+       "phán đoán sai lầm"
       ]
      },
      {
@@ -661,7 +664,7 @@
   {
    "id": "b11",
    "act": "example",
-   "narration": "Một ví dụ nổi tiếng của ông là FedEx. Ca đêm ở trung tâm phân loại cứ chậm mãi. Khuyên nhủ, nhắc nhở đều vô ích. Rồi họ đổi cách trả lương: không trả theo giờ nữa, mà trả theo ca, xong việc là được về. Vấn đề được giải quyết.",
+   "narration": "Một ví dụ nổi tiếng của ông là FedEx. Ca đêm ở trung tâm phân loại cứ chậm mãi. Khuyên nhủ, nhắc nhở đều vô ích. Vậy cuối cùng họ làm gì? Họ đổi cách trả lương: không trả theo giờ nữa, mà trả theo ca, xong việc là được về. Vấn đề được giải quyết.",
    "visual": {
     "type": "shots",
     "shots": [
@@ -688,8 +691,8 @@
      },
      {
       "type": "swap",
-      "kicker": "Đổi cách trả lương",
-      "cue": "rồi họ",
+      "kicker": "Vậy họ làm gì?",
+      "cue": "vậy cuối",
       "from": {
        "label": "Trả theo giờ",
        "icon": "clock"
@@ -751,8 +754,7 @@
       "icon": "checklist",
       "kicker": "Bài học 3",
       "cue": "vậy hãy",
-      "line": "Rà danh sách bẫy trước mỗi quyết định lớn",
-      "line_cue": "rà"
+      "line": "Rà danh sách bẫy trước mỗi quyết định lớn"
      }
     ]
    },
@@ -906,19 +908,17 @@
   {
    "id": "b18",
    "act": "close",
-   "narration": "Còn bạn, bạn muốn mình review cuốn sách nào của một nhà tư duy lớn tiếp theo? Để lại bình luận cho mình nhé. Nếu thấy hay, lưu lại và gửi cho một người bạn. Hẹn gặp bạn.",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
    "visual": {
     "type": "end",
     "kicker": "Review sách · Tập 5",
     "title": "Niên Giám Của Charlie Munger",
-    "ask": "Bạn muốn nghe về nhà tư duy nào tiếp theo?",
-    "ask_hint": "Một nhà đầu tư · một nhà khoa học · một cuốn sách kinh điển",
+    "ask": "Bạn muốn clip tiếp theo về cuốn sách nào?",
+    "ask_hint": "Một cuốn sách · một nhà tư duy · một chủ đề",
     "ask_cue": "còn bạn",
-    "cta": "Bình luận · Lưu lại · Gửi một người bạn",
-    "cta_cue": "nếu thấy",
-    "sources_line": "Nguồn: Kaufman (ed.), Poor Charlie's Almanack (2005) · Munger: Harvard School 1986, USC 1994, Harvard 1995",
-    "disclaimer": "Tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư.",
-    "sources_cue": "hẹn gặp"
+    "sources_line": "Nguồn: Kaufman (ed.), Poor Charlie's Almanack (2005) · Munger 1986, 1994, 1995 · chi tiết trong mô tả",
+    "disclaimer": "Nội dung giáo dục, tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư.",
+    "sources_cue": "còn bạn"
    }
   }
  ],
