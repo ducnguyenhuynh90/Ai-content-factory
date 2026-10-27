@@ -301,3 +301,13 @@ def test_swap_inside_shots_is_struck_after_it_is_read():
     html = scenes.scene_file(look, "b1", v, 12.0, lambda w, d: 4.0 if w == "hai" else d, 11.0, last=False)
     t = float(re.search(r'tl\.fromTo\("#b1s1-x".*, (\d+\.\d+)\);', html).group(1))
     assert t >= 4.0 + 1.5  # the shot opens at 4 s; the strike comes only after the old idea has been read
+
+
+def test_gate_vietnamese_false_positives():
+    from vfactory.lesson import gate as g
+
+    assert g.NAME_RE.findall("Chuỗi Walgreens và Kimberly-Clark.") == ["Walgreens", "Kimberly-Clark"]
+    assert g._name_heard("Kimberly-Clark", "công ty Kimberly Clark")
+    assert not g._name_heard("Walgreens", "một cửa hàng thuốc")
+    L = {"meta": {"lang": "vi"}, "beats": [{"id": "b1", "narration": "Mãi mãi, năm năm. Là là sai.", "visual": {"type": "statement", "text": "x"}}]}
+    assert [x for x in g.copy_lint(L) if "doubled" in x] == ["b1: doubled word 'là là'"]

@@ -77,13 +77,31 @@ def font_coverage(lesson: dict) -> dict:
     return {"checked": True, "missing": {k: v for k, v in missing.items() if v}}
 
 
+VI_NEVER_DOUBLED = {"là", "của", "và", "một", "những", "các", "cho", "với", "thì", "mà", "được", "không", "này", "đó"}
+# English names inside Vietnamese text: ASCII words not glued to Vietnamese letters ("Chu" in "Chuỗi" is not a name)
+NAME_RE = re.compile(r"(?<![^\W\d_])[A-Z][a-zA-Z]+(?:[- ][A-Z][a-zA-Z]+)*(?![^\W\d_])")
+REHOOK_RE = re.compile(r"(^|[.!?…]\s+)(Nhưng|Hóa ra|Thế nhưng|Vậy mà|But|Yet|Turns out)\b")
+
+
+def _name_heard(name: str, heard: str) -> bool:
+    ht = [voice._norm(x) for x in heard.replace("-", " ").split()]
+    for part in name.replace("-", " ").split():
+        p = voice._norm(part)
+        if p in ht or difflib.get_close_matches(p, ht, n=1, cutoff=0.75):
+            return True
+    return False
+
+
 def copy_lint(lesson: dict) -> list[str]:
     """Typos a proofreader would circle: doubled words, stray spaces, digits in narration, unbalanced quotes."""
     issues = []
     for b in lesson["beats"]:
         n = b["narration"]
-        for m in re.finditer(r"\b(\w+) \1\b", n, re.I):
-            issues.append(f"{b['id']}: doubled word '{m.group(0)}'")
+        vi = lesson["meta"].get("lang") == "vi"
+        for m in re.finditer(r"\b(\w+) \1\b", n):
+            # Vietnamese reduplication ("mãi mãi", "năm năm", "từ từ") is grammar, not a typo: flag only particles
+            if not vi or m.group(1).lower() in VI_NEVER_DOUBLED:
+                issues.append(f"{b['id']}: doubled word '{m.group(0)}'")
         if "  " in n or n != n.strip():
             issues.append(f"{b['id']}: stray whitespace in narration")
         if re.search(r"\d", n) and not b.get("allow_digits"):
@@ -165,8 +183,8 @@ def run(lesson_path: str | Path, out_dir: str | Path, check: bool = True, listen
                 gone = [" ".join(nt[a1:a2]) for op, a1, a2, _, _ in sm.get_opcodes() if op == "delete" and a2 - a1 >= 2]
                 if gone:
                     missing.append({"id": tm["id"], "missing": gone, "heard": heard})
-                for nm in set(re.findall(r"\b[A-Z][a-zA-Z]+(?:[- ][A-Z][a-zA-Z]+)*", b["narration"])):
-                    if nm.split()[0].lower() not in heard.lower() and nm.split()[-1].lower() not in heard.lower():
+                for nm in set(NAME_RE.findall(b["narration"])):
+                    if not _name_heard(nm, heard):
                         names.append({"id": tm["id"], "name": nm, "heard": heard[:120]})
             except ImportError:
                 listen = False
@@ -233,7 +251,8 @@ def run(lesson_path: str | Path, out_dir: str | Path, check: bool = True, listen
 
     # --- re-hooks: a question, a twist or a myth broken at least every ~60 s
     turns = [tm["start"] for tm in timing["beats"] if beats[tm["id"]]["act"] in ("misconception", "complication", "turn", "question")
-             or "?" in beats[tm["id"]]["narration"]]
+             or "?" in beats[tm["id"]]["narration"] or REHOOK_RE.search(beats[tm["id"]]["narration"])
+             or beats[tm["id"]]["visual"]["type"] in ("swap", "question")]
     gaps = np.diff([0.0] + turns + [timing["total"]]) if turns else [timing["total"]]
     metrics["longest_without_rehook_s"] = round(float(max(gaps)), 1)
     if max(gaps) > 75:
