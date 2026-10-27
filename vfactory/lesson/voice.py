@@ -196,24 +196,63 @@ def sentences(text: str) -> list[str]:
     return [x for x in _SENT.split(text.strip()) if x]
 
 
+def insert_pauses(y: np.ndarray, sr: int, text: str, lang: str, gap: dict) -> np.ndarray:
+    """Lengthen the silence after each sentence of a clip read in one pass: Whisper finds where each sentence's last
+    word ends, the quietest stretch before the next word is the seam, and silence is added there until the pause is
+    as long as `gap` asks for that sentence's last mark (a question leaves room to think)."""
+    toks = re.findall(r"\S+", text)
+    times = _match_times(toks, _heard_words(y, sr, lang), len(y) / sr)
+    frame = int(0.01 * sr)
+    rms = np.sqrt(np.convolve(y.astype("float64") ** 2, np.ones(frame) / frame, mode="same"))
+    quiet = rms < max(0.004, 0.06 * float(np.percentile(rms, 95)))
+    cuts = []
+    for i, t in enumerate(toks[:-1]):
+        want = gap.get(t.rstrip("\"'”’)»")[-1:])
+        if not want:
+            continue
+        a = int(max(0.0, times[i]["end"] - 0.15) * sr)
+        b = int(min(len(y) / sr, times[i + 1]["start"] + 0.15) * sr)
+        if b - a < frame:
+            continue
+        seg = quiet[a:b]
+        best, run, start, bs = 0, 0, 0, 0
+        for k, q in enumerate(seg):  # the longest quiet run in the window is the existing pause
+            if q:
+                if run == 0:
+                    start = k
+                run += 1
+                if run > best:
+                    best, bs = run, start
+            else:
+                run = 0
+        at = a + (bs + best // 2 if best else int(np.argmin(rms[a:b])))
+        cuts.append((at, max(0.0, want - best / sr)))
+    out, prev = [], 0
+    for at, add in sorted(cuts):
+        out += [y[prev:at], np.zeros(int(add * sr), dtype="float32")]
+        prev = at
+    out.append(y[prev:])
+    return np.concatenate(out).astype("float32")
+
+
 def omni_create(text: str, instruct: str, speed: float, lang: str, ref: str | None = None, ref_text: str | None = None,
                 seed: int = 7, take: int = 0, pauses: dict | None = None) -> tuple[np.ndarray, int]:
-    """Read sentence by sentence (one pass over a whole paragraph runs the sentences together) and join them with a
-    pause chosen by each sentence's last mark. `take` re-samples one line (same narrator) when a take drops or slurs
-    words; `pauses` overrides PAUSES (seconds)."""
+    """Read the whole line in one pass (continuous prosody, ~2.5x faster than sentence by sentence, which re-reads the
+    reference prompt every time), then open the pauses between sentences (insert_pauses). `take` re-samples one line
+    (same narrator) when a take drops or slurs words; `pauses` overrides PAUSES (seconds)."""
     import torch
 
     if not ref:
         ref, ref_text = omni_narrator(instruct, lang, seed)
-    gap = {**PAUSES, **(pauses or {})}
-    out = []
-    for k, sent in enumerate(sentences(text)):
-        torch.manual_seed(seed + 1000 * take + k)
-        y = np.asarray(omni_engine().generate(text=sent, language=lang[:2], ref_audio=str(ref), ref_text=ref_text,
-                                              speed=speed)[0], dtype="float32")
-        out.append(_trim(y, pad=480))
-        out.append(np.zeros(int(24000 * gap.get(sent.rstrip()[-1:], 0.3)), dtype="float32"))
-    return np.concatenate(out[:-1]) if out else np.zeros(1, dtype="float32"), 24000
+    torch.manual_seed(seed + 1000 * take)
+    y = np.asarray(omni_engine().generate(text=text, language=lang[:2], ref_audio=str(ref), ref_text=ref_text,
+                                          speed=speed)[0], dtype="float32")
+    if len(sentences(text)) > 1:
+        try:
+            y = insert_pauses(y, 24000, text, lang, {**PAUSES, **(pauses or {})})
+        except ImportError:  # no Whisper: keep the model's own pauses
+            pass
+    return y, 24000
 
 
 def piper_create(text: str, name: str, speed: float) -> tuple[np.ndarray, int]:
@@ -280,7 +319,7 @@ def synth(text: str, out: Path, voice: str = "bm_george", speed: float = 0.95, l
     spoken = apply_pronunciations(text, pronounce or {})
     key = hashlib.sha1(json.dumps([spoken, voice, speed, lang] + ([fx] if fx else []) +
                                   ([style, model] if voice.startswith("gemini:") else []) +
-                                  ([ref, ref_text] + ([seed] if seed != 7 else []) + ([take] if take else []) + ["sentences", {**PAUSES, **(pauses or {})}]
+                                  ([ref, ref_text] + ([seed] if seed != 7 else []) + ([take] if take else []) + ["one-pass+pauses", {**PAUSES, **(pauses or {})}]
                                    if voice.startswith("omnivoice:") else [])).encode()).hexdigest()[:12]
     meta = out.with_suffix(".json")
     if out.exists() and meta.exists() and json.loads(meta.read_text()).get("key") == key:
@@ -340,26 +379,37 @@ def align(wav: Path, text: str, lang: str = "vi", model: str = "small") -> list[
     """Real word timings: Whisper listens to the clip, its words are matched to the script's words in order, and
     script words it heard differently (respelled names) are spread between the nearest matched neighbours.
     Returns the word_times() format, or None when faster-whisper is unavailable. Cached next to the clip."""
-    global _WHISPER
     wav = Path(wav)
     cache = wav.with_suffix(".align.json")
     key = hashlib.sha1(json.dumps([text, wav.stat().st_size, wav.stat().st_mtime_ns, model]).encode()).hexdigest()[:12]
     if cache.exists() and json.loads(cache.read_text()).get("key") == key:
         return json.loads(cache.read_text())["times"]
     try:
-        from faster_whisper import WhisperModel  # type: ignore
+        import faster_whisper  # type: ignore  # noqa: F401
     except ImportError:
         return None
     import soundfile as sf
 
+    y, sr = sf.read(str(wav), dtype="float32")
+    toks = re.findall(r"\S+", text)
+    times = _match_times(toks, _heard_words(y if y.ndim == 1 else y.mean(axis=1), sr, lang, model), len(y) / sr)
+    cache.write_text(json.dumps({"key": key, "times": times}))
+    return times
+
+
+def _heard_words(y: np.ndarray, sr: int, lang: str, model: str = "small") -> list[tuple[str, float, float]]:
+    global _WHISPER
+    from faster_whisper import WhisperModel  # type: ignore
+
     if _WHISPER is None:
         _WHISPER = WhisperModel(model, device="cpu", compute_type="int8")
-    y, sr = sf.read(str(wav), dtype="float32")
-    y = _resample(y if y.ndim == 1 else y.mean(axis=1), sr, 16000)  # handed over as samples: no decoder dependency
-    segs, _ = _WHISPER.transcribe(y, language=lang[:2], word_timestamps=True, beam_size=5, vad_filter=False)
-    heard = [(w.word.strip(), w.start, w.end) for sg in segs for w in (sg.words or [])]
-    toks = re.findall(r"\S+", text)
-    dur = sf.info(str(wav)).duration
+    # handed over as samples at 16 kHz: no audio-decoder dependency
+    segs, _ = _WHISPER.transcribe(_resample(y, sr, 16000), language=lang[:2], word_timestamps=True, beam_size=5, vad_filter=False)
+    return [(w.word.strip(), w.start, w.end) for sg in segs for w in (sg.words or [])]
+
+
+def _match_times(toks: list[str], heard: list[tuple[str, float, float]], dur: float) -> list[dict]:
+    """Script words matched in order to the words heard; unmatched runs spread between matched neighbours by length."""
     times: list[dict | None] = [None] * len(toks)
     import difflib
 
@@ -386,7 +436,6 @@ def align(wav: Path, text: str, lang: str = "vi", model: str = "small") -> list[
             times[i + k] = {"word": t, "start": round(acc, 3), "end": round(acc + d * 0.85, 3)}
             acc += d
         i = j
-    cache.write_text(json.dumps({"key": key, "times": times, "matched": sum(b.size for b in sm.get_matching_blocks())}))
     return times
 
 
