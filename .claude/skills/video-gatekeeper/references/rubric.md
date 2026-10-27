@@ -133,7 +133,8 @@ Mark **REVISE before publishing** (verdict cannot be "proceed") when the materia
 - materially misleading investment calculations or charts;
 - an explanation that fails to teach the stated core concept;
 - an undisclosed relevant commercial conflict;
-- a technical defect the gate reports as a hard fail (dropped words, glyphs the fonts cannot draw, broken layout).
+- a technical defect the gate reports as a hard fail (dropped words, numbers not read as written, glyphs the fonts
+  cannot draw, broken layout).
 At the idea stage an unanswered research question is a **research requirement**, not automatically a failure.
 
 ## 5. Feedback that can be implemented

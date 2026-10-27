@@ -133,7 +133,7 @@
   {
    "id": "h2",
    "act": "context",
-   "narration": "Cây gậy đắt hơn quả bóng đúng một đô la. Vậy quả bóng giá bao nhiêu? Giữ câu trả lời trong đầu nhé, và rót một tách trà. Vài phút tới, bạn sẽ gặp hai nhân vật sống trong đầu mình, và ba bài học để bớt bị chúng đánh lừa.",
+   "narration": "Cây gậy đắt hơn quả bóng đúng một đô la. Vậy quả bóng giá bao nhiêu? Giữ câu trả lời trong đầu nhé. Vài phút tới, bạn sẽ gặp hai nhân vật sống trong đầu mình, và ba bài học để bớt bị chúng đánh lừa.",
    "visual": {
     "type": "shots",
     "shots": [
@@ -147,11 +147,8 @@
      },
      {
       "type": "icon",
-      "icon": "tea",
-      "steam": true,
-      "kicker": "Giữ câu trả lời trong đầu nhé",
-      "line": "Rót một tách trà.",
-      "line_cue": "rót",
+      "icon": "brain",
+      "line": "Giữ câu trả lời trong đầu nhé.",
       "cue": "giữ câu"
      },
      {

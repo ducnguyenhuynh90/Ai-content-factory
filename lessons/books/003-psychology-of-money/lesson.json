@@ -163,7 +163,7 @@
   {
    "id": "h2",
    "act": "context",
-   "narration": "Không phải vì bằng cấp. Cũng không nhờ một mã cổ phiếu thần kỳ. Rót một tách trà, ngồi xuống cùng mình nhé. Đến cuối clip, bạn sẽ có ba bài học về tiền, và không cần một công thức nào cả.",
+   "narration": "Không phải vì bằng cấp. Cũng không nhờ một mã cổ phiếu thần kỳ. Đến cuối clip, bạn sẽ có ba bài học về tiền, và không cần một công thức nào cả.",
    "visual": {
     "type": "shots",
     "shots": [
@@ -183,13 +183,6 @@
         "cue": "mã cổ"
        }
       ]
-     },
-     {
-      "type": "icon",
-      "icon": "tea",
-      "steam": true,
-      "line": "Ngồi xuống cùng mình nhé.",
-      "cue": "rót"
      },
      {
       "type": "swap",

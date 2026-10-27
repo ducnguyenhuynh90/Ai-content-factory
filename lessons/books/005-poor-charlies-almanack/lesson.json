@@ -8,11 +8,17 @@
   "lang": "vi",
   "audience": "người trẻ Việt thích đọc sách, muốn suy nghĩ sáng suốt hơn trong công việc và cuộc sống",
   "aspect": "4:3",
-  "target_minutes": [3, 5],
+  "target_minutes": [
+   3,
+   5
+  ],
   "voice": "omnivoice:male, middle-aged, very low pitch",
   "speed": 0.88,
   "music": "chill",
-  "look": {"primary_color": "#E8B06A", "secondary_color": "#12100E"},
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
   "learning_goals": [
    "Kể lại bài nói năm 1986 của Munger: đơn thuốc cho một cuộc đời khốn khổ, và câu chuyện người nhà quê",
    "Giải thích ba ý lớn: lật ngược vấn đề, mạng lưới mô hình tư duy, biết mình dễ sai ở đâu",
@@ -25,41 +31,153 @@
   "pronounce_note": "English names stay in English: OmniVoice reads them natively."
  },
  "sources": [
-  {"id": "pca", "cite": "Peter D. Kaufman (ed.), Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger, Donning Company, 2005; abridged Stripe Press edition, 5 Dec 2023 (foreword by John Collison)", "url": "https://press.stripe.com/poor-charlies-almanack"},
-  {"id": "hs1986", "cite": "Charles T. Munger, speech to the Harvard School (Los Angeles; now Harvard-Westlake), 13 June 1986 — Carson's three prescriptions, Munger's four, the rustic, Jacobi's 'invert, always invert' (transcript, Worldly Partners)", "url": "https://worldlypartners.com/wp-content/uploads/2024/01/1986-commencement-speech-by-charlie-munger-at-harvard-school-now-harvard-westlake.pdf"},
-  {"id": "hs1986b", "cite": "BizNews, 'Charlie Munger's speech to the Harvard School, June 1986' (second transcript)", "url": "https://www.biznews.com/thought-leaders/1986/06/13/charlie-mungers-speech-to-the-harvard-school-june-1986"},
-  {"id": "usc1994", "cite": "Charles T. Munger, 'A Lesson on Elementary, Worldly Wisdom As It Relates To Investment Management & Business', USC Business School, 1994 (latticework of models; man with a hammer) — transcript", "url": "https://jamesclear.com/great-speeches/a-lesson-on-elementary-worldly-wisdom-by-charlie-munger"},
-  {"id": "phm1995", "cite": "Charles T. Munger, 'The Psychology of Human Misjudgment', Harvard, June 1995 (Whitney Tilson transcript; Federal Express night shift paid per shift); revised with 25 tendencies in Poor Charlie's Almanack", "url": "https://www.rbcpa.com/wp-content/uploads/2017/01/Mungerspeech_june_95.pdf"},
-  {"id": "phm_jc", "cite": "James Clear, transcript of 'The Psychology of Human Misjudgment' (FedEx incentive story, 'lollapalooza')", "url": "https://jamesclear.com/great-speeches/psychology-of-human-misjudgment-by-charlie-munger"},
-  {"id": "wiki_munger", "cite": "Wikipedia, Charlie Munger (born 1 Jan 1924, Omaha; vice chairman of Berkshire Hathaway 1978–2023; died 28 Nov 2023, Santa Barbara, aged 99)", "url": "https://en.wikipedia.org/wiki/Charlie_Munger"},
-  {"id": "bloomberg2023", "cite": "Bloomberg Opinion, 'The Charlie Munger Principles to Invest and Live By', 29 Nov 2023 (obituary context)", "url": "https://www.bloomberg.com/opinion/articles/2023-11-29/the-charlie-munger-principles-to-invest-and-live-by"},
-  {"id": "brk2017", "cite": "Benzinga, 'At Berkshire Hathaway General Meeting, Charlie Munger Apologizes For Not Buying Google And Wal-Mart', May 2017", "url": "https://benzinga.com/markets/17/05/9418660/at-berkshire-hathaway-general-meeting-charlie-munger-apologizes-for-not-buying"},
-  {"id": "omission", "cite": "25iq, 'Charlie Munger on Mistakes' (errors of omission; Belridge Oil, Berkshire meeting 2001)", "url": "https://25iq.com/2012/11/16/charlie-munger-on-mistakes/"}
+  {
+   "id": "pca",
+   "cite": "Peter D. Kaufman (ed.), Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger, Donning Company, 2005; abridged Stripe Press edition, 5 Dec 2023 (foreword by John Collison)",
+   "url": "https://press.stripe.com/poor-charlies-almanack"
+  },
+  {
+   "id": "hs1986",
+   "cite": "Charles T. Munger, speech to the Harvard School (Los Angeles; now Harvard-Westlake), 13 June 1986 — Carson's three prescriptions, Munger's four, the rustic, Jacobi's 'invert, always invert' (transcript, Worldly Partners)",
+   "url": "https://worldlypartners.com/wp-content/uploads/2024/01/1986-commencement-speech-by-charlie-munger-at-harvard-school-now-harvard-westlake.pdf"
+  },
+  {
+   "id": "hs1986b",
+   "cite": "BizNews, 'Charlie Munger's speech to the Harvard School, June 1986' (second transcript)",
+   "url": "https://www.biznews.com/thought-leaders/1986/06/13/charlie-mungers-speech-to-the-harvard-school-june-1986"
+  },
+  {
+   "id": "usc1994",
+   "cite": "Charles T. Munger, 'A Lesson on Elementary, Worldly Wisdom As It Relates To Investment Management & Business', USC Business School, 1994 (latticework of models; man with a hammer) — transcript",
+   "url": "https://jamesclear.com/great-speeches/a-lesson-on-elementary-worldly-wisdom-by-charlie-munger"
+  },
+  {
+   "id": "phm1995",
+   "cite": "Charles T. Munger, 'The Psychology of Human Misjudgment', Harvard, June 1995 (Whitney Tilson transcript; Federal Express night shift paid per shift); revised with 25 tendencies in Poor Charlie's Almanack",
+   "url": "https://www.rbcpa.com/wp-content/uploads/2017/01/Mungerspeech_june_95.pdf"
+  },
+  {
+   "id": "phm_jc",
+   "cite": "James Clear, transcript of 'The Psychology of Human Misjudgment' (FedEx incentive story, 'lollapalooza')",
+   "url": "https://jamesclear.com/great-speeches/psychology-of-human-misjudgment-by-charlie-munger"
+  },
+  {
+   "id": "wiki_munger",
+   "cite": "Wikipedia, Charlie Munger (born 1 Jan 1924, Omaha; vice chairman of Berkshire Hathaway 1978–2023; died 28 Nov 2023, Santa Barbara, aged 99)",
+   "url": "https://en.wikipedia.org/wiki/Charlie_Munger"
+  },
+  {
+   "id": "bloomberg2023",
+   "cite": "Bloomberg Opinion, 'The Charlie Munger Principles to Invest and Live By', 29 Nov 2023 (obituary context)",
+   "url": "https://www.bloomberg.com/opinion/articles/2023-11-29/the-charlie-munger-principles-to-invest-and-live-by"
+  },
+  {
+   "id": "brk2017",
+   "cite": "Benzinga, 'At Berkshire Hathaway General Meeting, Charlie Munger Apologizes For Not Buying Google And Wal-Mart', May 2017",
+   "url": "https://benzinga.com/markets/17/05/9418660/at-berkshire-hathaway-general-meeting-charlie-munger-apologizes-for-not-buying"
+  },
+  {
+   "id": "omission",
+   "cite": "25iq, 'Charlie Munger on Mistakes' (errors of omission; Belridge Oil, Berkshire meeting 2001)",
+   "url": "https://25iq.com/2012/11/16/charlie-munger-on-mistakes/"
+  }
  ],
  "principles": [
-  {"name": "Lật ngược vấn đề", "line": "Hỏi điều gì chắc chắn làm mình thất bại, rồi tránh xa nó."},
-  {"name": "Xây mạng lưới mô hình", "line": "Lấy những ý lớn từ nhiều ngành, để không nhìn mọi thứ như một cái đinh."},
-  {"name": "Biết mình dễ sai ở đâu", "line": "Giữ một danh sách những cái bẫy tâm lý, và rà nó trước mỗi quyết định lớn."}
+  {
+   "name": "Lật ngược vấn đề",
+   "line": "Hỏi điều gì chắc chắn làm mình thất bại, rồi tránh xa nó."
+  },
+  {
+   "name": "Xây mạng lưới mô hình",
+   "line": "Lấy những ý lớn từ nhiều ngành, để không nhìn mọi thứ như một cái đinh."
+  },
+  {
+   "name": "Biết mình dễ sai ở đâu",
+   "line": "Giữ một danh sách những cái bẫy tâm lý, và rà nó trước mỗi quyết định lớn."
+  }
  ],
  "beats": [
   {
-   "id": "h1", "act": "hook",
+   "id": "h1",
+   "act": "hook",
    "narration": "Charlie Munger hay đùa: tôi chỉ muốn biết mình sẽ chết ở đâu. Để không bao giờ đến đó.",
    "visual": {
     "type": "hook",
     "kicker": "Poor Charlie's Almanack · Charlie Munger",
-    "lines": ["Biết mình sẽ chết ở đâu…", "…để không bao giờ đến."],
+    "lines": [
+     "Biết mình sẽ chết ở đâu…",
+     "…để không bao giờ đến."
+    ],
     "crash_cue": "không bao giờ",
-    "points": [[0, 1.0], [1, 1.3], [2, 1.7], [3, 2.0], [4, 2.6], [5, 3.1], [6, 3.6], [7, 2.2], [8, 1.1], [9, 0.6], [10, 0.4], [11, 0.3]],
+    "points": [
+     [
+      0,
+      1.0
+     ],
+     [
+      1,
+      1.3
+     ],
+     [
+      2,
+      1.7
+     ],
+     [
+      3,
+      2.0
+     ],
+     [
+      4,
+      2.6
+     ],
+     [
+      5,
+      3.1
+     ],
+     [
+      6,
+      3.6
+     ],
+     [
+      7,
+      2.2
+     ],
+     [
+      8,
+      1.1
+     ],
+     [
+      9,
+      0.6
+     ],
+     [
+      10,
+      0.4
+     ],
+     [
+      11,
+      0.3
+     ]
+    ],
     "peak_label": "vực thẳm phía trước",
     "end_label": "→ lật ngược"
    },
-   "sfx": [{"kind": "hit", "cue": "không bao giờ", "gain_db": -6}],
-   "sources": ["pca", "hs1986"]
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "không bao giờ",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "pca",
+    "hs1986"
+   ]
   },
   {
-   "id": "h2", "act": "context",
-   "narration": "Nghe như một câu đùa. Nhưng đằng sau nó là cả một cách nghĩ. Rót một tách trà ấm nhé. Trong vài phút tới, mình kể bạn nghe về cuốn niên giám của một ông già chín mươi chín tuổi, và ba bài học để bạn nghĩ sáng suốt hơn.",
+   "id": "h2",
+   "act": "context",
+   "narration": "Nghe như một câu đùa. Nhưng đằng sau nó là cả một cách nghĩ. Trong vài phút tới, mình kể bạn nghe về cuốn niên giám của một ông già chín mươi chín tuổi, và ba bài học để bạn nghĩ sáng suốt hơn.",
    "visual": {
     "type": "shots",
     "shots": [
@@ -67,31 +185,61 @@
       "type": "swap",
       "kicker": "Nghe như một câu đùa",
       "cue": "nhưng đằng",
-      "from": {"label": "Một câu đùa", "icon": "mask"},
-      "to": {"label": "Cả một cách nghĩ", "icon": "brain", "cue": "cách nghĩ"}
+      "from": {
+       "label": "Một câu đùa",
+       "icon": "mask"
+      },
+      "to": {
+       "label": "Cả một cách nghĩ",
+       "icon": "brain",
+       "cue": "cách nghĩ"
+      }
      },
-     {"type": "icon", "icon": "tea", "steam": true, "line": "Rót một tách trà nhé.", "cue": "rót"},
      {
       "type": "trio",
       "kicker": "Trong vài phút tới",
       "cue": "trong vài",
       "items": [
-       {"icon": "book", "label": "Một cuốn niên giám", "cue": "cuốn niên"},
-       {"icon": "bulb", "label": "Ba bài học", "cue": "ba bài"}
+       {
+        "icon": "book",
+        "label": "Một cuốn niên giám",
+        "cue": "cuốn niên"
+       },
+       {
+        "icon": "bulb",
+        "label": "Ba bài học",
+        "cue": "ba bài"
+       }
       ]
      }
     ]
    }
   },
   {
-   "id": "t0", "act": "context", "narration": "",
-   "visual": {"type": "title", "kicker": "Review sách · Tập 5", "title": "Niên Giám Của Charlie Munger",
-              "subtitle": "Poor Charlie's Almanack — Charlie Munger (2005)", "hold": 3.0},
-   "sfx": [{"kind": "whoosh", "at": 0.0, "gain_db": -12}],
-   "sources": ["pca"]
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Review sách · Tập 5",
+    "title": "Niên Giám Của Charlie Munger",
+    "subtitle": "Poor Charlie's Almanack — Charlie Munger (2005)",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ],
+   "sources": [
+    "pca"
+   ]
   },
   {
-   "id": "b01", "act": "misconception",
+   "id": "b01",
+   "act": "misconception",
    "narration": "Chúng ta hay nghĩ người khôn ngoan là người biết thật nhiều. Một bộ óc thiên tài. Một chuyên gia giỏi nhất ngành. Một công thức bí mật. Munger nghĩ khác: khôn ngoan bắt đầu từ việc tránh những điều dại dột.",
    "visual": {
     "type": "shots",
@@ -100,40 +248,85 @@
       "type": "trio",
       "kicker": "Điều ta hay tin",
       "items": [
-       {"icon": "brain", "label": "Bộ óc thiên tài", "cue": "bộ óc"},
-       {"icon": "star", "label": "Chuyên gia giỏi nhất ngành", "cue": "chuyên gia"},
-       {"icon": "key", "label": "Công thức bí mật", "cue": "công thức"}
+       {
+        "icon": "brain",
+        "label": "Bộ óc thiên tài",
+        "cue": "bộ óc"
+       },
+       {
+        "icon": "star",
+        "label": "Chuyên gia giỏi nhất ngành",
+        "cue": "chuyên gia"
+       },
+       {
+        "icon": "key",
+        "label": "Công thức bí mật",
+        "cue": "công thức"
+       }
       ]
      },
      {
       "type": "swap",
       "kicker": "Munger nghĩ khác",
       "cue": "munger nghĩ",
-      "from": {"label": "Biết thật nhiều", "icon": "book"},
-      "to": {"label": "Tránh điều dại dột", "icon": "lighthouse", "cue": "tránh"}
+      "from": {
+       "label": "Biết thật nhiều",
+       "icon": "book"
+      },
+      "to": {
+       "label": "Tránh điều dại dột",
+       "icon": "lighthouse",
+       "cue": "tránh"
+      }
      }
     ]
    }
   },
   {
-   "id": "b02", "act": "context",
+   "id": "b02",
+   "act": "context",
    "narration": "Charlie Munger sinh năm một nghìn chín trăm hai mươi tư ở Omaha, nước Mỹ. Từ năm một nghìn chín trăm bảy mươi tám, ông là phó chủ tịch Berkshire Hathaway, người cộng sự lâu năm của Warren Buffett. Ông mất cuối năm hai nghìn không trăm hai mươi ba, chỉ hơn một tháng trước sinh nhật thứ một trăm.",
    "visual": {
     "type": "shots",
     "shots": [
-     {"type": "portrait", "name": "Charlie Munger", "initials": "CM", "role": "Phó chủ tịch Berkshire Hathaway", "years": "1924 – 2023"},
-     {"type": "timeline", "title": "Một đời dài", "cue": "từ năm",
+     {
+      "type": "portrait",
+      "name": "Charlie Munger",
+      "initials": "CM",
+      "role": "Phó chủ tịch Berkshire Hathaway",
+      "years": "1924 – 2023"
+     },
+     {
+      "type": "timeline",
+      "title": "Một đời dài",
+      "cue": "từ năm",
       "events": [
-       {"year": "1924", "text": "Sinh ở Omaha, Mỹ"},
-       {"year": "1978", "text": "Phó chủ tịch Berkshire", "cue": "phó chủ"},
-       {"year": "2023", "text": "Mất ở tuổi 99", "cue": "ông mất"}
-      ]}
+       {
+        "year": "1924",
+        "text": "Sinh ở Omaha, Mỹ"
+       },
+       {
+        "year": "1978",
+        "text": "Phó chủ tịch Berkshire",
+        "cue": "phó chủ"
+       },
+       {
+        "year": "2023",
+        "text": "Mất ở tuổi 99",
+        "cue": "ông mất"
+       }
+      ]
+     }
     ]
    },
-   "sources": ["wiki_munger", "bloomberg2023"]
+   "sources": [
+    "wiki_munger",
+    "bloomberg2023"
+   ]
   },
   {
-   "id": "b03", "act": "context",
+   "id": "b03",
+   "act": "context",
    "narration": "Cuốn sách này không do Munger tự viết. Năm hai nghìn lẻ năm, người bạn lâu năm Peter Kaufman gom các bài nói của ông thành một cuốn sách dày. Cái tên là một lời chào tới Benjamin Franklin và cuốn Poor Richard's Almanack.",
    "visual": {
     "type": "shots",
@@ -145,8 +338,16 @@
       "year": "2005",
       "kicker": "Tuyển tập bài nói",
       "facts": [
-       {"big": "2005", "text": "Ấn bản đầu tiên", "cue": "năm hai"},
-       {"big": "Kaufman", "text": "Bạn lâu năm, người biên tập", "cue": "peter"}
+       {
+        "big": "2005",
+        "text": "Ấn bản đầu tiên",
+        "cue": "năm hai"
+       },
+       {
+        "big": "Kaufman",
+        "text": "Bạn lâu năm, người biên tập",
+        "cue": "peter"
+       }
       ]
      },
      {
@@ -158,10 +359,13 @@
      }
     ]
    },
-   "sources": ["pca"]
+   "sources": [
+    "pca"
+   ]
   },
   {
-   "id": "b04", "act": "story",
+   "id": "b04",
+   "act": "story",
    "narration": "Tháng Sáu năm một nghìn chín trăm tám mươi sáu, Munger lên phát biểu ở lễ tốt nghiệp của Harvard School. Không phải Đại học Harvard, mà là một trường trung học ở Los Angeles. Người ta chờ lời khuyên để thành công. Ông lại hỏi ngược: làm sao để chắc chắn có một cuộc đời khốn khổ?",
    "visual": {
     "type": "shots",
@@ -178,15 +382,26 @@
       "type": "swap",
       "kicker": "Ông lại hỏi ngược",
       "cue": "người ta",
-      "from": {"label": "Làm sao để thành công?", "icon": "star"},
-      "to": {"label": "Làm sao để khốn khổ?", "icon": "tissue", "cue": "ông lại"}
+      "from": {
+       "label": "Làm sao để thành công?",
+       "icon": "star"
+      },
+      "to": {
+       "label": "Làm sao để khốn khổ?",
+       "icon": "tissue",
+       "cue": "ông lại"
+      }
      }
     ]
    },
-   "sources": ["hs1986", "hs1986b"]
+   "sources": [
+    "hs1986",
+    "hs1986b"
+   ]
   },
   {
-   "id": "b05", "act": "story",
+   "id": "b05",
+   "act": "story",
    "narration": "Ông mượn ba đơn thuốc của danh hài Johnny Carson: dùng chất gây nghiện, ghen tị, và oán giận. Rồi thêm của riêng mình: sống thiếu tin cậy. Chỉ học từ trải nghiệm của bản thân. Và gục ngã một lần thì nằm luôn.",
    "visual": {
     "type": "shots",
@@ -196,9 +411,21 @@
       "kicker": "Đơn thuốc của Johnny Carson",
       "cross": true,
       "items": [
-       {"icon": "lock", "label": "Chất gây nghiện", "cue": "dùng chất"},
-       {"icon": "eye", "label": "Ghen tị", "cue": "ghen"},
-       {"icon": "lightning", "label": "Oán giận", "cue": "oán"}
+       {
+        "icon": "lock",
+        "label": "Chất gây nghiện",
+        "cue": "dùng chất"
+       },
+       {
+        "icon": "eye",
+        "label": "Ghen tị",
+        "cue": "ghen"
+       },
+       {
+        "icon": "lightning",
+        "label": "Oán giận",
+        "cue": "oán"
+       }
       ]
      },
      {
@@ -207,17 +434,33 @@
       "cross": true,
       "cue": "rồi thêm",
       "items": [
-       {"icon": "clock", "label": "Thiếu tin cậy", "cue": "sống thiếu"},
-       {"icon": "mirror", "label": "Chỉ học từ mình", "cue": "chỉ học"},
-       {"icon": "bench", "label": "Ngã là nằm luôn", "cue": "và gục"}
+       {
+        "icon": "clock",
+        "label": "Thiếu tin cậy",
+        "cue": "sống thiếu"
+       },
+       {
+        "icon": "mirror",
+        "label": "Chỉ học từ mình",
+        "cue": "chỉ học"
+       },
+       {
+        "icon": "bench",
+        "label": "Ngã là nằm luôn",
+        "cue": "và gục"
+       }
       ]
      }
     ]
    },
-   "sources": ["hs1986", "hs1986b"]
+   "sources": [
+    "hs1986",
+    "hs1986b"
+   ]
   },
   {
-   "id": "b06", "act": "story",
+   "id": "b06",
+   "act": "story",
    "narration": "Và đơn thuốc cuối cùng: hãy quên câu chuyện về một người nhà quê. Theo lời Munger kể, anh ta chỉ muốn biết mình sẽ chết ở đâu, để không bao giờ đến đó. Câu nói nổi tiếng ấy được cho là một câu đùa cổ, Munger chỉ mượn lại.",
    "visual": {
     "type": "shots",
@@ -238,11 +481,16 @@
      }
     ]
    },
-   "sources": ["hs1986", "hs1986b", "pca"],
+   "sources": [
+    "hs1986",
+    "hs1986b",
+    "pca"
+   ],
    "certainty": "attributed"
   },
   {
-   "id": "b07", "act": "principle",
+   "id": "b07",
+   "act": "principle",
    "narration": "Bài học thứ nhất: lật ngược vấn đề. Munger hay nhắc lời nhà toán học Carl Jacobi: đảo ngược, luôn luôn đảo ngược. Thay vì hỏi làm sao để hạnh phúc, hãy hỏi điều gì chắc chắn làm mình khổ, rồi tránh xa nó.",
    "visual": {
     "type": "shots",
@@ -260,17 +508,28 @@
       "type": "swap",
       "kicker": "Bài học 1 · Lật ngược vấn đề",
       "cue": "thay vì",
-      "from": {"label": "Làm sao để hạnh phúc?", "icon": "star"},
-      "to": {"label": "Điều gì làm mình khổ?", "icon": "lighthouse", "cue": "hãy hỏi"},
+      "from": {
+       "label": "Làm sao để hạnh phúc?",
+       "icon": "star"
+      },
+      "to": {
+       "label": "Điều gì làm mình khổ?",
+       "icon": "lighthouse",
+       "cue": "hãy hỏi"
+      },
       "line": "Rồi tránh xa nó.",
       "line_cue": "rồi tránh"
      }
     ]
    },
-   "sources": ["hs1986", "pca"]
+   "sources": [
+    "hs1986",
+    "pca"
+   ]
   },
   {
-   "id": "b08", "act": "context",
+   "id": "b08",
+   "act": "context",
    "narration": "Tám năm sau, ở trường kinh doanh USC, Munger nói về thứ ông gọi là mạng lưới mô hình tư duy. Ông nhắc một câu tục ngữ: với người chỉ có cái búa, vấn đề nào trông cũng giống cái đinh.",
    "visual": {
     "type": "shots",
@@ -294,10 +553,14 @@
      }
     ]
    },
-   "sources": ["usc1994", "pca"]
+   "sources": [
+    "usc1994",
+    "pca"
+   ]
   },
   {
-   "id": "b09", "act": "principle",
+   "id": "b09",
+   "act": "principle",
    "narration": "Bài học thứ hai: xây một mạng lưới mô hình. Lấy những ý lớn từ nhiều ngành: toán xác suất, kế toán, kỹ thuật, tâm lý học. Khi chúng đan vào nhau, bạn nhìn một vấn đề từ nhiều phía, chứ không chỉ từ góc nghề của mình.",
    "visual": {
     "type": "shots",
@@ -306,10 +569,26 @@
       "type": "trio",
       "kicker": "Bài học 2 · Xây mạng lưới mô hình",
       "items": [
-       {"icon": "dice", "label": "Xác suất", "cue": "toán"},
-       {"icon": "chart", "label": "Kế toán", "cue": "kế toán"},
-       {"icon": "gear", "label": "Kỹ thuật", "cue": "kỹ thuật"},
-       {"icon": "brain", "label": "Tâm lý học", "cue": "tâm lý"}
+       {
+        "icon": "dice",
+        "label": "Xác suất",
+        "cue": "toán"
+       },
+       {
+        "icon": "chart",
+        "label": "Kế toán",
+        "cue": "kế toán"
+       },
+       {
+        "icon": "gear",
+        "label": "Kỹ thuật",
+        "cue": "kỹ thuật"
+       },
+       {
+        "icon": "brain",
+        "label": "Tâm lý học",
+        "cue": "tâm lý"
+       }
       ]
      },
      {
@@ -317,19 +596,31 @@
       "kicker": "Bài học 2 · Xây mạng lưới mô hình",
       "cue": "khi chúng",
       "circles": [
-       {"label": "Toán", "cue": "khi chúng"},
-       {"label": "Tâm lý", "cue": "đan"},
-       {"label": "Kỹ thuật", "cue": "bạn nhìn"}
+       {
+        "label": "Toán",
+        "cue": "khi chúng"
+       },
+       {
+        "label": "Tâm lý",
+        "cue": "đan"
+       },
+       {
+        "label": "Kỹ thuật",
+        "cue": "bạn nhìn"
+       }
       ],
       "center_label": "Nhiều góc nhìn",
       "center_cue": "nhiều phía"
      }
     ]
    },
-   "sources": ["usc1994"]
+   "sources": [
+    "usc1994"
+   ]
   },
   {
-   "id": "b10", "act": "story",
+   "id": "b10",
+   "act": "story",
    "narration": "Năm một nghìn chín trăm chín mươi lăm, ở Harvard, Munger nói về tâm lý học của những phán đoán sai lầm. Bản viết lại trong sách liệt kê hai mươi lăm khuynh hướng khiến người thông minh vẫn nghĩ sai.",
    "visual": {
     "type": "shots",
@@ -340,7 +631,13 @@
       "author": "Charles T. Munger",
       "year": "1995",
       "kicker": "Bài nói ở Harvard",
-      "facts": [{"big": "1995", "text": "Bài nói đầu tiên", "cue": "năm một"}]
+      "facts": [
+       {
+        "big": "1995",
+        "text": "Bài nói đầu tiên",
+        "cue": "năm một"
+       }
+      ]
      },
      {
       "type": "icon",
@@ -354,10 +651,14 @@
      }
     ]
    },
-   "sources": ["phm1995", "pca"]
+   "sources": [
+    "phm1995",
+    "pca"
+   ]
   },
   {
-   "id": "b11", "act": "example",
+   "id": "b11",
+   "act": "example",
    "narration": "Một ví dụ nổi tiếng của ông là FedEx. Ca đêm ở trung tâm phân loại cứ chậm mãi. Khuyên nhủ, nhắc nhở đều vô ích. Rồi họ đổi cách trả lương: không trả theo giờ nữa, mà trả theo ca, xong việc là được về. Vấn đề được giải quyết.",
    "visual": {
     "type": "shots",
@@ -366,26 +667,49 @@
       "type": "trio",
       "kicker": "FedEx · ca đêm",
       "items": [
-       {"icon": "turtle", "label": "Cứ chậm mãi", "cue": "chậm"},
-       {"icon": "people", "label": "Khuyên nhủ: vô ích", "cue": "khuyên"},
-       {"icon": "letter", "label": "Nhắc nhở: vô ích", "cue": "nhắc"}
+       {
+        "icon": "turtle",
+        "label": "Cứ chậm mãi",
+        "cue": "chậm"
+       },
+       {
+        "icon": "people",
+        "label": "Khuyên nhủ: vô ích",
+        "cue": "khuyên"
+       },
+       {
+        "icon": "letter",
+        "label": "Nhắc nhở: vô ích",
+        "cue": "nhắc"
+       }
       ]
      },
      {
       "type": "swap",
       "kicker": "Đổi cách trả lương",
       "cue": "rồi họ",
-      "from": {"label": "Trả theo giờ", "icon": "clock"},
-      "to": {"label": "Trả theo ca · xong là về", "icon": "house", "cue": "mà trả"},
+      "from": {
+       "label": "Trả theo giờ",
+       "icon": "clock"
+      },
+      "to": {
+       "label": "Trả theo ca · xong là về",
+       "icon": "house",
+       "cue": "mà trả"
+      },
       "line": "Vấn đề được giải quyết.",
       "line_cue": "vấn đề"
      }
     ]
    },
-   "sources": ["phm1995", "phm_jc"]
+   "sources": [
+    "phm1995",
+    "phm_jc"
+   ]
   },
   {
-   "id": "b12", "act": "principle",
+   "id": "b12",
+   "act": "principle",
    "narration": "Bài học thứ ba: biết mình dễ sai ở đâu. Phần thưởng, nỗi sợ mất mát, áp lực đám đông. Mỗi thứ đủ làm ta lệch. Khi nhiều thứ cùng đẩy một hướng, Munger gọi đó là hiệu ứng lollapalooza. Vậy hãy giữ một danh sách những cái bẫy, và rà nó trước mỗi quyết định lớn.",
    "visual": {
     "type": "shots",
@@ -394,9 +718,21 @@
       "type": "trio",
       "kicker": "Bài học 3 · Biết mình dễ sai ở đâu",
       "items": [
-       {"icon": "coin", "label": "Phần thưởng", "cue": "phần thưởng"},
-       {"icon": "mask", "label": "Sợ mất mát", "cue": "nỗi sợ"},
-       {"icon": "people", "label": "Áp lực đám đông", "cue": "áp lực"}
+       {
+        "icon": "coin",
+        "label": "Phần thưởng",
+        "cue": "phần thưởng"
+       },
+       {
+        "icon": "mask",
+        "label": "Sợ mất mát",
+        "cue": "nỗi sợ"
+       },
+       {
+        "icon": "people",
+        "label": "Áp lực đám đông",
+        "cue": "áp lực"
+       }
       ]
      },
      {
@@ -418,10 +754,15 @@
      }
     ]
    },
-   "sources": ["phm1995", "phm_jc", "pca"]
+   "sources": [
+    "phm1995",
+    "phm_jc",
+    "pca"
+   ]
   },
   {
-   "id": "b13", "act": "complication",
+   "id": "b13",
+   "act": "complication",
    "narration": "Nhưng đừng thần thánh hoá Munger. Ông nói thẳng: những sai lầm đắt nhất của ông là những việc đã không làm. Năm hai nghìn không trăm mười bảy, ông còn xin lỗi cổ đông vì đã bỏ lỡ Google. Người giỏi nhất cũng sai. Điều khác biệt là ông nhìn thẳng vào nó.",
    "visual": {
     "type": "shots",
@@ -438,18 +779,32 @@
       "kicker": "Ngay cả Munger",
       "cue": "năm hai",
       "items": [
-       {"name": "Charlie Munger", "before": "Huyền thoại", "after": "BỎ LỠ GOOGLE · XIN LỖI 2017", "cue": "xin lỗi"}
+       {
+        "name": "Charlie Munger",
+        "before": "Huyền thoại",
+        "after": "BỎ LỠ GOOGLE · XIN LỖI 2017",
+        "cue": "xin lỗi"
+       }
       ],
       "label": "Người giỏi nhất cũng sai",
       "label_cue": "người giỏi"
      },
-     {"type": "icon", "icon": "mirror", "cue": "điều khác", "line": "Nhìn thẳng vào sai lầm."}
+     {
+      "type": "icon",
+      "icon": "mirror",
+      "cue": "điều khác",
+      "line": "Nhìn thẳng vào sai lầm."
+     }
     ]
    },
-   "sources": ["brk2017", "omission"]
+   "sources": [
+    "brk2017",
+    "omission"
+   ]
   },
   {
-   "id": "b14", "act": "turn",
+   "id": "b14",
+   "act": "turn",
    "narration": "Vậy đọc cuốn này thế nào cho đúng? Đừng sưu tầm mô hình như sưu tầm tem. Hãy chọn một quyết định thật của mình tuần này, và hỏi ngược lại: điều gì sẽ làm nó hỏng?",
    "visual": {
     "type": "shots",
@@ -458,7 +813,13 @@
       "type": "trio",
       "kicker": "Đừng sưu tầm",
       "cross": true,
-      "items": [{"icon": "letter", "label": "Mô hình như sưu tầm tem", "cue": "đừng"}]
+      "items": [
+       {
+        "icon": "letter",
+        "label": "Mô hình như sưu tầm tem",
+        "cue": "đừng"
+       }
+      ]
      },
      {
       "type": "icon",
@@ -472,35 +833,60 @@
    }
   },
   {
-   "id": "b15", "act": "question",
+   "id": "b15",
+   "act": "question",
    "narration": "Giờ thử một chút nhé. Bạn muốn giữ sức khoẻ trong năm tới. Câu hỏi nào là cách nghĩ lật ngược?",
    "visual": {
     "type": "question",
     "question": "Muốn khoẻ trong năm tới. Câu hỏi nào là lật ngược?",
-    "choices": ["Môn thể thao nào giúp khoẻ nhanh nhất?", "Thói quen nào đang làm mình yếu đi?", "Người khoẻ nhất mình biết là ai?"],
+    "choices": [
+     "Môn thể thao nào giúp khoẻ nhanh nhất?",
+     "Thói quen nào đang làm mình yếu đi?",
+     "Người khoẻ nhất mình biết là ai?"
+    ],
     "answer": "B — tìm điều làm mình hỏng, rồi tránh nó.",
     "think_seconds": 5
    }
   },
   {
-   "id": "b16", "act": "recap",
+   "id": "b16",
+   "act": "recap",
    "narration": "Vậy là ba bài học từ cuốn niên giám của Charlie Munger. Lật ngược vấn đề. Xây mạng lưới mô hình. Và biết mình dễ sai ở đâu.",
    "visual": {
-    "type": "list", "title": "Ba bài học", "check": true,
+    "type": "list",
+    "title": "Ba bài học",
+    "check": true,
     "items": [
-     {"text": "Lật ngược vấn đề", "cue": "lật"},
-     {"text": "Xây mạng lưới mô hình", "cue": "xây"},
-     {"text": "Biết mình dễ sai ở đâu", "cue": "và biết"}
+     {
+      "text": "Lật ngược vấn đề",
+      "cue": "lật"
+     },
+     {
+      "text": "Xây mạng lưới mô hình",
+      "cue": "xây"
+     },
+     {
+      "text": "Biết mình dễ sai ở đâu",
+      "cue": "và biết"
+     }
     ]
    }
   },
   {
-   "id": "b17", "act": "close",
+   "id": "b17",
+   "act": "close",
    "narration": "Người nhà quê ấy muốn biết chỗ mình sẽ chết. Nghe thì buồn cười. Nhưng có lẽ đó là câu hỏi khôn ngoan nhất. Vậy hôm nay, đâu là nơi bạn nên tránh?",
    "visual": {
     "type": "shots",
     "shots": [
-     {"type": "statement", "kicker": "Câu hỏi của người nhà quê", "text": "Mình sẽ chết ở đâu?", "highlight": ["ở đâu"]},
+     {
+      "type": "statement",
+      "kicker": "Câu hỏi của người nhà quê",
+      "text": "Mình sẽ chết ở đâu?",
+      "highlight": [
+       "ở đâu"
+      ]
+     },
      {
       "type": "icon",
       "icon": "lighthouse",
@@ -511,10 +897,13 @@
      }
     ]
    },
-   "sources": ["hs1986"]
+   "sources": [
+    "hs1986"
+   ]
   },
   {
-   "id": "b18", "act": "close",
+   "id": "b18",
+   "act": "close",
    "narration": "Còn bạn, bạn muốn mình review cuốn sách nào của một nhà tư duy lớn tiếp theo? Để lại bình luận cho mình nhé. Nếu thấy hay, lưu lại và gửi cho một người bạn. Hẹn gặp bạn.",
    "visual": {
     "type": "end",

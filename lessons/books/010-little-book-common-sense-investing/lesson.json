@@ -189,7 +189,7 @@
   {
    "id": "h2",
    "act": "context",
-   "narration": "Không cần một nhà quản lý ngôi sao. Cũng không cần đoán trước thị trường. Pha một ấm trà, mình kể bạn nghe nhé. Trong vài phút tới, bạn sẽ thấy vì sao cái nhàm chán lại thắng, và ba bài học từ người đã nghĩ ra nó.",
+   "narration": "Không cần một nhà quản lý ngôi sao. Cũng không cần đoán trước thị trường. Trong vài phút tới, bạn sẽ thấy vì sao cái nhàm chán lại thắng, và ba bài học từ người đã nghĩ ra nó.",
    "visual": {
     "type": "shots",
     "shots": [
@@ -209,13 +209,6 @@
         "cue": "đoán"
        }
       ]
-     },
-     {
-      "type": "icon",
-      "icon": "tea",
-      "steam": true,
-      "line": "Mình kể bạn nghe nhé.",
-      "cue": "pha"
      },
      {
       "type": "trio",

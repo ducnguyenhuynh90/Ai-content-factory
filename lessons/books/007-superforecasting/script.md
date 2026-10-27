@@ -1,5 +1,5 @@
 # Siêu Dự Báo
-_Review sách · Tập 7 · 858 words · ~3.69 min · 4:3_
+_Review sách · Tập 7 · 849 words · ~3.66 min · 4:3_
 
 ## Learning goals
 - Kể lại được câu chuyện 'tinh tinh ném phi tiêu' và nửa sau bị bỏ quên: con cáo đoán tốt hơn con nhím
@@ -15,7 +15,7 @@ _Review sách · Tập 7 · 858 words · ~3.69 min · 4:3_
 | # | act | narration | on screen |
 |---|---|---|---|
 | h1 | hook | Khoảng hai mươi tám nghìn dự đoán của chuyên gia. Kết quả: ngang một con tinh tinh ném phi tiêu? _(estimate)_ | hook: hook |
-| h2 | context | Câu đùa ấy nổi tiếng khắp thế giới, và nó bị hiểu sai. Đặt ấm nước lên đi, mình kể chậm thôi. Trong vài phút tới, bạn sẽ gặp những người bình thường đoán tương lai giỏi đến bất ngờ, và ba bài học để nghĩ như họ. | shots: shots |
+| h2 | context | Câu đùa ấy nổi tiếng khắp thế giới, và nó bị hiểu sai. Trong vài phút tới, bạn sẽ gặp những người bình thường đoán tương lai giỏi đến bất ngờ, và ba bài học để nghĩ như họ. | shots: shots |
 | t0 | context |  | title: Siêu Dự Báo |
 | b01 | misconception | Ta hay nghĩ chỉ có hai kiểu người đoán tương lai. Chuyên gia nói chắc nịch trên truyền hình, hoặc kẻ đoán bừa. Và nếu chuyên gia cũng trật, thì tương lai là thứ không ai đoán được. Tetlock nghĩ khác. | shots: shots |
 | b02 | context | Năm một nghìn chín trăm tám mươi tư, nhà tâm lý học Philip Tetlock bắt đầu một nghiên cứu kéo dài khoảng hai mươi năm. Hai trăm tám mươi tư chuyên gia, khoảng hai mươi tám nghìn dự đoán về kinh tế và chính trị thế giới. Năm hai nghìn lẻ năm, ông công bố kết quả. _(estimate)_ | shots: shots |

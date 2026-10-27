@@ -118,7 +118,7 @@
   {
    "id": "h2",
    "act": "context",
-   "narration": "Họ không ngu. Phần lớn họ thật lòng tin mình đúng. Họ chỉ làm điều mà ai trong chúng ta cũng làm mỗi ngày. Pha một ấm trà nhé. Vài phút tới, bạn sẽ gặp hai kiểu tư duy, và ba bài học để nhìn mọi thứ rõ hơn.",
+   "narration": "Họ không ngu. Phần lớn họ thật lòng tin mình đúng. Họ chỉ làm điều mà ai trong chúng ta cũng làm mỗi ngày. Vài phút tới, bạn sẽ gặp hai kiểu tư duy, và ba bài học để nhìn mọi thứ rõ hơn.",
    "visual": {
     "type": "shots",
     "shots": [
@@ -145,13 +145,6 @@
       "kicker": "Họ chỉ làm điều",
       "line": "Ai trong chúng ta cũng làm mỗi ngày.",
       "cue": "họ chỉ"
-     },
-     {
-      "type": "icon",
-      "icon": "tea",
-      "steam": true,
-      "line": "Pha một ấm trà nhé.",
-      "cue": "pha một"
      },
      {
       "type": "trio",

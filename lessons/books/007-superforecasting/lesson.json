@@ -178,7 +178,7 @@
   {
    "id": "h2",
    "act": "context",
-   "narration": "Câu đùa ấy nổi tiếng khắp thế giới, và nó bị hiểu sai. Đặt ấm nước lên đi, mình kể chậm thôi. Trong vài phút tới, bạn sẽ gặp những người bình thường đoán tương lai giỏi đến bất ngờ, và ba bài học để nghĩ như họ.",
+   "narration": "Câu đùa ấy nổi tiếng khắp thế giới, và nó bị hiểu sai. Trong vài phút tới, bạn sẽ gặp những người bình thường đoán tương lai giỏi đến bất ngờ, và ba bài học để nghĩ như họ.",
    "visual": {
     "type": "shots",
     "shots": [
@@ -190,13 +190,6 @@
       "line_cue": "hiểu sai",
       "motion": "shake",
       "motion_cue": "hiểu sai"
-     },
-     {
-      "type": "icon",
-      "icon": "tea",
-      "steam": true,
-      "line": "Đặt ấm nước lên đi.",
-      "cue": "đặt ấm"
      },
      {
       "type": "trio",

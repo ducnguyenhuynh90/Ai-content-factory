@@ -8,13 +8,19 @@
   "lang": "vi",
   "audience": "người trẻ Việt thích đọc sách, quan tâm đầu tư, muốn nghĩ khác đám đông một cách tỉnh táo",
   "aspect": "4:3",
-  "target_minutes": [3, 5],
+  "target_minutes": [
+   3,
+   5
+  ],
   "voice": "omnivoice:male, middle-aged, very low pitch",
   "voice_seed": 99,
   "speed": 0.88,
   "music": "chill",
   "captions": true,
-  "look": {"primary_color": "#E8B06A", "secondary_color": "#12100E"},
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
   "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư.",
   "learning_goals": [
    "Kể lại được câu chuyện bản ghi nhớ bubble.com (2/1/2000) và cú sụp của Nasdaq 2000–2002",
@@ -90,20 +96,58 @@
    "narration": "Mười năm viết thư, không một ai hồi âm. Rồi một lá thư, hơn hai tháng trước khi bong bóng vỡ.",
    "visual": {
     "type": "hook",
-    "lines": ["10 năm. Không ai hồi âm.", "Rồi: bubble.com."],
+    "lines": [
+     "10 năm. Không ai hồi âm.",
+     "Rồi: bubble.com."
+    ],
     "crash_cue": "vỡ",
-    "points": [[0, 2193], [1, 4069], [2, 5049], [3, 2471], [4, 1950], [5, 1114]],
+    "points": [
+     [
+      0,
+      2193
+     ],
+     [
+      1,
+      4069
+     ],
+     [
+      2,
+      5049
+     ],
+     [
+      3,
+      2471
+     ],
+     [
+      4,
+      1950
+     ],
+     [
+      5,
+      1114
+     ]
+    ],
     "peak_label": "Nasdaq · 3/2000",
     "end_label": "10/2002 · −78%",
     "kicker": "The Most Important Thing · Howard Marks"
    },
-   "sfx": [{"kind": "hit", "cue": "vỡ", "gain_db": -6}],
-   "sources": ["oaktree_history", "oaktree_bubble", "nasdaq"]
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "vỡ",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "oaktree_history",
+    "oaktree_bubble",
+    "nasdaq"
+   ]
   },
   {
    "id": "h2",
    "act": "context",
-   "narration": "Lá thư ấy không đoán ngày, cũng không nhờ may mắn. Nó chỉ nhìn ra điều đám đông không muốn thấy. Pha một ấm trà nào. Trong vài phút tới, bạn sẽ thấy cách người viết lá thư ấy suy nghĩ, và ba bài học để nghĩ khác đám đông.",
+   "narration": "Lá thư ấy không đoán ngày, cũng không nhờ may mắn. Nó chỉ nhìn ra điều đám đông không muốn thấy. Trong vài phút tới, bạn sẽ thấy cách người viết lá thư ấy suy nghĩ, và ba bài học để nghĩ khác đám đông.",
    "visual": {
     "type": "shots",
     "shots": [
@@ -112,19 +156,39 @@
       "kicker": "Không phải nhờ…",
       "cross": true,
       "items": [
-       {"icon": "clock", "label": "Đoán đúng ngày", "cue": "đoán"},
-       {"icon": "dice", "label": "May mắn", "cue": "may mắn"}
+       {
+        "icon": "clock",
+        "label": "Đoán đúng ngày",
+        "cue": "đoán"
+       },
+       {
+        "icon": "dice",
+        "label": "May mắn",
+        "cue": "may mắn"
+       }
       ]
      },
-     {"type": "icon", "icon": "magnifier", "line": "Thấy điều đám đông không muốn thấy.", "cue": "nó chỉ"},
-     {"type": "icon", "icon": "tea", "steam": true, "line": "Pha một ấm trà nào.", "cue": "pha"},
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "line": "Thấy điều đám đông không muốn thấy.",
+      "cue": "nó chỉ"
+     },
      {
       "type": "trio",
       "kicker": "Trong vài phút tới",
       "cue": "bạn sẽ",
       "items": [
-       {"icon": "letter", "label": "Cách người viết thư suy nghĩ", "cue": "người viết"},
-       {"icon": "key", "label": "Ba bài học nghĩ khác đám đông", "cue": "ba bài"}
+       {
+        "icon": "letter",
+        "label": "Cách người viết thư suy nghĩ",
+        "cue": "người viết"
+       },
+       {
+        "icon": "key",
+        "label": "Ba bài học nghĩ khác đám đông",
+        "cue": "ba bài"
+       }
       ]
      }
     ]
@@ -141,8 +205,16 @@
     "subtitle": "The Most Important Thing — Howard Marks (2011)",
     "hold": 3.0
    },
-   "sfx": [{"kind": "whoosh", "at": 0.0, "gain_db": -12}],
-   "sources": ["marks2011"]
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ],
+   "sources": [
+    "marks2011"
+   ]
   },
   {
    "id": "b01",
@@ -155,21 +227,42 @@
       "type": "trio",
       "kicker": "Điều ta hay tin",
       "items": [
-       {"icon": "binoculars", "label": "Dự báo giỏi", "cue": "dự báo"},
-       {"icon": "coins", "label": "Lãi suất tăng hay giảm", "cue": "lãi suất"},
-       {"icon": "chart", "label": "Thị trường lên hay xuống", "cue": "thị trường"}
+       {
+        "icon": "binoculars",
+        "label": "Dự báo giỏi",
+        "cue": "dự báo"
+       },
+       {
+        "icon": "coins",
+        "label": "Lãi suất tăng hay giảm",
+        "cue": "lãi suất"
+       },
+       {
+        "icon": "chart",
+        "label": "Thị trường lên hay xuống",
+        "cue": "thị trường"
+       }
       ]
      },
      {
       "type": "swap",
       "kicker": "Người viết cuốn sách này nghĩ khác",
       "cue": "người viết",
-      "from": {"label": "Đoán trúng tương lai", "icon": "binoculars"},
-      "to": {"label": "Biết mình đang đứng ở đâu", "icon": "compass", "cue": "biết mình"}
+      "from": {
+       "label": "Đoán trúng tương lai",
+       "icon": "binoculars"
+      },
+      "to": {
+       "label": "Biết mình đang đứng ở đâu",
+       "icon": "compass",
+       "cue": "biết mình"
+      }
      }
     ]
    },
-   "sources": ["predict2001"]
+   "sources": [
+    "predict2001"
+   ]
   },
   {
    "id": "b02",
@@ -190,14 +283,27 @@
       "title": "Những lá thư",
       "cue": "từ năm",
       "events": [
-       {"year": "1990", "text": "Lá thư đầu tiên", "cue": "từ năm"},
-       {"year": "1995", "text": "Lập Oaktree"},
-       {"year": "~10 năm", "text": "Không ai hồi âm", "cue": "gần mười"}
+       {
+        "year": "1990",
+        "text": "Lá thư đầu tiên",
+        "cue": "từ năm"
+       },
+       {
+        "year": "1995",
+        "text": "Lập Oaktree"
+       },
+       {
+        "year": "~10 năm",
+        "text": "Không ai hồi âm",
+        "cue": "gần mười"
+       }
       ]
      }
     ]
    },
-   "sources": ["oaktree_history"]
+   "sources": [
+    "oaktree_history"
+   ]
   },
   {
    "id": "b03",
@@ -210,8 +316,16 @@
       "type": "trio",
       "kicker": "Cuối năm 1999",
       "items": [
-       {"icon": "rocket", "label": "Nasdaq +86% trong một năm", "cue": "tám mươi"},
-       {"icon": "people", "label": "Ai cũng nói về internet", "cue": "ai cũng"}
+       {
+        "icon": "rocket",
+        "label": "Nasdaq +86% trong một năm",
+        "cue": "tám mươi"
+       },
+       {
+        "icon": "people",
+        "label": "Ai cũng nói về internet",
+        "cue": "ai cũng"
+       }
       ]
      },
      {
@@ -222,13 +336,25 @@
       "kicker": "Marks đọc · mùa thu 1999",
       "cue": "còn marks",
       "facts": [
-       {"big": "Lịch sử", "text": "các cơn đầu cơ", "cue": "lịch sử"},
-       {"big": "Giống", "text": "đến lạnh người", "cue": "giống"}
+       {
+        "big": "Lịch sử",
+        "text": "các cơn đầu cơ",
+        "cue": "lịch sử"
+       },
+       {
+        "big": "Giống",
+        "text": "đến lạnh người",
+        "cue": "giống"
+       }
       ]
      }
     ]
    },
-   "sources": ["nasdaq", "oaktree_bubble", "chancellor1999"],
+   "sources": [
+    "nasdaq",
+    "oaktree_bubble",
+    "chancellor1999"
+   ],
    "certainty": "estimate"
   },
   {
@@ -250,8 +376,16 @@
       "kicker": "Ông viết",
       "cue": "ông viết",
       "items": [
-       {"icon": "bubble", "label": "Quá nóng", "cue": "quá nóng"},
-       {"icon": "dice", "label": "Đầy màu đầu cơ", "cue": "đầy màu"}
+       {
+        "icon": "bubble",
+        "label": "Quá nóng",
+        "cue": "quá nóng"
+       },
+       {
+        "icon": "dice",
+        "label": "Đầy màu đầu cơ",
+        "cue": "đầy màu"
+       }
       ]
      },
      {
@@ -259,13 +393,23 @@
       "kicker": "Lần đầu tiên",
       "cue": "và lần",
       "items": [
-       {"icon": "hourglass", "label": "Gần mười năm im lặng", "cue": "gần mười"},
-       {"icon": "letter", "label": "Có người viết thư trả lời", "cue": "viết thư"}
+       {
+        "icon": "hourglass",
+        "label": "Gần mười năm im lặng",
+        "cue": "gần mười"
+       },
+       {
+        "icon": "letter",
+        "label": "Có người viết thư trả lời",
+        "cue": "viết thư"
+       }
       ]
      }
     ]
    },
-   "sources": ["oaktree_bubble"]
+   "sources": [
+    "oaktree_bubble"
+   ]
   },
   {
    "id": "b05",
@@ -278,14 +422,43 @@
       "type": "chart",
       "title": "Nasdaq Composite · điểm đóng cửa",
       "points": [
-       ["12/1998", 2193],
-       ["12/1999", 4069],
-       ["3/2000", 5049],
-       ["12/2000", 2471],
-       ["12/2001", 1950],
-       ["10/2002", 1114]
+       [
+        "12/1998",
+        2193
+       ],
+       [
+        "12/1999",
+        4069
+       ],
+       [
+        "3/2000",
+        5049
+       ],
+       [
+        "12/2000",
+        2471
+       ],
+       [
+        "12/2001",
+        1950
+       ],
+       [
+        "10/2002",
+        1114
+       ]
       ],
-      "annotations": [{"at": 1, "text": "bubble.com", "cue": "hơn hai"}, {"at": 2, "text": "Đỉnh · 10/3/2000", "cue": "lên đỉnh"}]
+      "annotations": [
+       {
+        "at": 1,
+        "text": "bubble.com",
+        "cue": "hơn hai"
+       },
+       {
+        "at": 2,
+        "text": "Đỉnh · 10/3/2000",
+        "cue": "lên đỉnh"
+       }
+      ]
      },
      {
       "type": "icon",
@@ -299,7 +472,9 @@
      }
     ]
    },
-   "sources": ["nasdaq"],
+   "sources": [
+    "nasdaq"
+   ],
    "certainty": "estimate"
   },
   {
@@ -316,8 +491,16 @@
       "year": "2011",
       "kicker": "Từ những lá thư",
       "facts": [
-       {"big": "2011", "text": "Columbia Business School Publishing", "cue": "mười một"},
-       {"big": "Mỗi chương", "text": "một điều quan trọng nhất", "cue": "mỗi chương"}
+       {
+        "big": "2011",
+        "text": "Columbia Business School Publishing",
+        "cue": "mười một"
+       },
+       {
+        "big": "Mỗi chương",
+        "text": "một điều quan trọng nhất",
+        "cue": "mỗi chương"
+       }
       ]
      },
      {
@@ -328,7 +511,10 @@
      }
     ]
    },
-   "sources": ["marks2011", "buffett_blurb"]
+   "sources": [
+    "marks2011",
+    "buffett_blurb"
+   ]
   },
   {
    "id": "b06",
@@ -340,24 +526,46 @@
      {
       "type": "ladder",
       "kicker": "Bài học 1 · Nghĩ ở tầng thứ hai",
-      "levels": ["Tầng 1: Công ty tốt → mua", "Tầng 2: Giá đã phản ánh chưa?"],
+      "levels": [
+       "Tầng 1: Công ty tốt → mua",
+       "Tầng 2: Giá đã phản ánh chưa?"
+      ],
       "top_cue": "tầng hai",
-      "tags": [{"text": "Mọi người nghĩ gì?", "cue": "ai cũng"}, {"text": "Giá bao nhiêu?", "cue": "vậy giá"}]
+      "tags": [
+       {
+        "text": "Mọi người nghĩ gì?",
+        "cue": "ai cũng"
+       },
+       {
+        "text": "Giá bao nhiêu?",
+        "cue": "vậy giá"
+       }
+      ]
      },
      {
       "type": "trio",
       "kicker": "Tầng thứ hai",
       "cue": "một công",
       "items": [
-       {"icon": "store", "label": "Công ty tốt", "cue": "một công"},
-       {"icon": "coins", "label": "Mua quá đắt", "cue": "mua quá"}
+       {
+        "icon": "store",
+        "label": "Công ty tốt",
+        "cue": "một công"
+       },
+       {
+        "icon": "coins",
+        "label": "Mua quá đắt",
+        "cue": "mua quá"
+       }
       ],
       "line": "= khoản đầu tư tồi",
       "line_cue": "khoản đầu"
      }
     ]
    },
-   "sources": ["marks2011"]
+   "sources": [
+    "marks2011"
+   ]
   },
   {
    "id": "b07",
@@ -370,8 +578,16 @@
       "type": "trio",
       "kicker": "Năm 1999 · tầng một nói",
       "items": [
-       {"icon": "bulb", "label": "Internet đổi thế giới", "cue": "internet"},
-       {"icon": "coins", "label": "Mua thôi", "cue": "mua thôi"}
+       {
+        "icon": "bulb",
+        "label": "Internet đổi thế giới",
+        "cue": "internet"
+       },
+       {
+        "icon": "coins",
+        "label": "Mua thôi",
+        "cue": "mua thôi"
+       }
       ],
       "line": "Và điều đó đúng thật.",
       "line_cue": "và điều"
@@ -386,7 +602,10 @@
      }
     ]
    },
-   "sources": ["marks2011", "oaktree_bubble"]
+   "sources": [
+    "marks2011",
+    "oaktree_bubble"
+   ]
   },
   {
    "id": "b08",
@@ -398,23 +617,45 @@
      {
       "type": "swap",
       "kicker": "Bài học 2 · Rủi ro trốn trong sự yên tâm",
-      "from": {"label": "Giá nhảy lên xuống", "icon": "wave"},
-      "to": {"label": "Mất tiền vĩnh viễn", "icon": "coins", "cue": "mất tiền"},
+      "from": {
+       "label": "Giá nhảy lên xuống",
+       "icon": "wave"
+      },
+      "to": {
+       "label": "Mất tiền vĩnh viễn",
+       "icon": "coins",
+       "cue": "mất tiền"
+      },
       "cue": "không chỉ"
      },
      {
       "type": "trio",
       "kicker": "Khi ai cũng yên tâm",
       "items": [
-       {"icon": "bench", "label": "Thôi lo lắng", "cue": "thôi lo"},
-       {"icon": "coins", "label": "Trả giá cao hơn", "cue": "sẵn sàng"},
-       {"icon": "lightning", "label": "Rủi ro lớn nhất", "cue": "chính lúc"}
+       {
+        "icon": "bench",
+        "label": "Thôi lo lắng",
+        "cue": "thôi lo"
+       },
+       {
+        "icon": "coins",
+        "label": "Trả giá cao hơn",
+        "cue": "sẵn sàng"
+       },
+       {
+        "icon": "lightning",
+        "label": "Rủi ro lớn nhất",
+        "cue": "chính lúc"
+       }
       ],
       "cue": "và khi"
      }
     ]
    },
-   "sources": ["marks2011", "marks_risk"]
+   "sources": [
+    "marks2011",
+    "marks_risk"
+   ]
   },
   {
    "id": "b09",
@@ -436,12 +677,22 @@
       "type": "swap",
       "kicker": "Không cần đoán, chỉ cần biết",
       "cue": "bạn không",
-      "from": {"label": "Đoán lúc nó quay đầu", "icon": "clock"},
-      "to": {"label": "Biết nó đang ở phía nào", "icon": "pendulum", "cue": "chỉ cần"}
+      "from": {
+       "label": "Đoán lúc nó quay đầu",
+       "icon": "clock"
+      },
+      "to": {
+       "label": "Biết nó đang ở phía nào",
+       "icon": "pendulum",
+       "cue": "chỉ cần"
+      }
      }
     ]
    },
-   "sources": ["marks2011", "predict2001"]
+   "sources": [
+    "marks2011",
+    "predict2001"
+   ]
   },
   {
    "id": "b10",
@@ -467,7 +718,10 @@
      }
     ]
    },
-   "sources": ["nasdaq", "cfa2020"],
+   "sources": [
+    "nasdaq",
+    "cfa2020"
+   ],
    "certainty": "estimate"
   },
   {
@@ -491,8 +745,16 @@
       "kicker": "Không thể ai cũng hơn trung bình",
       "cue": "nghĩ ở",
       "items": [
-       {"icon": "mountain", "label": "Tầng hai: rất khó", "cue": "rất khó"},
-       {"icon": "people", "label": "Trung bình = tất cả chúng ta", "cue": "trung bình chính"}
+       {
+        "icon": "mountain",
+        "label": "Tầng hai: rất khó",
+        "cue": "rất khó"
+       },
+       {
+        "icon": "people",
+        "label": "Trung bình = tất cả chúng ta",
+        "cue": "trung bình chính"
+       }
       ]
      },
      {
@@ -504,7 +766,9 @@
      }
     ]
    },
-   "sources": ["marks2011"]
+   "sources": [
+    "marks2011"
+   ]
   },
   {
    "id": "b12",
@@ -531,9 +795,18 @@
     "title": "Ba bài học",
     "check": true,
     "items": [
-     {"text": "Nghĩ ở tầng thứ hai", "cue": "nghĩ"},
-     {"text": "Rủi ro trốn trong sự yên tâm", "cue": "rủi ro"},
-     {"text": "Biết con lắc đang ở đâu", "cue": "và biết"}
+     {
+      "text": "Nghĩ ở tầng thứ hai",
+      "cue": "nghĩ"
+     },
+     {
+      "text": "Rủi ro trốn trong sự yên tâm",
+      "cue": "rủi ro"
+     },
+     {
+      "text": "Biết con lắc đang ở đâu",
+      "cue": "và biết"
+     }
     ]
    }
   },
@@ -555,14 +828,23 @@
       "type": "swap",
       "kicker": "Giá trị của một lá thư",
       "cue": "vì giá",
-      "from": {"label": "Đoán đúng ngày", "icon": "clock"},
-      "to": {"label": "Nhìn xuống chân mình", "icon": "compass", "cue": "dám nhìn"},
+      "from": {
+       "label": "Đoán đúng ngày",
+       "icon": "clock"
+      },
+      "to": {
+       "label": "Nhìn xuống chân mình",
+       "icon": "compass",
+       "cue": "dám nhìn"
+      },
       "line": "khi cả đám đông đang nhìn lên.",
       "line_cue": "khi cả"
      }
     ]
    },
-   "sources": ["oaktree_history"]
+   "sources": [
+    "oaktree_history"
+   ]
   },
   {
    "id": "b15",

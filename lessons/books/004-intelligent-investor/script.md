@@ -1,5 +1,5 @@
 # Nhà Đầu Tư Thông Minh
-_Review sách · Tập 4 · 800 words · ~3.45 min · 4:3_
+_Review sách · Tập 4 · 795 words · ~3.43 min · 4:3_
 
 ## Learning goals
 - Kể lại được câu chuyện Graham mất khoảng 70% vốn giai đoạn 1929–1932 và cuốn sách ra đời từ bài học đó
@@ -15,7 +15,7 @@ _Review sách · Tập 4 · 800 words · ~3.45 min · 4:3_
 | # | act | narration | on screen |
 |---|---|---|---|
 | h1 | hook | Cuốn sách hay nhất về đầu tư, theo Warren Buffett. Vậy mà tác giả của nó từng mất gần bảy mươi phần trăm. _(estimate)_ | hook: hook |
-| h2 | context | Không phải vì ông thiếu hiểu biết. Mà vì cái giá đắt nhất ông từng trả đã trở thành cuốn sách này. Rót một tách trà đi. Đến cuối clip, bạn sẽ có ba bài học để giữ cái đầu lạnh khi thị trường nóng lên. | shots: shots |
+| h2 | context | Không phải vì ông thiếu hiểu biết. Mà vì cái giá đắt nhất ông từng trả đã trở thành cuốn sách này. Đến cuối clip, bạn sẽ có ba bài học để giữ cái đầu lạnh khi thị trường nóng lên. | shots: shots |
 | t0 | context |  | title: Nhà Đầu Tư Thông Minh |
 | b01 | misconception | Chúng ta hay nghĩ đầu tư giỏi là đoán trúng giá ngày mai. Là phải thông minh hơn người, hay có tin nội bộ. Buffett nói ngược lại: không cần trí thông minh xuất chúng. Cần một khung tư duy vững, và đừng để cảm xúc làm mục nó. | shots: shots |
 | b02 | context | Người dạy Buffett điều đó là Benjamin Graham, giáo sư ở Đại học Columbia. Năm một nghìn chín trăm bốn mươi chín, ông viết The Intelligent Investor, với phụ đề: một cuốn sách lời khuyên thực tế. Viết cho người bình thường, không phải dân Phố Wall. | shots: shots |

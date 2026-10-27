@@ -1,5 +1,5 @@
 # Tâm Lý Học Về Tiền
-_Review sách · Tập 3 · 881 words · ~3.79 min · 4:3_
+_Review sách · Tập 3 · 872 words · ~3.75 min · 4:3_
 
 ## Learning goals
 - Kể lại được câu chuyện Ronald Read và Richard Fuscone, và vì sao Housel mở sách bằng nó
@@ -15,7 +15,7 @@ _Review sách · Tập 3 · 881 words · ~3.79 min · 4:3_
 | # | act | narration | on screen |
 |---|---|---|---|
 | h1 | hook | Một người lao công để lại tám triệu đô. Một giám đốc Merrill Lynch thì phá sản. | hook: hook |
-| h2 | context | Không phải vì bằng cấp. Cũng không nhờ một mã cổ phiếu thần kỳ. Rót một tách trà, ngồi xuống cùng mình nhé. Đến cuối clip, bạn sẽ có ba bài học về tiền, và không cần một công thức nào cả. | shots: shots |
+| h2 | context | Không phải vì bằng cấp. Cũng không nhờ một mã cổ phiếu thần kỳ. Đến cuối clip, bạn sẽ có ba bài học về tiền, và không cần một công thức nào cả. | shots: shots |
 | t0 | context |  | title: Tâm Lý Học Về Tiền |
 | b01 | misconception | Chúng ta hay nghĩ làm giàu là chuyện của toán học. Giỏi tính hơn. Đọc nhiều biểu đồ hơn. Biết nhiều hơn. Morgan Housel cho rằng tiền là chuyện của hành vi, và hành vi thì khó dạy hơn nhiều. | shots: shots |
 | b02 | context | Housel từng viết cho The Motley Fool và The Wall Street Journal, rồi làm đối tác ở Collaborative Fund. Năm hai nghìn hai mươi, ông ra cuốn sách này: mười chín câu chuyện ngắn về những cách kỳ lạ mà con người nghĩ về tiền. | shots: shots |

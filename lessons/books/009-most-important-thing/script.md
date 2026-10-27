@@ -1,5 +1,5 @@
 # Điều Quan Trọng Nhất
-_Review sách · Tập 9 · 780 words · ~3.37 min · 4:3_
+_Review sách · Tập 9 · 775 words · ~3.35 min · 4:3_
 
 ## Learning goals
 - Kể lại được câu chuyện bản ghi nhớ bubble.com (2/1/2000) và cú sụp của Nasdaq 2000–2002
@@ -15,7 +15,7 @@ _Review sách · Tập 9 · 780 words · ~3.37 min · 4:3_
 | # | act | narration | on screen |
 |---|---|---|---|
 | h1 | hook | Mười năm viết thư, không một ai hồi âm. Rồi một lá thư, hơn hai tháng trước khi bong bóng vỡ. | hook: hook |
-| h2 | context | Lá thư ấy không đoán ngày, cũng không nhờ may mắn. Nó chỉ nhìn ra điều đám đông không muốn thấy. Pha một ấm trà nào. Trong vài phút tới, bạn sẽ thấy cách người viết lá thư ấy suy nghĩ, và ba bài học để nghĩ khác đám đông. | shots: shots |
+| h2 | context | Lá thư ấy không đoán ngày, cũng không nhờ may mắn. Nó chỉ nhìn ra điều đám đông không muốn thấy. Trong vài phút tới, bạn sẽ thấy cách người viết lá thư ấy suy nghĩ, và ba bài học để nghĩ khác đám đông. | shots: shots |
 | t0 | context |  | title: Điều Quan Trọng Nhất |
 | b01 | misconception | Chúng ta hay nghĩ nhà đầu tư giỏi là người dự báo giỏi. Biết lãi suất sẽ tăng hay giảm, thị trường sẽ lên hay xuống. Người viết cuốn sách này nghĩ khác: tương lai thì khó đoán, nhưng ít nhất, ta nên biết mình đang đứng ở đâu. | shots: shots |
 | b02 | context | Người đó là Howard Marks, đồng sáng lập Oaktree Capital năm một nghìn chín trăm chín mươi lăm. Từ năm một nghìn chín trăm chín mươi, ông có một thói quen: viết thư ngỏ cho khách hàng. Gần mười năm, không ai trả lời. | shots: shots |

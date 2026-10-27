@@ -1,5 +1,5 @@
 # Niên Giám Của Charlie Munger
-_Review sách · Tập 5 · 860 words · ~3.7 min · 4:3_
+_Review sách · Tập 5 · 854 words · ~3.68 min · 4:3_
 
 ## Learning goals
 - Kể lại bài nói năm 1986 của Munger: đơn thuốc cho một cuộc đời khốn khổ, và câu chuyện người nhà quê
@@ -15,7 +15,7 @@ _Review sách · Tập 5 · 860 words · ~3.7 min · 4:3_
 | # | act | narration | on screen |
 |---|---|---|---|
 | h1 | hook | Charlie Munger hay đùa: tôi chỉ muốn biết mình sẽ chết ở đâu. Để không bao giờ đến đó. | hook: hook |
-| h2 | context | Nghe như một câu đùa. Nhưng đằng sau nó là cả một cách nghĩ. Rót một tách trà ấm nhé. Trong vài phút tới, mình kể bạn nghe về cuốn niên giám của một ông già chín mươi chín tuổi, và ba bài học để bạn nghĩ sáng suốt hơn. | shots: shots |
+| h2 | context | Nghe như một câu đùa. Nhưng đằng sau nó là cả một cách nghĩ. Trong vài phút tới, mình kể bạn nghe về cuốn niên giám của một ông già chín mươi chín tuổi, và ba bài học để bạn nghĩ sáng suốt hơn. | shots: shots |
 | t0 | context |  | title: Niên Giám Của Charlie Munger |
 | b01 | misconception | Chúng ta hay nghĩ người khôn ngoan là người biết thật nhiều. Một bộ óc thiên tài. Một chuyên gia giỏi nhất ngành. Một công thức bí mật. Munger nghĩ khác: khôn ngoan bắt đầu từ việc tránh những điều dại dột. | shots: shots |
 | b02 | context | Charlie Munger sinh năm một nghìn chín trăm hai mươi tư ở Omaha, nước Mỹ. Từ năm một nghìn chín trăm bảy mươi tám, ông là phó chủ tịch Berkshire Hathaway, người cộng sự lâu năm của Warren Buffett. Ông mất cuối năm hai nghìn không trăm hai mươi ba, chỉ hơn một tháng trước sinh nhật thứ một trăm. | shots: shots |

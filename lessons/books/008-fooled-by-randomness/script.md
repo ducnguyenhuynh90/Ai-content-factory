@@ -1,5 +1,5 @@
 # Bị Đánh Lừa Bởi Ngẫu Nhiên
-_Review sách · Tập 8 · 875 words · ~3.77 min · 4:3_
+_Review sách · Tập 8 · 866 words · ~3.73 min · 4:3_
 
 ## Learning goals
 - Kể lại trò tung đồng xu của Taleb: 10.000 người, 313 người thắng 5 năm liền chỉ nhờ may
@@ -15,7 +15,7 @@ _Review sách · Tập 8 · 875 words · ~3.77 min · 4:3_
 | # | act | narration | on screen |
 |---|---|---|---|
 | h1 | hook | Mười nghìn người tung đồng xu. Năm năm sau, chỉ còn ba trăm mười ba người. Và họ được gọi là thiên tài. | hook: hook |
-| h2 | context | Không ai trong số họ giỏi hơn ai. Họ chỉ may. Hãy pha một ấm trà, ngồi xuống cùng mình. Đến cuối clip, bạn sẽ có ba bài học để tách bạch may mắn với tài năng, trong tiền bạc lẫn cuộc đời. | shots: shots |
+| h2 | context | Không ai trong số họ giỏi hơn ai. Họ chỉ may. Đến cuối clip, bạn sẽ có ba bài học để tách bạch may mắn với tài năng, trong tiền bạc lẫn cuộc đời. | shots: shots |
 | t0 | context |  | title: Bị Đánh Lừa Bởi Ngẫu Nhiên |
 | b01 | misconception | Chúng ta hay tin: ai thắng nhiều năm liền thì hẳn là giỏi. Người giàu hẳn đã làm đúng điều gì đó. Kết quả tốt nghĩa là quyết định tốt. Taleb muốn bạn nghi ngờ chính điều ấy. | shots: shots |
 | b02 | context | Nassim Nicholas Taleb sinh năm một nghìn chín trăm sáu mươi ở Liban. Ông làm trader quyền chọn nhiều năm, rồi trở thành một nhà tư tưởng về sự bất định. Cuốn sách này ra đời năm hai nghìn lẻ một, là tập đầu tiên trong bộ Incerto, trước cả The Black Swan. | shots: shots |

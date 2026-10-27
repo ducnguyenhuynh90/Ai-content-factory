@@ -311,3 +311,15 @@ def test_gate_vietnamese_false_positives():
     assert not g._name_heard("Walgreens", "một cửa hàng thuốc")
     L = {"meta": {"lang": "vi"}, "beats": [{"id": "b1", "narration": "Mãi mãi, năm năm, đó là là sai.", "visual": {"type": "statement", "text": "x"}}]}
     assert [x for x in g.copy_lint(L) if "doubled" in x] == ["b1: doubled word 'là là'"]
+
+
+def test_gate_vietnamese_numbers():
+    from vfactory.lesson import gate as g
+
+    assert g.vi_number(1435) == "một nghìn bốn trăm ba mươi lăm"
+    assert g.vi_number(1971) == "một nghìn chín trăm bảy mươi mốt"
+    assert g.vi_number(105) == "một trăm lẻ năm"
+    said = "Một nghìn bốn trăm ba mươi lăm công ty, năm hai nghìn lẻ một, ba mươi sáu phần trăm, sáu phẩy chín lần."
+    assert g.misread_numbers(said, "1.435 công ty, năm 2001, 36%, 6,9 lần.") == []
+    assert g.misread_numbers(said, "1 435 công ty, năm 2001, 36 %, 6 ,9 lần.") == []
+    assert g.misread_numbers(said, "1, 4, 35 công ty, năm 2001, 36%, 6,9 lần.") == ["một nghìn bốn trăm ba mươi năm"]

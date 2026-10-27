@@ -1,5 +1,5 @@
 # Từ Tốt Đến Vĩ Đại
-_Review sách · Tập 1 · 897 words · ~3.86 min · 4:3_
+_Review sách · Tập 1 · 892 words · ~3.84 min · 4:3_
 
 ## Learning goals
 - Kể lại được nghiên cứu của Collins: 1.435 công ty, 11 công ty vượt qua bộ lọc
@@ -15,7 +15,7 @@ _Review sách · Tập 1 · 897 words · ~3.86 min · 4:3_
 | # | act | narration | on screen |
 |---|---|---|---|
 | h1 | hook | Một nghìn bốn trăm ba mươi lăm công ty. Chỉ mười một công ty… đi được từ tốt đến vĩ đại. | hook: hook |
-| h2 | context | Theo Collins, họ không nhờ may mắn, cũng chẳng nhờ một vị giám đốc hào nhoáng. Pha một tách trà nhé. Trong vài phút tới, bạn sẽ thấy điều gì tạo ra khác biệt, ba bài học cho chính mình, và cả một lời phản biện đáng nghe. | shots: shots |
+| h2 | context | Theo Collins, họ không nhờ may mắn, cũng chẳng nhờ một vị giám đốc hào nhoáng. Trong vài phút tới, bạn sẽ thấy điều gì tạo ra khác biệt, ba bài học cho chính mình, và cả một lời phản biện đáng nghe. | shots: shots |
 | t0 | context |  | title: Từ Tốt Đến Vĩ Đại |
 | b01 | misconception | Chúng ta hay nghĩ sự vĩ đại đến từ một khoảnh khắc bùng nổ. Một ý tưởng thiên tài. Một người lãnh đạo đầy sức hút. Một cú lội ngược dòng ngoạn mục. Cuốn sách này kể một câu chuyện khác hẳn. | shots: shots |
 | b02 | context | Năm hai nghìn lẻ một, Jim Collins công bố kết quả của khoảng năm năm nghiên cứu, cùng một nhóm khoảng hai mươi người. Họ sàng lọc một nghìn bốn trăm ba mươi lăm công ty từng có mặt trong danh sách Fortune năm trăm. _(estimate)_ | shots: shots |

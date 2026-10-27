@@ -1,5 +1,5 @@
 # Xoay Chuyển Con Tàu
-_Review sách · Tập 12 · 882 words · ~3.8 min · 4:3_
+_Review sách · Tập 12 · 877 words · ~3.77 min · 4:3_
 
 ## Learning goals
 - Kể lại câu chuyện tàu USS Santa Fe: lệnh 'tiến hai phần ba' và câu trả lời 'vì ông bảo tôi làm vậy'
@@ -15,7 +15,7 @@ _Review sách · Tập 12 · 882 words · ~3.8 min · 4:3_
 | # | act | narration | on screen |
 |---|---|---|---|
 | h1 | hook | Thuyền trưởng ra một lệnh không thể làm được. Vậy mà sĩ quan của ông vẫn truyền lệnh đi. | icon: icon |
-| h2 | context | Không phải vì họ kém. Cũng không phải vì họ lười. Mà vì cả con tàu đã quen chỉ làm theo. Rót một tách trà nhé. Mình sẽ kể cách một thuyền trưởng sửa điều đó, và ba bài học cho bất kỳ nhóm nào bạn đang dẫn dắt. | shots: shots |
+| h2 | context | Không phải vì họ kém. Cũng không phải vì họ lười. Mà vì cả con tàu đã quen chỉ làm theo. Mình sẽ kể cách một thuyền trưởng sửa điều đó, và ba bài học cho bất kỳ nhóm nào bạn đang dẫn dắt. | shots: shots |
 | t0 | context |  | title: Xoay Chuyển Con Tàu |
 | b01 | misconception | Ta hay nghĩ lãnh đạo giỏi là người có mọi câu trả lời. Người trên ra lệnh, người dưới làm theo, thế là xong. Nhưng khi người trên sai thì sao? Cuốn sách này cho thấy chính mô hình ấy mới là vấn đề. | shots: shots |
 | b02 | context | L. David Marquet là một sĩ quan tàu ngầm của Hải quân Mỹ. Ông kể lại câu chuyện này trong cuốn Turn the Ship Around, in lần đầu năm hai nghìn mười hai. Theo nhà xuất bản Penguin, sách đã bán được hơn một triệu bản. | shots: shots |

@@ -92,6 +92,73 @@ def _name_heard(name: str, heard: str) -> bool:
     return False
 
 
+VI_DIGITS = ["không", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín"]
+VI_MAGNITUDE = {"mươi", "mười", "trăm", "nghìn", "triệu", "tỷ"}
+VI_NUMWORDS = set(VI_DIGITS) | VI_MAGNITUDE | {"lẻ", "linh", "mốt", "tư", "lăm", "ngàn", "tỉ", "phẩy", "rưỡi"}
+VI_SYNONYM = {"ngàn": "nghìn", "linh": "lẻ", "mốt": "một", "tư": "bốn", "lăm": "năm", "tỉ": "tỷ"}
+
+
+def _vi_three(n: int, full: bool) -> list[str]:
+    h, t, u = n // 100, n // 10 % 10, n % 10
+    out = [VI_DIGITS[h], "trăm"] if h or full else []
+    if t == 0 and u:
+        out += (["lẻ"] if out else []) + [VI_DIGITS[u]]
+    elif t == 1:
+        out += ["mười"] + ([{5: "lăm"}.get(u, VI_DIGITS[u])] if u else [])
+    elif t > 1:
+        out += [VI_DIGITS[t], "mươi"] + ([{1: "mốt", 5: "lăm"}.get(u, VI_DIGITS[u])] if u else [])
+    return out
+
+
+def vi_number(n: int) -> str:
+    """1435 -> 'một nghìn bốn trăm ba mươi lăm', 2001 -> 'hai nghìn lẻ một' (how a Vietnamese narrator reads it)."""
+    if n == 0:
+        return "không"
+    out, groups = [], []
+    while n:
+        groups.append(n % 1000)
+        n //= 1000
+    for i in range(len(groups) - 1, -1, -1):
+        g = groups[i]
+        if g:
+            out += _vi_three(g, full=bool(out)) + ([["", "nghìn", "triệu", "tỷ"][i]] if i else [])
+    return " ".join(out)
+
+
+def _vi_digits_to_words(text: str) -> str:
+    """Whisper writes numbers as digits ('1.435', '6,9', '55.000'); spell them out so they compare with the script."""
+    def one(m):
+        whole, frac = m.group(1), m.group(2)
+        w = vi_number(int(re.sub(r"\D", "", whole)))
+        return w + (" phẩy " + " ".join(VI_DIGITS[int(c)] for c in frac) if frac else "")
+    text = text.replace("%", " phần trăm")
+    return re.sub(r"(\d{1,3}(?:[. ]\d{3})+(?!\d)|\d+)(?:\s?,(\d+))?", one, text)
+
+
+def _vi_canon(tokens: list[str]) -> list[str]:
+    out = [VI_SYNONYM.get(t, t) for t in tokens]
+    return [t for i, t in enumerate(out) if not (t == "không" and i + 1 < len(out) and out[i + 1] == "trăm")
+            and not (t == "trăm" and i and out[i - 1] == "không")]
+
+
+def misread_numbers(narration: str, heard: str) -> list[str]:
+    """Spoken numbers in the script that the listener did not hear as said ('một nghìn bốn trăm…' heard as '1, 4, 35')."""
+    raw = narration.split()
+    nt = _vi_canon([voice._norm(x) for x in raw])
+    stops = {i for i, x in enumerate(raw) if re.search(r"[,.;:!?…]$", x)}
+    ht = _vi_canon([voice._norm(x) for x in _vi_digits_to_words(heard).split()])
+    hs = " " + " ".join(ht) + " "
+    runs, cur = [], []
+    for i, t in enumerate(nt + [""]):
+        if t in VI_NUMWORDS:
+            cur.append(t)
+        if t not in VI_NUMWORDS or i in stops:
+            if any(x in VI_MAGNITUDE for x in cur):
+                runs.append(" ".join(cur))
+            cur = []
+    return [r for r in runs if f" {r} " not in hs]
+
+
 def copy_lint(lesson: dict) -> list[str]:
     """Typos a proofreader would circle: doubled words, stray spaces, digits in narration, unbalanced quotes."""
     issues = []
@@ -158,7 +225,7 @@ def run(lesson_path: str | Path, out_dir: str | Path, check: bool = True, listen
         warns.append(f"[D] title sting at {title_at:.0f}s: keep it inside the first ~20 s")
 
     # --- voice: pace per line, pauses after questions, words heard
-    rates, pauses, missing, names = {}, [], [], []
+    rates, pauses, missing, names, misread = {}, [], [], [], []
     for tm in timing["beats"]:
         b = beats[tm["id"]]
         if not tm["narr"]:
@@ -181,6 +248,9 @@ def run(lesson_path: str | Path, out_dir: str | Path, check: bool = True, listen
                 ht = [voice._norm(x) for x in heard.split()]
                 sm = difflib.SequenceMatcher(None, nt, ht, autojunk=False)
                 gone = [" ".join(nt[a1:a2]) for op, a1, a2, _, _ in sm.get_opcodes() if op == "delete" and a2 - a1 >= 2]
+                bad = misread_numbers(b["narration"], heard) if lang == "vi" else []
+                if bad:
+                    misread.append({"id": tm["id"], "said_as_written": bad, "heard": heard[:160]})
                 if gone:
                     missing.append({"id": tm["id"], "missing": gone, "heard": heard})
                 for nm in set(NAME_RE.findall(b["narration"])):
@@ -201,6 +271,8 @@ def run(lesson_path: str | Path, out_dir: str | Path, check: bool = True, listen
         warns.append(f"[I] little silence after a question: {short}")
     if missing:
         fails.append(f"words the voice dropped (re-take those lines with 'take'): {missing}")
+    if misread:
+        fails.append(f"numbers not read as written (re-take those lines with 'take'): {misread}")
     if names:
         warns.append(f"[I] names not recognisable by ear: {names}")
 

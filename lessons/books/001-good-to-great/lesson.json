@@ -202,12 +202,13 @@
    "sources": [
     "collins2001",
     "sb2001"
-   ]
+   ],
+   "take": 2
   },
   {
    "id": "h2",
    "act": "context",
-   "narration": "Theo Collins, họ không nhờ may mắn, cũng chẳng nhờ một vị giám đốc hào nhoáng. Pha một tách trà nhé. Trong vài phút tới, bạn sẽ thấy điều gì tạo ra khác biệt, ba bài học cho chính mình, và cả một lời phản biện đáng nghe.",
+   "narration": "Theo Collins, họ không nhờ may mắn, cũng chẳng nhờ một vị giám đốc hào nhoáng. Trong vài phút tới, bạn sẽ thấy điều gì tạo ra khác biệt, ba bài học cho chính mình, và cả một lời phản biện đáng nghe.",
    "visual": {
     "type": "shots",
     "shots": [
@@ -227,13 +228,6 @@
         "cue": "giám đốc"
        }
       ]
-     },
-     {
-      "type": "icon",
-      "icon": "tea",
-      "steam": true,
-      "line": "Pha một tách trà nhé.",
-      "cue": "pha một"
      },
      {
       "type": "trio",

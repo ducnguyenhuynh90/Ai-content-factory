@@ -1,5 +1,5 @@
 # Tư Duy Đặt Cược
-_Review sách · Tập 6 · 795 words · ~3.43 min · 4:3_
+_Review sách · Tập 6 · 789 words · ~3.4 min · 4:3_
 
 ## Learning goals
 - Kể lại được ví dụ mở đầu sách: lệnh chuyền bóng của Pete Carroll ở Super Bowl XLIX (2015) và lập luận của Annie Duke
@@ -15,7 +15,7 @@ _Review sách · Tập 6 · 795 words · ~3.43 min · 4:3_
 | # | act | narration | on screen |
 |---|---|---|---|
 | h1 | hook | Lệnh gọi bóng bị chê là tệ nhất lịch sử Super Bowl. Nhưng có thể, đó là một quyết định đúng. | hook: hook |
-| h2 | context | Bạn có bao giờ tự trách mình chỉ vì một kết quả xấu? Rót một tách trà ấm nhé. Trong vài phút tới, bạn sẽ thấy vì sao kết quả tệ chưa chắc là lựa chọn sai, và ba bài học từ một tay chơi poker chuyên nghiệp. | shots: shots |
+| h2 | context | Bạn có bao giờ tự trách mình chỉ vì một kết quả xấu? Trong vài phút tới, bạn sẽ thấy vì sao kết quả tệ chưa chắc là lựa chọn sai, và ba bài học từ một tay chơi poker chuyên nghiệp. | shots: shots |
 | t0 | context |  | title: Tư Duy Đặt Cược |
 | b01 | misconception | Chúng ta hay chấm điểm một quyết định bằng kết quả của nó. Thắng thì là chọn giỏi. Thua thì là chọn dở. Nghe rất hợp lý. Nhưng chính thói quen ấy khiến ta học sai bài học từ chính cuộc đời mình. | shots: shots |
 | b02 | context | Annie Duke từng học tâm lý học nhận thức ở Đại học Pennsylvania, rồi rẽ sang chơi poker chuyên nghiệp. Năm hai nghìn lẻ bốn, bà giành chiếc vòng vàng World Series of Poker đầu tiên. Năm hai nghìn mười tám, bà viết Thinking in Bets. | shots: shots |

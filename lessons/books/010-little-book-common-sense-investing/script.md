@@ -1,5 +1,5 @@
 # Đầu Tư Theo Lẽ Thường
-_Review sách · Tập 10 · 835 words · ~3.6 min · 4:3_
+_Review sách · Tập 10 · 826 words · ~3.56 min · 4:3_
 
 ## Learning goals
 - Kể lại được ván cược mười năm của Buffett (2008–2017) và quỹ chỉ số đầu tiên của Bogle (1976)
@@ -15,7 +15,7 @@ _Review sách · Tập 10 · 835 words · ~3.6 min · 4:3_
 | # | act | narration | on screen |
 |---|---|---|---|
 | h1 | hook | Warren Buffett cược một triệu đô vào một quỹ chỉ số nhàm chán. Mười năm sau, ông thắng. | hook: hook |
-| h2 | context | Không cần một nhà quản lý ngôi sao. Cũng không cần đoán trước thị trường. Pha một ấm trà, mình kể bạn nghe nhé. Trong vài phút tới, bạn sẽ thấy vì sao cái nhàm chán lại thắng, và ba bài học từ người đã nghĩ ra nó. | shots: shots |
+| h2 | context | Không cần một nhà quản lý ngôi sao. Cũng không cần đoán trước thị trường. Trong vài phút tới, bạn sẽ thấy vì sao cái nhàm chán lại thắng, và ba bài học từ người đã nghĩ ra nó. | shots: shots |
 | t0 | context |  | title: Đầu Tư Theo Lẽ Thường |
 | b01 | misconception | Chúng ta hay nghĩ: muốn lợi nhuận tốt, phải tìm người giỏi nhất để giao tiền. Phí càng cao, chuyên gia càng giỏi. John Bogle dành cả một cuốn sách để nói điều ngược lại. | shots: shots |
 | b02 | context | John Bogle sáng lập Vanguard năm một nghìn chín trăm bảy mươi tư. Năm hai nghìn lẻ bảy, ông viết cuốn sách nhỏ này, rồi cập nhật lại năm hai nghìn mười bảy, khi đã gần chín mươi tuổi. | shots: shots |
