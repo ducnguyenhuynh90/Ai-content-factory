@@ -166,28 +166,24 @@
       "type": "trio",
       "kicker": "Không phải vì…",
       "cross": true,
-      "items": [
-       {
-        "icon": "brain",
-        "label": "Thiếu hiểu biết",
-        "cue": "thiếu"
-       }
-      ]
+      "items": [{"icon": "brain", "label": "Thiếu hiểu biết", "cue": "thiếu"}]
      },
      {
-      "type": "book",
-      "title": "The Intelligent Investor",
-      "author": "Benjamin Graham",
-      "year": "1949",
+      "type": "swap",
       "kicker": "Một bài học đắt giá",
-      "cue": "mà vì"
+      "cue": "mà vì",
+      "from": {"label": "Cái giá đắt nhất", "icon": "coins"},
+      "to": {"label": "Thành cuốn sách này", "icon": "book", "cue": "trở thành"}
      },
+     {"type": "icon", "icon": "tea", "steam": true, "line": "Rót một tách trà đi.", "cue": "rót"},
      {
-      "type": "icon",
-      "icon": "tea",
-      "steam": true,
-      "line": "Ba bài học. Một cái đầu lạnh.",
-      "cue": "rót"
+      "type": "trio",
+      "kicker": "Ba bài học",
+      "cue": "ba bài",
+      "items": [
+       {"icon": "brain", "label": "Giữ cái đầu lạnh", "cue": "cái đầu"},
+       {"icon": "bubble", "label": "Khi thị trường nóng lên", "cue": "thị trường"}
+      ]
      }
     ]
    }
@@ -225,31 +221,19 @@
       "type": "trio",
       "kicker": "Điều ta hay tin",
       "items": [
-       {
-        "icon": "binoculars",
-        "label": "Đoán trúng giá",
-        "cue": "đoán"
-       },
-       {
-        "icon": "brain",
-        "label": "Thông minh hơn người",
-        "cue": "thông minh"
-       },
-       {
-        "icon": "mask",
-        "label": "Tin nội bộ",
-        "cue": "tin nội"
-       }
+       {"icon": "binoculars", "label": "Đoán trúng giá ngày mai", "cue": "đoán"},
+       {"icon": "brain", "label": "Thông minh hơn người", "cue": "thông minh"},
+       {"icon": "letter", "label": "Tin nội bộ", "cue": "tin nội"}
       ]
      },
      {
-      "type": "statement",
+      "type": "swap",
       "kicker": "Buffett nói ngược lại",
-      "text": "Đầu tư giỏi là đoán đúng giá.",
-      "strike": "đoán đúng giá.",
-      "replace": "giữ vững khung tư duy",
-      "strike_cue": "khung",
-      "cue": "buffett"
+      "cue": "không cần",
+      "from": {"label": "Trí thông minh xuất chúng", "icon": "brain"},
+      "to": {"label": "Khung tư duy vững", "icon": "anchor", "cue": "khung"},
+      "line": "Đừng để cảm xúc làm mục nó.",
+      "line_cue": "đừng để"
      }
     ]
    },
@@ -337,29 +321,20 @@
     "type": "shots",
     "shots": [
      {
-      "type": "stat",
-      "value": 2.5,
-      "decimals": 1,
-      "prefix": "$",
-      "suffix": " triệu",
-      "label": "Vốn quỹ của Graham · 1/1929",
-      "note": "theo hồi ký của Graham",
-      "cue": "hai phẩy"
+      "type": "icon",
+      "icon": "coins",
+      "motion": "grow",
+      "kicker": "Tháng 1 · 1929 · theo hồi ký của Graham",
+      "line": "Quỹ của Graham: ≈ $2,5 triệu",
+      "line_cue": "hai phẩy"
      },
      {
       "type": "trio",
       "kicker": "Năm 1929",
+      "cue": "ông đang",
       "items": [
-       {
-        "icon": "rocket",
-        "label": "Đang thắng lớn",
-        "cue": "thắng"
-       },
-       {
-        "icon": "lightning",
-        "label": "Dùng tiền vay",
-        "cue": "tiền vay"
-       }
+       {"icon": "rocket", "label": "Đang thắng lớn", "cue": "thắng"},
+       {"icon": "coin", "label": "Thêm tiền vay mua cổ phiếu", "cue": "tiền vay"}
       ]
      }
     ]
@@ -380,48 +355,17 @@
      {
       "type": "chart",
       "title": "Vốn còn lại · ước tính (1/1929 = 100)",
-      "points": [
-       [
-        "1/1929",
-        100
-       ],
-       [
-        "1929",
-        80
-       ],
-       [
-        "1930",
-        40
-       ],
-       [
-        "1931",
-        34
-       ],
-       [
-        "1932",
-        30
-       ]
-      ],
-      "annotations": [
-       {
-        "at": 1,
-        "text": "≈ −20%",
-        "cue": "hai mươi"
-       },
-       {
-        "at": 2,
-        "text": "≈ −50%",
-        "cue": "một nửa"
-       }
-      ]
+      "points": [["1/1929", 100], ["1929", 80], ["1930", 40], ["1931", 34], ["1932", 30]],
+      "annotations": [{"at": 1, "text": "≈ −20%", "cue": "hai mươi"}, {"at": 2, "text": "≈ −50%", "cue": "một nửa"}]
      },
      {
-      "type": "stat",
-      "value": 70,
-      "prefix": "≈ −",
-      "suffix": "%",
-      "label": "Vốn mất · 1929–1932",
-      "note": "ước tính, theo hồi ký của Graham",
+      "type": "icon",
+      "icon": "coins",
+      "motion": "sink",
+      "motion_cue": "biến mất",
+      "kicker": "1929–1932 · ước tính, theo hồi ký",
+      "line": "≈ −70% số vốn biến mất",
+      "line_cue": "bảy mươi",
       "cue": "đến năm"
      }
     ]
@@ -440,38 +384,18 @@
     "type": "shots",
     "shots": [
      {
-      "type": "timeline",
-      "title": "Từ đáy đi lên",
-      "events": [
-       {
-        "year": "1929",
-        "text": "Sụp đổ"
-       },
-       {
-        "year": "1932",
-        "text": "Đáy · mất ~70%",
-        "cue": "không được"
-       },
-       {
-        "year": "~1935",
-        "text": "Quỹ hồi lại",
-        "cue": "ba mươi lăm"
-       }
-      ]
+      "type": "icon",
+      "icon": "anchor",
+      "kicker": "Graham không bỏ chạy",
+      "line": "Không nhận phí đến khi gỡ lại lỗ",
+      "line_cue": "không được"
      },
      {
       "type": "swap",
-      "kicker": "Bài học ông giữ suốt đời",
-      "from": {
-       "label": "Tiền vay",
-       "icon": "lightning"
-      },
-      "to": {
-       "label": "Không vay nữa",
-       "icon": "shield",
-       "cue": "tránh"
-      },
-      "cue": "từ đó"
+      "kicker": "~1935 quỹ hồi lại · từ đó, suốt đời",
+      "cue": "phải đến",
+      "from": {"label": "Tiền vay", "icon": "coin"},
+      "to": {"label": "Tránh xa tiền vay", "icon": "shield", "cue": "tránh"}
      }
     ]
    },
@@ -490,9 +414,10 @@
     "shots": [
      {
       "type": "icon",
-      "icon": "brain",
+      "icon": "mirror",
       "kicker": "Câu hỏi của cả cuốn sách",
-      "line": "Làm sao không bị chính mình đánh bại?"
+      "line": "Làm sao không bị chính mình đánh bại?",
+      "line_cue": "làm sao"
      },
      {
       "type": "quote",
@@ -518,34 +443,27 @@
       "type": "icon",
       "kicker": "Bài học 1 · Mr. Market phục vụ, không ra lệnh",
       "icon": "mask",
-      "line": "Mr. Market · người cộng sự thất thường",
+      "line": "Mr. Market · người cộng sự tưởng tượng",
       "line_cue": "mr"
      },
      {
       "type": "trio",
-      "kicker": "Mỗi ngày một cái giá",
+      "kicker": "Mỗi ngày ông ấy ra giá",
+      "cue": "mỗi ngày",
       "items": [
-       {
-        "icon": "rocket",
-        "label": "Hôm hưng phấn: giá cao",
-        "cue": "hưng phấn"
-       },
-       {
-        "icon": "umbrella",
-        "label": "Hôm hoảng loạn: giá rẻ",
-        "cue": "hoảng loạn"
-       }
-      ],
-      "cue": "mỗi ngày"
+       {"icon": "pie", "label": "Mua lại phần của bạn", "cue": "mua lại"},
+       {"icon": "coins", "label": "Hoặc bán thêm cho bạn", "cue": "bán thêm"}
+      ]
      },
      {
-      "type": "statement",
-      "kicker": "Quyền của bạn",
-      "text": "Không bắt buộc phải nghe.",
-      "highlight": [
-       "Không bắt buộc"
-      ],
-      "cue": "và bạn"
+      "type": "icon",
+      "icon": "pendulum",
+      "motion": "swing",
+      "period": 1.8,
+      "cue": "có hôm",
+      "kicker": "Hưng phấn ↔ hoảng loạn",
+      "line": "Bạn không bắt buộc phải nghe theo.",
+      "line_cue": "và bạn"
      }
     ]
    },
@@ -574,33 +492,14 @@
    "visual": {
     "type": "shots",
     "shots": [
-     {
-      "type": "statement",
-      "kicker": "Bài học 2 · Ba chữ của Graham",
-      "text": "Biên an toàn.",
-      "highlight": [
-       "an toàn"
-      ]
-     },
+     {"type": "statement", "kicker": "Bài học 2 · Ba chữ của Graham", "text": "Biên an toàn.", "highlight": ["an toàn"]},
      {
       "type": "trio",
       "kicker": "Luôn chừa biên an toàn",
       "items": [
-       {
-        "icon": "scale",
-        "label": "Ước tính giá trị",
-        "cue": "ước tính"
-       },
-       {
-        "icon": "coin",
-        "label": "Chỉ mua khi rẻ hơn hẳn",
-        "cue": "chỉ mua"
-       },
-       {
-        "icon": "shield",
-        "label": "Tấm đệm khi sai",
-        "cue": "tấm đệm"
-       }
+       {"icon": "scale", "label": "Ước tính giá trị", "cue": "ước tính"},
+       {"icon": "coin", "label": "Chỉ mua khi rẻ hơn hẳn", "cue": "chỉ mua"},
+       {"icon": "umbrella", "label": "Tấm đệm khi tính sai, khi gặp xui", "cue": "tấm đệm"}
       ],
       "cue": "ước tính"
      }
@@ -617,34 +516,25 @@
    "visual": {
     "type": "shots",
     "shots": [
+     {"type": "icon", "icon": "fork", "kicker": "Bài học 3", "line": "Đầu tư hay đầu cơ?", "line_cue": "biết mình"},
      {
-      "type": "compare",
-      "title": "Bài học 3 · Biết mình đầu tư hay đầu cơ",
-      "left": {
-       "title": "Nhà đầu cơ",
-       "items": [
-        "Đoán giá",
-        "Theo đám đông",
-        "Hy vọng"
-       ]
-      },
-      "right": {
-       "title": "Nhà đầu tư",
-       "items": [
-        "Phân tích kỹ",
-        "An toàn tiền gốc",
-        "Lời thỏa đáng"
-       ]
-      }
+      "type": "trio",
+      "kicker": "Với Graham, đầu tư là…",
+      "cue": "với graham",
+      "items": [
+       {"icon": "magnifier", "label": "Phân tích kỹ", "cue": "phân tích"},
+       {"icon": "shield", "label": "An toàn tiền gốc", "cue": "an toàn"},
+       {"icon": "sprout", "label": "Mức lời thỏa đáng", "cue": "mức lời"}
+      ]
      },
      {
-      "type": "statement",
-      "kicker": "Điều nguy hiểm thật",
-      "text": "Tự lừa mình mới nguy.",
-      "highlight": [
-       "Tự lừa mình"
-      ],
-      "cue": "đầu cơ không"
+      "type": "trio",
+      "kicker": "Thiếu điều đó là đầu cơ",
+      "cue": "thiếu điều",
+      "items": [
+       {"icon": "dice", "label": "Đầu cơ: không phải tội", "cue": "đầu cơ không"},
+       {"icon": "mirror", "label": "Tự lừa mình: mới nguy", "cue": "tự lừa"}
+      ]
      }
     ]
    },
@@ -660,30 +550,34 @@
    "visual": {
     "type": "shots",
     "shots": [
+     {"type": "icon", "icon": "magnifier", "kicker": "Điều nhiều bài review bỏ qua"},
      {
-      "type": "statement",
+      "type": "icon",
+      "icon": "chart",
+      "motion": "crack",
+      "motion_cue": "không còn",
       "kicker": "Graham · 1976",
-      "text": "Công thức trong sách vẫn dùng được.",
-      "strike": "vẫn dùng được.",
-      "replace": "phần lớn đã cũ",
-      "strike_cue": "cầu kỳ"
+      "cue": "năm một",
+      "line": "Không còn ủng hộ phân tích cầu kỳ",
+      "line_cue": "kỹ thuật"
      },
      {
       "type": "trio",
       "kicker": "Vì sao",
+      "cue": "vì có",
       "items": [
-       {
-        "icon": "people",
-        "label": "Quá nhiều người cùng săn",
-        "cue": "quá nhiều"
-       },
-       {
-        "icon": "hourglass",
-        "label": "Công thức đã cũ",
-        "cue": "nhiều công"
-       }
-      ],
-      "cue": "quá nhiều"
+       {"icon": "people", "label": "Quá nhiều người", "cue": "quá nhiều"},
+       {"icon": "haystack", "label": "Cùng săn tìm", "cue": "săn tìm"}
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "checklist",
+      "motion": "sink",
+      "motion_cue": "đã cũ",
+      "cue": "nhiều công",
+      "line": "Nhiều công thức trong sách đã cũ",
+      "line_cue": "nhiều công"
      }
     ]
    },
@@ -699,26 +593,21 @@
     "type": "shots",
     "shots": [
      {
-      "type": "statement",
+      "type": "icon",
+      "icon": "scale",
+      "motion": "swing",
+      "period": 2.6,
       "kicker": "Vậy",
-      "text": "Cuốn sách hết giá trị sao?",
-      "highlight": [
-       "hết giá trị"
-      ]
+      "line": "Cuốn sách hết giá trị sao?"
      },
      {
       "type": "swap",
       "kicker": "Bỏ công thức, giữ thái độ",
-      "from": {
-       "label": "Công thức",
-       "icon": "chart"
-      },
-      "to": {
-       "label": "Thái độ với giá",
-       "icon": "compass",
-       "cue": "thái độ"
-      },
-      "cue": "thứ ông bỏ"
+      "cue": "thứ ông bỏ",
+      "from": {"label": "Công thức", "icon": "checklist"},
+      "to": {"label": "Thái độ", "icon": "compass", "cue": "thái độ"},
+      "line": "Không vay quá sức. Giá không quyết định thay mình.",
+      "line_cue": "không vay"
      }
     ]
    },
@@ -780,19 +669,17 @@
       "author": "Benjamin Graham",
       "year": "1949",
       "kicker": "Học phí ông đã trả",
-      "facts": [
-       {
-        "big": "~70%",
-        "text": "mất trong 1929–1932",
-        "cue": "bảy mươi"
-       }
-      ]
+      "facts": [{"big": "~70%", "text": "mất trong 1929–1932", "cue": "bảy mươi"}]
      },
      {
-      "type": "icon",
-      "icon": "shield",
-      "line": "Thị trường điên. Bạn không cần điên theo.",
-      "cue": "thị trường"
+      "type": "trio",
+      "cue": "thị trường",
+      "items": [
+       {"icon": "wave", "label": "Thị trường: những ngày điên", "cue": "những ngày"},
+       {"icon": "umbrella", "label": "Biên an toàn", "cue": "biên an"}
+      ],
+      "line": "Bạn không phải điên theo.",
+      "line_cue": "không phải"
      }
     ]
    },

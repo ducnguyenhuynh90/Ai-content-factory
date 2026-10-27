@@ -96,12 +96,12 @@
    "act": "hook",
    "narration": "Năm một nghìn tám trăm chín mươi tư, những sĩ quan giỏi nhất nước Pháp kết án sai một người vô tội.",
    "visual": {
-    "type": "statement",
-    "kicker": "The Scout Mindset · Julia Galef",
-    "text": "Paris, 1894. Kết án sai một người vô tội.",
-    "highlight": [
-     "sai"
-    ]
+    "type": "icon",
+    "icon": "scale",
+    "kicker": "Paris · 1894 · The Scout Mindset",
+    "line": "Kết án sai một người vô tội.",
+    "motion": "crack",
+    "motion_cue": "kết án sai"
    },
    "sfx": [
     {
@@ -141,19 +141,39 @@
      },
      {
       "type": "icon",
+      "icon": "mirror",
+      "kicker": "Họ chỉ làm điều",
+      "line": "Ai trong chúng ta cũng làm mỗi ngày.",
+      "cue": "họ chỉ"
+     },
+     {
+      "type": "icon",
       "icon": "tea",
       "steam": true,
       "line": "Pha một ấm trà nhé.",
       "cue": "pha một"
      },
      {
-      "type": "statement",
+      "type": "trio",
       "kicker": "Trong vài phút tới",
-      "text": "Hai kiểu tư duy. Ba bài học.",
-      "highlight": [
-       "Ba bài học."
-      ],
-      "cue": "vài phút"
+      "cue": "vài phút",
+      "items": [
+       {
+        "icon": "shield",
+        "label": "Người lính",
+        "cue": "hai kiểu"
+       },
+       {
+        "icon": "binoculars",
+        "label": "Người trinh sát",
+        "cue": "hai kiểu"
+       },
+       {
+        "icon": "key",
+        "label": "Ba bài học",
+        "cue": "ba bài"
+       }
+      ]
      }
     ]
    }
@@ -204,13 +224,18 @@
       ]
      },
      {
-      "type": "statement",
+      "type": "swap",
       "kicker": "Julia Galef",
-      "text": "Thấy rõ nhờ thông minh hơn.",
-      "strike": "thông minh hơn.",
-      "replace": "muốn thấy sự thật",
-      "strike_cue": "muốn",
-      "cue": "nhưng julia"
+      "cue": "nhưng julia",
+      "from": {
+       "label": "Bạn thông minh đến đâu",
+       "icon": "brain"
+      },
+      "to": {
+       "label": "Bạn đang muốn điều gì",
+       "icon": "target",
+       "cue": "đang muốn"
+      }
      }
     ]
    },
@@ -306,12 +331,13 @@
     "type": "shots",
     "shots": [
      {
-      "type": "statement",
-      "kicker": "Paris · 1894",
-      "text": "Một mảnh giấy xé vụn trong sứ quán Đức.",
-      "highlight": [
-       "mảnh giấy"
-      ]
+      "type": "icon",
+      "icon": "letter",
+      "kicker": "Paris · 1894 · sứ quán Đức",
+      "line": "Một mảnh giấy xé vụn.",
+      "motion": "crack",
+      "motion_cue": "xé vụn",
+      "line_cue": "lấy được"
      },
      {
       "type": "trio",
@@ -319,13 +345,13 @@
       "cue": "trên đó",
       "items": [
        {
-        "icon": "mask",
-        "label": "Có kẻ phản bội",
+        "icon": "checklist",
+        "label": "Danh sách tài liệu quân sự",
         "cue": "liệt kê"
        },
        {
-        "icon": "people",
-        "label": "Trong bộ tham mưu?",
+        "icon": "mask",
+        "label": "Sắp trao cho Đức: có kẻ phản bội",
         "cue": "sắp được"
        }
       ]
@@ -357,18 +383,18 @@
       "cue": "chữ viết",
       "items": [
        {
-        "icon": "scale",
-        "label": "Chữ hơi giống",
+        "icon": "magnifier",
+        "label": "Chữ chỉ hơi giống",
         "cue": "chữ viết"
        },
        {
-        "icon": "people",
-        "label": "Chuyên gia bị gạt đi",
+        "icon": "brain",
+        "label": "Chuyên gia nói không khớp: gạt đi",
         "cue": "một chuyên"
        },
        {
-        "icon": "hourglass",
-        "label": "Không thấy gì = “đã tiêu hủy”",
+        "icon": "house",
+        "label": "Nhà trống = “đã tiêu hủy”",
         "cue": "không tìm"
        }
       ]
@@ -465,19 +491,30 @@
       "years": "1854 – 1914"
      },
      {
-      "type": "statement",
-      "kicker": "1896 · một bức thư",
-      "text": "Chữ của Esterhazy = mảnh giấy cũ.",
-      "highlight": [
-       "="
-      ],
+      "type": "icon",
+      "icon": "letter",
+      "kicker": "1896",
+      "line": "Một bức thư gửi thiếu tá Esterhazy",
       "cue": "năm sau"
      },
      {
-      "type": "icon",
-      "icon": "target",
+      "type": "trio",
+      "kicker": "Đặt cạnh nhau",
+      "cue": "ông đặt",
+      "items": [
+       {
+        "icon": "letter",
+        "label": "Chữ của Esterhazy",
+        "cue": "ông đặt"
+       },
+       {
+        "icon": "letter",
+        "label": "Mảnh giấy cũ · 1894",
+        "cue": "mảnh giấy"
+       }
+      ],
       "line": "Giống hệt.",
-      "cue": "giống hệt"
+      "line_cue": "giống hệt"
      }
     ]
    },
@@ -512,13 +549,11 @@
       ]
      },
      {
-      "type": "statement",
-      "kicker": "Vì sao",
-      "text": "Thừa nhận là cả quân đội đã sai.",
-      "highlight": [
-       "đã sai."
-      ],
-      "cue": "vì tin"
+      "type": "icon",
+      "icon": "shield",
+      "kicker": "Vì sao? Người lính giữ pháo đài",
+      "cue": "vì tin",
+      "line": "Tin Esterhazy có tội = cả quân đội đã sai."
      }
     ]
    },
@@ -536,27 +571,28 @@
     "type": "shots",
     "shots": [
      {
-      "type": "swap",
+      "type": "trio",
       "kicker": "Bài học 1 · Hỏi: điều gì là thật?",
-      "from": {
-       "label": "Có lợi cho phe mình?",
-       "icon": "shield"
-      },
-      "to": {
-       "label": "Bằng chứng nói gì?",
-       "icon": "binoculars",
-       "cue": "ông hỏi"
-      },
-      "cue": "picquart không"
+      "cross": true,
+      "items": [
+       {
+        "icon": "shield",
+        "label": "Có lợi cho quân đội?",
+        "cue": "có lợi"
+       },
+       {
+        "icon": "scale",
+        "label": "Có được phép tin không?",
+        "cue": "được phép"
+       }
+      ]
      },
      {
-      "type": "statement",
-      "kicker": "Câu hỏi của người trinh sát",
-      "text": "Điều gì là thật?",
-      "highlight": [
-       "thật?"
-      ],
-      "cue": "bằng chứng"
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Picquart hỏi",
+      "line": "Bằng chứng thật sự nói gì?",
+      "cue": "ông hỏi"
      }
     ]
    },
@@ -572,12 +608,10 @@
     "type": "shots",
     "shots": [
      {
-      "type": "statement",
+      "type": "icon",
+      "icon": "hourglass",
       "kicker": "Vụ Dreyfus",
-      "text": "Sự thật đến chậm.",
-      "highlight": [
-       "chậm."
-      ]
+      "line": "Sự thật đến chậm."
      },
      {
       "type": "ladder",
@@ -616,12 +650,18 @@
     "type": "shots",
     "shots": [
      {
-      "type": "statement",
+      "type": "swap",
       "kicker": "Huyền thoại & sự thật",
-      "text": "Người hùng không hề có định kiến.",
-      "strike": "không hề có định kiến.",
-      "replace": "có định kiến, vẫn chọn bằng chứng",
-      "strike_cue": "chính galef"
+      "cue": "picquart không",
+      "from": {
+       "label": "Người hùng không định kiến",
+       "icon": "star"
+      },
+      "to": {
+       "label": "Định kiến như nhiều sĩ quan thời ấy",
+       "icon": "people",
+       "cue": "như nhiều"
+      }
      },
      {
       "type": "icon",
@@ -644,12 +684,10 @@
     "type": "shots",
     "shots": [
      {
-      "type": "statement",
+      "type": "icon",
+      "icon": "mirror",
       "kicker": "Bài học 2",
-      "text": "Thử đổi phe trong đầu.",
-      "highlight": [
-       "đổi phe"
-      ]
+      "line": "Thử đổi phe trong đầu."
      },
      {
       "type": "trio",
@@ -662,12 +700,12 @@
        },
        {
         "icon": "people",
-        "label": "Người ngoài sẽ làm gì?",
+        "label": "Người khác ở chỗ mình?",
         "cue": "nếu người"
        },
        {
         "icon": "compass",
-        "label": "Không ai đồng tình?",
+        "label": "Nếu mọi người đổi ý?",
         "cue": "nếu mọi"
        }
       ],
@@ -692,16 +730,23 @@
       "icon": "shield",
       "kicker": "Bài học 3 · Giữ bản sắc thật nhẹ",
       "line": "Quan điểm = con người mình?",
-      "line_cue": "khi một"
+      "line_cue": "khi một",
+      "motion": "shake",
+      "motion_cue": "bị tấn công"
      },
      {
-      "type": "statement",
+      "type": "swap",
       "kicker": "Paul Graham & Julia Galef",
-      "text": "Nhãn mác là mô tả, không phải lá cờ.",
-      "highlight": [
-       "mô tả,"
-      ],
-      "cue": "hãy coi"
+      "cue": "hãy coi",
+      "from": {
+       "label": "Lá cờ phải giữ đến cùng",
+       "icon": "shield"
+      },
+      "to": {
+       "label": "Nhãn mác: chỉ là một mô tả",
+       "icon": "letter",
+       "cue": "mô tả"
+      }
      }
     ]
    },
@@ -718,12 +763,12 @@
     "type": "shots",
     "shots": [
      {
-      "type": "statement",
+      "type": "icon",
+      "icon": "scale",
+      "motion": "swing",
+      "period": 2.6,
       "kicker": "Vậy",
-      "text": "Người lính luôn sai?",
-      "highlight": [
-       "sai?"
-      ]
+      "line": "Người lính luôn sai?"
      },
      {
       "type": "trio",
@@ -731,7 +776,7 @@
       "cue": "galef thừa",
       "items": [
        {
-        "icon": "tea",
+        "icon": "house",
         "label": "Sự an tâm",
         "cue": "sự an"
        },
@@ -804,18 +849,42 @@
     "type": "shots",
     "shots": [
      {
-      "type": "statement",
-      "kicker": "Picquart",
-      "text": "Không cần hoàn hảo. Chỉ cần muốn thấy đúng.",
-      "highlight": [
-       "muốn thấy đúng."
-      ]
+      "type": "icon",
+      "icon": "compass",
+      "kicker": "Picquart không phải thánh nhân",
+      "line": "Bằng chứng chỉ hướng nào, ông đi theo.",
+      "line_cue": "nhưng khi"
      },
      {
-      "type": "icon",
-      "icon": "binoculars",
-      "line": "Lính, hay trinh sát?",
-      "cue": "hôm nay"
+      "type": "swap",
+      "kicker": "Điều đáng học nhất",
+      "cue": "có lẽ",
+      "from": {
+       "label": "Hoàn hảo",
+       "icon": "star"
+      },
+      "to": {
+       "label": "Muốn thấy đúng",
+       "icon": "eye",
+       "cue": "chỉ cần"
+      }
+     },
+     {
+      "type": "trio",
+      "kicker": "Hôm nay, bạn đang là…",
+      "cue": "hôm nay",
+      "items": [
+       {
+        "icon": "shield",
+        "label": "Người lính",
+        "cue": "người lính"
+       },
+       {
+        "icon": "binoculars",
+        "label": "Người trinh sát",
+        "cue": "người trinh"
+       }
+      ]
      }
     ]
    },

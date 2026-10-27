@@ -63,13 +63,23 @@
    "visual": {
     "type": "shots",
     "shots": [
-     {"type": "statement", "kicker": "Một câu đùa?", "text": "Cả một cách nghĩ.", "highlight": ["cách nghĩ"]},
+     {
+      "type": "swap",
+      "kicker": "Nghe như một câu đùa",
+      "cue": "nhưng đằng",
+      "from": {"label": "Một câu đùa", "icon": "mask"},
+      "to": {"label": "Cả một cách nghĩ", "icon": "brain", "cue": "cách nghĩ"}
+     },
      {"type": "icon", "icon": "tea", "steam": true, "line": "Rót một tách trà nhé.", "cue": "rót"},
-     {"type": "trio", "kicker": "Trong vài phút tới", "cue": "trong vài",
+     {
+      "type": "trio",
+      "kicker": "Trong vài phút tới",
+      "cue": "trong vài",
       "items": [
        {"icon": "book", "label": "Một cuốn niên giám", "cue": "cuốn niên"},
        {"icon": "bulb", "label": "Ba bài học", "cue": "ba bài"}
-      ]}
+      ]
+     }
     ]
    }
   },
@@ -86,15 +96,22 @@
    "visual": {
     "type": "shots",
     "shots": [
-     {"type": "trio", "kicker": "Điều ta hay tin",
+     {
+      "type": "trio",
+      "kicker": "Điều ta hay tin",
       "items": [
        {"icon": "brain", "label": "Bộ óc thiên tài", "cue": "bộ óc"},
-       {"icon": "target", "label": "Chuyên gia một ngành", "cue": "chuyên gia"},
-       {"icon": "bulb", "label": "Công thức bí mật", "cue": "công thức"}
-      ]},
-     {"type": "statement", "kicker": "Điều ta hay tin", "cue": "munger nghĩ",
-      "text": "Khôn ngoan là biết thật nhiều.", "strike": "biết thật nhiều.", "replace": "tránh điều dại dột",
-      "strike_cue": "khôn ngoan bắt"}
+       {"icon": "star", "label": "Chuyên gia giỏi nhất ngành", "cue": "chuyên gia"},
+       {"icon": "key", "label": "Công thức bí mật", "cue": "công thức"}
+      ]
+     },
+     {
+      "type": "swap",
+      "kicker": "Munger nghĩ khác",
+      "cue": "munger nghĩ",
+      "from": {"label": "Biết thật nhiều", "icon": "book"},
+      "to": {"label": "Tránh điều dại dột", "icon": "lighthouse", "cue": "tránh"}
+     }
     ]
    }
   },
@@ -121,13 +138,24 @@
    "visual": {
     "type": "shots",
     "shots": [
-     {"type": "book", "title": "Poor Charlie's Almanack", "author": "ed. Peter D. Kaufman", "year": "2005", "kicker": "Tuyển tập bài nói",
+     {
+      "type": "book",
+      "title": "Poor Charlie's Almanack",
+      "author": "ed. Peter D. Kaufman",
+      "year": "2005",
+      "kicker": "Tuyển tập bài nói",
       "facts": [
        {"big": "2005", "text": "Ấn bản đầu tiên", "cue": "năm hai"},
        {"big": "Kaufman", "text": "Bạn lâu năm, người biên tập", "cue": "peter"}
-      ]},
-     {"type": "statement", "kicker": "Một lời chào tới Franklin", "cue": "cái tên",
-      "text": "Poor Richard → Poor Charlie", "highlight": ["Poor Charlie"]}
+      ]
+     },
+     {
+      "type": "book",
+      "title": "Poor Richard's Almanack",
+      "author": "Benjamin Franklin",
+      "kicker": "Cái tên: một lời chào tới Franklin",
+      "cue": "cái tên"
+     }
     ]
    },
    "sources": ["pca"]
@@ -138,11 +166,21 @@
    "visual": {
     "type": "shots",
     "shots": [
-     {"type": "statement", "kicker": "1986 · Lễ tốt nghiệp", "text": "Bài nói ở Đại học Harvard", "strike": "Đại học Harvard",
-      "replace": "một trường trung học", "strike_cue": "không phải"},
-     {"type": "swap", "kicker": "Ông lại hỏi ngược", "cue": "người ta",
+     {
+      "type": "statement",
+      "kicker": "1986 · Lễ tốt nghiệp",
+      "text": "Bài nói ở Đại học Harvard",
+      "strike": "Đại học Harvard",
+      "replace": "một trường trung học",
+      "strike_cue": "không phải"
+     },
+     {
+      "type": "swap",
+      "kicker": "Ông lại hỏi ngược",
+      "cue": "người ta",
       "from": {"label": "Làm sao để thành công?", "icon": "star"},
-      "to": {"label": "Làm sao để khốn khổ?", "icon": "compass", "cue": "ông lại"}}
+      "to": {"label": "Làm sao để khốn khổ?", "icon": "tissue", "cue": "ông lại"}
+     }
     ]
    },
    "sources": ["hs1986", "hs1986b"]
@@ -153,18 +191,27 @@
    "visual": {
     "type": "shots",
     "shots": [
-     {"type": "trio", "kicker": "Đơn thuốc của Johnny Carson", "cross": true,
+     {
+      "type": "trio",
+      "kicker": "Đơn thuốc của Johnny Carson",
+      "cross": true,
       "items": [
-       {"icon": "lightning", "label": "Chất gây nghiện", "cue": "dùng chất"},
-       {"icon": "mask", "label": "Ghen tị", "cue": "ghen"},
-       {"icon": "hourglass", "label": "Oán giận", "cue": "oán"}
-      ]},
-     {"type": "trio", "kicker": "Munger thêm vào", "cross": true, "cue": "rồi thêm",
+       {"icon": "lock", "label": "Chất gây nghiện", "cue": "dùng chất"},
+       {"icon": "eye", "label": "Ghen tị", "cue": "ghen"},
+       {"icon": "lightning", "label": "Oán giận", "cue": "oán"}
+      ]
+     },
+     {
+      "type": "trio",
+      "kicker": "Munger thêm vào",
+      "cross": true,
+      "cue": "rồi thêm",
       "items": [
        {"icon": "clock", "label": "Thiếu tin cậy", "cue": "sống thiếu"},
-       {"icon": "book", "label": "Chỉ học từ mình", "cue": "chỉ học"},
-       {"icon": "turtle", "label": "Ngã là nằm luôn", "cue": "và gục"}
-      ]}
+       {"icon": "mirror", "label": "Chỉ học từ mình", "cue": "chỉ học"},
+       {"icon": "bench", "label": "Ngã là nằm luôn", "cue": "và gục"}
+      ]
+     }
     ]
    },
    "sources": ["hs1986", "hs1986b"]
@@ -175,10 +222,20 @@
    "visual": {
     "type": "shots",
     "shots": [
-     {"type": "quote", "text": "Tôi chỉ muốn biết mình sẽ chết ở đâu, để không bao giờ đến đó.",
-      "by": "Người nhà quê, qua lời Munger (lược dịch)", "attribution": "attributed"},
-     {"type": "statement", "kicker": "Ai nói câu ấy?", "cue": "câu nói", "text": "Câu của Munger", "strike": "của Munger",
-      "replace": "một câu đùa cổ", "strike_cue": "được cho"}
+     {
+      "type": "quote",
+      "text": "Tôi chỉ muốn biết mình sẽ chết ở đâu, để không bao giờ đến đó.",
+      "by": "Người nhà quê, qua lời Munger (lược dịch)",
+      "attribution": "attributed"
+     },
+     {
+      "type": "icon",
+      "icon": "hourglass",
+      "kicker": "Ai nói câu ấy?",
+      "cue": "câu nói",
+      "line": "Một câu đùa cổ, Munger chỉ mượn lại",
+      "line_cue": "được cho"
+     }
     ]
    },
    "sources": ["hs1986", "hs1986b", "pca"],
@@ -190,11 +247,24 @@
    "visual": {
     "type": "shots",
     "shots": [
-     {"type": "statement", "kicker": "Bài học 1 · Carl Jacobi", "text": "Đảo ngược, luôn luôn đảo ngược.", "highlight": ["luôn luôn"]},
-     {"type": "swap", "kicker": "Bài học 1 · Lật ngược vấn đề", "cue": "thay vì",
+     {
+      "type": "icon",
+      "icon": "hourglass",
+      "motion": "spin",
+      "turns": 0.5,
+      "kicker": "Bài học 1 · Carl Jacobi",
+      "line": "Đảo ngược, luôn luôn đảo ngược.",
+      "line_cue": "đảo ngược"
+     },
+     {
+      "type": "swap",
+      "kicker": "Bài học 1 · Lật ngược vấn đề",
+      "cue": "thay vì",
       "from": {"label": "Làm sao để hạnh phúc?", "icon": "star"},
-      "to": {"label": "Điều gì làm mình khổ?", "icon": "shield", "cue": "hãy hỏi"},
-      "line": "Rồi tránh xa nó.", "line_cue": "rồi tránh"}
+      "to": {"label": "Điều gì làm mình khổ?", "icon": "lighthouse", "cue": "hãy hỏi"},
+      "line": "Rồi tránh xa nó.",
+      "line_cue": "rồi tránh"
+     }
     ]
    },
    "sources": ["hs1986", "pca"]
@@ -205,9 +275,23 @@
    "visual": {
     "type": "shots",
     "shots": [
-     {"type": "icon", "icon": "brain", "kicker": "1994 · USC Business School", "line": "Mạng lưới mô hình tư duy", "line_cue": "mạng lưới"},
-     {"type": "statement", "kicker": "Câu tục ngữ Munger hay nhắc", "cue": "ông nhắc",
-      "text": "Cầm búa, thấy đâu cũng là đinh.", "highlight": ["đinh"]}
+     {
+      "type": "icon",
+      "icon": "puzzle",
+      "kicker": "1994 · USC Business School",
+      "line": "Mạng lưới mô hình tư duy",
+      "line_cue": "mạng lưới"
+     },
+     {
+      "type": "icon",
+      "icon": "hammer",
+      "motion": "shake",
+      "motion_cue": "cái đinh",
+      "kicker": "Câu tục ngữ Munger hay nhắc",
+      "cue": "ông nhắc",
+      "line": "Cầm búa, thấy đâu cũng là đinh.",
+      "line_cue": "cái búa"
+     }
     ]
    },
    "sources": ["usc1994", "pca"]
@@ -218,20 +302,28 @@
    "visual": {
     "type": "shots",
     "shots": [
-     {"type": "trio", "kicker": "Bài học 2 · Xây mạng lưới mô hình",
+     {
+      "type": "trio",
+      "kicker": "Bài học 2 · Xây mạng lưới mô hình",
       "items": [
        {"icon": "dice", "label": "Xác suất", "cue": "toán"},
        {"icon": "chart", "label": "Kế toán", "cue": "kế toán"},
-       {"icon": "factory", "label": "Kỹ thuật", "cue": "kỹ thuật"},
+       {"icon": "gear", "label": "Kỹ thuật", "cue": "kỹ thuật"},
        {"icon": "brain", "label": "Tâm lý học", "cue": "tâm lý"}
-      ]},
-     {"type": "venn", "kicker": "Bài học 2 · Xây mạng lưới mô hình", "cue": "khi chúng",
+      ]
+     },
+     {
+      "type": "venn",
+      "kicker": "Bài học 2 · Xây mạng lưới mô hình",
+      "cue": "khi chúng",
       "circles": [
        {"label": "Toán", "cue": "khi chúng"},
        {"label": "Tâm lý", "cue": "đan"},
        {"label": "Kỹ thuật", "cue": "bạn nhìn"}
       ],
-      "center_label": "Nhiều góc nhìn", "center_cue": "nhiều phía"}
+      "center_label": "Nhiều góc nhìn",
+      "center_cue": "nhiều phía"
+     }
     ]
    },
    "sources": ["usc1994"]
@@ -242,9 +334,24 @@
    "visual": {
     "type": "shots",
     "shots": [
-     {"type": "book", "title": "The Psychology of Human Misjudgment", "author": "Charles T. Munger", "year": "1995", "kicker": "Bài nói ở Harvard",
-      "facts": [{"big": "1995", "text": "Bài nói đầu tiên", "cue": "năm một"}]},
-     {"type": "stat", "value": 25, "label": "khuynh hướng gây phán đoán sai", "note": "bản viết lại trong sách", "cue": "hai mươi"}
+     {
+      "type": "book",
+      "title": "The Psychology of Human Misjudgment",
+      "author": "Charles T. Munger",
+      "year": "1995",
+      "kicker": "Bài nói ở Harvard",
+      "facts": [{"big": "1995", "text": "Bài nói đầu tiên", "cue": "năm một"}]
+     },
+     {
+      "type": "icon",
+      "icon": "brain",
+      "motion": "crack",
+      "motion_cue": "nghĩ sai",
+      "cue": "hai mươi",
+      "kicker": "Bản viết lại trong sách",
+      "line": "25 khuynh hướng khiến ta nghĩ sai",
+      "line_cue": "hai mươi"
+     }
     ]
    },
    "sources": ["phm1995", "pca"]
@@ -255,15 +362,24 @@
    "visual": {
     "type": "shots",
     "shots": [
-     {"type": "trio", "kicker": "FedEx · ca đêm", "cross": true,
+     {
+      "type": "trio",
+      "kicker": "FedEx · ca đêm",
       "items": [
-       {"icon": "people", "label": "Khuyên nhủ", "cue": "khuyên"},
-       {"icon": "people", "label": "Nhắc nhở", "cue": "nhắc"}
-      ]},
-     {"type": "swap", "kicker": "Đổi cách trả lương", "cue": "rồi họ",
+       {"icon": "turtle", "label": "Cứ chậm mãi", "cue": "chậm"},
+       {"icon": "people", "label": "Khuyên nhủ: vô ích", "cue": "khuyên"},
+       {"icon": "letter", "label": "Nhắc nhở: vô ích", "cue": "nhắc"}
+      ]
+     },
+     {
+      "type": "swap",
+      "kicker": "Đổi cách trả lương",
+      "cue": "rồi họ",
       "from": {"label": "Trả theo giờ", "icon": "clock"},
-      "to": {"label": "Trả theo ca · xong là về", "icon": "coin", "cue": "mà trả"},
-      "line": "Sức mạnh của động lực.", "line_cue": "vấn đề"}
+      "to": {"label": "Trả theo ca · xong là về", "icon": "house", "cue": "mà trả"},
+      "line": "Vấn đề được giải quyết.",
+      "line_cue": "vấn đề"
+     }
     ]
    },
    "sources": ["phm1995", "phm_jc"]
@@ -274,14 +390,32 @@
    "visual": {
     "type": "shots",
     "shots": [
-     {"type": "trio", "kicker": "Bài học 3 · Biết mình dễ sai ở đâu",
+     {
+      "type": "trio",
+      "kicker": "Bài học 3 · Biết mình dễ sai ở đâu",
       "items": [
        {"icon": "coin", "label": "Phần thưởng", "cue": "phần thưởng"},
-       {"icon": "hourglass", "label": "Sợ mất mát", "cue": "nỗi sợ"},
-       {"icon": "people", "label": "Đám đông", "cue": "áp lực"}
-      ]},
-     {"type": "statement", "kicker": "Khi nhiều lực cùng đẩy", "cue": "khi nhiều", "text": "Hiệu ứng lollapalooza", "highlight": ["lollapalooza"]},
-     {"type": "icon", "icon": "shield", "kicker": "Bài học 3", "cue": "vậy hãy", "line": "Rà danh sách bẫy trước khi quyết."}
+       {"icon": "mask", "label": "Sợ mất mát", "cue": "nỗi sợ"},
+       {"icon": "people", "label": "Áp lực đám đông", "cue": "áp lực"}
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "snowball",
+      "motion": "grow",
+      "kicker": "Khi nhiều thứ cùng đẩy một hướng",
+      "cue": "khi nhiều",
+      "line": "Hiệu ứng lollapalooza",
+      "line_cue": "lollapalooza"
+     },
+     {
+      "type": "icon",
+      "icon": "checklist",
+      "kicker": "Bài học 3",
+      "cue": "vậy hãy",
+      "line": "Rà danh sách bẫy trước mỗi quyết định lớn",
+      "line_cue": "rà"
+     }
     ]
    },
    "sources": ["phm1995", "phm_jc", "pca"]
@@ -292,11 +426,24 @@
    "visual": {
     "type": "shots",
     "shots": [
-     {"type": "statement", "kicker": "Đừng thần thánh hoá", "text": "Sai lầm đắt nhất: những việc không làm.", "highlight": ["không làm"],
-      "cue": "ông nói"},
-     {"type": "halo", "kicker": "Munger tự nhận", "cue": "năm hai",
-      "items": [{"name": "Google", "before": "Cơ hội", "after": "BỎ LỠ · XIN LỖI 2017", "cue": "xin lỗi"}],
-      "label": "Nhìn thẳng vào sai lầm", "label_cue": "điều khác"}
+     {
+      "type": "icon",
+      "icon": "door",
+      "kicker": "Đừng thần thánh hoá · Munger nói thẳng",
+      "line": "Sai lầm đắt nhất: những việc đã không làm.",
+      "line_cue": "những sai"
+     },
+     {
+      "type": "halo",
+      "kicker": "Ngay cả Munger",
+      "cue": "năm hai",
+      "items": [
+       {"name": "Charlie Munger", "before": "Huyền thoại", "after": "BỎ LỠ GOOGLE · XIN LỖI 2017", "cue": "xin lỗi"}
+      ],
+      "label": "Người giỏi nhất cũng sai",
+      "label_cue": "người giỏi"
+     },
+     {"type": "icon", "icon": "mirror", "cue": "điều khác", "line": "Nhìn thẳng vào sai lầm."}
     ]
    },
    "sources": ["brk2017", "omission"]
@@ -307,9 +454,20 @@
    "visual": {
     "type": "shots",
     "shots": [
-     {"type": "trio", "kicker": "Đừng sưu tầm", "cross": true,
-      "items": [{"icon": "book", "label": "Sưu tầm mô hình", "cue": "đừng"}]},
-     {"type": "statement", "kicker": "Tuần này, thử hỏi", "cue": "hãy chọn", "text": "Điều gì sẽ làm nó hỏng?", "highlight": ["hỏng"]}
+     {
+      "type": "trio",
+      "kicker": "Đừng sưu tầm",
+      "cross": true,
+      "items": [{"icon": "letter", "label": "Mô hình như sưu tầm tem", "cue": "đừng"}]
+     },
+     {
+      "type": "icon",
+      "icon": "fork",
+      "kicker": "Một quyết định thật · tuần này",
+      "cue": "hãy chọn",
+      "line": "Điều gì sẽ làm nó hỏng?",
+      "line_cue": "điều gì"
+     }
     ]
    }
   },
@@ -343,7 +501,14 @@
     "type": "shots",
     "shots": [
      {"type": "statement", "kicker": "Câu hỏi của người nhà quê", "text": "Mình sẽ chết ở đâu?", "highlight": ["ở đâu"]},
-     {"type": "icon", "icon": "tea", "steam": true, "line": "Đâu là nơi bạn nên tránh?", "cue": "nhưng"}
+     {
+      "type": "icon",
+      "icon": "lighthouse",
+      "kicker": "Câu hỏi khôn ngoan nhất",
+      "cue": "nhưng",
+      "line": "Đâu là nơi bạn nên tránh?",
+      "line_cue": "vậy hôm"
+     }
     ]
    },
    "sources": ["hs1986"]

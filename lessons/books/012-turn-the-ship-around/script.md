@@ -14,7 +14,7 @@ _Review sách · Tập 12 · 882 words · ~3.8 min · 4:3_
 ## Script
 | # | act | narration | on screen |
 |---|---|---|---|
-| h1 | hook | Thuyền trưởng ra một lệnh không thể làm được. Vậy mà sĩ quan của ông vẫn truyền lệnh đi. | statement: Lệnh không thể làm. Vẫn truyền đi. |
+| h1 | hook | Thuyền trưởng ra một lệnh không thể làm được. Vậy mà sĩ quan của ông vẫn truyền lệnh đi. | icon: icon |
 | h2 | context | Không phải vì họ kém. Cũng không phải vì họ lười. Mà vì cả con tàu đã quen chỉ làm theo. Rót một tách trà nhé. Mình sẽ kể cách một thuyền trưởng sửa điều đó, và ba bài học cho bất kỳ nhóm nào bạn đang dẫn dắt. | shots: shots |
 | t0 | context |  | title: Xoay Chuyển Con Tàu |
 | b01 | misconception | Ta hay nghĩ lãnh đạo giỏi là người có mọi câu trả lời. Người trên ra lệnh, người dưới làm theo, thế là xong. Nhưng khi người trên sai thì sao? Cuốn sách này cho thấy chính mô hình ấy mới là vấn đề. | shots: shots |

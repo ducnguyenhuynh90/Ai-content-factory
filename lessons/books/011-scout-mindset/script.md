@@ -14,7 +14,7 @@ _Review sách · Tập 11 · 876 words · ~3.77 min · 4:3_
 ## Script
 | # | act | narration | on screen |
 |---|---|---|---|
-| h1 | hook | Năm một nghìn tám trăm chín mươi tư, những sĩ quan giỏi nhất nước Pháp kết án sai một người vô tội. | statement: Paris, 1894. Kết án sai một người vô tội. |
+| h1 | hook | Năm một nghìn tám trăm chín mươi tư, những sĩ quan giỏi nhất nước Pháp kết án sai một người vô tội. | icon: icon |
 | h2 | context | Họ không ngu. Phần lớn họ thật lòng tin mình đúng. Họ chỉ làm điều mà ai trong chúng ta cũng làm mỗi ngày. Pha một ấm trà nhé. Vài phút tới, bạn sẽ gặp hai kiểu tư duy, và ba bài học để nhìn mọi thứ rõ hơn. | shots: shots |
 | t0 | context |  | title: Tư Duy Truy Tìm Sự Thật |
 | b01 | misconception | Ta hay nghĩ người thông minh sẽ nhìn ra sự thật, chỉ cần đủ dữ kiện. Nhưng Julia Galef cho rằng điều quyết định không phải bạn thông minh đến đâu, mà là bạn đang muốn điều gì. | shots: shots |

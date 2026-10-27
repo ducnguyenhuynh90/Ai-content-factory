@@ -51,7 +51,7 @@
   {
    "id": "h1", "act": "hook",
    "narration": "Thuyền trưởng ra một lệnh không thể làm được. Vậy mà sĩ quan của ông vẫn truyền lệnh đi.",
-   "visual": {"type": "statement", "kicker": "USS Santa Fe · 1999", "text": "Lệnh không thể làm. Vẫn truyền đi.", "highlight": ["Vẫn truyền đi."]},
+   "visual": {"type": "icon", "icon": "submarine", "kicker": "USS Santa Fe · 1999", "line": "Lệnh không thể làm. Vẫn truyền đi.", "line_cue": "vậy mà"},
    "sfx": [{"kind": "hit", "cue": "vậy mà", "gain_db": -6}],
    "sources": ["marquet2012", "supersummary"]
   },
@@ -59,12 +59,9 @@
    "id": "h2", "act": "context",
    "narration": "Không phải vì họ kém. Cũng không phải vì họ lười. Mà vì cả con tàu đã quen chỉ làm theo. Rót một tách trà nhé. Mình sẽ kể cách một thuyền trưởng sửa điều đó, và ba bài học cho bất kỳ nhóm nào bạn đang dẫn dắt.",
    "visual": {"type": "shots", "shots": [
-    {"type": "trio", "kicker": "Không phải vì…", "cross": true, "items": [
-     {"icon": "brain", "label": "Kém cỏi", "cue": "kém"},
-     {"icon": "turtle", "label": "Lười biếng", "cue": "lười"}],
-     "line": "Mà vì quen chỉ làm theo.", "line_cue": "mà vì"},
+    {"type": "trio", "kicker": "Không phải vì…", "cross": true, "items": [{"icon": "brain", "label": "Kém cỏi", "cue": "kém"}, {"icon": "turtle", "label": "Lười biếng", "cue": "lười"}], "line": "Mà vì quen chỉ làm theo.", "line_cue": "mà vì"},
     {"type": "icon", "icon": "tea", "steam": true, "line": "Rót một tách trà nhé.", "cue": "rót"},
-    {"type": "statement", "kicker": "Trong vài phút tới", "text": "Một con tàu. Ba bài học.", "highlight": ["Ba bài học."], "cue": "mình sẽ"}
+    {"type": "trio", "kicker": "Trong vài phút tới", "cue": "mình sẽ", "items": [{"icon": "submarine", "label": "Một thuyền trưởng", "cue": "một thuyền"}, {"icon": "key", "label": "Ba bài học", "cue": "ba bài"}, {"icon": "people", "label": "Cho nhóm bạn dẫn dắt", "cue": "bất kỳ"}]}
    ]}
   },
   {
@@ -77,10 +74,8 @@
    "id": "b01", "act": "misconception",
    "narration": "Ta hay nghĩ lãnh đạo giỏi là người có mọi câu trả lời. Người trên ra lệnh, người dưới làm theo, thế là xong. Nhưng khi người trên sai thì sao? Cuốn sách này cho thấy chính mô hình ấy mới là vấn đề.",
    "visual": {"type": "shots", "shots": [
-    {"type": "trio", "kicker": "Điều ta hay tin", "items": [
-     {"icon": "brain", "label": "Có mọi câu trả lời", "cue": "có mọi"},
-     {"icon": "people", "label": "Người dưới làm theo", "cue": "người dưới"}]},
-    {"type": "statement", "kicker": "Điều ta hay tin", "text": "Lãnh đạo giỏi có mọi câu trả lời.", "strike": "có mọi câu trả lời.", "replace": "tạo ra người biết nghĩ", "strike_cue": "chính mô", "cue": "nhưng khi"}
+    {"type": "trio", "kicker": "Điều ta hay tin", "items": [{"icon": "brain", "label": "Có mọi câu trả lời", "cue": "có mọi"}, {"icon": "people", "label": "Người dưới làm theo", "cue": "người dưới"}]},
+    {"type": "icon", "icon": "ship", "kicker": "Nhưng khi người trên sai?", "cue": "nhưng khi", "line": "Chính mô hình ấy mới là vấn đề.", "line_cue": "chính mô", "motion": "sink", "motion_cue": "vấn đề"}
    ]}
   },
   {
@@ -98,10 +93,8 @@
    "id": "b03", "act": "context",
    "narration": "Suốt khoảng một năm, Marquet chuẩn bị chỉ huy tàu USS Olympia. Ông học thuộc từng chi tiết của nó. Rồi tháng mười hai năm một nghìn chín trăm chín mươi tám, kế hoạch thay đổi: thuyền trưởng tàu USS Santa Fe bất ngờ xin nghỉ, và ông được điều sang thay.",
    "visual": {"type": "shots", "shots": [
-    {"type": "timeline", "title": "Một chuyến đổi tàu bất ngờ", "events": [
-     {"year": "~1 năm", "text": "Chuẩn bị cho USS Olympia", "cue": "suốt"},
-     {"year": "12/1998", "text": "Kế hoạch thay đổi", "cue": "tháng mười"}]},
-    {"type": "swap", "kicker": "Tháng 1/1999 · nhận tàu mới", "from": {"label": "USS Olympia", "icon": "book"}, "to": {"label": "USS Santa Fe", "icon": "compass", "cue": "được điều"}, "cue": "thuyền trưởng tàu"}
+    {"type": "timeline", "title": "Một chuyến đổi tàu bất ngờ", "events": [{"year": "~1 năm", "text": "Chuẩn bị cho USS Olympia", "cue": "suốt"}, {"year": "12/1998", "text": "Kế hoạch thay đổi", "cue": "tháng mười"}]},
+    {"type": "swap", "kicker": "Tháng 1/1999 · nhận tàu mới", "from": {"label": "USS Olympia", "icon": "submarine"}, "to": {"label": "USS Santa Fe", "icon": "submarine", "cue": "được điều"}, "cue": "thuyền trưởng tàu"}
    ]},
    "sources": ["supersummary", "wiki_marquet", "marquet_site", "marquet2012"],
    "certainty": "estimate"
@@ -110,11 +103,9 @@
    "id": "b04", "act": "story",
    "narration": "Santa Fe khi ấy đứng cuối hạm đội về giữ chân thủy thủ. Theo lời Marquet, năm trước đó, trên khoảng một trăm ba mươi lăm người, chỉ có ba người ký tiếp hợp đồng. Thủy thủ tránh ánh mắt, trả lời lí nhí, và tin rằng tàu mình là tệ nhất.",
    "visual": {"type": "shots", "shots": [
-    {"type": "statement", "kicker": "Giữ chân thủy thủ", "text": "Đứng cuối hạm đội.", "highlight": ["cuối"]},
-    {"type": "stat", "value": 3, "label": "người ký tiếp hợp đồng", "note": "trên ~135 thủy thủ · năm trước khi Marquet đến", "cue": "chỉ có"},
-    {"type": "trio", "kicker": "Trên tàu", "items": [
-     {"icon": "mask", "label": "Tránh ánh mắt", "cue": "tránh"},
-     {"icon": "people", "label": "“Tàu mình tệ nhất”", "cue": "tin rằng"}], "cue": "thủy thủ tránh"}
+    {"type": "icon", "icon": "submarine", "kicker": "Giữ chân thủy thủ", "line": "Đứng cuối hạm đội.", "motion": "sink", "motion_cue": "cuối hạm"},
+    {"type": "funnel", "total": 135, "start_full": true, "cue": "theo lời", "keep": 3, "keep_cue": "chỉ có", "label": "~135 thủy thủ · năm trước khi Marquet đến", "keep_label": "Chỉ 3 người ký tiếp hợp đồng"},
+    {"type": "trio", "kicker": "Trên tàu", "items": [{"icon": "eye", "label": "Tránh ánh mắt", "cue": "tránh"}, {"icon": "people", "label": "Cả tàu tin: “tệ nhất”", "cue": "tin rằng"}], "cue": "thủy thủ tránh"}
    ]},
    "sources": ["bizobs", "penguin", "wiki_marquet", "supersummary"],
    "certainty": "estimate"
@@ -123,9 +114,9 @@
    "id": "b05", "act": "story",
    "narration": "Rồi một buổi diễn tập. Tàu giả lập sự cố lò phản ứng, phải chạy bằng động cơ điện dự phòng. Marquet ra lệnh: tiến hai phần ba. Sĩ quan trực lặp lại ngay. Nhưng không có gì xảy ra.",
    "visual": {"type": "shots", "shots": [
-    {"type": "icon", "icon": "lightning", "kicker": "Một buổi diễn tập", "line": "Giả lập sự cố", "line_cue": "tàu giả"},
+    {"type": "icon", "icon": "lightning", "kicker": "Một buổi diễn tập", "line": "Giả lập sự cố", "line_cue": "tàu giả", "motion": "shake", "motion_cue": "sự cố"},
     {"type": "statement", "kicker": "Lệnh của thuyền trưởng", "text": "“Tiến 2/3!”", "highlight": ["2/3!”"], "cue": "marquet ra"},
-    {"type": "icon", "icon": "hourglass", "line": "Không có gì xảy ra.", "cue": "nhưng không"}
+    {"type": "icon", "icon": "gear", "line": "Không có gì xảy ra.", "cue": "nhưng không", "motion": "shake", "motion_cue": "không có"}
    ]},
    "sources": ["marquet2012", "supersummary"]
   },
@@ -144,7 +135,7 @@
    "id": "b07", "act": "story",
    "narration": "Đó là lúc Marquet hiểu ra. Trong mô hình người dẫn, người theo, khi người dẫn sai, cả nhóm sai theo. Một con tàu có hơn một trăm người biết nghĩ, nhưng chỉ một người được phép quyết định.",
    "visual": {"type": "shots", "shots": [
-    {"type": "statement", "kicker": "Người dẫn · người theo", "text": "Người dẫn sai, cả nhóm sai theo.", "highlight": ["sai theo."]},
+    {"type": "trio", "kicker": "Người dẫn · người theo", "cross": true, "items": [{"icon": "star", "label": "Người dẫn sai", "cue": "người dẫn sai"}, {"icon": "people", "label": "Cả nhóm sai theo", "cue": "cả nhóm"}]},
     {"type": "funnel", "total": 135, "start_full": true, "keep": 1, "keep_cue": "nhưng chỉ", "label": "~135 người trên tàu", "keep_label": "1 người được quyết định", "cue": "một con"}
    ]},
    "sources": ["marquet2012", "bizobs"]
@@ -153,8 +144,8 @@
    "id": "b08", "act": "turn",
    "narration": "Thế là ông làm ngược lại điều mình được dạy. Thay vì nắm quyền, ông trao quyền. Marquet gọi mô hình mới là lãnh đạo, lãnh đạo: trên con tàu ấy, ai cũng là một người ra quyết định.",
    "visual": {"type": "shots", "shots": [
-    {"type": "swap", "kicker": "Làm ngược điều được dạy", "from": {"label": "Nắm quyền", "icon": "shield"}, "to": {"label": "Trao quyền", "icon": "people", "cue": "ông trao"}, "cue": "thay vì"},
-    {"type": "statement", "kicker": "Leader-leader", "text": "Ai cũng ra quyết định.", "highlight": ["ra quyết định."], "cue": "marquet gọi"}
+    {"type": "swap", "kicker": "Làm ngược điều được dạy", "from": {"label": "Nắm quyền", "icon": "key"}, "to": {"label": "Trao quyền cho cả tàu", "icon": "people", "cue": "ông trao"}, "cue": "thay vì"},
+    {"type": "icon", "icon": "fork", "kicker": "Leader-leader", "line": "Ai cũng là người ra quyết định.", "cue": "marquet gọi"}
    ]},
    "sources": ["marquet2012", "marquet_site", "penguin"]
   },
@@ -162,9 +153,9 @@
    "id": "b09", "act": "principle",
    "narration": "Bài học thứ nhất: nói tôi dự định. Sĩ quan trên Santa Fe dần thôi xin lệnh. Họ báo: thưa thuyền trưởng, tôi dự định làm việc này. Marquet hỏi thêm vài câu, rồi đáp: rất tốt. Câu nói nhỏ ấy buộc người nói phải nghĩ như người chịu trách nhiệm.",
    "visual": {"type": "shots", "shots": [
-    {"type": "swap", "kicker": "Bài học 1 · Nói “tôi dự định”", "from": {"label": "“Xin lệnh…?”", "icon": "clock"}, "to": {"label": "“Tôi dự định…”", "icon": "bulb", "cue": "họ báo"}, "cue": "sĩ quan"},
+    {"type": "swap", "kicker": "Bài học 1 · Nói “tôi dự định”", "from": {"label": "“Xin lệnh…?”", "icon": "hourglass"}, "to": {"label": "“Tôi dự định…”", "icon": "bulb", "cue": "họ báo"}, "cue": "sĩ quan"},
     {"type": "statement", "kicker": "Thuyền trưởng đáp", "text": "“Rất tốt.”", "highlight": ["tốt.”"], "cue": "marquet hỏi"},
-    {"type": "icon", "icon": "target", "line": "Nghĩ như người chịu trách nhiệm", "cue": "câu nói"}
+    {"type": "icon", "icon": "submarine", "line": "Nghĩ như người chịu trách nhiệm", "kicker": "Câu nói nhỏ ấy buộc họ", "cue": "câu nói"}
    ]},
    "sources": ["marquet2012", "svn", "nachos"]
   },
@@ -173,10 +164,7 @@
    "narration": "Nhưng trao quyền cho người chưa hiểu việc thì nguy hiểm. Bài học thứ hai: quyền đi cùng năng lực. Thủy thủ Santa Fe học kỹ hơn, và trước mỗi thao tác quan trọng, họ dừng một nhịp, nói to và chỉ tay vào việc mình sắp làm, để kịp bắt lỗi.",
    "visual": {"type": "shots", "shots": [
     {"type": "icon", "icon": "scale", "kicker": "Bài học 2", "line": "Quyền đi cùng năng lực", "line_cue": "bài học"},
-    {"type": "trio", "kicker": "Hành động có chủ đích", "items": [
-     {"icon": "book", "label": "Học kỹ hơn", "cue": "học kỹ"},
-     {"icon": "clock", "label": "Dừng một nhịp", "cue": "dừng"},
-     {"icon": "target", "label": "Nói to, chỉ tay", "cue": "nói to"}], "cue": "thủy thủ"}
+    {"type": "trio", "kicker": "Hành động có chủ đích", "items": [{"icon": "book", "label": "Học kỹ hơn", "cue": "học kỹ"}, {"icon": "clock", "label": "Dừng một nhịp", "cue": "dừng"}, {"icon": "target", "label": "Nói to, chỉ tay", "cue": "nói to"}, {"icon": "magnifier", "label": "Kịp bắt lỗi", "cue": "bắt lỗi"}], "cue": "thủy thủ"}
    ]},
    "sources": ["marquet2012", "deliberate", "nachos"]
   },
@@ -185,7 +173,7 @@
    "narration": "Bài học thứ ba: ai cũng biết vì sao. Khi mọi người hiểu con tàu đang hướng tới đâu, họ không cần chờ lệnh để làm đúng. Marquet đổi mục tiêu của cả tàu, từ tránh sai sót sang làm thật xuất sắc.",
    "visual": {"type": "shots", "shots": [
     {"type": "icon", "icon": "compass", "kicker": "Bài học 3", "line": "Ai cũng biết vì sao", "line_cue": "ai cũng"},
-    {"type": "swap", "kicker": "Mục tiêu của cả tàu", "from": {"label": "Tránh sai sót", "icon": "shield"}, "to": {"label": "Làm thật xuất sắc", "icon": "star", "cue": "sang làm"}, "cue": "marquet đổi"}
+    {"type": "swap", "kicker": "Mục tiêu của cả tàu", "from": {"label": "Tránh sai sót", "icon": "shield"}, "to": {"label": "Làm thật xuất sắc", "icon": "mountain", "cue": "sang làm"}, "cue": "marquet đổi"}
    ]},
    "sources": ["marquet2012", "supersummary", "nsl2004"]
   },
@@ -193,11 +181,9 @@
    "id": "b12", "act": "story",
    "narration": "Và con tàu xoay chuyển thật. Năm hai nghìn, Santa Fe nhận cúp Arleigh Burke, trao cho tàu tiến bộ nhiều nhất trong năm ở hạm đội Thái Bình Dương. Số người ký tiếp tăng lên hơn ba mươi. Và khoảng mười người từng phục vụ trên tàu sau này trở thành thuyền trưởng tàu ngầm.",
    "visual": {"type": "shots", "shots": [
-    {"type": "trio", "kicker": "Năm 2000", "items": [
-     {"icon": "star", "label": "Cúp Arleigh Burke", "cue": "cúp"},
-     {"icon": "rocket", "label": "Tiến bộ nhất · Thái Bình Dương", "cue": "tiến bộ"}]},
-    {"type": "stat", "from": 3, "value": 30, "prefix": "> ", "label": "người ký tiếp hợp đồng", "note": "từ 3 người năm trước đó", "cue": "số người"},
-    {"type": "statement", "kicker": "Theo các nguồn", "text": "~10 người sau này làm thuyền trưởng.", "highlight": ["thuyền trưởng."], "cue": "và khoảng"}
+    {"type": "trio", "kicker": "Năm 2000", "items": [{"icon": "star", "label": "Cúp Arleigh Burke", "cue": "cúp"}, {"icon": "rocket", "label": "Tiến bộ nhất · Thái Bình Dương", "cue": "tiến bộ"}]},
+    {"type": "icon", "icon": "sprout", "kicker": "Người ký tiếp hợp đồng", "cue": "số người", "line": "Từ 3 người lên hơn 30.", "motion": "grow"},
+    {"type": "trio", "kicker": "Theo các nguồn", "cue": "và khoảng", "items": [{"icon": "people", "label": "~10 người từng phục vụ trên tàu", "cue": "từng phục"}, {"icon": "submarine", "label": "Sau này: thuyền trưởng tàu ngầm", "cue": "trở thành"}]}
    ]},
    "sources": ["burke", "bizobs", "supersummary", "wiki_marquet", "actiac", "penguin"],
    "certainty": "estimate"
@@ -206,11 +192,9 @@
    "id": "b13", "act": "complication",
    "narration": "Nhưng hãy đọc cuốn sách này thật tỉnh táo. Phần lớn câu chuyện là lời kể của chính Marquet, và vài con số mình chưa kiểm chứng được độc lập: có nơi ghi ba mươi ba, có nơi ghi ba mươi sáu người ký tiếp. Có người đọc còn thấy cách làm trên tàu ngầm không phải lúc nào cũng hợp với văn phòng.",
    "visual": {"type": "shots", "shots": [
-    {"type": "statement", "kicker": "Đọc tỉnh táo", "text": "Lời kể của chính tác giả.", "highlight": ["chính tác giả."]},
+    {"type": "icon", "icon": "magnifier", "kicker": "Đọc tỉnh táo", "line": "Phần lớn là lời kể của chính tác giả.", "line_cue": "phần lớn"},
     {"type": "compare", "title": "Người ký tiếp: bao nhiêu?", "left": {"title": "Có nơi ghi", "items": ["33 người"]}, "right": {"title": "Có nơi ghi", "items": ["36 người"]}, "cue": "vài con"},
-    {"type": "trio", "kicker": "Tàu ngầm ≠ văn phòng?", "items": [
-     {"icon": "compass", "label": "Tàu ngầm", "cue": "tàu ngầm"},
-     {"icon": "store", "label": "Văn phòng", "cue": "văn phòng"}], "line": "Không phải lúc nào cũng hợp.", "line_cue": "không phải", "cue": "có người"}
+    {"type": "trio", "kicker": "Tàu ngầm ≠ văn phòng?", "items": [{"icon": "submarine", "label": "Tàu ngầm", "cue": "tàu ngầm"}, {"icon": "store", "label": "Văn phòng", "cue": "văn phòng"}], "line": "Không phải lúc nào cũng hợp.", "line_cue": "không phải", "cue": "có người"}
    ]},
    "sources": ["bizobs", "supersummary", "shkspr"],
    "certainty": "disputed"
@@ -219,11 +203,8 @@
    "id": "b14", "act": "turn",
    "narration": "Và một hiểu lầm phổ biến: trao quyền là buông tay. Marquet không bỏ trách nhiệm thuyền trưởng. Ông trao quyền đến đâu, thì việc học và sự minh bạch phải theo đến đó. Kiểm soát, năng lực, rõ ràng. Thiếu một, cả ba đều lung lay.",
    "visual": {"type": "shots", "shots": [
-    {"type": "statement", "kicker": "Một hiểu lầm", "text": "Trao quyền là buông tay.", "strike": "là buông tay.", "replace": "cần nền móng", "strike_cue": "marquet không"},
-    {"type": "venn", "kicker": "Ba trụ của Marquet", "circles": [
-     {"label": "Kiểm soát", "cue": "kiểm soát"},
-     {"label": "Năng lực", "cue": "năng lực"},
-     {"label": "Rõ ràng", "cue": "rõ ràng"}], "center_label": "Leader-leader", "center_cue": "thiếu một", "cue": "kiểm soát"}
+    {"type": "swap", "kicker": "Một hiểu lầm phổ biến", "cue": "marquet không", "from": {"label": "Trao quyền = buông tay", "icon": "door"}, "to": {"label": "Vẫn giữ trách nhiệm thuyền trưởng", "icon": "anchor", "cue": "trách nhiệm"}, "line": "Trao đến đâu, học và minh bạch theo đến đó.", "line_cue": "ông trao"},
+    {"type": "venn", "kicker": "Ba trụ của Marquet", "circles": [{"label": "Kiểm soát", "cue": "kiểm soát"}, {"label": "Năng lực", "cue": "năng lực"}, {"label": "Rõ ràng", "cue": "rõ ràng"}], "center_label": "Leader-leader", "center_cue": "thiếu một", "cue": "kiểm soát"}
    ]},
    "sources": ["marquet2012", "nachos", "svn"]
   },
@@ -249,7 +230,7 @@
    "narration": "Vì ông bảo tôi làm vậy. Câu ấy từng là tiếng nói của một con tàu chỉ biết làm theo. Marquet đổi nó thành một câu khác: tôi dự định. Vậy hôm nay, ai trong nhóm bạn vẫn đang chờ lệnh?",
    "visual": {"type": "shots", "shots": [
     {"type": "statement", "kicker": "Từ câu này…", "text": "“Vì ông bảo tôi làm vậy.”", "strike": "“Vì ông bảo tôi làm vậy.”", "replace": "“Tôi dự định…”", "strike_cue": "marquet đổi"},
-    {"type": "icon", "icon": "tea", "steam": true, "line": "Ai đang chờ lệnh?", "cue": "vậy hôm"}
+    {"type": "icon", "icon": "hourglass", "kicker": "Hôm nay", "line": "Ai trong nhóm bạn vẫn đang chờ lệnh?", "cue": "vậy hôm"}
    ]},
    "sources": ["marquet2012"]
   },
