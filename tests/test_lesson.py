@@ -309,5 +309,5 @@ def test_gate_vietnamese_false_positives():
     assert g.NAME_RE.findall("Chuỗi Walgreens và Kimberly-Clark.") == ["Walgreens", "Kimberly-Clark"]
     assert g._name_heard("Kimberly-Clark", "công ty Kimberly Clark")
     assert not g._name_heard("Walgreens", "một cửa hàng thuốc")
-    L = {"meta": {"lang": "vi"}, "beats": [{"id": "b1", "narration": "Mãi mãi, năm năm. Là là sai.", "visual": {"type": "statement", "text": "x"}}]}
+    L = {"meta": {"lang": "vi"}, "beats": [{"id": "b1", "narration": "Mãi mãi, năm năm, đó là là sai.", "visual": {"type": "statement", "text": "x"}}]}
     assert [x for x in g.copy_lint(L) if "doubled" in x] == ["b1: doubled word 'là là'"]
