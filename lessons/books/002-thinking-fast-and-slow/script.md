@@ -1,5 +1,5 @@
 # Tư Duy Nhanh Và Chậm
-_Review sách · Tập 2 · 896 words · ~3.85 min · 4:3_
+_Review sách · Tập 2 · 851 words · ~3.66 min · 4:3_
 
 ## Learning goals
 - Giải được câu đố cây gậy và quả bóng, và giải thích vì sao câu trả lời mười xu bật ra trước
@@ -19,7 +19,6 @@ _Review sách · Tập 2 · 896 words · ~3.85 min · 4:3_
 | t0 | context |  | title: Tư Duy Nhanh Và Chậm |
 | b01 | misconception | Chúng ta hay nghĩ sai lầm đến từ thiếu hiểu biết. Người càng thông minh thì càng ít bị lừa. Vậy mà với câu đố này, con số bật ra trong đầu hầu hết mọi người là mười xu. Và nó sai. | shots: shots |
 | b02 | context | Câu đố ấy nằm trong cuốn sách năm hai nghìn mười một của Daniel Kahneman. Một nhà tâm lý học, nhưng lại nhận giải Nobel kinh tế năm hai nghìn lẻ hai, cho nghiên cứu làm cùng người bạn Amos Tversky. | shots: shots |
-| b03 | context | Tversky mất năm một nghìn chín trăm chín mươi sáu, nên không thể cùng nhận giải. Còn Kahneman ra đi vào tháng ba năm hai nghìn hai mươi tư, ở tuổi chín mươi. | shots: shots |
 | b04 | story | Quay lại câu đố. Nếu bóng giá mười xu, gậy sẽ giá một đô la mười, cộng lại thành một đô la hai mươi. Đáp án đúng là năm xu. Chỉ cần vài giây kiểm tra, nhưng phần lớn chúng ta bỏ qua. | shots: shots |
 | b05 | story | Kahneman kể rằng hơn năm mươi phần trăm sinh viên ở Harvard, MIT và Princeton đưa ra câu trả lời trực giác ấy. Ở những trường ít chọn lọc hơn, tỉ lệ không chịu kiểm tra còn vượt quá tám mươi phần trăm. | shots: shots |
 | b06 | story | Kahneman đặt tên cho hai nhân vật. Hệ thống một: nhanh, tự động, không tốn sức, như khi bạn đọc chữ trên một tấm biển quảng cáo. Hệ thống hai: chậm và tốn sức, như khi bạn nhân mười bảy với hai mươi tư. | shots: shots |
@@ -35,7 +34,7 @@ _Review sách · Tập 2 · 896 words · ~3.85 min · 4:3_
 | b16 | question | Giờ thử một chút nhé. Bạn đi xem một căn hộ. Người môi giới mở lời ngay: chủ nhà muốn bốn tỷ. Trước khi trả giá, bạn nên làm gì? | question: Môi giới mở lời: “Chủ nhà muốn 4 tỷ.” Bạn nên làm gì trước? |
 | b17 | recap | Vậy là ba bài học từ Tư Duy Nhanh Và Chậm. Chậm lại trước quyết định lớn. Cảnh giác con số đầu tiên. Và nhìn cả ván bài. | list: Ba bài học |
 | b18 | close | Quay lại quả bóng năm xu. Câu đố ấy không đo bạn thông minh đến đâu. Nó đo một khoảnh khắc: lúc bạn chịu dừng lại để hỏi, câu trả lời này từ đâu ra? Lần tới, khi một ý nghĩ bật ra quá nhanh, hãy mời hệ thống hai vào phòng. | shots: shots |
-| b19 | close | Còn bạn, thiên kiến nào từng đánh lừa bạn nhiều nhất? Và bạn muốn mình review cuốn sách nào tiếp theo? Để lại bình luận cho mình nhé. Nếu thấy hay, lưu lại và gửi cho một người bạn. Hẹn gặp bạn. | end: Tư Duy Nhanh Và Chậm |
+| b19 | close | Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau. | end: Tư Duy Nhanh Và Chậm |
 
 ## Sources
 - [kahneman2011] Daniel Kahneman, Thinking, Fast and Slow, Farrar, Straus and Giroux, Oct 2011 (Introduction; ch. 1 'The Characters of the Story' — 17 × 24, billboards, 'fictitious characters'; ch. 3 'The Lazy Controller' — bat and ball, >50% Harvard/MIT/Princeton, >80% less selective universities; ch. 11 'Anchors'; ch. 26 'Prospect Theory' — coin toss −$100/+$150, loss aversion ratio 1.5–2.5; ch. 31 'Risk Policies' — broad framing)

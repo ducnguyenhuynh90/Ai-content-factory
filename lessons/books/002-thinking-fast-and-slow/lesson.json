@@ -28,7 +28,37 @@
   "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
   "captions": true,
   "voice_seed": 99,
-  "pronounce_note": "English names stay in English: OmniVoice reads them natively. Measured with Whisper on 12 names: Vietnamese respellings scored 0.76, original spelling 0.95."
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively. Measured with Whisper on 12 names: Vietnamese respellings scored 0.76, original spelling 0.95.",
+  "brief": {
+   "target_viewer": "Người Việt 20–40 tuổi, tò mò, thích đọc sách, mới bắt đầu quan tâm đến tiền bạc và đầu tư; có thể đã nghe tên Tư Duy Nhanh Và Chậm nhưng chưa đọc; muốn hiểu vì sao người thông minh vẫn quyết định sai và làm gì với điều đó (giả định của người gác cổng, chủ kênh xác nhận lại)",
+   "format": "Phân tích sách (book analysis), 4–5 phút, 4:3, minh họa icon vẽ tay, một giọng đọc",
+   "central_question": "Vì sao người thông minh vẫn trả lời sai một câu đố dễ, và làm sao bớt bị trực giác đánh lừa trong những quyết định về giá cả, lương và tiền bạc?",
+   "transformation": "Trước khi xem, họ nghĩ sai lầm đến từ thiếu hiểu biết. Sau khi xem, họ giải được câu đố cây gậy và quả bóng, phân biệt Hệ thống 1 và 2 (và biết đó là nhân vật hư cấu, không phải vùng não), nhận ra hiệu ứng mỏ neo và né tránh mất mát trong một quyết định của mình, và biết chương nào của sách đã lung lay (hiệu ứng mồi).",
+   "discovery_goal": "Tìm kiếm (\"Tư Duy Nhanh Và Chậm tóm tắt\", \"Thinking Fast and Slow review\", \"câu đố cây gậy quả bóng\") và đề xuất từ video sách/tư duy; khán giả của tập 1",
+   "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn clip tiếp theo về cuốn sách nào?\" (lựa chọn của chủ kênh)",
+   "share_recipient": "Một người bạn sắp trả giá một món lớn (thuê/mua nhà, xe) hoặc sắp deal lương: đoạn mỏ neo và câu hỏi căn hộ bốn tỷ nói đúng tình huống của họ",
+   "evidence": "Kahneman 2011 (sách: ch.1, 3, 4, 11, 26, 31); Frederick 2005 (JEP, câu đố gậy và bóng); Tversky & Kahneman 1974 (Science, vòng quay 10/65, trung vị 25%/45%); NobelPrize.org 2002; Princeton và AP 2024 (cáo phó); Schimmack, Heene & Kesavan 2017 và trả lời của Kahneman (priming); Mind Hacks 2017. Xem gate/claims.md.",
+   "constraints": "4–5 phút, 4:3, icon vẽ (không footage, không khuôn mặt người thật), một giọng đọc OmniVoice seed 99 speed 0.88, tên tiếng Anh giữ nguyên chính tả, số đọc bằng chữ, không khuyến nghị đầu tư"
+  },
+  "youtube": {
+   "title": "Tư Duy Nhanh Và Chậm: vì sao người giỏi vẫn bị trực giác lừa?",
+   "thumbnail_text": "Gậy + bóng = 1,10 đô. Bóng giá bao nhiêu?",
+   "description": "Một cây gậy và một quả bóng giá 1,10 đô, và hơn nửa sinh viên Harvard, MIT, Princeton trả lời sai. Từ câu đố ấy, video đi qua Tư Duy Nhanh Và Chậm của Daniel Kahneman: Hệ thống 1 và Hệ thống 2, ba bài học (chậm lại trước quyết định lớn, cảnh giác con số đầu tiên, nhìn cả ván bài), chương sách đã lung lay (hiệu ứng mồi) và một hiểu lầm phổ biến về hai hệ thống.\n\nĐây là tóm tắt và cảm nhận cá nhân, không phải khuyến nghị đầu tư. Số liệu theo sách, đã làm tròn.\n\nChương:\n0:00 Câu đố cây gậy và quả bóng\n0:23 Điều ta hay tin về sai lầm\n0:35 Daniel Kahneman và cuốn sách\n0:49 Đáp án, và bao nhiêu người bỏ qua\n1:15 Hệ thống 1 và Hệ thống 2\n1:41 Bài học 1: chậm lại trước quyết định lớn\n1:56 Bài học 2: hiệu ứng mỏ neo\n2:39 Bài học 3: né tránh mất mát\n3:10 Chương sách đã lung lay: hiệu ứng mồi\n3:27 Hiểu lầm: hai hệ thống không phải hai vùng não\n3:42 Thử một chút: căn hộ bốn tỷ\n4:01 Ba bài học và câu hỏi cho bạn\n\nNguồn:\n- Daniel Kahneman, Thinking, Fast and Slow, Farrar, Straus and Giroux, 2011 (ch. 1, 3, 4, 11, 26, 31); bản tiếng Việt Tư Duy Nhanh Và Chậm, Alpha Books\n- Shane Frederick, \"Cognitive Reflection and Decision Making\", Journal of Economic Perspectives, 2005: https://www.aeaweb.org/articles?id=10.1257/089533005775196732\n- Amos Tversky & Daniel Kahneman, \"Judgment under Uncertainty: Heuristics and Biases\", Science, 1974: https://www.science.org/doi/10.1126/science.185.4157.1124\n- NobelPrize.org, Kinh tế 2002: https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/facts/\n- Princeton University, 28/03/2024: https://www.princeton.edu/news/2024/03/28/daniel-kahneman-pioneering-behavioral-psychologist-nobel-laureate-and-giant-field\n- Schimmack, Heene & Kesavan, Replicability-Index, 2017 (và trả lời của Kahneman): https://replicationindex.com/2017/02/02/reconstruction-of-a-train-wreck-how-priming-research-went-of-the-rails/\n- Mind Hacks, 2017: https://mindhacks.com/2017/02/16/how-replicable-are-the-social-priming-studies-in-thinking-fast-and-slow/\n\nBạn muốn clip tiếp theo về cuốn sách nào? Để lại bình luận nhé.",
+   "tags": [
+    "Tư Duy Nhanh Và Chậm",
+    "Thinking, Fast and Slow",
+    "Daniel Kahneman",
+    "review sách",
+    "tóm tắt sách",
+    "câu đố cây gậy và quả bóng",
+    "hệ thống 1 hệ thống 2",
+    "hiệu ứng mỏ neo",
+    "né tránh mất mát",
+    "thiên kiến nhận thức",
+    "tâm lý học hành vi",
+    "tư duy phản biện"
+   ]
+  }
  },
  "sources": [
   {
@@ -154,7 +184,7 @@
      {
       "type": "trio",
       "kicker": "Hai nhân vật trong đầu",
-      "cue": "vài phút",
+      "cue": "bạn sẽ gặp",
       "items": [
        {
         "icon": "lightning",
@@ -290,49 +320,6 @@
    ]
   },
   {
-   "id": "b03",
-   "act": "context",
-   "narration": "Tversky mất năm một nghìn chín trăm chín mươi sáu, nên không thể cùng nhận giải. Còn Kahneman ra đi vào tháng ba năm hai nghìn hai mươi tư, ở tuổi chín mươi.",
-   "visual": {
-    "type": "shots",
-    "shots": [
-     {
-      "type": "portrait",
-      "name": "Amos Tversky",
-      "initials": "AT",
-      "role": "Người bạn · cộng sự",
-      "years": "mất 1996"
-     },
-     {
-      "type": "timeline",
-      "title": "Kahneman & Tversky",
-      "events": [
-       {
-        "year": "1996",
-        "text": "Amos Tversky qua đời"
-       },
-       {
-        "year": "2002",
-        "text": "Nobel kinh tế cho Kahneman",
-        "cue": "nhận giải"
-       },
-       {
-        "year": "2024",
-        "text": "Kahneman mất, 90 tuổi",
-        "cue": "tháng ba"
-       }
-      ],
-      "cue": "nên không"
-     }
-    ]
-   },
-   "sources": [
-    "princeton2024",
-    "ap2024",
-    "nobel2002"
-   ]
-  },
-  {
    "id": "b04",
    "act": "story",
    "narration": "Quay lại câu đố. Nếu bóng giá mười xu, gậy sẽ giá một đô la mười, cộng lại thành một đô la hai mươi. Đáp án đúng là năm xu. Chỉ cần vài giây kiểm tra, nhưng phần lớn chúng ta bỏ qua.",
@@ -386,18 +373,19 @@
     "type": "shots",
     "shots": [
      {
-      "type": "icon",
-      "icon": "pie",
-      "kicker": "Harvard · MIT · Princeton",
-      "line": "> 50% trả lời theo trực giác",
-      "line_cue": "hơn năm"
+      "type": "stat",
+      "value": 50,
+      "prefix": "> ",
+      "suffix": "%",
+      "label": "Harvard · MIT · Princeton",
+      "note": "trả lời theo trực giác: 10 xu"
      },
      {
       "type": "funnel",
       "total": 100,
       "start_full": true,
       "keep": 20,
-      "keep_cue": "tám mươi",
+      "keep_cue": "không chịu",
       "label": "Trường ít chọn lọc · > 80% bỏ qua",
       "keep_label": "< 20% chịu kiểm tra",
       "cue": "ở những"
@@ -507,7 +495,7 @@
       "to": {
        "label": "Vì nó đến quá dễ",
        "icon": "lightning",
-       "cue": "quá dễ"
+       "cue": "mà vì"
       }
      },
      {
@@ -516,7 +504,7 @@
       "kicker": "Trước quyết định quan trọng",
       "line": "Mình đã kiểm tra chưa?",
       "line_cue": "mình đã",
-      "cue": "khi một"
+      "cue": "định quan"
      }
     ]
    },
@@ -544,8 +532,8 @@
       "type": "icon",
       "icon": "pie",
       "kicker": "Rồi họ hỏi",
-      "line": "Châu Phi chiếm bao nhiêu % Liên Hợp Quốc?",
-      "line_cue": "các nước",
+      "line": "Bao nhiêu % thành viên Liên Hợp Quốc là nước châu Phi?",
+      "line_cue": "họ hỏi",
       "cue": "rồi họ"
      }
     ]
@@ -871,17 +859,17 @@
        {
         "icon": "lightning",
         "label": "Ý nghĩ bật ra quá nhanh",
-        "cue": "bật ra"
+        "cue": "khi một"
        },
        {
         "icon": "door",
         "label": "Mở cửa",
-        "cue": "hãy mời"
+        "cue": "quá nhanh"
        },
        {
         "icon": "turtle",
         "label": "Mời Hệ thống 2 vào phòng",
-        "cue": "hệ thống hai"
+        "cue": "hãy mời"
        }
       ]
      }
@@ -894,19 +882,17 @@
   {
    "id": "b19",
    "act": "close",
-   "narration": "Còn bạn, thiên kiến nào từng đánh lừa bạn nhiều nhất? Và bạn muốn mình review cuốn sách nào tiếp theo? Để lại bình luận cho mình nhé. Nếu thấy hay, lưu lại và gửi cho một người bạn. Hẹn gặp bạn.",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
    "visual": {
     "type": "end",
     "kicker": "Review sách · Tập 2",
     "title": "Tư Duy Nhanh Và Chậm",
-    "ask": "Thiên kiến nào từng đánh lừa bạn nhiều nhất?",
-    "ask_hint": "Mỏ neo · Sợ mất · Cuốn sách bạn muốn xem tiếp",
+    "ask": "Bạn muốn clip tiếp theo về cuốn sách nào?",
+    "ask_hint": "Một cuốn sách · một nhà đầu tư · một câu hỏi về tư duy",
     "ask_cue": "còn bạn",
-    "cta": "Bình luận · Lưu lại · Gửi một người bạn",
-    "cta_cue": "nếu thấy",
-    "sources_line": "Nguồn: Kahneman, Thinking, Fast and Slow (2011) · Tversky & Kahneman, Science (1974) · Frederick (2005) · Replicability-Index (2017)",
+    "sources_line": "Nguồn: Kahneman, Thinking, Fast and Slow (2011) · Tversky & Kahneman (1974) · Frederick (2005) · chi tiết trong mô tả",
     "disclaimer": "Tóm tắt và cảm nhận cá nhân; số liệu theo sách, đã làm tròn.",
-    "sources_cue": "hẹn gặp"
+    "sources_cue": "còn bạn"
    }
   }
  ],
