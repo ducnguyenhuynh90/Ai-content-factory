@@ -163,12 +163,11 @@
     "type": "shots",
     "shots": [
      {
-      "type": "statement",
+      "type": "icon",
+      "icon": "mirror",
       "kicker": "Một câu hỏi",
-      "text": "Kết quả xấu = chọn sai?",
-      "highlight": [
-       "chọn sai?"
-      ]
+      "line": "Tự trách vì một kết quả xấu?",
+      "line_cue": "tự trách"
      },
      {
       "type": "icon",
@@ -180,19 +179,24 @@
      {
       "type": "trio",
       "kicker": "Trong vài phút tới",
+      "cue": "trong vài",
       "items": [
        {
-        "icon": "dice",
-        "label": "Một ván cược",
-        "cue": "vì sao"
+        "icon": "target",
+        "label": "Kết quả tệ",
+        "cue": "kết quả tệ"
        },
        {
-        "icon": "bulb",
-        "label": "Ba bài học",
+        "icon": "fork",
+        "label": "Chưa chắc là chọn sai",
+        "cue": "chưa chắc"
+       },
+       {
+        "icon": "cards",
+        "label": "Ba bài học từ poker",
         "cue": "ba bài"
        }
-      ],
-      "cue": "trong vài"
+      ]
      }
     ]
    }
@@ -227,28 +231,22 @@
     "type": "shots",
     "shots": [
      {
-      "type": "trio",
-      "kicker": "Điều ta hay tin",
-      "items": [
-       {
-        "icon": "star",
-        "label": "Thắng → chọn giỏi",
-        "cue": "thắng"
-       },
-       {
-        "icon": "dice",
-        "label": "Thua → chọn dở",
-        "cue": "thua"
-       }
-      ]
+      "type": "icon",
+      "icon": "scale",
+      "motion": "swing",
+      "period": 2.6,
+      "kicker": "Chấm điểm bằng kết quả",
+      "line": "Thắng → chọn giỏi. Thua → chọn dở.",
+      "line_cue": "thắng"
      },
      {
-      "type": "statement",
-      "kicker": "Điều ta hay tin",
-      "text": "Kết quả tốt = quyết định tốt.",
-      "strike": "= quyết định tốt.",
-      "replace": "≠ quyết định tốt",
-      "strike_cue": "nhưng",
+      "type": "icon",
+      "icon": "mirror",
+      "motion": "crack",
+      "motion_cue": "học sai",
+      "kicker": "Nghe rất hợp lý…",
+      "line": "…nhưng ta học sai bài học.",
+      "line_cue": "nhưng",
       "cue": "nghe rất"
      }
     ]
@@ -262,11 +260,18 @@
     "type": "shots",
     "shots": [
      {
-      "type": "portrait",
-      "name": "Annie Duke",
-      "initials": "AD",
-      "role": "Tâm lý học nhận thức · Poker",
-      "years": "Vòng vàng WSOP · 2004"
+      "type": "swap",
+      "kicker": "Annie Duke",
+      "from": {
+       "label": "Tâm lý học nhận thức",
+       "icon": "brain"
+      },
+      "to": {
+       "label": "Poker chuyên nghiệp",
+       "icon": "cards",
+       "cue": "poker"
+      },
+      "cue": "rẽ sang"
      },
      {
       "type": "book",
@@ -274,12 +279,12 @@
       "author": "Annie Duke",
       "year": "2018",
       "kicker": "Cuốn sách",
-      "cue": "năm hai nghìn mười",
+      "cue": "năm hai nghìn lẻ",
       "facts": [
        {
         "big": "2004",
         "text": "Vòng vàng WSOP đầu tiên",
-        "cue": "năm hai nghìn mười"
+        "cue": "năm hai nghìn lẻ"
        },
        {
         "big": "2018",
@@ -303,19 +308,18 @@
     "type": "shots",
     "shots": [
      {
-      "type": "statement",
-      "kicker": "Super Bowl XLIX · 2015",
-      "text": "Patriots 28 · Seahawks 24",
-      "highlight": [
-       "24"
-      ]
+      "type": "stat",
+      "value": 4,
+      "prefix": "−",
+      "suffix": " điểm",
+      "label": "Seahawks · Super Bowl XLIX (2015)",
+      "note": "Patriots 28 · Seahawks 24"
      },
      {
-      "type": "stat",
-      "value": 26,
-      "suffix": " giây",
-      "label": "còn lại trên đồng hồ",
-      "note": "Seattle có lượt tấn công thứ hai",
+      "type": "icon",
+      "icon": "hourglass",
+      "kicker": "Đồng hồ",
+      "line": "Còn 26 giây.",
       "cue": "còn hai"
      },
      {
@@ -341,17 +345,26 @@
     "shots": [
      {
       "type": "swap",
-      "kicker": "Điều ai cũng chờ",
+      "kicker": "Còn 1 yard",
       "from": {
-       "label": "Chạy bóng · Lynch",
+       "label": "Ai cũng chờ: chạy bóng",
        "icon": "people"
       },
       "to": {
-       "label": "Chuyền bóng",
-       "icon": "lightning",
-       "cue": "cho chuyền"
+       "label": "Carroll: cho chuyền",
+       "icon": "fork"
       },
       "cue": "nhưng"
+     },
+     {
+      "type": "icon",
+      "icon": "lightning",
+      "motion": "shake",
+      "motion_cue": "cắt được",
+      "kicker": "Malcolm Butler",
+      "line": "Cắt bóng. Patriots vô địch.",
+      "line_cue": "cắt được",
+      "cue": "malcolm"
      },
      {
       "type": "halo",
@@ -366,7 +379,7 @@
       ],
       "label": "Phán xét theo kết quả",
       "label_cue": "lịch sử",
-      "cue": "malcolm"
+      "cue": "và báo"
      }
     ]
    },
@@ -389,12 +402,17 @@
       "by": "Pete Carroll, 2015 (lược dịch)"
      },
      {
-      "type": "statement",
-      "kicker": "Để ý nhé",
-      "text": "Kết quả, không phải quyết định.",
-      "highlight": [
-       "Kết quả,"
-      ],
+      "type": "swap",
+      "kicker": "Để ý nhé · ông nói…",
+      "from": {
+       "label": "Quyết định",
+       "icon": "fork"
+      },
+      "to": {
+       "label": "Kết quả",
+       "icon": "target",
+       "cue": "ông nói"
+      },
       "cue": "để ý"
      }
     ]
@@ -419,17 +437,20 @@
       "cue": "sáu mươi"
      },
      {
-      "type": "statement",
-      "kicker": "15 mùa trước đó",
-      "text": "Chỉ khoảng 2% bị cắt.",
-      "highlight": [
-       "2%"
-      ],
+      "type": "funnel",
+      "total": 100,
+      "keep": 2,
+      "cols": 20,
+      "start_full": true,
+      "label": "15 mùa trước · 100 đường chuyền",
+      "keep_label": "≈ 2% bị cắt",
+      "keep_cue": "tỷ lệ",
       "cue": "mười lăm"
      },
      {
       "type": "trio",
       "kicker": "Nếu chuyền hỏng",
+      "cue": "và một",
       "items": [
        {
         "icon": "clock",
@@ -437,12 +458,11 @@
         "cue": "dừng"
        },
        {
-        "icon": "people",
-        "label": "Thêm lượt chạy bóng",
+        "icon": "door",
+        "label": "Thêm một lượt chạy bóng",
         "cue": "thêm"
        }
-      ],
-      "cue": "và một"
+      ]
      }
     ]
    },
@@ -462,25 +482,35 @@
     "shots": [
      {
       "type": "icon",
-      "icon": "scale",
+      "icon": "cards",
       "kicker": "Thuật ngữ của dân poker",
       "line": "Resulting",
       "line_cue": "resulting"
      },
      {
-      "type": "statement",
+      "type": "icon",
+      "icon": "scale",
+      "motion": "swing",
+      "period": 2.2,
       "kicker": "Resulting",
-      "text": "Chấm quyết định bằng kết quả.",
-      "highlight": [
-       "bằng kết quả."
-      ],
+      "line": "Chấm quyết định bằng kết quả",
       "cue": "tức là"
      },
      {
-      "type": "icon",
-      "icon": "dice",
-      "line": "Một ván cược. Lá bài rơi xấu.",
-      "cue": "ông chỉ"
+      "type": "swap",
+      "kicker": "Carroll không chọn được kết quả",
+      "from": {
+       "label": "Chọn kết quả",
+       "icon": "target"
+      },
+      "to": {
+       "label": "Chọn một ván cược",
+       "icon": "cards",
+       "cue": "ván cược"
+      },
+      "cue": "carroll",
+      "line": "Lá bài rơi xấu.",
+      "line_cue": "lá bài"
      }
     ]
    },
@@ -500,7 +530,7 @@
       "kicker": "Bài học 1 · Tách quyết định khỏi kết quả",
       "items": [
        {
-        "icon": "brain",
+        "icon": "fork",
         "label": "Chất lượng quyết định",
         "cue": "chất lượng"
        },
@@ -544,26 +574,32 @@
     "type": "shots",
     "shots": [
      {
-      "type": "statement",
-      "kicker": "Bài học 2 · Nghĩ bằng xác suất",
-      "text": "Chắc chắn đúng.",
-      "strike": "Chắc chắn",
-      "replace": "Khoảng 70%",
-      "strike_cue": "hãy nói"
+      "type": "icon",
+      "icon": "dice",
+      "kicker": "Bài học 2",
+      "line": "Nghĩ bằng xác suất",
+      "line_cue": "nghĩ bằng"
      },
      {
-      "type": "stat",
-      "value": 70,
-      "prefix": "≈ ",
-      "suffix": "%",
-      "label": "mức tin của mình",
-      "note": "con số ví dụ",
-      "cue": "bảy mươi"
+      "type": "swap",
+      "kicker": "Duke khuyên",
+      "from": {
+       "label": "Chắc chắn · Không thể",
+       "icon": "lock"
+      },
+      "to": {
+       "label": "Khoảng 70%",
+       "icon": "pie",
+       "cue": "bảy mươi"
+      },
+      "cue": "duke khuyên"
      },
      {
       "type": "icon",
-      "icon": "compass",
-      "line": "Chừa chỗ để học thêm.",
+      "icon": "door",
+      "kicker": "Con số ấy",
+      "line": "Có thể sai → mở cửa học thêm",
+      "line_cue": "mở cửa",
       "cue": "con số"
      }
     ]
@@ -587,18 +623,41 @@
       "line_cue": "cược"
      },
      {
-      "type": "statement",
-      "kicker": "Wanna bet?",
-      "text": "Nếu phải đặt tiền thật?",
-      "highlight": [
-       "tiền thật?"
-      ],
-      "cue": "câu hỏi"
+      "type": "swap",
+      "kicker": "Khi ai đó nói chắc nịch",
+      "from": {
+       "label": "Nói chắc nịch",
+       "icon": "mask"
+      },
+      "to": {
+       "label": "“Wanna bet?”",
+       "icon": "cards",
+       "cue": "wanna"
+      },
+      "cue": "khi ai"
      },
      {
       "type": "icon",
-      "icon": "target",
-      "line": "Tìm điều đúng, không phải thắng cãi.",
+      "icon": "scale",
+      "motion": "swing",
+      "period": 2.6,
+      "kicker": "Câu hỏi buộc ta dừng lại",
+      "line": "Đặt tiền thật, còn tự tin?",
+      "line_cue": "nếu phải",
+      "cue": "câu hỏi"
+     },
+     {
+      "type": "swap",
+      "kicker": "Không để thắng",
+      "from": {
+       "label": "Thắng tranh luận",
+       "icon": "star"
+      },
+      "to": {
+       "label": "Tìm ra điều đúng",
+       "icon": "magnifier",
+       "cue": "tìm ra"
+      },
       "cue": "không để"
      }
     ]
@@ -624,9 +683,14 @@
         "cue": "tìm vài"
        },
        {
-        "icon": "binoculars",
+        "icon": "magnifier",
         "label": "Soi quyết định",
         "cue": "soi quyết"
+       },
+       {
+        "icon": "brain",
+        "label": "Lúc đó biết gì?",
+        "cue": "lúc đó"
        },
        {
         "icon": "dice",
@@ -636,12 +700,17 @@
       ]
      },
      {
-      "type": "statement",
-      "kicker": "Vì sao cần bạn bè",
-      "text": "Thấy điều mình tự che mắt.",
-      "highlight": [
-       "tự che mắt."
-      ],
+      "type": "swap",
+      "kicker": "Một nhóm như thế",
+      "from": {
+       "label": "Tự che mắt",
+       "icon": "mask"
+      },
+      "to": {
+       "label": "Thấy rõ hơn",
+       "icon": "eye",
+       "cue": "thấy"
+      },
       "cue": "một nhóm"
      }
     ]
@@ -658,29 +727,48 @@
     "type": "shots",
     "shots": [
      {
-      "type": "compare",
-      "title": "Cái bẫy tự bào chữa",
-      "left": {
-       "title": "Khi thắng",
-       "items": [
-        "Nhờ mình giỏi"
-       ]
+      "type": "swap",
+      "kicker": "Nhưng cẩn thận",
+      "from": {
+       "label": "“Xui”",
+       "icon": "dice"
       },
-      "right": {
-       "title": "Khi thua",
-       "items": [
-        "Tại xui"
-       ]
-      }
+      "to": {
+       "label": "Cái cớ",
+       "icon": "mask",
+       "cue": "cái cớ"
+      },
+      "cue": "rất dễ"
      },
      {
-      "type": "statement",
-      "kicker": "Vẫn gây tranh cãi",
-      "text": "Chuyền: hợp lý. Chuyền kiểu nào?",
-      "highlight": [
-       "kiểu nào?"
-      ],
-      "cue": "còn trận"
+      "type": "icon",
+      "icon": "mirror",
+      "kicker": "Cái bẫy tự bào chữa",
+      "line": "Thắng: nhờ mình giỏi. Thua: tại xui.",
+      "line_cue": "nhận mình",
+      "cue": "ta hay"
+     },
+     {
+      "type": "trio",
+      "kicker": "Trận đấu vẫn gây tranh cãi",
+      "cue": "còn trận",
+      "items": [
+       {
+        "icon": "fork",
+        "label": "Chuyền: có thể hợp lý",
+        "cue": "chuyền có"
+       },
+       {
+        "icon": "magnifier",
+        "label": "Chuyền kiểu nào?",
+        "cue": "chuyền kiểu"
+       },
+       {
+        "icon": "people",
+        "label": "Vào chỗ đông người?",
+        "cue": "vào chỗ"
+       }
+      ]
      }
     ]
    },
@@ -699,18 +787,30 @@
     "type": "shots",
     "shots": [
      {
-      "type": "statement",
-      "kicker": "Vậy thì",
-      "text": "Mặc kệ kết quả?",
-      "strike": "Mặc kệ",
-      "replace": "Đọc kỹ",
-      "strike_cue": "không"
+      "type": "icon",
+      "icon": "wave",
+      "kicker": "Mặc kệ kết quả? Không.",
+      "line": "Vẫn là thông tin, nhưng có nhiễu",
+      "line_cue": "kết quả vẫn"
      },
      {
-      "type": "icon",
-      "icon": "binoculars",
-      "line": "Phần nào do mình? Phần nào do may?",
-      "cue": "hãy hỏi"
+      "type": "trio",
+      "kicker": "Hãy hỏi",
+      "cue": "hãy hỏi",
+      "items": [
+       {
+        "icon": "fork",
+        "label": "Phần do mình?",
+        "cue": "phần nào"
+       },
+       {
+        "icon": "dice",
+        "label": "Phần do may?",
+        "cue": "do may"
+       }
+      ],
+      "line": "Rồi mới rút bài học.",
+      "line_cue": "rồi mới"
      },
      {
       "type": "compare",
@@ -791,20 +891,36 @@
       "strike_cue": "có thể"
      },
      {
-      "type": "statement",
-      "kicker": "Duke viết",
-      "text": "Đời là ván bài, không phải ván cờ.",
-      "highlight": [
-       "ván bài,"
-      ],
-      "cue": "duke"
+      "type": "swap",
+      "kicker": "Duke viết: đời giống…",
+      "from": {
+       "label": "Ván cờ",
+       "icon": "chess"
+      },
+      "to": {
+       "label": "Ván bài",
+       "icon": "cards"
+      },
+      "cue": "duke",
+      "line": "Luôn có những lá ta không thấy.",
+      "line_cue": "luôn có"
      },
      {
-      "type": "icon",
-      "icon": "tea",
-      "steam": true,
-      "line": "Lá bài, hay cách mình chơi?",
-      "cue": "vậy lần"
+      "type": "trio",
+      "kicker": "Lần tới thua một ván",
+      "cue": "vậy lần",
+      "items": [
+       {
+        "icon": "cards",
+        "label": "Chấm lá bài?",
+        "cue": "lá bài"
+       },
+       {
+        "icon": "fork",
+        "label": "Hay cách mình chơi?",
+        "cue": "hay cách"
+       }
+      ]
      }
     ]
    },

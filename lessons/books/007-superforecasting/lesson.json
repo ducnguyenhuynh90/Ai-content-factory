@@ -183,12 +183,13 @@
     "type": "shots",
     "shots": [
      {
-      "type": "statement",
+      "type": "icon",
+      "icon": "target",
       "kicker": "Một câu đùa nổi tiếng",
-      "text": "Nổi tiếng, và bị hiểu sai.",
-      "highlight": [
-       "hiểu sai."
-      ]
+      "line": "…và bị hiểu sai.",
+      "line_cue": "hiểu sai",
+      "motion": "shake",
+      "motion_cue": "hiểu sai"
      },
      {
       "type": "icon",
@@ -200,6 +201,7 @@
      {
       "type": "trio",
       "kicker": "Trong vài phút tới",
+      "cue": "trong vài",
       "items": [
        {
         "icon": "people",
@@ -212,12 +214,11 @@
         "cue": "đoán tương"
        },
        {
-        "icon": "bulb",
-        "label": "Ba bài học",
+        "icon": "brain",
+        "label": "Ba bài học: nghĩ như họ",
         "cue": "ba bài"
        }
-      ],
-      "cue": "trong vài"
+      ]
      }
     ]
    }
@@ -256,8 +257,8 @@
       "kicker": "Điều ta hay tin",
       "items": [
        {
-        "icon": "mask",
-        "label": "Chuyên gia chắc nịch",
+        "icon": "star",
+        "label": "Chuyên gia chắc nịch trên TV",
         "cue": "chuyên gia"
        },
        {
@@ -268,12 +269,17 @@
       ]
      },
      {
-      "type": "statement",
-      "kicker": "Điều ta hay tin",
-      "text": "Tương lai là không thể đoán.",
-      "strike": "không thể đoán.",
-      "replace": "đoán được, một phần",
-      "strike_cue": "tetlock",
+      "type": "swap",
+      "kicker": "Nếu chuyên gia cũng trật…",
+      "from": {
+       "label": "Không ai đoán được",
+       "icon": "lock"
+      },
+      "to": {
+       "label": "Tetlock nghĩ khác",
+       "icon": "key",
+       "cue": "tetlock"
+      },
       "cue": "và nếu"
      }
     ]
@@ -346,12 +352,11 @@
       ]
      },
      {
-      "type": "statement",
+      "type": "icon",
+      "icon": "puzzle",
       "kicker": "Nhưng",
-      "text": "Nửa sau bị bỏ quên.",
-      "highlight": [
-       "Nửa sau"
-      ],
+      "line": "Nửa sau bị bỏ quên.",
+      "line_cue": "bỏ quên",
       "cue": "nhưng"
      }
     ]
@@ -385,12 +390,12 @@
       ]
      },
      {
-      "type": "statement",
+      "type": "icon",
+      "icon": "fox",
+      "motion": "rise",
       "kicker": "Nửa sau của kết quả",
-      "text": "Con cáo đoán tốt hơn.",
-      "highlight": [
-       "cáo"
-      ],
+      "line": "Con cáo đoán tốt hơn.",
+      "line_cue": "con cáo đoán",
       "cue": "con cáo đoán"
      }
     ]
@@ -409,28 +414,27 @@
     "type": "shots",
     "shots": [
      {
-      "type": "compare",
-      "title": "Nhím hay cáo?",
-      "left": {
-       "title": "Collins · xây công ty",
-       "items": [
-        "Con nhím: một điều lớn"
-       ]
-      },
-      "right": {
-       "title": "Tetlock · đoán tương lai",
-       "items": [
-        "Con cáo: nhiều góc nhìn"
-       ]
-      }
+      "type": "trio",
+      "kicker": "Nhím hay cáo?",
+      "items": [
+       {
+        "icon": "hedgehog",
+        "label": "Collins: nhím xây công ty",
+        "cue": "khen con"
+       },
+       {
+        "icon": "fox",
+        "label": "Tetlock: cáo đoán tương lai",
+        "cue": "con cáo"
+       }
+      ]
      },
      {
-      "type": "statement",
+      "type": "icon",
+      "icon": "compass",
       "kicker": "Không mâu thuẫn",
-      "text": "Hướng đi rõ. Đầu óc mở.",
-      "highlight": [
-       "Đầu óc mở."
-      ],
+      "line": "Hướng đi rõ. Đầu óc mở.",
+      "line_cue": "một hướng",
       "cue": "hai điều"
      }
     ]
@@ -447,41 +451,35 @@
     "type": "shots",
     "shots": [
      {
-      "type": "timeline",
-      "title": "Giải đấu dự báo IARPA",
-      "events": [
+      "type": "icon",
+      "icon": "binoculars",
+      "kicker": "2011 · IARPA · tình báo Mỹ",
+      "line": "Một giải đấu dự báo",
+      "line_cue": "mở một"
+     },
+     {
+      "type": "trio",
+      "kicker": "Luật chơi",
+      "cue": "năm đội",
+      "items": [
        {
-        "year": "2011",
-        "text": "Giải đấu bắt đầu",
-        "cue": "năm hai"
-       },
-       {
-        "year": "5 đội",
-        "text": "Câu hỏi thật, có hạn chót",
+        "icon": "chess",
+        "label": "5 đội tranh tài",
         "cue": "năm đội"
        },
        {
-        "year": "2015",
-        "text": "Kết thúc",
+        "icon": "hourglass",
+        "label": "Câu hỏi thật, có hạn chót",
         "cue": "có hạn"
        }
       ]
      },
      {
-      "type": "trio",
+      "type": "icon",
+      "icon": "people",
       "kicker": "Good Judgment Project",
-      "items": [
-       {
-        "icon": "people",
-        "label": "Hàng nghìn tình nguyện viên",
-        "cue": "hàng nghìn"
-       },
-       {
-        "icon": "target",
-        "label": "Đoán bằng xác suất",
-        "cue": "tình nguyện"
-       }
-      ],
+      "line": "Hàng nghìn tình nguyện viên",
+      "line_cue": "hàng nghìn",
       "cue": "tetlock lập"
      }
     ]
@@ -499,22 +497,35 @@
     "type": "shots",
     "shots": [
      {
-      "type": "stat",
-      "value": 60,
-      "prefix": "≈ ",
-      "suffix": "%",
-      "label": "chính xác hơn nhóm đối chứng · năm 1",
-      "note": "đo bằng điểm Brier",
-      "cue": "sáu mươi"
-     },
-     {
-      "type": "statement",
-      "kicker": "Năm thứ hai",
-      "text": "Hơn nhóm đối chứng 78%.",
-      "highlight": [
-       "78%."
+      "type": "chart",
+      "title": "Chính xác hơn nhóm đối chứng (%)",
+      "unit": "",
+      "points": [
+       [
+        "Đối chứng",
+        0
+       ],
+       [
+        "Năm 1",
+        60
+       ],
+       [
+        "Năm 2",
+        78
+       ]
       ],
-      "cue": "năm thứ"
+      "annotations": [
+       {
+        "at": 1,
+        "text": "≈ 60%",
+        "cue": "sáu mươi"
+       },
+       {
+        "at": 2,
+        "text": "78%",
+        "cue": "bảy mươi"
+       }
+      ]
      },
      {
       "type": "funnel",
@@ -552,15 +563,15 @@
      },
      {
       "type": "trio",
-      "kicker": "Không phải thiên tài",
+      "kicker": "Không phải thiên tài hay điệp viên",
       "items": [
        {
-        "icon": "compass",
+        "icon": "sprout",
         "label": "Về hưu · Bộ Nông nghiệp",
         "cue": "một người"
        },
        {
-        "icon": "brain",
+        "icon": "gear",
         "label": "Lập trình viên đã nghỉ",
         "cue": "một lập"
        },
@@ -595,16 +606,24 @@
       "prefix": "≈ ",
       "suffix": "%",
       "label": "hơn nhà phân tích có tin mật",
-      "note": "theo một bài báo, 2013",
-      "cue": "ba mươi"
+      "note": "theo một bài báo, 2013"
      },
      {
-      "type": "statement",
+      "type": "icon",
+      "icon": "letter",
+      "kicker": "Nguồn: một bài báo, 2013",
+      "line": "So sánh phức tạp hơn khẩu hiệu",
+      "line_cue": "cách so",
+      "cue": "con số"
+     },
+     {
+      "type": "icon",
+      "icon": "scale",
+      "motion": "swing",
+      "period": 2.6,
       "kicker": "Đọc con số thế nào",
-      "text": "Một ước tính, không phải kỷ lục.",
-      "highlight": [
-       "ước tính,"
-      ],
+      "line": "Nhớ nó như một ước tính.",
+      "line_cue": "ước tính",
       "cue": "hãy nhớ"
      }
     ]
@@ -626,17 +645,30 @@
      {
       "type": "icon",
       "icon": "binoculars",
-      "kicker": "Bài học 1 · Nhìn từ bên ngoài trước",
-      "line": "Bình thường, bao nhiêu lần?",
-      "line_cue": "hãy hỏi"
+      "kicker": "Bài học 1",
+      "line": "Nhìn từ bên ngoài trước",
+      "line_cue": "nhìn từ"
      },
      {
-      "type": "statement",
-      "kicker": "Điểm xuất phát",
-      "text": "Tỷ lệ nền trước. Chi tiết sau.",
-      "highlight": [
-       "Tỷ lệ nền"
-      ],
+      "type": "swap",
+      "kicker": "Trước khi say mê chi tiết",
+      "from": {
+       "label": "Chi tiết câu chuyện",
+       "icon": "magnifier"
+      },
+      "to": {
+       "label": "Bình thường, bao nhiêu lần?",
+       "icon": "pie",
+       "cue": "bình thường"
+      },
+      "cue": "trước khi"
+     },
+     {
+      "type": "icon",
+      "icon": "anchor",
+      "kicker": "Tỷ lệ nền",
+      "line": "Điểm xuất phát.",
+      "line_cue": "điểm xuất",
       "cue": "tỷ lệ"
      }
     ]
@@ -653,12 +685,25 @@
     "type": "shots",
     "shots": [
      {
-      "type": "statement",
-      "kicker": "Bài học 2 · Cập nhật từng bước nhỏ",
-      "text": "Không nhảy 20% → 90%.",
-      "strike": "→ 90%.",
-      "replace": "→ 25%",
-      "strike_cue": "họ dịch"
+      "type": "icon",
+      "icon": "sprout",
+      "motion": "grow",
+      "kicker": "Bài học 2",
+      "line": "Cập nhật từng bước nhỏ",
+      "line_cue": "cập nhật"
+     },
+     {
+      "type": "swap",
+      "kicker": "Khi có tin mới",
+      "from": {
+       "label": "Nhảy vọt 20% → 90%",
+       "icon": "rocket"
+      },
+      "to": {
+       "label": "Dịch từng chút",
+       "icon": "turtle"
+      },
+      "cue": "khi có"
      },
      {
       "type": "chart",
@@ -703,7 +748,7 @@
        },
        {
         "at": 5,
-        "text": "Không nhảy vọt",
+        "text": "Không nhảy vọt, không đứng yên",
         "cue": "không nhảy vọt"
        }
       ],
@@ -766,20 +811,20 @@
     "type": "shots",
     "shots": [
      {
-      "type": "trio",
+      "type": "swap",
       "kicker": "Điều gì tạo ra siêu dự báo viên?",
-      "items": [
-       {
-        "icon": "brain",
-        "label": "Trí thông minh",
-        "cue": "trí thông"
-       },
-       {
-        "icon": "snowball",
-        "label": "Luôn ở bản beta",
-        "cue": "bản beta"
-       }
-      ]
+      "from": {
+       "label": "Trí thông minh",
+       "icon": "brain"
+      },
+      "to": {
+       "label": "Tinh thần bản beta",
+       "icon": "sprout",
+       "cue": "bản beta"
+      },
+      "cue": "không phải",
+      "line": "Luôn cập nhật, luôn sửa mình.",
+      "line_cue": "luôn cập"
      },
      {
       "type": "stat",
@@ -788,7 +833,7 @@
       "suffix": "×",
       "label": "sức dự báo của 'bản beta' so với trí thông minh",
       "note": "theo Tetlock & Gardner, 2015",
-      "cue": "gấp"
+      "cue": "nó mạnh"
      }
     ]
    },
@@ -889,12 +934,11 @@
     "type": "shots",
     "shots": [
      {
-      "type": "statement",
+      "type": "icon",
+      "icon": "puzzle",
       "kicker": "Quay lại câu đùa",
-      "text": "Chỉ là một nửa câu chuyện.",
-      "highlight": [
-       "một nửa"
-      ]
+      "line": "Chỉ là một nửa câu chuyện.",
+      "line_cue": "một nửa"
      },
      {
       "type": "quote",
@@ -903,11 +947,21 @@
       "cue": "nửa còn"
      },
      {
-      "type": "icon",
-      "icon": "tea",
-      "steam": true,
-      "line": "Dự đoán nào bạn sẽ ghi điểm đầu tiên?",
-      "cue": "nghĩa là"
+      "type": "trio",
+      "kicker": "Còn bạn",
+      "cue": "nghĩa là",
+      "items": [
+       {
+        "icon": "sprout",
+        "label": "Nó tập được",
+        "cue": "tập được"
+       },
+       {
+        "icon": "target",
+        "label": "Ghi điểm dự đoán đầu tiên",
+        "cue": "ghi điểm"
+       }
+      ]
      }
     ]
    },
