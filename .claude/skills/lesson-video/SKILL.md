@@ -56,6 +56,12 @@ only for Piper, which cannot read English. Where a Vietnamese phrase serves the 
 Labels and number format follow `lang`.
 `music: "chill"` gives a lo-fi bed; `meta.look` overrides the palette. Example: `lessons/books/001-good-to-great`.
 
+## The brief and the gate
+Every lesson carries `meta.brief` (target_viewer, format, central_question, transformation, discovery_goal,
+primary_conversion — one only, share_recipient, evidence, constraints) and `meta.youtube` (title, thumbnail_text,
+description, tags). After every build the `video-gatekeeper` (agent and skill) scores the cut on its 12-category
+rubric, enforces the publication gates, fixes the lesson and rebuilds until it passes; nothing is delivered before.
+
 ## Scene types (visual.type)
 
 `hook` (frame-0 claim over the data; on `crash_cue` the line falls, the flash + second line + sound hit land on the

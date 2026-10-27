@@ -6,8 +6,11 @@ Writes BUILD_DIR/gate/report.json and pictures to look at:
   gate/hook.jpg      the first 6 s, one frame every 0.5 s (does frame 0 sell the video? does something move at once?)
   gate/scenes.jpg    middle and end frame of every beat (is every picture the image of its line? any glitch?)
   gate/thumb.jpg     the thumbnail as YouTube shows it (small: is the text readable at 320 px?)
-Hard fails (verdict "block") are things no viewer should ever see or hear: missing words, glyphs a font cannot draw,
-a frozen screen, a hook too slow to land. Everything else is a scored warning for the reviewer (video-gatekeeper).
+  gate/opening.txt   the first 30 s as spoken, sentence by sentence with timestamps (rubric D)
+Hard fails (verdict "block") are technical defects no viewer should meet: dropped words, glyphs the fonts cannot draw,
+a broken layout or contrast. Everything else is evidence for the reviewer's judgment (video-gatekeeper rubric), tagged
+with the rubric category it informs: [D] opening, [E] structure, [I] presentation, [K] sharing, [L] conversion…
+Pacing findings (frozen screens, unread lines) inform [E]/[I]; they are not verdicts by themselves.
 """
 
 from __future__ import annotations
@@ -128,13 +131,13 @@ def run(lesson_path: str | Path, out_dir: str | Path, check: bool = True, listen
     metrics["hook_seconds"] = round(t0["narr"], 2)
     metrics["first_word_at"] = round(t0["lead"], 2)
     if t0["narr"] > HOOK_MAX_S:
-        fails.append(f"hook takes {t0['narr']:.1f}s to say (max {HOOK_MAX_S}s): cut it to the paradox")
+        warns.append(f"[D] hook takes {t0['narr']:.1f}s to say (aim ≤ {HOOK_MAX_S}s): does every word earn its place?")
     if t0["lead"] > FIRST_WORD_MAX_S:
-        warns.append(f"first word at {t0['lead']:.2f}s: start speaking at once")
+        warns.append(f"[D] first word at {t0['lead']:.2f}s: start speaking at once")
     title_at = next((tm["start"] for tm in timing["beats"] if beats[tm["id"]]["visual"]["type"] == "title"), None)
     metrics["title_sting_at"] = title_at
     if title_at is not None and title_at > 22:
-        warns.append(f"title sting at {title_at:.0f}s: keep it inside the first ~20 s")
+        warns.append(f"[D] title sting at {title_at:.0f}s: keep it inside the first ~20 s")
 
     # --- voice: pace per line, pauses after questions, words heard
     rates, pauses, missing, names = {}, [], [], []
@@ -171,17 +174,17 @@ def run(lesson_path: str | Path, out_dir: str | Path, check: bool = True, listen
     slow = {k: v for k, v in rates.items() if v < RATE_RANGE[0]}
     fast = {k: v for k, v in rates.items() if v > RATE_RANGE[1]}
     if fast:
-        warns.append(f"lines read too fast (> {RATE_RANGE[1]}/min): {fast}")
+        warns.append(f"[I] lines read fast (> {RATE_RANGE[1]}/min): {fast}")
     if slow:
-        warns.append(f"lines read too slowly (< {RATE_RANGE[0]}/min): {slow}")
+        warns.append(f"[I] lines read slowly (< {RATE_RANGE[0]}/min): {slow}")
     short = [p for p in pauses if p["pause"] < QUESTION_PAUSE_MIN]
     metrics["question_pauses"] = pauses
     if short:
-        warns.append(f"no beat of silence after a question: {short}")
+        warns.append(f"[I] little silence after a question: {short}")
     if missing:
         fails.append(f"words the voice dropped (re-take those lines with 'take'): {missing}")
     if names:
-        warns.append(f"names not recognisable by ear: {names}")
+        warns.append(f"[I] names not recognisable by ear: {names}")
 
     # --- fonts and copy
     fc = font_coverage(L)
@@ -190,7 +193,7 @@ def run(lesson_path: str | Path, out_dir: str | Path, check: bool = True, listen
         fails.append(f"characters the fonts cannot draw: {fc['missing']}")
     cl = copy_lint(L)
     if cl:
-        warns += cl
+        warns += [f"[I] {x}" for x in cl]
 
     # --- what HyperFrames measures on the real timeline: frozen stretches, unreadable lines, layout, contrast
     if check:
@@ -208,9 +211,10 @@ def run(lesson_path: str | Path, out_dir: str | Path, check: bool = True, listen
                 if f.get("code") == "dead_stretch" and m:
                     s0 = float(m.group(2))
                     excused = any(a <= s0 <= b for a, b in q_spans)
-                    (warns if excused or float(m.group(1)) <= DEAD_MAX_S + 0.5 else fails).append(f"frozen screen: {msg[:110]}")
+                    if not excused and float(m.group(1)) > DEAD_MAX_S:
+                        warns.append(f"[E] screen still: {msg[:110]}")
                 elif f.get("code") == "line_unread":
-                    warns.append(f"line too short to read: {msg[:120]}")
+                    warns.append(f"[I] line too short to read: {msg[:120]}")
         except json.JSONDecodeError:
             warns.append("hyperframes check did not return JSON")
 
@@ -219,13 +223,13 @@ def run(lesson_path: str | Path, out_dir: str | Path, check: bool = True, listen
     loud = bj.get("loudness", {})
     metrics["loudness"] = loud
     if loud and abs(loud.get("integrated_lufs", -16) + 16) > 1.5:
-        warns.append(f"loudness {loud.get('integrated_lufs')} LUFS (target -16 ±1)")
+        warns.append(f"[I] loudness {loud.get('integrated_lufs')} LUFS (target -16 ±1)")
     if loud and loud.get("true_peak_dbfs", -2) > -1.0:
-        warns.append(f"true peak {loud.get('true_peak_dbfs')} dBFS (keep under -1)")
+        warns.append(f"[I] true peak {loud.get('true_peak_dbfs')} dBFS (keep under -1)")
     metrics["duration_s"] = timing["total"]
     lo, hi = L["meta"].get("target_minutes", [3, 5])
     if not lo * 60 * 0.9 <= timing["total"] <= hi * 60 * 1.1:
-        warns.append(f"duration {timing['total'] / 60:.1f} min outside {lo}-{hi} min")
+        warns.append(f"[E] duration {timing['total'] / 60:.1f} min outside {lo}-{hi} min")
 
     # --- re-hooks: a question, a twist or a myth broken at least every ~60 s
     turns = [tm["start"] for tm in timing["beats"] if beats[tm["id"]]["act"] in ("misconception", "complication", "turn", "question")
@@ -233,7 +237,32 @@ def run(lesson_path: str | Path, out_dir: str | Path, check: bool = True, listen
     gaps = np.diff([0.0] + turns + [timing["total"]]) if turns else [timing["total"]]
     metrics["longest_without_rehook_s"] = round(float(max(gaps)), 1)
     if max(gaps) > 75:
-        warns.append(f"{max(gaps):.0f}s without a question, twist or broken myth: add a re-hook")
+        warns.append(f"[E] {max(gaps):.0f}s without a question, twist or broken myth: does attention hold here?")
+
+    # --- the opening as spoken (rubric D: mark every sentence that is neither value nor necessary setup)
+    lines = []
+    for tm in timing["beats"]:
+        if tm["start"] > 30:
+            break
+        b = beats[tm["id"]]
+        for sent in voice.sentences(b["narration"]):
+            lines.append(f"{tm['start'] + tm['lead']:6.1f}s  [{tm['id']}]  {sent}")
+    (g / "opening.txt").write_text("\n".join(lines) + "\n")
+
+    # --- the brief and the one primary next step (rubric §1, L)
+    brief = L["meta"].get("brief") or {}
+    need = ("target_viewer", "central_question", "transformation", "discovery_goal", "primary_conversion", "share_recipient")
+    missing_brief = [k for k in need if not brief.get(k)]
+    if missing_brief:
+        warns.append(f"[A] meta.brief missing {missing_brief}: state the assumptions and write them in")
+    endv = next((b["visual"] for b in reversed(L["beats"]) if b["visual"]["type"] == "end"), {})
+    ctas = ([endv["ask"]] if endv.get("ask") else []) + ([endv["next"]] if endv.get("next") else []) + \
+        [c.strip() for c in endv.get("cta", "").split("·") if c.strip()]
+    metrics["end_card_ctas"] = ctas
+    if len(ctas) > 2:
+        warns.append(f"[L] {len(ctas)} calls to action on the end card {ctas}: keep one primary next step")
+    metrics["coverage"] = {"script": True, "render": bool(video), "audio": True, "analytics": "not assessable",
+                           "real_shares": "not assessable"}
 
     # --- pictures for the reviewer
     if video:
@@ -253,9 +282,9 @@ def run(lesson_path: str | Path, out_dir: str | Path, check: bool = True, listen
         (g / "youtube.md").write_text(f"# {yt.get('title', '')}\n\nThumbnail: {yt.get('thumbnail_text', '')}\n\n"
                                       f"{yt.get('description', '')}\n\nTags: {', '.join(yt.get('tags', []))}\n")
         if len(yt.get("title", "")) > 70:
-            warns.append(f"YouTube title is {len(yt['title'])} chars (keep ≤ 60-70)")
+            warns.append(f"[C] YouTube title is {len(yt['title'])} chars (keep ≤ 60-70)")
     else:
-        warns.append("no meta.youtube packaging (title, thumbnail_text, description, tags)")
+        warns.append("[C] no meta.youtube packaging (title, thumbnail_text, description, tags)")
     verdict = "block" if fails else ("revise" if warns else "pass")
     rep = {"lesson": str(lesson_path), "video": str(video) if video else None, "verdict": verdict, "fails": fails,
            "warnings": warns, "metrics": metrics,
