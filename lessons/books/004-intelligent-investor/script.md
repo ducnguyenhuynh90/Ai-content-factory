@@ -1,5 +1,5 @@
 # Nhà Đầu Tư Thông Minh
-_Review sách · Tập 4 · 795 words · ~3.43 min · 4:3_
+_Review sách · Tập 4 · 783 words · ~3.38 min · 4:3_
 
 ## Learning goals
 - Kể lại được câu chuyện Graham mất khoảng 70% vốn giai đoạn 1929–1932 và cuốn sách ra đời từ bài học đó
@@ -15,7 +15,7 @@ _Review sách · Tập 4 · 795 words · ~3.43 min · 4:3_
 | # | act | narration | on screen |
 |---|---|---|---|
 | h1 | hook | Cuốn sách hay nhất về đầu tư, theo Warren Buffett. Vậy mà tác giả của nó từng mất gần bảy mươi phần trăm. _(estimate)_ | hook: hook |
-| h2 | context | Không phải vì ông thiếu hiểu biết. Mà vì cái giá đắt nhất ông từng trả đã trở thành cuốn sách này. Đến cuối clip, bạn sẽ có ba bài học để giữ cái đầu lạnh khi thị trường nóng lên. | shots: shots |
+| h2 | context | Ông không hề thiếu hiểu biết. Và chính cái giá đắt ấy đã làm nên cuốn sách này. Đến cuối clip, bạn sẽ có ba bài học để giữ cái đầu lạnh khi thị trường nóng lên. | shots: shots |
 | t0 | context |  | title: Nhà Đầu Tư Thông Minh |
 | b01 | misconception | Chúng ta hay nghĩ đầu tư giỏi là đoán trúng giá ngày mai. Là phải thông minh hơn người, hay có tin nội bộ. Buffett nói ngược lại: không cần trí thông minh xuất chúng. Cần một khung tư duy vững, và đừng để cảm xúc làm mục nó. | shots: shots |
 | b02 | context | Người dạy Buffett điều đó là Benjamin Graham, giáo sư ở Đại học Columbia. Năm một nghìn chín trăm bốn mươi chín, ông viết The Intelligent Investor, với phụ đề: một cuốn sách lời khuyên thực tế. Viết cho người bình thường, không phải dân Phố Wall. | shots: shots |
@@ -29,11 +29,11 @@ _Review sách · Tập 4 · 795 words · ~3.43 min · 4:3_
 | b09 | principle | Bài học thứ hai, Graham gói trong ba chữ: biên an toàn. Ước tính một cách tỉnh táo doanh nghiệp đáng giá bao nhiêu, rồi chỉ mua khi giá thấp hơn hẳn. Khoảng cách đó là tấm đệm, cho lúc bạn tính sai, hoặc lúc gặp xui. | shots: shots |
 | b10 | principle | Bài học thứ ba: biết mình đang đầu tư hay đầu cơ. Với Graham, đầu tư là khi, sau phân tích kỹ, nó hứa hẹn giữ an toàn tiền gốc và một mức lời thỏa đáng. Thiếu điều đó là đầu cơ. Đầu cơ không phải tội. Tự lừa mình mới nguy. | shots: shots |
 | b11 | complication | Nhưng có một điều nhiều bài review bỏ qua. Năm một nghìn chín trăm bảy mươi sáu, chính Graham nói ông không còn ủng hộ các kỹ thuật phân tích cổ phiếu cầu kỳ nữa, vì có quá nhiều người cùng săn tìm. Nhiều công thức chọn cổ phiếu trong sách đã cũ. | shots: shots |
-| b12 | turn | Vậy cuốn sách hết giá trị sao? Không. Thứ ông bỏ là công thức. Thứ ông giữ đến cuối đời là thái độ: không vay quá sức, không để giá ngày hôm nay quyết định thay mình. | shots: shots |
+| b12 | turn | Vậy cuốn sách hết giá trị sao? Không. Thứ ông bỏ là những phân tích cầu kỳ. Thứ ông giữ đến cuối đời là thái độ: không vay quá sức, không để giá ngày hôm nay quyết định thay mình. | shots: shots |
 | b13 | question | Giờ thử một chút nhé. Cổ phiếu một công ty bạn hiểu rõ rơi ba mươi phần trăm trong một tuần, dù việc kinh doanh không đổi gì. Mr. Market đang nói gì với bạn? | question: Giá rơi 30% trong 1 tuần, việc kinh doanh không đổi. Mr. Market đang nói gì? |
 | b14 | recap | Vậy là ba bài học từ Nhà Đầu Tư Thông Minh. Mr. Market phục vụ, không ra lệnh. Luôn chừa biên an toàn. Và biết mình đầu tư hay đầu cơ. | list: Ba bài học |
 | b15 | close | Graham đã mất gần bảy mươi phần trăm, rồi viết ra cuốn sách để người khác khỏi phải trả học phí ấy. Thị trường sẽ luôn có những ngày điên. Biên an toàn là thứ giúp bạn không phải điên theo. _(estimate)_ | shots: shots |
-| b16 | close | Còn bạn, có cuốn sách đầu tư nào từng thay đổi cách bạn nhìn thị trường không? Kể cho mình nghe trong phần bình luận nhé. Nếu thấy có ích, lưu lại và gửi cho một người bạn. Hẹn gặp bạn. | end: Nhà Đầu Tư Thông Minh |
+| b16 | close | Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau. | end: Nhà Đầu Tư Thông Minh |
 
 ## Sources
 - [graham1949] Benjamin Graham, The Intelligent Investor: A Book of Practical Counsel, Harper & Brothers, 1949; revised ed. 1973 (ch. 1 investor vs speculator, ch. 8 'The Investor and Market Fluctuations' / Mr. Market, ch. 20 'Margin of Safety as the Central Concept of Investment') — https://openlibrary.org/books/OL273184W

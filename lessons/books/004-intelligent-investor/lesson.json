@@ -26,7 +26,18 @@
    "Kể lại được câu chuyện Graham mất khoảng 70% vốn giai đoạn 1929–1932 và cuốn sách ra đời từ bài học đó",
    "Giải thích ba ý lớn: Mr. Market, biên an toàn, nhà đầu tư khác nhà đầu cơ",
    "Nhận ra phần nào của sách đã cũ (công thức chọn cổ phiếu) và phần nào còn nguyên giá trị (thái độ với giá)"
-  ]
+  ],
+  "brief": {
+   "target_viewer": "Người Việt 20–40 tuổi, tò mò, thích đọc sách, mới bắt đầu đầu tư chứng khoán; có thể đã nghe tên Nhà Đầu Tư Thông Minh nhưng thấy sách dày và cũ; dễ bị cuốn theo giá lên xuống mỗi ngày (giả định của người gác cổng, chủ kênh xác nhận lại)",
+   "format": "Phân tích sách (book analysis), 4–5 phút, 4:3, minh họa icon vẽ tay, một giọng đọc",
+   "central_question": "Vì sao cuốn sách đầu tư hay nhất (theo Buffett) lại được viết bởi một người từng mất gần bảy mươi phần trăm, và người mới nên giữ lại gì từ nó?",
+   "transformation": "Trước khi xem, họ nghĩ đầu tư giỏi là đoán trúng giá hay có thông tin tốt hơn người khác. Sau khi xem, họ kể lại được cú sập 1929–1932 của Graham, giải thích Mr. Market, biên an toàn và ranh giới đầu tư/đầu cơ, biết phần nào của sách đã cũ (phân tích cầu kỳ, nhiều công thức) và phần nào còn giá trị (thái độ với giá, không vay quá sức), và trả lời được câu hỏi 'giá rơi ba mươi phần trăm trong một tuần'.",
+   "discovery_goal": "Tìm kiếm (\"Nhà Đầu Tư Thông Minh tóm tắt\", \"The Intelligent Investor review\", \"Benjamin Graham\", \"Mr. Market\", \"biên an toàn\") và đề xuất từ video sách/đầu tư; khán giả của tập 1–3",
+   "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn clip tiếp theo về cuốn sách nào?\" (lựa chọn của chủ kênh)",
+   "share_recipient": "Một người bạn mới mở tài khoản chứng khoán, đang dùng margin hoặc đang hoảng vì danh mục đỏ: câu chuyện Graham dùng tiền vay rồi mất gần bảy mươi phần trăm, và câu hỏi 'giá rơi ba mươi phần trăm trong một tuần' nói đúng tình huống của họ",
+   "evidence": "Graham 1949/1973 (ch. 1, 8, 20; Lời giới thiệu); Buffett, lời tựa ấn bản thứ tư; thư cổ đông Berkshire 1987; Graham, Memoirs (1996) qua beyondbengraham và Novel Investor (vốn ~2,5 triệu USD 1/1929, −20%/−50%/−16%/−3%, margin, hồi phục ~1935); Columbia finding aid; FAJ 1976. Xem gate/claims.md.",
+   "constraints": "4–5 phút, 4:3, icon vẽ (không footage, không khuôn mặt người thật), một giọng đọc OmniVoice seed 99 speed 0.88, tên tiếng Anh giữ nguyên chính tả, số đọc bằng chữ, đường cong minh họa ghi 'minh họa', không khuyến nghị đầu tư, giữ lời miễn trừ"
+  }
  },
  "sources": [
   {
@@ -92,7 +103,7 @@
    "visual": {
     "type": "hook",
     "lines": [
-     "Cuốn sách hay nhất về đầu tư.",
+     "Sách hay nhất về đầu tư.",
      "Tác giả từng mất ~70%."
     ],
     "crash_cue": "mất",
@@ -135,12 +146,12 @@
      ],
      [
       9,
-      30
+      33
      ]
     ],
     "peak_label": "1/1929",
-    "end_label": "≈ −70% · 1932",
-    "kicker": "The Intelligent Investor · Benjamin Graham"
+    "end_label": "≈ −70% · 1932 (minh họa)",
+    "kicker": "Theo Warren Buffett · The Intelligent Investor"
    },
    "sfx": [
     {
@@ -158,13 +169,13 @@
   {
    "id": "h2",
    "act": "context",
-   "narration": "Không phải vì ông thiếu hiểu biết. Mà vì cái giá đắt nhất ông từng trả đã trở thành cuốn sách này. Đến cuối clip, bạn sẽ có ba bài học để giữ cái đầu lạnh khi thị trường nóng lên.",
+   "narration": "Ông không hề thiếu hiểu biết. Và chính cái giá đắt ấy đã làm nên cuốn sách này. Đến cuối clip, bạn sẽ có ba bài học để giữ cái đầu lạnh khi thị trường nóng lên.",
    "visual": {
     "type": "shots",
     "shots": [
      {
       "type": "trio",
-      "kicker": "Không phải vì…",
+      "kicker": "Ông không hề…",
       "cross": true,
       "items": [
        {
@@ -177,15 +188,15 @@
      {
       "type": "swap",
       "kicker": "Một bài học đắt giá",
-      "cue": "mà vì",
+      "cue": "và chính",
       "from": {
-       "label": "Cái giá đắt nhất",
+       "label": "Cái giá đắt ấy",
        "icon": "coins"
       },
       "to": {
-       "label": "Thành cuốn sách này",
+       "label": "Thành sách",
        "icon": "book",
-       "cue": "trở thành"
+       "cue": "làm nên"
       }
      },
      {
@@ -363,7 +374,7 @@
       "type": "icon",
       "icon": "coins",
       "motion": "grow",
-      "kicker": "Tháng 1 · 1929 · theo hồi ký của Graham",
+      "kicker": "Tháng 1 · 1929 · theo hồi ký · USD danh nghĩa",
       "line": "Quỹ của Graham: ≈ $2,5 triệu",
       "line_cue": "hai phẩy"
      },
@@ -401,7 +412,7 @@
     "shots": [
      {
       "type": "chart",
-      "title": "Vốn còn lại · ước tính (1/1929 = 100)",
+      "title": "Vốn còn lại · ước tính theo hồi ký (1/1929 = 100)",
       "points": [
        [
         "1/1929",
@@ -421,7 +432,7 @@
        ],
        [
         "1932",
-        30
+        33
        ]
       ],
       "annotations": [
@@ -465,13 +476,13 @@
      {
       "type": "icon",
       "icon": "anchor",
-      "kicker": "Graham không bỏ chạy",
+      "kicker": "Theo hồi ký · Graham không bỏ chạy",
       "line": "Không nhận phí đến khi gỡ lại lỗ",
       "line_cue": "không được"
      },
      {
       "type": "swap",
-      "kicker": "~1935 quỹ hồi lại · từ đó, suốt đời",
+      "kicker": "~1935 quỹ hồi lại · từ đó, tránh tiền vay",
       "cue": "phải đến",
       "from": {
        "label": "Tiền vay",
@@ -654,14 +665,14 @@
        {
         "icon": "sprout",
         "label": "Mức lời thỏa đáng",
-        "cue": "mức lời"
+        "cue": "và một"
        }
       ]
      },
      {
       "type": "trio",
       "kicker": "Thiếu điều đó là đầu cơ",
-      "cue": "thiếu điều",
+      "cue": "là đầu",
       "items": [
        {
         "icon": "dice",
@@ -739,7 +750,7 @@
   {
    "id": "b12",
    "act": "turn",
-   "narration": "Vậy cuốn sách hết giá trị sao? Không. Thứ ông bỏ là công thức. Thứ ông giữ đến cuối đời là thái độ: không vay quá sức, không để giá ngày hôm nay quyết định thay mình.",
+   "narration": "Vậy cuốn sách hết giá trị sao? Không. Thứ ông bỏ là những phân tích cầu kỳ. Thứ ông giữ đến cuối đời là thái độ: không vay quá sức, không để giá ngày hôm nay quyết định thay mình.",
    "visual": {
     "type": "shots",
     "shots": [
@@ -753,10 +764,10 @@
      },
      {
       "type": "swap",
-      "kicker": "Bỏ công thức, giữ thái độ",
+      "kicker": "Bỏ phân tích cầu kỳ, giữ thái độ",
       "cue": "thứ ông bỏ",
       "from": {
-       "label": "Công thức",
+       "label": "Phân tích cầu kỳ",
        "icon": "checklist"
       },
       "to": {
@@ -786,7 +797,7 @@
      "Một cái giá để cân nhắc, không phải mệnh lệnh",
      "Công ty chắc sắp phá sản"
     ],
-    "answer": "B — giá là lời mời; bạn được quyền từ chối.",
+    "answer": "B — giá là lời mời.",
     "think_seconds": 5
    }
   },
@@ -863,19 +874,17 @@
   {
    "id": "b16",
    "act": "close",
-   "narration": "Còn bạn, có cuốn sách đầu tư nào từng thay đổi cách bạn nhìn thị trường không? Kể cho mình nghe trong phần bình luận nhé. Nếu thấy có ích, lưu lại và gửi cho một người bạn. Hẹn gặp bạn.",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
    "visual": {
     "type": "end",
     "kicker": "Review sách · Tập 4",
     "title": "Nhà Đầu Tư Thông Minh",
-    "ask": "Cuốn sách nào từng đổi cách bạn nhìn thị trường?",
+    "ask": "Bạn muốn clip tiếp theo về cuốn sách nào?",
     "ask_hint": "Một cuốn sách · một nhà đầu tư · một bài học đắt giá",
     "ask_cue": "còn bạn",
-    "cta": "Bình luận · Lưu lại · Gửi một người bạn",
-    "cta_cue": "nếu thấy",
-    "sources_line": "Nguồn: Graham, The Intelligent Investor (1949; bản 1973 & Zweig 2003) · Graham, Memoirs (1996) · Buffett, lời tựa & thư 1987 · FAJ 1976",
-    "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư. Số liệu đã làm tròn.",
-    "sources_cue": "hẹn gặp"
+    "sources_line": "Nguồn: Graham, The Intelligent Investor (1949, 1973) · Graham, Memoirs (1996) · Buffett 1987 · chi tiết trong mô tả",
+    "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư. Số liệu ước tính theo hồi ký, đã làm tròn.",
+    "sources_cue": "còn bạn"
    }
   }
  ],
