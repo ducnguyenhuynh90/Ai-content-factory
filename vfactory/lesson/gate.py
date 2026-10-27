@@ -132,11 +132,13 @@ def _vi_digits_to_words(text: str) -> str:
         w = vi_number(int(re.sub(r"\D", "", whole)))
         return w + (" phẩy " + " ".join(VI_DIGITS[int(c)] for c in frac) if frac else "")
     text = text.replace("%", " phần trăm")
+    text = re.sub(r"\b(\d{1,2})\s?[-/]\s?(\d{4})\b", r"\1 năm \2", text)  # "6-1986" = tháng sáu năm 1986
     return re.sub(r"(\d{1,3}(?: ?[. ]\d{3})+(?!\d)|\d+)(?:\s?,(\d+))?", one, text)
 
 
 def _vi_canon(tokens: list[str]) -> list[str]:
     out = [VI_SYNONYM.get(t, t) for t in tokens]
+    out = ["bốn" if t == "từ" and i and out[i - 1] == "mươi" else t for i, t in enumerate(out)]  # "hai mươi tư" heard "20, từ"
     return [t for i, t in enumerate(out) if not (t == "không" and i + 1 < len(out) and out[i + 1] == "trăm")
             and not (t == "trăm" and i and out[i - 1] == "không")]
 

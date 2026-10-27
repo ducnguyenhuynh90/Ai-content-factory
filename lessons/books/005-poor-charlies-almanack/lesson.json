@@ -322,7 +322,8 @@
    "sources": [
     "wiki_munger",
     "bloomberg2023"
-   ]
+   ],
+   "take": 2
   },
   {
    "id": "b03",
@@ -361,7 +362,8 @@
    },
    "sources": [
     "pca"
-   ]
+   ],
+   "take": 1
   },
   {
    "id": "b04",
