@@ -39,6 +39,25 @@
    "share_recipient": "Một người bạn đang đứng trước một quyết định lớn (đổi việc, mở quán, xuống tiền một khoản đầu tư) và chỉ toàn hỏi 'làm sao để thành công': câu hỏi ngược 'điều gì sẽ làm nó hỏng?' và đơn thuốc khốn khổ của Munger giúp hai người cùng rà rủi ro",
    "evidence": "Munger, Harvard School 13/6/1986 (Carson, bốn đơn thuốc, người nhà quê, Jacobi); USC 1994 (mạng lưới mô hình, cái búa); Harvard 1995 + bản viết lại 25 khuynh hướng trong Poor Charlie's Almanack (FedEx, lollapalooza); Berkshire 2017 (Google), 2001 (sai lầm do bỏ sót); Wikipedia/Bloomberg (tiểu sử). Xem gate/claims.md.",
    "constraints": "4–5 phút, 4:3, icon vẽ (không footage, không khuôn mặt người thật), một giọng đọc OmniVoice seed 99 speed 0.88, tên tiếng Anh giữ nguyên chính tả, số đọc bằng chữ, đường cong minh họa ghi 'minh họa', không khuyến nghị đầu tư, giữ lời miễn trừ"
+  },
+  "youtube": {
+   "title": "Niên Giám Của Charlie Munger: 3 bài học để nghĩ sáng suốt hơn",
+   "thumbnail_text": "Biết mình sẽ chết ở đâu… để không bao giờ đến.",
+   "description": "Charlie Munger hay đùa: \"Tôi chỉ muốn biết mình sẽ chết ở đâu, để không bao giờ đến đó.\" Video kể lại bài nói năm 1986 của ông về \"đơn thuốc cho một cuộc đời khốn khổ\", rồi đi qua ba bài học từ Poor Charlie's Almanack: lật ngược vấn đề, xây mạng lưới mô hình tư duy, và biết mình dễ sai ở đâu (ví dụ FedEx, hiệu ứng lollapalooza). Và một điều đáng nhớ: chính Munger cũng thừa nhận những sai lầm đắt nhất là những việc ông đã không làm.\n\nNội dung giáo dục, tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư. Đường cong ở đầu video là minh họa, không phải dữ liệu. Câu nói về người nhà quê là một câu đùa cổ Munger kể lại, không phải câu của riêng ông.\n\nChương:\n0:00 Biết mình sẽ chết ở đâu\n0:22 Điều ta hay tin về người khôn ngoan\n0:36 Charlie Munger là ai\n0:55 Ai làm ra cuốn sách này\n1:10 1986: đơn thuốc cho một cuộc đời khốn khổ\n1:42 Câu chuyện người nhà quê\n1:57 Bài học 1: lật ngược vấn đề\n2:10 Bài học 2: mạng lưới mô hình tư duy\n2:37 Bài học 3: biết mình dễ sai ở đâu\n2:50 FedEx: đổi cách trả lương\n3:24 Ngay cả Munger cũng sai\n3:41 Áp dụng: điều gì sẽ làm nó hỏng?\n3:53 Thử một chút: muốn khoẻ trong năm tới\n4:09 Ba bài học và câu hỏi cho bạn\n\nNguồn:\n- Peter D. Kaufman (ed.), Poor Charlie's Almanack, 2005; ấn bản Stripe Press 2023: https://press.stripe.com/poor-charlies-almanack\n- Charlie Munger, bài nói ở Harvard School, 13/6/1986 (bản ghi): https://worldlypartners.com/wp-content/uploads/2024/01/1986-commencement-speech-by-charlie-munger-at-harvard-school-now-harvard-westlake.pdf\n- BizNews, bản ghi thứ hai của bài nói 1986: https://www.biznews.com/thought-leaders/1986/06/13/charlie-mungers-speech-to-the-harvard-school-june-1986\n- Charlie Munger, A Lesson on Elementary, Worldly Wisdom, USC 1994: https://jamesclear.com/great-speeches/a-lesson-on-elementary-worldly-wisdom-by-charlie-munger\n- Charlie Munger, The Psychology of Human Misjudgment, Harvard 1995: https://www.rbcpa.com/wp-content/uploads/2017/01/Mungerspeech_june_95.pdf\n- James Clear, bản ghi The Psychology of Human Misjudgment: https://jamesclear.com/great-speeches/psychology-of-human-misjudgment-by-charlie-munger\n- Wikipedia, Charlie Munger: https://en.wikipedia.org/wiki/Charlie_Munger\n- Bloomberg Opinion, The Charlie Munger Principles to Invest and Live By, 29/11/2023: https://www.bloomberg.com/opinion/articles/2023-11-29/the-charlie-munger-principles-to-invest-and-live-by\n- Benzinga, Đại hội cổ đông Berkshire 2017 (Google): https://benzinga.com/markets/17/05/9418660/at-berkshire-hathaway-general-meeting-charlie-munger-apologizes-for-not-buying\n- 25iq, Charlie Munger on Mistakes: https://25iq.com/2012/11/16/charlie-munger-on-mistakes/\n\nBạn muốn clip tiếp theo về cuốn sách nào? Để lại bình luận nhé.",
+   "tags": [
+    "Poor Charlie's Almanack",
+    "Charlie Munger",
+    "review sách",
+    "tóm tắt sách",
+    "tư duy ngược",
+    "lật ngược vấn đề",
+    "mô hình tư duy",
+    "mental models",
+    "Warren Buffett",
+    "Berkshire Hathaway",
+    "tâm lý học sai lầm",
+    "ra quyết định"
+   ]
   }
  },
  "sources": [
@@ -213,7 +232,7 @@
       "items": [
        {
         "icon": "book",
-        "label": "Một cuốn niên giám"
+        "label": "Cuốn niên giám"
        },
        {
         "icon": "bulb",
@@ -286,7 +305,7 @@
       "to": {
        "label": "Tránh điều dại dột",
        "icon": "lighthouse",
-       "cue": "tránh"
+       "cue": "bắt đầu"
       }
      }
     ]
@@ -639,7 +658,7 @@
      {
       "type": "statement",
       "kicker": "1995 · Bài nói ở Harvard",
-      "text": "Tâm lý học của những phán đoán sai lầm",
+      "text": "Tâm lý học của phán đoán sai lầm",
       "highlight": [
        "phán đoán sai lầm"
       ]
@@ -679,12 +698,12 @@
        },
        {
         "icon": "people",
-        "label": "Khuyên nhủ: vô ích",
+        "label": "Khuyên: vô ích",
         "cue": "khuyên"
        },
        {
         "icon": "letter",
-        "label": "Nhắc nhở: vô ích",
+        "label": "Nhắc: vô ích",
         "cue": "nhắc"
        }
       ]
@@ -820,7 +839,7 @@
       "items": [
        {
         "icon": "letter",
-        "label": "Mô hình như sưu tầm tem",
+        "label": "Sưu tầm mô hình",
         "cue": "đừng"
        }
       ]
@@ -916,7 +935,7 @@
     "ask": "Bạn muốn clip tiếp theo về cuốn sách nào?",
     "ask_hint": "Một cuốn sách · một nhà tư duy · một chủ đề",
     "ask_cue": "còn bạn",
-    "sources_line": "Nguồn: Kaufman (ed.), Poor Charlie's Almanack (2005) · Munger 1986, 1994, 1995 · chi tiết trong mô tả",
+    "sources_line": "Nguồn: Poor Charlie's Almanack (2005) · Munger 1986, 1994, 1995 · xem mô tả",
     "disclaimer": "Nội dung giáo dục, tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư.",
     "sources_cue": "còn bạn"
    }
