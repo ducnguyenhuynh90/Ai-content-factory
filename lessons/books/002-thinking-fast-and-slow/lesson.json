@@ -96,11 +96,26 @@
    "act": "hook",
    "narration": "Một cây gậy và một quả bóng giá một đô la mười. Hơn nửa sinh viên Harvard, MIT và Princeton trả lời sai.",
    "visual": {
-    "type": "statement",
-    "kicker": "Thinking, Fast and Slow · Daniel Kahneman",
-    "text": "Gậy + bóng = 1,10 đô. Hơn nửa trả lời sai.",
-    "highlight": [
-     "sai."
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Thinking, Fast and Slow · Daniel Kahneman",
+      "text": "Gậy + bóng = 1,10 đô.",
+      "highlight": [
+       "1,10 đô."
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "people",
+      "kicker": "Harvard · MIT · Princeton",
+      "line": "Hơn nửa trả lời sai.",
+      "line_cue": "hơn nửa",
+      "motion": "shake",
+      "motion_cue": "trả lời sai",
+      "cue": "hơn nửa"
+     }
     ]
    },
    "sfx": [
@@ -134,12 +149,14 @@
       "type": "icon",
       "icon": "tea",
       "steam": true,
-      "line": "Giữ câu trả lời trong đầu.",
+      "kicker": "Giữ câu trả lời trong đầu nhé",
+      "line": "Rót một tách trà.",
+      "line_cue": "rót",
       "cue": "giữ câu"
      },
      {
       "type": "trio",
-      "kicker": "Hai nhân vật · ba bài học",
+      "kicker": "Hai nhân vật trong đầu",
       "cue": "vài phút",
       "items": [
        {
@@ -150,11 +167,14 @@
        {
         "icon": "turtle",
         "label": "Chậm",
-        "cue": "mình và"
+        "cue": "sống trong"
+       },
+       {
+        "icon": "key",
+        "label": "Ba bài học",
+        "cue": "ba bài"
        }
-      ],
-      "line": "Ba bài học",
-      "line_cue": "ba bài"
+      ]
      }
     ]
    },
@@ -192,20 +212,36 @@
     "type": "shots",
     "shots": [
      {
-      "type": "statement",
+      "type": "trio",
       "kicker": "Điều ta hay tin",
-      "text": "Thông minh thì ít bị lừa.",
-      "strike": "ít bị lừa.",
-      "replace": "vẫn bị lừa",
-      "strike_cue": "vậy mà"
+      "items": [
+       {
+        "icon": "book",
+        "label": "Sai vì thiếu hiểu biết",
+        "cue": "thiếu hiểu"
+       },
+       {
+        "icon": "brain",
+        "label": "Càng thông minh, càng ít bị lừa",
+        "cue": "người càng"
+       }
+      ]
      },
      {
-      "type": "stat",
-      "value": 10,
-      "suffix": " xu",
-      "label": "câu trả lời bật ra ngay",
-      "note": "nhanh, tự tin… và sai",
-      "cue": "con số"
+      "type": "swap",
+      "kicker": "Vậy mà, với câu đố này",
+      "cue": "vậy mà",
+      "from": {
+       "label": "Người thông minh",
+       "icon": "brain"
+      },
+      "to": {
+       "label": "10 xu, bật ra ngay",
+       "icon": "lightning",
+       "cue": "mười xu"
+      },
+      "line": "Và nó sai.",
+      "line_cue": "và nó"
      }
     ]
    },
@@ -228,14 +264,14 @@
       "kicker": "Tư Duy Nhanh Và Chậm",
       "facts": [
        {
+        "big": "Gậy & bóng",
+        "text": "Câu đố nằm trong sách",
+        "cue": "câu đố"
+       },
+       {
         "big": "2011",
         "text": "Sách ra đời",
         "cue": "năm hai nghìn mười"
-       },
-       {
-        "big": "Alpha",
-        "text": "Bản tiếng Việt",
-        "cue": "của daniel"
        }
       ]
      },
@@ -315,18 +351,27 @@
       ]
      },
      {
-      "type": "statement",
-      "kicker": "Đáp án",
-      "text": "Bóng giá 10 xu.",
-      "strike": "10 xu.",
-      "replace": "5 xu",
-      "strike_cue": "đáp án",
-      "cue": "đáp án"
+      "type": "swap",
+      "kicker": "Đáp án đúng",
+      "cue": "đáp án",
+      "from": {
+       "label": "10 xu",
+       "icon": "coin"
+      },
+      "to": {
+       "label": "5 xu",
+       "icon": "coin",
+       "cue": "năm xu"
+      }
      },
      {
       "type": "icon",
-      "icon": "hourglass",
-      "line": "Vài giây kiểm tra",
+      "icon": "magnifier",
+      "kicker": "Chỉ cần vài giây kiểm tra",
+      "line": "…nhưng phần lớn bỏ qua.",
+      "line_cue": "nhưng phần",
+      "motion": "sink",
+      "motion_cue": "bỏ qua",
       "cue": "chỉ cần"
      }
     ]
@@ -344,13 +389,11 @@
     "type": "shots",
     "shots": [
      {
-      "type": "stat",
-      "value": 50,
-      "prefix": ">",
-      "suffix": "%",
-      "label": "Harvard · MIT · Princeton",
-      "note": "trả lời 10 xu",
-      "cue": "hơn năm"
+      "type": "icon",
+      "icon": "pie",
+      "kicker": "Harvard · MIT · Princeton",
+      "line": "> 50% trả lời theo trực giác",
+      "line_cue": "hơn năm"
      },
      {
       "type": "funnel",
@@ -358,8 +401,8 @@
       "start_full": true,
       "keep": 20,
       "keep_cue": "tám mươi",
-      "label": "Trường ít chọn lọc hơn",
-      "keep_label": "> 80% không kiểm tra",
+      "label": "Trường ít chọn lọc · > 80% bỏ qua",
+      "keep_label": "< 20% chịu kiểm tra",
       "cue": "ở những"
      }
     ]
@@ -377,28 +420,27 @@
     "shots": [
      {
       "type": "trio",
-      "kicker": "Hai nhân vật",
+      "kicker": "Hệ thống 1 · nhanh, tự động",
       "items": [
        {
         "icon": "lightning",
-        "label": "Hệ thống 1: nhanh, tự động",
+        "label": "Không tốn sức",
         "cue": "hệ thống một"
        },
        {
-        "icon": "turtle",
-        "label": "Hệ thống 2: chậm, tốn sức",
-        "cue": "hệ thống hai"
+        "icon": "eye",
+        "label": "Đọc chữ trên biển quảng cáo",
+        "cue": "đọc chữ"
        }
       ]
      },
      {
-      "type": "statement",
-      "kicker": "Hệ thống 2 đang làm việc",
-      "text": "17 × 24 = ?",
-      "highlight": [
-       "?"
-      ],
-      "cue": "nhân mười"
+      "type": "icon",
+      "icon": "turtle",
+      "kicker": "Hệ thống 2 · chậm, tốn sức",
+      "line": "17 × 24 = ?",
+      "line_cue": "nhân mười",
+      "cue": "hệ thống hai"
      }
     ]
    },
@@ -414,11 +456,20 @@
     "type": "shots",
     "shots": [
      {
-      "type": "icon",
-      "icon": "lightning",
+      "type": "trio",
       "kicker": "Hệ thống 1",
-      "line": "Luôn có sẵn một câu trả lời",
-      "line_cue": "luôn có"
+      "items": [
+       {
+        "icon": "gear",
+        "label": "Làm việc suốt ngày",
+        "cue": "làm việc"
+       },
+       {
+        "icon": "lightning",
+        "label": "Luôn có sẵn câu trả lời",
+        "cue": "luôn có"
+       }
+      ]
      },
      {
       "type": "icon",
@@ -442,27 +493,33 @@
     "type": "shots",
     "shots": [
      {
-      "type": "swap",
-      "kicker": "Bài học 1 · Chậm lại trước quyết định lớn",
-      "from": {
-       "label": "Trả lời ngay",
-       "icon": "lightning"
-      },
-      "to": {
-       "label": "Dừng lại, kiểm tra",
-       "icon": "hourglass",
-       "cue": "dừng vài"
-      },
-      "cue": "khi một"
+      "type": "icon",
+      "icon": "turtle",
+      "kicker": "Bài học 1",
+      "line": "Chậm lại trước quyết định lớn.",
+      "line_cue": "chậm lại"
      },
      {
-      "type": "statement",
-      "kicker": "Trước mỗi quyết định lớn",
-      "text": "Mình đã kiểm tra chưa?",
-      "highlight": [
-       "kiểm tra"
-      ],
-      "cue": "mình đã"
+      "type": "swap",
+      "kicker": "Vì sao 10 xu sai?",
+      "cue": "câu trả lời mười",
+      "from": {
+       "label": "Vì bạn kém",
+       "icon": "brain"
+      },
+      "to": {
+       "label": "Vì nó đến quá dễ",
+       "icon": "lightning",
+       "cue": "quá dễ"
+      }
+     },
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Trước quyết định quan trọng",
+      "line": "Mình đã kiểm tra chưa?",
+      "line_cue": "mình đã",
+      "cue": "khi một"
      }
     ]
    },
@@ -479,18 +536,19 @@
     "shots": [
      {
       "type": "icon",
-      "icon": "dice",
-      "kicker": "Một vòng quay",
-      "line": "0 → 100, nhưng chỉ dừng ở 10 hoặc 65",
+      "icon": "flywheel",
+      "motion": "spin",
+      "turns": 2.5,
+      "kicker": "Một vòng quay số 0 → 100",
+      "line": "…chỉ dừng ở 10 hoặc 65",
       "line_cue": "được chỉnh"
      },
      {
-      "type": "statement",
+      "type": "icon",
+      "icon": "pie",
       "kicker": "Rồi họ hỏi",
-      "text": "Châu Phi chiếm bao nhiêu % Liên Hợp Quốc?",
-      "highlight": [
-       "bao nhiêu %"
-      ],
+      "line": "Châu Phi chiếm bao nhiêu % Liên Hợp Quốc?",
+      "line_cue": "các nước",
       "cue": "rồi họ"
      }
     ]
@@ -505,20 +563,33 @@
    "act": "story",
    "narration": "Một con số ngẫu nhiên, chẳng liên quan gì. Vậy mà nhóm thấy số mười đoán khoảng hai mươi lăm phần trăm. Nhóm thấy số sáu mươi lăm đoán khoảng bốn mươi lăm phần trăm.",
    "visual": {
-    "type": "compare",
-    "title": "Con số neo kéo câu trả lời",
-    "left": {
-     "title": "Vòng quay dừng ở 10",
-     "items": [
-      "Đoán ≈ 25%"
-     ]
-    },
-    "right": {
-     "title": "Vòng quay dừng ở 65",
-     "items": [
-      "Đoán ≈ 45%"
-     ]
-    }
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "dice",
+      "kicker": "Một con số ngẫu nhiên",
+      "line": "Chẳng liên quan gì.",
+      "line_cue": "chẳng liên"
+     },
+     {
+      "type": "trio",
+      "kicker": "Con số neo kéo câu trả lời",
+      "cue": "vậy mà",
+      "items": [
+       {
+        "icon": "anchor",
+        "label": "Thấy 10 → đoán ≈ 25%",
+        "cue": "nhóm thấy số mười"
+       },
+       {
+        "icon": "anchor",
+        "label": "Thấy 65 → đoán ≈ 45%",
+        "cue": "nhóm thấy số sáu"
+       }
+      ]
+     }
+    ]
    },
    "sources": [
     "tk1974",
@@ -534,16 +605,16 @@
     "type": "shots",
     "shots": [
      {
-      "type": "statement",
-      "kicker": "Tên của nó",
-      "text": "Hiệu ứng mỏ neo.",
-      "highlight": [
-       "mỏ neo."
-      ]
+      "type": "icon",
+      "icon": "anchor",
+      "kicker": "Hiệu ứng mỏ neo",
+      "line": "Con số đầu tiên kéo bạn về phía nó.",
+      "line_cue": "con số"
      },
      {
       "type": "trio",
-      "kicker": "Bài học 2 · Cảnh giác con số đầu tiên",
+      "kicker": "Mỏ neo ở khắp nơi",
+      "cue": "giá niêm",
       "items": [
        {
         "icon": "store",
@@ -557,13 +628,12 @@
        },
        {
         "icon": "chart",
-        "label": "Giá mình từng mua",
+        "label": "Giá bạn từng mua",
         "cue": "giá bạn"
        }
       ],
-      "line": "Tự ước lượng trước khi nghe.",
-      "line_cue": "bài học",
-      "cue": "giá niêm"
+      "line": "Bài học 2: cảnh giác con số đầu tiên.",
+      "line_cue": "bài học"
      }
     ]
    },
@@ -581,36 +651,21 @@
      {
       "type": "icon",
       "icon": "coin",
-      "kicker": "Một ván tung đồng xu",
+      "motion": "spin",
+      "turns": 3,
+      "kicker": "Bài học 3 · Một ván tung đồng xu",
       "line": "Sấp −100 đô · Ngửa +150 đô",
       "line_cue": "sấp"
      },
      {
-      "type": "statement",
-      "kicker": "Phần lớn mọi người",
-      "text": "Bạn có chơi không?",
-      "highlight": [
-       "chơi"
-      ],
+      "type": "icon",
+      "icon": "scale",
+      "motion": "swing",
+      "period": 2.6,
+      "kicker": "Bạn có chơi không?",
+      "line": "Sợ mất 100 nặng hơn mong được 150",
+      "line_cue": "nỗi sợ",
       "cue": "bạn có"
-     },
-     {
-      "type": "trio",
-      "kicker": "Phần lớn mọi người",
-      "cross": false,
-      "cue": "với phần",
-      "items": [
-       {
-        "icon": "shield",
-        "label": "Sợ mất 100",
-        "cue": "nỗi sợ"
-       },
-       {
-        "icon": "star",
-        "label": "Mong được 150",
-        "cue": "niềm hy"
-       }
-      ]
      }
     ]
    },
@@ -626,23 +681,27 @@
     "type": "shots",
     "shots": [
      {
-      "type": "stat",
-      "value": 2.5,
-      "from": 1.5,
-      "decimals": 1,
-      "prefix": "1,5 – ",
-      "suffix": "×",
-      "label": "Mất mát nặng hơn được",
-      "note": "ước tính từ nhiều thí nghiệm",
-      "cue": "một phẩy"
+      "type": "icon",
+      "icon": "coins",
+      "kicker": "Né tránh mất mát",
+      "line": "Mất đau gấp 1,5 – 2,5 lần được",
+      "line_cue": "nỗi đau",
+      "motion": "sink",
+      "motion_cue": "khi mất"
      },
      {
-      "type": "icon",
-      "icon": "scale",
+      "type": "swap",
       "kicker": "Bài học 3 · Nhìn cả ván bài",
-      "line": "Cả chuỗi quyết định, không chỉ một khoản lỗ",
-      "line_cue": "đánh giá",
-      "cue": "bài học"
+      "cue": "bài học",
+      "from": {
+       "label": "Một khoản lỗ",
+       "icon": "coin"
+      },
+      "to": {
+       "label": "Cả chuỗi quyết định",
+       "icon": "cards",
+       "cue": "đánh giá"
+      }
      }
     ]
    },
@@ -694,20 +753,43 @@
     "type": "shots",
     "shots": [
      {
-      "type": "statement",
-      "kicker": "Hiểu lầm phổ biến",
-      "text": "Hệ thống 1 và 2 là hai vùng não.",
-      "strike": "hai vùng não.",
-      "replace": "hai nhân vật hư cấu",
-      "strike_cue": "nhân vật"
+      "type": "trio",
+      "kicker": "Hiểu lầm: hai vùng trong não",
+      "cross": true,
+      "items": [
+       {
+        "icon": "brain",
+        "label": "Hệ thống 1",
+        "cue": "hệ thống một"
+       },
+       {
+        "icon": "brain",
+        "label": "Hệ thống 2",
+        "cue": "và hai"
+       }
+      ]
      },
      {
       "type": "icon",
-      "icon": "brain",
+      "icon": "mask",
+      "kicker": "Kahneman gọi chúng là",
+      "line": "Những nhân vật hư cấu.",
+      "line_cue": "nhân vật",
+      "cue": "kahneman"
+     },
+     {
+      "type": "swap",
       "kicker": "Đọc thế nào cho đúng",
-      "line": "Tấm gương, không phải bản đồ não",
-      "line_cue": "tấm gương",
-      "cue": "hãy đọc"
+      "cue": "hãy đọc",
+      "from": {
+       "label": "Sách giải phẫu não",
+       "icon": "brain"
+      },
+      "to": {
+       "label": "Tấm gương soi thói quen",
+       "icon": "mirror",
+       "cue": "tấm gương"
+      }
      }
     ]
    },
@@ -763,19 +845,48 @@
     "type": "shots",
     "shots": [
      {
-      "type": "statement",
-      "kicker": "Quả bóng giá 5 xu",
-      "text": "Không đo trí thông minh. Đo một khoảnh khắc dừng lại.",
-      "highlight": [
-       "dừng lại."
-      ]
+      "type": "swap",
+      "kicker": "Quả bóng 5 xu đo gì?",
+      "cue": "không đo",
+      "from": {
+       "label": "Bạn thông minh đến đâu",
+       "icon": "brain"
+      },
+      "to": {
+       "label": "Một khoảnh khắc dừng lại",
+       "icon": "hourglass",
+       "cue": "nó đo"
+      }
      },
      {
       "type": "icon",
-      "icon": "tea",
-      "steam": true,
-      "line": "Mời Hệ thống 2 vào phòng.",
-      "cue": "lần tới"
+      "icon": "magnifier",
+      "kicker": "Dừng lại để hỏi",
+      "line": "Câu trả lời này từ đâu ra?",
+      "line_cue": "câu trả",
+      "cue": "lúc bạn"
+     },
+     {
+      "type": "trio",
+      "kicker": "Lần tới",
+      "cue": "lần tới",
+      "items": [
+       {
+        "icon": "lightning",
+        "label": "Ý nghĩ bật ra quá nhanh",
+        "cue": "bật ra"
+       },
+       {
+        "icon": "door",
+        "label": "Mở cửa",
+        "cue": "hãy mời"
+       },
+       {
+        "icon": "turtle",
+        "label": "Mời Hệ thống 2 vào phòng",
+        "cue": "hệ thống hai"
+       }
+      ]
      }
     ]
    },

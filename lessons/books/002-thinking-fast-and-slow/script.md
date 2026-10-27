@@ -14,7 +14,7 @@ _Review sách · Tập 2 · 901 words · ~3.88 min · 4:3_
 ## Script
 | # | act | narration | on screen |
 |---|---|---|---|
-| h1 | hook | Một cây gậy và một quả bóng giá một đô la mười. Hơn nửa sinh viên Harvard, MIT và Princeton trả lời sai. | statement: Gậy + bóng = 1,10 đô. Hơn nửa trả lời sai. |
+| h1 | hook | Một cây gậy và một quả bóng giá một đô la mười. Hơn nửa sinh viên Harvard, MIT và Princeton trả lời sai. | shots: shots |
 | h2 | context | Cây gậy đắt hơn quả bóng đúng một đô la. Vậy quả bóng giá bao nhiêu? Giữ câu trả lời trong đầu nhé, và rót một tách trà. Vài phút tới, bạn sẽ gặp hai nhân vật sống trong đầu mình, và ba bài học để bớt bị chúng đánh lừa. | shots: shots |
 | t0 | context |  | title: Tư Duy Nhanh Và Chậm |
 | b01 | misconception | Chúng ta hay nghĩ sai lầm đến từ thiếu hiểu biết. Người càng thông minh thì càng ít bị lừa. Vậy mà với câu đố này, con số bật ra trong đầu hầu hết mọi người là mười xu. Và nó sai. | shots: shots |
@@ -26,7 +26,7 @@ _Review sách · Tập 2 · 901 words · ~3.88 min · 4:3_
 | b07 | story | Hệ thống một làm việc suốt ngày, và thường làm rất tốt. Vấn đề là nó luôn có sẵn một câu trả lời, kể cả khi câu hỏi quá khó. Còn hệ thống hai thì lười, hay gật đầu với câu trả lời đầu tiên. | shots: shots |
 | b08 | principle | Bài học thứ nhất: chậm lại trước quyết định lớn. Câu trả lời mười xu không sai vì bạn kém, mà vì nó đến quá dễ. Khi một quyết định quan trọng mà câu trả lời lại hiện ra ngay, hãy dừng vài giây và hỏi: mình đã kiểm tra chưa? | shots: shots |
 | b09 | story | Bài học thứ hai bắt đầu bằng một vòng quay. Kahneman và Tversky dùng một vòng quay số từ không đến một trăm, được chỉnh để chỉ dừng ở mười hoặc sáu mươi lăm. Rồi họ hỏi: các nước châu Phi chiếm bao nhiêu phần trăm Liên Hợp Quốc? | shots: shots |
-| b10 | story | Một con số ngẫu nhiên, chẳng liên quan gì. Vậy mà nhóm thấy số mười đoán khoảng hai mươi lăm phần trăm. Nhóm thấy số sáu mươi lăm đoán khoảng bốn mươi lăm phần trăm. _(estimate)_ | compare: Con số neo kéo câu trả lời |
+| b10 | story | Một con số ngẫu nhiên, chẳng liên quan gì. Vậy mà nhóm thấy số mười đoán khoảng hai mươi lăm phần trăm. Nhóm thấy số sáu mươi lăm đoán khoảng bốn mươi lăm phần trăm. _(estimate)_ | shots: shots |
 | b11 | principle | Đó là hiệu ứng mỏ neo. Con số đầu tiên bạn nghe, dù vô lý, vẫn kéo phán đoán của bạn về phía nó. Giá niêm yết. Mức lương đầu tiên được đề nghị. Giá bạn từng mua một món đồ. Bài học thứ hai: cảnh giác con số đầu tiên. | shots: shots |
 | b12 | story | Bài học thứ ba là một ván tung đồng xu. Sấp, bạn mất một trăm đô. Ngửa, bạn được một trăm năm mươi đô. Bạn có chơi không? Với phần lớn mọi người, nỗi sợ mất một trăm lớn hơn niềm hy vọng được một trăm năm mươi. | shots: shots |
 | b13 | principle | Kahneman gọi đó là né tránh mất mát. Trong nhiều thí nghiệm, nỗi đau khi mất nặng khoảng một phẩy năm đến hai phẩy năm lần niềm vui khi được. Bài học thứ ba: nhìn cả ván bài. Đánh giá cả chuỗi quyết định, đừng chỉ nhìn một khoản lỗ. _(estimate)_ | shots: shots |

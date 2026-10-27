@@ -173,7 +173,7 @@
       "cross": true,
       "items": [
        {
-        "icon": "brain",
+        "icon": "book",
         "label": "Bằng cấp",
         "cue": "bằng cấp"
        },
@@ -192,13 +192,20 @@
       "cue": "rót"
      },
      {
-      "type": "statement",
+      "type": "swap",
       "kicker": "Đến cuối clip",
-      "text": "Ba bài học về tiền.",
-      "highlight": [
-       "Ba bài học"
-      ],
-      "cue": "đến cuối"
+      "cue": "đến cuối",
+      "from": {
+       "label": "Một công thức",
+       "icon": "checklist"
+      },
+      "to": {
+       "label": "Ba bài học về tiền",
+       "icon": "key",
+       "cue": "ba bài"
+      },
+      "line": "Không cần công thức nào cả.",
+      "line_cue": "không cần"
      }
     ]
    }
@@ -254,13 +261,20 @@
       ]
      },
      {
-      "type": "statement",
+      "type": "swap",
       "kicker": "Morgan Housel",
-      "text": "Tiền là chuyện của toán học.",
-      "strike": "của toán học.",
-      "replace": "của hành vi",
-      "strike_cue": "hành vi",
-      "cue": "morgan"
+      "cue": "morgan",
+      "from": {
+       "label": "Chuyện toán học",
+       "icon": "brain"
+      },
+      "to": {
+       "label": "Chuyện hành vi",
+       "icon": "mirror",
+       "cue": "hành vi"
+      },
+      "line": "Và hành vi khó dạy hơn nhiều.",
+      "line_cue": "khó dạy"
      }
     ]
    },
@@ -279,7 +293,7 @@
       "type": "portrait",
       "name": "Morgan Housel",
       "initials": "MH",
-      "role": "Collaborative Fund",
+      "role": "Đối tác · Collaborative Fund",
       "years": "Từng viết cho Motley Fool · WSJ"
      },
      {
@@ -292,7 +306,7 @@
       "facts": [
        {
         "big": "2020",
-        "text": "Harriman House",
+        "text": "Sách ra đời",
         "cue": "năm hai"
        },
        {
@@ -374,22 +388,29 @@
     "type": "shots",
     "shots": [
      {
-      "type": "stat",
-      "value": 8,
-      "prefix": "> ",
-      "suffix": " triệu $",
-      "label": "để lại khi qua đời",
-      "note": "2014 · 92 tuổi",
-      "cue": "hơn tám"
+      "type": "icon",
+      "icon": "coins",
+      "motion": "grow",
+      "kicker": "2014 · 92 tuổi · cả thị trấn sững sờ",
+      "line": "Để lại hơn 8 triệu $.",
+      "line_cue": "hơn tám"
      },
      {
-      "type": "statement",
-      "kicker": "Di chúc",
-      "text": "Hơn 6 triệu $ cho bệnh viện và thư viện.",
-      "highlight": [
-       "bệnh viện và thư viện."
-      ],
-      "cue": "hơn sáu"
+      "type": "trio",
+      "kicker": "Hơn 6 triệu $ tặng lại",
+      "cue": "hơn sáu",
+      "items": [
+       {
+        "icon": "people",
+        "label": "Bệnh viện địa phương",
+        "cue": "bệnh viện"
+       },
+       {
+        "icon": "book",
+        "label": "Thư viện địa phương",
+        "cue": "thư viện"
+       }
+      ]
      }
     ]
    },
@@ -428,12 +449,12 @@
       ]
      },
      {
-      "type": "stat",
-      "value": 95,
-      "prefix": "≥ ",
-      "label": "mã cổ phiếu lúc qua đời",
-      "note": "theo The Wall Street Journal, 2015",
-      "cue": "chín mươi"
+      "type": "icon",
+      "icon": "pie",
+      "kicker": "Theo The Wall Street Journal",
+      "line": "≥ 95 mã cổ phiếu lúc qua đời",
+      "line_cue": "chín mươi",
+      "cue": "theo the"
      }
     ]
    },
@@ -467,18 +488,20 @@
         "cue": "vay nặng"
        },
        {
-        "icon": "store",
-        "label": "11 phòng tắm",
+        "icon": "house",
+        "label": "Biệt thự · 11 phòng tắm",
         "cue": "mười một"
        }
       ]
      },
      {
-      "type": "stat",
-      "value": 90000,
-      "prefix": "> $",
-      "label": "chi phí mỗi tháng",
-      "note": "theo Housel",
+      "type": "icon",
+      "icon": "coins",
+      "motion": "sink",
+      "motion_cue": "mỗi tháng",
+      "kicker": "Chi phí",
+      "line": "> 90.000 $ mỗi tháng",
+      "line_cue": "chín mươi",
       "cue": "chín mươi"
      }
     ]
@@ -499,7 +522,9 @@
       "type": "icon",
       "icon": "lightning",
       "kicker": "2008",
-      "line": "Khủng hoảng ập đến."
+      "line": "Khủng hoảng ập đến.",
+      "motion": "shake",
+      "motion_cue": "ập"
      },
      {
       "type": "halo",
@@ -601,7 +626,8 @@
       "type": "icon",
       "icon": "target",
       "kicker": "Bài học 1 · Biết thế nào là đủ",
-      "line": "Cột mốc ngừng dịch chuyển."
+      "line": "Cột mốc ngừng dịch chuyển.",
+      "line_cue": "cột mốc"
      },
      {
       "type": "swap",
@@ -612,12 +638,20 @@
        "icon": "shield"
       },
       "to": {
-       "label": "Thứ không cần",
-       "icon": "rocket",
+       "label": "Thứ không có & không cần",
+       "icon": "star",
        "cue": "để lấy"
-      },
-      "line": "Biết khi nào ngừng cược.",
-      "line_cue": "biết thế"
+      }
+     },
+     {
+      "type": "icon",
+      "icon": "cards",
+      "motion": "sink",
+      "motion_cue": "ngừng đặt",
+      "kicker": "Biết thế nào là đủ",
+      "line": "…là biết khi nào ngừng cược.",
+      "line_cue": "là biết",
+      "cue": "biết thế"
      }
     ]
    },
@@ -640,13 +674,23 @@
       "years": "≈ 84,5 tỷ $ (2020)"
      },
      {
-      "type": "stat",
-      "value": 96,
-      "prefix": "≈ ",
-      "suffix": "%",
-      "label": "tài sản đến sau tuổi 65",
-      "note": "81,5 / 84,5 tỷ $ · theo Housel",
-      "cue": "tám mươi mốt"
+      "type": "trio",
+      "kicker": "Tài sản của Buffett",
+      "cue": "và khoảng",
+      "items": [
+       {
+        "icon": "coin",
+        "label": "Trước tuổi 65",
+        "cue": "và khoảng"
+       },
+       {
+        "icon": "coins",
+        "label": "Sau tuổi 65: ≈ 81 tỷ $",
+        "cue": "sinh nhật"
+       }
+      ],
+      "line": "≈ 96% đến sau sinh nhật thứ 65",
+      "line_cue": "sáu mươi"
      }
     ]
    },
@@ -672,9 +716,24 @@
      {
       "type": "icon",
       "icon": "snowball",
-      "kicker": "Bài học 2 · Lãi kép cần thời gian",
-      "line": "Ở lại đủ lâu.",
+      "motion": "grow",
+      "kicker": "Ronald Read cũng vậy",
+      "line": "Chỉ cần ở lại đủ lâu.",
+      "line_cue": "chỉ cần",
       "cue": "ronald"
+     },
+     {
+      "type": "swap",
+      "kicker": "Bài học 2 · Lãi kép cần thời gian",
+      "cue": "lãi kép",
+      "from": {
+       "label": "Thiên tài",
+       "icon": "bulb"
+      },
+      "to": {
+       "label": "Thời gian",
+       "icon": "hourglass"
+      }
      }
     ]
    },
@@ -691,8 +750,16 @@
     "type": "shots",
     "shots": [
      {
+      "type": "icon",
+      "icon": "shield",
+      "kicker": "Bài học 3 · Chừa chỗ cho sai lầm",
+      "line": "Fuscone thiếu một khoảng đệm.",
+      "line_cue": "ông thiếu"
+     },
+     {
       "type": "trio",
-      "kicker": "Thiếu khoảng đệm",
+      "kicker": "Không có khoảng đệm",
+      "cue": "nợ nhiều",
       "items": [
        {
         "icon": "coins",
@@ -700,13 +767,13 @@
         "cue": "nợ nhiều"
        },
        {
-        "icon": "store",
+        "icon": "house",
         "label": "Tài sản khó bán",
         "cue": "tài sản"
        },
        {
         "icon": "lightning",
-        "label": "Một cú sốc",
+        "label": "Một cú sốc là đủ",
         "cue": "một cú"
        }
       ]
@@ -714,8 +781,9 @@
      {
       "type": "icon",
       "icon": "umbrella",
-      "kicker": "Bài học 3 · Chừa chỗ cho sai lầm",
-      "line": "Kế hoạch cho lúc kế hoạch hỏng.",
+      "kicker": "Housel khuyên",
+      "line": "Kế hoạch cho cả lúc không như ý.",
+      "line_cue": "hãy lên",
       "cue": "housel"
      }
     ]
@@ -732,19 +800,35 @@
     "type": "shots",
     "shots": [
      {
-      "type": "statement",
-      "kicker": "Điều dễ tin",
-      "text": "Cứ tiết kiệm là sẽ giàu.",
-      "strike": "sẽ giàu.",
-      "replace": "chưa chắc",
-      "strike_cue": "người thắng"
+      "type": "icon",
+      "icon": "eye",
+      "kicker": "Cẩn thận với câu chuyện quá đẹp",
+      "line": "Ronald Read: người thắng ta nhìn thấy.",
+      "line_cue": "ronald"
      },
      {
-      "type": "icon",
-      "icon": "dice",
-      "kicker": "Người ta không viết về…",
-      "line": "Những người chọn nhầm.",
-      "cue": "còn bao"
+      "type": "trio",
+      "kicker": "Còn bao nhiêu người…",
+      "cue": "còn bao",
+      "items": [
+       {
+        "icon": "coin",
+        "label": "Cũng tiết kiệm",
+        "cue": "cũng tiết"
+       },
+       {
+        "icon": "store",
+        "label": "Cũng giữ cổ phiếu",
+        "cue": "cũng giữ"
+       },
+       {
+        "icon": "dice",
+        "label": "Chọn nhầm công ty",
+        "cue": "chọn nhầm"
+       }
+      ],
+      "line": "…và chẳng ai viết về họ.",
+      "line_cue": "chẳng ai"
      },
      {
       "type": "book",
@@ -775,32 +859,44 @@
     "type": "shots",
     "shots": [
      {
-      "type": "statement",
+      "type": "icon",
+      "icon": "scale",
+      "motion": "swing",
+      "period": 2.6,
       "kicker": "Vậy",
-      "text": "Bài học là gì?",
-      "highlight": [
-       "Bài học"
-      ]
+      "line": "Bài học là gì?"
      },
      {
-      "type": "compare",
-      "title": "Điều quyết định",
+      "type": "trio",
+      "kicker": "Housel viết: không hẳn là…",
+      "cue": "housel",
+      "items": [
+       {
+        "icon": "coin",
+        "label": "Giống Read hơn",
+        "cue": "giống read"
+       },
+       {
+        "icon": "house",
+        "label": "Giống Fuscone ít đi",
+        "cue": "giống fuscone"
+       }
+      ],
+      "line": "…dù đó chẳng phải lời khuyên tồi.",
+      "line_cue": "dù đó"
+     },
+     {
+      "type": "swap",
+      "kicker": "Mà là",
       "cue": "mà là",
-      "left": {
-       "title": "Bạn biết bao nhiêu",
-       "items": [
-        "Bằng cấp",
-        "Kiến thức",
-        "Biểu đồ"
-       ]
+      "from": {
+       "label": "Bạn thông minh cỡ nào",
+       "icon": "brain"
       },
-      "right": {
-       "title": "Bạn cư xử ra sao",
-       "items": [
-        "Biết đủ",
-        "Kiên nhẫn",
-        "Khoảng đệm"
-       ]
+      "to": {
+       "label": "Cách bạn cư xử",
+       "icon": "mirror",
+       "cue": "cách bạn"
       }
      }
     ]
@@ -857,18 +953,42 @@
     "type": "shots",
     "shots": [
      {
-      "type": "statement",
+      "type": "icon",
+      "icon": "book",
+      "motion": "sink",
+      "motion_cue": "không học",
       "kicker": "Người lao công & vị giám đốc",
-      "text": "Biết đủ. Kiên nhẫn. Có khoảng đệm.",
-      "highlight": [
-       "Biết đủ."
+      "line": "Không phải học nhiều hơn.",
+      "line_cue": "không học"
+     },
+     {
+      "type": "trio",
+      "kicker": "Ông chỉ…",
+      "cue": "ông chỉ",
+      "items": [
+       {
+        "icon": "target",
+        "label": "Biết đủ",
+        "cue": "biết đủ"
+       },
+       {
+        "icon": "hourglass",
+        "label": "Đủ kiên nhẫn",
+        "cue": "đủ kiên"
+       },
+       {
+        "icon": "shield",
+        "label": "Không cược thứ mình cần",
+        "cue": "không bao"
+       }
       ]
      },
      {
       "type": "icon",
-      "icon": "tea",
-      "steam": true,
+      "icon": "mirror",
+      "kicker": "Không phải bạn giỏi đến đâu",
       "line": "Bạn cư xử với tiền thế nào?",
+      "line_cue": "bạn cư",
       "cue": "vậy câu"
      }
     ]
