@@ -187,12 +187,12 @@
       "cross": true,
       "items": [
        {
-        "icon": "star",
+        "icon": "dice",
         "label": "May mắn",
         "cue": "may mắn"
        },
        {
-        "icon": "rocket",
+        "icon": "star",
         "label": "Giám đốc hào nhoáng",
         "cue": "giám đốc"
        }
@@ -206,11 +206,19 @@
       "cue": "pha một"
      },
      {
-      "type": "statement",
+      "type": "trio",
       "kicker": "Trong vài phút tới",
-      "text": "Một câu hỏi. Ba bài học.",
-      "highlight": [
-       "Ba bài học"
+      "items": [
+       {
+        "icon": "magnifier",
+        "label": "Một câu hỏi",
+        "cue": "điều gì"
+       },
+       {
+        "icon": "key",
+        "label": "Ba bài học",
+        "cue": "ba bài"
+       }
       ],
       "cue": "khác biệt"
      }
@@ -268,12 +276,17 @@
       ]
      },
      {
-      "type": "statement",
-      "kicker": "Điều ta hay tin",
-      "text": "Vĩ đại là một cú bùng nổ.",
-      "strike": "một cú bùng nổ.",
-      "replace": "từng bước nhỏ",
-      "strike_cue": "cuốn sách",
+      "type": "swap",
+      "kicker": "Cuốn sách nói khác",
+      "from": {
+       "label": "Một cú bùng nổ",
+       "icon": "rocket"
+      },
+      "to": {
+       "label": "Từng bước nhỏ",
+       "icon": "sprout",
+       "cue": "khác hẳn"
+      },
       "cue": "cuốn sách"
      }
     ]
@@ -569,12 +582,17 @@
       ]
      },
      {
-      "type": "statement",
-      "kicker": "Walgreens · chuỗi nhà thuốc",
-      "text": "Lợi nhuận trên mỗi lượt khách.",
-      "highlight": [
-       "mỗi lượt khách"
-      ],
+      "type": "swap",
+      "kicker": "Walgreens · một thước đo duy nhất",
+      "from": {
+       "label": "Lợi nhuận mỗi cửa hàng",
+       "icon": "store"
+      },
+      "to": {
+       "label": "Lợi nhuận mỗi lượt khách",
+       "icon": "people",
+       "cue": "lượt khách"
+      },
       "cue": "chuỗi nhà"
      },
      {
@@ -641,7 +659,7 @@
       "cross": true,
       "items": [
        {
-        "icon": "bulb",
+        "icon": "lightning",
         "label": "Hành động quyết định duy nhất",
         "cue": "hành động"
        },
@@ -651,7 +669,7 @@
         "cue": "chương trình"
        },
        {
-        "icon": "star",
+        "icon": "dice",
         "label": "Cú may mắn đơn lẻ",
         "cue": "cú may"
        }
@@ -751,12 +769,12 @@
     "type": "shots",
     "shots": [
      {
-      "type": "statement",
+      "type": "icon",
+      "icon": "scale",
+      "motion": "swing",
+      "period": 2.6,
       "kicker": "Vậy",
-      "text": "Cuốn sách sai sao?",
-      "highlight": [
-       "sai"
-      ]
+      "line": "Cuốn sách sai sao?"
      },
      {
       "type": "book",
@@ -774,12 +792,17 @@
       ]
      },
      {
-      "type": "statement",
+      "type": "swap",
       "kicker": "Đọc thế nào cho đúng",
-      "text": "Bản đồ, không phải công thức.",
-      "highlight": [
-       "Bản đồ"
-      ],
+      "from": {
+       "label": "Công thức làm giàu",
+       "icon": "checklist"
+      },
+      "to": {
+       "label": "Tấm bản đồ, la bàn",
+       "icon": "compass",
+       "cue": "tấm bản"
+      },
       "cue": "hãy đọc"
      }
     ]
@@ -836,19 +859,24 @@
     "type": "shots",
     "shots": [
      {
-      "type": "statement",
+      "type": "climb",
       "kicker": "Câu mở đầu của sách",
-      "text": "Tốt là kẻ thù của vĩ đại.",
-      "highlight": [
-       "kẻ thù"
-      ]
+      "heading": "Tốt là kẻ thù của vĩ đại.",
+      "peak": "Vĩ đại",
+      "rest": "Tốt",
+      "stop_cue": "dừng lại",
+      "line": "Đủ dễ chịu để ta dừng lại.",
+      "line_cue": "dừng lại"
      },
      {
-      "type": "icon",
-      "icon": "tea",
-      "steam": true,
-      "line": "Bánh đà của bạn là gì?",
-      "cue": "dừng lại"
+      "type": "flywheel",
+      "kicker": "Còn bạn",
+      "name": "Bánh đà của bạn là gì?",
+      "from_angle": 0,
+      "to_angle": 540,
+      "ease": "power2.in",
+      "fast_cue": "là gì",
+      "cue": "vậy hôm"
      }
     ]
    },

@@ -598,8 +598,44 @@ def trio(L, sid, v, dur, cue):
     return f'<div id="{sid}-c" style="position:absolute;inset:0;">{head}{cells}{foot}</div>', "", tw
 
 
+def _icon_motion(L, sid, motion: str, s_: float, dur: float, at: float, v: dict) -> list[str]:
+    """Motion that says something about the object: a wheel that keeps turning faster (spin), a pendulum between two
+    extremes (swing), a snowball that grows (grow), a hope that rises (rise), a thing that sinks or breaks on the word
+    that names it (sink, crack, shake). Finite tweens only: every frame is a function of time."""
+    c = f"{s_ / 2:.0f} {s_ / 2:.0f}"
+    if motion == "spin":
+        turns = float(v.get("turns", 2.5))
+        return [_ft(f"#{sid}-art", f'rotation: 0, svgOrigin: "{c}"', f'rotation: {360 * turns:.0f}, svgOrigin: "{c}", duration: {dur:.2f}, ease: "power2.in"', 0)]
+    if motion == "swing":  # a pendulum hung from the top centre
+        o, tw, t, k = f"{s_ / 2:.0f} 0", [], 0.3, 0
+        period = float(v.get("period", 1.6))
+        while t < dur - 0.2:
+            a0, a1 = (22, -22) if k % 2 else (-22, 22)
+            tw.append(_ft(f"#{sid}-art", f'rotation: {a0}, svgOrigin: "{o}"', f'rotation: {a1}, svgOrigin: "{o}", duration: {period / 2:.2f}, ease: "sine.inOut"', t, later=k > 0))
+            t += period / 2
+            k += 1
+        return tw
+    if motion == "grow":
+        o = f"{s_ / 2:.0f} {s_:.0f}"
+        return [_ft(f"#{sid}-art", f'scale: 0.45, svgOrigin: "{o}"', f'scale: 1.2, svgOrigin: "{o}", duration: {dur - 0.3:.2f}, ease: "power2.in"', 0.2)]
+    if motion == "rise":
+        return [_ft(f"#{sid}-art", "y: 40", f'y: -{s_ * 0.18:.0f}, duration: {dur - 0.3:.2f}, ease: "sine.inOut"', 0.2)]
+    if motion == "sink":
+        return [_ft(f"#{sid}-art", "y: 0, opacity: 1", f'y: {s_ * 0.35:.0f}, opacity: 0.3, duration: 1.2, ease: "power3.in"', at)]
+    if motion == "shake":
+        return [_ft(f"#{sid}-art", "x: 0", 'x: -14, duration: 0.06, ease: "none"', at),
+                _ft(f"#{sid}-art", "x: -14", 'x: 12, duration: 0.08, ease: "none"', at + 0.06, later=True),
+                _ft(f"#{sid}-art", "x: 12", 'x: 0, duration: 0.3, ease: "elastic.out(1, 0.4)"', at + 0.14, later=True)]
+    if motion == "crack":
+        return [_ft(f"#{sid}-a1", f'x: 0, rotation: 0, svgOrigin: "{c}"', f'x: -{s_ * 0.1:.0f}, rotation: -9, svgOrigin: "{c}", duration: 0.6, ease: "power3.out"', at),
+                _ft(f"#{sid}-a2", f'x: 0, rotation: 0, svgOrigin: "{c}"', f'x: {s_ * 0.1:.0f}, rotation: 9, svgOrigin: "{c}", duration: 0.6, ease: "power3.out"', at)]
+    return []
+
+
 def icon(L, sid, v, dur, cue):
-    """One drawn object, big, with its own small life (steam from a cup), and the line it stands for."""
+    """One drawn object, big, with its own small life (steam from a cup; or a `motion` that carries the meaning:
+    spin, swing, grow, rise, sink, crack, shake, the event ones on `motion_cue`), and the line it stands for.
+    Pick the object for what the line SAYS (a flywheel for momentum, a pendulum for swings), never for decoration."""
     s_ = L.px(0.3)
     x, y = (L.w - s_) / 2, L.h * 0.2
     head, tw = _head(L, sid, v, 0.12)
@@ -616,6 +652,14 @@ def icon(L, sid, v, dur, cue):
                 at = 0.4 + k * 0.7 + rep * 2.2
                 tw.append(_ft(f"#{pid}", "opacity: 0, y: 10", 'opacity: 0.6, y: -6, duration: 1.0, ease: "sine.out"', at, later=rep > 0))
                 tw.append(_ft(f"#{pid}", "opacity: 0.6, y: -6", f'opacity: 0, y: -{L.px(0.04)}, duration: 1.0, ease: "sine.in"', at + 1.0, later=True))
+    motion = v.get("motion", "")
+    if motion == "crack":  # two halves of the same drawing, pulled apart on the cue
+        art = (f'<defs><clipPath id="{sid}-hl"><rect x="-10" y="-10" width="{s_ / 2 + 10}" height="{s_ + 20}"/></clipPath>'
+               f'<clipPath id="{sid}-hr"><rect x="{s_ / 2}" y="-10" width="{s_ / 2 + 10}" height="{s_ + 20}"/></clipPath></defs>'
+               f'<g id="{sid}-a1" clip-path="url(#{sid}-hl)">{art}</g><g id="{sid}-a2" clip-path="url(#{sid}-hr)">{art}</g>')
+    else:
+        art = f'<g id="{sid}-art">{art}</g>'
+    tw += _icon_motion(L, sid, motion, s_, dur, cue(v.get("motion_cue", ""), dur * 0.45) if v.get("motion_cue") else dur * 0.45, v)
     m = f"""<div id="{sid}-c" style="position:absolute;inset:0;">{head}
       <svg id="{sid}-ic" width="{s_}" height="{s_}" style="position:absolute;left:{x:.0f}px;top:{y:.0f}px;overflow:visible">{art}{steam}</svg>
       {f'<div id="{sid}-ln" class="serif" style="position:absolute;left:{L.px(0.08)}px;right:{L.px(0.08)}px;top:{y + s_ + L.px(0.06):.0f}px;text-align:center;font-size:{L.fs(0.065)}px;line-height:1.15;">{E(v["line"])}</div>' if v.get('line') else ''}
@@ -623,6 +667,54 @@ def icon(L, sid, v, dur, cue):
     tw.insert(0, _ft(f"#{sid}-ic", "opacity: 0, scale: 0.8, y: 20", 'opacity: 1, scale: 1, y: 0, duration: 0.7, ease: "back.out(1.5)"', 0.1))
     if v.get("line"):
         tw.append(_blur_in(f"#{sid}-ln", max(0.5, cue(v.get("line_cue", ""), 0.7)), 0.45))
+    return m, "", tw
+
+
+def climb(L, sid, v, dur, cue):
+    """A mountain path: the walker sets out, reaches a comfortable ledge (`rest`, e.g. "Tốt") and stops there on
+    `stop_cue`, while the summit (`peak`, e.g. "Vĩ đại") lights up above, still unclimbed. For lines about settling:
+    good enough, comfort, the plateau that keeps you from the top."""
+    head, tw = _head(L, sid, v, 0.1)
+    x0, x1, gy = L.w * 0.12, L.w * 0.88, L.h * 0.86
+    px, py = L.w * 0.62, L.h * 0.22  # summit
+    lx, ly = L.w * 0.42, L.h * 0.56  # ledge
+    sw = max(3, L.px(0.005))
+    ridge = f"M{x0:.0f} {gy:.0f} L{lx - L.px(0.12):.0f} {ly + L.px(0.06):.0f} L{lx + L.px(0.08):.0f} {ly:.0f} L{px:.0f} {py:.0f} L{x1:.0f} {gy:.0f} Z"
+    path = [(x0 + L.px(0.06), gy - 4), (lx - L.px(0.2), ly + L.px(0.17)), (lx - L.px(0.02), ly - 4)]
+    up = [(lx + L.px(0.06), ly - 6), (px - L.px(0.06), py + L.px(0.12)), (px, py - 6)]
+    pd = "M" + " L".join(f"{a:.0f} {b:.0f}" for a, b in path)
+    ud = "M" + " L".join(f"{a:.0f} {b:.0f}" for a, b in [path[-1]] + up)
+    plen = sum(math.hypot(path[i + 1][0] - path[i][0], path[i + 1][1] - path[i][1]) for i in range(len(path) - 1)) + 4
+    bench = (f'<path d="M{lx - L.px(0.05):.0f} {ly - L.px(0.03):.0f} L{lx + L.px(0.05):.0f} {ly - L.px(0.03):.0f} M{lx - L.px(0.045):.0f} {ly - L.px(0.03):.0f} '
+             f'L{lx - L.px(0.045):.0f} {ly:.0f} M{lx + L.px(0.045):.0f} {ly - L.px(0.03):.0f} L{lx + L.px(0.045):.0f} {ly:.0f} M{lx - L.px(0.05):.0f} {ly - L.px(0.06):.0f} '
+             f'L{lx + L.px(0.05):.0f} {ly - L.px(0.06):.0f}" fill="none" stroke="{L.ink}" stroke-width="{sw}" stroke-linecap="round"/>')
+    flag = (f'<path d="M{px:.0f} {py:.0f} L{px:.0f} {py - L.px(0.09):.0f} L{px + L.px(0.06):.0f} {py - L.px(0.07):.0f} L{px:.0f} {py - L.px(0.05):.0f}" '
+            f'fill="{L.accent}" fill-opacity="0.6" stroke="{L.accent}" stroke-width="{sw}" stroke-linejoin="round"/>')
+    t_stop = max(1.6, cue(v.get("stop_cue", ""), dur * 0.45))
+    m = f"""<div id="{sid}-c" style="position:absolute;inset:0;">{head}
+      <svg width="{L.w}" height="{L.h}" style="position:absolute;left:0;top:0;overflow:visible">
+        <path id="{sid}-mt" d="{ridge}" fill="{L.ink}" fill-opacity="0.05" stroke="{L.ink}" stroke-opacity="0.6" stroke-width="{sw}" stroke-linejoin="round"/>
+        <path id="{sid}-pt" d="{pd}" fill="none" stroke="{L.accent}" stroke-width="{sw}" stroke-dasharray="{plen:.0f}" stroke-dashoffset="{plen:.0f}" stroke-linecap="round"/>
+        <path id="{sid}-up" d="{ud}" fill="none" stroke="{L.muted}" stroke-width="2" stroke-dasharray="6 10" opacity="0"/>
+        <g id="{sid}-bn" opacity="0">{bench}</g>
+        <g id="{sid}-fl" opacity="0">{flag}</g>
+        <circle id="{sid}-w" cx="{path[0][0]:.0f}" cy="{path[0][1] - L.px(0.02):.0f}" r="{L.px(0.016)}" fill="{L.accent}"/>
+        <text id="{sid}-rl" x="{lx:.0f}" y="{ly + L.px(0.06):.0f}" text-anchor="middle" fill="{L.ink}" font-family="EB Garamond" font-size="{L.fs(0.05)}" opacity="0">{E(v.get("rest", ""))}</text>
+        <text id="{sid}-pl" x="{px:.0f}" y="{py - L.px(0.12):.0f}" text-anchor="middle" fill="{L.accent}" font-family="EB Garamond" font-size="{L.fs(0.06)}" opacity="0">{E(v.get("peak", ""))}</text>
+      </svg>
+      {f'<div id="{sid}-ln" class="muted" style="position:absolute;left:{L.px(0.08)}px;width:{L.w * 0.4:.0f}px;top:{L.h * 0.26:.0f}px;font-size:{L.fs(0.032)}px;line-height:1.35;opacity:0;">{E(v["line"])}</div>' if v.get('line') else ''}
+    </div>"""
+    tw += [_fade(f"#{sid}-mt", 0.1, 0.6), _fade(f"#{sid}-fl", 0.5, 0.5), _blur_in(f"#{sid}-pl", 0.6, 0.4), _fade(f"#{sid}-bn", 0.7, 0.4),
+           _ft(f"#{sid}-pt", f"strokeDashoffset: {plen:.0f}", f'strokeDashoffset: 0, duration: {t_stop - 0.3:.2f}, ease: "power1.inOut"', 0.3)]
+    # the walker follows the path to the ledge and sits down
+    seg_t = (t_stop - 0.3) / (len(path) - 1)
+    for i in range(1, len(path)):
+        tw.append(_ft(f"#{sid}-w", f'attr: {{cx: {path[i - 1][0]:.0f}, cy: {path[i - 1][1] - L.px(0.02):.0f}}}',
+                      f'attr: {{cx: {path[i][0]:.0f}, cy: {path[i][1] - L.px(0.02):.0f}}}, duration: {seg_t:.2f}, ease: "power1.inOut"', 0.3 + seg_t * (i - 1), later=i > 1))
+    tw += [_blur_in(f"#{sid}-rl", t_stop, 0.4),
+           _ft(f"#{sid}-up", "opacity: 0", 'opacity: 0.8, duration: 0.6, ease: "power2.out"', t_stop + 0.6)]
+    if v.get("line"):
+        tw.append(_fade(f"#{sid}-ln", max(t_stop + 0.8, cue(v.get("line_cue", ""), t_stop + 1.0)), 0.5))
     return m, "", tw
 
 
@@ -717,6 +809,83 @@ ICONS.update({
 })
 
 
+ICONS.update({
+    "anchor": lambda s, c: (f'<circle cx="{s*.5}" cy="{s*.16}" r="{s*.08}" {_st(s, c)}/><path d="M{s*.5} {s*.24} L{s*.5} {s*.88} M{s*.32} {s*.36} L{s*.68} {s*.36} '
+                            f'M{s*.14} {s*.6} C{s*.16} {s*.8} {s*.34} {s*.88} {s*.5} {s*.88} C{s*.66} {s*.88} {s*.84} {s*.8} {s*.86} {s*.6} '
+                            f'M{s*.08} {s*.66} L{s*.14} {s*.58} L{s*.22} {s*.66} M{s*.78} {s*.66} L{s*.86} {s*.58} L{s*.92} {s*.66}" {_st(s, c)}/>'),
+    "hammer": lambda s, c: (f'<path d="{_poly(s, [(.18,.18),(.62,.18),(.7,.3),(.62,.4),(.18,.4)])}" fill="{c}" fill-opacity="0.25" {_st(s, c)}/>'
+                            f'<path d="M{s*.42} {s*.4} L{s*.42} {s*.92}" {_st(s, c, .07)}/>'),
+    "pendulum": lambda s, c: (f'<path d="M{s*.2} {s*.06} L{s*.8} {s*.06} M{s*.5} {s*.06} L{s*.5} {s*.72}" {_st(s, c)}/>'
+                              f'<circle cx="{s*.5}" cy="{s*.8}" r="{s*.11}" fill="{c}" fill-opacity="0.35" {_st(s, c)}/>'),
+    "letter": lambda s, c: (f'<rect x="{s*.08}" y="{s*.22}" width="{s*.84}" height="{s*.56}" rx="{s*.04}" fill="{c}" fill-opacity="0.1" {_st(s, c)}/>'
+                            f'<path d="M{s*.08} {s*.24} L{s*.5} {s*.56} L{s*.92} {s*.24}" {_st(s, c)}/>'),
+    "house": lambda s, c: (f'<path d="{_poly(s, [(.06,.48),(.5,.1),(.94,.48)], False)}" {_st(s, c)}/>'
+                           f'<path d="{_poly(s, [(.16,.4),(.16,.9),(.84,.9),(.84,.4)], False)}" fill="{c}" fill-opacity="0.1" {_st(s, c)}/>'
+                           f'<rect x="{s*.42}" y="{s*.6}" width="{s*.16}" height="{s*.3}" {_st(s, c, .03)}/>'
+                           f'<rect x="{s*.24}" y="{s*.52}" width="{s*.12}" height="{s*.12}" {_st(s, c, .025)}/><rect x="{s*.64}" y="{s*.52}" width="{s*.12}" height="{s*.12}" {_st(s, c, .025)}/>'),
+    "haystack": lambda s, c: (f'<path d="M{s*.06} {s*.88} C{s*.1} {s*.4} {s*.3} {s*.14} {s*.5} {s*.14} C{s*.7} {s*.14} {s*.9} {s*.4} {s*.94} {s*.88} Z" fill="{c}" fill-opacity="0.2" {_st(s, c)}/>'
+                              + "".join(f'<path d="M{s*x} {s*.86} L{s*(x+.06)} {s*y}" {_st(s, c, .02)}/>' for x, y in ((.2,.5),(.36,.36),(.52,.3),(.66,.42),(.78,.6)))),
+    "chess": lambda s, c: (f'<path d="M{s*.3} {s*.9} L{s*.72} {s*.9} L{s*.68} {s*.76} L{s*.66} {s*.5} C{s*.74} {s*.42} {s*.74} {s*.22} {s*.58} {s*.12} '
+                           f'L{s*.5} {s*.06} L{s*.46} {s*.16} C{s*.36} {s*.2} {s*.24} {s*.34} {s*.22} {s*.48} L{s*.4} {s*.44} L{s*.36} {s*.76} Z" fill="{c}" fill-opacity="0.2" {_st(s, c)}/>'),
+    "cards": lambda s, c: (f'<rect x="{s*.12}" y="{s*.2}" width="{s*.44}" height="{s*.62}" rx="{s*.05}" transform="rotate(-12 {s*.34} {s*.5})" fill="{c}" fill-opacity="0.1" {_st(s, c)}/>'
+                           f'<rect x="{s*.42}" y="{s*.16}" width="{s*.44}" height="{s*.62}" rx="{s*.05}" transform="rotate(10 {s*.64} {s*.47})" fill="{c}" fill-opacity="0.2" {_st(s, c)}/>'
+                           f'<path d="M{s*.64} {s*.36} C{s*.56} {s*.28} {s*.5} {s*.4} {s*.64} {s*.54} C{s*.78} {s*.4} {s*.72} {s*.28} {s*.64} {s*.36} Z" fill="{c}"/>'),
+    "submarine": lambda s, c: (f'<path d="M{s*.12} {s*.62} C{s*.12} {s*.48} {s*.24} {s*.44} {s*.36} {s*.44} L{s*.74} {s*.44} C{s*.9} {s*.44} {s*.94} {s*.56} {s*.94} {s*.62} '
+                               f'C{s*.94} {s*.7} {s*.86} {s*.78} {s*.74} {s*.78} L{s*.36} {s*.78} C{s*.24} {s*.78} {s*.12} {s*.74} {s*.12} {s*.62} Z" fill="{c}" fill-opacity="0.18" {_st(s, c)}/>'
+                               f'<path d="M{s*.46} {s*.44} L{s*.5} {s*.28} L{s*.64} {s*.28} L{s*.66} {s*.44} M{s*.56} {s*.28} L{s*.56} {s*.16} L{s*.64} {s*.16} '
+                               f'M{s*.12} {s*.62} L{s*.04} {s*.5} M{s*.12} {s*.62} L{s*.04} {s*.74}" {_st(s, c)}/>'
+                               + "".join(f'<circle cx="{s*x}" cy="{s*.6}" r="{s*.035}" {_st(s, c, .02)}/>' for x in (.44, .58, .72))),
+    "ship": lambda s, c: (f'<path d="{_poly(s, [(.06,.6),(.94,.6),(.8,.84),(.2,.84)])}" fill="{c}" fill-opacity="0.2" {_st(s, c)}/>'
+                          f'<path d="M{s*.5} {s*.6} L{s*.5} {s*.1} M{s*.5} {s*.14} L{s*.78} {s*.5} L{s*.5} {s*.5} M{s*.5} {s*.2} L{s*.26} {s*.5} L{s*.5} {s*.5}" {_st(s, c)}/>'),
+    "mountain": lambda s, c: (f'<path d="{_poly(s, [(.04,.9),(.38,.28),(.52,.5),(.66,.2),(.96,.9)])}" fill="{c}" fill-opacity="0.15" {_st(s, c)}/>'
+                              f'<path d="{_poly(s, [(.58,.34),(.66,.2),(.74,.34)], False)}" {_st(s, c, .03)}/>'),
+    "sprout": lambda s, c: (f'<path d="M{s*.5} {s*.9} L{s*.5} {s*.44} M{s*.5} {s*.56} C{s*.3} {s*.56} {s*.18} {s*.42} {s*.2} {s*.28} C{s*.36} {s*.28} {s*.5} {s*.38} {s*.5} {s*.56} '
+                            f'M{s*.5} {s*.46} C{s*.52} {s*.26} {s*.66} {s*.14} {s*.84} {s*.16} C{s*.84} {s*.34} {s*.7} {s*.46} {s*.5} {s*.46}" fill="{c}" fill-opacity="0.2" {_st(s, c)}/>'
+                            f'<path d="M{s*.24} {s*.9} L{s*.76} {s*.9}" {_st(s, c)}/>'),
+    "tree": lambda s, c: (f'<circle cx="{s*.5}" cy="{s*.36}" r="{s*.28}" fill="{c}" fill-opacity="0.18" {_st(s, c)}/>'
+                          f'<path d="M{s*.5} {s*.92} L{s*.5} {s*.46} M{s*.5} {s*.62} L{s*.36} {s*.48} M{s*.5} {s*.56} L{s*.62} {s*.44} M{s*.3} {s*.92} L{s*.7} {s*.92}" {_st(s, c)}/>'),
+    "magnifier": lambda s, c: (f'<circle cx="{s*.42}" cy="{s*.42}" r="{s*.28}" fill="{c}" fill-opacity="0.1" {_st(s, c)}/>'
+                               f'<path d="M{s*.62} {s*.62} L{s*.9} {s*.9}" {_st(s, c, .07)}/>'),
+    "mirror": lambda s, c: (f'<ellipse cx="{s*.5}" cy="{s*.4}" rx="{s*.26}" ry="{s*.32}" fill="{c}" fill-opacity="0.12" {_st(s, c)}/>'
+                            f'<path d="M{s*.5} {s*.72} L{s*.5} {s*.92} M{s*.34} {s*.92} L{s*.66} {s*.92} M{s*.38} {s*.26} L{s*.46} {s*.18} M{s*.36} {s*.38} L{s*.54} {s*.2}" {_st(s, c, .03)}/>'),
+    "key": lambda s, c: (f'<circle cx="{s*.28}" cy="{s*.5}" r="{s*.16}" fill="{c}" fill-opacity="0.15" {_st(s, c)}/>'
+                         f'<path d="M{s*.44} {s*.5} L{s*.92} {s*.5} M{s*.78} {s*.5} L{s*.78} {s*.64} M{s*.88} {s*.5} L{s*.88} {s*.62}" {_st(s, c)}/>'),
+    "lock": lambda s, c: (f'<rect x="{s*.2}" y="{s*.44}" width="{s*.6}" height="{s*.46}" rx="{s*.06}" fill="{c}" fill-opacity="0.15" {_st(s, c)}/>'
+                          f'<path d="M{s*.32} {s*.44} L{s*.32} {s*.3} C{s*.32} {s*.08} {s*.68} {s*.08} {s*.68} {s*.3} L{s*.68} {s*.44} M{s*.5} {s*.6} L{s*.5} {s*.74}" {_st(s, c)}/>'),
+    "bridge": lambda s, c: (f'<path d="M{s*.04} {s*.62} L{s*.96} {s*.62} M{s*.04} {s*.62} C{s*.3} {s*.2} {s*.7} {s*.2} {s*.96} {s*.62} '
+                            f'M{s*.2} {s*.62} L{s*.2} {s*.44} M{s*.35} {s*.62} L{s*.35} {s*.34} M{s*.5} {s*.62} L{s*.5} {s*.31} M{s*.65} {s*.62} L{s*.65} {s*.34} M{s*.8} {s*.62} L{s*.8} {s*.44} '
+                            f'M{s*.1} {s*.62} L{s*.1} {s*.9} M{s*.9} {s*.62} L{s*.9} {s*.9}" {_st(s, c)}/>'
+                            f'<path d="M{s*.04} {s*.84} q {s*.08} -{s*.04} {s*.16} 0 t {s*.16} 0 t {s*.16} 0 t {s*.16} 0 t {s*.16} 0" {_st(s, c, .02)}/>'),
+    "checklist": lambda s, c: (f'<rect x="{s*.16}" y="{s*.08}" width="{s*.68}" height="{s*.84}" rx="{s*.05}" fill="{c}" fill-opacity="0.08" {_st(s, c)}/>'
+                               + "".join(f'<path d="M{s*.26} {s*y} L{s*.32} {s*(y+.05)} L{s*.42} {s*(y-.05)} M{s*.5} {s*y} L{s*.74} {s*y}" {_st(s, c, .03)}/>'
+                                         for y in (.28, .5, .72))),
+    "eye": lambda s, c: (f'<path d="M{s*.04} {s*.5} C{s*.24} {s*.18} {s*.76} {s*.18} {s*.96} {s*.5} C{s*.76} {s*.82} {s*.24} {s*.82} {s*.04} {s*.5} Z" fill="{c}" fill-opacity="0.1" {_st(s, c)}/>'
+                         f'<circle cx="{s*.5}" cy="{s*.5}" r="{s*.15}" fill="{c}" fill-opacity="0.4" {_st(s, c)}/>'),
+    "fork": lambda s, c: (f'<path d="M{s*.5} {s*.94} L{s*.5} {s*.56} C{s*.5} {s*.4} {s*.24} {s*.34} {s*.18} {s*.1} M{s*.5} {s*.56} C{s*.5} {s*.4} {s*.76} {s*.34} {s*.82} {s*.1}" {_st(s, c, .06)}/>'
+                          f'<path d="M{s*.1} {s*.18} L{s*.18} {s*.08} L{s*.26} {s*.18} M{s*.74} {s*.18} L{s*.82} {s*.08} L{s*.9} {s*.18}" {_st(s, c)}/>'),
+    "gear": lambda s, c: ("".join(f'<rect x="{s*.45}" y="{s*.04}" width="{s*.1}" height="{s*.18}" rx="{s*.02}" transform="rotate({a} {s*.5} {s*.5})" fill="{c}" fill-opacity="0.3" {_st(s, c, .025)}/>'
+                                  for a in range(0, 360, 45))
+                          + f'<circle cx="{s*.5}" cy="{s*.5}" r="{s*.3}" fill="{c}" fill-opacity="0.15" {_st(s, c)}/><circle cx="{s*.5}" cy="{s*.5}" r="{s*.1}" {_st(s, c)}/>'),
+    "bubble": lambda s, c: (f'<circle cx="{s*.5}" cy="{s*.48}" r="{s*.38}" fill="{c}" fill-opacity="0.08" {_st(s, c)}/>'
+                            f'<path d="M{s*.28} {s*.36} C{s*.32} {s*.24} {s*.42} {s*.18} {s*.52} {s*.18}" {_st(s, c, .03)}/>'),
+    "lighthouse": lambda s, c: (f'<path d="{_poly(s, [(.4,.92),(.44,.34),(.56,.34),(.6,.92)])}" fill="{c}" fill-opacity="0.15" {_st(s, c)}/>'
+                                f'<rect x="{s*.4}" y="{s*.2}" width="{s*.2}" height="{s*.14}" fill="{c}" fill-opacity="0.5" {_st(s, c, .03)}/>'
+                                f'<path d="M{s*.38} {s*.2} L{s*.5} {s*.1} L{s*.62} {s*.2} M{s*.4} {s*.27} L{s*.06} {s*.14} M{s*.4} {s*.27} L{s*.06} {s*.4} '
+                                f'M{s*.6} {s*.27} L{s*.94} {s*.14} M{s*.6} {s*.27} L{s*.94} {s*.4} M{s*.2} {s*.92} L{s*.8} {s*.92}" {_st(s, c, .025)}/>'),
+    "wave": lambda s, c: "".join(f'<path d="M{s*.04} {s*y} q {s*.115} -{s*.12} {s*.23} 0 t {s*.23} 0 t {s*.23} 0 t {s*.23} 0" {_st(s, c, .035)} opacity="{o}"/>'
+                                 for y, o in ((.4, 1), (.6, .7), (.8, .45))),
+    "puzzle": lambda s, c: (f'<path d="M{s*.14} {s*.3} L{s*.38} {s*.3} C{s*.34} {s*.14} {s*.6} {s*.14} {s*.56} {s*.3} L{s*.8} {s*.3} L{s*.8} {s*.5} C{s*.94} {s*.46} {s*.94} {s*.72} {s*.8} {s*.68} '
+                            f'L{s*.8} {s*.88} L{s*.14} {s*.88} Z" fill="{c}" fill-opacity="0.18" {_st(s, c)}/>'),
+    "door": lambda s, c: (f'<rect x="{s*.24}" y="{s*.08}" width="{s*.52}" height="{s*.84}" rx="{s*.03}" fill="{c}" fill-opacity="0.12" {_st(s, c)}/>'
+                          f'<circle cx="{s*.66}" cy="{s*.52}" r="{s*.035}" fill="{c}"/><path d="M{s*.1} {s*.92} L{s*.9} {s*.92}" {_st(s, c)}/>'),
+    "flywheel": lambda s, c: (f'<circle cx="{s*.5}" cy="{s*.5}" r="{s*.42}" {_st(s, c, .07)}/><circle cx="{s*.5}" cy="{s*.5}" r="{s*.08}" fill="{c}" fill-opacity="0.4" {_st(s, c)}/>'
+                              + "".join(f'<path d="M{s*.5} {s*.5} L{s*(.5 + .38 * math.cos(math.pi * k / 4)):.1f} {s*(.5 + .38 * math.sin(math.pi * k / 4)):.1f}" {_st(s, c, .03)}/>' for k in range(8))
+                              + f'<circle cx="{s*.5}" cy="{s*.08}" r="{s*.04}" fill="{c}"/>'),
+    "bench": lambda s, c: (f'<path d="M{s*.06} {s*.5} L{s*.94} {s*.5} M{s*.06} {s*.34} L{s*.94} {s*.34} M{s*.14} {s*.5} L{s*.14} {s*.82} M{s*.86} {s*.5} L{s*.86} {s*.82} '
+                           f'M{s*.14} {s*.34} L{s*.14} {s*.5} M{s*.86} {s*.34} L{s*.86} {s*.5}" {_st(s, c, .05)}/>'),
+})
+
+
 _TAG = re.compile(r"<[^<>]+>")
 _ATTR = re.compile(r'\s([\w:-]+)="[^"]*"')
 
@@ -739,5 +908,5 @@ ICONS = {k: (lambda f: (lambda s, c: _first_attrs(f(s, c))))(f) for k, f in ICON
 
 
 METAPHORS = {"funnel": funnel, "ladder": ladder, "venn": venn, "flywheel": flywheel, "halo": halo, "swap": swap,
-             "company": company, "rise": rise, "trio": trio, "icon": icon, "book": book}
+             "company": company, "rise": rise, "trio": trio, "icon": icon, "book": book, "climb": climb}
 GENERATORS.update(METAPHORS)

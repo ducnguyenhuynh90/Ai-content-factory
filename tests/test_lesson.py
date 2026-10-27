@@ -178,11 +178,17 @@ def test_metaphor_scenes_render_and_validate():
         visuals += [(f'{b["id"]}s{i}', sh) for i, sh in enumerate(v["shots"])] if v["type"] == "shots" else [(b["id"], v)]
     for vid, v in visuals:
         t = v["type"]
-        if t in ("funnel", "ladder", "venn", "flywheel", "halo", "swap", "company", "rise", "trio", "icon", "book") or v.get("strike"):
+        if t in ("funnel", "ladder", "venn", "flywheel", "halo", "swap", "company", "rise", "trio", "icon", "book", "climb") or v.get("strike"):
             html = scenes.scene_file(look, vid, v, 9.0, lambda w, d: d, 7.0, last=False)
             assert "window.__timelines" in html and "Math.random" not in html
             kinds.add(t)
-    assert {"funnel", "ladder", "venn", "flywheel", "halo", "swap", "statement", "company", "rise", "trio", "icon", "book"} <= kinds
+    assert {"funnel", "ladder", "venn", "flywheel", "halo", "swap", "company", "rise", "trio", "icon", "book", "climb"} <= kinds
+    strike = scenes.scene_file(look, "s9", {"type": "statement", "text": "Vĩ đại là một cú bùng nổ.", "strike": "một cú bùng nổ.",
+                                            "replace": "từng bước nhỏ"}, 6.0, lambda w, d: d, 5.0, last=False)
+    assert 'id="s9-sl"' in strike and "từng bước nhỏ" in strike
+    for motion in ("spin", "swing", "grow", "rise", "sink", "crack", "shake"):
+        html = scenes.scene_file(look, "m1", {"type": "icon", "icon": "pendulum", "motion": motion}, 6.0, lambda w, d: d, 5.0, last=False)
+        assert "window.__timelines" in html
     funnel = scenes.scene_file(look, "f1", {"type": "funnel", "total": 100, "keep": 3, "seed": 1}, 6.0, lambda w, d: d, 5.0, last=False)
     assert funnel.count('id="f1-s') == 3  # the survivors are their own elements, gathered on cue
 
