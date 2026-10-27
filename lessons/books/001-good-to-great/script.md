@@ -1,5 +1,5 @@
 # Từ Tốt Đến Vĩ Đại
-_Review sách · Tập 1 · 898 words · ~3.86 min · 4:3_
+_Review sách · Tập 1 · 897 words · ~3.86 min · 4:3_
 
 ## Learning goals
 - Kể lại được nghiên cứu của Collins: 1.435 công ty, 11 công ty vượt qua bộ lọc
@@ -14,8 +14,8 @@ _Review sách · Tập 1 · 898 words · ~3.86 min · 4:3_
 ## Script
 | # | act | narration | on screen |
 |---|---|---|---|
-| h1 | hook | Một nghìn bốn trăm ba mươi lăm công ty. Chỉ mười một công ty đi được từ tốt đến vĩ đại. | hook: hook |
-| h2 | context | Không nhờ may mắn. Cũng không nhờ một vị giám đốc hào nhoáng. Pha một tách trà nhé. Trong vài phút tới, bạn sẽ thấy điều gì thật sự tạo ra khác biệt, và ba bài học mang về được cho chính cuộc đời mình. | shots: shots |
+| h1 | hook | Một nghìn bốn trăm ba mươi lăm công ty. Chỉ mười một công ty… đi được từ tốt đến vĩ đại. | hook: hook |
+| h2 | context | Theo Collins, họ không nhờ may mắn, cũng chẳng nhờ một vị giám đốc hào nhoáng. Pha một tách trà nhé. Trong vài phút tới, bạn sẽ thấy điều gì tạo ra khác biệt, ba bài học cho chính mình, và cả một lời phản biện đáng nghe. | shots: shots |
 | t0 | context |  | title: Từ Tốt Đến Vĩ Đại |
 | b01 | misconception | Chúng ta hay nghĩ sự vĩ đại đến từ một khoảnh khắc bùng nổ. Một ý tưởng thiên tài. Một người lãnh đạo đầy sức hút. Một cú lội ngược dòng ngoạn mục. Cuốn sách này kể một câu chuyện khác hẳn. | shots: shots |
 | b02 | context | Năm hai nghìn lẻ một, Jim Collins công bố kết quả của khoảng năm năm nghiên cứu, cùng một nhóm khoảng hai mươi người. Họ sàng lọc một nghìn bốn trăm ba mươi lăm công ty từng có mặt trong danh sách Fortune năm trăm. _(estimate)_ | shots: shots |
@@ -24,7 +24,7 @@ _Review sách · Tập 1 · 898 words · ~3.86 min · 4:3_
 | b05 | context | Hãy gặp một trong số họ. Kimberly-Clark, một hãng giấy ra đời từ năm một nghìn tám trăm bảy mươi hai ở Wisconsin, nước Mỹ. Năm một nghìn chín trăm bảy mươi mốt, họ chọn một luật sư nội bộ hiền lành làm giám đốc điều hành: Darwin Smith. | company: Kimberly-Clark |
 | b06 | story | Khi ấy, cổ phiếu công ty đã tụt sau thị trường khoảng ba mươi sáu phần trăm trong hai mươi năm. Và Smith làm một việc mà báo chí gọi là ngu ngốc: bán sạch các nhà máy giấy, trái tim của công ty, để dồn toàn lực vào giấy tiêu dùng như khăn giấy và tã em bé. | shots: shots |
 | b07 | story | Giới phân tích hạ xếp hạng cổ phiếu. Nhưng sau hai mươi năm dưới tay Smith, lợi nhuận cổ phiếu cộng dồn của Kimberly-Clark gấp khoảng bốn phẩy một lần thị trường, và họ vượt qua cả những đối thủ lớn như Scott Paper và Procter and Gamble. | rise: rise |
-| b08 | story | Khi được hỏi về thành tích của mình, ông chỉ nói: tôi chưa bao giờ ngừng cố gắng để xứng đáng với công việc này. | quote: Tôi chưa bao giờ ngừng cố gắng để xứng đáng với công việc này. |
+| b08 | story | Khi đã nghỉ hưu, nhìn lại thành tích của mình, ông chỉ nói giản dị: tôi chưa bao giờ ngừng cố gắng để xứng đáng với công việc này. | quote: Tôi chưa bao giờ ngừng cố gắng để xứng đáng với công việc này. |
 | b09 | principle | Bài học thứ nhất. Collins gọi đó là lãnh đạo cấp năm: khiêm nhường với bản thân, nhưng quyết liệt với mục tiêu. Smith không cần ánh đèn sân khấu. Ông chỉ không bao giờ buông điều quan trọng. | ladder: ladder |
 | b10 | example | Bài học thứ hai đến từ một con nhím. Con cáo biết nhiều thứ, con nhím chỉ biết một điều lớn. Chuỗi nhà thuốc Walgreens chọn một thước đo duy nhất: lợi nhuận trên mỗi lượt khách ghé thăm. Họ còn sẵn sàng đóng cả cửa hàng đang có lãi, để dời sang góc phố thuận tiện hơn. | shots: shots |
 | b11 | principle | Collins gọi đó là khái niệm con nhím: giao điểm của ba vòng tròn. Điều bạn thật sự đam mê. Điều bạn có thể giỏi nhất. Và điều nuôi sống được bạn. Tìm ra giao điểm ấy, rồi kiên nhẫn nói không với mọi thứ còn lại. | venn: venn |
@@ -35,7 +35,7 @@ _Review sách · Tập 1 · 898 words · ~3.86 min · 4:3_
 | b16 | question | Giờ thử một chút nhé. Bạn muốn nói tiếng Anh trôi chảy sau một năm. Cách nào giống chiếc bánh đà nhất? | question: Muốn nói tiếng Anh trôi chảy sau 1 năm. Cách nào là bánh đà? |
 | b17 | recap | Vậy là ba bài học từ Từ Tốt Đến Vĩ Đại. Khiêm tốn, nhưng quyết liệt. Tìm con nhím của bạn. Và đẩy bánh đà mỗi ngày. | list: Ba bài học |
 | b18 | close | Câu mở đầu của cuốn sách là: tốt là kẻ thù của vĩ đại. Không phải vì cái tốt là xấu. Mà vì nó đủ dễ chịu để ta dừng lại. Vậy hôm nay, bánh đà của bạn là gì? | shots: shots |
-| b19 | close | Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Nếu thấy hay, lưu lại và gửi cho một người bạn. Hẹn gặp bạn. | end: Từ Tốt Đến Vĩ Đại |
+| b19 | close | Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau. | end: Từ Tốt Đến Vĩ Đại |
 
 ## Sources
 - [collins2001] Jim Collins, Good to Great: Why Some Companies Make the Leap… and Others Don't, HarperBusiness, 2001 (ch. 1, 2, 5, 8 & appendix)
