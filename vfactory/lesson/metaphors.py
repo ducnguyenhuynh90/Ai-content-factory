@@ -334,7 +334,7 @@ def swap(L, sid, v, dur, cue):
       {f'<div id="{sid}-ln" class="serif" style="position:absolute;left:0;right:0;top:{L.h * 0.76:.0f}px;text-align:center;font-size:{L.fs(0.06)}px;">{E(v["line"])}</div>' if v.get('line') else ''}
     </div>"""
     tw.append(_ft(f"#{sid}-a", "opacity: 0, y: 20", 'opacity: 1, y: 0, duration: 0.6, ease: "expo.out"', 0.3))
-    t = cue(v.get("cue", ""), dur * 0.35)
+    t = cue(v.get("strike_cue") or v.get("cue", ""), max(1.6, dur * 0.35))  # `from` holds long enough to be read first
     tw.append(_ft(f"#{sid}-x", f"strokeDashoffset: {s * 1.6:.0f}", 'strokeDashoffset: 0, duration: 0.35, ease: "power3.out"', t))
     tw.append(_ft(f"#{sid}-a", "opacity: 1, y: 0, rotation: 0", 'opacity: 0.35, y: 40, rotation: -6, duration: 0.9, ease: "power3.in"',
                   max(t + 0.45, 0.3 + 0.6 + 0.5 + 0.3 * len(a["label"].split())), later=True))

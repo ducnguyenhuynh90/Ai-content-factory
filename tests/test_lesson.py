@@ -292,3 +292,12 @@ def test_gate_copy_lint_and_fonts(tmp_path):
     fc = gate.font_coverage({"beats": [{"narration": "Tốt là kẻ thù của vĩ đại", "visual": {"type": "statement", "text": "ồ ắ ữ"}}]})
     if fc.get("checked"):
         assert fc["missing"] == {}
+
+
+def test_swap_inside_shots_is_struck_after_it_is_read():
+    look = scenes.Look({"primary_color": "#E8B06A", "secondary_color": "#12100E", "font": "Inter"}, 1440, 1080, "vi")
+    v = {"type": "shots", "shots": [{"type": "statement", "text": "A"},
+                                    {"type": "swap", "from": {"label": "Cũ", "icon": "rocket"}, "to": {"label": "Mới", "icon": "sprout"}, "cue": "hai"}]}
+    html = scenes.scene_file(look, "b1", v, 12.0, lambda w, d: 4.0 if w == "hai" else d, 11.0, last=False)
+    t = float(re.search(r'tl\.fromTo\("#b1s1-x".*, (\d+\.\d+)\);', html).group(1))
+    assert t >= 4.0 + 1.5  # the shot opens at 4 s; the strike comes only after the old idea has been read

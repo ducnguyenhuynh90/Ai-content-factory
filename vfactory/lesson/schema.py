@@ -44,7 +44,7 @@ VISUALS = {
     "flywheel": {"required": [], "optional": ["kicker", "heading", "name", "line", "line_cue", "marks", "push_cues", "fast_cue",
                                              "from_angle", "to_angle", "ease", "spokes", "enter"]},
     "halo": {"required": ["items"], "optional": ["kicker", "heading", "label", "label_cue"]},
-    "swap": {"required": ["from", "to"], "optional": ["kicker", "heading", "cue", "line", "line_cue"]},
+    "swap": {"required": ["from", "to"], "optional": ["kicker", "heading", "cue", "strike_cue", "line", "line_cue"]},
     "shots": {"required": ["shots"], "optional": []},
     "trio": {"required": ["items"], "optional": ["kicker", "heading", "cross", "line", "line_cue"]},
     "icon": {"required": ["icon"], "optional": ["kicker", "heading", "line", "line_cue", "steam", "motion", "motion_cue", "turns", "period"]},

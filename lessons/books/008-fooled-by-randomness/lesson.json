@@ -63,13 +63,24 @@
    "visual": {
     "type": "shots",
     "shots": [
-     {"type": "statement", "kicker": "Họ không giỏi hơn", "text": "Họ chỉ may.", "highlight": ["may"]},
+     {
+      "type": "swap",
+      "kicker": "Không ai giỏi hơn ai",
+      "cue": "họ chỉ",
+      "from": {"label": "Giỏi hơn", "icon": "target"},
+      "to": {"label": "Chỉ là may", "icon": "dice", "cue": "may hãy"}
+     },
      {"type": "icon", "icon": "tea", "steam": true, "line": "Pha một ấm trà nhé.", "cue": "hãy pha"},
-     {"type": "trio", "kicker": "Ba bài học để tách bạch", "cue": "đến cuối",
+     {
+      "type": "trio",
+      "kicker": "Đến cuối clip: ba bài học",
+      "cue": "đến cuối",
       "items": [
        {"icon": "dice", "label": "May mắn", "cue": "may mắn"},
+       {"icon": "scale", "label": "Tách bạch", "cue": "tách bạch"},
        {"icon": "target", "label": "Tài năng", "cue": "tài năng"}
-      ]}
+      ]
+     }
     ]
    }
   },
@@ -86,14 +97,22 @@
    "visual": {
     "type": "shots",
     "shots": [
-     {"type": "trio", "kicker": "Điều ta hay tin",
+     {
+      "type": "trio",
+      "kicker": "Điều ta hay tin",
       "items": [
        {"icon": "star", "label": "Thắng nhiều năm = giỏi", "cue": "ai thắng"},
        {"icon": "coins", "label": "Giàu = làm đúng", "cue": "người giàu"},
-       {"icon": "target", "label": "Kết quả tốt", "cue": "kết quả"}
-      ]},
-     {"type": "statement", "kicker": "Điều ta hay tin", "cue": "taleb",
-      "text": "Kết quả tốt là quyết định tốt.", "strike": "quyết định tốt.", "replace": "có khi chỉ là may", "strike_cue": "nghi ngờ"}
+       {"icon": "fork", "label": "Kết quả tốt = quyết định tốt", "cue": "kết quả"}
+      ]
+     },
+     {
+      "type": "swap",
+      "kicker": "Taleb nghi ngờ điều ấy",
+      "cue": "taleb",
+      "from": {"label": "Quyết định tốt", "icon": "fork"},
+      "to": {"label": "Có khi chỉ là may", "icon": "dice", "cue": "nghi ngờ"}
+     }
     ]
    }
   },
@@ -119,18 +138,25 @@
    "visual": {
     "type": "shots",
     "shots": [
-     {"type": "trio", "kicker": "Luật chơi",
+     {
+      "type": "trio",
+      "kicker": "Luật chơi",
       "items": [
        {"icon": "coin", "label": "50% thắng mỗi năm", "cue": "mỗi người"},
-       {"icon": "dice", "label": "Thua là bị loại", "cue": "ai thua"}
-      ]},
-     {"type": "chart", "title": "Số người chưa thua lần nào", "cue": "sau một",
+       {"icon": "door", "label": "Thua là bị loại", "cue": "ai thua"}
+      ]
+     },
+     {
+      "type": "chart",
+      "title": "Số người chưa thua lần nào",
+      "cue": "sau một",
       "points": [["Bắt đầu", 10000], ["Năm 1", 5000], ["Năm 2", 2500], ["Năm 3", 1250], ["Năm 4", 625], ["Năm 5", 313]],
       "annotations": [
        {"at": 1, "text": "5.000", "cue": "năm nghìn"},
        {"at": 3, "text": "1.250", "cue": "một nghìn"},
        {"at": 5, "text": "313", "cue": "ba trăm"}
-      ]}
+      ]
+     }
     ]
    },
    "sources": ["taleb2001", "managers"]
@@ -141,13 +167,32 @@
    "visual": {
     "type": "shots",
     "shots": [
-     {"type": "halo", "kicker": "313 người thắng 5 năm liền",
+     {
+      "type": "halo",
+      "kicker": "313 người thắng 5 năm liền",
       "items": [
        {"name": "Người thắng A", "before": "5 năm · không thua", "after": "CHỈ LÀ MAY", "cue": "người ta"},
        {"name": "Người thắng B", "before": "5 năm · không thua", "after": "CHỈ LÀ MAY", "cue": "bí quyết"}
-      ]},
-     {"type": "stat", "value": 9687, "label": "người đã biến mất", "note": "không ai kể về họ", "cue": "còn chín"},
-     {"type": "statement", "kicker": "Tên gọi", "cue": "đó là", "text": "Thiên lệch kẻ sống sót", "highlight": ["kẻ sống sót"]}
+      ]
+     },
+     {
+      "type": "trio",
+      "kicker": "Những người thua",
+      "cross": true,
+      "cue": "còn chín",
+      "items": [
+       {"icon": "people", "label": "9.687 người biến mất", "cue": "chín nghìn"},
+       {"icon": "book", "label": "Không ai kể về họ", "cue": "không ai"}
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "eye",
+      "kicker": "Tên gọi",
+      "cue": "đó là",
+      "line": "Thiên lệch kẻ sống sót",
+      "line_cue": "thiên lệch"
+     }
     ]
    },
    "sources": ["taleb2001", "managers"]
@@ -158,9 +203,22 @@
    "visual": {
     "type": "shots",
     "shots": [
-     {"type": "icon", "icon": "binoculars", "kicker": "Bài học 1 · Hỏi ai đã biến mất", "line": "Bao nhiêu người làm y hệt, và thua?", "line_cue": "bao nhiêu"},
-     {"type": "statement", "kicker": "Taleb viết (lược dịch)", "cue": "taleb",
-      "text": "Số người thắng phụ thuộc số người chơi.", "highlight": ["số người chơi"]}
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Bài học 1 · Hỏi ai đã biến mất",
+      "line": "Bao nhiêu người làm y hệt, và thua?",
+      "line_cue": "bao nhiêu"
+     },
+     {
+      "type": "swap",
+      "kicker": "Thành tích đẹp đến từ…",
+      "cue": "taleb",
+      "from": {"label": "Tài năng", "icon": "target"},
+      "to": {"label": "Số người tham gia", "icon": "people", "cue": "tham gia"},
+      "line": "nhiều hơn là tài năng",
+      "line_cue": "nhiều hơn"
+     }
     ]
    },
    "sources": ["taleb2001", "managers"]
@@ -171,13 +229,30 @@
    "visual": {
     "type": "shots",
     "shots": [
-     {"type": "statement", "kicker": "Thí nghiệm tưởng tượng", "text": "Một nha sĩ đầu tư ở nhà", "highlight": ["nha sĩ"]},
-     {"type": "trio", "kicker": "Danh mục của nha sĩ", "cue": "danh mục",
+     {
+      "type": "icon",
+      "icon": "house",
+      "kicker": "Thí nghiệm tưởng tượng",
+      "line": "Một nha sĩ nghỉ hưu, tự đầu tư ở nhà.",
+      "line_cue": "một nha"
+     },
+     {
+      "type": "trio",
+      "kicker": "Danh mục của nha sĩ",
+      "cue": "danh mục",
       "items": [
        {"icon": "chart", "label": "+15%/năm kỳ vọng", "cue": "mười lăm"},
-       {"icon": "lightning", "label": "Dao động 10%", "cue": "độ dao"}
-      ]},
-     {"type": "stat", "value": 93, "suffix": "%", "label": "khả năng thấy lãi", "note": "nếu mỗi năm xem một lần", "cue": "nếu mỗi"}
+       {"icon": "wave", "label": "Dao động 10%", "cue": "độ dao"}
+      ]
+     },
+     {
+      "type": "stat",
+      "value": 93,
+      "suffix": "%",
+      "label": "khả năng thấy lãi",
+      "note": "nếu mỗi năm xem một lần",
+      "cue": "nếu mỗi"
+     }
     ]
    },
    "sources": ["taleb2001", "dentist"],
@@ -189,17 +264,27 @@
    "visual": {
     "type": "shots",
     "shots": [
-     {"type": "chart", "title": "Khả năng thấy lãi, theo tần suất nhìn (%)",
+     {
+      "type": "chart",
+      "title": "Khả năng thấy lãi, theo tần suất nhìn (%)",
       "points": [["Năm", 93], ["Quý", 77], ["Tháng", 67], ["Ngày", 54], ["Giờ", 51.3], ["Phút", 50.17], ["Giây", 50.02]],
       "annotations": [
        {"at": 0, "text": "93%"},
        {"at": 3, "text": "54%", "cue": "năm mươi tư"},
+       {"at": 5, "text": "≈ tung đồng xu", "cue": "gần như"},
        {"at": 6, "text": "50,02%", "cue": "xem từng"}
-      ]},
-     {"type": "swap", "kicker": "Cùng một danh mục", "cue": "cùng một",
-      "from": {"label": "Niềm vui khi lãi", "icon": "star"},
-      "to": {"label": "Nỗi đau khi lỗ", "icon": "lightning", "cue": "nỗi đau"},
-      "line": "Nhìn càng nhiều, càng đau.", "line_cue": "niềm vui"}
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "scale",
+      "kicker": "Cùng một danh mục",
+      "cue": "và taleb",
+      "motion": "sink",
+      "motion_cue": "nặng hơn",
+      "line": "Nỗi đau khi lỗ nặng hơn niềm vui khi lãi.",
+      "line_cue": "nỗi đau"
+     }
     ]
    },
    "sources": ["taleb2001", "dentist"],
@@ -209,10 +294,13 @@
    "id": "b08", "act": "principle",
    "narration": "Bài học thứ hai: bớt nhìn, bớt nhiễu. Ở khung thời gian ngắn, thứ bạn thấy gần như toàn là ngẫu nhiên. Tín hiệu thật chỉ hiện ra khi bạn lùi xa.",
    "visual": {
-    "type": "swap", "kicker": "Bài học 2 · Bớt nhìn, bớt nhiễu", "cue": "ở khung",
-    "from": {"label": "Mỗi giây: nhiễu", "icon": "clock"},
-    "to": {"label": "Mỗi năm: tín hiệu", "icon": "hourglass", "cue": "tín hiệu"},
-    "line": "Lùi xa để thấy rõ.", "line_cue": "lùi xa"
+    "type": "swap",
+    "kicker": "Bài học 2 · Bớt nhìn, bớt nhiễu",
+    "cue": "ở khung",
+    "from": {"label": "Khung ngắn: ngẫu nhiên", "icon": "dice"},
+    "to": {"label": "Lùi xa: tín hiệu thật", "icon": "lighthouse", "cue": "tín hiệu"},
+    "line": "Lùi xa để thấy rõ.",
+    "line_cue": "lùi xa"
    },
    "sources": ["taleb2001"]
   },
@@ -222,13 +310,31 @@
    "visual": {
     "type": "shots",
     "shots": [
-     {"type": "stat", "value": 10, "prefix": "$", "suffix": " triệu", "label": "để bóp cò một lần", "note": "một viên đạn · sáu ổ", "cue": "mười triệu"},
-     {"type": "trio", "kicker": "Sáu lịch sử có thể xảy ra", "cue": "có sáu",
+     {
+      "type": "icon",
+      "icon": "coins",
+      "kicker": "Thí nghiệm ám ảnh nhất",
+      "line": "10 triệu đô · một viên đạn, sáu ổ",
+      "line_cue": "mười triệu"
+     },
+     {
+      "type": "trio",
+      "kicker": "Sáu lịch sử, như sáu mặt xúc xắc",
+      "cue": "có sáu",
       "items": [
-       {"icon": "coins", "label": "5 lịch sử: giàu to", "cue": "năm lịch"},
-       {"icon": "dice", "label": "1 lịch sử: mất mạng", "cue": "một lịch"}
-      ]},
-     {"type": "statement", "kicker": "Điều người ngoài thấy", "cue": "người ngoài", "text": "Chỉ thấy người thắng.", "highlight": ["người thắng"]}
+       {"icon": "dice", "label": "6 lịch sử", "cue": "có sáu"},
+       {"icon": "coins", "label": "5: giàu to", "cue": "năm lịch"},
+       {"icon": "lightning", "label": "1: mất mạng", "cue": "một lịch"}
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "eye",
+      "kicker": "Điều người ngoài thấy",
+      "cue": "người ngoài",
+      "line": "Chỉ thấy người thắng.",
+      "line_cue": "chỉ thấy"
+     }
     ]
    },
    "sources": ["taleb2001", "fs_alt"]
@@ -249,13 +355,25 @@
    "visual": {
     "type": "shots",
     "shots": [
-     {"type": "timeline", "title": "Long-Term Capital Management",
+     {
+      "type": "timeline",
+      "title": "Long-Term Capital Management",
       "events": [
        {"year": "1994", "text": "Quỹ ra đời", "cue": "quỹ"},
        {"year": "1997", "text": "Hai thành viên đoạt Nobel", "cue": "hai nhà"},
        {"year": "1998", "text": "Mất ~4,6 tỷ USD", "cue": "mất khoảng"}
-      ]},
-     {"type": "statement", "kicker": "Ba năm trước khi sách ra đời", "cue": "nhiều năm", "text": "Nhiều năm thắng, rồi một viên đạn.", "highlight": ["một viên đạn"]}
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "chart",
+      "kicker": "Ba năm trước khi sách ra đời",
+      "cue": "nhiều năm",
+      "motion": "crack",
+      "motion_cue": "rồi một",
+      "line": "Nhiều năm thắng, rồi một viên đạn.",
+      "line_cue": "nhiều năm"
+     }
     ]
    },
    "sources": ["ltcm", "lowenstein"],
@@ -267,8 +385,32 @@
    "visual": {
     "type": "shots",
     "shots": [
-     {"type": "icon", "icon": "umbrella", "kicker": "Bài học 3 · Tránh mọi trò cò quay Nga", "line": "Sống sót trước đã.", "line_cue": "một chiến"},
-     {"type": "statement", "kicker": "Câu hỏi trước mỗi quyết định", "cue": "hãy hỏi", "text": "Mình còn ở lại cuộc chơi không?", "highlight": ["ở lại"]}
+     {
+      "type": "icon",
+      "icon": "dice",
+      "kicker": "Bài học 3",
+      "line": "Tránh mọi trò cò quay Nga.",
+      "line_cue": "tránh mọi"
+     },
+     {
+      "type": "trio",
+      "kicker": "Một chiến lược",
+      "cue": "một chiến",
+      "items": [
+       {"icon": "coins", "label": "Thắng 99 lần", "cue": "chín mươi"},
+       {"icon": "lightning", "label": "Lần 100: xoá sổ", "cue": "một trăm"}
+      ],
+      "line": "Vẫn là chiến lược tệ.",
+      "line_cue": "nó vẫn"
+     },
+     {
+      "type": "icon",
+      "icon": "umbrella",
+      "kicker": "Câu hỏi trước mỗi quyết định",
+      "cue": "hãy hỏi",
+      "line": "Điều tệ nhất xảy ra: mình còn ở lại cuộc chơi?",
+      "line_cue": "nếu điều"
+     }
     ]
    },
    "sources": ["taleb2001"]
@@ -279,9 +421,22 @@
    "visual": {
     "type": "shots",
     "shots": [
-     {"type": "statement", "kicker": "Điều nhiều người nhầm", "text": "Thiên nga đen ra đời năm 2007", "strike": "năm 2007", "replace": "đã có từ 2001",
-      "strike_cue": "nó đã"},
-     {"type": "icon", "icon": "swan", "kicker": "1697 · Tây Úc", "cue": "châu âu", "line": "Một con đen là đủ.", "line_cue": "khi đoàn"}
+     {
+      "type": "swap",
+      "kicker": "Điều nhiều người nhầm",
+      "cue": "không bắt",
+      "from": {"label": "The Black Swan · 2007", "icon": "book"},
+      "to": {"label": "Đã có từ cuốn này · 2001", "icon": "book", "cue": "nó đã"}
+     },
+     {
+      "type": "swap",
+      "kicker": "Châu Âu từng tin",
+      "cue": "châu âu",
+      "from": {"label": "Mọi thiên nga đều trắng", "icon": "swan"},
+      "to": {"label": "1697 · Tây Úc: thiên nga đen", "icon": "swan", "cue": "khi đoàn"},
+      "line": "Một con đen là đủ.",
+      "line_cue": "thấy thiên"
+     }
     ]
    },
    "sources": ["wiki_swan", "taleb2001"]
@@ -292,10 +447,30 @@
    "visual": {
     "type": "shots",
     "shots": [
-     {"type": "compare", "title": "Cùng 10 triệu đô",
+     {
+      "type": "icon",
+      "icon": "target",
+      "kicker": "Đừng đọc sai Taleb",
+      "line": "Tài năng vẫn tồn tại.",
+      "line_cue": "ông không"
+     },
+     {
+      "type": "compare",
+      "title": "Cùng 10 triệu đô",
       "left": {"title": "Cò quay Nga", "items": ["May rủi quyết định", "Không lặp lại được"]},
-      "right": {"title": "Nghề nha sĩ", "items": ["Tay nghề, đều đặn", "Làm lại được mỗi ngày"]}},
-     {"type": "statement", "kicker": "Điều Taleb muốn", "cue": "điều ông", "text": "Phần nào là may?", "highlight": ["may"]}
+      "right": {"title": "Nghề nha sĩ", "items": ["Tay nghề, đều đặn", "Làm lại được mỗi ngày"]},
+      "cue": "mười triệu"
+     },
+     {
+      "type": "trio",
+      "kicker": "Điều Taleb muốn: khiêm tốn",
+      "cue": "điều ông",
+      "items": [
+       {"icon": "star", "label": "Gọi ai là thiên tài", "cue": "thiên tài"},
+       {"icon": "mirror", "label": "Kể cả chính mình", "cue": "kể cả"},
+       {"icon": "dice", "label": "Phần nào là may?", "cue": "phần nào"}
+      ]
+     }
     ]
    },
    "sources": ["taleb2001", "fs_alt"]
@@ -329,8 +504,29 @@
    "visual": {
     "type": "shots",
     "shots": [
-     {"type": "statement", "kicker": "313 \"thiên tài\"", "text": "Chín nghìn người kia đâu rồi?", "highlight": ["đâu rồi"], "cue": "nhưng"},
-     {"type": "icon", "icon": "tea", "steam": true, "line": "Hãy nhớ đến họ.", "cue": "lần tới"}
+     {
+      "type": "icon",
+      "icon": "star",
+      "kicker": "313 \"thiên tài\"",
+      "line": "Có thể vài người giỏi thật.",
+      "line_cue": "có thể"
+     },
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Câu hỏi khôn ngoan",
+      "cue": "nhưng",
+      "line": "Chín nghìn người kia đâu rồi?",
+      "line_cue": "chín nghìn"
+     },
+     {
+      "type": "icon",
+      "icon": "people",
+      "kicker": "Lần tới nghe chuyện thành công",
+      "cue": "lần tới",
+      "line": "Hãy nhớ đến họ.",
+      "line_cue": "hãy nhớ"
+     }
     ]
    },
    "sources": ["taleb2001"]

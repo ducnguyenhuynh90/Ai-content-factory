@@ -536,7 +536,9 @@ def shots(L, sid, v, dur, cue):
     for i, (sh, t0, t1) in enumerate(zip(items, starts, ends)):
         ssid = f"{sid}s{i}"
         local = (lambda w, d, t0=t0: (cue(w, d + t0) - t0) if w else d)
-        gm, gcss, gtw = GENERATORS[sh["type"]](L, ssid, sh, t1 - t0, local)
+        # the shot's `cue` opens the shot; inside it, its own timings use their own cue fields (e.g. a swap's strike_cue)
+        inner = {k: x for k, x in sh.items() if k != "cue"}
+        gm, gcss, gtw = GENERATORS[sh["type"]](L, ssid, inner, t1 - t0, local)
         m.append(f'<div id="{ssid}-shot" style="position:absolute;inset:0;"><div id="{ssid}-wrap" style="position:absolute;inset:0;">{gm}</div></div>')
         css.append(gcss)
         tw += [_shift(t, t0) for t in gtw]

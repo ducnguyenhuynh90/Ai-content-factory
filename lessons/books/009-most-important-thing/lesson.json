@@ -116,18 +116,16 @@
        {"icon": "dice", "label": "May mắn", "cue": "may mắn"}
       ]
      },
+     {"type": "icon", "icon": "magnifier", "line": "Thấy điều đám đông không muốn thấy.", "cue": "nó chỉ"},
+     {"type": "icon", "icon": "tea", "steam": true, "line": "Pha một ấm trà nào.", "cue": "pha"},
      {
-      "type": "icon",
-      "icon": "binoculars",
-      "line": "Thấy điều đám đông không muốn thấy.",
-      "cue": "nó chỉ"
-     },
-     {
-      "type": "icon",
-      "icon": "tea",
-      "steam": true,
-      "line": "Một cách nghĩ. Ba bài học.",
-      "cue": "pha"
+      "type": "trio",
+      "kicker": "Trong vài phút tới",
+      "cue": "bạn sẽ",
+      "items": [
+       {"icon": "letter", "label": "Cách người viết thư suy nghĩ", "cue": "người viết"},
+       {"icon": "key", "label": "Ba bài học nghĩ khác đám đông", "cue": "ba bài"}
+      ]
      }
     ]
    }
@@ -158,18 +156,16 @@
       "kicker": "Điều ta hay tin",
       "items": [
        {"icon": "binoculars", "label": "Dự báo giỏi", "cue": "dự báo"},
-       {"icon": "pie", "label": "Đoán lãi suất", "cue": "lãi suất"},
-       {"icon": "chart", "label": "Đoán thị trường", "cue": "thị trường"}
+       {"icon": "coins", "label": "Lãi suất tăng hay giảm", "cue": "lãi suất"},
+       {"icon": "chart", "label": "Thị trường lên hay xuống", "cue": "thị trường"}
       ]
      },
      {
-      "type": "statement",
-      "kicker": "Một cách nghĩ khác",
-      "text": "Giỏi là đoán trúng tương lai.",
-      "strike": "đoán trúng tương lai.",
-      "replace": "biết mình đang ở đâu",
-      "strike_cue": "ít nhất",
-      "cue": "người viết"
+      "type": "swap",
+      "kicker": "Người viết cuốn sách này nghĩ khác",
+      "cue": "người viết",
+      "from": {"label": "Đoán trúng tương lai", "icon": "binoculars"},
+      "to": {"label": "Biết mình đang đứng ở đâu", "icon": "compass", "cue": "biết mình"}
      }
     ]
    },
@@ -211,13 +207,12 @@
     "type": "shots",
     "shots": [
      {
-      "type": "stat",
-      "value": 86,
-      "prefix": "+",
-      "suffix": "%",
-      "label": "Nasdaq · năm 1999",
-      "note": "4.069 điểm cuối năm",
-      "cue": "tám mươi"
+      "type": "trio",
+      "kicker": "Cuối năm 1999",
+      "items": [
+       {"icon": "rocket", "label": "Nasdaq +86% trong một năm", "cue": "tám mươi"},
+       {"icon": "people", "label": "Ai cũng nói về internet", "cue": "ai cũng"}
+      ]
      },
      {
       "type": "book",
@@ -244,25 +239,29 @@
     "type": "shots",
     "shots": [
      {
-      "type": "statement",
+      "type": "icon",
+      "icon": "letter",
       "kicker": "2 · 1 · 2000 · bản ghi nhớ",
-      "text": "bubble.com",
-      "highlight": ["bubble.com"]
+      "line": "bubble.com",
+      "line_cue": "bản ghi"
      },
      {
       "type": "trio",
       "kicker": "Ông viết",
+      "cue": "ông viết",
       "items": [
-       {"icon": "lightning", "label": "Quá nóng", "cue": "quá nóng"},
+       {"icon": "bubble", "label": "Quá nóng", "cue": "quá nóng"},
        {"icon": "dice", "label": "Đầy màu đầu cơ", "cue": "đầy màu"}
-      ],
-      "cue": "ông viết"
+      ]
      },
      {
-      "type": "icon",
-      "icon": "people",
-      "line": "Lần đầu tiên có hồi âm.",
-      "cue": "và lần"
+      "type": "trio",
+      "kicker": "Lần đầu tiên",
+      "cue": "và lần",
+      "items": [
+       {"icon": "hourglass", "label": "Gần mười năm im lặng", "cue": "gần mười"},
+       {"icon": "letter", "label": "Có người viết thư trả lời", "cue": "viết thư"}
+      ]
      }
     ]
    },
@@ -278,20 +277,25 @@
      {
       "type": "chart",
       "title": "Nasdaq Composite · điểm đóng cửa",
-      "points": [["12/1998", 2193], ["12/1999", 4069], ["3/2000", 5049], ["12/2000", 2471], ["12/2001", 1950], ["10/2002", 1114]],
-      "annotations": [
-       {"at": 1, "text": "bubble.com", "cue": "hơn hai"},
-       {"at": 2, "text": "Đỉnh · 10/3/2000", "cue": "lên đỉnh"}
-      ]
+      "points": [
+       ["12/1998", 2193],
+       ["12/1999", 4069],
+       ["3/2000", 5049],
+       ["12/2000", 2471],
+       ["12/2001", 1950],
+       ["10/2002", 1114]
+      ],
+      "annotations": [{"at": 1, "text": "bubble.com", "cue": "hơn hai"}, {"at": 2, "text": "Đỉnh · 10/3/2000", "cue": "lên đỉnh"}]
      },
      {
-      "type": "stat",
-      "value": 78,
-      "prefix": "≈ −",
-      "suffix": "%",
-      "label": "Nasdaq · 3/2000 → 10/2002",
-      "note": "từ 5.049 xuống 1.114 điểm",
-      "cue": "đến tháng"
+      "type": "icon",
+      "icon": "bubble",
+      "kicker": "3/2000 → 10/2002",
+      "cue": "đến tháng",
+      "motion": "crack",
+      "motion_cue": "mất khoảng",
+      "line": "Nasdaq mất ≈ 78%",
+      "line_cue": "bảy mươi"
      }
     ]
    },
@@ -338,17 +342,18 @@
       "kicker": "Bài học 1 · Nghĩ ở tầng thứ hai",
       "levels": ["Tầng 1: Công ty tốt → mua", "Tầng 2: Giá đã phản ánh chưa?"],
       "top_cue": "tầng hai",
-      "tags": [
-       {"text": "Mọi người nghĩ gì?", "cue": "ai cũng"},
-       {"text": "Giá bao nhiêu?", "cue": "vậy giá"}
-      ]
+      "tags": [{"text": "Mọi người nghĩ gì?", "cue": "ai cũng"}, {"text": "Giá bao nhiêu?", "cue": "vậy giá"}]
      },
      {
-      "type": "statement",
+      "type": "trio",
       "kicker": "Tầng thứ hai",
-      "text": "Công ty tốt, mua quá đắt: khoản đầu tư tồi.",
-      "highlight": ["quá đắt"],
-      "cue": "một công"
+      "cue": "một công",
+      "items": [
+       {"icon": "store", "label": "Công ty tốt", "cue": "một công"},
+       {"icon": "coins", "label": "Mua quá đắt", "cue": "mua quá"}
+      ],
+      "line": "= khoản đầu tư tồi",
+      "line_cue": "khoản đầu"
      }
     ]
    },
@@ -362,17 +367,22 @@
     "type": "shots",
     "shots": [
      {
-      "type": "compare",
-      "title": "Năm 1999",
-      "left": {"title": "Tầng một", "items": ["Internet đổi thế giới", "Mua thôi"]},
-      "right": {"title": "Tầng hai", "items": ["Đúng, nhưng…", "Giá đã trả trước bao nhiêu năm?"]}
+      "type": "trio",
+      "kicker": "Năm 1999 · tầng một nói",
+      "items": [
+       {"icon": "bulb", "label": "Internet đổi thế giới", "cue": "internet"},
+       {"icon": "coins", "label": "Mua thôi", "cue": "mua thôi"}
+      ],
+      "line": "Và điều đó đúng thật.",
+      "line_cue": "và điều"
      },
      {
-      "type": "statement",
-      "kicker": "Bài học từ bubble.com",
-      "text": "Đúng về tương lai, sai về giá.",
-      "highlight": ["sai về giá"],
-      "cue": "nhưng tầng"
+      "type": "icon",
+      "icon": "hourglass",
+      "kicker": "Tầng hai hỏi",
+      "cue": "nhưng tầng",
+      "line": "Giá hôm nay đã trả trước bao nhiêu năm tương lai?",
+      "line_cue": "cái giá"
      }
     ]
    },
@@ -388,15 +398,15 @@
      {
       "type": "swap",
       "kicker": "Bài học 2 · Rủi ro trốn trong sự yên tâm",
-      "from": {"label": "Giá lên xuống", "icon": "chart"},
-      "to": {"label": "Mất vĩnh viễn", "icon": "hourglass", "cue": "mất tiền"},
+      "from": {"label": "Giá nhảy lên xuống", "icon": "wave"},
+      "to": {"label": "Mất tiền vĩnh viễn", "icon": "coins", "cue": "mất tiền"},
       "cue": "không chỉ"
      },
      {
       "type": "trio",
       "kicker": "Khi ai cũng yên tâm",
       "items": [
-       {"icon": "umbrella", "label": "Thôi lo lắng", "cue": "thôi lo"},
+       {"icon": "bench", "label": "Thôi lo lắng", "cue": "thôi lo"},
        {"icon": "coins", "label": "Trả giá cao hơn", "cue": "sẵn sàng"},
        {"icon": "lightning", "label": "Rủi ro lớn nhất", "cue": "chính lúc"}
       ],
@@ -414,19 +424,20 @@
     "type": "shots",
     "shots": [
      {
-      "type": "trio",
+      "type": "icon",
+      "icon": "pendulum",
+      "motion": "swing",
+      "period": 2.4,
       "kicker": "Bài học 3 · Biết con lắc đang ở đâu",
-      "items": [
-       {"icon": "rocket", "label": "Tham lam · hưng phấn", "cue": "tham lam"},
-       {"icon": "scale", "label": "Ở giữa: hiếm khi", "cue": "hiếm khi"},
-       {"icon": "umbrella", "label": "Sợ hãi · tuyệt vọng", "cue": "sợ hãi"}
-      ]
+      "line": "Tham lam ⟷ sợ hãi",
+      "line_cue": "tham lam"
      },
      {
-      "type": "icon",
-      "icon": "compass",
-      "line": "Không đoán lúc nó quay. Biết nó đang ở đâu.",
-      "cue": "bạn không"
+      "type": "swap",
+      "kicker": "Không cần đoán, chỉ cần biết",
+      "cue": "bạn không",
+      "from": {"label": "Đoán lúc nó quay đầu", "icon": "clock"},
+      "to": {"label": "Biết nó đang ở phía nào", "icon": "pendulum", "cue": "chỉ cần"}
      }
     ]
    },
@@ -440,13 +451,13 @@
     "type": "shots",
     "shots": [
      {
-      "type": "stat",
-      "value": 24,
-      "prefix": "+",
-      "suffix": "%",
-      "label": "Nasdaq tăng tiếp sau bubble.com",
-      "note": "4.069 → 5.049 điểm · 1/2000 → 3/2000",
-      "cue": "hai mươi"
+      "type": "icon",
+      "icon": "bubble",
+      "kicker": "Sau bubble.com · 1/2000 → 3/2000",
+      "motion": "crack",
+      "motion_cue": "mới gãy",
+      "line": "Nasdaq +24% nữa, rồi mới gãy",
+      "line_cue": "hai mươi"
      },
      {
       "type": "quote",
@@ -467,21 +478,29 @@
     "type": "shots",
     "shots": [
      {
-      "type": "statement",
+      "type": "icon",
+      "icon": "checklist",
       "kicker": "Vậy",
-      "text": "Một công thức để thắng?",
-      "strike": "công thức để thắng?",
-      "replace": "cách để bớt ngây thơ",
-      "strike_cue": "không"
+      "line": "Một công thức để thắng?",
+      "line_cue": "công thức",
+      "motion": "crack",
+      "motion_cue": "không không"
      },
      {
-      "type": "funnel",
-      "total": 400,
-      "keep": 40,
-      "label": "Không thể ai cũng hơn trung bình",
-      "keep_label": "Tầng hai: khó, và hiếm",
-      "keep_cue": "trung bình chính",
-      "cue": "nghĩ ở"
+      "type": "trio",
+      "kicker": "Không thể ai cũng hơn trung bình",
+      "cue": "nghĩ ở",
+      "items": [
+       {"icon": "mountain", "label": "Tầng hai: rất khó", "cue": "rất khó"},
+       {"icon": "people", "label": "Trung bình = tất cả chúng ta", "cue": "trung bình chính"}
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "eye",
+      "cue": "cuốn sách chỉ",
+      "line": "Chỉ giúp bạn bớt ngây thơ.",
+      "line_cue": "bớt ngây"
      }
     ]
    },
@@ -526,16 +545,20 @@
     "type": "shots",
     "shots": [
      {
-      "type": "statement",
+      "type": "icon",
+      "icon": "letter",
       "kicker": "Mười năm không ai hồi âm",
-      "text": "Marks vẫn viết.",
-      "highlight": ["vẫn viết"]
+      "line": "Marks vẫn viết.",
+      "line_cue": "marks vẫn"
      },
      {
-      "type": "icon",
-      "icon": "compass",
-      "line": "Nhìn xuống chân mình, khi đám đông nhìn lên.",
-      "cue": "mà ở"
+      "type": "swap",
+      "kicker": "Giá trị của một lá thư",
+      "cue": "vì giá",
+      "from": {"label": "Đoán đúng ngày", "icon": "clock"},
+      "to": {"label": "Nhìn xuống chân mình", "icon": "compass", "cue": "dám nhìn"},
+      "line": "khi cả đám đông đang nhìn lên.",
+      "line_cue": "khi cả"
      }
     ]
    },
