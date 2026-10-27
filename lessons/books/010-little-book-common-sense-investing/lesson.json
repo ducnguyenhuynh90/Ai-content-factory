@@ -1,0 +1,940 @@
+{
+ "meta": {
+  "series": "Review sách · Tập 10",
+  "title": "Đầu Tư Theo Lẽ Thường",
+  "subtitle": "The Little Book of Common Sense Investing — John C. Bogle (2007)",
+  "topic": "investing",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt mới bắt đầu tìm hiểu đầu tư, muốn hiểu quỹ chỉ số và chi phí",
+  "aspect": "4:3",
+  "target_minutes": [
+   3,
+   5
+  ],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
+  "learning_goals": [
+   "Kể lại được ván cược mười năm của Buffett (2008–2017) và quỹ chỉ số đầu tiên của Bogle (1976)",
+   "Giải thích ba ý lớn: chi phí cộng dồn như lãi kép, mua cả đống rơm, nhàm chán rồi ngồi yên",
+   "Nhận ra giới hạn của quỹ chỉ số (vẫn lên xuống cùng thị trường; lo ngại tập trung sở hữu) và tự so sánh chi phí trước khi chọn"
+  ],
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người dẫn chương trình sách lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively. Measured with Whisper on 12 names: Vietnamese respellings scored 0.76, original spelling 0.95.",
+  "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư."
+ },
+ "sources": [
+  {
+   "id": "bogle2017",
+   "cite": "John C. Bogle, The Little Book of Common Sense Investing, Wiley, 2007; 10th anniversary edition 2017 ('Don't look for the needle in the haystack. Just buy the haystack!'; cost and compounding chapters)",
+   "url": "https://en.wikipedia.org/wiki/The_Little_Book_of_Common_Sense_Investing"
+  },
+  {
+   "id": "brk2017",
+   "cite": "Warren Buffett, Berkshire Hathaway 2017 letter to shareholders, 'The Bet is Over' (Jan 1 2008 – Dec 31 2017; S&P 500 index fund +125.8%, 8.5%/yr; five funds-of-funds 2.8%–87.7%, average ≈ 36.3%; $2,222,279 to Girls Inc. of Omaha)",
+   "url": "https://www.berkshirehathaway.com/letters/2017ltr.pdf"
+  },
+  {
+   "id": "brk2016",
+   "cite": "Warren Buffett, Berkshire Hathaway 2016 letter to shareholders (the bet; 'If a statue is ever erected to honor the person who has done the most for American investors, the hands-down choice should be Jack Bogle')",
+   "url": "https://www.berkshirehathaway.com/letters/2016ltr.pdf"
+  },
+  {
+   "id": "dando2018",
+   "cite": "D&O Diary, 'A Closer Look at Warren Buffett's Latest Letter', Feb 2018 (final bet figures: 125.8% vs funds 87.7% high / 2.8% low)",
+   "url": "https://www.dandodiary.com/2018/02/articles/warren-buffett/closer-look-warren-buffetts-latest-letter-berkshire-shareholders/"
+  },
+  {
+   "id": "longnow",
+   "cite": "Long Now Foundation / Long Bets: Buffett vs. Protégé Partners (terms; Girls Inc. of Omaha)",
+   "url": "https://longnow.org/ideas/warren-buffett-wins-million-dollar-long-bet/"
+  },
+  {
+   "id": "fortune2009",
+   "cite": "Fortune / CNN Money, 'Buffett's big bet: Trailing behind after lap one', Nov 2009 (2008: Vanguard S&P 500 −37%, funds-of-funds −23.9%)",
+   "url": "https://money.cnn.com/2009/11/23/pf/buffett_hedge_funds.fortune/index.htm"
+  },
+  {
+   "id": "fortune2011",
+   "cite": "Fortune, 'The Warren Buffett hedge fund bet tightens', Apr 2011 (Protégé still ahead after three years)",
+   "url": "https://fortune.com/2011/04/26/the-warren-buffett-hedge-fund-bet-tightens"
+  },
+  {
+   "id": "zweig2016",
+   "cite": "Jason Zweig, 'Birth of the Index Mutual Fund: Bogle's Folly Turns 40', 2016 (launched Aug 31 1976; target $150m, raised $11.3m)",
+   "url": "https://jasonzweig.com/?p=5486"
+  },
+  {
+   "id": "mstar2026",
+   "cite": "Morningstar, 'The Index Fund Turns 50: How Jack Bogle Changed Investing Forever', 2026 ('Bogle's folly', 'un-American'; Vanguard founded 1974)",
+   "url": "https://global.morningstar.com/en-gb/funds/index-fund-turns-50-how-jack-bogle-changed-investing-forever"
+  },
+  {
+   "id": "spiva2024",
+   "cite": "S&P Dow Jones Indices, SPIVA U.S. Year-End 2024 (15 years: no category with a majority of active managers outperforming); large-cap 15-yr ≈ 89.5% underperformed, as tabulated by Ritholtz Wealth, May 2025",
+   "url": "https://www.spglobal.com/spdji/en/documents/spiva/spiva-us-year-end-2024.pdf"
+  },
+  {
+   "id": "bogle2018",
+   "cite": "John C. Bogle, op-ed on index-fund concentration, The Wall Street Journal, Nov 29 2018 (Big Three might own 30% or more of U.S. stocks); see also Jason Zweig, 'Are Index Funds Eating the World?'",
+   "url": "https://jasonzweig.com/are-index-funds-eating-the-world/"
+  },
+  {
+   "id": "fortune2019",
+   "cite": "Fortune, 'Warren Buffett remembers John Bogle', Jan 17 2019 (Bogle 1929–2019)",
+   "url": "https://fortune.com/2019/01/17/warren-buffett-remembers-john-bogle"
+  },
+  {
+   "id": "calc",
+   "cite": "Illustrative arithmetic in the spirit of Bogle's book: $10,000 × 1.07^50 ≈ $294,600; × 1.05^50 ≈ $114,700 (2% yearly cost) → ending value ≈ 61% lower (our computation, not a quoted figure)"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Chi phí là kẻ thù thầm lặng",
+   "line": "Lợi nhuận thị trường trừ chi phí mới là phần của bạn; phí cũng cộng dồn như lãi kép."
+  },
+  {
+   "name": "Mua cả đống rơm",
+   "line": "Đừng tìm cây kim; sở hữu cả thị trường với chi phí thấp nhất có thể."
+  },
+  {
+   "name": "Nhàm chán, rồi ngồi yên",
+   "line": "Phần thưởng đến với người ở lại qua cả những năm tệ nhất."
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Warren Buffett cược một triệu đô vào một quỹ chỉ số nhàm chán. Mười năm sau, ông thắng.",
+   "visual": {
+    "type": "hook",
+    "lines": [
+     "Cược 1 triệu $ vào quỹ nhàm chán.",
+     "10 năm sau: thắng."
+    ],
+    "crash_cue": "thắng",
+    "points": [
+     [
+      0,
+      100
+     ],
+     [
+      1,
+      63.0
+     ],
+     [
+      2,
+      79.7
+     ],
+     [
+      3,
+      91.7
+     ],
+     [
+      4,
+      93.6
+     ],
+     [
+      5,
+      108.6
+     ],
+     [
+      6,
+      143.7
+     ],
+     [
+      7,
+      163.3
+     ],
+     [
+      8,
+      165.6
+     ],
+     [
+      9,
+      185.4
+     ],
+     [
+      10,
+      225.8
+     ]
+    ],
+    "split": 1,
+    "peak_label": "2008: −37%",
+    "end_label": "+125,8% · 10 năm",
+    "kicker": "The Little Book · John C. Bogle"
+   },
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "thắng",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "brk2017",
+    "fortune2009"
+   ]
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Không cần một nhà quản lý ngôi sao. Cũng không cần đoán trước thị trường. Pha một ấm trà, mình kể bạn nghe nhé. Trong vài phút tới, bạn sẽ thấy vì sao cái nhàm chán lại thắng, và ba bài học từ người đã nghĩ ra nó.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Không cần…",
+      "cross": true,
+      "items": [
+       {
+        "icon": "star",
+        "label": "Nhà quản lý ngôi sao",
+        "cue": "nhà quản"
+       },
+       {
+        "icon": "binoculars",
+        "label": "Đoán thị trường",
+        "cue": "đoán"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "tea",
+      "steam": true,
+      "line": "Mình kể bạn nghe nhé.",
+      "cue": "pha"
+     },
+     {
+      "type": "statement",
+      "kicker": "Trong vài phút tới",
+      "text": "Vì sao nhàm chán lại thắng?",
+      "highlight": [
+       "nhàm chán"
+      ],
+      "cue": "trong vài"
+     }
+    ]
+   }
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Review sách · Tập 10",
+    "title": "Đầu Tư Theo Lẽ Thường",
+    "subtitle": "The Little Book of Common Sense Investing — John C. Bogle (2007)",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ],
+   "sources": [
+    "bogle2017"
+   ]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Chúng ta hay nghĩ: muốn lợi nhuận tốt, phải tìm người giỏi nhất để giao tiền. Phí càng cao, chuyên gia càng giỏi. John Bogle dành cả một cuốn sách để nói điều ngược lại.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Điều ta hay tin",
+      "items": [
+       {
+        "icon": "target",
+        "label": "Tìm người giỏi nhất",
+        "cue": "tìm người"
+       },
+       {
+        "icon": "coins",
+        "label": "Phí cao = giỏi",
+        "cue": "phí càng"
+       }
+      ]
+     },
+     {
+      "type": "statement",
+      "kicker": "John Bogle",
+      "text": "Phí càng cao, càng giỏi.",
+      "strike": "càng giỏi.",
+      "replace": "càng mất",
+      "strike_cue": "ngược lại",
+      "cue": "john"
+     }
+    ]
+   },
+   "sources": [
+    "bogle2017"
+   ]
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "John Bogle sáng lập Vanguard năm một nghìn chín trăm bảy mươi tư. Năm hai nghìn lẻ bảy, ông viết cuốn sách nhỏ này, rồi cập nhật lại năm hai nghìn mười bảy, khi đã gần chín mươi tuổi.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "John C. Bogle",
+      "initials": "JB",
+      "role": "Nhà sáng lập Vanguard · 1974",
+      "years": "1929 – 2019"
+     },
+     {
+      "type": "book",
+      "title": "The Little Book of Common Sense Investing",
+      "author": "John C. Bogle",
+      "year": "2007",
+      "kicker": "Cuốn sách",
+      "cue": "năm hai",
+      "facts": [
+       {
+        "big": "2007",
+        "text": "Bản đầu tiên",
+        "cue": "năm hai"
+       },
+       {
+        "big": "2017",
+        "text": "Bản cập nhật",
+        "cue": "cập nhật"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "bogle2017",
+    "mstar2026",
+    "fortune2019"
+   ]
+  },
+  {
+   "id": "b03",
+   "act": "story",
+   "narration": "Năm một nghìn chín trăm bảy mươi sáu, ông mở quỹ chỉ số đầu tiên cho nhà đầu tư cá nhân. Ý tưởng rất đơn giản: không chọn cổ phiếu, chỉ mua theo cả năm trăm công ty của chỉ số S&P, và giữ phí thật thấp.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "timeline",
+      "title": "Vanguard",
+      "events": [
+       {
+        "year": "1974",
+        "text": "Vanguard ra đời"
+       },
+       {
+        "year": "1976",
+        "text": "Quỹ chỉ số đầu tiên",
+        "cue": "quỹ chỉ"
+       }
+      ]
+     },
+     {
+      "type": "trio",
+      "kicker": "Ý tưởng rất đơn giản",
+      "cue": "ý tưởng",
+      "items": [
+       {
+        "icon": "dice",
+        "label": "Không chọn cổ phiếu",
+        "cue": "không chọn"
+       },
+       {
+        "icon": "pie",
+        "label": "Cả 500 công ty",
+        "cue": "năm trăm"
+       },
+       {
+        "icon": "coin",
+        "label": "Phí thật thấp",
+        "cue": "giữ phí"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "zweig2016",
+    "mstar2026",
+    "bogle2017"
+   ]
+  },
+  {
+   "id": "b04",
+   "act": "story",
+   "narration": "Phố Wall cười nhạo. Người ta gọi nó là sự điên rồ của Bogle, thậm chí là phi Mỹ. Ông muốn huy động một trăm năm mươi triệu đô, nhưng chỉ gọi được khoảng mười một triệu.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Phố Wall gọi nó là",
+      "text": "“Sự điên rồ của Bogle.”",
+      "highlight": [
+       "điên rồ"
+      ]
+     },
+     {
+      "type": "stat",
+      "value": 11.3,
+      "decimals": 1,
+      "prefix": "$",
+      "suffix": " triệu",
+      "label": "huy động được · 1976",
+      "note": "mục tiêu: 150 triệu $",
+      "cue": "ông muốn"
+     }
+    ]
+   },
+   "sources": [
+    "zweig2016",
+    "mstar2026"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Bogle gói cả triết lý ấy vào một câu: đừng tìm cây kim trong đống rơm. Hãy mua cả đống rơm.",
+   "visual": {
+    "type": "quote",
+    "text": "Đừng tìm cây kim trong đống rơm. Hãy mua cả đống rơm!",
+    "by": "John C. Bogle (lược dịch)",
+    "year": "2007"
+   },
+   "sources": [
+    "bogle2017"
+   ]
+  },
+  {
+   "id": "b06",
+   "act": "principle",
+   "narration": "Bài học thứ nhất: chi phí là kẻ thù thầm lặng. Lợi nhuận của thị trường, trừ đi chi phí, mới là phần thật sự về tay bạn. Mọi nhà đầu tư cộng lại chỉ có được lợi nhuận của thị trường, nên mỗi đồng phí là một đồng ai đó lấy đi.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "coin",
+      "kicker": "Bài học 1",
+      "line": "Chi phí là kẻ thù thầm lặng."
+     },
+     {
+      "type": "statement",
+      "kicker": "Phép tính của Bogle",
+      "text": "Thị trường − chi phí = phần của bạn.",
+      "highlight": [
+       "phần của bạn."
+      ],
+      "cue": "lợi nhuận"
+     },
+     {
+      "type": "swap",
+      "kicker": "Mỗi đồng phí",
+      "cue": "mọi nhà",
+      "from": {
+       "label": "Phần của bạn",
+       "icon": "coins"
+      },
+      "to": {
+       "label": "Phần của người thu phí",
+       "icon": "store",
+       "cue": "mỗi đồng"
+      }
+     }
+    ]
+   },
+   "sources": [
+    "bogle2017"
+   ]
+  },
+  {
+   "id": "b07",
+   "act": "example",
+   "narration": "Thử tính nhé. Mười nghìn đô, tăng bảy phần trăm mỗi năm trong năm mươi năm, thành khoảng hai trăm chín mươi lăm nghìn đô. Nhưng nếu mất hai phần trăm phí mỗi năm, bạn chỉ còn khoảng một trăm mười lăm nghìn. Phí đã lấy đi gần sáu phần mười.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "chart",
+      "title": "10.000 $ · 7%/năm · minh hoạ",
+      "unit": "$",
+      "points": [
+       [
+        "0",
+        10000
+       ],
+       [
+        "10",
+        19672
+       ],
+       [
+        "20",
+        38697
+       ],
+       [
+        "30",
+        76123
+       ],
+       [
+        "40",
+        149745
+       ],
+       [
+        "50 năm",
+        294570
+       ]
+      ],
+      "annotations": [
+       {
+        "at": 5,
+        "text": "≈ 294.600 $",
+        "cue": "hai trăm"
+       }
+      ]
+     },
+     {
+      "type": "stat",
+      "value": 61,
+      "prefix": "≈ ",
+      "suffix": "%",
+      "label": "phần bị phí lấy đi",
+      "note": "còn ≈ 114.700 $ nếu mất 2%/năm",
+      "cue": "nhưng"
+     }
+    ]
+   },
+   "sources": [
+    "calc",
+    "bogle2017"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b08",
+   "act": "principle",
+   "narration": "Bài học thứ hai: mua cả đống rơm. Theo S&P, trong mười lăm năm tính đến cuối năm hai nghìn hai mươi tư, khoảng chín trên mười quỹ cổ phiếu lớn quản lý chủ động đã thua chỉ số. Và rất khó biết trước, ai sẽ là người còn lại.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "pie",
+      "kicker": "Bài học 2",
+      "line": "Mua cả đống rơm."
+     },
+     {
+      "type": "funnel",
+      "total": 100,
+      "start_full": true,
+      "keep": 10,
+      "keep_cue": "và rất",
+      "cue": "theo",
+      "label": "Cứ 100 quỹ chủ động · 15 năm",
+      "keep_label": "≈ 1/10 thắng chỉ số",
+      "stat": {
+       "text": "≈ 9/10",
+       "label": "thua chỉ số S&P 500 · đến cuối 2024",
+       "cue": "chín trên"
+      }
+     }
+    ]
+   },
+   "sources": [
+    "spiva2024"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b09",
+   "act": "story",
+   "narration": "Năm hai nghìn lẻ tám, Buffett đem ý tưởng ấy ra thử. Ông cược một triệu đô cho từ thiện với Ted Seides của Protégé Partners: một quỹ chỉ số S&P năm trăm của Vanguard, đấu với năm quỹ của các quỹ phòng hộ, do Seides tự chọn, trong mười năm.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Warren Buffett",
+      "initials": "WB",
+      "role": "Berkshire Hathaway",
+      "years": "Ván cược 2008 – 2017"
+     },
+     {
+      "type": "compare",
+      "title": "Ván cược 1 triệu $",
+      "cue": "một quỹ",
+      "left": {
+       "title": "Protégé Partners",
+       "items": [
+        "5 quỹ của quỹ phòng hộ",
+        "Hai tầng phí",
+        "Chuyên gia tự chọn"
+       ]
+      },
+      "right": {
+       "title": "Buffett",
+       "items": [
+        "Quỹ chỉ số S&P 500",
+        "Phí rất thấp",
+        "Không ai chọn cổ phiếu"
+       ]
+      }
+     }
+    ]
+   },
+   "sources": [
+    "brk2016",
+    "brk2017",
+    "longnow"
+   ]
+  },
+  {
+   "id": "b10",
+   "act": "story",
+   "narration": "Và năm đầu tiên là một cú sốc. Khủng hoảng ập đến, quỹ chỉ số mất ba mươi bảy phần trăm. Phía quỹ phòng hộ chỉ mất khoảng hai mươi bốn, và vẫn dẫn trước sau ba năm đầu.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stat",
+      "value": 37,
+      "prefix": "−",
+      "suffix": "%",
+      "label": "quỹ chỉ số · năm 2008",
+      "note": "phía phòng hộ: ≈ −24%",
+      "cue": "ba mươi"
+     },
+     {
+      "type": "icon",
+      "icon": "turtle",
+      "kicker": "Sau 3 năm",
+      "line": "Chậm. Và đang thua.",
+      "cue": "vẫn dẫn"
+     }
+    ]
+   },
+   "sources": [
+    "fortune2009",
+    "fortune2011",
+    "brk2017"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b11",
+   "act": "story",
+   "narration": "Nhưng con rùa vẫn bò. Đến cuối năm hai nghìn mười bảy, quỹ chỉ số tăng một trăm hai mươi lăm phẩy tám phần trăm. Năm quỹ phòng hộ, trung bình chỉ khoảng ba mươi sáu phần trăm. Khoảng hai phẩy hai triệu đô được trao cho Girls Inc. ở Omaha.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "chart",
+      "title": "Quỹ chỉ số trong ván cược · xấp xỉ (2008 = 100)",
+      "points": [
+       [
+        "2008",
+        100
+       ],
+       [
+        "",
+        63.0
+       ],
+       [
+        "",
+        79.7
+       ],
+       [
+        "2010",
+        91.7
+       ],
+       [
+        "",
+        93.6
+       ],
+       [
+        "2012",
+        108.6
+       ],
+       [
+        "",
+        143.7
+       ],
+       [
+        "2014",
+        163.3
+       ],
+       [
+        "",
+        165.6
+       ],
+       [
+        "2016",
+        185.4
+       ],
+       [
+        "2017",
+        225.8
+       ]
+      ],
+      "annotations": [
+       {
+        "at": 1,
+        "text": "2008: −37%"
+       },
+       {
+        "at": 10,
+        "text": "+125,8%",
+        "cue": "một trăm"
+       }
+      ]
+     },
+     {
+      "type": "compare",
+      "title": "Kết quả sau 10 năm",
+      "cue": "năm quỹ",
+      "left": {
+       "title": "5 quỹ phòng hộ",
+       "items": [
+        "≈ +36% (trung bình)",
+        "≈ 3%/năm"
+       ]
+      },
+      "right": {
+       "title": "Quỹ chỉ số",
+       "items": [
+        "+125,8%",
+        "8,5%/năm"
+       ]
+      }
+     },
+     {
+      "type": "icon",
+      "icon": "coins",
+      "kicker": "Girls Inc. of Omaha",
+      "line": "≈ 2,2 triệu $ cho từ thiện.",
+      "cue": "khoảng hai"
+     }
+    ]
+   },
+   "sources": [
+    "brk2017",
+    "dando2018",
+    "longnow"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b12",
+   "act": "principle",
+   "narration": "Bài học thứ ba: nhàm chán, rồi ngồi yên. Ai bán quỹ chỉ số trong năm hai nghìn lẻ tám đã bán ngay đáy, và bỏ lỡ cả chặng đường phía sau. Phần thưởng thuộc về người ở lại qua cả những năm tệ nhất.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "hourglass",
+      "kicker": "Bài học 3",
+      "line": "Nhàm chán, rồi ngồi yên."
+     },
+     {
+      "type": "swap",
+      "kicker": "Năm 2008",
+      "cue": "ai bán",
+      "from": {
+       "label": "Bán lúc hoảng",
+       "icon": "lightning"
+      },
+      "to": {
+       "label": "Ở lại",
+       "icon": "turtle",
+       "cue": "phần thưởng"
+      },
+      "line": "Ở lại qua năm tệ nhất.",
+      "line_cue": "tệ nhất"
+     }
+    ]
+   },
+   "sources": [
+    "brk2017",
+    "fortune2009"
+   ]
+  },
+  {
+   "id": "b13",
+   "act": "complication",
+   "narration": "Nhưng quỹ chỉ số không phải phép màu. Nó cho bạn đúng thị trường, kể cả những năm mất hơn một phần ba. Và chính Bogle, cuối đời, lo rằng vài công ty quỹ chỉ số khổng lồ có thể nắm từ ba mươi phần trăm cổ phiếu Mỹ trở lên.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Điều dễ tin",
+      "text": "Quỹ chỉ số là an toàn.",
+      "strike": "là an toàn.",
+      "replace": "là đúng thị trường",
+      "strike_cue": "đúng thị"
+     },
+     {
+      "type": "stat",
+      "value": 30,
+      "prefix": "≥ ",
+      "suffix": "%",
+      "label": "cổ phiếu Mỹ trong tay vài gã khổng lồ?",
+      "note": "lo ngại của Bogle · WSJ, 2018",
+      "cue": "chính bogle"
+     }
+    ]
+   },
+   "sources": [
+    "fortune2009",
+    "bogle2018"
+   ]
+  },
+  {
+   "id": "b14",
+   "act": "turn",
+   "narration": "Vậy có nên bỏ qua Bogle? Không. Ông chưa bao giờ hứa bạn sẽ giàu nhanh. Ông chỉ cho bạn thấy ai đang lấy phần của mình. Năm hai nghìn mười bảy, Buffett viết: nếu có ai xứng đáng được dựng tượng vì nhà đầu tư Mỹ, người đó là Jack Bogle.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Vậy",
+      "text": "Có nên bỏ qua Bogle?",
+      "highlight": [
+       "bỏ qua"
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "binoculars",
+      "kicker": "Bogle chỉ cho bạn thấy",
+      "line": "Ai đang lấy phần của bạn?",
+      "cue": "ông chỉ"
+     },
+     {
+      "type": "quote",
+      "cue": "buffett viết",
+      "text": "Nếu có một bức tượng cho người đã làm nhiều nhất cho nhà đầu tư Mỹ, đó phải là Jack Bogle.",
+      "by": "Warren Buffett, thư cổ đông 2016 (lược dịch)"
+     }
+    ]
+   },
+   "sources": [
+    "brk2016"
+   ]
+  },
+  {
+   "id": "b15",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Hai quỹ theo cùng một chỉ số. Bạn định giữ ba mươi năm. Nên nhìn vào điều gì trước tiên?",
+   "visual": {
+    "type": "question",
+    "question": "Hai quỹ theo cùng một chỉ số, giữ 30 năm. Nhìn gì trước?",
+    "choices": [
+     "Quảng cáo hoành tráng hơn",
+     "Chi phí mỗi năm thấp hơn",
+     "Lợi nhuận năm ngoái cao hơn"
+    ],
+    "answer": "B — cùng thị trường, ít phí hơn, phần của bạn lớn hơn.",
+    "think_seconds": 5
+   }
+  },
+  {
+   "id": "b16",
+   "act": "recap",
+   "narration": "Vậy là ba bài học từ cuốn sách nhỏ của John Bogle. Chi phí là kẻ thù thầm lặng. Mua cả đống rơm. Và nhàm chán, rồi ngồi yên.",
+   "visual": {
+    "type": "list",
+    "title": "Ba bài học",
+    "check": true,
+    "items": [
+     {
+      "text": "Chi phí là kẻ thù thầm lặng",
+      "cue": "chi phí"
+     },
+     {
+      "text": "Mua cả đống rơm",
+      "cue": "mua cả"
+     },
+     {
+      "text": "Nhàm chán, rồi ngồi yên",
+      "cue": "và nhàm"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b17",
+   "act": "close",
+   "narration": "Ván cược của Buffett không phải phép màu. Đó là một phép trừ mà Bogle đã đặt cược cả sự nghiệp từ năm một nghìn chín trăm bảy mươi sáu. Đôi khi, điều khôn ngoan nhất là chọn cái nhàm chán, rồi kiên nhẫn với nó.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Ván cược 10 năm",
+      "text": "Không phải phép màu. Một phép trừ.",
+      "highlight": [
+       "Một phép trừ."
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "tea",
+      "steam": true,
+      "line": "Chọn cái nhàm chán. Rồi kiên nhẫn.",
+      "cue": "đôi khi"
+     }
+    ]
+   },
+   "sources": [
+    "brk2017",
+    "zweig2016"
+   ]
+  },
+  {
+   "id": "b18",
+   "act": "close",
+   "narration": "Còn bạn, bạn muốn mình review cuốn sách đầu tư nào tiếp theo? Hay có câu hỏi nào về quỹ chỉ số? Để lại bình luận cho mình nhé. Nếu thấy có ích, lưu lại và gửi cho một người bạn. Hẹn gặp bạn.",
+   "visual": {
+    "type": "end",
+    "kicker": "Review sách · Tập 10",
+    "title": "Đầu Tư Theo Lẽ Thường",
+    "ask": "Bạn muốn nghe cuốn sách đầu tư nào tiếp theo?",
+    "ask_hint": "Một cuốn sách · một nhà đầu tư · một câu hỏi về quỹ chỉ số",
+    "ask_cue": "còn bạn",
+    "cta": "Bình luận · Lưu lại · Gửi một người bạn",
+    "cta_cue": "nếu thấy",
+    "sources_line": "Nguồn: Bogle, The Little Book of Common Sense Investing (2007/2017) · Berkshire Hathaway, thư cổ đông 2016 & 2017 · S&P SPIVA 2024 · Zweig 2016",
+    "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư. Số liệu đã làm tròn; ví dụ chi phí chỉ để minh hoạ.",
+    "sources_cue": "hẹn gặp"
+   }
+  }
+ ],
+ "pronounce": {}
+}

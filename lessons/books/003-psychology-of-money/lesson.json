@@ -1,0 +1,900 @@
+{
+ "meta": {
+  "series": "Review sách · Tập 3",
+  "title": "Tâm Lý Học Về Tiền",
+  "subtitle": "The Psychology of Money — Morgan Housel (2020)",
+  "topic": "investing",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt thích đọc sách, muốn hiểu tiền và đầu tư bền vững hơn",
+  "aspect": "4:3",
+  "target_minutes": [
+   3,
+   5
+  ],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
+  "learning_goals": [
+   "Kể lại được câu chuyện Ronald Read và Richard Fuscone, và vì sao Housel mở sách bằng nó",
+   "Giải thích ba ý lớn: biết thế nào là đủ, lãi kép cần thời gian, chừa chỗ cho sai lầm",
+   "Nhận ra giới hạn của những câu chuyện thành công (thiên kiến người sống sót) và áp dụng khoảng đệm vào tài chính của mình"
+  ],
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người dẫn chương trình sách lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively. Measured with Whisper on 12 names: Vietnamese respellings scored 0.76, original spelling 0.95.",
+  "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư."
+ },
+ "sources": [
+  {
+   "id": "housel2020",
+   "cite": "Morgan Housel, The Psychology of Money: Timeless lessons on wealth, greed, and happiness, Harriman House, Sept 2020 (Introduction 'The Greatest Show on Earth'; ch. 2 Luck & Risk; ch. 3 Never Enough; ch. 4 Confounding Compounding; Room for Error)",
+   "url": "https://harriman-house.com/psychologyofmoney"
+  },
+  {
+   "id": "nbc2015",
+   "cite": "NBC News / AP, 'Vermont ex-janitor bequeaths secret millions to library, hospital', Feb 2015 (Read died June 2014 at 92; estate ~$8m; $4.8m hospital, $1.2m library)",
+   "url": "https://www.nbcnews.com/news/us-news/vermont-ex-janitor-bequeaths-secret-millions-library-hospital-n301396"
+  },
+  {
+   "id": "rutland2015",
+   "cite": "Rutland Herald, ''Frugal' man leaves $6 million in bequests', 2015 (gas station ~25 years, J.C. Penney janitor 17 years)",
+   "url": "https://www.rutlandherald.com/news/145-frugal-146-man-leaves-6-million-in-bequests/article_f3ac1462-837b-5a70-a0d6-fa4e09d7e9a8.html"
+  },
+  {
+   "id": "entre2016",
+   "cite": "Entrepreneur (from CNBC), 'How This Janitor Secretly Amassed an $8 Million Fortune' (cites WSJ 2015: at least 95 stocks at his death)",
+   "url": "https://www.entrepreneur.com/article/281646"
+  },
+  {
+   "id": "littlesis",
+   "cite": "LittleSis profile, Richard M. Fuscone (ex-Merrill Lynch executive; retired 2000; personal bankruptcy 2010) — secondary",
+   "url": "https://littlesis.org/person/101292-Richard_M_Fuscone"
+  },
+  {
+   "id": "vonnegut2005",
+   "cite": "Kurt Vonnegut, 'Joe Heller' (poem), The New Yorker, May 2005 — party on Shelter Island, 'enough'; retold by John C. Bogle, Enough. (2008) and Housel ch. 3"
+  },
+  {
+   "id": "cnbc2024",
+   "cite": "CNBC, 'Most of Warren Buffett's wealth came after age 65', May 2024 (cites Housel: $84.5bn net worth, $81.5bn after 65th birthday)",
+   "url": "https://www.cnbc.com/2024/05/03/most-of-warren-buffetts-wealth-came-after-age-65-heres-why.html"
+  },
+  {
+   "id": "tip351",
+   "cite": "The Investor's Podcast TIP351, interview with Morgan Housel (≈97% of Buffett's wealth after 65)",
+   "url": "https://www.theinvestorspodcast.com/episodes/psychology-of-money-w-morgan-housel/"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Biết thế nào là đủ",
+   "line": "Đừng liều thứ mình có và cần để lấy thứ mình không có và không cần."
+  },
+  {
+   "name": "Lãi kép cần thời gian",
+   "line": "Ở lại trong cuộc chơi đủ lâu quan trọng hơn lợi nhuận phi thường."
+  },
+  {
+   "name": "Chừa chỗ cho sai lầm",
+   "line": "Lên kế hoạch cho cả lúc kế hoạch không như ý."
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Một người lao công để lại tám triệu đô. Một giám đốc Merrill Lynch thì phá sản.",
+   "visual": {
+    "type": "hook",
+    "lines": [
+     "Lao công: 8 triệu $.",
+     "Giám đốc: phá sản."
+    ],
+    "crash_cue": "phá sản",
+    "points": [
+     [
+      0,
+      1.0
+     ],
+     [
+      1,
+      1.5
+     ],
+     [
+      2,
+      2.3
+     ],
+     [
+      3,
+      3.3
+     ],
+     [
+      4,
+      4.6
+     ],
+     [
+      5,
+      6.0
+     ],
+     [
+      6,
+      7.2
+     ],
+     [
+      7,
+      8.0
+     ],
+     [
+      8,
+      4.2
+     ],
+     [
+      9,
+      1.6
+     ],
+     [
+      10,
+      0.6
+     ]
+    ],
+    "peak_label": "2008",
+    "end_label": "phá sản",
+    "kicker": "The Psychology of Money · Morgan Housel"
+   },
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "phá sản",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "housel2020",
+    "nbc2015"
+   ]
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Không phải vì bằng cấp. Cũng không nhờ một mã cổ phiếu thần kỳ. Rót một tách trà, ngồi xuống cùng mình nhé. Đến cuối clip, bạn sẽ có ba bài học về tiền, và không cần một công thức nào cả.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Không phải nhờ…",
+      "cross": true,
+      "items": [
+       {
+        "icon": "brain",
+        "label": "Bằng cấp",
+        "cue": "bằng cấp"
+       },
+       {
+        "icon": "rocket",
+        "label": "Cổ phiếu thần kỳ",
+        "cue": "mã cổ"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "tea",
+      "steam": true,
+      "line": "Ngồi xuống cùng mình nhé.",
+      "cue": "rót"
+     },
+     {
+      "type": "statement",
+      "kicker": "Đến cuối clip",
+      "text": "Ba bài học về tiền.",
+      "highlight": [
+       "Ba bài học"
+      ],
+      "cue": "đến cuối"
+     }
+    ]
+   }
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Review sách · Tập 3",
+    "title": "Tâm Lý Học Về Tiền",
+    "subtitle": "The Psychology of Money — Morgan Housel (2020)",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ],
+   "sources": [
+    "housel2020"
+   ]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Chúng ta hay nghĩ làm giàu là chuyện của toán học. Giỏi tính hơn. Đọc nhiều biểu đồ hơn. Biết nhiều hơn. Morgan Housel cho rằng tiền là chuyện của hành vi, và hành vi thì khó dạy hơn nhiều.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Điều ta hay tin",
+      "items": [
+       {
+        "icon": "brain",
+        "label": "Giỏi tính",
+        "cue": "giỏi tính"
+       },
+       {
+        "icon": "chart",
+        "label": "Đọc biểu đồ",
+        "cue": "đọc nhiều"
+       },
+       {
+        "icon": "book",
+        "label": "Biết nhiều",
+        "cue": "biết nhiều"
+       }
+      ]
+     },
+     {
+      "type": "statement",
+      "kicker": "Morgan Housel",
+      "text": "Tiền là chuyện của toán học.",
+      "strike": "của toán học.",
+      "replace": "của hành vi",
+      "strike_cue": "hành vi",
+      "cue": "morgan"
+     }
+    ]
+   },
+   "sources": [
+    "housel2020"
+   ]
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "Housel từng viết cho The Motley Fool và The Wall Street Journal, rồi làm đối tác ở Collaborative Fund. Năm hai nghìn hai mươi, ông ra cuốn sách này: mười chín câu chuyện ngắn về những cách kỳ lạ mà con người nghĩ về tiền.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Morgan Housel",
+      "initials": "MH",
+      "role": "Collaborative Fund",
+      "years": "Từng viết cho Motley Fool · WSJ"
+     },
+     {
+      "type": "book",
+      "title": "The Psychology of Money",
+      "author": "Morgan Housel",
+      "year": "2020",
+      "kicker": "Cuốn sách",
+      "cue": "năm hai",
+      "facts": [
+       {
+        "big": "2020",
+        "text": "Harriman House",
+        "cue": "năm hai"
+       },
+       {
+        "big": "19",
+        "text": "câu chuyện ngắn",
+        "cue": "mười chín"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "housel2020"
+   ]
+  },
+  {
+   "id": "b03",
+   "act": "story",
+   "narration": "Hãy gặp Ronald Read, ở bang Vermont, nước Mỹ. Ông sửa xe, bơm xăng khoảng hai mươi lăm năm, rồi làm lao công ở cửa hàng J.C. Penney mười bảy năm. Không thừa kế. Không trúng số.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Ronald Read",
+      "initials": "RR",
+      "role": "Brattleboro, Vermont",
+      "years": "1921 – 2014"
+     },
+     {
+      "type": "timeline",
+      "title": "Một đời làm việc",
+      "cue": "ông sửa",
+      "events": [
+       {
+        "year": "~25 năm",
+        "text": "Sửa xe · bơm xăng",
+        "cue": "sửa xe"
+       },
+       {
+        "year": "17 năm",
+        "text": "Lao công · J.C. Penney",
+        "cue": "lao công"
+       }
+      ]
+     },
+     {
+      "type": "trio",
+      "kicker": "Không có…",
+      "cross": true,
+      "cue": "không thừa",
+      "items": [
+       {
+        "icon": "coins",
+        "label": "Thừa kế",
+        "cue": "thừa kế"
+       },
+       {
+        "icon": "dice",
+        "label": "Trúng số",
+        "cue": "trúng số"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "rutland2015",
+    "nbc2015",
+    "housel2020"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b04",
+   "act": "story",
+   "narration": "Năm hai nghìn mười bốn, ông mất ở tuổi chín mươi hai. Cả thị trấn sững sờ: ông để lại hơn tám triệu đô la. Hơn sáu triệu trong số đó được tặng cho bệnh viện và thư viện địa phương.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stat",
+      "value": 8,
+      "prefix": "> ",
+      "suffix": " triệu $",
+      "label": "để lại khi qua đời",
+      "note": "2014 · 92 tuổi",
+      "cue": "hơn tám"
+     },
+     {
+      "type": "statement",
+      "kicker": "Di chúc",
+      "text": "Hơn 6 triệu $ cho bệnh viện và thư viện.",
+      "highlight": [
+       "bệnh viện và thư viện."
+      ],
+      "cue": "hơn sáu"
+     }
+    ]
+   },
+   "sources": [
+    "nbc2015",
+    "rutland2015",
+    "housel2020"
+   ]
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Bí quyết của ông? Chẳng có gì bí ẩn. Ông tiết kiệm từng chút, mua cổ phiếu của những công ty lớn, quen thuộc, rồi giữ rất lâu. Theo The Wall Street Journal, lúc mất, ông nắm ít nhất chín mươi lăm mã cổ phiếu.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Bí quyết?",
+      "items": [
+       {
+        "icon": "coin",
+        "label": "Tiết kiệm từng chút",
+        "cue": "tiết kiệm"
+       },
+       {
+        "icon": "store",
+        "label": "Công ty quen thuộc",
+        "cue": "mua cổ"
+       },
+       {
+        "icon": "hourglass",
+        "label": "Giữ rất lâu",
+        "cue": "giữ"
+       }
+      ]
+     },
+     {
+      "type": "stat",
+      "value": 95,
+      "prefix": "≥ ",
+      "label": "mã cổ phiếu lúc qua đời",
+      "note": "theo The Wall Street Journal, 2015",
+      "cue": "chín mươi"
+     }
+    ]
+   },
+   "sources": [
+    "entre2016",
+    "nbc2015"
+   ]
+  },
+  {
+   "id": "b06",
+   "act": "story",
+   "narration": "Giờ gặp người thứ hai. Richard Fuscone học Harvard, có bằng MBA, từng là lãnh đạo cấp cao ở Merrill Lynch. Ông nghỉ hưu sớm, rồi vay nặng để mở rộng một biệt thự ở Greenwich, với mười một phòng tắm và chi phí hơn chín mươi nghìn đô mỗi tháng.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Richard Fuscone",
+      "initials": "RF",
+      "role": "Merrill Lynch",
+      "years": "Harvard · MBA"
+     },
+     {
+      "type": "trio",
+      "kicker": "Biệt thự ở Greenwich",
+      "cue": "ông nghỉ",
+      "items": [
+       {
+        "icon": "coins",
+        "label": "Vay nặng",
+        "cue": "vay nặng"
+       },
+       {
+        "icon": "store",
+        "label": "11 phòng tắm",
+        "cue": "mười một"
+       }
+      ]
+     },
+     {
+      "type": "stat",
+      "value": 90000,
+      "prefix": "> $",
+      "label": "chi phí mỗi tháng",
+      "note": "theo Housel",
+      "cue": "chín mươi"
+     }
+    ]
+   },
+   "sources": [
+    "housel2020",
+    "littlesis"
+   ]
+  },
+  {
+   "id": "b07",
+   "act": "story",
+   "narration": "Rồi khủng hoảng năm hai nghìn lẻ tám ập đến. Nợ nhiều, tài sản khó bán, Fuscone phải tuyên bố phá sản cá nhân. Căn biệt thự bị bán đấu giá, thấp hơn khoảng bảy mươi lăm phần trăm so với mức một hãng bảo hiểm từng định giá.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "lightning",
+      "kicker": "2008",
+      "line": "Khủng hoảng ập đến."
+     },
+     {
+      "type": "halo",
+      "kicker": "Sau khủng hoảng",
+      "cue": "nợ nhiều",
+      "items": [
+       {
+        "name": "Richard Fuscone",
+        "before": "Harvard · Merrill Lynch",
+        "after": "PHÁ SẢN",
+        "cue": "phá sản"
+       },
+       {
+        "name": "Biệt thự Greenwich",
+        "before": "11 phòng tắm",
+        "after": "ĐẤU GIÁ · −75%",
+        "cue": "bán đấu"
+       }
+      ],
+      "label": "Thông minh chưa đủ",
+      "label_cue": "bảy mươi"
+     }
+    ]
+   },
+   "sources": [
+    "housel2020",
+    "littlesis"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b08",
+   "act": "turn",
+   "narration": "Housel hỏi: còn lĩnh vực nào mà một người không bằng cấp, không quan hệ, lại vượt xa người được đào tạo tốt nhất? Ông nói mình khó nghĩ ra lĩnh vực thứ hai.",
+   "visual": {
+    "type": "quote",
+    "text": "Còn lĩnh vực nào mà người không bằng cấp lại vượt xa người được đào tạo tốt nhất?",
+    "by": "Morgan Housel (lược dịch)",
+    "year": "2020"
+   },
+   "sources": [
+    "housel2020"
+   ]
+  },
+  {
+   "id": "b09",
+   "act": "example",
+   "narration": "Bài học thứ nhất bắt đầu ở một bữa tiệc. Nhà văn Kurt Vonnegut trêu bạn mình, Joseph Heller: chủ nhà, một tỷ phú, có lẽ chỉ trong một ngày đã kiếm nhiều hơn mọi thứ cuốn tiểu thuyết nổi tiếng nhất của Heller từng mang lại. Heller đáp: tôi có thứ ông ta không bao giờ có. Đó là: đủ.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Một bữa tiệc ở Shelter Island",
+      "items": [
+       {
+        "icon": "people",
+        "label": "Kurt Vonnegut",
+        "cue": "kurt"
+       },
+       {
+        "icon": "book",
+        "label": "Joseph Heller · Catch-22",
+        "cue": "joseph"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "coins",
+      "kicker": "Chủ nhà tỷ phú",
+      "line": "1 ngày > cả đời một cuốn sách?",
+      "cue": "chủ nhà"
+     },
+     {
+      "type": "statement",
+      "kicker": "Heller đáp",
+      "text": "Tôi có thứ ông ta không bao giờ có: đủ.",
+      "highlight": [
+       "đủ."
+      ],
+      "cue": "heller đáp"
+     }
+    ]
+   },
+   "sources": [
+    "vonnegut2005",
+    "housel2020"
+   ]
+  },
+  {
+   "id": "b10",
+   "act": "principle",
+   "narration": "Housel gọi đó là kỹ năng tài chính khó nhất: khiến cột mốc ngừng dịch chuyển. Fuscone đã liều thứ mình có và cần, để lấy thứ mình không có và không cần. Biết thế nào là đủ, là biết khi nào ngừng đặt cược.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "target",
+      "kicker": "Bài học 1 · Biết thế nào là đủ",
+      "line": "Cột mốc ngừng dịch chuyển."
+     },
+     {
+      "type": "swap",
+      "kicker": "Một cuộc đổi không đáng",
+      "cue": "fuscone",
+      "from": {
+       "label": "Thứ có & cần",
+       "icon": "shield"
+      },
+      "to": {
+       "label": "Thứ không cần",
+       "icon": "rocket",
+       "cue": "để lấy"
+      },
+      "line": "Biết khi nào ngừng cược.",
+      "line_cue": "biết thế"
+     }
+    ]
+   },
+   "sources": [
+    "housel2020"
+   ]
+  },
+  {
+   "id": "b11",
+   "act": "story",
+   "narration": "Bài học thứ hai đến từ Warren Buffett. Khi Housel viết sách, tài sản của Buffett vào khoảng tám mươi tư tỷ đô. Và khoảng tám mươi mốt tỷ trong số đó đến sau sinh nhật thứ sáu mươi lăm của ông.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Warren Buffett",
+      "initials": "WB",
+      "role": "Berkshire Hathaway",
+      "years": "≈ 84,5 tỷ $ (2020)"
+     },
+     {
+      "type": "stat",
+      "value": 96,
+      "prefix": "≈ ",
+      "suffix": "%",
+      "label": "tài sản đến sau tuổi 65",
+      "note": "81,5 / 84,5 tỷ $ · theo Housel",
+      "cue": "tám mươi mốt"
+     }
+    ]
+   },
+   "sources": [
+    "housel2020",
+    "cnbc2024",
+    "tip351"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b12",
+   "act": "principle",
+   "narration": "Housel viết: kỹ năng của Buffett là đầu tư, nhưng bí mật của ông là thời gian. Ronald Read cũng vậy: ông không cần lợi nhuận phi thường, chỉ cần ở lại trong cuộc chơi đủ lâu. Lãi kép cần thời gian, nhiều hơn là cần thiên tài.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "quote",
+      "text": "Kỹ năng của ông là đầu tư. Bí mật của ông là thời gian.",
+      "by": "Morgan Housel (lược dịch)"
+     },
+     {
+      "type": "icon",
+      "icon": "snowball",
+      "kicker": "Bài học 2 · Lãi kép cần thời gian",
+      "line": "Ở lại đủ lâu.",
+      "cue": "ronald"
+     }
+    ]
+   },
+   "sources": [
+    "housel2020",
+    "cnbc2024"
+   ]
+  },
+  {
+   "id": "b13",
+   "act": "principle",
+   "narration": "Bài học thứ ba: chừa chỗ cho sai lầm. Fuscone không thiếu trí tuệ, ông thiếu khoảng đệm: nợ nhiều, tài sản khó bán, nên một cú sốc là đủ quật ngã. Housel khuyên: hãy lên kế hoạch cho cả lúc kế hoạch không như ý.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Thiếu khoảng đệm",
+      "items": [
+       {
+        "icon": "coins",
+        "label": "Nợ nhiều",
+        "cue": "nợ nhiều"
+       },
+       {
+        "icon": "store",
+        "label": "Tài sản khó bán",
+        "cue": "tài sản"
+       },
+       {
+        "icon": "lightning",
+        "label": "Một cú sốc",
+        "cue": "một cú"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "umbrella",
+      "kicker": "Bài học 3 · Chừa chỗ cho sai lầm",
+      "line": "Kế hoạch cho lúc kế hoạch hỏng.",
+      "cue": "housel"
+     }
+    ]
+   },
+   "sources": [
+    "housel2020"
+   ]
+  },
+  {
+   "id": "b14",
+   "act": "complication",
+   "narration": "Nhưng hãy cẩn thận với một câu chuyện quá đẹp. Ronald Read là người thắng mà ta nhìn thấy. Còn bao nhiêu người cũng tiết kiệm, cũng giữ cổ phiếu, nhưng chọn nhầm công ty, và chẳng ai viết về họ? Chính Housel cũng dành cả một chương cho may mắn và rủi ro.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Điều dễ tin",
+      "text": "Cứ tiết kiệm là sẽ giàu.",
+      "strike": "sẽ giàu.",
+      "replace": "chưa chắc",
+      "strike_cue": "người thắng"
+     },
+     {
+      "type": "icon",
+      "icon": "dice",
+      "kicker": "Người ta không viết về…",
+      "line": "Những người chọn nhầm.",
+      "cue": "còn bao"
+     },
+     {
+      "type": "book",
+      "title": "The Psychology of Money",
+      "author": "Morgan Housel",
+      "year": "2020",
+      "kicker": "Chính tác giả cảnh báo",
+      "cue": "chính housel",
+      "facts": [
+       {
+        "big": "Chương 2",
+        "text": "May mắn & rủi ro",
+        "cue": "may mắn"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "housel2020"
+   ]
+  },
+  {
+   "id": "b15",
+   "act": "turn",
+   "narration": "Vậy bài học là gì? Housel viết: không hẳn là hãy giống Read hơn và giống Fuscone ít đi, dù đó cũng chẳng phải lời khuyên tồi. Mà là: làm tốt với tiền ít liên quan đến bạn thông minh cỡ nào, và liên quan rất nhiều đến cách bạn cư xử.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Vậy",
+      "text": "Bài học là gì?",
+      "highlight": [
+       "Bài học"
+      ]
+     },
+     {
+      "type": "compare",
+      "title": "Điều quyết định",
+      "cue": "mà là",
+      "left": {
+       "title": "Bạn biết bao nhiêu",
+       "items": [
+        "Bằng cấp",
+        "Kiến thức",
+        "Biểu đồ"
+       ]
+      },
+      "right": {
+       "title": "Bạn cư xử ra sao",
+       "items": [
+        "Biết đủ",
+        "Kiên nhẫn",
+        "Khoảng đệm"
+       ]
+      }
+     }
+    ]
+   },
+   "sources": [
+    "housel2020"
+   ]
+  },
+  {
+   "id": "b16",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Bạn vừa được tăng lương hai mươi phần trăm. Cách nào chừa nhiều chỗ cho sai lầm nhất?",
+   "visual": {
+    "type": "question",
+    "question": "Vừa được tăng lương 20%. Cách nào chừa chỗ cho sai lầm?",
+    "choices": [
+     "Thuê ngay căn hộ đắt hơn",
+     "Vay thêm để mua xe mới",
+     "Giữ mức sống, để dành phần tăng thêm"
+    ],
+    "answer": "C — khoảng đệm cho ngày không như ý.",
+    "think_seconds": 5
+   }
+  },
+  {
+   "id": "b17",
+   "act": "recap",
+   "narration": "Vậy là ba bài học từ Tâm Lý Học Về Tiền. Biết thế nào là đủ. Lãi kép cần thời gian. Và chừa chỗ cho sai lầm.",
+   "visual": {
+    "type": "list",
+    "title": "Ba bài học",
+    "check": true,
+    "items": [
+     {
+      "text": "Biết thế nào là đủ",
+      "cue": "biết thế"
+     },
+     {
+      "text": "Lãi kép cần thời gian",
+      "cue": "lãi kép"
+     },
+     {
+      "text": "Chừa chỗ cho sai lầm",
+      "cue": "và chừa"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b18",
+   "act": "close",
+   "narration": "Người lao công không học nhiều hơn vị giám đốc. Ông chỉ biết đủ, đủ kiên nhẫn, và không bao giờ đặt cược thứ mình cần. Vậy câu hỏi không phải bạn giỏi đến đâu, mà là: bạn cư xử với tiền thế nào?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Người lao công & vị giám đốc",
+      "text": "Biết đủ. Kiên nhẫn. Có khoảng đệm.",
+      "highlight": [
+       "Biết đủ."
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "tea",
+      "steam": true,
+      "line": "Bạn cư xử với tiền thế nào?",
+      "cue": "vậy câu"
+     }
+    ]
+   },
+   "sources": [
+    "housel2020"
+   ]
+  },
+  {
+   "id": "b19",
+   "act": "close",
+   "narration": "Còn bạn, cuốn sách về tiền nào bạn muốn mình review tiếp theo? Kể cho mình nghe trong phần bình luận nhé. Nếu thấy có ích, lưu lại và gửi cho một người bạn. Hẹn gặp bạn.",
+   "visual": {
+    "type": "end",
+    "kicker": "Review sách · Tập 3",
+    "title": "Tâm Lý Học Về Tiền",
+    "ask": "Cuốn sách về tiền nào bạn muốn nghe tiếp?",
+    "ask_hint": "Một cuốn sách · một nhà đầu tư · một thói quen tiền bạc",
+    "ask_cue": "còn bạn",
+    "cta": "Bình luận · Lưu lại · Gửi một người bạn",
+    "cta_cue": "nếu thấy",
+    "sources_line": "Nguồn: Housel, The Psychology of Money (2020) · AP/NBC News & Rutland Herald 2015 · Vonnegut, The New Yorker 2005 · CNBC 2024",
+    "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư. Số liệu theo sách và báo chí, đã làm tròn.",
+    "sources_cue": "hẹn gặp"
+   }
+  }
+ ],
+ "pronounce": {}
+}
