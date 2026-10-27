@@ -1,0 +1,564 @@
+{
+ "meta": {
+  "series": "Review sách · Tập 9",
+  "title": "Điều Quan Trọng Nhất",
+  "subtitle": "The Most Important Thing — Howard Marks (2011)",
+  "topic": "investing",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt thích đọc sách, quan tâm đầu tư, muốn nghĩ khác đám đông một cách tỉnh táo",
+  "aspect": "4:3",
+  "target_minutes": [3, 5],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "voice_seed": 99,
+  "speed": 0.88,
+  "music": "chill",
+  "captions": true,
+  "look": {"primary_color": "#E8B06A", "secondary_color": "#12100E"},
+  "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư.",
+  "learning_goals": [
+   "Kể lại được câu chuyện bản ghi nhớ bubble.com (2/1/2000) và cú sụp của Nasdaq 2000–2002",
+   "Giải thích ba ý lớn: tư duy tầng thứ hai, rủi ro trốn trong sự yên tâm, con lắc tâm lý",
+   "Nhận ra giới hạn: không ai đoán được thời điểm; đi trước quá xa trông giống như sai"
+  ]
+ },
+ "sources": [
+  {
+   "id": "marks2011",
+   "cite": "Howard Marks, The Most Important Thing: Uncommon Sense for the Thoughtful Investor, Columbia Business School Publishing (Columbia University Press), 2011 (ch. 1 second-level thinking: 'It's a good company; let's buy the stock' vs. 'everyone thinks it's a great company, and it's not'; chapters on risk; 'Awareness of the Pendulum')",
+   "url": "https://cupola.columbia.edu/978-0-231-15368-3"
+  },
+  {
+   "id": "buffett_blurb",
+   "cite": "Publisher's description of The Most Important Thing: 'This is that rarity, a useful book.' — Warren Buffett; 'When I see memos from Howard Marks in my mail, they're the first thing I open and read.'",
+   "url": "https://nlb.overdrive.com/media/555369"
+  },
+  {
+   "id": "oaktree_bubble",
+   "cite": "Howard Marks, memo 'bubble.com', Oaktree Capital, 2 January 2000 (overheated, speculative market in tech, internet and telecom stocks; Marks: 'the first of my memos to engender any response from readers'; inspired by reading Edward Chancellor in fall 1999). Oaktree's site could not be reached from this session; corroborated via Oaktree podcast page 'On Bubble Watch' (2025) and secondary coverage",
+   "url": "https://www.oaktreecapital.com/insights/memo/bubble-com"
+  },
+  {
+   "id": "oaktree_history",
+   "cite": "Howard Marks, first memo 'The Route to Performance', 12 October 1990, sent by post to ~50 clients, no reader response for about a decade ('I never had one response'); Oaktree founded 1995 by Marks and partners (Seeking Alpha, 'The Best of Howard Marks' Memos'; Tulane Freeman News)",
+   "url": "https://seekingalpha.com/article/4830342-best-of-howard-marks-memos"
+  },
+  {
+   "id": "chancellor1999",
+   "cite": "Edward Chancellor, Devil Take the Hindmost: A History of Financial Speculation, Farrar, Straus and Giroux, 1999",
+   "url": ""
+  },
+  {
+   "id": "nasdaq",
+   "cite": "Nasdaq Composite closes: 2,192.69 (end 1998); 4,069.31 (end 1999, +85.59%, Nasdaq release); record close 5,048.62 on 10 March 2000; 2,470.52 (end 2000, Nasdaq release); 1,950.4 (end 2001, Boston Fed); closing low 1,114.11 on 9 October 2002 (≈ −78%)",
+   "url": "https://mondovisione.com/media-and-resources/news/nasdaqworlds-biggest-stock-market-by-dollar-value-2011124/"
+  },
+  {
+   "id": "predict2001",
+   "cite": "Howard Marks, memo 'You Can't Predict. You Can Prepare.', 20 November 2001 (we may never know where we're going, but we ought to know where we are)",
+   "url": "https://www.livewiremarkets.com/wires/howard-marks-you-can-t-predict-but-you-can-prepare"
+  },
+  {
+   "id": "marks_risk",
+   "cite": "Howard Marks on risk as the probability of permanent loss rather than volatility, and the riskiest things being those that seem least risky (memos 'Risk Revisited' 2014, 'Risk Revisited Again' 2015; Novel Investor, 'Howard Marks: The Perversity of Risk')",
+   "url": "https://novelinvestor.com/howard-marks-perversity-risk/"
+  },
+  {
+   "id": "cfa2020",
+   "cite": "CFA Institute Enterprising Investor, 2020 interview with Howard Marks: 'Being too far ahead of your time is indistinguishable from being wrong' (an adage he says he learned in the early 1970s)",
+   "url": "https://rpc.cfainstitute.org/blogs/enterprising-investor/2020/know-what-you-dont-know-six-tips-from-howard-marks-cfa"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Nghĩ ở tầng thứ hai",
+   "line": "Đừng dừng ở 'công ty tốt'; hỏi tiếp: mọi người đã nghĩ gì, và giá đã phản ánh điều đó chưa?"
+  },
+  {
+   "name": "Rủi ro trốn trong sự yên tâm",
+   "line": "Rủi ro là khả năng mất vĩnh viễn, và nó lớn nhất khi ai cũng thấy an toàn."
+  },
+  {
+   "name": "Biết con lắc đang ở đâu",
+   "line": "Tâm lý đung đưa giữa tham lam và sợ hãi; không cần đoán lúc nó quay, chỉ cần biết nó đang ở đâu."
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Mười năm viết thư, không một ai hồi âm. Rồi một lá thư, hơn hai tháng trước khi bong bóng vỡ.",
+   "visual": {
+    "type": "hook",
+    "lines": ["10 năm. Không ai hồi âm.", "Rồi: bubble.com."],
+    "crash_cue": "vỡ",
+    "points": [[0, 2193], [1, 4069], [2, 5049], [3, 2471], [4, 1950], [5, 1114]],
+    "peak_label": "Nasdaq · 3/2000",
+    "end_label": "10/2002 · −78%",
+    "kicker": "The Most Important Thing · Howard Marks"
+   },
+   "sfx": [{"kind": "hit", "cue": "vỡ", "gain_db": -6}],
+   "sources": ["oaktree_history", "oaktree_bubble", "nasdaq"]
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Lá thư ấy không đoán ngày, cũng không nhờ may mắn. Nó chỉ nhìn ra điều đám đông không muốn thấy. Pha một ấm trà nào. Trong vài phút tới, bạn sẽ thấy cách người viết lá thư ấy suy nghĩ, và ba bài học để nghĩ khác đám đông.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Không phải nhờ…",
+      "cross": true,
+      "items": [
+       {"icon": "clock", "label": "Đoán đúng ngày", "cue": "đoán"},
+       {"icon": "dice", "label": "May mắn", "cue": "may mắn"}
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "binoculars",
+      "line": "Thấy điều đám đông không muốn thấy.",
+      "cue": "nó chỉ"
+     },
+     {
+      "type": "icon",
+      "icon": "tea",
+      "steam": true,
+      "line": "Một cách nghĩ. Ba bài học.",
+      "cue": "pha"
+     }
+    ]
+   }
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Review sách · Tập 9",
+    "title": "Điều Quan Trọng Nhất",
+    "subtitle": "The Most Important Thing — Howard Marks (2011)",
+    "hold": 3.0
+   },
+   "sfx": [{"kind": "whoosh", "at": 0.0, "gain_db": -12}],
+   "sources": ["marks2011"]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Chúng ta hay nghĩ nhà đầu tư giỏi là người dự báo giỏi. Biết lãi suất sẽ tăng hay giảm, thị trường sẽ lên hay xuống. Người viết cuốn sách này nghĩ khác: tương lai thì khó đoán, nhưng ít nhất, ta nên biết mình đang đứng ở đâu.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Điều ta hay tin",
+      "items": [
+       {"icon": "binoculars", "label": "Dự báo giỏi", "cue": "dự báo"},
+       {"icon": "pie", "label": "Đoán lãi suất", "cue": "lãi suất"},
+       {"icon": "chart", "label": "Đoán thị trường", "cue": "thị trường"}
+      ]
+     },
+     {
+      "type": "statement",
+      "kicker": "Một cách nghĩ khác",
+      "text": "Giỏi là đoán trúng tương lai.",
+      "strike": "đoán trúng tương lai.",
+      "replace": "biết mình đang ở đâu",
+      "strike_cue": "ít nhất",
+      "cue": "người viết"
+     }
+    ]
+   },
+   "sources": ["predict2001"]
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "Người đó là Howard Marks, đồng sáng lập Oaktree Capital năm một nghìn chín trăm chín mươi lăm. Từ năm một nghìn chín trăm chín mươi, ông có một thói quen: viết thư ngỏ cho khách hàng. Gần mười năm, không ai trả lời.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Howard Marks",
+      "role": "Đồng sáng lập · Oaktree Capital",
+      "years": "viết thư cho khách hàng từ 1990",
+      "initials": "HM"
+     },
+     {
+      "type": "timeline",
+      "title": "Những lá thư",
+      "cue": "từ năm",
+      "events": [
+       {"year": "1990", "text": "Lá thư đầu tiên", "cue": "từ năm"},
+       {"year": "1995", "text": "Lập Oaktree"},
+       {"year": "~10 năm", "text": "Không ai hồi âm", "cue": "gần mười"}
+      ]
+     }
+    ]
+   },
+   "sources": ["oaktree_history"]
+  },
+  {
+   "id": "b03",
+   "act": "story",
+   "narration": "Cuối năm một nghìn chín trăm chín mươi chín, Nasdaq vừa tăng khoảng tám mươi sáu phần trăm chỉ trong một năm. Ai cũng nói về internet. Còn Marks thì đọc một cuốn sách lịch sử về các cơn đầu cơ, và thấy những điểm giống nhau đến lạnh người.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stat",
+      "value": 86,
+      "prefix": "+",
+      "suffix": "%",
+      "label": "Nasdaq · năm 1999",
+      "note": "4.069 điểm cuối năm",
+      "cue": "tám mươi"
+     },
+     {
+      "type": "book",
+      "title": "Devil Take the Hindmost",
+      "author": "Edward Chancellor",
+      "year": "1999",
+      "kicker": "Marks đọc · mùa thu 1999",
+      "cue": "còn marks",
+      "facts": [
+       {"big": "Lịch sử", "text": "các cơn đầu cơ", "cue": "lịch sử"},
+       {"big": "Giống", "text": "đến lạnh người", "cue": "giống"}
+      ]
+     }
+    ]
+   },
+   "sources": ["nasdaq", "oaktree_bubble", "chancellor1999"],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b04",
+   "act": "story",
+   "narration": "Ngày hai tháng một năm hai nghìn, ông gửi đi bản ghi nhớ tên bubble.com. Ông viết rằng cổ phiếu công nghệ và internet đã quá nóng, đầy màu đầu cơ. Và lần đầu tiên sau gần mười năm, có người viết thư trả lời.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "2 · 1 · 2000 · bản ghi nhớ",
+      "text": "bubble.com",
+      "highlight": ["bubble.com"]
+     },
+     {
+      "type": "trio",
+      "kicker": "Ông viết",
+      "items": [
+       {"icon": "lightning", "label": "Quá nóng", "cue": "quá nóng"},
+       {"icon": "dice", "label": "Đầy màu đầu cơ", "cue": "đầy màu"}
+      ],
+      "cue": "ông viết"
+     },
+     {
+      "type": "icon",
+      "icon": "people",
+      "line": "Lần đầu tiên có hồi âm.",
+      "cue": "và lần"
+     }
+    ]
+   },
+   "sources": ["oaktree_bubble"]
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Hơn hai tháng sau, ngày mười tháng ba, Nasdaq lên đỉnh, ở khoảng năm nghìn điểm. Rồi nó rơi, và rơi suốt hơn hai năm. Đến tháng mười năm hai nghìn lẻ hai, chỉ số đã mất khoảng bảy mươi tám phần trăm.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "chart",
+      "title": "Nasdaq Composite · điểm đóng cửa",
+      "points": [["12/1998", 2193], ["12/1999", 4069], ["3/2000", 5049], ["12/2000", 2471], ["12/2001", 1950], ["10/2002", 1114]],
+      "annotations": [
+       {"at": 1, "text": "bubble.com", "cue": "hơn hai"},
+       {"at": 2, "text": "Đỉnh · 10/3/2000", "cue": "lên đỉnh"}
+      ]
+     },
+     {
+      "type": "stat",
+      "value": 78,
+      "prefix": "≈ −",
+      "suffix": "%",
+      "label": "Nasdaq · 3/2000 → 10/2002",
+      "note": "từ 5.049 xuống 1.114 điểm",
+      "cue": "đến tháng"
+     }
+    ]
+   },
+   "sources": ["nasdaq"],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b05b",
+   "act": "context",
+   "narration": "Mười một năm sau, Marks gom những lá thư ấy thành một cuốn sách: The Most Important Thing. Mỗi chương là một điều ông cho là quan trọng nhất. Warren Buffett nhận xét ngắn gọn: đây là của hiếm, một cuốn sách hữu ích.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "book",
+      "title": "The Most Important Thing",
+      "author": "Howard Marks",
+      "year": "2011",
+      "kicker": "Từ những lá thư",
+      "facts": [
+       {"big": "2011", "text": "Columbia Business School Publishing", "cue": "mười một"},
+       {"big": "Mỗi chương", "text": "một điều quan trọng nhất", "cue": "mỗi chương"}
+      ]
+     },
+     {
+      "type": "quote",
+      "text": "Đây là của hiếm: một cuốn sách hữu ích.",
+      "by": "Warren Buffett (lược dịch)",
+      "cue": "warren"
+     }
+    ]
+   },
+   "sources": ["marks2011", "buffett_blurb"]
+  },
+  {
+   "id": "b06",
+   "act": "principle",
+   "narration": "Bài học thứ nhất: nghĩ ở tầng thứ hai. Tầng một nói: công ty tốt, mua cổ phiếu thôi. Tầng hai hỏi tiếp: ai cũng thấy nó tốt rồi, vậy giá đã phản ánh điều đó chưa? Một công ty tốt, mua quá đắt, vẫn có thể là một khoản đầu tư tồi.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "ladder",
+      "kicker": "Bài học 1 · Nghĩ ở tầng thứ hai",
+      "levels": ["Tầng 1: Công ty tốt → mua", "Tầng 2: Giá đã phản ánh chưa?"],
+      "top_cue": "tầng hai",
+      "tags": [
+       {"text": "Mọi người nghĩ gì?", "cue": "ai cũng"},
+       {"text": "Giá bao nhiêu?", "cue": "vậy giá"}
+      ]
+     },
+     {
+      "type": "statement",
+      "kicker": "Tầng thứ hai",
+      "text": "Công ty tốt, mua quá đắt: khoản đầu tư tồi.",
+      "highlight": ["quá đắt"],
+      "cue": "một công"
+     }
+    ]
+   },
+   "sources": ["marks2011"]
+  },
+  {
+   "id": "b07",
+   "act": "example",
+   "narration": "Quay lại năm một nghìn chín trăm chín mươi chín. Tầng một nói: internet sẽ thay đổi thế giới, mua thôi. Và điều đó đúng thật. Nhưng tầng hai hỏi: cái giá hôm nay đã trả trước cho bao nhiêu năm tương lai rồi?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "compare",
+      "title": "Năm 1999",
+      "left": {"title": "Tầng một", "items": ["Internet đổi thế giới", "Mua thôi"]},
+      "right": {"title": "Tầng hai", "items": ["Đúng, nhưng…", "Giá đã trả trước bao nhiêu năm?"]}
+     },
+     {
+      "type": "statement",
+      "kicker": "Bài học từ bubble.com",
+      "text": "Đúng về tương lai, sai về giá.",
+      "highlight": ["sai về giá"],
+      "cue": "nhưng tầng"
+     }
+    ]
+   },
+   "sources": ["marks2011", "oaktree_bubble"]
+  },
+  {
+   "id": "b08",
+   "act": "principle",
+   "narration": "Bài học thứ hai: rủi ro trốn trong sự yên tâm. Với Marks, rủi ro không chỉ là giá nhảy lên nhảy xuống, mà là khả năng mất tiền vĩnh viễn. Và khi mọi người thôi lo lắng, họ sẵn sàng trả giá cao hơn. Chính lúc ấy, rủi ro lớn nhất.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "swap",
+      "kicker": "Bài học 2 · Rủi ro trốn trong sự yên tâm",
+      "from": {"label": "Giá lên xuống", "icon": "chart"},
+      "to": {"label": "Mất vĩnh viễn", "icon": "hourglass", "cue": "mất tiền"},
+      "cue": "không chỉ"
+     },
+     {
+      "type": "trio",
+      "kicker": "Khi ai cũng yên tâm",
+      "items": [
+       {"icon": "umbrella", "label": "Thôi lo lắng", "cue": "thôi lo"},
+       {"icon": "coins", "label": "Trả giá cao hơn", "cue": "sẵn sàng"},
+       {"icon": "lightning", "label": "Rủi ro lớn nhất", "cue": "chính lúc"}
+      ],
+      "cue": "và khi"
+     }
+    ]
+   },
+   "sources": ["marks2011", "marks_risk"]
+  },
+  {
+   "id": "b09",
+   "act": "principle",
+   "narration": "Bài học thứ ba: biết con lắc đang ở đâu. Tâm lý thị trường đung đưa giữa tham lam và sợ hãi, giữa hưng phấn và tuyệt vọng. Nó hiếm khi đứng yên ở giữa. Bạn không cần đoán lúc nào nó quay đầu. Chỉ cần biết lúc này nó đang ở phía nào.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Bài học 3 · Biết con lắc đang ở đâu",
+      "items": [
+       {"icon": "rocket", "label": "Tham lam · hưng phấn", "cue": "tham lam"},
+       {"icon": "scale", "label": "Ở giữa: hiếm khi", "cue": "hiếm khi"},
+       {"icon": "umbrella", "label": "Sợ hãi · tuyệt vọng", "cue": "sợ hãi"}
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "compass",
+      "line": "Không đoán lúc nó quay. Biết nó đang ở đâu.",
+      "cue": "bạn không"
+     }
+    ]
+   },
+   "sources": ["marks2011", "predict2001"]
+  },
+  {
+   "id": "b10",
+   "act": "complication",
+   "narration": "Nhưng có một sự thật khó chịu. Sau bubble.com, Nasdaq còn tăng thêm khoảng hai mươi tư phần trăm nữa rồi mới gãy. Marks hay nhắc một câu châm ngôn: đi trước thời đại quá xa thì trông không khác gì sai.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stat",
+      "value": 24,
+      "prefix": "+",
+      "suffix": "%",
+      "label": "Nasdaq tăng tiếp sau bubble.com",
+      "note": "4.069 → 5.049 điểm · 1/2000 → 3/2000",
+      "cue": "hai mươi"
+     },
+     {
+      "type": "quote",
+      "text": "Đi trước thời đại quá xa thì trông không khác gì sai.",
+      "by": "Câu châm ngôn Howard Marks hay nhắc (lược dịch)",
+      "cue": "marks hay"
+     }
+    ]
+   },
+   "sources": ["nasdaq", "cfa2020"],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b11",
+   "act": "turn",
+   "narration": "Vậy cuốn sách có cho bạn công thức để thắng không? Không. Nghĩ ở tầng hai rất khó, và không thể ai cũng hơn mức trung bình, vì trung bình chính là tất cả chúng ta cộng lại. Cuốn sách chỉ giúp bạn bớt ngây thơ.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Vậy",
+      "text": "Một công thức để thắng?",
+      "strike": "công thức để thắng?",
+      "replace": "cách để bớt ngây thơ",
+      "strike_cue": "không"
+     },
+     {
+      "type": "funnel",
+      "total": 400,
+      "keep": 40,
+      "label": "Không thể ai cũng hơn trung bình",
+      "keep_label": "Tầng hai: khó, và hiếm",
+      "keep_cue": "trung bình chính",
+      "cue": "nghĩ ở"
+     }
+    ]
+   },
+   "sources": ["marks2011"]
+  },
+  {
+   "id": "b12",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Bạn bè ai cũng khoe lời từ cùng một loại tài sản, tin tức toàn tin vui, và người ta bảo: lần này khác. Theo Marks, con lắc đang ở đâu?",
+   "visual": {
+    "type": "question",
+    "question": "Ai cũng khoe lời, tin toàn tốt, \"lần này khác\". Con lắc đang ở đâu?",
+    "choices": [
+     "Ở giữa, cân bằng",
+     "Gần phía hưng phấn: rủi ro đang cao",
+     "Gần phía sợ hãi: rủi ro đang thấp"
+    ],
+    "answer": "B — khi ai cũng yên tâm, rủi ro đang trốn ở đó.",
+    "think_seconds": 5
+   }
+  },
+  {
+   "id": "b13",
+   "act": "recap",
+   "narration": "Vậy là ba bài học từ Điều Quan Trọng Nhất. Nghĩ ở tầng thứ hai. Rủi ro trốn trong sự yên tâm. Và biết con lắc đang ở đâu.",
+   "visual": {
+    "type": "list",
+    "title": "Ba bài học",
+    "check": true,
+    "items": [
+     {"text": "Nghĩ ở tầng thứ hai", "cue": "nghĩ"},
+     {"text": "Rủi ro trốn trong sự yên tâm", "cue": "rủi ro"},
+     {"text": "Biết con lắc đang ở đâu", "cue": "và biết"}
+    ]
+   }
+  },
+  {
+   "id": "b14",
+   "act": "close",
+   "narration": "Mười năm không ai hồi âm, Marks vẫn viết. Vì giá trị của một lá thư không nằm ở chỗ đoán đúng ngày. Mà ở chỗ dám nhìn xuống chân mình, khi cả đám đông đang nhìn lên.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Mười năm không ai hồi âm",
+      "text": "Marks vẫn viết.",
+      "highlight": ["vẫn viết"]
+     },
+     {
+      "type": "icon",
+      "icon": "compass",
+      "line": "Nhìn xuống chân mình, khi đám đông nhìn lên.",
+      "cue": "mà ở"
+     }
+    ]
+   },
+   "sources": ["oaktree_history"]
+  },
+  {
+   "id": "b15",
+   "act": "close",
+   "narration": "Còn bạn, bạn muốn mình review cuốn sách nào của một nhà đầu tư tiếp theo? Để lại bình luận cho mình nhé. Nếu thấy có ích, lưu lại và gửi cho một người bạn. Hẹn gặp bạn.",
+   "visual": {
+    "type": "end",
+    "kicker": "Review sách · Tập 9",
+    "title": "Điều Quan Trọng Nhất",
+    "ask": "Bạn muốn review sách của nhà đầu tư nào tiếp theo?",
+    "ask_hint": "Một nhà đầu tư · một cơn bong bóng · một câu hỏi về rủi ro",
+    "ask_cue": "còn bạn",
+    "cta": "Bình luận · Lưu lại · Gửi một người bạn",
+    "cta_cue": "nếu thấy",
+    "sources_line": "Nguồn: Marks, The Most Important Thing (2011) · Oaktree memos: bubble.com (2000), You Can't Predict (2001) · Nasdaq, Boston Fed",
+    "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư. Số liệu đã làm tròn.",
+    "sources_cue": "hẹn gặp"
+   }
+  }
+ ],
+ "pronounce": {}
+}

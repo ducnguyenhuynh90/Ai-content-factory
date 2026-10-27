@@ -26,7 +26,7 @@ VISUALS = {
     "hook": {"required": ["lines"], "optional": ["points", "crash_cue", "peak_label", "end_label", "kicker"]},
     "title": {"required": ["title"], "optional": ["kicker", "subtitle"]},
     "statement": {"required": ["text"], "optional": ["highlight", "kicker", "strike", "replace", "strike_cue"]},
-    "stat": {"required": ["value", "label"], "optional": ["from", "prefix", "suffix", "note"]},
+    "stat": {"required": ["value", "label"], "optional": ["from", "prefix", "suffix", "note", "decimals", "cue"]},
     "chart": {"required": ["points"], "optional": ["title", "unit", "annotations", "y_label", "x_label"]},
     "timeline": {"required": ["events"], "optional": ["title"]},
     "quote": {"required": ["text", "by"], "optional": ["attribution", "year"]},

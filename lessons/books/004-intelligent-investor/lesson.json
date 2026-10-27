@@ -1,0 +1,824 @@
+{
+ "meta": {
+  "series": "Review sách · Tập 4",
+  "title": "Nhà Đầu Tư Thông Minh",
+  "subtitle": "The Intelligent Investor — Benjamin Graham (1949)",
+  "topic": "investing",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt thích đọc sách, mới bắt đầu tìm hiểu đầu tư, muốn giữ cái đầu lạnh",
+  "aspect": "4:3",
+  "target_minutes": [
+   3,
+   5
+  ],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "voice_seed": 99,
+  "speed": 0.88,
+  "music": "chill",
+  "captions": true,
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
+  "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư.",
+  "learning_goals": [
+   "Kể lại được câu chuyện Graham mất khoảng 70% vốn giai đoạn 1929–1932 và cuốn sách ra đời từ bài học đó",
+   "Giải thích ba ý lớn: Mr. Market, biên an toàn, nhà đầu tư khác nhà đầu cơ",
+   "Nhận ra phần nào của sách đã cũ (công thức chọn cổ phiếu) và phần nào còn nguyên giá trị (thái độ với giá)"
+  ]
+ },
+ "sources": [
+  {
+   "id": "graham1949",
+   "cite": "Benjamin Graham, The Intelligent Investor: A Book of Practical Counsel, Harper & Brothers, 1949; revised ed. 1973 (ch. 1 investor vs speculator, ch. 8 'The Investor and Market Fluctuations' / Mr. Market, ch. 20 'Margin of Safety as the Central Concept of Investment')",
+   "url": "https://openlibrary.org/books/OL273184W"
+  },
+  {
+   "id": "zweig2003",
+   "cite": "Benjamin Graham & Jason Zweig, The Intelligent Investor, Revised Edition, HarperBusiness, 2003 (ch. 1 definition first formulated in Security Analysis, 1934)",
+   "url": "https://jasonzweig.com/books/the-intelligent-investor/"
+  },
+  {
+   "id": "buffett_preface",
+   "cite": "Warren E. Buffett, Preface to the Fourth Edition of The Intelligent Investor: 'I read the first edition of this book early in 1950, when I was nineteen. I thought then that it was by far the best book about investing ever written. I still think it is.' Also: success needs a sound intellectual framework and the ability to keep emotions from corroding it, not a stratospheric IQ",
+   "url": "https://stockhead.com.au/news/investment-wisdom-from-buffetts-mentor"
+  },
+  {
+   "id": "buffett1987",
+   "cite": "Warren Buffett, Berkshire Hathaway shareholder letter 1987: 'Mr. Market is there to serve you, not to guide you.'",
+   "url": "https://www.berkshirehathaway.com/letters/1987.html"
+  },
+  {
+   "id": "graham_memoirs",
+   "cite": "Benjamin Graham, The Memoirs of the Dean of Wall Street (1996): Joint Account capital ~$2.5 million in January 1929; cumulative losses 1929–1932 about 70% (≈ −20% 1929, −50% 1930, −16% 1931, −3% 1932); no fees until losses were made good",
+   "url": "https://beyondbengraham.com/loss-amid-luxury-the-private-crash-of-benjamin-graham-26/"
+  },
+  {
+   "id": "novelinvestor",
+   "cite": "Novel Investor, 'The Rise and Fall and Rise of Ben Graham' (margin use in the 1920s; recovery by about 1935; avoided leverage afterwards)",
+   "url": "https://novelinvestor.com/rise-fall-rise-ben-graham/"
+  },
+  {
+   "id": "columbia",
+   "cite": "Columbia University Libraries, Benjamin Graham papers finding aid (born London 1894, died 1976; taught security analysis at Columbia Business School from 1928); Financial History magazine no. 134 (Buffett at Columbia 1950–51)",
+   "url": "https://findingaids.library.columbia.edu/archives/cul-17325026"
+  },
+  {
+   "id": "faj1976",
+   "cite": "'A Conversation with Benjamin Graham', Financial Analysts Journal, Sept/Oct 1976: 'I am no longer an advocate of elaborate techniques of security analysis in order to find superior value opportunities.'",
+   "url": "https://www.marketmisbehavior.com/blog/funl7ljtyn3s1607j7siti9ppuvgau"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Mr. Market phục vụ, không ra lệnh",
+   "line": "Giá mỗi ngày là một lời mời, không phải mệnh lệnh; bạn được quyền từ chối."
+  },
+  {
+   "name": "Luôn chừa biên an toàn",
+   "line": "Chỉ mua khi giá thấp hơn hẳn giá trị ước tính, để còn chỗ cho sai lầm và xui rủi."
+  },
+  {
+   "name": "Biết mình đầu tư hay đầu cơ",
+   "line": "Phân tích kỹ, giữ an toàn tiền gốc, lợi nhuận thỏa đáng; thiếu một trong ba là đầu cơ."
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Cuốn sách hay nhất về đầu tư, theo Warren Buffett. Vậy mà tác giả của nó từng mất gần bảy mươi phần trăm.",
+   "visual": {
+    "type": "hook",
+    "lines": [
+     "Cuốn sách hay nhất về đầu tư.",
+     "Tác giả từng mất ~70%."
+    ],
+    "crash_cue": "mất",
+    "points": [
+     [
+      0,
+      46
+     ],
+     [
+      1,
+      52
+     ],
+     [
+      2,
+      61
+     ],
+     [
+      3,
+      70
+     ],
+     [
+      4,
+      84
+     ],
+     [
+      5,
+      100
+     ],
+     [
+      6,
+      80
+     ],
+     [
+      7,
+      40
+     ],
+     [
+      8,
+      34
+     ],
+     [
+      9,
+      30
+     ]
+    ],
+    "peak_label": "1/1929",
+    "end_label": "≈ −70% · 1932",
+    "kicker": "The Intelligent Investor · Benjamin Graham"
+   },
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "mất",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "buffett_preface",
+    "graham_memoirs"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Không phải vì ông thiếu hiểu biết. Mà vì cái giá đắt nhất ông từng trả đã trở thành cuốn sách này. Rót một tách trà đi. Đến cuối clip, bạn sẽ có ba bài học để giữ cái đầu lạnh khi thị trường nóng lên.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Không phải vì…",
+      "cross": true,
+      "items": [
+       {
+        "icon": "brain",
+        "label": "Thiếu hiểu biết",
+        "cue": "thiếu"
+       }
+      ]
+     },
+     {
+      "type": "book",
+      "title": "The Intelligent Investor",
+      "author": "Benjamin Graham",
+      "year": "1949",
+      "kicker": "Một bài học đắt giá",
+      "cue": "mà vì"
+     },
+     {
+      "type": "icon",
+      "icon": "tea",
+      "steam": true,
+      "line": "Ba bài học. Một cái đầu lạnh.",
+      "cue": "rót"
+     }
+    ]
+   }
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Review sách · Tập 4",
+    "title": "Nhà Đầu Tư Thông Minh",
+    "subtitle": "The Intelligent Investor — Benjamin Graham (1949)",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ],
+   "sources": [
+    "graham1949"
+   ]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Chúng ta hay nghĩ đầu tư giỏi là đoán trúng giá ngày mai. Là phải thông minh hơn người, hay có tin nội bộ. Buffett nói ngược lại: không cần trí thông minh xuất chúng. Cần một khung tư duy vững, và đừng để cảm xúc làm mục nó.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Điều ta hay tin",
+      "items": [
+       {
+        "icon": "binoculars",
+        "label": "Đoán trúng giá",
+        "cue": "đoán"
+       },
+       {
+        "icon": "brain",
+        "label": "Thông minh hơn người",
+        "cue": "thông minh"
+       },
+       {
+        "icon": "mask",
+        "label": "Tin nội bộ",
+        "cue": "tin nội"
+       }
+      ]
+     },
+     {
+      "type": "statement",
+      "kicker": "Buffett nói ngược lại",
+      "text": "Đầu tư giỏi là đoán đúng giá.",
+      "strike": "đoán đúng giá.",
+      "replace": "giữ vững khung tư duy",
+      "strike_cue": "khung",
+      "cue": "buffett"
+     }
+    ]
+   },
+   "sources": [
+    "buffett_preface"
+   ]
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "Người dạy Buffett điều đó là Benjamin Graham, giáo sư ở Đại học Columbia. Năm một nghìn chín trăm bốn mươi chín, ông viết The Intelligent Investor, với phụ đề: một cuốn sách lời khuyên thực tế. Viết cho người bình thường, không phải dân Phố Wall.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Benjamin Graham",
+      "years": "1894 – 1976",
+      "role": "Giáo sư · Columbia",
+      "initials": "BG"
+     },
+     {
+      "type": "book",
+      "title": "The Intelligent Investor",
+      "author": "Benjamin Graham",
+      "year": "1949",
+      "kicker": "A Book of Practical Counsel",
+      "cue": "năm một",
+      "facts": [
+       {
+        "big": "1949",
+        "text": "Bản đầu tiên",
+        "cue": "năm một"
+       },
+       {
+        "big": "Thực tế",
+        "text": "Lời khuyên, không phải lý thuyết",
+        "cue": "phụ đề"
+       },
+       {
+        "big": "Người thường",
+        "text": "Không phải dân Phố Wall",
+        "cue": "người bình"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "columbia",
+    "graham1949"
+   ]
+  },
+  {
+   "id": "b03",
+   "act": "context",
+   "narration": "Đầu năm một nghìn chín trăm năm mươi, một chàng trai mười chín tuổi đọc bản đầu tiên. Sau này Warren Buffett viết: khi ấy tôi nghĩ đây là cuốn sách về đầu tư hay nhất từng được viết. Và tôi vẫn nghĩ vậy.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Warren Buffett",
+      "years": "đọc sách năm 1950 · 19 tuổi",
+      "role": "Người đọc",
+      "initials": "WB"
+     },
+     {
+      "type": "quote",
+      "text": "Khi ấy tôi nghĩ đây là cuốn sách về đầu tư hay nhất từng được viết. Tôi vẫn nghĩ vậy.",
+      "by": "Warren Buffett, lời tựa ấn bản thứ tư (lược dịch)",
+      "cue": "sau này"
+     }
+    ]
+   },
+   "sources": [
+    "buffett_preface"
+   ]
+  },
+  {
+   "id": "b04",
+   "act": "story",
+   "narration": "Nhưng câu chuyện thật bắt đầu sớm hơn. Tháng một năm một nghìn chín trăm hai mươi chín, quỹ của Graham có khoảng hai phẩy năm triệu đô la. Ông đang thắng lớn. Và ông có dùng một phần tiền vay để mua thêm cổ phiếu.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stat",
+      "value": 2.5,
+      "decimals": 1,
+      "prefix": "$",
+      "suffix": " triệu",
+      "label": "Vốn quỹ của Graham · 1/1929",
+      "note": "theo hồi ký của Graham",
+      "cue": "hai phẩy"
+     },
+     {
+      "type": "trio",
+      "kicker": "Năm 1929",
+      "items": [
+       {
+        "icon": "rocket",
+        "label": "Đang thắng lớn",
+        "cue": "thắng"
+       },
+       {
+        "icon": "lightning",
+        "label": "Dùng tiền vay",
+        "cue": "tiền vay"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "graham_memoirs",
+    "novelinvestor"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Rồi thị trường sụp đổ. Quỹ mất khoảng hai mươi phần trăm năm hai mươi chín. Khoảng một nửa năm ba mươi. Rồi tiếp tục mất. Đến năm ba mươi hai, gần bảy mươi phần trăm số vốn đã biến mất.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "chart",
+      "title": "Vốn còn lại · ước tính (1/1929 = 100)",
+      "points": [
+       [
+        "1/1929",
+        100
+       ],
+       [
+        "1929",
+        80
+       ],
+       [
+        "1930",
+        40
+       ],
+       [
+        "1931",
+        34
+       ],
+       [
+        "1932",
+        30
+       ]
+      ],
+      "annotations": [
+       {
+        "at": 1,
+        "text": "≈ −20%",
+        "cue": "hai mươi"
+       },
+       {
+        "at": 2,
+        "text": "≈ −50%",
+        "cue": "một nửa"
+       }
+      ]
+     },
+     {
+      "type": "stat",
+      "value": 70,
+      "prefix": "≈ −",
+      "suffix": "%",
+      "label": "Vốn mất · 1929–1932",
+      "note": "ước tính, theo hồi ký của Graham",
+      "cue": "đến năm"
+     }
+    ]
+   },
+   "sources": [
+    "graham_memoirs",
+    "novelinvestor"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b06",
+   "act": "story",
+   "narration": "Graham không bỏ chạy. Theo thỏa thuận, ông không được nhận phí cho đến khi gỡ lại khoản lỗ cho nhà đầu tư. Phải đến khoảng năm ba mươi lăm, quỹ mới hồi lại. Và từ đó, ông tránh xa tiền vay.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "timeline",
+      "title": "Từ đáy đi lên",
+      "events": [
+       {
+        "year": "1929",
+        "text": "Sụp đổ"
+       },
+       {
+        "year": "1932",
+        "text": "Đáy · mất ~70%",
+        "cue": "không được"
+       },
+       {
+        "year": "~1935",
+        "text": "Quỹ hồi lại",
+        "cue": "ba mươi lăm"
+       }
+      ]
+     },
+     {
+      "type": "swap",
+      "kicker": "Bài học ông giữ suốt đời",
+      "from": {
+       "label": "Tiền vay",
+       "icon": "lightning"
+      },
+      "to": {
+       "label": "Không vay nữa",
+       "icon": "shield",
+       "cue": "tránh"
+      },
+      "cue": "từ đó"
+     }
+    ]
+   },
+   "sources": [
+    "graham_memoirs",
+    "novelinvestor"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b06b",
+   "act": "turn",
+   "narration": "Từ nỗi đau ấy, cả cuốn sách xoay quanh một câu hỏi: làm sao để người bình thường không bị chính mình đánh bại? Graham viết: vấn đề chính của nhà đầu tư, thậm chí kẻ thù tệ nhất của họ, nhiều khả năng là chính họ.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "brain",
+      "kicker": "Câu hỏi của cả cuốn sách",
+      "line": "Làm sao không bị chính mình đánh bại?"
+     },
+     {
+      "type": "quote",
+      "text": "Vấn đề chính của nhà đầu tư, thậm chí kẻ thù tệ nhất của họ, nhiều khả năng là chính họ.",
+      "by": "Benjamin Graham (lược dịch)",
+      "cue": "graham viết"
+     }
+    ]
+   },
+   "sources": [
+    "graham1949",
+    "zweig2003"
+   ]
+  },
+  {
+   "id": "b07",
+   "act": "principle",
+   "narration": "Bài học thứ nhất. Hãy tưởng tượng bạn có một người cộng sự tên Mr. Market. Mỗi ngày ông ấy ra giá: mua lại phần của bạn, hoặc bán thêm cho bạn. Có hôm hưng phấn, có hôm hoảng loạn. Và bạn không bắt buộc phải nghe theo.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "kicker": "Bài học 1 · Mr. Market phục vụ, không ra lệnh",
+      "icon": "mask",
+      "line": "Mr. Market · người cộng sự thất thường",
+      "line_cue": "mr"
+     },
+     {
+      "type": "trio",
+      "kicker": "Mỗi ngày một cái giá",
+      "items": [
+       {
+        "icon": "rocket",
+        "label": "Hôm hưng phấn: giá cao",
+        "cue": "hưng phấn"
+       },
+       {
+        "icon": "umbrella",
+        "label": "Hôm hoảng loạn: giá rẻ",
+        "cue": "hoảng loạn"
+       }
+      ],
+      "cue": "mỗi ngày"
+     },
+     {
+      "type": "statement",
+      "kicker": "Quyền của bạn",
+      "text": "Không bắt buộc phải nghe.",
+      "highlight": [
+       "Không bắt buộc"
+      ],
+      "cue": "và bạn"
+     }
+    ]
+   },
+   "sources": [
+    "graham1949"
+   ]
+  },
+  {
+   "id": "b08",
+   "act": "example",
+   "narration": "Năm một nghìn chín trăm tám mươi bảy, Buffett viết lại ý ấy gọn hơn: Mr. Market ở đó để phục vụ bạn, không phải để dẫn đường cho bạn.",
+   "visual": {
+    "type": "quote",
+    "text": "Mr. Market ở đó để phục vụ bạn, không phải để dẫn đường cho bạn.",
+    "by": "Warren Buffett, thư cổ đông (lược dịch)",
+    "year": 1987
+   },
+   "sources": [
+    "buffett1987"
+   ]
+  },
+  {
+   "id": "b09",
+   "act": "principle",
+   "narration": "Bài học thứ hai, Graham gói trong ba chữ: biên an toàn. Ước tính một cách tỉnh táo doanh nghiệp đáng giá bao nhiêu, rồi chỉ mua khi giá thấp hơn hẳn. Khoảng cách đó là tấm đệm, cho lúc bạn tính sai, hoặc lúc gặp xui.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Bài học 2 · Ba chữ của Graham",
+      "text": "Biên an toàn.",
+      "highlight": [
+       "an toàn"
+      ]
+     },
+     {
+      "type": "trio",
+      "kicker": "Luôn chừa biên an toàn",
+      "items": [
+       {
+        "icon": "scale",
+        "label": "Ước tính giá trị",
+        "cue": "ước tính"
+       },
+       {
+        "icon": "coin",
+        "label": "Chỉ mua khi rẻ hơn hẳn",
+        "cue": "chỉ mua"
+       },
+       {
+        "icon": "shield",
+        "label": "Tấm đệm khi sai",
+        "cue": "tấm đệm"
+       }
+      ],
+      "cue": "ước tính"
+     }
+    ]
+   },
+   "sources": [
+    "graham1949"
+   ]
+  },
+  {
+   "id": "b10",
+   "act": "principle",
+   "narration": "Bài học thứ ba: biết mình đang đầu tư hay đầu cơ. Với Graham, đầu tư là khi, sau phân tích kỹ, nó hứa hẹn giữ an toàn tiền gốc và một mức lời thỏa đáng. Thiếu điều đó là đầu cơ. Đầu cơ không phải tội. Tự lừa mình mới nguy.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "compare",
+      "title": "Bài học 3 · Biết mình đầu tư hay đầu cơ",
+      "left": {
+       "title": "Nhà đầu cơ",
+       "items": [
+        "Đoán giá",
+        "Theo đám đông",
+        "Hy vọng"
+       ]
+      },
+      "right": {
+       "title": "Nhà đầu tư",
+       "items": [
+        "Phân tích kỹ",
+        "An toàn tiền gốc",
+        "Lời thỏa đáng"
+       ]
+      }
+     },
+     {
+      "type": "statement",
+      "kicker": "Điều nguy hiểm thật",
+      "text": "Tự lừa mình mới nguy.",
+      "highlight": [
+       "Tự lừa mình"
+      ],
+      "cue": "đầu cơ không"
+     }
+    ]
+   },
+   "sources": [
+    "graham1949",
+    "zweig2003"
+   ]
+  },
+  {
+   "id": "b11",
+   "act": "complication",
+   "narration": "Nhưng có một điều nhiều bài review bỏ qua. Năm một nghìn chín trăm bảy mươi sáu, chính Graham nói ông không còn ủng hộ các kỹ thuật phân tích cổ phiếu cầu kỳ nữa, vì có quá nhiều người cùng săn tìm. Nhiều công thức chọn cổ phiếu trong sách đã cũ.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Graham · 1976",
+      "text": "Công thức trong sách vẫn dùng được.",
+      "strike": "vẫn dùng được.",
+      "replace": "phần lớn đã cũ",
+      "strike_cue": "cầu kỳ"
+     },
+     {
+      "type": "trio",
+      "kicker": "Vì sao",
+      "items": [
+       {
+        "icon": "people",
+        "label": "Quá nhiều người cùng săn",
+        "cue": "quá nhiều"
+       },
+       {
+        "icon": "hourglass",
+        "label": "Công thức đã cũ",
+        "cue": "nhiều công"
+       }
+      ],
+      "cue": "quá nhiều"
+     }
+    ]
+   },
+   "sources": [
+    "faj1976"
+   ]
+  },
+  {
+   "id": "b12",
+   "act": "turn",
+   "narration": "Vậy cuốn sách hết giá trị sao? Không. Thứ ông bỏ là công thức. Thứ ông giữ đến cuối đời là thái độ: không vay quá sức, không để giá ngày hôm nay quyết định thay mình.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Vậy",
+      "text": "Cuốn sách hết giá trị sao?",
+      "highlight": [
+       "hết giá trị"
+      ]
+     },
+     {
+      "type": "swap",
+      "kicker": "Bỏ công thức, giữ thái độ",
+      "from": {
+       "label": "Công thức",
+       "icon": "chart"
+      },
+      "to": {
+       "label": "Thái độ với giá",
+       "icon": "compass",
+       "cue": "thái độ"
+      },
+      "cue": "thứ ông bỏ"
+     }
+    ]
+   },
+   "sources": [
+    "faj1976",
+    "graham1949"
+   ]
+  },
+  {
+   "id": "b13",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Cổ phiếu một công ty bạn hiểu rõ rơi ba mươi phần trăm trong một tuần, dù việc kinh doanh không đổi gì. Mr. Market đang nói gì với bạn?",
+   "visual": {
+    "type": "question",
+    "question": "Giá rơi 30% trong 1 tuần, việc kinh doanh không đổi. Mr. Market đang nói gì?",
+    "choices": [
+     "Bán ngay, kẻo mất thêm",
+     "Một cái giá để cân nhắc, không phải mệnh lệnh",
+     "Công ty chắc sắp phá sản"
+    ],
+    "answer": "B — giá là lời mời; bạn được quyền từ chối.",
+    "think_seconds": 5
+   }
+  },
+  {
+   "id": "b14",
+   "act": "recap",
+   "narration": "Vậy là ba bài học từ Nhà Đầu Tư Thông Minh. Mr. Market phục vụ, không ra lệnh. Luôn chừa biên an toàn. Và biết mình đầu tư hay đầu cơ.",
+   "visual": {
+    "type": "list",
+    "title": "Ba bài học",
+    "check": true,
+    "items": [
+     {
+      "text": "Mr. Market phục vụ, không ra lệnh",
+      "cue": "mr"
+     },
+     {
+      "text": "Luôn chừa biên an toàn",
+      "cue": "luôn"
+     },
+     {
+      "text": "Biết mình đầu tư hay đầu cơ",
+      "cue": "và biết"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b15",
+   "act": "close",
+   "narration": "Graham đã mất gần bảy mươi phần trăm, rồi viết ra cuốn sách để người khác khỏi phải trả học phí ấy. Thị trường sẽ luôn có những ngày điên. Biên an toàn là thứ giúp bạn không phải điên theo.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "book",
+      "title": "The Intelligent Investor",
+      "author": "Benjamin Graham",
+      "year": "1949",
+      "kicker": "Học phí ông đã trả",
+      "facts": [
+       {
+        "big": "~70%",
+        "text": "mất trong 1929–1932",
+        "cue": "bảy mươi"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "shield",
+      "line": "Thị trường điên. Bạn không cần điên theo.",
+      "cue": "thị trường"
+     }
+    ]
+   },
+   "sources": [
+    "graham_memoirs"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b16",
+   "act": "close",
+   "narration": "Còn bạn, có cuốn sách đầu tư nào từng thay đổi cách bạn nhìn thị trường không? Kể cho mình nghe trong phần bình luận nhé. Nếu thấy có ích, lưu lại và gửi cho một người bạn. Hẹn gặp bạn.",
+   "visual": {
+    "type": "end",
+    "kicker": "Review sách · Tập 4",
+    "title": "Nhà Đầu Tư Thông Minh",
+    "ask": "Cuốn sách nào từng đổi cách bạn nhìn thị trường?",
+    "ask_hint": "Một cuốn sách · một nhà đầu tư · một bài học đắt giá",
+    "ask_cue": "còn bạn",
+    "cta": "Bình luận · Lưu lại · Gửi một người bạn",
+    "cta_cue": "nếu thấy",
+    "sources_line": "Nguồn: Graham, The Intelligent Investor (1949; bản 1973 & Zweig 2003) · Graham, Memoirs (1996) · Buffett, lời tựa & thư 1987 · FAJ 1976",
+    "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư. Số liệu đã làm tròn.",
+    "sources_cue": "hẹn gặp"
+   }
+  }
+ ],
+ "pronounce": {}
+}
