@@ -508,9 +508,7 @@ GENERATORS = {"hook": hook, "title": title, "statement": statement, "stat": stat
               "portrait": portrait, "principle": principle, "compare": compare, "list": list_, "question": question, "end": end}
 
 
-from .metaphors import METAPHORS  # noqa: E402  (metaphors builds on the helpers above)
-
-GENERATORS.update(METAPHORS)
+from . import metaphors  # noqa: E402,F401  (builds on the helpers above and registers itself in GENERATORS)
 
 
 _AT = re.compile(r", (-?\d+(?:\.\d+)?)\);$")

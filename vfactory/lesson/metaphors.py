@@ -18,8 +18,9 @@ from __future__ import annotations
 
 import math
 import random
+import re
 
-from .scenes import E, _fade, _fmt_num, _ft, _rise
+from .scenes import GENERATORS, E, _fade, _fmt_num, _ft, _rise
 
 
 def _blur_in(sel: str, at: float, dur: float = 0.35, px: int = 8) -> str:
@@ -650,5 +651,93 @@ def book(L, sid, v, dur, cue):
     return m, "", tw
 
 
+def _poly(s, pts, closed=True):
+    return ("M" + " L".join(f"{s * x:.1f} {s * y:.1f}" for x, y in pts) + (" Z" if closed else ""))
+
+
+ICONS.update({
+    "brain": lambda s, c: (f'<path d="M{s*.5} {s*.16} C{s*.38} {s*.06} {s*.18} {s*.12} {s*.18} {s*.3} C{s*.06} {s*.36} {s*.06} {s*.56} {s*.18} {s*.62} '
+                           f'C{s*.16} {s*.8} {s*.36} {s*.9} {s*.5} {s*.8} C{s*.64} {s*.9} {s*.84} {s*.8} {s*.82} {s*.62} C{s*.94} {s*.56} {s*.94} {s*.36} {s*.82} {s*.3} '
+                           f'C{s*.82} {s*.12} {s*.62} {s*.06} {s*.5} {s*.16} Z" fill="{c}" fill-opacity="0.12" {_st(s, c)}/>'
+                           f'<path d="M{s*.5} {s*.16} L{s*.5} {s*.8} M{s*.3} {s*.36} C{s*.38} {s*.4} {s*.38} {s*.5} {s*.3} {s*.54} M{s*.7} {s*.36} C{s*.62} {s*.4} {s*.62} {s*.5} {s*.7} {s*.54}" {_st(s, c, .03)}/>'),
+    "lightning": lambda s, c: f'<path d="{_poly(s, [(.58,.04),(.2,.56),(.46,.56),(.38,.96),(.8,.4),(.54,.4)])}" fill="{c}" fill-opacity="0.2" {_st(s, c)}/>',
+    "turtle": lambda s, c: (f'<path d="M{s*.14} {s*.66} C{s*.14} {s*.3} {s*.74} {s*.3} {s*.74} {s*.66} Z" fill="{c}" fill-opacity="0.15" {_st(s, c)}/>'
+                            f'<path d="M{s*.3} {s*.5} L{s*.58} {s*.5} M{s*.44} {s*.38} L{s*.44} {s*.66}" {_st(s, c, .025)}/>'
+                            f'<circle cx="{s*.84}" cy="{s*.58}" r="{s*.08}" {_st(s, c)}/>'
+                            f'<path d="M{s*.22} {s*.66} L{s*.2} {s*.8} M{s*.62} {s*.66} L{s*.64} {s*.8} M{s*.08} {s*.66} L{s*.8} {s*.66}" {_st(s, c)}/>'),
+    "coin": lambda s, c: (f'<circle cx="{s*.5}" cy="{s*.5}" r="{s*.4}" fill="{c}" fill-opacity="0.15" {_st(s, c)}/>'
+                          f'<circle cx="{s*.5}" cy="{s*.5}" r="{s*.3}" {_st(s, c, .02)}/>'
+                          f'<path d="M{s*.58} {s*.38} C{s*.5} {s*.32} {s*.38} {s*.36} {s*.42} {s*.46} C{s*.46} {s*.54} {s*.6} {s*.52} {s*.58} {s*.62} '
+                          f'C{s*.54} {s*.7} {s*.44} {s*.68} {s*.4} {s*.62} M{s*.5} {s*.28} L{s*.5} {s*.72}" {_st(s, c, .03)}/>'),
+    "coins": lambda s, c: "".join(f'<ellipse cx="{s*.5}" cy="{s*(.82 - .14*k)}" rx="{s*.34}" ry="{s*.08}" fill="{c}" fill-opacity="{.1 + .05*k:.2f}" {_st(s, c, .03)}/>'
+                                  for k in range(5)),
+    "snowball": lambda s, c: (f'<path d="M{s*.04} {s*.9} L{s*.96} {s*.9}" {_st(s, c)}/>'
+                              f'<circle cx="{s*.16}" cy="{s*.84}" r="{s*.05}" {_st(s, c, .025)}/><circle cx="{s*.36}" cy="{s*.76}" r="{s*.13}" {_st(s, c, .03)}/>'
+                              f'<circle cx="{s*.7}" cy="{s*.62}" r="{s*.27}" fill="{c}" fill-opacity="0.15" {_st(s, c)}/>'),
+    "dice": lambda s, c: (f'<rect x="{s*.14}" y="{s*.14}" width="{s*.72}" height="{s*.72}" rx="{s*.12}" fill="{c}" fill-opacity="0.12" {_st(s, c)}/>'
+                          + "".join(f'<circle cx="{s*x}" cy="{s*y}" r="{s*.055}" fill="{c}"/>' for x, y in ((.32,.32),(.68,.32),(.5,.5),(.32,.68),(.68,.68)))),
+    "scale": lambda s, c: (f'<path d="M{s*.5} {s*.12} L{s*.5} {s*.86} M{s*.3} {s*.86} L{s*.7} {s*.86} M{s*.14} {s*.24} L{s*.86} {s*.24}" {_st(s, c)}/>'
+                           f'<path d="M{s*.14} {s*.24} L{s*.04} {s*.52} L{s*.24} {s*.52} Z M{s*.86} {s*.24} L{s*.76} {s*.52} L{s*.96} {s*.52} Z" fill="{c}" fill-opacity="0.15" {_st(s, c, .028)}/>'),
+    "shield": lambda s, c: (f'<path d="M{s*.5} {s*.06} L{s*.86} {s*.2} C{s*.86} {s*.56} {s*.72} {s*.8} {s*.5} {s*.94} C{s*.28} {s*.8} {s*.14} {s*.56} {s*.14} {s*.2} Z" '
+                            f'fill="{c}" fill-opacity="0.15" {_st(s, c)}/><path d="M{s*.34} {s*.5} L{s*.46} {s*.62} L{s*.68} {s*.38}" {_st(s, c, .045)}/>'),
+    "people": lambda s, c: "".join(f'<circle cx="{s*x}" cy="{s*(y-.2)}" r="{s*r*.5}" {_st(s, c, .028)}/><path d="M{s*(x-r)} {s*(y+.22)} C{s*(x-r)} {s*(y-.06)} '
+                                   f'{s*(x+r)} {s*(y-.06)} {s*(x+r)} {s*(y+.22)}" fill="{c}" fill-opacity="0.12" {_st(s, c, .028)}/>'
+                                   for x, y, r in ((.22,.62,.15),(.78,.62,.15),(.5,.58,.2))),
+    "compass": lambda s, c: (f'<circle cx="{s*.5}" cy="{s*.5}" r="{s*.42}" fill="{c}" fill-opacity="0.08" {_st(s, c)}/>'
+                             f'<path d="{_poly(s, [(.5,.16),(.6,.5),(.5,.84),(.4,.5)])}" fill="{c}" fill-opacity="0.3" {_st(s, c, .028)}/>'
+                             f'<circle cx="{s*.5}" cy="{s*.5}" r="{s*.04}" fill="{c}"/>'),
+    "binoculars": lambda s, c: (f'<circle cx="{s*.27}" cy="{s*.64}" r="{s*.2}" fill="{c}" fill-opacity="0.12" {_st(s, c)}/>'
+                                f'<circle cx="{s*.73}" cy="{s*.64}" r="{s*.2}" fill="{c}" fill-opacity="0.12" {_st(s, c)}/>'
+                                f'<path d="M{s*.14} {s*.5} L{s*.24} {s*.18} L{s*.4} {s*.18} L{s*.44} {s*.5} M{s*.86} {s*.5} L{s*.76} {s*.18} L{s*.6} {s*.18} L{s*.56} {s*.5} '
+                                f'M{s*.44} {s*.46} L{s*.56} {s*.46}" {_st(s, c)}/>'),
+    "target": lambda s, c: ("".join(f'<circle cx="{s*.46}" cy="{s*.54}" r="{s*r}" {_st(s, c, .03)} fill="{c}" fill-opacity="{o}"/>'
+                                    for r, o in ((.4, .06), (.27, .1), (.13, .2)))
+                            + f'<path d="M{s*.46} {s*.54} L{s*.9} {s*.1} M{s*.78} {s*.1} L{s*.9} {s*.1} L{s*.9} {s*.22}" {_st(s, c)}/>'),
+    "clock": lambda s, c: (f'<circle cx="{s*.5}" cy="{s*.5}" r="{s*.42}" fill="{c}" fill-opacity="0.1" {_st(s, c)}/>'
+                           f'<path d="M{s*.5} {s*.22} L{s*.5} {s*.5} L{s*.7} {s*.62}" {_st(s, c, .045)}/>'),
+    "hourglass": lambda s, c: (f'<path d="M{s*.2} {s*.08} L{s*.8} {s*.08} M{s*.2} {s*.92} L{s*.8} {s*.92}" {_st(s, c)}/>'
+                               f'<path d="M{s*.26} {s*.08} C{s*.26} {s*.36} {s*.46} {s*.42} {s*.46} {s*.5} C{s*.46} {s*.58} {s*.26} {s*.64} {s*.26} {s*.92} '
+                               f'L{s*.74} {s*.92} C{s*.74} {s*.64} {s*.54} {s*.58} {s*.54} {s*.5} C{s*.54} {s*.42} {s*.74} {s*.36} {s*.74} {s*.08} Z" fill="none" {_st(s, c)}/>'
+                               f'<path d="{_poly(s, [(.3,.88),(.7,.88),(.5,.66)])}" fill="{c}" fill-opacity="0.45"/>'),
+    "swan": lambda s, c: (f'<path d="M{s*.14} {s*.62} C{s*.2} {s*.86} {s*.7} {s*.9} {s*.86} {s*.62} C{s*.7} {s*.66} {s*.56} {s*.62} {s*.52} {s*.52} '
+                          f'C{s*.46} {s*.38} {s*.6} {s*.2} {s*.5} {s*.12} C{s*.42} {s*.06} {s*.3} {s*.12} {s*.32} {s*.2} L{s*.22} {s*.24} L{s*.34} {s*.26} '
+                          f'C{s*.42} {s*.3} {s*.38} {s*.4} {s*.36} {s*.5} C{s*.34} {s*.6} {s*.24} {s*.64} {s*.14} {s*.62} Z" fill="{c}" fill-opacity="0.3" {_st(s, c)}/>'),
+    "mask": lambda s, c: (f'<path d="M{s*.08} {s*.3} C{s*.3} {s*.22} {s*.7} {s*.22} {s*.92} {s*.3} C{s*.92} {s*.62} {s*.74} {s*.86} {s*.5} {s*.86} '
+                          f'C{s*.26} {s*.86} {s*.08} {s*.62} {s*.08} {s*.3} Z" fill="{c}" fill-opacity="0.12" {_st(s, c)}/>'
+                          f'<path d="M{s*.24} {s*.44} C{s*.3} {s*.38} {s*.38} {s*.38} {s*.42} {s*.44} M{s*.58} {s*.44} C{s*.62} {s*.38} {s*.7} {s*.38} {s*.76} {s*.44} '
+                          f'M{s*.34} {s*.66} C{s*.44} {s*.74} {s*.56} {s*.74} {s*.66} {s*.66}" {_st(s, c, .035)}/>'),
+    "umbrella": lambda s, c: (f'<path d="M{s*.06} {s*.5} C{s*.1} {s*.14} {s*.9} {s*.14} {s*.94} {s*.5} C{s*.8} {s*.42} {s*.64} {s*.42} {s*.5} {s*.5} '
+                              f'C{s*.36} {s*.42} {s*.2} {s*.42} {s*.06} {s*.5} Z" fill="{c}" fill-opacity="0.2" {_st(s, c)}/>'
+                              f'<path d="M{s*.5} {s*.5} L{s*.5} {s*.84} C{s*.5} {s*.94} {s*.36} {s*.94} {s*.36} {s*.84}" {_st(s, c)}/>'),
+    "chart": lambda s, c: (f'<path d="M{s*.08} {s*.08} L{s*.08} {s*.92} L{s*.92} {s*.92}" {_st(s, c)}/>'
+                           f'<path d="{_poly(s, [(.14,.78),(.34,.6),(.5,.68),(.7,.4),(.88,.18)], False)}" {_st(s, c, .045)}/>'),
+    "pie": lambda s, c: (f'<circle cx="{s*.5}" cy="{s*.52}" r="{s*.4}" fill="{c}" fill-opacity="0.1" {_st(s, c)}/>'
+                         f'<path d="M{s*.5} {s*.52} L{s*.5} {s*.12} M{s*.5} {s*.52} L{s*.85} {s*.72} M{s*.5} {s*.52} L{s*.15} {s*.72}" {_st(s, c, .03)}/>'
+                         f'<path d="M{s*.5} {s*.52} L{s*.5} {s*.12} A{s*.4} {s*.4} 0 0 1 {s*.85} {s*.72} Z" fill="{c}" fill-opacity="0.4"/>'),
+})
+
+
+_TAG = re.compile(r"<[^<>]+>")
+_ATTR = re.compile(r'\s([\w:-]+)="[^"]*"')
+
+
+def _first_attrs(svg: str) -> str:
+    """Keep the first of any repeated attribute in each tag (an explicit fill before the shared stroke style wins)."""
+    def tag(m):
+        seen = set()
+
+        def attr(a):
+            if a.group(1) in seen:
+                return ""
+            seen.add(a.group(1))
+            return a.group(0)
+        return _ATTR.sub(attr, m.group(0))
+    return _TAG.sub(tag, svg)
+
+
+ICONS = {k: (lambda f: (lambda s, c: _first_attrs(f(s, c))))(f) for k, f in ICONS.items()}
+
+
 METAPHORS = {"funnel": funnel, "ladder": ladder, "venn": venn, "flywheel": flywheel, "halo": halo, "swap": swap,
              "company": company, "rise": rise, "trio": trio, "icon": icon, "book": book}
+GENERATORS.update(METAPHORS)
