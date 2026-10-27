@@ -1,0 +1,273 @@
+{
+ "meta": {
+  "series": "Review sách · Tập 12",
+  "title": "Xoay Chuyển Con Tàu",
+  "subtitle": "Turn the Ship Around! — L. David Marquet (2012)",
+  "topic": "books",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt thích đọc sách, đang hoặc sắp dẫn dắt một nhóm, muốn làm việc với người khác bằng sự tin tưởng",
+  "aspect": "4:3",
+  "target_minutes": [3, 5],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {"primary_color": "#E8B06A", "secondary_color": "#12100E"},
+  "learning_goals": [
+   "Kể lại câu chuyện tàu USS Santa Fe: lệnh 'tiến hai phần ba' và câu trả lời 'vì ông bảo tôi làm vậy'",
+   "Phân biệt mô hình người dẫn – người theo với mô hình lãnh đạo – lãnh đạo (leader-leader)",
+   "Áp dụng ba trụ của Marquet: nói 'tôi dự định', quyền đi cùng năng lực, ai cũng biết vì sao"
+  ],
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người dẫn chương trình sách lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "title_note": "No Vietnamese edition could be confirmed (searches of Fahasa/Tiki listings found none); 'Xoay Chuyển Con Tàu' is a natural Vietnamese title, not a published one.",
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively."
+ },
+ "sources": [
+  {"id": "marquet2012", "cite": "L. David Marquet, Turn the Ship Around! How to Create Leadership at Every Level, Greenleaf Book Group, 2012 (ISBN 978-1-60832-374-6); reissued as 'A True Story of Turning Followers into Leaders', Portfolio/Penguin, 16 May 2013 (ISBN 978-1-59184-640-6)", "url": "https://davidmarquet.com/books/turn-the-ship-around-book/"},
+  {"id": "marquet_site", "cite": "davidmarquet.com, My Story (Olympia → Santa Fe; leader-leader; 'I intend to')", "url": "https://davidmarquet.com/my-story/"},
+  {"id": "nsl2004", "cite": "Capt. David Marquet, USN, 'The Chiefs Take Charge', The Submarine Review (Naval Submarine League), 2004: Santa Fe in January 1999, no unit awards, mediocre inspection record; Marquet commanded 1999–2001", "url": "https://archive.navalsubleague.org/2004/the-chiefs-take-charge"},
+  {"id": "navsource", "cite": "NavSource, SSN-763 Santa Fe: Cmdr. Andrew M. Hale relieved Cmdr. L. David Marquet at Pearl Harbor, 19 November 2001", "url": "http://www.navsource.net/archives/08/08763.htm"},
+  {"id": "bizobs", "cite": "Business Observer (Florida), 'Marquet's Navy': Marquet: 'we reenlisted three sailors the year before I got there' out of a crew of 135; 'three one year to 33 the next'", "url": "https://www.businessobserverfl.com/article/marquets-navy"},
+  {"id": "supersummary", "cite": "SuperSummary, Turn the Ship Around summary: 12 months preparing for USS Olympia, reassigned December 1998; command 8 January 1999; 'ahead two-thirds' drill on the electric motor; goal changed from avoiding errors to excellence; one summary gives 36 reenlistments", "url": "https://www.supersummary.com/turn-the-ship-around/summary/"},
+  {"id": "wiki_marquet", "cite": "Wikipedia, David Marquet: diverted from Olympia (SSN-717) when the Santa Fe's captain quit; 'worst to first'; 'a disproportionate number of officers and enlisted men, including ten later submarine captains'", "url": "https://en.wikipedia.org/wiki/David_Marquet"},
+  {"id": "actiac", "cite": "ACT-IAC speaker bio, L. David Marquet (ten later submarine captains)", "url": "https://www.actiac.org/bio/l-david-marquet"},
+  {"id": "burke", "cite": "Arleigh Burke Fleet Trophy (greatest improvement in battle efficiency in a year, one ship per coast): USS Santa Fe, Pacific Fleet, 2000 — winners list; Wikipedia USS Santa Fe (SSN-763) awards", "url": "https://military-history.fandom.com/wiki/Arleigh_Burke_Fleet_Trophy"},
+  {"id": "penguin", "cite": "Penguin, publisher page: worst retention in the fleet; over 1 million copies sold", "url": "https://www.penguin.co.uk/books/292141/turn-the-ship-around-by-marquet-l-david/9780241250945"},
+  {"id": "pmc2017", "cite": "Fernandez-Salvador et al., 'From nuclear submarines to graduate medical education: applying David Marquet's intent-based leadership model', Military Medical Research, 2017", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5635545/"},
+  {"id": "nachos", "cite": "Literary Nachos, review of Turn the Ship Around! (control, competence, clarity; 'I intend to')", "url": "https://literarynachos.wordpress.com/2015/03/08/turn-the-ship-around-l-david-marquet/"},
+  {"id": "deliberate", "cite": "Aerossurance, 'Deliberate Action: A Mindful Method from the Nuclear Navy' (pause, say and point before acting, from Marquet's Santa Fe)", "url": "https://aerossurance.com/helicopters/deliberate-action-mindfulness/"},
+  {"id": "svn", "cite": "Signal v. Noise, 'You don't have my permission' (book excerpt: 'I intend to…', the captain still asks a question or two, then 'Very well')", "url": "https://signalvnoise.com/svn3/you-dont-have-my-permission/"},
+  {"id": "shkspr", "cite": "Terence Eden, book review: Turn the Ship Around (honest about mistakes; the military analogy doesn't always translate to an office)", "url": "https://shkspr.mobi/blog/2019/10/book-review-turn-the-ship-around-l-david-marquet/"}
+ ],
+ "principles": [
+  {"name": "Nói “tôi dự định”", "line": "Đừng xin lệnh: nêu việc mình định làm, để người khác chỉ cần nói “được”."},
+  {"name": "Quyền đi cùng năng lực", "line": "Trao quyền đến đâu, học và cẩn trọng phải theo đến đó."},
+  {"name": "Ai cũng biết vì sao", "line": "Khi cả nhóm hiểu mục tiêu, không ai phải chờ lệnh để làm đúng."}
+ ],
+ "beats": [
+  {
+   "id": "h1", "act": "hook",
+   "narration": "Thuyền trưởng ra một lệnh không thể làm được. Vậy mà sĩ quan của ông vẫn truyền lệnh đi.",
+   "visual": {"type": "statement", "kicker": "USS Santa Fe · 1999", "text": "Lệnh không thể làm. Vẫn truyền đi.", "highlight": ["Vẫn truyền đi."]},
+   "sfx": [{"kind": "hit", "cue": "vậy mà", "gain_db": -6}],
+   "sources": ["marquet2012", "supersummary"]
+  },
+  {
+   "id": "h2", "act": "context",
+   "narration": "Không phải vì họ kém. Cũng không phải vì họ lười. Mà vì cả con tàu đã quen chỉ làm theo. Rót một tách trà nhé. Mình sẽ kể cách một thuyền trưởng sửa điều đó, và ba bài học cho bất kỳ nhóm nào bạn đang dẫn dắt.",
+   "visual": {"type": "shots", "shots": [
+    {"type": "trio", "kicker": "Không phải vì…", "cross": true, "items": [
+     {"icon": "brain", "label": "Kém cỏi", "cue": "kém"},
+     {"icon": "turtle", "label": "Lười biếng", "cue": "lười"}],
+     "line": "Mà vì quen chỉ làm theo.", "line_cue": "mà vì"},
+    {"type": "icon", "icon": "tea", "steam": true, "line": "Rót một tách trà nhé.", "cue": "rót"},
+    {"type": "statement", "kicker": "Trong vài phút tới", "text": "Một con tàu. Ba bài học.", "highlight": ["Ba bài học."], "cue": "mình sẽ"}
+   ]}
+  },
+  {
+   "id": "t0", "act": "context", "narration": "",
+   "visual": {"type": "title", "kicker": "Review sách · Tập 12", "title": "Xoay Chuyển Con Tàu", "subtitle": "Turn the Ship Around! — L. David Marquet (2012)", "hold": 3.0},
+   "sfx": [{"kind": "whoosh", "at": 0.0, "gain_db": -12}],
+   "sources": ["marquet2012"]
+  },
+  {
+   "id": "b01", "act": "misconception",
+   "narration": "Ta hay nghĩ lãnh đạo giỏi là người có mọi câu trả lời. Người trên ra lệnh, người dưới làm theo, thế là xong. Nhưng khi người trên sai thì sao? Cuốn sách này cho thấy chính mô hình ấy mới là vấn đề.",
+   "visual": {"type": "shots", "shots": [
+    {"type": "trio", "kicker": "Điều ta hay tin", "items": [
+     {"icon": "brain", "label": "Có mọi câu trả lời", "cue": "có mọi"},
+     {"icon": "people", "label": "Người dưới làm theo", "cue": "người dưới"}]},
+    {"type": "statement", "kicker": "Điều ta hay tin", "text": "Lãnh đạo giỏi có mọi câu trả lời.", "strike": "có mọi câu trả lời.", "replace": "tạo ra người biết nghĩ", "strike_cue": "chính mô", "cue": "nhưng khi"}
+   ]}
+  },
+  {
+   "id": "b02", "act": "context",
+   "narration": "L. David Marquet là một sĩ quan tàu ngầm của Hải quân Mỹ. Ông kể lại câu chuyện này trong cuốn Turn the Ship Around, in lần đầu năm hai nghìn mười hai. Theo nhà xuất bản Penguin, sách đã bán được hơn một triệu bản.",
+   "visual": {"type": "shots", "shots": [
+    {"type": "portrait", "name": "L. David Marquet", "initials": "DM", "role": "Sĩ quan tàu ngầm · Hải quân Mỹ", "years": "Thuyền trưởng USS Santa Fe · 1999–2001"},
+    {"type": "book", "title": "Turn the Ship Around!", "author": "L. David Marquet", "year": "2012", "kicker": "Cuốn sách", "cue": "ông kể", "facts": [
+     {"big": "2012", "text": "Bản đầu tiên", "cue": "hai nghìn"},
+     {"big": "> 1 triệu", "text": "bản đã bán · theo Penguin", "cue": "hơn một"}]}
+   ]},
+   "sources": ["marquet2012", "nsl2004", "navsource", "penguin"]
+  },
+  {
+   "id": "b03", "act": "context",
+   "narration": "Suốt khoảng một năm, Marquet chuẩn bị chỉ huy tàu USS Olympia. Ông học thuộc từng chi tiết của nó. Rồi tháng mười hai năm một nghìn chín trăm chín mươi tám, kế hoạch thay đổi: thuyền trưởng tàu USS Santa Fe bất ngờ xin nghỉ, và ông được điều sang thay.",
+   "visual": {"type": "shots", "shots": [
+    {"type": "timeline", "title": "Một chuyến đổi tàu bất ngờ", "events": [
+     {"year": "~1 năm", "text": "Chuẩn bị cho USS Olympia", "cue": "suốt"},
+     {"year": "12/1998", "text": "Kế hoạch thay đổi", "cue": "tháng mười"}]},
+    {"type": "swap", "kicker": "Tháng 1/1999 · nhận tàu mới", "from": {"label": "USS Olympia", "icon": "book"}, "to": {"label": "USS Santa Fe", "icon": "compass", "cue": "được điều"}, "cue": "thuyền trưởng tàu"}
+   ]},
+   "sources": ["supersummary", "wiki_marquet", "marquet_site", "marquet2012"],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b04", "act": "story",
+   "narration": "Santa Fe khi ấy đứng cuối hạm đội về giữ chân thủy thủ. Theo lời Marquet, năm trước đó, trên khoảng một trăm ba mươi lăm người, chỉ có ba người ký tiếp hợp đồng. Thủy thủ tránh ánh mắt, trả lời lí nhí, và tin rằng tàu mình là tệ nhất.",
+   "visual": {"type": "shots", "shots": [
+    {"type": "statement", "kicker": "Giữ chân thủy thủ", "text": "Đứng cuối hạm đội.", "highlight": ["cuối"]},
+    {"type": "stat", "value": 3, "label": "người ký tiếp hợp đồng", "note": "trên ~135 thủy thủ · năm trước khi Marquet đến", "cue": "chỉ có"},
+    {"type": "trio", "kicker": "Trên tàu", "items": [
+     {"icon": "mask", "label": "Tránh ánh mắt", "cue": "tránh"},
+     {"icon": "people", "label": "“Tàu mình tệ nhất”", "cue": "tin rằng"}], "cue": "thủy thủ tránh"}
+   ]},
+   "sources": ["bizobs", "penguin", "wiki_marquet", "supersummary"],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b05", "act": "story",
+   "narration": "Rồi một buổi diễn tập. Tàu giả lập sự cố lò phản ứng, phải chạy bằng động cơ điện dự phòng. Marquet ra lệnh: tiến hai phần ba. Sĩ quan trực lặp lại ngay. Nhưng không có gì xảy ra.",
+   "visual": {"type": "shots", "shots": [
+    {"type": "icon", "icon": "lightning", "kicker": "Một buổi diễn tập", "line": "Giả lập sự cố", "line_cue": "tàu giả"},
+    {"type": "statement", "kicker": "Lệnh của thuyền trưởng", "text": "“Tiến 2/3!”", "highlight": ["2/3!”"], "cue": "marquet ra"},
+    {"type": "icon", "icon": "hourglass", "line": "Không có gì xảy ra.", "cue": "nhưng không"}
+   ]},
+   "sources": ["marquet2012", "supersummary"]
+  },
+  {
+   "id": "b06", "act": "story",
+   "narration": "Hóa ra động cơ điện trên Santa Fe không có nấc hai phần ba. Những tàu Marquet từng đi đều có, nhưng chiếc này thì không. Theo lời Marquet kể, khi ông hỏi viên sĩ quan vì sao vẫn truyền lệnh, câu trả lời là: vì ông bảo tôi làm vậy.",
+   "visual": {"type": "shots", "shots": [
+    {"type": "compare", "title": "Nấc 2/3 trên động cơ điện",
+     "left": {"title": "Những tàu từng đi", "items": ["Có nấc 2/3"]},
+     "right": {"title": "USS Santa Fe", "items": ["Không có nấc 2/3"]}},
+    {"type": "quote", "text": "Vì ông bảo tôi làm vậy.", "by": "Viên sĩ quan trực, theo lời kể của Marquet (lược dịch)", "cue": "theo lời"}
+   ]},
+   "sources": ["marquet2012", "supersummary", "penguin"]
+  },
+  {
+   "id": "b07", "act": "story",
+   "narration": "Đó là lúc Marquet hiểu ra. Trong mô hình người dẫn, người theo, khi người dẫn sai, cả nhóm sai theo. Một con tàu có hơn một trăm người biết nghĩ, nhưng chỉ một người được phép quyết định.",
+   "visual": {"type": "shots", "shots": [
+    {"type": "statement", "kicker": "Người dẫn · người theo", "text": "Người dẫn sai, cả nhóm sai theo.", "highlight": ["sai theo."]},
+    {"type": "funnel", "total": 135, "start_full": true, "keep": 1, "keep_cue": "nhưng chỉ", "label": "~135 người trên tàu", "keep_label": "1 người được quyết định", "cue": "một con"}
+   ]},
+   "sources": ["marquet2012", "bizobs"]
+  },
+  {
+   "id": "b08", "act": "turn",
+   "narration": "Thế là ông làm ngược lại điều mình được dạy. Thay vì nắm quyền, ông trao quyền. Marquet gọi mô hình mới là lãnh đạo, lãnh đạo: trên con tàu ấy, ai cũng là một người ra quyết định.",
+   "visual": {"type": "shots", "shots": [
+    {"type": "swap", "kicker": "Làm ngược điều được dạy", "from": {"label": "Nắm quyền", "icon": "shield"}, "to": {"label": "Trao quyền", "icon": "people", "cue": "ông trao"}, "cue": "thay vì"},
+    {"type": "statement", "kicker": "Leader-leader", "text": "Ai cũng ra quyết định.", "highlight": ["ra quyết định."], "cue": "marquet gọi"}
+   ]},
+   "sources": ["marquet2012", "marquet_site", "penguin"]
+  },
+  {
+   "id": "b09", "act": "principle",
+   "narration": "Bài học thứ nhất: nói tôi dự định. Sĩ quan trên Santa Fe dần thôi xin lệnh. Họ báo: thưa thuyền trưởng, tôi dự định làm việc này. Marquet hỏi thêm vài câu, rồi đáp: rất tốt. Câu nói nhỏ ấy buộc người nói phải nghĩ như người chịu trách nhiệm.",
+   "visual": {"type": "shots", "shots": [
+    {"type": "swap", "kicker": "Bài học 1 · Nói “tôi dự định”", "from": {"label": "“Xin lệnh…?”", "icon": "clock"}, "to": {"label": "“Tôi dự định…”", "icon": "bulb", "cue": "họ báo"}, "cue": "sĩ quan"},
+    {"type": "statement", "kicker": "Thuyền trưởng đáp", "text": "“Rất tốt.”", "highlight": ["tốt.”"], "cue": "marquet hỏi"},
+    {"type": "icon", "icon": "target", "line": "Nghĩ như người chịu trách nhiệm", "cue": "câu nói"}
+   ]},
+   "sources": ["marquet2012", "svn", "nachos"]
+  },
+  {
+   "id": "b10", "act": "principle",
+   "narration": "Nhưng trao quyền cho người chưa hiểu việc thì nguy hiểm. Bài học thứ hai: quyền đi cùng năng lực. Thủy thủ Santa Fe học kỹ hơn, và trước mỗi thao tác quan trọng, họ dừng một nhịp, nói to và chỉ tay vào việc mình sắp làm, để kịp bắt lỗi.",
+   "visual": {"type": "shots", "shots": [
+    {"type": "icon", "icon": "scale", "kicker": "Bài học 2", "line": "Quyền đi cùng năng lực", "line_cue": "bài học"},
+    {"type": "trio", "kicker": "Hành động có chủ đích", "items": [
+     {"icon": "book", "label": "Học kỹ hơn", "cue": "học kỹ"},
+     {"icon": "clock", "label": "Dừng một nhịp", "cue": "dừng"},
+     {"icon": "target", "label": "Nói to, chỉ tay", "cue": "nói to"}], "cue": "thủy thủ"}
+   ]},
+   "sources": ["marquet2012", "deliberate", "nachos"]
+  },
+  {
+   "id": "b11", "act": "principle",
+   "narration": "Bài học thứ ba: ai cũng biết vì sao. Khi mọi người hiểu con tàu đang hướng tới đâu, họ không cần chờ lệnh để làm đúng. Marquet đổi mục tiêu của cả tàu, từ tránh sai sót sang làm thật xuất sắc.",
+   "visual": {"type": "shots", "shots": [
+    {"type": "icon", "icon": "compass", "kicker": "Bài học 3", "line": "Ai cũng biết vì sao", "line_cue": "ai cũng"},
+    {"type": "swap", "kicker": "Mục tiêu của cả tàu", "from": {"label": "Tránh sai sót", "icon": "shield"}, "to": {"label": "Làm thật xuất sắc", "icon": "star", "cue": "sang làm"}, "cue": "marquet đổi"}
+   ]},
+   "sources": ["marquet2012", "supersummary", "nsl2004"]
+  },
+  {
+   "id": "b12", "act": "story",
+   "narration": "Và con tàu xoay chuyển thật. Năm hai nghìn, Santa Fe nhận cúp Arleigh Burke, trao cho tàu tiến bộ nhiều nhất trong năm ở hạm đội Thái Bình Dương. Số người ký tiếp tăng lên hơn ba mươi. Và khoảng mười người từng phục vụ trên tàu sau này trở thành thuyền trưởng tàu ngầm.",
+   "visual": {"type": "shots", "shots": [
+    {"type": "trio", "kicker": "Năm 2000", "items": [
+     {"icon": "star", "label": "Cúp Arleigh Burke", "cue": "cúp"},
+     {"icon": "rocket", "label": "Tiến bộ nhất · Thái Bình Dương", "cue": "tiến bộ"}]},
+    {"type": "stat", "from": 3, "value": 30, "prefix": "> ", "label": "người ký tiếp hợp đồng", "note": "từ 3 người năm trước đó", "cue": "số người"},
+    {"type": "statement", "kicker": "Theo các nguồn", "text": "~10 người sau này làm thuyền trưởng.", "highlight": ["thuyền trưởng."], "cue": "và khoảng"}
+   ]},
+   "sources": ["burke", "bizobs", "supersummary", "wiki_marquet", "actiac", "penguin"],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b13", "act": "complication",
+   "narration": "Nhưng hãy đọc cuốn sách này thật tỉnh táo. Phần lớn câu chuyện là lời kể của chính Marquet, và vài con số mình chưa kiểm chứng được độc lập: có nơi ghi ba mươi ba, có nơi ghi ba mươi sáu người ký tiếp. Có người đọc còn thấy cách làm trên tàu ngầm không phải lúc nào cũng hợp với văn phòng.",
+   "visual": {"type": "shots", "shots": [
+    {"type": "statement", "kicker": "Đọc tỉnh táo", "text": "Lời kể của chính tác giả.", "highlight": ["chính tác giả."]},
+    {"type": "compare", "title": "Người ký tiếp: bao nhiêu?", "left": {"title": "Có nơi ghi", "items": ["33 người"]}, "right": {"title": "Có nơi ghi", "items": ["36 người"]}, "cue": "vài con"},
+    {"type": "trio", "kicker": "Tàu ngầm ≠ văn phòng?", "items": [
+     {"icon": "compass", "label": "Tàu ngầm", "cue": "tàu ngầm"},
+     {"icon": "store", "label": "Văn phòng", "cue": "văn phòng"}], "line": "Không phải lúc nào cũng hợp.", "line_cue": "không phải", "cue": "có người"}
+   ]},
+   "sources": ["bizobs", "supersummary", "shkspr"],
+   "certainty": "disputed"
+  },
+  {
+   "id": "b14", "act": "turn",
+   "narration": "Và một hiểu lầm phổ biến: trao quyền là buông tay. Marquet không bỏ trách nhiệm thuyền trưởng. Ông trao quyền đến đâu, thì việc học và sự minh bạch phải theo đến đó. Kiểm soát, năng lực, rõ ràng. Thiếu một, cả ba đều lung lay.",
+   "visual": {"type": "shots", "shots": [
+    {"type": "statement", "kicker": "Một hiểu lầm", "text": "Trao quyền là buông tay.", "strike": "là buông tay.", "replace": "cần nền móng", "strike_cue": "marquet không"},
+    {"type": "venn", "kicker": "Ba trụ của Marquet", "circles": [
+     {"label": "Kiểm soát", "cue": "kiểm soát"},
+     {"label": "Năng lực", "cue": "năng lực"},
+     {"label": "Rõ ràng", "cue": "rõ ràng"}], "center_label": "Leader-leader", "center_cue": "thiếu một", "cue": "kiểm soát"}
+   ]},
+   "sources": ["marquet2012", "nachos", "svn"]
+  },
+  {
+   "id": "b15", "act": "question",
+   "narration": "Giờ thử một chút nhé. Bạn là trưởng nhóm. Một bạn mới hỏi: em gửi email này cho khách được chưa ạ? Cách đáp nào giống Marquet nhất?",
+   "visual": {"type": "question",
+    "question": "Bạn mới hỏi: “Em gửi email này cho khách được chưa?” Đáp sao cho giống Marquet?",
+    "choices": ["“Được, gửi đi.”", "“Để mình viết lại cho.”", "“Em định gửi thế nào, vì sao?”"],
+    "answer": "C — để lần sau bạn ấy tự nói “em dự định…”.",
+    "think_seconds": 5}
+  },
+  {
+   "id": "b16", "act": "recap",
+   "narration": "Vậy là ba bài học từ Xoay Chuyển Con Tàu. Nói tôi dự định. Quyền đi cùng năng lực. Và ai cũng biết vì sao.",
+   "visual": {"type": "list", "title": "Ba bài học", "check": true, "items": [
+    {"text": "Nói “tôi dự định”", "cue": "nói tôi"},
+    {"text": "Quyền đi cùng năng lực", "cue": "quyền đi"},
+    {"text": "Ai cũng biết vì sao", "cue": "và ai"}]}
+  },
+  {
+   "id": "b17", "act": "close",
+   "narration": "Vì ông bảo tôi làm vậy. Câu ấy từng là tiếng nói của một con tàu chỉ biết làm theo. Marquet đổi nó thành một câu khác: tôi dự định. Vậy hôm nay, ai trong nhóm bạn vẫn đang chờ lệnh?",
+   "visual": {"type": "shots", "shots": [
+    {"type": "statement", "kicker": "Từ câu này…", "text": "“Vì ông bảo tôi làm vậy.”", "strike": "“Vì ông bảo tôi làm vậy.”", "replace": "“Tôi dự định…”", "strike_cue": "marquet đổi"},
+    {"type": "icon", "icon": "tea", "steam": true, "line": "Ai đang chờ lệnh?", "cue": "vậy hôm"}
+   ]},
+   "sources": ["marquet2012"]
+  },
+  {
+   "id": "b18", "act": "close",
+   "narration": "Còn bạn, ở chỗ làm của bạn, ai là người ra quyết định? Và bạn muốn mình review cuốn sách nào tiếp theo? Để lại bình luận cho mình nhé. Nếu thấy hay, lưu lại và gửi cho một người bạn. Hẹn gặp bạn.",
+   "visual": {"type": "end",
+    "kicker": "Review sách · Tập 12",
+    "title": "Xoay Chuyển Con Tàu",
+    "ask": "Bạn muốn mình review cuốn sách nào tiếp theo?",
+    "ask_hint": "Một cuốn về lãnh đạo · về làm việc nhóm · về ra quyết định",
+    "ask_cue": "và bạn",
+    "cta": "Bình luận · Lưu lại · Gửi một người bạn",
+    "cta_cue": "nếu thấy",
+    "sources_line": "Nguồn: Marquet, Turn the Ship Around! (2012) · Marquet, 'The Chiefs Take Charge', Submarine Review · NavSource · Business Observer",
+    "disclaimer": "Tóm tắt và cảm nhận cá nhân; một số con số theo lời kể của tác giả, đã làm tròn.",
+    "sources_cue": "hẹn gặp"}
+  }
+ ],
+ "pronounce": {}
+}
