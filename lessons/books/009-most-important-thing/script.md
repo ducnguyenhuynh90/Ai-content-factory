@@ -1,5 +1,5 @@
 # Điều Quan Trọng Nhất
-_Review sách · Tập 9 · 775 words · ~3.35 min · 4:3_
+_Review sách · Tập 9 · 765 words · ~3.3 min · 4:3_
 
 ## Learning goals
 - Kể lại được câu chuyện bản ghi nhớ bubble.com (2/1/2000) và cú sụp của Nasdaq 2000–2002
@@ -15,7 +15,7 @@ _Review sách · Tập 9 · 775 words · ~3.35 min · 4:3_
 | # | act | narration | on screen |
 |---|---|---|---|
 | h1 | hook | Mười năm viết thư, không một ai hồi âm. Rồi một lá thư, hơn hai tháng trước khi bong bóng vỡ. | hook: hook |
-| h2 | context | Lá thư ấy không đoán ngày, cũng không nhờ may mắn. Nó chỉ nhìn ra điều đám đông không muốn thấy. Trong vài phút tới, bạn sẽ thấy cách người viết lá thư ấy suy nghĩ, và ba bài học để nghĩ khác đám đông. | shots: shots |
+| h2 | context | Lá thư ấy không đoán ngày bong bóng vỡ. Nó chỉ nhìn ra điều đám đông không muốn thấy. Trong vài phút tới, bạn sẽ thấy cách người viết lá thư ấy suy nghĩ, và ba bài học để nghĩ khác đám đông. | shots: shots |
 | t0 | context |  | title: Điều Quan Trọng Nhất |
 | b01 | misconception | Chúng ta hay nghĩ nhà đầu tư giỏi là người dự báo giỏi. Biết lãi suất sẽ tăng hay giảm, thị trường sẽ lên hay xuống. Người viết cuốn sách này nghĩ khác: tương lai thì khó đoán, nhưng ít nhất, ta nên biết mình đang đứng ở đâu. | shots: shots |
 | b02 | context | Người đó là Howard Marks, đồng sáng lập Oaktree Capital năm một nghìn chín trăm chín mươi lăm. Từ năm một nghìn chín trăm chín mươi, ông có một thói quen: viết thư ngỏ cho khách hàng. Gần mười năm, không ai trả lời. | shots: shots |
@@ -32,7 +32,7 @@ _Review sách · Tập 9 · 775 words · ~3.35 min · 4:3_
 | b12 | question | Giờ thử một chút nhé. Bạn bè ai cũng khoe lời từ cùng một loại tài sản, tin tức toàn tin vui, và người ta bảo: lần này khác. Theo Marks, con lắc đang ở đâu? | question: Ai cũng khoe lời, tin toàn tốt, "lần này khác". Con lắc đang ở đâu? |
 | b13 | recap | Vậy là ba bài học từ Điều Quan Trọng Nhất. Nghĩ ở tầng thứ hai. Rủi ro trốn trong sự yên tâm. Và biết con lắc đang ở đâu. | list: Ba bài học |
 | b14 | close | Mười năm không ai hồi âm, Marks vẫn viết. Vì giá trị của một lá thư không nằm ở chỗ đoán đúng ngày. Mà ở chỗ dám nhìn xuống chân mình, khi cả đám đông đang nhìn lên. | shots: shots |
-| b15 | close | Còn bạn, bạn muốn mình review cuốn sách nào của một nhà đầu tư tiếp theo? Để lại bình luận cho mình nhé. Nếu thấy có ích, lưu lại và gửi cho một người bạn. Hẹn gặp bạn. | end: Điều Quan Trọng Nhất |
+| b15 | close | Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau. | end: Điều Quan Trọng Nhất |
 
 ## Sources
 - [marks2011] Howard Marks, The Most Important Thing: Uncommon Sense for the Thoughtful Investor, Columbia Business School Publishing (Columbia University Press), 2011 (ch. 1 second-level thinking: 'It's a good company; let's buy the stock' vs. 'everyone thinks it's a great company, and it's not'; chapters on risk; 'Awareness of the Pendulum') — https://cupola.columbia.edu/978-0-231-15368-3
