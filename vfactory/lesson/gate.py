@@ -133,6 +133,7 @@ def _vi_digits_to_words(text: str) -> str:
         return w + (" phẩy " + " ".join(VI_DIGITS[int(c)] for c in frac) if frac else "")
     text = text.replace("%", " phần trăm")
     text = re.sub(r"\b(\d{1,2})\s?[-/]\s?(\d{4})\b", r"\1 năm \2", text)  # "6-1986" = tháng sáu năm 1986
+    text = re.sub(r"(?<=\d)\s?[-–]\s?(?=\d)", " ", text)  # "50-50"
     return re.sub(r"(\d{1,3}(?: ?[. ]\d{3})+(?!\d)|\d+)(?:\s?,(\d+))?", one, text)
 
 
