@@ -124,7 +124,7 @@
   {
    "id": "h1",
    "act": "hook",
-   "narration": "Một cây gậy và một quả bóng giá một phẩy một đô la. Hơn nửa sinh viên Harvard, MIT và Princeton trả lời sai.",
+   "narration": "Một cây gậy và một quả bóng giá tổng cộng một phẩy một đô la Mỹ. Hơn nửa sinh viên Harvard, MIT và Princeton trả lời sai.",
    "visual": {
     "type": "shots",
     "shots": [
@@ -363,7 +363,8 @@
    "sources": [
     "kahneman2011",
     "frederick2005"
-   ]
+   ],
+   "take": 1
   },
   {
    "id": "b05",

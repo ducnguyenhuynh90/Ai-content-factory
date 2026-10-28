@@ -1,5 +1,5 @@
 # Tư Duy Nhanh Và Chậm
-_Review sách · Tập 2 · 853 words · ~3.67 min · 4:3_
+_Review sách · Tập 2 · 856 words · ~3.69 min · 4:3_
 
 ## Learning goals
 - Giải được câu đố cây gậy và quả bóng, và giải thích vì sao câu trả lời mười xu bật ra trước
@@ -14,7 +14,7 @@ _Review sách · Tập 2 · 853 words · ~3.67 min · 4:3_
 ## Script
 | # | act | narration | on screen |
 |---|---|---|---|
-| h1 | hook | Một cây gậy và một quả bóng giá một phẩy một đô la. Hơn nửa sinh viên Harvard, MIT và Princeton trả lời sai. | shots: shots |
+| h1 | hook | Một cây gậy và một quả bóng giá tổng cộng một phẩy một đô la Mỹ. Hơn nửa sinh viên Harvard, MIT và Princeton trả lời sai. | shots: shots |
 | h2 | context | Cây gậy đắt hơn quả bóng đúng một đô la. Vậy quả bóng giá bao nhiêu? Giữ câu trả lời trong đầu nhé. Vài phút tới, bạn sẽ gặp hai nhân vật sống trong đầu mình, và ba bài học để bớt bị chúng đánh lừa. | shots: shots |
 | t0 | context |  | title: Tư Duy Nhanh Và Chậm |
 | b01 | misconception | Chúng ta hay nghĩ sai lầm đến từ thiếu hiểu biết. Người càng thông minh thì càng ít bị lừa. Vậy mà với câu đố này, con số bật ra trong đầu hầu hết mọi người là mười xu. Và nó sai. | shots: shots |
