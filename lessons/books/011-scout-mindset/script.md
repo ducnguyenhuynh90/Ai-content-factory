@@ -1,5 +1,5 @@
 # Tư Duy Truy Tìm Sự Thật
-_Review sách · Tập 11 · 858 words · ~3.69 min · 4:3_
+_Review sách · Tập 11 · 859 words · ~3.7 min · 4:3_
 
 ## Learning goals
 - Kể lại vụ Dreyfus và vai trò của Georges Picquart như Julia Galef kể trong sách
@@ -25,7 +25,7 @@ _Review sách · Tập 11 · 858 words · ~3.69 min · 4:3_
 | b06 | story | Tháng mười hai năm ấy, Dreyfus bị kết tội phản quốc. Anh bị tước quân hàm trước đám đông, rồi bị đày ra Đảo Quỷ, ngoài khơi Guyane thuộc Pháp, với bản án chung thân. | timeline: Vụ án Dreyfus |
 | b07 | story | Galef mượn một ý của nhà tâm lý học Tom Gilovich. Khi muốn tin điều gì, ta hỏi: mình có được phép tin không? Một lý do là đủ. Khi không muốn tin, ta hỏi: mình có buộc phải tin không? Và lý do nào cũng chưa đủ. | shots: shots |
 | b08 | story | Tháng bảy năm một nghìn tám trăm chín mươi lăm, Georges Picquart lên nắm bộ phận tình báo. Năm sau, ông tìm thấy một bức thư gửi thiếu tá Ferdinand Esterhazy. Ông đặt chữ của Esterhazy cạnh mảnh giấy cũ: giống hệt. | shots: shots |
-| b09 | story | Picquart báo lên cấp trên. Họ đáp lại bằng cách điều ông đi Tunisia, rồi sau đó bắt giam ông. Còn Esterhazy được tòa án binh tuyên trắng án. Vì tin Esterhazy có tội nghĩa là thừa nhận cả quân đội đã sai. | shots: shots |
+| b09 | story | Picquart báo lên cấp trên. Họ đáp lại bằng cách điều ông đi Tunisia, rồi sau đó đưa ông vào tù. Còn Esterhazy được tòa án binh tuyên trắng án. Vì tin Esterhazy có tội nghĩa là thừa nhận cả quân đội đã sai. | shots: shots |
 | b10 | principle | Bài học thứ nhất: hỏi điều gì là thật. Picquart không hỏi kết luận nào có lợi cho quân đội, cũng không hỏi mình có được phép tin không. Ông hỏi: bằng chứng thật sự nói gì? | shots: shots |
 | b11 | story | Sự thật đến chậm. Năm một nghìn tám trăm chín mươi chín, Dreyfus được ân xá. Năm một nghìn chín trăm lẻ sáu, tòa án tối cao minh oan cho ông. Cũng năm đó, Picquart trở thành Bộ trưởng Chiến tranh. | shots: shots |
 | b12 | complication | Nhưng đây là chi tiết khiến câu chuyện đáng nhớ. Picquart không phải người bênh vực người Do Thái. Chính Galef kể rằng ông cũng mang định kiến bài Do Thái, như nhiều sĩ quan thời ấy. Ông chỉ không để định kiến thắng bằng chứng. | shots: shots |

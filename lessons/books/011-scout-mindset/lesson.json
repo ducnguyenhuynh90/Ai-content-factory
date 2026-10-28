@@ -553,7 +553,7 @@
   {
    "id": "b09",
    "act": "story",
-   "narration": "Picquart báo lên cấp trên. Họ đáp lại bằng cách điều ông đi Tunisia, rồi sau đó bắt giam ông. Còn Esterhazy được tòa án binh tuyên trắng án. Vì tin Esterhazy có tội nghĩa là thừa nhận cả quân đội đã sai.",
+   "narration": "Picquart báo lên cấp trên. Họ đáp lại bằng cách điều ông đi Tunisia, rồi sau đó đưa ông vào tù. Còn Esterhazy được tòa án binh tuyên trắng án. Vì tin Esterhazy có tội nghĩa là thừa nhận cả quân đội đã sai.",
    "visual": {
     "type": "shots",
     "shots": [
@@ -589,7 +589,8 @@
     "picquart_bio",
     "history_dreyfus",
     "galef2021"
-   ]
+   ],
+   "take": 1
   },
   {
    "id": "b10",
@@ -671,7 +672,7 @@
     "ebsco_dreyfus",
     "picquart_bio"
    ],
-   "take": 1
+   "take": 3
   },
   {
    "id": "b12",
