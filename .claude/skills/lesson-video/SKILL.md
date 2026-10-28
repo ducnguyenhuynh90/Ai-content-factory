@@ -51,7 +51,9 @@ Set `meta.lang: "vi"` and pick a narrator (Kokoro has no Vietnamese):
 
 No filler in the opening ("pha một tách trà nhé", "ngồi xuống cùng mình"): every sentence of the first 30 s gives
 value or necessary setup. Numbers in narration as Vietnamese words; the gate listens back and hard-fails a number
-not heard as written ("một nghìn bốn trăm…" read as "một, bốn, ba lăm"): re-take that line. English names (people, companies, book titles): with OmniVoice or Gemini
+not heard as written ("một nghìn bốn trăm…" read as "một, bốn, ba lăm"): re-take that line.
+Decimals are read with "phẩy", amount first, unit last: $1.10 is "một phẩy một đô la" (never "một đô la mười"); on
+screen "1,1 đô". English names (people, companies, book titles): with OmniVoice or Gemini
 keep them in their original spelling and leave `pronounce` empty: OmniVoice reads them natively. Measured on 12 names
 with Whisper as the listener: Vietnamese respellings ("Gim Côn lin") scored 0.76, the original spelling 0.95. Respell
 only for Piper, which cannot read English. Where a Vietnamese phrase serves the viewer better, say that instead.

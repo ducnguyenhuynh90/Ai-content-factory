@@ -1,5 +1,5 @@
 # Siêu Dự Báo
-_Review sách · Tập 7 · 849 words · ~3.66 min · 4:3_
+_Review sách · Tập 7 · 842 words · ~3.63 min · 4:3_
 
 ## Learning goals
 - Kể lại được câu chuyện 'tinh tinh ném phi tiêu' và nửa sau bị bỏ quên: con cáo đoán tốt hơn con nhím
@@ -29,12 +29,12 @@ _Review sách · Tập 7 · 849 words · ~3.66 min · 4:3_
 | b10 | principle | Vậy họ nghĩ khác thế nào? Bài học thứ nhất: nhìn từ bên ngoài trước. Trước khi say mê chi tiết câu chuyện, hãy hỏi: chuyện giống thế này, bình thường xảy ra bao nhiêu lần? Tỷ lệ nền ấy là điểm xuất phát. | shots: shots |
 | b11 | principle | Bài học thứ hai: cập nhật từng bước nhỏ. Khi có tin mới, siêu dự báo viên không nhảy từ hai mươi lên chín mươi phần trăm. Họ dịch lên hai mươi lăm, rồi ba mươi. Không nhảy vọt, nhưng cũng không đứng yên. | shots: shots |
 | b12 | principle | Bài học thứ ba: ghi điểm cho dự đoán. Tetlock dùng điểm Brier, giống điểm golf: càng thấp càng tốt. Không điểm là hoàn hảo. Lúc nào cũng đoán năm mươi năm mươi được không phẩy năm. Tự tin tuyệt đối mà sai hết thì hai điểm. | shots: shots |
-| b13 | example | Và điều dự báo ai sẽ thành siêu dự báo viên không phải trí thông minh. Theo Tetlock, mạnh nhất là tinh thần luôn ở bản beta: luôn cập nhật, luôn sửa mình. Nó mạnh gấp khoảng ba lần trí thông minh. _(estimate)_ | shots: shots |
+| b13 | example | Vậy ai sẽ thành siêu dự báo viên? Trí thông minh có giúp. Nhưng theo Tetlock, yếu tố dự báo mạnh nhất là tinh thần luôn ở bản beta: luôn cập nhật, luôn sửa mình. Nó mạnh gấp khoảng ba lần trí thông minh. _(estimate)_ | shots: shots |
 | b14 | complication | Nhưng đừng thần thánh hoá. Câu hỏi trong giải đấu thường chỉ xa vài tháng, cùng lắm khoảng một năm. Càng nhìn xa, độ chính xác càng tụt, đến khoảng ba tới năm năm thì gần như đoán mò. Và Nassim Taleb nhắc: những thiên nga đen, hiếm mà lớn, vẫn nằm ngoài tầm chấm điểm. _(estimate)_ | shots: shots |
 | b15 | question | Giờ thử một chút nhé. Bạn đoán chín mươi phần trăm đội bóng mình thích sẽ thắng. Họ thua. Bạn nên làm gì? | question: Bạn đoán 90% đội mình thắng. Họ thua. Nên làm gì? |
 | b16 | recap | Vậy là ba bài học từ Superforecasting. Nhìn từ bên ngoài trước. Cập nhật từng bước nhỏ. Và ghi điểm cho dự đoán. | list: Ba bài học |
 | b17 | close | Con tinh tinh ném phi tiêu chỉ là một nửa câu chuyện. Nửa còn lại, Tetlock viết: khả năng nhìn trước không phải món quà bẩm sinh, mà là sản phẩm của những cách nghĩ cụ thể. Nghĩa là, nó tập được. Vậy bạn sẽ ghi điểm cho dự đoán nào đầu tiên? | shots: shots |
-| b18 | close | Còn bạn, bạn muốn mình review cuốn sách nào tiếp theo về cách suy nghĩ? Để lại bình luận cho mình nhé. Nếu thấy hay, lưu lại và gửi cho một người bạn hay đoán mò. Hẹn gặp bạn. | end: Siêu Dự Báo |
+| b18 | close | Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau. | end: Siêu Dự Báo |
 
 ## Sources
 - [tetlock2015] Philip E. Tetlock & Dan Gardner, Superforecasting: The Art and Science of Prediction, Crown, 2015 (ch. 1: chimp line, GJP beat the control group by 60% in year 1 and 78% in year 2; ch. 3 Brier score 0 / 0.5 / 2.0; ch. 4 'about 2%'; ch. 7 perpetual beta ~3x intelligence; ch. 11 on Taleb and long horizons)

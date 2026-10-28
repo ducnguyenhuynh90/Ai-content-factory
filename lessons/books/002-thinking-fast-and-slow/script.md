@@ -1,5 +1,5 @@
 # Tư Duy Nhanh Và Chậm
-_Review sách · Tập 2 · 851 words · ~3.66 min · 4:3_
+_Review sách · Tập 2 · 853 words · ~3.67 min · 4:3_
 
 ## Learning goals
 - Giải được câu đố cây gậy và quả bóng, và giải thích vì sao câu trả lời mười xu bật ra trước
@@ -14,12 +14,12 @@ _Review sách · Tập 2 · 851 words · ~3.66 min · 4:3_
 ## Script
 | # | act | narration | on screen |
 |---|---|---|---|
-| h1 | hook | Một cây gậy và một quả bóng giá một đô la mười. Hơn nửa sinh viên Harvard, MIT và Princeton trả lời sai. | shots: shots |
+| h1 | hook | Một cây gậy và một quả bóng giá một phẩy một đô la. Hơn nửa sinh viên Harvard, MIT và Princeton trả lời sai. | shots: shots |
 | h2 | context | Cây gậy đắt hơn quả bóng đúng một đô la. Vậy quả bóng giá bao nhiêu? Giữ câu trả lời trong đầu nhé. Vài phút tới, bạn sẽ gặp hai nhân vật sống trong đầu mình, và ba bài học để bớt bị chúng đánh lừa. | shots: shots |
 | t0 | context |  | title: Tư Duy Nhanh Và Chậm |
 | b01 | misconception | Chúng ta hay nghĩ sai lầm đến từ thiếu hiểu biết. Người càng thông minh thì càng ít bị lừa. Vậy mà với câu đố này, con số bật ra trong đầu hầu hết mọi người là mười xu. Và nó sai. | shots: shots |
 | b02 | context | Câu đố ấy nằm trong cuốn sách năm hai nghìn mười một của Daniel Kahneman. Một nhà tâm lý học, nhưng lại nhận giải Nobel kinh tế năm hai nghìn lẻ hai, cho nghiên cứu làm cùng người bạn Amos Tversky. | shots: shots |
-| b04 | story | Quay lại câu đố. Nếu bóng giá mười xu, gậy sẽ giá một đô la mười, cộng lại thành một đô la hai mươi. Đáp án đúng là năm xu. Chỉ cần vài giây kiểm tra, nhưng phần lớn chúng ta bỏ qua. | shots: shots |
+| b04 | story | Quay lại câu đố. Nếu bóng giá mười xu, gậy sẽ giá một phẩy một đô la, cộng lại thành một phẩy hai đô la. Đáp án đúng là năm xu. Chỉ cần vài giây kiểm tra, nhưng phần lớn chúng ta bỏ qua. | shots: shots |
 | b05 | story | Kahneman kể rằng hơn năm mươi phần trăm sinh viên ở Harvard, MIT và Princeton đưa ra câu trả lời trực giác ấy. Ở những trường ít chọn lọc hơn, tỉ lệ không chịu kiểm tra còn vượt quá tám mươi phần trăm. | shots: shots |
 | b06 | story | Kahneman đặt tên cho hai nhân vật. Hệ thống một: nhanh, tự động, không tốn sức, như khi bạn đọc chữ trên một tấm biển quảng cáo. Hệ thống hai: chậm và tốn sức, như khi bạn nhân mười bảy với hai mươi tư. | shots: shots |
 | b07 | story | Hệ thống một làm việc suốt ngày, và thường làm rất tốt. Vấn đề là nó luôn có sẵn một câu trả lời, kể cả khi câu hỏi quá khó. Còn hệ thống hai thì lười, hay gật đầu với câu trả lời đầu tiên. | shots: shots |

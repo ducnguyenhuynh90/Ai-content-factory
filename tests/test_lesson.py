@@ -311,6 +311,10 @@ def test_gate_vietnamese_false_positives():
     assert not g._name_heard("Walgreens", "một cửa hàng thuốc")
     L = {"meta": {"lang": "vi"}, "beats": [{"id": "b1", "narration": "Mãi mãi, năm năm, đó là là sai.", "visual": {"type": "statement", "text": "x"}}]}
     assert [x for x in g.copy_lint(L) if "doubled" in x] == ["b1: doubled word 'là là'"]
+    M = {"meta": {"lang": "vi"}, "beats": [{"id": "b1", "narration": "Giá một đô la mười.", "visual": {"type": "statement", "text": "x"}}]}
+    assert any("phẩy" in x for x in g.copy_lint(M))
+    M["beats"][0]["narration"] = "Giá một phẩy một đô la, còn bóng mười xu."
+    assert not any("phẩy" in x for x in g.copy_lint(M))
 
 
 def test_gate_vietnamese_numbers():

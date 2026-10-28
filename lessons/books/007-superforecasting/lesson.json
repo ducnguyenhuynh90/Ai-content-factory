@@ -28,7 +28,38 @@
   "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
   "captions": true,
   "voice_seed": 99,
-  "pronounce_note": "English names stay in English: OmniVoice reads them natively."
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively.",
+  "brief": {
+   "target_viewer": "Người Việt 20–40 tuổi, tò mò, thích đọc sách, hay nghe 'chuyên gia' dự báo kinh tế, thị trường, công nghệ trên mạng và báo chí, và tự hỏi có nên tin không; có thể chưa nghe tên Philip Tetlock hay giải đấu IARPA (giả định của người gác cổng, chủ kênh xác nhận lại)",
+   "format": "Phân tích sách (book analysis), 4–5 phút, 4:3, minh họa icon vẽ tay, một giọng đọc",
+   "central_question": "Nếu chuyên gia trung bình đoán tương lai chỉ ngang tinh tinh ném phi tiêu, thì có ai đoán giỏi không, và họ nghĩ khác thế nào?",
+   "transformation": "Trước khi xem, họ nghĩ tương lai hoặc do chuyên gia chắc nịch đoán, hoặc không ai đoán được. Sau khi xem, họ kể lại được câu 'tinh tinh ném phi tiêu' và nửa sau bị bỏ quên (cáo đoán tốt hơn nhím), biết giải đấu IARPA và siêu dự báo viên (khoảng 2%), dùng được ba ý (nhìn từ bên ngoài trước, cập nhật từng bước nhỏ, ghi điểm cho dự đoán bằng điểm Brier), biết giới hạn (tầm xa, thiên nga đen), và tự chấm một chuỗi dự đoán thay vì phán xét một lần trật",
+   "discovery_goal": "Tìm kiếm (\"Superforecasting\", \"Siêu dự báo\", \"Philip Tetlock\", \"dự báo tương lai\", \"điểm Brier\", \"cáo và nhím\") và đề xuất từ video sách/tư duy/đầu tư; khán giả của tập 1–6 (b05 nối với tập 1, Good to Great)",
+   "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn clip tiếp theo về cuốn sách nào?\" (lựa chọn của chủ kênh)",
+   "share_recipient": "Một người bạn hay chia sẻ dự báo chắc nịch của 'chuyên gia' (giá vàng, chứng khoán, bất động sản) hoặc tự mình hay nói 'chắc chắn': câu chuyện tinh tinh, con cáo và bài tập 'đoán 90% mà thua' giúp hai người nói về dự báo bằng con số thay vì cãi nhau ai đúng",
+   "evidence": "Tetlock & Gardner 2015 (ch. 1 tinh tinh, 60%/78%; ch. 3 Brier 0 / 0,5 / 2,0; ch. 4 khoảng 2%, Bill Flack; ch. 7 bản beta ≈ 3 lần trí thông minh; ch. 11 tầm xa, Taleb); Tetlock 2005 EPJ (284 chuyên gia, ~28.000 dự đoán, cáo/nhím); Cato Unbound 2011; Long Now 2007; AI Impacts (IARPA ACE 2011–2015, 5 đội); Ignatius/Washington Post 2013 (~30%, đánh dấu tranh cãi); Edge 2015 (ví dụ câu hỏi, tầm 5 năm); IJF 2022 (Taleb). Xem gate/claims.md.",
+   "constraints": "4–5 phút, 4:3, icon vẽ (không footage, không khuôn mặt người thật), một giọng đọc OmniVoice seed 99 speed 0.88, tên tiếng Anh giữ nguyên chính tả, số đọc bằng chữ, đường cong minh họa ghi 'minh họa', không khuyến nghị đầu tư, giữ lời miễn trừ"
+  },
+  "youtube": {
+   "title": "Ai đoán tương lai giỏi? Nửa câu chuyện bị bỏ quên | Superforecasting (Philip Tetlock)",
+   "thumbnail_text": "~28.000 dự đoán. Ngang tinh tinh?",
+   "description": "Một nghiên cứu hai mươi năm, khoảng 28.000 dự đoán của 284 chuyên gia, và một câu đùa nổi tiếng: chuyên gia trung bình đoán gần như ngang một con tinh tinh ném phi tiêu. Nhưng nửa sau của kết quả bị bỏ quên. Trong Superforecasting, Philip Tetlock và Dan Gardner kể về giải đấu dự báo của IARPA, về những người bình thường đoán giỏi đến bất ngờ, và về cách họ nghĩ. Video đi qua ba bài học (nhìn từ bên ngoài trước, cập nhật từng bước nhỏ, ghi điểm cho dự đoán), giới hạn của dự báo (tầm xa, thiên nga đen), và một bài tập nhỏ để bạn tự thử.\n\nNội dung giáo dục, tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư. Số liệu theo sách, đã làm tròn. Con số \"giỏi hơn khoảng 30%\" đến từ một bài báo năm 2013 và nên hiểu như một ước tính. Biểu đồ ở đầu video và ở bài học 2 là minh họa, không phải dữ liệu.\n\nChương:\n0:00 ~28.000 dự đoán: ngang tinh tinh ném phi tiêu?\n0:20 Hai kiểu người đoán tương lai\n0:34 Nghiên cứu hai mươi năm của Philip Tetlock\n0:51 Câu được trích nhiều nhất\n1:04 Nửa sau bị bỏ quên: nhím và cáo\n1:17 Nhím của Jim Collins, cáo của Tetlock\n1:31 Giải đấu dự báo IARPA (2011)\n1:47 Good Judgment Project dẫn đầu\n1:59 Siêu dự báo viên: khoảng 2%\n2:16 Con số 30%: đọc thế nào cho đúng\n2:31 Bài học 1: nhìn từ bên ngoài trước\n2:45 Bài học 2: cập nhật từng bước nhỏ\n2:59 Bài học 3: ghi điểm cho dự đoán (điểm Brier)\n3:15 Ai thành siêu dự báo viên? Tinh thần bản beta\n3:29 Giới hạn: tầm xa và thiên nga đen\n3:48 Thử một chút: đoán 90% mà thua\n4:06 Ba bài học và nửa còn lại của câu chuyện\n\nNguồn:\n- Philip E. Tetlock & Dan Gardner, Superforecasting: The Art and Science of Prediction, Crown, 2015\n- Philip E. Tetlock, Expert Political Judgment: How Good Is It? How Can We Know?, Princeton University Press, 2005: https://press.princeton.edu/books/paperback/9780691175973/expert-political-judgment\n- Dan Gardner & Philip Tetlock, Overcoming Our Aversion to Acknowledging Our Ignorance, Cato Unbound, 7/2011: https://www.cato-unbound.org/2011/07/11/dan-gardner-philip-tetlock/overcoming-our-aversion-acknowledging-our-ignorance/\n- Philip Tetlock, Why Foxes Are Better Forecasters Than Hedgehogs, Long Now Foundation, 2007: https://longnow.org/talks/02007-tetlock/\n- AI Impacts, Evidence on good forecasting practices from the Good Judgment Project: https://aiimpacts.org/evidence-on-good-forecasting-practices-from-the-good-judgment-project/\n- David Ignatius, More chatter than needed, The Washington Post, 11/2013 (bản đăng lại ở Belfer Center): https://www.belfercenter.org/publication/more-chatter-needed\n- Good Judgment Inc., The first championship season: https://goodjudgment.com/resources/the-superforecasters-track-record/the-first-championship-season/\n- Institutional Investor, Book review: Superforecasting sheds light on the art of prediction: https://www.institutionalinvestor.com/article/b14z9y2t23pnng/book-review-superforecasting-sheds-light-on-the-art-of-prediction\n- Tetlock, Lu & Mellers, False Dichotomy Alert (trả lời Taleb), International Journal of Forecasting, 2022: https://faculty.wharton.upenn.edu/wp-content/uploads/2022/03/SSRN-id4013831.pdf\n- Glenn W. Brier, Verification of forecasts expressed in terms of probability, Monthly Weather Review 78(1), 1950\n\nBạn muốn clip tiếp theo về cuốn sách nào? Để lại bình luận nhé.",
+   "tags": [
+    "Superforecasting",
+    "Siêu dự báo",
+    "Philip Tetlock",
+    "Dan Gardner",
+    "review sách",
+    "tóm tắt sách",
+    "dự báo tương lai",
+    "tư duy xác suất",
+    "điểm Brier",
+    "cáo và nhím",
+    "Good Judgment Project",
+    "siêu dự báo viên",
+    "ra quyết định"
+   ]
+  }
  },
  "sources": [
   {
@@ -118,46 +149,50 @@
      ],
      [
       1,
-      1.5
+      1.4
      ],
      [
       2,
-      2.2
+      1.9
      ],
      [
       3,
-      3.0
+      2.5
      ],
      [
       4,
-      3.9
+      3.1
      ],
      [
       5,
-      4.8
+      3.8
      ],
      [
       6,
-      5.6
+      4.5
      ],
      [
       7,
-      6.2
+      5.2
      ],
      [
       8,
-      2.2
+      6.0
      ],
      [
       9,
-      1.6
+      2.0
      ],
      [
       10,
+      1.6
+     ],
+     [
+      11,
       1.5
      ]
     ],
-    "peak_label": "độ tự tin",
+    "peak_label": "độ tự tin · minh họa",
     "end_label": "≈ đoán bừa",
     "kicker": "Superforecasting · Tetlock & Gardner"
    },
@@ -198,8 +233,7 @@
       "items": [
        {
         "icon": "people",
-        "label": "Người bình thường",
-        "cue": "những người"
+        "label": "Người bình thường"
        },
        {
         "icon": "target",
@@ -338,7 +372,7 @@
       "kicker": "Câu được trích nhiều nhất",
       "items": [
        {
-        "name": "Chuyên gia trung bình",
+        "name": "Chuyên gia trung bình",
         "before": "trên TV · rất tự tin",
         "after": "≈ TINH TINH NÉM PHI TIÊU",
         "cue": "tinh tinh"
@@ -389,8 +423,7 @@
       "motion": "rise",
       "kicker": "Nửa sau của kết quả",
       "line": "Con cáo đoán tốt hơn.",
-      "line_cue": "con cáo đoán",
-      "cue": "con cáo đoán"
+      "cue": "có lẽ"
      }
     ]
    },
@@ -419,7 +452,7 @@
        {
         "icon": "fox",
         "label": "Tetlock: cáo đoán tương lai",
-        "cue": "con cáo"
+        "cue": "còn khi"
        }
       ]
      },
@@ -464,7 +497,7 @@
        {
         "icon": "hourglass",
         "label": "Câu hỏi thật, có hạn chót",
-        "cue": "có hạn"
+        "cue": "thật về"
        }
       ]
      },
@@ -474,7 +507,7 @@
       "kicker": "Good Judgment Project",
       "line": "Hàng nghìn tình nguyện viên",
       "line_cue": "hàng nghìn",
-      "cue": "tetlock lập"
+      "cue": "lập đội"
      }
     ]
    },
@@ -491,45 +524,30 @@
     "type": "shots",
     "shots": [
      {
-      "type": "chart",
-      "title": "Chính xác hơn nhóm đối chứng (%)",
-      "unit": "",
-      "points": [
-       [
-        "Đối chứng",
-        0
-       ],
-       [
-        "Năm 1",
-        60
-       ],
-       [
-        "Năm 2",
-        78
-       ]
-      ],
-      "annotations": [
-       {
-        "at": 1,
-        "text": "≈ 60%",
-        "cue": "sáu mươi"
-       },
-       {
-        "at": 2,
-        "text": "78%",
-        "cue": "bảy mươi"
-       }
-      ]
+      "type": "stat",
+      "value": 60,
+      "prefix": "≈ ",
+      "suffix": "%",
+      "label": "Năm 1 · chính xác hơn nhóm đối chứng",
+      "note": "Good Judgment Project · theo Tetlock & Gardner (2015)"
      },
      {
-      "type": "funnel",
-      "total": 5,
-      "keep": 1,
-      "start_full": true,
-      "cols": 5,
-      "label": "đội trong giải",
-      "keep_label": "1 đội ở lại",
-      "keep_cue": "bị dừng",
+      "type": "stat",
+      "value": 78,
+      "suffix": "%",
+      "label": "Năm 2 · chính xác hơn nhóm đối chứng",
+      "note": "",
+      "cue": "năm thứ",
+      "from": 60
+     },
+     {
+      "type": "icon",
+      "icon": "chess",
+      "kicker": "Sau hai năm",
+      "line": "Các đội khác bị dừng.",
+      "line_cue": "sau hai",
+      "motion": "sink",
+      "motion_cue": "bị dừng",
       "cue": "họ dẫn"
      }
     ]
@@ -607,7 +625,7 @@
       "icon": "letter",
       "kicker": "Nguồn: một bài báo, 2013",
       "line": "So sánh phức tạp hơn khẩu hiệu",
-      "line_cue": "cách so",
+      "line_cue": "đến từ",
       "cue": "con số"
      },
      {
@@ -617,8 +635,7 @@
       "period": 2.6,
       "kicker": "Đọc con số thế nào",
       "line": "Nhớ nó như một ước tính.",
-      "line_cue": "ước tính",
-      "cue": "hãy nhớ"
+      "cue": "câu khẩu"
      }
     ]
    },
@@ -695,7 +712,8 @@
       },
       "to": {
        "label": "Dịch từng chút",
-       "icon": "turtle"
+       "icon": "turtle",
+       "cue": "siêu dự"
       },
       "cue": "khi có"
      },
@@ -746,7 +764,7 @@
         "cue": "không nhảy vọt"
        }
       ],
-      "cue": "họ dịch"
+      "cue": "chín mươi"
      }
     ]
    },
@@ -784,7 +802,7 @@
        },
        {
         "year": "2",
-        "text": "Tự tin tuyệt đối, sai hết",
+        "text": "Tự tin tuyệt đối, sai hết",
         "cue": "tự tin"
        }
       ],
@@ -801,34 +819,36 @@
   {
    "id": "b13",
    "act": "example",
-   "narration": "Và điều dự báo ai sẽ thành siêu dự báo viên không phải trí thông minh. Theo Tetlock, mạnh nhất là tinh thần luôn ở bản beta: luôn cập nhật, luôn sửa mình. Nó mạnh gấp khoảng ba lần trí thông minh.",
+   "narration": "Vậy ai sẽ thành siêu dự báo viên? Trí thông minh có giúp. Nhưng theo Tetlock, yếu tố dự báo mạnh nhất là tinh thần luôn ở bản beta: luôn cập nhật, luôn sửa mình. Nó mạnh gấp khoảng ba lần trí thông minh.",
    "visual": {
     "type": "shots",
     "shots": [
      {
-      "type": "swap",
-      "kicker": "Điều gì tạo ra siêu dự báo viên?",
-      "from": {
-       "label": "Trí thông minh",
-       "icon": "brain"
-      },
-      "to": {
-       "label": "Tinh thần bản beta",
-       "icon": "sprout",
-       "cue": "bản beta"
-      },
-      "cue": "không phải",
+      "type": "trio",
+      "kicker": "Ai thành siêu dự báo viên?",
+      "items": [
+       {
+        "icon": "brain",
+        "label": "Trí thông minh: có giúp",
+        "cue": "trí thông"
+       },
+       {
+        "icon": "sprout",
+        "label": "Tinh thần bản beta",
+        "cue": "bản beta"
+       }
+      ],
       "line": "Luôn cập nhật, luôn sửa mình.",
-      "line_cue": "luôn cập"
+      "line_cue": "bản beta"
      },
      {
       "type": "stat",
       "value": 3,
       "prefix": "≈ ",
       "suffix": "×",
-      "label": "sức dự báo của 'bản beta' so với trí thông minh",
+      "label": "sức dự báo, so với trí thông minh",
       "note": "theo Tetlock & Gardner, 2015",
-      "cue": "nó mạnh"
+      "cue": "sửa mình"
      }
     ]
    },
@@ -932,8 +952,7 @@
       "type": "icon",
       "icon": "puzzle",
       "kicker": "Quay lại câu đùa",
-      "line": "Chỉ là một nửa câu chuyện.",
-      "line_cue": "một nửa"
+      "line": "Chỉ là một nửa câu chuyện."
      },
      {
       "type": "quote",
@@ -953,7 +972,7 @@
        },
        {
         "icon": "target",
-        "label": "Ghi điểm dự đoán đầu tiên",
+        "label": "Dự đoán nào đầu tiên?",
         "cue": "ghi điểm"
        }
       ]
@@ -967,19 +986,17 @@
   {
    "id": "b18",
    "act": "close",
-   "narration": "Còn bạn, bạn muốn mình review cuốn sách nào tiếp theo về cách suy nghĩ? Để lại bình luận cho mình nhé. Nếu thấy hay, lưu lại và gửi cho một người bạn hay đoán mò. Hẹn gặp bạn.",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
    "visual": {
     "type": "end",
     "kicker": "Review sách · Tập 7",
     "title": "Siêu Dự Báo",
-    "ask": "Cuốn sách về cách suy nghĩ nào bạn muốn nghe tiếp?",
-    "ask_hint": "Một cuốn về xác suất · một nhà dự báo · một câu hỏi của bạn",
+    "ask": "Bạn muốn clip tiếp theo về cuốn sách nào?",
+    "ask_hint": "Một cuốn sách · một nhà tư duy · một chủ đề",
     "ask_cue": "còn bạn",
-    "cta": "Bình luận · Lưu lại · Gửi một người bạn",
-    "cta_cue": "nếu thấy",
-    "sources_line": "Nguồn: Tetlock & Gardner, Superforecasting (2015) · Tetlock, Expert Political Judgment (2005) · Good Judgment Project · Ignatius, Washington Post (2013)",
-    "disclaimer": "Tóm tắt và cảm nhận cá nhân; số liệu theo sách, đã làm tròn.",
-    "sources_cue": "hẹn gặp"
+    "sources_line": "Nguồn: Tetlock & Gardner, Superforecasting (2015) · Tetlock, Expert Political Judgment (2005) · xem mô tả",
+    "disclaimer": "Nội dung giáo dục, tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư. Số liệu theo sách, đã làm tròn.",
+    "sources_cue": "còn bạn"
    }
   }
  ],

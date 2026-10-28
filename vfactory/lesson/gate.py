@@ -174,6 +174,8 @@ def copy_lint(lesson: dict) -> list[str]:
                 issues.append(f"{b['id']}: doubled word '{m.group(0)}'")
         if "  " in n or n != n.strip():
             issues.append(f"{b['id']}: stray whitespace in narration")
+        if vi and re.search(r"(đô la|đô|đồng|euro|bảng) (mười|\w+ mươi)\b(?! (xu|năm|tuổi|phần))", n):
+            issues.append(f"{b['id']}: money decimal read as 'X đô la mười': say 'X phẩy Y đô la'")
         if re.search(r"\d", n) and not b.get("allow_digits"):
             issues.append(f"{b['id']}: digits in narration (say numbers as words)")
         if n.count("“") != n.count("”") or n.count('"') % 2:
