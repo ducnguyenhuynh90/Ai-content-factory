@@ -67,7 +67,7 @@ def base_css(L: Look, sid: str) -> str:
     #root {{ position: absolute; inset: 0; }}
     #{sid}-wrap {{ position: absolute; left: 0; top: 0; width: {L.w}px; height: {L.h}px; color: {L.ink};
       font-family: {L.sans}; }}
-    #{sid}-wrap .kicker {{ font-family: {L.sans}; font-weight: 700; font-size: {L.fs(0.022)}px; letter-spacing: 0.32em;
+    #{sid}-wrap .kicker {{ font-family: {L.sans}; font-weight: 800; font-size: {L.fs(0.022)}px; letter-spacing: 0.32em;
       text-transform: uppercase; color: {L.accent}; }}
     #{sid}-wrap .serif {{ font-family: {L.serif}; font-weight: 500; }}
     #{sid}-wrap .muted {{ color: {L.muted}; }}
@@ -226,7 +226,7 @@ def chart(L, sid, v, dur, cue):
         anchor = "end" if ax > x0 + W * 0.75 else ("start" if ax < x0 + W * 0.25 else "middle")
         ann.append(f'<g id="{sid}-a{j}"><circle cx="{ax:.1f}" cy="{ay:.1f}" r="{L.px(0.011)}" fill="{L.accent}"/>'
                    f'<line x1="{ax:.1f}" y1="{ay:.1f}" x2="{ax:.1f}" y2="{ly + (8 if above else -L.px(0.03)):.1f}" stroke="{L.accent}" stroke-width="2"/>'
-                   f'<text x="{ax + (16 if anchor == "start" else -16 if anchor == "end" else 0):.1f}" y="{ly:.1f}" text-anchor="{anchor}" fill="{L.ink}" font-family="Inter" font-weight="700" '
+                   f'<text x="{ax + (16 if anchor == "start" else -16 if anchor == "end" else 0):.1f}" y="{ly:.1f}" text-anchor="{anchor}" fill="{L.ink}" font-family="Inter" font-weight="600" '
                    f'font-size="{L.fs(0.024)}">{E(a["text"])}</text></g>')
         tw.append(_ft(f"#{sid}-a{j}", "opacity: 0, y: 8", 'opacity: 1, y: 0, duration: 0.45, ease: "back.out(2)"', at))
     m = f"""<div id="{sid}-c" style="position:absolute;inset:0;">
@@ -276,11 +276,11 @@ def quote(L, sid, v, dur, cue):
     badge = ""
     if attributed:
         badge = (f'<div id="{sid}-b" style="display:inline-block;margin-top:{L.px(0.03)}px;padding:6px 14px;border:2px solid {L.accent};'
-                 f'color:{L.accent};font-weight:700;font-size:{L.fs(0.019)}px;letter-spacing:0.2em;">{E(L.t['attributed'])}</div>')
+                 f'color:{L.accent};font-weight:600;font-size:{L.fs(0.019)}px;letter-spacing:0.2em;">{E(L.t['attributed'])}</div>')
     m = f"""<div id="{sid}-c" style="position:absolute;left:{L.px(0.12)}px;right:{L.px(0.12)}px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;">
       <div id="{sid}-q" class="serif acc" style="font-size:{L.fs(0.2)}px;line-height:0.6;height:{L.px(0.09)}px;">&ldquo;</div>
       <div id="{sid}-t" class="serif" style="font-size:{L.fs(0.062)}px;line-height:1.22;font-style:italic;">{E(v['text'])}</div>
-      <div id="{sid}-by" style="margin-top:{L.px(0.035)}px;font-size:{L.fs(0.028)}px;font-weight:700;">— {E(v['by'])}{(', ' + E(str(v['year']))) if v.get('year') else ''}</div>
+      <div id="{sid}-by" style="margin-top:{L.px(0.035)}px;font-size:{L.fs(0.028)}px;font-weight:600;">— {E(v['by'])}{(', ' + E(str(v['year']))) if v.get('year') else ''}</div>
       <div>{badge}</div></div>"""
     tw = [_fade(f"#{sid}-q", 0.15), _rise(f"#{sid}-t", 0.35, 0.9), _rise(f"#{sid}-by", 1.2)]
     if attributed:
@@ -387,7 +387,7 @@ def question(L, sid, v, dur, cue, narr: float = 0.0):
       {ch}
       <div style="margin-top:{L.px(0.045)}px;height:6px;background:rgba(255,255,255,0.12);border-radius:3px;">
         <div id="{sid}-bar" style="height:6px;width:100%;background:{L.accent};border-radius:3px;transform-origin:0 50%;"></div></div>
-      {f'<div id="{sid}-a" style="margin-top:{L.px(0.03)}px;font-size:{L.fs(0.034)}px;font-weight:700;"><span class="acc">{E(L.t['answer'])}</span> {E(v["answer"])}</div>' if v.get('answer') else ''}
+      {f'<div id="{sid}-a" style="margin-top:{L.px(0.03)}px;font-size:{L.fs(0.034)}px;font-weight:600;"><span class="acc">{E(L.t['answer'])}</span> {E(v["answer"])}</div>' if v.get('answer') else ''}
       </div>"""
     t_think = narr + 0.2
     tw = [_fade(f"#{sid}-k", 0.1), _rise(f"#{sid}-q", 0.3, 0.8)]
@@ -474,7 +474,7 @@ def hook(L, sid, v, dur, cue):
           stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="{down_len:.0f}" stroke-dashoffset="{down_len:.0f}"/>
         <circle id="{sid}-pk" cx="{xs[peak]:.1f}" cy="{ys[peak]:.1f}" r="{L.px(0.013)}" fill="{L.ink}" opacity="0"/>
         <text id="{sid}-pkl" x="{xs[peak] - (L.px(0.02) if breakout else 0):.1f}" y="{ys[peak] - L.px(0.035):.1f}" text-anchor="{'end' if breakout else 'middle'}" fill="{L.ink}" font-family="Inter"
-          font-weight="700" font-size="{L.fs(0.03)}">{E(v.get('peak_label', ''))}</text>
+          font-weight="600" font-size="{L.fs(0.03)}">{E(v.get('peak_label', ''))}</text>
         <text id="{sid}-endl" x="{xs[-1]:.1f}" y="{ys[-1] - L.px(0.035):.1f}" text-anchor="end" fill="{L.accent}" font-family="Inter"
           font-weight="800" font-size="{L.fs(0.034)}">{E(v.get('end_label', ''))}</text>
       </svg>

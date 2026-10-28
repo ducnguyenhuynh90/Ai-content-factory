@@ -28,7 +28,38 @@
   "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
   "captions": true,
   "voice_seed": 99,
-  "pronounce_note": "English names stay in English: OmniVoice reads them natively."
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively.",
+  "brief": {
+   "target_viewer": "Người Việt 20–40 tuổi, tò mò, thích đọc sách, hay tự trách mình (hoặc khen mình) theo kết quả của một quyết định trong công việc, đầu tư và cuộc sống; có thể chưa nghe tên Annie Duke hay luật bóng bầu dục Mỹ (giả định của người gác cổng, chủ kênh xác nhận lại)",
+   "format": "Phân tích sách (book analysis), 4–5 phút, 4:3, minh họa icon vẽ tay, một giọng đọc",
+   "central_question": "Một kết quả tệ có chứng minh quyết định là sai không, và làm sao chấm điểm một quyết định khi may rủi luôn chen vào?",
+   "transformation": "Trước khi xem, họ chấm điểm quyết định bằng kết quả (thắng là giỏi, thua là dở). Sau khi xem, họ kể lại được lệnh chuyền bóng của Pete Carroll ở Super Bowl XLIX và lập luận bằng số của Annie Duke, giải thích được 'resulting' và ba ý (tách quyết định khỏi kết quả, nghĩ bằng xác suất, hỏi 'cược không?'), biết giới hạn ('xui' dễ thành cái cớ; kết quả vẫn là thông tin có nhiễu), và tự hỏi sau một lần thua: 'lúc đó mình biết gì, phần nào do may?'",
+   "discovery_goal": "Tìm kiếm (\"Thinking in Bets\", \"Annie Duke\", \"tư duy đặt cược\", \"ra quyết định\", \"resulting\") và đề xuất từ video sách/tư duy/đầu tư; khán giả của tập 1–5",
+   "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn clip tiếp theo về cuốn sách nào?\" (lựa chọn của chủ kênh)",
+   "share_recipient": "Một người bạn vừa gặp một kết quả xấu sau một quyết định có cân nhắc (một khoản đầu tư lỗ, một lần đổi việc chưa như ý) và đang tự dằn vặt, hoặc ngược lại một người bạn đang tự tin vì vừa thắng: câu chuyện Super Bowl và câu hỏi 'phần nào do mình, phần nào do may?' giúp hai người nói chuyện mà không phán xét",
+   "evidence": "Duke 2018 (Introduction/ch. 1: Super Bowl XLIX, resulting, 66 đường chuyền 0 bị cắt, ~2% trong 15 mùa; ch. 2 'Wanna bet?'; ch. 3 tự bào chữa; ch. 4 nhóm cùng soi); SI 2/2/2015 (26 giây, 2nd-and-goal ở vạch 1 yard, 28-24); NFL.com 2015 (Carroll: 'worst result of a call ever'); CBS 2015 (chỉ trích); SI 2023 (một timeout); Wharton (tiểu sử Duke). Xem gate/claims.md.",
+   "constraints": "4–5 phút, 4:3, icon vẽ (không footage, không khuôn mặt người thật), một giọng đọc OmniVoice seed 99 speed 0.88, tên tiếng Anh giữ nguyên chính tả, số đọc bằng chữ, đường cong minh họa ghi 'minh họa', không khuyến nghị đầu tư, giữ lời miễn trừ"
+  },
+  "youtube": {
+   "title": "Kết quả tệ chưa chắc là quyết định sai | Thinking in Bets (Annie Duke)",
+   "thumbnail_text": "“Tệ nhất lịch sử.” Hay là quyết định đúng?",
+   "description": "Super Bowl năm 2015: còn 26 giây, bóng cách vạch ghi điểm một yard, Pete Carroll cho chuyền thay vì chạy bóng, và bị cắt bóng. Báo chí gọi đó là lệnh gọi tệ nhất lịch sử. Annie Duke, cựu tay chơi poker chuyên nghiệp, mở đầu Thinking in Bets bằng chính trận đấu này để hỏi: một kết quả tệ có chứng minh quyết định là sai không? Video đi qua ba bài học (tách quyết định khỏi kết quả, nghĩ bằng xác suất, hỏi \"cược không?\"), giới hạn của chúng (chữ \"xui\" dễ thành cái cớ, kết quả vẫn là thông tin), và một bài tập nhỏ để bạn tự thử.\n\nNội dung giáo dục, tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư. Đường cong ở đầu video là minh họa, không phải dữ liệu. Số liệu về đường chuyền theo sách của Annie Duke, đã làm tròn. Lệnh gọi ấy đến nay vẫn gây tranh cãi.\n\nChương:\n0:00 \"Tệ nhất lịch sử\"… hay là quyết định đúng?\n0:20 Chấm điểm quyết định bằng kết quả\n0:34 Annie Duke là ai\n0:49 Super Bowl 2015: còn 26 giây, còn 1 yard\n1:18 \"Kết quả tệ nhất\", không phải \"quyết định tệ nhất\"\n1:29 Annie Duke nhìn lại bằng con số\n1:46 Resulting là gì\n2:00 Bài học 1: tách quyết định khỏi kết quả\n2:13 Bài học 2: nghĩ bằng xác suất\n2:27 Bài học 3: cược không?\n2:44 Một nhóm bạn cùng soi quyết định\n2:58 Cẩn thận: \"xui\" dễ thành cái cớ\n3:14 Kết quả vẫn là thông tin\n3:30 Thử một chút: con đường quen\n3:50 Ba bài học và câu hỏi cho bạn\n\nNguồn:\n- Annie Duke, Thinking in Bets: Making Smarter Decisions When You Don't Have All the Facts, Portfolio/Penguin, 2018\n- Sports Illustrated, Inexplicable call costs Seahawks a second straight Super Bowl title, 2/2/2015: https://www.si.com/nfl/2015/02/02/super-bowl-xlix-seattle-seahawks-pete-carroll-new-england-patriots-malcolm-butler\n- NFL.com, Pete Carroll concedes \"worst result of a call ever\", 2/2015: https://www.nfl.com/news/pete-carroll-concedes-worst-result-of-a-call-ever-0ap3000000469003\n- CBS New York, Worst Play Call Ever? Seahawks Players Criticize Disastrous Decision By Carroll, 2/2015: https://www.cbsnews.com/newyork/news/worst-play-call-ever-seahawks-players-criticize-disastrous-decision-by-carroll/\n- Sports Illustrated, Pete Carroll Still Won't Admit He Called Wrong Play in Super Bowl XLIX, 8/2023: https://www.si.com/extra-mustard/2023/08/22/pete-carroll-wont-admit-wrong-play-super-bowl-xlix-patriots-marshawn-lynch\n- First Principles, Separate Your Results From Your Decisions (trích số liệu của Duke): https://www.firstprinciples.ventures/insights/separate-your-results-from-your-decisions\n- Wharton Executive Education, Annie Duke: https://executiveeducation.wharton.upenn.edu/faculty/annie-duke-2/\n- Barry Ritholtz, Masters in Business: Annie Duke, 4/2018: https://ritholtz.com/2018/04/transcript-annie-duke/\n\nBạn muốn clip tiếp theo về cuốn sách nào? Để lại bình luận nhé.",
+   "tags": [
+    "Thinking in Bets",
+    "Annie Duke",
+    "Tư duy đặt cược",
+    "review sách",
+    "tóm tắt sách",
+    "ra quyết định",
+    "resulting",
+    "tư duy xác suất",
+    "may rủi",
+    "Super Bowl XLIX",
+    "Pete Carroll",
+    "poker",
+    "tâm lý học ra quyết định"
+   ]
+  }
  },
  "sources": [
   {
@@ -94,7 +125,7 @@
     "type": "hook",
     "lines": [
      "“Tệ nhất lịch sử.”",
-     "Nhưng có thể là quyết định đúng."
+     "Hay là quyết định đúng?"
     ],
     "crash_cue": "nhưng",
     "points": [
@@ -104,42 +135,50 @@
      ],
      [
       1,
-      1.4
+      1.3
      ],
      [
       2,
-      2.0
+      1.7
      ],
      [
       3,
-      2.7
+      2.2
      ],
      [
       4,
-      3.5
+      2.8
      ],
      [
       5,
-      4.3
+      3.5
      ],
      [
       6,
-      5.0
+      4.3
      ],
      [
       7,
-      5.6
+      5.2
      ],
      [
       8,
-      1.4
+      1.2
      ],
      [
       9,
       0.9
+     ],
+     [
+      10,
+      0.8
+     ],
+     [
+      11,
+      0.7
      ]
     ],
-    "peak_label": "còn 1 yard",
+    "peak_label": "còn 1 yard · minh họa",
     "end_label": "bị cắt bóng",
     "kicker": "Thinking in Bets · Annie Duke"
    },
@@ -165,19 +204,18 @@
      {
       "type": "icon",
       "icon": "mirror",
-      "kicker": "Một câu hỏi",
+      "kicker": "MỘT CÂU HỎI",
       "line": "Tự trách vì một kết quả xấu?",
       "line_cue": "tự trách"
      },
      {
       "type": "trio",
-      "kicker": "Trong vài phút tới",
+      "kicker": "TRONG VÀI PHÚT TỚI",
       "cue": "trong vài",
       "items": [
        {
         "icon": "target",
-        "label": "Kết quả tệ",
-        "cue": "kết quả tệ"
+        "label": "Kết quả tệ"
        },
        {
         "icon": "fork",
@@ -186,7 +224,7 @@
        },
        {
         "icon": "cards",
-        "label": "Ba bài học từ poker",
+        "label": "Ba bài học poker",
         "cue": "ba bài"
        }
       ]
@@ -200,7 +238,7 @@
    "narration": "",
    "visual": {
     "type": "title",
-    "kicker": "Review sách · Tập 6",
+    "kicker": "REVIEW SÁCH · TẬP 6",
     "title": "Tư Duy Đặt Cược",
     "subtitle": "Thinking in Bets — Annie Duke (2018)",
     "hold": 3.0
@@ -228,7 +266,7 @@
       "icon": "scale",
       "motion": "swing",
       "period": 2.6,
-      "kicker": "Chấm điểm bằng kết quả",
+      "kicker": "CHẤM ĐIỂM BẰNG KẾT QUẢ",
       "line": "Thắng → chọn giỏi. Thua → chọn dở.",
       "line_cue": "thắng"
      },
@@ -237,7 +275,7 @@
       "icon": "mirror",
       "motion": "crack",
       "motion_cue": "học sai",
-      "kicker": "Nghe rất hợp lý…",
+      "kicker": "NGHE RẤT HỢP LÝ…",
       "line": "…nhưng ta học sai bài học.",
       "line_cue": "nhưng",
       "cue": "nghe rất"
@@ -248,13 +286,13 @@
   {
    "id": "b02",
    "act": "context",
-   "narration": "Annie Duke từng học tâm lý học nhận thức ở Đại học Pennsylvania, rồi rẽ sang chơi poker chuyên nghiệp. Năm hai nghìn lẻ bốn, bà giành chiếc vòng vàng World Series of Poker đầu tiên. Năm hai nghìn mười tám, bà viết Thinking in Bets.",
+   "narration": "Annie Duke từng học tâm lý học nhận thức ở Đại học Pennsylvania, rồi rẽ sang chơi poker chuyên nghiệp. Năm hai nghìn lẻ bốn, bà giành một chiếc vòng vàng World Series of Poker. Năm hai nghìn mười tám, bà viết Thinking in Bets.",
    "visual": {
     "type": "shots",
     "shots": [
      {
       "type": "swap",
-      "kicker": "Annie Duke",
+      "kicker": "ANNIE DUKE",
       "from": {
        "label": "Tâm lý học nhận thức",
        "icon": "brain"
@@ -271,12 +309,12 @@
       "title": "Thinking in Bets",
       "author": "Annie Duke",
       "year": "2018",
-      "kicker": "Cuốn sách",
+      "kicker": "CUỐN SÁCH",
       "cue": "năm hai nghìn lẻ",
       "facts": [
        {
         "big": "2004",
-        "text": "Vòng vàng WSOP đầu tiên",
+        "text": "Vòng vàng WSOP",
         "cue": "năm hai nghìn lẻ"
        },
        {
@@ -305,20 +343,20 @@
       "value": 4,
       "prefix": "−",
       "suffix": " điểm",
-      "label": "Seahawks · Super Bowl XLIX (2015)",
+      "label": "SEAHAWKS · SUPER BOWL XLIX (2015)",
       "note": "Patriots 28 · Seahawks 24"
      },
      {
       "type": "icon",
       "icon": "hourglass",
-      "kicker": "Đồng hồ",
+      "kicker": "ĐỒNG HỒ",
       "line": "Còn 26 giây.",
       "cue": "còn hai"
      },
      {
       "type": "icon",
       "icon": "target",
-      "kicker": "Vạch ghi điểm",
+      "kicker": "VẠCH GHI ĐIỂM",
       "line": "Chỉ còn 1 yard.",
       "cue": "bóng nằm"
      }
@@ -338,7 +376,7 @@
     "shots": [
      {
       "type": "swap",
-      "kicker": "Còn 1 yard",
+      "kicker": "CÒN 1 YARD",
       "from": {
        "label": "Ai cũng chờ: chạy bóng",
        "icon": "people"
@@ -354,25 +392,23 @@
       "icon": "lightning",
       "motion": "shake",
       "motion_cue": "cắt được",
-      "kicker": "Malcolm Butler",
-      "line": "Cắt bóng. Patriots vô địch.",
-      "line_cue": "cắt được",
+      "kicker": "MALCOLM BUTLER CẮT BÓNG",
       "cue": "malcolm"
      },
      {
       "type": "halo",
-      "kicker": "Sáng hôm sau",
+      "kicker": "PATRIOTS VÔ ĐỊCH. CÒN CARROLL…",
       "items": [
        {
         "name": "Pete Carroll",
         "before": "Vô địch năm trước",
         "after": "“TỆ NHẤT LỊCH SỬ”",
-        "cue": "tệ nhất"
+        "cue": "và báo"
        }
       ],
       "label": "Phán xét theo kết quả",
-      "label_cue": "lịch sử",
-      "cue": "và báo"
+      "label_cue": "là lệnh",
+      "cue": "patriots vô"
      }
     ]
    },
@@ -396,7 +432,7 @@
      },
      {
       "type": "swap",
-      "kicker": "Để ý nhé · ông nói…",
+      "kicker": "ĐỂ Ý NHÉ · ÔNG NÓI…",
       "from": {
        "label": "Quyết định",
        "icon": "fork"
@@ -425,7 +461,7 @@
      {
       "type": "stat",
       "value": 66,
-      "label": "đường chuyền từ vạch 1 yard · mùa ấy",
+      "label": "ĐƯỜNG CHUYỀN TỪ VẠCH 1 YARD · MÙA ẤY",
       "note": "0 đường bị cắt",
       "cue": "sáu mươi"
      },
@@ -435,14 +471,14 @@
       "keep": 2,
       "cols": 20,
       "start_full": true,
-      "label": "15 mùa trước · 100 đường chuyền",
+      "label": "15 MÙA TRƯỚC · CỨ 100 ĐƯỜNG CHUYỀN",
       "keep_label": "≈ 2% bị cắt",
       "keep_cue": "tỷ lệ",
       "cue": "mười lăm"
      },
      {
       "type": "trio",
-      "kicker": "Nếu chuyền hỏng",
+      "kicker": "NẾU CHUYỀN HỎNG",
       "cue": "và một",
       "items": [
        {
@@ -476,7 +512,7 @@
      {
       "type": "icon",
       "icon": "cards",
-      "kicker": "Thuật ngữ của dân poker",
+      "kicker": "THUẬT NGỮ CỦA DÂN POKER",
       "line": "Resulting",
       "line_cue": "resulting"
      },
@@ -485,13 +521,13 @@
       "icon": "scale",
       "motion": "swing",
       "period": 2.2,
-      "kicker": "Resulting",
+      "kicker": "RESULTING",
       "line": "Chấm quyết định bằng kết quả",
       "cue": "tức là"
      },
      {
       "type": "swap",
-      "kicker": "Carroll không chọn được kết quả",
+      "kicker": "CARROLL KHÔNG CHỌN ĐƯỢC KẾT QUẢ",
       "from": {
        "label": "Chọn kết quả",
        "icon": "target"
@@ -501,7 +537,7 @@
        "icon": "cards",
        "cue": "ván cược"
       },
-      "cue": "carroll",
+      "cue": "không chọn",
       "line": "Lá bài rơi xấu.",
       "line_cue": "lá bài"
      }
@@ -519,39 +555,34 @@
     "type": "shots",
     "shots": [
      {
+      "type": "icon",
+      "icon": "fork",
+      "kicker": "BÀI HỌC 1",
+      "line": "Tách quyết định khỏi kết quả"
+     },
+     {
       "type": "trio",
-      "kicker": "Bài học 1 · Tách quyết định khỏi kết quả",
+      "kicker": "KẾT QUẢ = HAI THỨ PHA TRỘN",
+      "cue": "mỗi kết",
       "items": [
        {
         "icon": "fork",
-        "label": "Chất lượng quyết định",
-        "cue": "chất lượng"
+        "label": "Chất lượng quyết định"
        },
        {
         "icon": "dice",
         "label": "May rủi",
         "cue": "may rủi"
        }
-      ],
-      "line": "= Kết quả",
-      "line_cue": "may rủi"
+      ]
      },
      {
-      "type": "compare",
-      "title": "Vì thế",
-      "left": {
-       "title": "Chọn tốt",
-       "items": [
-        "Vẫn có thể thua"
-       ]
-      },
-      "right": {
-       "title": "Chọn dở",
-       "items": [
-        "Vẫn có thể thắng"
-       ]
-      },
-      "cue": "nên chọn"
+      "type": "icon",
+      "icon": "dice",
+      "kicker": "VÌ THẾ",
+      "cue": "nên chọn",
+      "line": "Chọn tốt vẫn có thể thua; chọn dở vẫn có thể thắng.",
+      "line_cue": "nên chọn"
      }
     ]
    },
@@ -569,13 +600,12 @@
      {
       "type": "icon",
       "icon": "dice",
-      "kicker": "Bài học 2",
-      "line": "Nghĩ bằng xác suất",
-      "line_cue": "nghĩ bằng"
+      "kicker": "BÀI HỌC 2",
+      "line": "Nghĩ bằng xác suất"
      },
      {
       "type": "swap",
-      "kicker": "Duke khuyên",
+      "kicker": "DUKE KHUYÊN",
       "from": {
        "label": "Chắc chắn · Không thể",
        "icon": "lock"
@@ -590,9 +620,9 @@
      {
       "type": "icon",
       "icon": "door",
-      "kicker": "Con số ấy",
+      "kicker": "CON SỐ ẤY",
       "line": "Có thể sai → mở cửa học thêm",
-      "line_cue": "mở cửa",
+      "line_cue": "có thể",
       "cue": "con số"
      }
     ]
@@ -611,13 +641,13 @@
      {
       "type": "icon",
       "icon": "coins",
-      "kicker": "Bài học 3",
+      "kicker": "BÀI HỌC 3",
       "line": "“Cược không?”",
       "line_cue": "cược"
      },
      {
       "type": "swap",
-      "kicker": "Khi ai đó nói chắc nịch",
+      "kicker": "KHI AI ĐÓ NÓI CHẮC NỊCH",
       "from": {
        "label": "Nói chắc nịch",
        "icon": "mask"
@@ -634,14 +664,14 @@
       "icon": "scale",
       "motion": "swing",
       "period": 2.6,
-      "kicker": "Câu hỏi buộc ta dừng lại",
+      "kicker": "CÂU HỎI BUỘC TA DỪNG LẠI",
       "line": "Đặt tiền thật, còn tự tin?",
       "line_cue": "nếu phải",
       "cue": "câu hỏi"
      },
      {
       "type": "swap",
-      "kicker": "Không để thắng",
+      "kicker": "KHÔNG ĐỂ THẮNG",
       "from": {
        "label": "Thắng tranh luận",
        "icon": "star"
@@ -651,7 +681,8 @@
        "icon": "magnifier",
        "cue": "tìm ra"
       },
-      "cue": "không để"
+      "cue": "không để",
+      "strike_cue": "tranh luận"
      }
     ]
    },
@@ -668,7 +699,7 @@
     "shots": [
      {
       "type": "trio",
-      "kicker": "Một nhóm nhỏ cùng soi",
+      "kicker": "MỘT NHÓM NHỎ CÙNG SOI",
       "items": [
        {
         "icon": "people",
@@ -687,14 +718,14 @@
        },
        {
         "icon": "dice",
-        "label": "May rủi bao nhiêu?",
+        "label": "May rủi bao nhiêu?",
         "cue": "may rủi"
        }
       ]
      },
      {
       "type": "swap",
-      "kicker": "Một nhóm như thế",
+      "kicker": "MỘT NHÓM NHƯ THẾ",
       "from": {
        "label": "Tự che mắt",
        "icon": "mask"
@@ -721,7 +752,7 @@
     "shots": [
      {
       "type": "swap",
-      "kicker": "Nhưng cẩn thận",
+      "kicker": "NHƯNG CẨN THẬN",
       "from": {
        "label": "“Xui”",
        "icon": "dice"
@@ -736,14 +767,14 @@
      {
       "type": "icon",
       "icon": "mirror",
-      "kicker": "Cái bẫy tự bào chữa",
+      "kicker": "CÁI BẪY TỰ BÀO CHỮA",
       "line": "Thắng: nhờ mình giỏi. Thua: tại xui.",
       "line_cue": "nhận mình",
       "cue": "ta hay"
      },
      {
       "type": "trio",
-      "kicker": "Trận đấu vẫn gây tranh cãi",
+      "kicker": "TRẬN ĐẤU VẪN GÂY TRANH CÃI",
       "cue": "còn trận",
       "items": [
        {
@@ -753,12 +784,12 @@
        },
        {
         "icon": "magnifier",
-        "label": "Chuyền kiểu nào?",
+        "label": "Chuyền ra sao?",
         "cue": "chuyền kiểu"
        },
        {
         "icon": "people",
-        "label": "Vào chỗ đông người?",
+        "label": "Vào chỗ đông người?",
         "cue": "vào chỗ"
        }
       ]
@@ -782,19 +813,18 @@
      {
       "type": "icon",
       "icon": "wave",
-      "kicker": "Mặc kệ kết quả? Không.",
+      "kicker": "MẶC KỆ KẾT QUẢ? KHÔNG.",
       "line": "Vẫn là thông tin, nhưng có nhiễu",
       "line_cue": "kết quả vẫn"
      },
      {
       "type": "trio",
-      "kicker": "Hãy hỏi",
+      "kicker": "HÃY HỎI",
       "cue": "hãy hỏi",
       "items": [
        {
         "icon": "fork",
-        "label": "Phần do mình?",
-        "cue": "phần nào"
+        "label": "Phần do mình?"
        },
        {
         "icon": "dice",
@@ -806,20 +836,12 @@
       "line_cue": "rồi mới"
      },
      {
-      "type": "compare",
-      "title": "Một ván không nói hết",
-      "left": {
-       "title": "Một trận thua",
-       "items": [
-        "Chưa chắc bạn dở"
-       ]
-      },
-      "right": {
-       "title": "Một trận thắng",
-       "items": [
-        "Chưa chắc bạn giỏi"
-       ]
-      },
+      "type": "statement",
+      "kicker": "THẮNG HAY THUA",
+      "text": "Một ván không nói hết về bạn.",
+      "highlight": [
+       "không nói hết"
+      ],
       "cue": "một trận thua"
      }
     ]
@@ -834,9 +856,9 @@
    "narration": "Giờ thử một chút nhé. Bạn đi con đường quen, thường là nhanh nhất. Hôm nay có tai nạn, bạn trễ họp. Nghĩ thế nào mới tránh được bẫy resulting?",
    "visual": {
     "type": "question",
-    "question": "Đường quen, thường nhanh nhất. Hôm nay kẹt xe, trễ họp. Nghĩ sao cho đúng?",
+    "question": "Đường quen, thường nhanh nhất. Hôm nay có tai nạn, trễ họp. Nghĩ sao cho đúng?",
     "choices": [
-     "Mình chọn đường ngu quá",
+     "Mình chọn đường dở quá",
      "Xét lại: lúc đi, đó có phải lựa chọn tốt nhất không?",
      "Từ mai bỏ hẳn con đường này"
     ],
@@ -850,7 +872,7 @@
    "narration": "Vậy là ba bài học từ Thinking in Bets. Tách quyết định khỏi kết quả. Nghĩ bằng xác suất. Và hỏi: cược không?",
    "visual": {
     "type": "list",
-    "title": "Ba bài học",
+    "title": "BA BÀI HỌC",
     "check": true,
     "items": [
      {
@@ -877,7 +899,7 @@
     "shots": [
      {
       "type": "statement",
-      "kicker": "Quay lại trận đấu",
+      "kicker": "QUAY LẠI TRẬN ĐẤU",
       "text": "Lệnh gọi tệ nhất lịch sử?",
       "strike": "Lệnh gọi",
       "replace": "Kết quả",
@@ -885,7 +907,7 @@
      },
      {
       "type": "swap",
-      "kicker": "Duke viết: đời giống…",
+      "kicker": "DUKE VIẾT: ĐỜI GIỐNG…",
       "from": {
        "label": "Ván cờ",
        "icon": "chess"
@@ -900,7 +922,7 @@
      },
      {
       "type": "trio",
-      "kicker": "Lần tới thua một ván",
+      "kicker": "LẦN TỚI THUA MỘT VÁN",
       "cue": "vậy lần",
       "items": [
        {
@@ -910,7 +932,7 @@
        },
        {
         "icon": "fork",
-        "label": "Hay cách mình chơi?",
+        "label": "Hay cách chơi?",
         "cue": "hay cách"
        }
       ]
@@ -924,19 +946,17 @@
   {
    "id": "b17",
    "act": "close",
-   "narration": "Còn bạn, quyết định nào gần đây bạn đã chấm điểm hơi vội? Hay bạn muốn clip tiếp theo về cuốn sách nào? Để lại bình luận cho mình nhé. Nếu thấy hay, lưu lại và gửi cho một người bạn. Hẹn gặp bạn.",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
    "visual": {
     "type": "end",
-    "kicker": "Review sách · Tập 6",
+    "kicker": "REVIEW SÁCH · TẬP 6",
     "title": "Tư Duy Đặt Cược",
     "ask": "Bạn muốn clip tiếp theo về cuốn sách nào?",
-    "ask_hint": "Một cuốn về quyết định · một nhà đầu tư · một câu hỏi của bạn",
+    "ask_hint": "Một cuốn sách · một nhà tư duy · một chủ đề",
     "ask_cue": "còn bạn",
-    "cta": "Bình luận · Lưu lại · Gửi một người bạn",
-    "cta_cue": "nếu thấy",
-    "sources_line": "Nguồn: Duke, Thinking in Bets (2018) · NFL.com & Sports Illustrated (2015) · Wharton (tiểu sử A. Duke)",
-    "disclaimer": "Tóm tắt và cảm nhận cá nhân; số liệu theo sách, đã làm tròn.",
-    "sources_cue": "hẹn gặp"
+    "sources_line": "Nguồn: Duke, Thinking in Bets (2018) · NFL.com, Sports Illustrated (2015) · xem mô tả",
+    "disclaimer": "Nội dung giáo dục, tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư. Số liệu theo sách, đã làm tròn.",
+    "sources_cue": "còn bạn"
    }
   }
  ],

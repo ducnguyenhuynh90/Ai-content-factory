@@ -1,5 +1,5 @@
 # Tư Duy Đặt Cược
-_Review sách · Tập 6 · 789 words · ~3.4 min · 4:3_
+_Review sách · Tập 6 · 774 words · ~3.34 min · 4:3_
 
 ## Learning goals
 - Kể lại được ví dụ mở đầu sách: lệnh chuyền bóng của Pete Carroll ở Super Bowl XLIX (2015) và lập luận của Annie Duke
@@ -18,7 +18,7 @@ _Review sách · Tập 6 · 789 words · ~3.4 min · 4:3_
 | h2 | context | Bạn có bao giờ tự trách mình chỉ vì một kết quả xấu? Trong vài phút tới, bạn sẽ thấy vì sao kết quả tệ chưa chắc là lựa chọn sai, và ba bài học từ một tay chơi poker chuyên nghiệp. | shots: shots |
 | t0 | context |  | title: Tư Duy Đặt Cược |
 | b01 | misconception | Chúng ta hay chấm điểm một quyết định bằng kết quả của nó. Thắng thì là chọn giỏi. Thua thì là chọn dở. Nghe rất hợp lý. Nhưng chính thói quen ấy khiến ta học sai bài học từ chính cuộc đời mình. | shots: shots |
-| b02 | context | Annie Duke từng học tâm lý học nhận thức ở Đại học Pennsylvania, rồi rẽ sang chơi poker chuyên nghiệp. Năm hai nghìn lẻ bốn, bà giành chiếc vòng vàng World Series of Poker đầu tiên. Năm hai nghìn mười tám, bà viết Thinking in Bets. | shots: shots |
+| b02 | context | Annie Duke từng học tâm lý học nhận thức ở Đại học Pennsylvania, rồi rẽ sang chơi poker chuyên nghiệp. Năm hai nghìn lẻ bốn, bà giành một chiếc vòng vàng World Series of Poker. Năm hai nghìn mười tám, bà viết Thinking in Bets. | shots: shots |
 | b03 | story | Cuốn sách mở đầu bằng trận Super Bowl năm hai nghìn mười lăm. Seattle Seahawks đang thua New England Patriots bốn điểm. Còn hai mươi sáu giây. Bóng nằm cách vạch ghi điểm chỉ một yard, chưa tới một mét. | shots: shots |
 | b04 | story | Ai cũng chờ một pha chạy bóng cho Marshawn Lynch. Nhưng huấn luyện viên Pete Carroll, nhà vô địch năm trước, cho chuyền. Malcolm Butler cắt được bóng. Patriots vô địch. Và báo chí gọi đó là lệnh gọi tệ nhất lịch sử. | shots: shots |
 | b05 | story | Vài ngày sau, chính Carroll nói trên truyền hình: đó là kết quả tệ nhất của một lệnh gọi, từ trước đến nay. Để ý nhé. Ông nói kết quả, chứ không nói quyết định. | shots: shots |
@@ -30,10 +30,10 @@ _Review sách · Tập 6 · 789 words · ~3.4 min · 4:3_
 | b11 | example | Duke còn gợi ý: tìm vài người bạn, hẹn nhau soi quyết định, chứ không soi kết quả. Mỗi lần, cùng hỏi: lúc đó mình biết gì, và may rủi chiếm bao nhiêu? Một nhóm như thế giúp ta thấy những điều mình tự che mắt. | shots: shots |
 | b12 | complication | Nhưng cẩn thận. Chữ xui rất dễ biến thành cái cớ. Chính Duke chỉ ra: ta hay nhận mình giỏi khi thắng, và đổ cho xui khi thua. Còn trận đấu kia vẫn gây tranh cãi: chuyền có thể hợp lý, nhưng chuyền kiểu nào, vào chỗ đông người ra sao, là chuyện khác. _(disputed)_ | shots: shots |
 | b13 | turn | Vậy cứ mặc kệ kết quả sao? Không. Kết quả vẫn là thông tin, chỉ là thông tin có nhiễu. Hãy hỏi: phần nào do mình, phần nào do may? Rồi mới rút bài học. Một trận thua không nói hết về bạn, một trận thắng cũng vậy. | shots: shots |
-| b14 | question | Giờ thử một chút nhé. Bạn đi con đường quen, thường là nhanh nhất. Hôm nay có tai nạn, bạn trễ họp. Nghĩ thế nào mới tránh được bẫy resulting? | question: Đường quen, thường nhanh nhất. Hôm nay kẹt xe, trễ họp. Nghĩ sao cho đúng? |
-| b15 | recap | Vậy là ba bài học từ Thinking in Bets. Tách quyết định khỏi kết quả. Nghĩ bằng xác suất. Và hỏi: cược không? | list: Ba bài học |
+| b14 | question | Giờ thử một chút nhé. Bạn đi con đường quen, thường là nhanh nhất. Hôm nay có tai nạn, bạn trễ họp. Nghĩ thế nào mới tránh được bẫy resulting? | question: Đường quen, thường nhanh nhất. Hôm nay có tai nạn, trễ họp. Nghĩ sao cho đúng? |
+| b15 | recap | Vậy là ba bài học từ Thinking in Bets. Tách quyết định khỏi kết quả. Nghĩ bằng xác suất. Và hỏi: cược không? | list: BA BÀI HỌC |
 | b16 | close | Lệnh gọi tệ nhất lịch sử? Có thể chỉ là kết quả tệ nhất. Duke viết: đời giống ván bài hơn ván cờ, luôn có những lá ta không thấy. Vậy lần tới thua một ván, bạn sẽ chấm điểm lá bài, hay cách mình chơi? | shots: shots |
-| b17 | close | Còn bạn, quyết định nào gần đây bạn đã chấm điểm hơi vội? Hay bạn muốn clip tiếp theo về cuốn sách nào? Để lại bình luận cho mình nhé. Nếu thấy hay, lưu lại và gửi cho một người bạn. Hẹn gặp bạn. | end: Tư Duy Đặt Cược |
+| b17 | close | Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau. | end: Tư Duy Đặt Cược |
 
 ## Sources
 - [duke2018] Annie Duke, Thinking in Bets: Making Smarter Decisions When You Don't Have All the Facts, Portfolio/Penguin, 2018 (Introduction & ch. 1 'Life Is Poker, Not Chess'; ch. 2 'Wanna Bet?'; ch. 3 on self-serving bias; ch. 4 on truth-seeking groups)

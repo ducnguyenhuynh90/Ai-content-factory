@@ -326,3 +326,13 @@ def test_gate_vietnamese_numbers():
     assert g.misread_numbers("sinh năm một nghìn chín trăm hai mươi tư ở Omaha.", "sinh năm 1920, từ ở Omaha.") == []
     assert g.misread_numbers("Tháng sáu năm một nghìn chín trăm tám mươi sáu, Munger", "Tháng 6-1986, Manger") == []
     assert g.misread_numbers(said, "1, 4, 35 công ty, năm 2001, 36%, 6,9 lần.") == ["một nghìn bốn trăm ba mươi năm"]
+
+
+def test_no_inter_700():
+    """HyperFrames embeds Inter 700 without its Vietnamese glyphs (Ộ, Đ, Ờ… fall back to a serif): never ask for 700."""
+    import re as _re
+    from pathlib import Path as _P
+
+    for f in ("scenes.py", "metaphors.py", "build.py"):
+        src = (_P(__file__).parents[1] / "vfactory" / "lesson" / f).read_text()
+        assert not _re.search(r"font-weight(:\s*|=\")700", src), f

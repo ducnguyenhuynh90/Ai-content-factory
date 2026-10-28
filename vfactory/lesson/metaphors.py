@@ -79,7 +79,7 @@ def funnel(L, sid, v, dur, cue):
         <div id="{sid}-l" class="kicker">{E(label)}</div>
         <div id="{sid}-n" class="serif" style="font-size:{L.fs(0.15)}px;line-height:1.05;margin-top:{L.px(0.012)}px;font-variant-numeric:tabular-nums;">
           <span id="{sid}-v">{_fmt_num(total if full else 0, 0, L.t['locale'])}</span></div>
-        <div id="{sid}-kl" class="acc" style="font-size:{L.fs(0.034)}px;font-weight:700;opacity:0;">{E(v.get('keep_label', ''))}</div>
+        <div id="{sid}-kl" class="acc" style="font-size:{L.fs(0.034)}px;font-weight:600;opacity:0;">{E(v.get('keep_label', ''))}</div>
       </div>
       <svg width="{L.w}" height="{L.h}" style="position:absolute;left:0;top:0;overflow:visible">
         <g id="{sid}-field" fill="{L.ink}" opacity="0.55">{''.join(groups)}</g>
@@ -137,7 +137,7 @@ def ladder(L, sid, v, dur, cue):
     tag_m = ""
     for j, tg in enumerate(tags):
         tag_m += (f'<div id="{sid}-t{j}" style="position:absolute;left:{tx:.0f}px;top:{ty - L.px(0.03) + j * L.px(0.06) - (len(tags) - 1) * L.px(0.03):.0f}px;'
-                  f'font-size:{L.fs(0.034)}px;font-weight:700;color:{L.accent};white-space:nowrap;">'
+                  f'font-size:{L.fs(0.034)}px;font-weight:600;color:{L.accent};white-space:nowrap;">'
                   f'{"+ " if j else "← "}{E(tg["text"])}</div>')
         tw.append(_ft(f"#{sid}-t{j}", "opacity: 0, x: 40", 'opacity: 1, x: 0, duration: 0.5, ease: "power3.out"',
                       max(t_top + 0.3, cue(tg.get("cue", ""), t_top + 0.4 + 0.6 * j))))
@@ -159,7 +159,7 @@ def venn(L, sid, v, dur, cue):
     clips = "".join(f'<clipPath id="{sid}-cp{i}"><circle cx="{x:.1f}" cy="{y:.1f}" r="{R}"/></clipPath>' for i, (x, y) in enumerate(centers))
     rings = "".join(f'<circle id="{sid}-o{i}" cx="{x:.1f}" cy="{y:.1f}" r="{R}" fill="{L.ink}" fill-opacity="0.04" stroke="{L.ink}" '
                     f'stroke-opacity="0.75" stroke-width="3" opacity="0"/>' for i, (x, y) in enumerate(centers))
-    labels = "".join(f'<text id="{sid}-lb{i}" x="{x:.1f}" y="{y:.1f}" text-anchor="{a}" fill="{L.ink}" font-family="Inter" font-weight="700" '
+    labels = "".join(f'<text id="{sid}-lb{i}" x="{x:.1f}" y="{y:.1f}" text-anchor="{a}" fill="{L.ink}" font-family="Inter" font-weight="600" '
                      f'font-size="{L.fs(0.03)}" opacity="0">{E(c["label"])}</text>' for i, ((x, y, a), c) in enumerate(zip(lab_pos, circles)))
     x2, y2 = centers[2]
     core = (f'<g clip-path="url(#{sid}-cp0)"><g clip-path="url(#{sid}-cp1)"><circle id="{sid}-core" cx="{x2:.1f}" cy="{y2:.1f}" r="{R}" '
@@ -213,7 +213,7 @@ def flywheel(L, sid, v, dur, cue):
     if v.get("line"):
         right += f'<div id="{sid}-ln" class="muted" style="font-size:{L.fs(0.032)}px;line-height:1.4;margin-top:{L.px(0.02)}px;">{E(v["line"])}</div>'
     marks = v.get("marks") or []  # [{"text": "vòng 1", "cue": "..."}]
-    mk = "".join(f'<div id="{sid}-m{i}" style="font-size:{L.fs(0.034)}px;font-weight:700;margin-top:{L.px(0.018)}px;color:{L.accent if i == len(marks) - 1 else L.ink};">{E(x["text"])}</div>'
+    mk = "".join(f'<div id="{sid}-m{i}" style="font-size:{L.fs(0.034)}px;font-weight:600;margin-top:{L.px(0.018)}px;color:{L.accent if i == len(marks) - 1 else L.ink};">{E(x["text"])}</div>'
                  for i, x in enumerate(marks))
     m = f"""<div id="{sid}-c" style="position:absolute;inset:0;">{head}
       <svg width="{L.w}" height="{L.h}" style="position:absolute;left:0;top:0;overflow:visible">
@@ -271,7 +271,7 @@ def halo(L, sid, v, dur, cue):
           <div id="{sid}-bx{i}" style="position:absolute;inset:0;border:2px solid {L.muted}66;border-radius:{L.px(0.016)}px;background:rgba(255,255,255,0.04);
             display:flex;flex-direction:column;align-items:center;justify-content:center;gap:{L.px(0.012)}px;">
             <div class="serif" style="font-size:{L.fs(0.05)}px;">{E(it['name'])}</div>
-            <div id="{sid}-bf{i}" class="acc" style="font-size:{L.fs(0.028)}px;font-weight:700;">{E(it.get('before', ''))}</div></div>
+            <div id="{sid}-bf{i}" class="acc" style="font-size:{L.fs(0.028)}px;font-weight:600;">{E(it.get('before', ''))}</div></div>
           <div id="{sid}-sm{i}" style="position:absolute;left:50%;top:{chh + L.px(0.03)}px;transform-origin:50% 50%;white-space:nowrap;opacity:0;
             padding:{L.px(0.008)}px {L.px(0.02)}px;border:3px solid #D8664B;color:#E77A5F;font-weight:800;letter-spacing:0.08em;font-size:{L.fs(0.028)}px;">{E(it.get('after', ''))}</div>
         </div>"""
@@ -324,13 +324,13 @@ def swap(L, sid, v, dur, cue):
         <svg width="{s}" height="{s}" style="overflow:visible">{ia}
           <line id="{sid}-x" x1="-10" y1="{s + 10}" x2="{s + 10}" y2="-10" stroke="#E77A5F" stroke-width="{L.px(0.012)}" stroke-linecap="round"
             stroke-dasharray="{s * 1.6:.0f}" stroke-dashoffset="{s * 1.6:.0f}"/></svg>
-        <div style="font-size:{L.fs(0.032)}px;margin:{L.px(0.02)}px -{s * 0.4:.0f}px 0;font-weight:700;">{E(a['label'])}</div></div>
+        <div style="font-size:{L.fs(0.032)}px;margin:{L.px(0.02)}px -{s * 0.4:.0f}px 0;font-weight:600;">{E(a['label'])}</div></div>
       <svg width="{L.w}" height="{L.h}" style="position:absolute;left:0;top:0;overflow:visible">
         <path id="{sid}-arw" d="M {xa + s + L.px(0.05):.0f} {y + s / 2:.0f} L {xb - L.px(0.05):.0f} {y + s / 2:.0f} m -{L.px(0.03)} -{L.px(0.025)} l {L.px(0.03)} {L.px(0.025)} l -{L.px(0.03)} {L.px(0.025)}"
           fill="none" stroke="{L.muted}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="{L.w:.0f}" stroke-dashoffset="{L.w:.0f}"/></svg>
       <div id="{sid}-b" style="position:absolute;left:{xb:.0f}px;top:{y:.0f}px;width:{s}px;text-align:center;">
         <svg width="{s}" height="{s}" style="overflow:visible">{ib}</svg>
-        <div class="acc" style="font-size:{L.fs(0.032)}px;margin:{L.px(0.02)}px -{s * 0.4:.0f}px 0;font-weight:700;white-space:nowrap;">{E(b['label'])}</div></div>
+        <div class="acc" style="font-size:{L.fs(0.032)}px;margin:{L.px(0.02)}px -{s * 0.4:.0f}px 0;font-weight:600;white-space:nowrap;">{E(b['label'])}</div></div>
       {f'<div id="{sid}-ln" class="serif" style="position:absolute;left:0;right:0;top:{L.h * 0.76:.0f}px;text-align:center;font-size:{L.fs(0.06)}px;">{E(v["line"])}</div>' if v.get('line') else ''}
     </div>"""
     tw.append(_ft(f"#{sid}-a", "opacity: 0, y: 20", 'opacity: 1, y: 0, duration: 0.6, ease: "expo.out"', 0.3))
@@ -729,7 +729,7 @@ def book(L, sid, v, dur, cue):
       <div style="font-size:{L.fs(0.02)}px;letter-spacing:0.3em;font-weight:800;opacity:0.7;">{E(v.get('year', ''))}</div>
       <div class="serif" style="font-size:{L.fs(0.07)}px;line-height:1;margin-top:{L.px(0.05)}px;">{E(v['title'])}</div>
       <div style="height:3px;width:40%;background:#17130E;margin:{L.px(0.03)}px 0;opacity:0.6;"></div>
-      <div style="font-size:{L.fs(0.026)}px;font-weight:700;margin-top:auto;">{E(v.get('author', ''))}</div></div>"""
+      <div style="font-size:{L.fs(0.026)}px;font-weight:600;margin-top:auto;">{E(v.get('author', ''))}</div></div>"""
     tw.append(_ft(f"#{sid}-bk", "opacity: 0, rotationY: -35, x: -40", 'opacity: 1, rotationY: 0, x: 0, duration: 0.8, ease: "expo.out"', 0.15))
     rx = bx + bw + L.px(0.08)
     facts = ""
