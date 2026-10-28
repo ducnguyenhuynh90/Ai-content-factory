@@ -148,7 +148,7 @@ def misread_numbers(narration: str, heard: str) -> list[str]:
     raw = narration.split()
     nt = _vi_canon([voice._norm(x) for x in raw])
     stops = {i for i, x in enumerate(raw) if re.search(r"[,.;:!?…]$", x)}
-    ht = _vi_canon([voice._norm(x) for x in _vi_digits_to_words(heard).split()])
+    ht = _vi_canon([t for t in (voice._norm(x) for x in _vi_digits_to_words(heard).split()) if t])
     hs = " " + " ".join(ht) + " "
     runs, cur = [], []
     for i, t in enumerate(nt + [""]):

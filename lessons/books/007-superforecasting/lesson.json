@@ -323,7 +323,8 @@
     "tetlock2005",
     "cato2011"
    ],
-   "certainty": "estimate"
+   "certainty": "estimate",
+   "take": 1
   },
   {
    "id": "b03",
@@ -794,7 +795,8 @@
    "sources": [
     "tetlock2015",
     "brier1950"
-   ]
+   ],
+   "take": 1
   },
   {
    "id": "b13",
