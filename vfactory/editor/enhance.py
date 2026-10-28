@@ -148,6 +148,17 @@ def mix_stems(stems: list[dict], duration: float, out: str, voice_lufs: float = 
     import tempfile
 
     td = tempfile.mkdtemp(prefix="mix_")
+    try:
+        return _mix_stems(stems, duration, out, voice_lufs, target_lufs, td)
+    finally:
+        import shutil
+
+        shutil.rmtree(td, ignore_errors=True)  # each mix leaves ~190 MB of stems behind otherwise
+
+
+def _mix_stems(stems, duration, out, voice_lufs, target_lufs, td) -> str:
+    import os
+
     voices, others = [], []
     for i, s in enumerate(stems):
         norm = os.path.join(td, f"s{i}.wav")
