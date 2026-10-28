@@ -1,5 +1,5 @@
 # Tư Duy Truy Tìm Sự Thật
-_Review sách · Tập 11 · 871 words · ~3.75 min · 4:3_
+_Review sách · Tập 11 · 858 words · ~3.69 min · 4:3_
 
 ## Learning goals
 - Kể lại vụ Dreyfus và vai trò của Georges Picquart như Julia Galef kể trong sách
@@ -15,7 +15,7 @@ _Review sách · Tập 11 · 871 words · ~3.75 min · 4:3_
 | # | act | narration | on screen |
 |---|---|---|---|
 | h1 | hook | Năm một nghìn tám trăm chín mươi tư, những sĩ quan giỏi nhất nước Pháp kết án sai một người vô tội. | icon: icon |
-| h2 | context | Họ không ngu. Phần lớn họ thật lòng tin mình đúng. Họ chỉ làm điều mà ai trong chúng ta cũng làm mỗi ngày. Vài phút tới, bạn sẽ gặp hai kiểu tư duy, và ba bài học để nhìn mọi thứ rõ hơn. | shots: shots |
+| h2 | context | Họ không ngu. Phần lớn họ thật lòng tin mình đúng. Họ chỉ làm điều mà ai trong chúng ta cũng làm mỗi ngày: tin điều mình muốn tin. Rồi bạn sẽ gặp một sĩ quan dám đi theo bằng chứng, dù phải trả giá. | shots: shots |
 | t0 | context |  | title: Tư Duy Truy Tìm Sự Thật |
 | b01 | misconception | Ta hay nghĩ người thông minh sẽ nhìn ra sự thật, chỉ cần đủ dữ kiện. Nhưng Julia Galef cho rằng điều quyết định không phải bạn thông minh đến đâu, mà là bạn đang muốn điều gì. | shots: shots |
 | b02 | context | Galef là người dẫn podcast Rationally Speaking, và đồng sáng lập Center for Applied Rationality năm hai nghìn mười hai. Năm hai nghìn hai mươi mốt, cô xuất bản The Scout Mindset. Ở Việt Nam, sách có tên Tư Duy Truy Tìm Sự Thật. | shots: shots |
@@ -32,10 +32,10 @@ _Review sách · Tập 11 · 871 words · ~3.75 min · 4:3_
 | b13 | principle | Bài học thứ hai: thử đổi phe trong đầu. Galef gợi ý vài phép thử. Nếu bằng chứng này ủng hộ phe bên kia, mình có tin không? Nếu người khác ở chỗ mình, mình sẽ khuyên họ gì? Nếu mọi người đổi ý, mình còn nghĩ vậy không? | shots: shots |
 | b14 | principle | Bài học thứ ba: giữ bản sắc thật nhẹ. Khi một quan điểm trở thành con người bạn, mỗi lần nó bị thách thức, bạn sẽ thấy như chính mình bị tấn công. Hãy coi nhãn mác là một mô tả, đừng coi nó là lá cờ phải giữ đến cùng. | shots: shots |
 | b15 | turn | Vậy tư duy người lính luôn xấu sao? Không hẳn. Galef thừa nhận nó mang lại nhiều thứ: sự an tâm, lòng tự trọng, tinh thần. Nhưng cô cho rằng ta có thể có những điều đó mà không cần tự lừa mình. | shots: shots |
-| b16 | question | Giờ thử một chút nhé. Bạn đang giữ một cổ phiếu mình rất tin. Một bài phân tích chỉ ra ba điểm yếu của công ty. Phản ứng nào giống người trinh sát nhất? | question: Một bài phân tích chỉ ra 3 điểm yếu của cổ phiếu bạn tin. Trinh sát sẽ… |
-| b17 | recap | Vậy là ba bài học từ Tư Duy Truy Tìm Sự Thật. Hỏi: điều gì là thật? Thử đổi phe trong đầu. Và giữ bản sắc thật nhẹ. | list: Ba bài học |
+| b16 | question | Giờ thử một chút nhé. Bạn đang giữ một cổ phiếu mình rất tin. Một bài phân tích chỉ ra ba điểm yếu của công ty. Phản ứng nào giống người trinh sát nhất? | question: Cổ phiếu bạn rất tin bị chỉ ra 3 điểm yếu. Trinh sát sẽ… |
+| b17 | recap | Vậy là ba bài học từ Tư Duy Truy Tìm Sự Thật. Hỏi: điều gì là thật? Thử đổi phe trong đầu. Và giữ bản sắc thật nhẹ. | shots: shots |
 | b18 | close | Picquart không phải thánh nhân. Nhưng khi bằng chứng chỉ sang hướng khác, ông đi theo bằng chứng. Có lẽ đó là điều đáng học nhất: không cần hoàn hảo, chỉ cần muốn thấy đúng. Hôm nay, bạn đang là người lính, hay người trinh sát? | shots: shots |
-| b19 | close | Còn bạn, có niềm tin nào bạn từng phải đổi, dù rất khó? Và bạn muốn mình review cuốn sách nào tiếp theo? Để lại bình luận cho mình nhé. Nếu thấy hay, lưu lại và gửi cho một người bạn. Hẹn gặp bạn. | end: Tư Duy Truy Tìm Sự Thật |
+| b19 | close | Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau. | end: Tư Duy Truy Tìm Sự Thật |
 
 ## Sources
 - [galef2021] Julia Galef, The Scout Mindset: Why Some People See Things Clearly and Others Don't, Portfolio, 13 Apr 2021 (ch. 1 'Two Types of Thinking' — Dreyfus, Picquart, Gilovich's 'Can I believe it? / Must I believe it?'; ch. 2 — what the soldier protects: comfort, self-esteem, morale; ch. 5 — thought experiments: double standard, outsider, conformity, selective skeptic, status quo; Part V 'Rethinking Identity' — hold your identity lightly)

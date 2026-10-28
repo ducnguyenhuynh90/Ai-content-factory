@@ -28,7 +28,39 @@
   "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
   "captions": true,
   "voice_seed": 99,
-  "pronounce_note": "English names stay in English: OmniVoice reads them natively. Measured with Whisper on 12 names: Vietnamese respellings scored 0.76, original spelling 0.95."
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively. Measured with Whisper on 12 names: Vietnamese respellings scored 0.76, original spelling 0.95.",
+  "brief": {
+   "target_viewer": "Người Việt 20–40 tuổi, tò mò, thích đọc sách, muốn nghĩ rõ hơn và quyết định tỉnh táo hơn (cả khi đầu tư); thường tin rằng thông minh và đủ thông tin là đủ để thấy đúng; có thể chưa nghe tên Julia Galef hay vụ Dreyfus (giả định của người gác cổng, chủ kênh xác nhận lại)",
+   "format": "Phân tích sách (book analysis), khoảng 4,5 phút, 4:3, minh họa icon vẽ tay, một giọng đọc",
+   "central_question": "Vì sao những người thông minh, thật lòng, vẫn kết án sai một người vô tội, và làm sao để mình nhìn ra điều mình không muốn thấy?",
+   "transformation": "Trước khi xem, họ nghĩ người thông minh, có đủ dữ kiện sẽ tự thấy sự thật. Sau khi xem, họ kể lại được vụ Dreyfus và vai trò của Picquart (người cũng có định kiến nhưng vẫn đi theo bằng chứng), phân biệt tư duy người lính và người trinh sát, nhận ra hai câu hỏi 'có được phép tin không?' / 'có buộc phải tin không?', và dùng được ba phép thử đổi phe cùng nguyên tắc giữ bản sắc nhẹ, kể cả với một cổ phiếu mình đang tin",
+   "discovery_goal": "Tìm kiếm (\"The Scout Mindset\", \"Julia Galef\", \"Tư duy truy tìm sự thật\", \"vụ án Dreyfus\", \"tư duy phản biện\", \"thiên kiến xác nhận\") và đề xuất từ video sách tư duy; khán giả tập 1–10 (tập 2 Kahneman, tập 6 Annie Duke, tập 7 Tetlock)",
+   "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn clip tiếp theo về cuốn sách nào?\" (lựa chọn của chủ kênh)",
+   "share_recipient": "Một người bạn hay đồng nghiệp đang cãi nhau hoặc đang bảo vệ một quyết định (một khoản đầu tư, một kế hoạch, một quan điểm): câu chuyện Picquart và câu hỏi 'nếu bằng chứng ủng hộ phe kia, mình có tin không?' cho hai người một cách nói chuyện không phải thắng thua",
+   "evidence": "Galef 2021 (ch. 1, 2, 5, phần V); Galef TEDxPSU 2016; Wikipedia The Scout Mindset; EA Forum outline; History.com, EBSCO, Chemins de mémoire, Wikipedia (Picquart, Dreyfus, Esterhazy); Paul Graham 2009; bản tiếng Việt (Diễn đàn Doanh nghiệp 2022). Xem gate/claims.md.",
+   "constraints": "4–5 phút, 4:3, icon vẽ (không footage, không khuôn mặt người thật), một giọng đọc OmniVoice seed 99 speed 0.88, tên tiếng Anh giữ nguyên chính tả, số đọc bằng chữ, không khuyến nghị đầu tư, giữ lời miễn trừ"
+  },
+  "youtube": {
+   "title": "Vì sao người thông minh vẫn tin sai? | The Scout Mindset – Julia Galef",
+   "thumbnail_text": "Paris · 1894 · Họ không ngu. Vẫn kết án sai. · Người lính · Người trinh sát",
+   "description": "Năm 1894, quân đội Pháp kết án sai đại úy Alfred Dreyfus tội phản quốc. Những người buộc tội anh không ngu, và phần lớn thật lòng tin mình đúng. Julia Galef dùng vụ án ấy để mở đầu The Scout Mindset (Tư Duy Truy Tìm Sự Thật): điều quyết định ta thấy đúng hay sai không phải là ta thông minh đến đâu, mà là ta đang muốn điều gì. Video kể lại vụ Dreyfus và Georges Picquart (người cũng mang định kiến, nhưng vẫn đi theo bằng chứng dù phải trả giá), hai kiểu tư duy người lính và người trinh sát, ba bài học (hỏi: điều gì là thật?; thử đổi phe trong đầu; giữ bản sắc thật nhẹ), điều tư duy người lính mang lại, và một bài tập nhỏ với một cổ phiếu bạn đang tin.\n\nTóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư. Câu hỏi về cổ phiếu là bài tập tư duy, không khuyến nghị mua hay bán.\n\nChương:\n0:00 1894: kết án sai một người vô tội\n0:23 Thông minh có đủ để thấy đúng?\n0:35 Julia Galef và The Scout Mindset\n0:50 Người lính và người trinh sát\n1:02 Mảnh giấy trong sứ quán Đức\n1:16 Bằng chứng được đọc thế nào\n1:30 Đảo Quỷ\n1:42 \"Có được phép tin không?\"\n1:57 Picquart và bức thư gửi Esterhazy\n2:11 Cái giá của sự thật\n2:25 Bài học 1: hỏi điều gì là thật\n2:37 Sự thật đến chậm\n2:51 Picquart cũng mang định kiến\n3:06 Bài học 2: thử đổi phe trong đầu\n3:22 Bài học 3: giữ bản sắc thật nhẹ\n3:36 Người lính luôn xấu?\n3:49 Thử một chút: cổ phiếu bạn tin\n4:10 Ba bài học\n\nNguồn:\n- Julia Galef, The Scout Mindset: Why Some People See Things Clearly and Others Don't, Portfolio, 2021 (bản tiếng Việt: Tư Duy Truy Tìm Sự Thật)\n- Julia Galef, Why you think you're right, even if you're wrong, TEDxPSU 2016: https://www.ted.com/talks/julia_galef_why_you_think_you_re_right_even_if_you_re_wrong\n- History.com, What Was the Dreyfus Affair?: https://www.history.com/articles/what-was-the-dreyfus-affair\n- EBSCO Research Starters, French Court Declares Alfred Dreyfus Innocent of Treason: https://www.ebsco.com/research-starters/history/french-court-declares-alfred-dreyfus-innocent-treason\n- Chemins de mémoire (Bộ Quân lực Pháp), Georges Picquart: https://www.cheminsdememoire.gouv.fr/en/georges-picquart\n- Paul Graham, Keep Your Identity Small (2009): http://www.paulgraham.com/identity.html\n- Effective Altruism Forum, Outline of Galef's Scout Mindset: https://forum.effectivealtruism.org/posts/HDAXztEbjJsyHLKP7/outline-of-galef-s-scout-mindset\n\nBạn muốn clip tiếp theo về cuốn sách nào? Để lại bình luận nhé.",
+   "tags": [
+    "The Scout Mindset",
+    "Julia Galef",
+    "Tư duy truy tìm sự thật",
+    "tư duy người trinh sát",
+    "vụ án Dreyfus",
+    "Alfred Dreyfus",
+    "Georges Picquart",
+    "thiên kiến xác nhận",
+    "lập luận có động cơ",
+    "tư duy phản biện",
+    "review sách",
+    "tóm tắt sách",
+    "sách tư duy",
+    "ra quyết định"
+   ]
+  }
  },
  "sources": [
   {
@@ -118,7 +150,7 @@
   {
    "id": "h2",
    "act": "context",
-   "narration": "Họ không ngu. Phần lớn họ thật lòng tin mình đúng. Họ chỉ làm điều mà ai trong chúng ta cũng làm mỗi ngày. Vài phút tới, bạn sẽ gặp hai kiểu tư duy, và ba bài học để nhìn mọi thứ rõ hơn.",
+   "narration": "Họ không ngu. Phần lớn họ thật lòng tin mình đúng. Họ chỉ làm điều mà ai trong chúng ta cũng làm mỗi ngày: tin điều mình muốn tin. Rồi bạn sẽ gặp một sĩ quan dám đi theo bằng chứng, dù phải trả giá.",
    "visual": {
     "type": "shots",
     "shots": [
@@ -142,34 +174,30 @@
      {
       "type": "icon",
       "icon": "mirror",
-      "kicker": "Họ chỉ làm điều",
-      "line": "Ai trong chúng ta cũng làm mỗi ngày.",
+      "kicker": "Điều ai cũng làm mỗi ngày",
       "cue": "họ chỉ"
      },
      {
-      "type": "trio",
-      "kicker": "Trong vài phút tới",
-      "cue": "vài phút",
-      "items": [
-       {
-        "icon": "shield",
-        "label": "Người lính",
-        "cue": "hai kiểu"
-       },
-       {
-        "icon": "binoculars",
-        "label": "Người trinh sát",
-        "cue": "hai kiểu"
-       },
-       {
-        "icon": "key",
-        "label": "Ba bài học",
-        "cue": "ba bài"
-       }
-      ]
+      "type": "icon",
+      "icon": "shield",
+      "kicker": "Tư duy người lính",
+      "line": "Tin điều mình muốn tin.",
+      "cue": "mỗi ngày"
+     },
+     {
+      "type": "icon",
+      "icon": "compass",
+      "kicker": "Một sĩ quan khác",
+      "line": "Đi theo bằng chứng, dù phải trả giá.",
+      "cue": "rồi bạn"
      }
     ]
-   }
+   },
+   "sources": [
+    "galef2021",
+    "galef_ted",
+    "picquart_bio"
+   ]
   },
   {
    "id": "t0",
@@ -206,13 +234,12 @@
       "items": [
        {
         "icon": "brain",
-        "label": "Đủ thông minh",
-        "cue": "thông minh"
+        "label": "Đủ thông minh"
        },
        {
         "icon": "book",
         "label": "Đủ dữ kiện",
-        "cue": "dữ kiện"
+        "cue": "chỉ cần"
        }
       ]
      },
@@ -288,16 +315,15 @@
     "shots": [
      {
       "type": "trio",
-      "kicker": "Hai kiểu tư duy",
+      "kicker": "Lính và trinh sát",
       "items": [
        {
         "icon": "shield",
-        "label": "Người lính: bảo vệ",
-        "cue": "người lính"
+        "label": "Bảo vệ niềm tin"
        },
        {
         "icon": "binoculars",
-        "label": "Trinh sát: khám phá",
+        "label": "Vẽ bản đồ đúng",
         "cue": "người trinh"
        }
       ]
@@ -306,8 +332,9 @@
       "type": "icon",
       "icon": "compass",
       "kicker": "Người trinh sát",
-      "line": "Một tấm bản đồ đúng nhất",
-      "cue": "vẽ một"
+      "line": "Kể cả khi nó không như ý.",
+      "cue": "vẽ một",
+      "line_cue": "đúng nhất"
      }
     ]
    },
@@ -325,12 +352,19 @@
     "shots": [
      {
       "type": "icon",
-      "icon": "letter",
+      "icon": "eye",
       "kicker": "Paris · 1894 · sứ quán Đức",
+      "line": "Người dọn dẹp làm cho tình báo.",
+      "line_cue": "một người"
+     },
+     {
+      "type": "icon",
+      "icon": "letter",
+      "kicker": "Paris · 1894",
       "line": "Một mảnh giấy xé vụn.",
       "motion": "crack",
       "motion_cue": "xé vụn",
-      "line_cue": "lấy được"
+      "cue": "lấy được"
      },
      {
       "type": "trio",
@@ -344,7 +378,7 @@
        },
        {
         "icon": "mask",
-        "label": "Sắp trao cho Đức: có kẻ phản bội",
+        "label": "Có kẻ phản bội",
         "cue": "sắp được"
        }
       ]
@@ -382,7 +416,7 @@
        },
        {
         "icon": "brain",
-        "label": "Chuyên gia nói không khớp: gạt đi",
+        "label": "Chuyên gia nói không khớp",
         "cue": "một chuyên"
        },
        {
@@ -532,14 +566,15 @@
         "before": "Trưởng tình báo",
         "after": "ĐIỀU ĐI · BẮT GIAM",
         "cue": "điều ông"
-       },
-       {
-        "name": "Esterhazy",
-        "before": "Thủ phạm thật",
-        "after": "TRẮNG ÁN · 1898",
-        "cue": "trắng án"
        }
       ]
+     },
+     {
+      "type": "icon",
+      "icon": "scale",
+      "kicker": "Tòa án binh · 1/1898",
+      "line": "Esterhazy: trắng án.",
+      "cue": "còn esterhazy"
      },
      {
       "type": "icon",
@@ -564,18 +599,24 @@
     "type": "shots",
     "shots": [
      {
+      "type": "icon",
+      "icon": "key",
+      "kicker": "Bài học 1",
+      "line": "Hỏi: điều gì là thật?"
+     },
+     {
       "type": "trio",
-      "kicker": "Bài học 1 · Hỏi: điều gì là thật?",
+      "kicker": "Picquart không hỏi",
       "cross": true,
+      "cue": "picquart không",
       "items": [
        {
         "icon": "shield",
-        "label": "Có lợi cho quân đội?",
-        "cue": "có lợi"
+        "label": "Lợi cho quân đội"
        },
        {
         "icon": "scale",
-        "label": "Có được phép tin không?",
+        "label": "Được phép tin",
         "cue": "được phép"
        }
       ]
@@ -611,17 +652,13 @@
       "levels": [
        "Picquart bị bắt giam · 1898",
        "Dreyfus được ân xá · 1899",
-       "Dreyfus được minh oan · 1906",
-       "Picquart: Bộ trưởng Chiến tranh"
+       "Dreyfus được minh oan · 7/1906",
+       "Picquart làm Bộ trưởng"
       ],
       "top_cue": "picquart trở",
       "tags": [
        {
-        "text": "12/7/1906",
-        "cue": "minh oan"
-       },
-       {
-        "text": "10/1906",
+        "text": "Bộ Chiến tranh · 10/1906",
         "cue": "bộ trưởng"
        }
       ],
@@ -648,13 +685,13 @@
       "kicker": "Huyền thoại & sự thật",
       "cue": "picquart không",
       "from": {
-       "label": "Người hùng không định kiến",
+       "label": "Không định kiến",
        "icon": "star"
       },
       "to": {
-       "label": "Định kiến như nhiều sĩ quan thời ấy",
+       "label": "Cũng mang định kiến",
        "icon": "people",
-       "cue": "như nhiều"
+       "cue": "chính galef"
       }
      },
      {
@@ -693,12 +730,12 @@
         "cue": "nếu bằng"
        },
        {
-        "icon": "people",
-        "label": "Người khác ở chỗ mình?",
+        "icon": "eye",
+        "label": "Nếu người khác ở chỗ mình?",
         "cue": "nếu người"
        },
        {
-        "icon": "compass",
+        "icon": "people",
         "label": "Nếu mọi người đổi ý?",
         "cue": "nếu mọi"
        }
@@ -737,7 +774,7 @@
        "icon": "shield"
       },
       "to": {
-       "label": "Nhãn mác: chỉ là một mô tả",
+       "label": "Chỉ là một mô tả",
        "icon": "letter",
        "cue": "mô tả"
       }
@@ -762,7 +799,7 @@
       "motion": "swing",
       "period": 2.6,
       "kicker": "Vậy",
-      "line": "Người lính luôn sai?"
+      "line": "Người lính luôn xấu?"
      },
      {
       "type": "trio",
@@ -771,8 +808,7 @@
       "items": [
        {
         "icon": "house",
-        "label": "Sự an tâm",
-        "cue": "sự an"
+        "label": "Sự an tâm"
        },
        {
         "icon": "star",
@@ -801,7 +837,7 @@
    "narration": "Giờ thử một chút nhé. Bạn đang giữ một cổ phiếu mình rất tin. Một bài phân tích chỉ ra ba điểm yếu của công ty. Phản ứng nào giống người trinh sát nhất?",
    "visual": {
     "type": "question",
-    "question": "Một bài phân tích chỉ ra 3 điểm yếu của cổ phiếu bạn tin. Trinh sát sẽ…",
+    "question": "Cổ phiếu bạn rất tin bị chỉ ra 3 điểm yếu. Trinh sát sẽ…",
     "choices": [
      "Tìm ngay lý do để bác bỏ",
      "Hỏi: nếu bài này khen, mình có tin lý lẽ ấy không?",
@@ -816,21 +852,33 @@
    "act": "recap",
    "narration": "Vậy là ba bài học từ Tư Duy Truy Tìm Sự Thật. Hỏi: điều gì là thật? Thử đổi phe trong đầu. Và giữ bản sắc thật nhẹ.",
    "visual": {
-    "type": "list",
-    "title": "Ba bài học",
-    "check": true,
-    "items": [
+    "type": "shots",
+    "shots": [
      {
-      "text": "Hỏi: điều gì là thật?",
+      "type": "icon",
+      "icon": "book",
+      "kicker": "Tư Duy Truy Tìm Sự Thật",
+      "line": "Ba bài học."
+     },
+     {
+      "type": "list",
+      "title": "Ba bài học",
+      "check": true,
+      "items": [
+       {
+        "text": "Hỏi: điều gì là thật?",
+        "cue": "hỏi"
+       },
+       {
+        "text": "Thử đổi phe trong đầu",
+        "cue": "thử đổi"
+       },
+       {
+        "text": "Giữ bản sắc thật nhẹ",
+        "cue": "và giữ"
+       }
+      ],
       "cue": "hỏi"
-     },
-     {
-      "text": "Thử đổi phe trong đầu",
-      "cue": "thử đổi"
-     },
-     {
-      "text": "Giữ bản sắc thật nhẹ",
-      "cue": "và giữ"
      }
     ]
    }
@@ -870,8 +918,7 @@
       "items": [
        {
         "icon": "shield",
-        "label": "Người lính",
-        "cue": "người lính"
+        "label": "Người lính"
        },
        {
         "icon": "binoculars",
@@ -889,19 +936,17 @@
   {
    "id": "b19",
    "act": "close",
-   "narration": "Còn bạn, có niềm tin nào bạn từng phải đổi, dù rất khó? Và bạn muốn mình review cuốn sách nào tiếp theo? Để lại bình luận cho mình nhé. Nếu thấy hay, lưu lại và gửi cho một người bạn. Hẹn gặp bạn.",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
    "visual": {
     "type": "end",
     "kicker": "Review sách · Tập 11",
     "title": "Tư Duy Truy Tìm Sự Thật",
-    "ask": "Niềm tin nào bạn từng phải đổi, dù rất khó?",
-    "ask_hint": "Một niềm tin · một quyết định · cuốn sách bạn muốn xem tiếp",
+    "ask": "Bạn muốn clip tiếp theo về cuốn sách nào?",
+    "ask_hint": "Một cuốn sách · hay một chủ đề",
     "ask_cue": "còn bạn",
-    "cta": "Bình luận · Lưu lại · Gửi một người bạn",
-    "cta_cue": "nếu thấy",
-    "sources_line": "Nguồn: Galef, The Scout Mindset (2021) · Galef, TEDxPSU (2016) · lịch sử vụ Dreyfus: History.com, EBSCO, Chemins de mémoire",
+    "sources_line": "Nguồn: Galef, The Scout Mindset (2021) · Galef, TEDxPSU (2016) · vụ Dreyfus: History.com, EBSCO, Chemins de mémoire",
     "disclaimer": "Tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư.",
-    "sources_cue": "hẹn gặp"
+    "sources_cue": "còn bạn"
    }
   }
  ],
