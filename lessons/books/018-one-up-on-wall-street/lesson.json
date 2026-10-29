@@ -1,0 +1,836 @@
+{
+ "meta": {
+  "series": "Review sách · Tập 18",
+  "title": "Trên Đỉnh Phố Wall",
+  "subtitle": "One Up on Wall Street — Peter Lynch & John Rothchild (1989)",
+  "topic": "investing",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt mới bắt đầu đầu tư, muốn hiểu đúng câu 'đầu tư vào thứ bạn biết'",
+  "aspect": "4:3",
+  "target_minutes": [
+   3,
+   5
+  ],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
+  "learning_goals": [
+   "Kể lại chuyện quần tất L'eggs: một manh mối ở siêu thị, rồi con số tần suất mua sắm, rồi mới đến quyết định (gấp khoảng 6 lần khi bị mua lại)",
+   "Giải thích ba ý lớn: thấy trước, nghiên cứu sau; kể được câu chuyện trong hai phút; biết cổ phiếu thuộc nhóm nào",
+   "Sửa được hiểu lầm 'cứ mua thứ mình thích': theo chính Lynch (WSJ 2015), mua mà không biết gì là cờ bạc"
+  ],
+  "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư.",
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người dẫn chương trình sách lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively.",
+  "brief": {
+   "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn clip tiếp theo về cuốn sách nào?\" (comment answering the end-card question)",
+   "target_viewer": "Người Việt 20–40 tuổi mới bắt đầu đầu tư, hay nghe câu 'đầu tư vào thứ bạn biết' và nghĩ thích một sản phẩm là đủ lý do để mua cổ phiếu; có thể chưa đọc Peter Lynch (giả định, chủ kênh xác nhận lại)",
+   "format": "Phân tích sách (book analysis), 4–5 phút, 4:3, minh họa icon vẽ tay, một giọng đọc",
+   "central_question": "Lynch thật sự làm gì sau khi thấy một sản phẩm hay, và vì sao 'đầu tư vào thứ bạn biết' chỉ là điểm bắt đầu?",
+   "transformation": "Trước khi xem, họ nghĩ thấy quán đông khách là đủ lý do để mua cổ phiếu. Sau khi xem, họ kể lại được chuyện L'eggs (manh mối, con số 1 tuần/6 tuần, rồi mới mua), biết thành tích Magellan 1977–1990 là lịch sử chứ không phải lời hứa, dùng được ba câu hỏi (manh mối này bảo mình đọc gì tiếp? mình kể được câu chuyện trong hai phút không? cổ phiếu thuộc nhóm nào?) và biết giới hạn: không định làm bài tập thì việc tự chọn cổ phiếu có lẽ chưa hợp",
+   "discovery_goal": "Tìm kiếm (\"One Up on Wall Street\", \"Trên đỉnh Phố Wall\", \"Peter Lynch\", \"đầu tư vào thứ bạn biết\", \"tenbagger\", \"quỹ Magellan\") và đề xuất từ các video sách đầu tư; khán giả tập 4, 8, 10",
+   "share_recipient": "Một người bạn vừa định mua cổ phiếu vì 'quán đó lúc nào cũng đông': câu nói của chính Lynch ('mua mà không biết gì là cờ bạc') giúp hai người nói về việc tìm hiểu mà không chê nhau",
+   "evidence": "Lynch & Rothchild 1989 (L'eggs, tần suất mua sắm, gấp sáu khi Consolidated Foods mua lại, câu chuyện hai phút, sáu nhóm); WSJ 7/12/2015 (bị trích sai; 'đó là cờ bạc'); Wikipedia và Motley Fool 2016 (29,2%/năm 1977–1990, 18 triệu → 14 tỷ đô); Barry Popik (tenbagger); 24hmoney (tên sách tiếng Việt).",
+   "constraints": "4–5 phút, 4:3, icon vẽ (không footage, không khuôn mặt người thật), một giọng đọc OmniVoice seed 99 speed 0.88, tên tiếng Anh giữ nguyên, số đọc bằng chữ, không khuyến nghị mua bất kỳ cổ phiếu hay quỹ nào (L'eggs, Magellan là chuyện lịch sử), nói rõ thành tích là lịch sử, giữ lời miễn trừ"
+  },
+  "youtube": {
+   "title": "Mua cổ phiếu vì thích sản phẩm? Peter Lynch nói không | One Up on Wall Street",
+   "thumbnail_text": "Một đôi tất. Cổ phiếu tăng gấp 6.",
+   "description": "Vợ của Peter Lynch thích một loại quần tất bán ở siêu thị. Cổ phiếu của công ty làm ra nó về sau tăng khoảng gấp sáu. Câu chuyện ấy hay bị rút gọn thành \"thích gì thì mua cổ phiếu nấy\", nhưng chính Lynch nói ông bị trích sai: thấy một sản phẩm hay chỉ là điểm bắt đầu. Video kể lại chuyện L'eggs trong One Up on Wall Street (Trên Đỉnh Phố Wall), thành tích quỹ Magellan 1977–1990, ba bài học (thấy trước, nghiên cứu sau; kể được câu chuyện trong hai phút; biết cổ phiếu thuộc nhóm nào), giới hạn của cuốn sách, và một bài tập nhỏ.\n\nNội dung giáo dục, tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư. Không cổ phiếu hay quỹ nào trong video là gợi ý mua. Con số 29,2%/năm của Magellan (1977–1990, danh nghĩa) là số liệu lịch sử được trích rộng rãi (Wikipedia, Motley Fool), không phải lời hứa; chúng tôi chưa đối chiếu được báo cáo gốc của Fidelity. Chi tiết L'eggs theo lời Lynch kể trong sách.\n\nChương:\nMột đôi tất, cổ phiếu tăng gấp sáu\nHiểu lầm: thích gì mua nấy\nPeter Lynch và quỹ Magellan\nLợi thế của người nghiệp dư\nThành tích 1977–1990: lịch sử, không phải lời hứa\nChuyện quần tất L'eggs\nMột con số về thói quen đi chợ\nGấp sáu khi bị mua lại\n\"Đó là cờ bạc\"\nBài học 1: thấy trước, nghiên cứu sau\nBài học 2: câu chuyện hai phút\nBài học 3: sáu nhóm cổ phiếu\nGiới hạn của cuốn sách\nThử một chút: quán trà sữa xếp hàng\nBa bài học\n\nNguồn:\n- Peter Lynch & John Rothchild, One Up on Wall Street, Simon & Schuster, 1989; ấn bản 2000: https://publishersweekly.com/9780671661038\n- Chana R. Schoenberger, Peter Lynch, 25 Years Later: It's Not Just 'What You Know', The Wall Street Journal, 7/12/2015 (bản đăng lại): https://www.foxbusiness.com/markets/peter-lynch-25-years-later-its-not-just-what-you-know\n- Wikipedia, Peter Lynch: https://en.wikipedia.org/wiki/Peter_Lynch\n- The Motley Fool, Everything You Need to Know About Peter Lynch (2016): https://www.fool.com/investing/2016/06/15/everything-you-need-to-know-about-peter-lynch-in-8.aspx\n- GuruFocus, chuyện L'eggs trong One Up on Wall Street: https://m.gurufocus.com/news/188474/\n- The Investor's Podcast, tóm tắt One Up on Wall Street: https://www.theinvestorspodcast.com/billionaire-book-club-executive-summary/executive-summary-one-up-on-wall-street/\n- Barry Popik, Ten bagger: https://barrypopik.com/blog/ten_bagger_tenbagger\n- 24hmoney, Trên đỉnh Phố Wall: https://24hmoney.vn/books/tren-dinh-pho-wall-c38a733004.html\n\nBạn muốn clip tiếp theo về cuốn sách nào? Để lại bình luận nhé.",
+   "tags": [
+    "One Up on Wall Street",
+    "Trên đỉnh Phố Wall",
+    "Peter Lynch",
+    "quỹ Magellan",
+    "đầu tư vào thứ bạn biết",
+    "tenbagger",
+    "review sách",
+    "tóm tắt sách",
+    "sách đầu tư",
+    "đầu tư cho người mới",
+    "phân tích cổ phiếu",
+    "tư duy đầu tư",
+    "Fidelity"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "lynch1989",
+   "cite": "Peter Lynch with John Rothchild, One Up on Wall Street: How to Use What You Already Know to Make Money in the Market, Simon & Schuster, 1989; Millennium ed. 2000 (L'eggs story; the shopping-frequency figure; the six-bagger; the two-minute monologue; the six categories of stocks; the amateur's edge)",
+   "url": "https://publishersweekly.com/9780671661038"
+  },
+  {
+   "id": "wsj2015",
+   "cite": "Chana R. Schoenberger, 'Peter Lynch, 25 Years Later: It's Not Just \"What You Know\"', The Wall Street Journal, 7 Dec 2015 (reprinted by Fox Business): Lynch says his ideas are widely misquoted; 'People buy a stock and they know nothing about it. That's gambling and it's not good.'",
+   "url": "https://www.foxbusiness.com/markets/peter-lynch-25-years-later-its-not-just-what-you-know"
+  },
+  {
+   "id": "wiki_lynch",
+   "cite": "Wikipedia, Peter Lynch (managed Fidelity Magellan 1977-1990; average annual return 29.2%; assets from about $18 million to more than $14 billion)",
+   "url": "https://en.wikipedia.org/wiki/Peter_Lynch"
+  },
+  {
+   "id": "fool_lynch",
+   "cite": "The Motley Fool, 'Everything You Need to Know About Peter Lynch in 8 Charts', 15 Jun 2016 (29.2% annualized 1977-1990; assets $18 million to over $14 billion); Motley Fool 2023 on why the market backdrop of that era is unlikely to repeat",
+   "url": "https://www.fool.com/investing/2016/06/15/everything-you-need-to-know-about-peter-lynch-in-8.aspx"
+  },
+  {
+   "id": "leggs",
+   "cite": "GuruFocus, Lynch's L'eggs story as told in One Up on Wall Street (Carolyn Lynch found L'eggs at the supermarket; women visited a supermarket or drugstore about once a week, a department store about once every six weeks; a six-bagger by the time Consolidated Foods took it over; 'Hanes would have been a 50-bagger')",
+   "url": "https://m.gurufocus.com/news/188474/"
+  },
+  {
+   "id": "tip",
+   "cite": "The Investor's Podcast, Executive summary of One Up on Wall Street (two-minute drill; six categories: slow growers, stalwarts, fast growers, cyclicals, turnarounds, asset plays; advantages of the individual investor)",
+   "url": "https://www.theinvestorspodcast.com/billionaire-book-club-executive-summary/executive-summary-one-up-on-wall-street/"
+  },
+  {
+   "id": "popik",
+   "cite": "Barry Popik, 'Ten bagger (tenbagger)': the term is credited to Peter Lynch, in print since 1989",
+   "url": "https://barrypopik.com/blog/ten_bagger_tenbagger"
+  },
+  {
+   "id": "vn_title",
+   "cite": "24hmoney, trang sách 'Trên đỉnh Phố Wall' (bản tiếng Việt của One Up on Wall Street; Alpha Books)",
+   "url": "https://24hmoney.vn/books/tren-dinh-pho-wall-c38a733004.html"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Thấy trước, nghiên cứu sau",
+   "line": "Điều bạn thấy trong đời thường là manh mối để đọc tiếp, chưa phải lý do để mua."
+  },
+  {
+   "name": "Kể được câu chuyện trong hai phút",
+   "line": "Nói được vì sao mình quan tâm, điều gì phải xảy ra, và điều gì có thể làm hỏng nó."
+  },
+  {
+   "name": "Biết nó thuộc loại nào",
+   "line": "Mỗi nhóm cổ phiếu cần một kỳ vọng khác; đừng chờ rùa chạy như tên lửa."
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Vợ Peter Lynch mua quần tất ở siêu thị. Cổ phiếu ấy về sau tăng gấp sáu. Nhưng đôi tất không phải lý do.",
+   "visual": {
+    "type": "statement",
+    "kicker": "One Up on Wall Street · Peter Lynch",
+    "text": "Một đôi tất. Cổ phiếu tăng gấp 6.",
+    "highlight": [
+     "tăng gấp"
+    ]
+   },
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "nhưng",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "lynch1989",
+    "leggs"
+   ]
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Câu chuyện này hay bị rút gọn thành: thích gì thì mua cổ phiếu nấy. Lynch nói ông chưa bao giờ khuyên vậy. Đến cuối clip, bạn sẽ biết ông đã làm gì sau chuyến đi chợ ấy, và ba bài học đi kèm.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "swap",
+      "kicker": "Bản rút gọn",
+      "strike_cue": "chưa bao",
+      "from": {
+       "label": "Thích gì, mua nấy",
+       "icon": "store"
+      },
+      "to": {
+       "label": "Lynch chưa từng khuyên vậy",
+       "icon": "letter",
+       "cue": "chưa bao"
+      }
+     },
+     {
+      "type": "trio",
+      "kicker": "Đến cuối clip",
+      "cue": "đến cuối",
+      "items": [
+       {
+        "icon": "magnifier",
+        "label": "Ông đã làm gì"
+       },
+       {
+        "icon": "checklist",
+        "label": "Ba bài học",
+        "cue": "ba bài"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "wsj2015"
+   ]
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Review sách · Tập 18",
+    "title": "Trên Đỉnh Phố Wall",
+    "subtitle": "One Up on Wall Street — Peter Lynch & John Rothchild (1989)",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ],
+   "sources": [
+    "lynch1989"
+   ]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Nhiều người tin: Lynch dạy rằng thấy quán nào đông khách thì mua cổ phiếu của quán đó. Thích sản phẩm là đủ, khỏi cần đọc sổ sách. Năm hai nghìn mười lăm, ông nói với The Wall Street Journal rằng ý mình đang bị trích sai.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Điều nhiều người tin",
+      "items": [
+       {
+        "icon": "store",
+        "label": "Quán đông thì mua"
+       },
+       {
+        "icon": "star",
+        "label": "Thích là đủ",
+        "cue": "thích sản"
+       },
+       {
+        "icon": "book",
+        "label": "Khỏi đọc sổ sách",
+        "cue": "khỏi cần"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "letter",
+      "kicker": "2015 · The Wall Street Journal",
+      "cue": "năm hai",
+      "line": "Ý ông đang bị trích sai.",
+      "line_cue": "trích sai"
+     }
+    ]
+   },
+   "sources": [
+    "wsj2015"
+   ]
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "Peter Lynch điều hành quỹ Magellan của Fidelity từ năm một nghìn chín trăm bảy mươi bảy đến năm một nghìn chín trăm chín mươi. Năm một nghìn chín trăm tám mươi chín, ông viết cuốn này cùng nhà báo John Rothchild, cho người đầu tư cá nhân. Ở Việt Nam, sách có tên Trên Đỉnh Phố Wall.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Peter Lynch",
+      "initials": "PL",
+      "role": "Quản lý quỹ Magellan · Fidelity",
+      "years": "1977–1990"
+     },
+     {
+      "type": "book",
+      "title": "One Up on Wall Street",
+      "author": "Peter Lynch & John Rothchild",
+      "year": "1989",
+      "kicker": "Cuốn sách",
+      "cue": "năm một nghìn chín trăm tám",
+      "facts": [
+       {
+        "big": "1989",
+        "text": "Sách ra đời"
+       },
+       {
+        "big": "Đồng tác giả",
+        "text": "nhà báo John Rothchild",
+        "cue": "nhà báo"
+       },
+       {
+        "big": "VN",
+        "text": "Trên Đỉnh Phố Wall",
+        "cue": "ở việt"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "wiki_lynch",
+    "lynch1989",
+    "vn_title"
+   ]
+  },
+  {
+   "id": "b03",
+   "act": "context",
+   "narration": "Tựa sách là một lời khẳng định: theo Lynch, người đầu tư cá nhân có vài lợi thế so với Phố Wall. Không phải báo cáo cho ai, không bị luật của quỹ trói tay, và được quyền kiên nhẫn. Cuốn sách cũng phổ biến chữ tenbagger: cổ phiếu tăng gấp mười lần.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "chess",
+      "kicker": "One Up: hơn một nước cờ",
+      "line": "Người nghiệp dư có lợi thế",
+      "line_cue": "người đầu"
+     },
+     {
+      "type": "trio",
+      "kicker": "Lợi thế, theo Lynch",
+      "cue": "không phải",
+      "items": [
+       {
+        "icon": "letter",
+        "label": "Không báo cáo cho ai"
+       },
+       {
+        "icon": "key",
+        "label": "Không bị luật quỹ trói",
+        "cue": "không bị"
+       },
+       {
+        "icon": "turtle",
+        "label": "Được kiên nhẫn",
+        "cue": "kiên nhẫn"
+       }
+      ]
+     },
+     {
+      "type": "stat",
+      "value": 10,
+      "suffix": "×",
+      "label": "tenbagger",
+      "note": "cổ phiếu tăng gấp 10 lần",
+      "cue": "cuốn sách cũng"
+     }
+    ]
+   },
+   "sources": [
+    "lynch1989",
+    "tip",
+    "popik"
+   ]
+  },
+  {
+   "id": "b04",
+   "act": "context",
+   "narration": "Theo số liệu được trích rộng rãi, Magellan tăng trung bình khoảng hai mươi chín phẩy hai phần trăm mỗi năm, danh nghĩa, trong mười ba năm ông điều hành. Tài sản quỹ đi từ khoảng mười tám triệu đô lên hơn mười bốn tỷ. Đó là lịch sử của một thời kỳ, không phải lời hứa.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stat",
+      "value": 29.2,
+      "decimals": 1,
+      "suffix": "%",
+      "label": "mỗi năm, trung bình",
+      "note": "Magellan · 1977–1990 · danh nghĩa",
+      "cue": "hai mươi"
+     },
+     {
+      "type": "icon",
+      "icon": "snowball",
+      "motion": "grow",
+      "kicker": "Tài sản của quỹ",
+      "cue": "tài sản",
+      "line": "~18 triệu $ thành >14 tỷ $",
+      "line_cue": "mười tám"
+     },
+     {
+      "type": "icon",
+      "icon": "hourglass",
+      "kicker": "Một thời kỳ đã qua",
+      "cue": "đó là",
+      "line": "Lịch sử, không phải lời hứa.",
+      "line_cue": "lịch sử"
+     }
+    ]
+   },
+   "sources": [
+    "wiki_lynch",
+    "fool_lynch"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Giờ đến đôi tất. Theo Lynch kể, Carolyn, vợ ông, rất thích quần tất L'eggs bán ngay ở siêu thị. Ông không chạy đi mua cổ phiếu ngay hôm đó. Ông bắt đầu tìm hiểu công ty làm ra nó.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "store",
+      "kicker": "Theo lời Lynch kể",
+      "line": "Quần tất L'eggs ở siêu thị",
+      "line_cue": "quần tất"
+     },
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Lynch không vội mua",
+      "cue": "ông không",
+      "line": "Tìm hiểu công ty làm ra nó.",
+      "line_cue": "ông bắt"
+     }
+    ]
+   },
+   "sources": [
+    "lynch1989",
+    "leggs"
+   ]
+  },
+  {
+   "id": "b06",
+   "act": "story",
+   "narration": "Ông tìm ra một con số. Một người phụ nữ trung bình ghé siêu thị hay hiệu thuốc khoảng mỗi tuần một lần, nhưng chỉ ghé cửa hàng bách hóa khoảng sáu tuần một lần. Quần tất bày ở nơi khách quay lại thường xuyên hơn nhiều.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "clock",
+      "kicker": "Ông tìm ra một con số",
+      "line": "Khách ghé bao lâu một lần?"
+     },
+     {
+      "type": "compare",
+      "title": "Theo Lynch",
+      "cue": "một người",
+      "left": {
+       "title": "Siêu thị, hiệu thuốc",
+       "items": [
+        "~1 lần mỗi tuần"
+       ]
+      },
+      "right": {
+       "title": "Cửa hàng bách hóa",
+       "items": [
+        "~1 lần mỗi 6 tuần"
+       ]
+      }
+     },
+     {
+      "type": "icon",
+      "icon": "people",
+      "kicker": "Bày hàng nơi khách quay lại",
+      "cue": "quần tất",
+      "line": "Thường xuyên hơn nhiều.",
+      "line_cue": "thường xuyên"
+     }
+    ]
+   },
+   "sources": [
+    "lynch1989",
+    "leggs"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b07",
+   "act": "story",
+   "narration": "Khi công ty bị Consolidated Foods mua lại, cổ phiếu đã tăng khoảng gấp sáu. Lynch còn tin rằng nếu không bị mua lại, nó có thể đi xa hơn nhiều. Một đôi tất, một con số, rồi mới đến quyết định.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stat",
+      "value": 6,
+      "suffix": "×",
+      "label": "khi bị mua lại",
+      "note": "theo lời Lynch kể",
+      "cue": "tăng khoảng"
+     },
+     {
+      "type": "icon",
+      "icon": "sprout",
+      "motion": "grow",
+      "kicker": "Lynch tin",
+      "cue": "lynch còn",
+      "line": "Còn có thể đi xa hơn nhiều.",
+      "line_cue": "nếu không"
+     },
+     {
+      "type": "trio",
+      "kicker": "Thứ tự của Lynch",
+      "cue": "một đôi",
+      "items": [
+       {
+        "icon": "store",
+        "label": "Một đôi tất"
+       },
+       {
+        "icon": "chart",
+        "label": "Một con số",
+        "cue": "một con"
+       },
+       {
+        "icon": "fork",
+        "label": "Rồi mới quyết định",
+        "cue": "rồi mới"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "lynch1989",
+    "leggs"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b08",
+   "act": "turn",
+   "narration": "Nhưng hãy để ý thứ tự. Thích sản phẩm chỉ là điểm bắt đầu. Bài tập mới là phần chính. Lynch nói với The Wall Street Journal: người ta mua một cổ phiếu mà chẳng biết gì về nó, đó là cờ bạc, và chẳng hay ho gì.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "swap",
+      "kicker": "Để ý thứ tự",
+      "strike_cue": "chỉ là",
+      "from": {
+       "label": "Lý do để mua",
+       "icon": "star"
+      },
+      "to": {
+       "label": "Điểm bắt đầu tìm hiểu",
+       "icon": "magnifier",
+       "cue": "điểm bắt"
+      },
+      "line": "Bài tập mới là phần chính.",
+      "line_cue": "bài tập"
+     },
+     {
+      "type": "quote",
+      "cue": "lynch nói",
+      "text": "Người ta mua một cổ phiếu mà chẳng biết gì về nó. Đó là cờ bạc, và chẳng hay ho gì.",
+      "by": "Peter Lynch, The Wall Street Journal, 2015 (lược dịch)"
+     }
+    ]
+   },
+   "sources": [
+    "wsj2015",
+    "lynch1989"
+   ]
+  },
+  {
+   "id": "b09",
+   "act": "principle",
+   "narration": "Bài học thứ nhất: thấy trước, nghiên cứu sau. Điều bạn thấy ở siêu thị hay ở chỗ làm là một manh mối. Nó chưa cho bạn biết nên mua gì. Nó chỉ cho bạn biết nên đọc gì tiếp.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "binoculars",
+      "kicker": "Bài học 1",
+      "line": "Thấy trước, nghiên cứu sau.",
+      "line_cue": "thấy trước"
+     },
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Ở siêu thị, ở chỗ làm",
+      "cue": "điều bạn",
+      "line": "Một manh mối.",
+      "line_cue": "manh mối"
+     },
+     {
+      "type": "swap",
+      "kicker": "Manh mối cho bạn biết",
+      "cue": "nó chưa",
+      "strike_cue": "nó chỉ",
+      "from": {
+       "label": "Nên mua gì",
+       "icon": "store"
+      },
+      "to": {
+       "label": "Nên đọc gì tiếp",
+       "icon": "book",
+       "cue": "nó chỉ"
+      }
+     }
+    ]
+   },
+   "sources": [
+    "lynch1989",
+    "wsj2015"
+   ]
+  },
+  {
+   "id": "b10",
+   "act": "principle",
+   "narration": "Bài học thứ hai: kể được câu chuyện trong hai phút. Trước khi mua, Lynch muốn tự nói được: vì sao mình quan tâm, điều gì phải xảy ra để công ty thành công, và điều gì có thể làm hỏng nó. Không kể được, tức là chưa hiểu đủ.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "clock",
+      "kicker": "Bài học 2",
+      "line": "Kể được trong hai phút.",
+      "line_cue": "kể được"
+     },
+     {
+      "type": "trio",
+      "kicker": "Câu chuyện hai phút",
+      "cue": "trước khi",
+      "items": [
+       {
+        "icon": "bulb",
+        "label": "Vì sao quan tâm?"
+       },
+       {
+        "icon": "key",
+        "label": "Điều gì phải xảy ra?",
+        "cue": "điều gì phải"
+       },
+       {
+        "icon": "lightning",
+        "label": "Điều gì làm hỏng?",
+        "cue": "làm hỏng"
+       }
+      ],
+      "line": "Không kể được: chưa hiểu đủ.",
+      "line_cue": "không kể"
+     }
+    ]
+   },
+   "sources": [
+    "lynch1989",
+    "tip"
+   ]
+  },
+  {
+   "id": "b11",
+   "act": "principle",
+   "narration": "Bài học thứ ba: biết nó thuộc loại nào. Lynch chia cổ phiếu thành sáu nhóm: tăng chậm, vững chãi, tăng nhanh, theo chu kỳ, phục hồi, và tài sản ẩn. Mỗi nhóm cần một kỳ vọng khác. Đừng chờ một con rùa chạy như tên lửa.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Bài học 3 · Sáu nhóm cổ phiếu",
+      "items": [
+       {
+        "icon": "turtle",
+        "label": "Tăng chậm"
+       },
+       {
+        "icon": "anchor",
+        "label": "Vững chãi",
+        "cue": "vững"
+       },
+       {
+        "icon": "rocket",
+        "label": "Tăng nhanh",
+        "cue": "tăng nhanh"
+       }
+      ]
+     },
+     {
+      "type": "trio",
+      "kicker": "Sáu nhóm cổ phiếu",
+      "cue": "theo chu",
+      "items": [
+       {
+        "icon": "pendulum",
+        "label": "Theo chu kỳ"
+       },
+       {
+        "icon": "sprout",
+        "label": "Phục hồi",
+        "cue": "phục hồi"
+       },
+       {
+        "icon": "key",
+        "label": "Tài sản ẩn",
+        "cue": "tài sản"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "turtle",
+      "kicker": "Mỗi nhóm, một kỳ vọng",
+      "cue": "mỗi nhóm",
+      "line": "Đừng chờ rùa chạy như tên lửa.",
+      "line_cue": "đừng chờ"
+     }
+    ]
+   },
+   "sources": [
+    "lynch1989",
+    "tip"
+   ]
+  },
+  {
+   "id": "b12",
+   "act": "complication",
+   "narration": "Cuốn sách cũng có giới hạn. Lynch là người làm nghề toàn thời gian ở Fidelity. Thành tích của Magellan thuộc về một giai đoạn khó lặp lại. Và nếu bạn không định làm bài tập, mình nghĩ việc tự chọn cổ phiếu có lẽ chưa hợp với bạn.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Giới hạn của cuốn sách",
+      "items": [
+       {
+        "icon": "clock",
+        "label": "Làm nghề toàn thời gian"
+       },
+       {
+        "icon": "hourglass",
+        "label": "Giai đoạn khó lặp lại",
+        "cue": "thành tích"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "fork",
+      "kicker": "Không định làm bài tập?",
+      "cue": "và nếu",
+      "line": "Tự chọn cổ phiếu: có lẽ chưa hợp.",
+      "line_cue": "mình nghĩ"
+     }
+    ]
+   },
+   "sources": [
+    "wiki_lynch",
+    "fool_lynch",
+    "wsj2015"
+   ]
+  },
+  {
+   "id": "b13",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Quán trà sữa gần nhà bạn lúc nào cũng xếp hàng dài. Theo Lynch, bước tiếp theo hợp lý nhất là gì?",
+   "visual": {
+    "type": "question",
+    "question": "Quán trà sữa luôn xếp hàng dài. Theo Lynch, bước tiếp theo?",
+    "choices": [
+     "Mua ngay cổ phiếu chuỗi đó",
+     "Tìm hiểu: doanh thu, nợ, đối thủ",
+     "Hỏi hội nhóm có nên mua"
+    ],
+    "answer": "B — thấy trước, nghiên cứu sau.",
+    "think_seconds": 5
+   }
+  },
+  {
+   "id": "b14",
+   "act": "recap",
+   "narration": "Vậy là ba bài học từ Trên Đỉnh Phố Wall. Thấy trước, nghiên cứu sau. Kể được câu chuyện trong hai phút. Và biết nó thuộc loại nào.",
+   "visual": {
+    "type": "list",
+    "title": "Ba bài học",
+    "check": true,
+    "items": [
+     {
+      "text": "Thấy trước, nghiên cứu sau",
+      "cue": "thấy"
+     },
+     {
+      "text": "Kể được câu chuyện trong hai phút",
+      "cue": "kể"
+     },
+     {
+      "text": "Biết nó thuộc loại nào",
+      "cue": "và biết"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b15",
+   "act": "close",
+   "narration": "Đôi quần tất trong giỏ đi chợ của Carolyn chỉ mở ra một câu hỏi. Phần còn lại là công việc. Lần tới bạn mê một sản phẩm, hãy hỏi thêm: mình đã thật sự biết gì về công ty làm ra nó?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "store",
+      "kicker": "Đôi quần tất trong giỏ",
+      "line": "Chỉ mở ra một câu hỏi.",
+      "line_cue": "chỉ mở"
+     },
+     {
+      "type": "icon",
+      "icon": "checklist",
+      "kicker": "Phần còn lại",
+      "cue": "phần còn",
+      "line": "Là công việc."
+     },
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Lần tới bạn mê một sản phẩm",
+      "cue": "lần tới",
+      "line": "Mình đã thật sự biết gì?",
+      "line_cue": "mình đã"
+     }
+    ]
+   },
+   "sources": [
+    "lynch1989"
+   ]
+  },
+  {
+   "id": "b16",
+   "act": "close",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
+   "visual": {
+    "type": "end",
+    "kicker": "Review sách · Tập 18",
+    "title": "Trên Đỉnh Phố Wall",
+    "ask": "Bạn muốn clip tiếp theo về cuốn sách nào?",
+    "ask_hint": "Beating the Street · một cuốn về Buffett · một chủ đề",
+    "ask_cue": "còn bạn",
+    "sources_line": "Nguồn: Lynch & Rothchild, One Up on Wall Street (1989) · The Wall Street Journal (12/2015) · xem mô tả",
+    "disclaimer": "Nội dung giáo dục, tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư.",
+    "sources_cue": "còn bạn"
+   }
+  }
+ ],
+ "pronounce": {}
+}

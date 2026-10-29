@@ -1,0 +1,805 @@
+{
+ "meta": {
+  "series": "Review sách · Tập 15",
+  "title": "Tư Duy Hệ Thống",
+  "subtitle": "Thinking in Systems — Donella H. Meadows (2008)",
+  "topic": "books",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt thích đọc sách, muốn hiểu vì sao có những vấn đề cứ lặp lại dù ai cũng cố gắng",
+  "aspect": "4:3",
+  "target_minutes": [
+   3,
+   5
+  ],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
+  "learning_goals": [
+   "Kể lại sự sụp đổ của đàn cá tuyết ở Newfoundland (1962–1992) và lệnh tạm dừng đánh bắt ngày 2/7/1992",
+   "Dùng ba cách nhìn của Meadows: nhìn cái kho, không chỉ dòng chảy; tôn trọng độ trễ; đổi luật chơi, đừng chỉ chỉnh con số",
+   "Phân biệt một minh họa (đồng hồ điện ở Hà Lan, 'người ta kể rằng') với một bằng chứng"
+  ],
+  "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư.",
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người dẫn chương trình sách lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively. Measured with Whisper on 12 names: Vietnamese respellings scored 0.76, original spelling 0.95.",
+  "brief": {
+   "target_viewer": "Người Việt 20–40 tuổi, đi làm, quản lý tiền, nhóm hay dự án của mình; quen đổ lỗi cho một người khi có chuyện; có thể chưa nghe tên Donella Meadows (giả định của người viết, chủ kênh xác nhận lại)",
+   "format": "Phân tích sách (book analysis), khoảng 4,5 phút, 4:3, minh họa icon vẽ tay, một giọng đọc",
+   "central_question": "Vì sao một đàn cá mà không ai muốn mất vẫn sụp đổ, và làm sao nhìn ra cái bẫy ấy trong việc của chính mình?",
+   "transformation": "Trước khi xem, họ nghĩ khủng hoảng là do một kẻ tham lam hay một quyết định ngu ngốc. Sau khi xem, họ kể lại được chuyện cá tuyết Newfoundland, phân biệt kho và dòng chảy, nhận ra độ trễ, biết thang điểm can thiệp của Meadows (con số yếu nhất, cách nghĩ mạnh nhất), và biết tách minh họa khỏi bằng chứng",
+   "discovery_goal": "Tìm kiếm (\"Thinking in Systems\", \"Donella Meadows\", \"Tư duy hệ thống\", \"Thấu hiểu hệ thống\", \"leverage points\", \"điểm đòn bẩy\") và đề xuất từ video sách tư duy; khán giả tập 1 (bánh đà), tập 7 (Tetlock), tập 12",
+   "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn clip tiếp theo về cuốn sách nào?\" (lựa chọn của chủ kênh)",
+   "share_recipient": "Một đồng nghiệp hay người quản lý đang 'chữa cháy' cùng một vấn đề tháng nào cũng quay lại: câu hỏi 'cái kho nào đang cạn mà mình chưa thấy?' giúp cả nhóm thôi tìm người có lỗi",
+   "evidence": "Meadows 2008 (ch. 1 stocks and flows, ch. 2 systems zoo and the fishing economy, delays, ch. 6 leverage points and the Dutch meters 'the story goes', ch. 7 'dance with them'); Meadows 1999 Leverage Points; The Canadian Encyclopedia (cod moratorium 1992; cod); CBC 2022; Wikipedia Donella Meadows; bản tiếng Việt Alpha Books",
+   "constraints": "4–5 phút, 4:3, icon vẽ (không footage, không khuôn mặt người thật), một giọng đọc OmniVoice seed 99 speed 0.88, tên tiếng Anh giữ nguyên chính tả, số đọc bằng chữ, không khuyến nghị đầu tư, giữ lời miễn trừ; câu chuyện cá tuyết là ví dụ có thật để minh họa ý của Meadows, nói rõ đó không phải ví dụ chính của sách"
+  },
+  "youtube": {
+   "title": "Không ai muốn mất đàn cá. Vì sao nó vẫn sụp đổ? | Thinking in Systems",
+   "thumbnail_text": "Cá tuyết · 1992 · còn ~1%",
+   "description": "Năm 1992, đàn cá tuyết sinh sản ngoài khơi Newfoundland chỉ còn khoảng 1% mức đỉnh ước tính, và Canada phải dừng đánh bắt; gần 30.000 người mất việc. Không ai muốn điều đó xảy ra. Donella Meadows, tác giả chính của The Limits to Growth, giải thích kiểu thất bại này trong Thinking in Systems (Tư Duy Hệ Thống): chính cấu trúc của hệ thống tạo ra hành vi của nó. Video kể lại câu chuyện cá tuyết, ba cách nhìn (nhìn cái kho, không chỉ dòng chảy; tôn trọng độ trễ; đổi luật chơi, đừng chỉ chỉnh con số), câu chuyện đồng hồ điện ở Hà Lan mà chính Meadows mở đầu bằng 'người ta kể rằng', và một bài tập nhỏ với tài khoản của bạn.\n\nTóm tắt và cảm nhận cá nhân; nội dung giáo dục, không phải lời khuyên đầu tư. Chuyện cá tuyết là ví dụ có thật do kênh chọn để minh họa ý của Meadows; số liệu theo The Canadian Encyclopedia và CBC, đã làm tròn.\n\nChương:\n- Không ai muốn mất đàn cá tuyết\n- Không cần một kẻ phản diện\n- Đổ lỗi là xong?\n- Donella Meadows và Thinking in Systems\n- Grand Banks: giảm 82% trong 15 năm\n- Mẻ lưới vẫn đầy\n- Lời khuyên năm 1989\n- 2/7/1992: dừng đánh bắt\n- Cá không quay lại ngay\n- Bài học 1: nhìn cái kho, không chỉ dòng chảy\n- Bài học 2: tôn trọng độ trễ\n- Bài học 3: đổi luật chơi, đừng chỉ chỉnh con số\n- Đồng hồ điện ở Hà Lan: minh họa hay bằng chứng?\n- \"Nhảy cùng hệ thống\"\n- Thử một chút: tài khoản của bạn\n- Ba bài học\n\nNguồn:\n- Donella H. Meadows, Thinking in Systems: A Primer (ed. Diana Wright), Chelsea Green, 2008 (bản tiếng Việt: Tư Duy Hệ Thống, Alpha Books; bản trước: Thấu Hiểu Hệ Thống, 2018)\n- Donella Meadows, Leverage Points: Places to Intervene in a System (1999): https://donellameadows.org/archives/leverage-points-places-to-intervene-in-a-system/\n- The Canadian Encyclopedia, Cod Moratorium of 1992: https://thecanadianencyclopedia.ca/en/article/cod-moratorium-of-1992\n- The Canadian Encyclopedia, Cod: https://thecanadianencyclopedia.ca/en/article/cod\n- CBC, Moratorium at 30 (2022): https://www.cbc.ca/1.6506628\n\nBạn muốn clip tiếp theo về cuốn sách nào? Để lại bình luận nhé.",
+   "tags": [
+    "Thinking in Systems",
+    "Donella Meadows",
+    "Tư duy hệ thống",
+    "Thấu hiểu hệ thống",
+    "systems thinking",
+    "điểm đòn bẩy",
+    "leverage points",
+    "cá tuyết Newfoundland",
+    "The Limits to Growth",
+    "tư duy phản biện",
+    "review sách",
+    "tóm tắt sách",
+    "sách tư duy"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "meadows2008",
+   "cite": "Donella H. Meadows, Thinking in Systems: A Primer, ed. Diana Wright, Chelsea Green, 2008 (draft circulated 1993; ch. 1 stocks and flows, the bathtub; 'the system, to a large extent, causes its own behavior'; ch. 2 'A Brief Visit to the Systems Zoo': a renewable stock constrained by a renewable stock, a fishing economy; delays and oscillation; ch. 6 'Leverage Points': twelve places to intervene, parameters weakest, information flows, rules, goals, paradigms strongest; the Dutch electric meters, introduced with 'the story goes', ~30% lower use; ch. 7: 'We can't control systems or figure them out. But we can dance with them!')"
+  },
+  {
+   "id": "leverage1999",
+   "cite": "Donella Meadows, 'Leverage Points: Places to Intervene in a System', Sustainability Institute, 1999 (the ranking reused in ch. 6)",
+   "url": "https://donellameadows.org/archives/leverage-points-places-to-intervene-in-a-system/"
+  },
+  {
+   "id": "meadows_bio",
+   "cite": "Wikipedia, 'Donella Meadows' (1941 – 20 Feb 2001, Hanover, New Hampshire, aged 59; on the MIT team that built World3 for the Club of Rome, 1972; principal author of The Limits to Growth; adjunct professor of Environmental Studies, Dartmouth); Wikipedia 'Thinking In Systems: A Primer' (draft 1993, published 2008)",
+   "url": "https://en.wikipedia.org/wiki/Donella_Meadows"
+  },
+  {
+   "id": "ce_moratorium",
+   "cite": "The Canadian Encyclopedia, 'Cod Moratorium of 1992': estimated harvestable cod biomass on the Grand Banks fell 82% between 1962 and 1977; the 1977 200-nautical-mile limit did little to stop Canadian catches from climbing; in 1989 scientists recommended a 50% quota cut, ignored; on 2 July 1992 minister John Crosbie announced a two-year moratorium; northern cod spawning stock ~1% of estimated peak; nearly 30,000 jobs lost in Newfoundland and Labrador (about 40,000 fishers and workers in all)",
+   "url": "https://thecanadianencyclopedia.ca/en/article/cod-moratorium-of-1992"
+  },
+  {
+   "id": "ce_cod",
+   "cite": "The Canadian Encyclopedia, 'Cod': stocks showed a substantial increase only by 2008; commercial fishing of northern cod reopened in 2024 amid concern about sustainability; moratorium made indefinite in 1993 (also DCHP-3, UBC, 'cod moratorium')",
+   "url": "https://thecanadianencyclopedia.ca/en/article/cod"
+  },
+  {
+   "id": "cbc2022",
+   "cite": "CBC News, 'Moratorium at 30' (2022): about 30,000 people put out of work",
+   "url": "https://www.cbc.ca/1.6506628"
+  },
+  {
+   "id": "dutch_meters",
+   "cite": "The Dutch electric meter story: in Meadows (2008, ch. 6) introduced with 'the story goes'; retold by Kelly Sutton, 'System Surprise: Bounded Rationality and Electric Meters in Dutch Houses' (gives one-third and the early-1970s energy crisis); no primary study found by this channel",
+   "url": "https://kellysutton.com/systems/"
+  },
+  {
+   "id": "vn_edition",
+   "cite": "Bản tiếng Việt: 'Tư Duy Hệ Thống – Nền tảng biến những điều phức tạp thành đơn giản' (Alpha Books, NXB Thế Giới, tái bản 7/2025, đổi tên); bản trước 'Thấu hiểu hệ thống' (Alpha Books, NXB Thế Giới, 2018, dịch: Hoàng Thảo)",
+   "url": "https://shop.alphabooks.vn/tu-duy-he-thong-nen-tang-bien-nhung-dieu-phuc-tap-thanh-don-gian-p19389724.html"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Nhìn cái kho, không chỉ dòng chảy",
+   "line": "Mẻ lưới hôm nay là dòng chảy; đàn cá còn lại mới là cái kho. Hãy hỏi kho còn bao nhiêu."
+  },
+  {
+   "name": "Tôn trọng độ trễ",
+   "line": "Tín hiệu trong hệ thống thường đến muộn: khi thấy vơi, kho đã cạn; khi dừng lại, phải chờ rất lâu."
+  },
+  {
+   "name": "Đổi luật chơi, đừng chỉ chỉnh con số",
+   "line": "Chỉnh một con số thường yếu nhất; đổi dòng thông tin, luật chơi, mục tiêu và cách nghĩ mạnh hơn nhiều."
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Không ai muốn mất đàn cá tuyết. Vậy mà năm một nghìn chín trăm chín mươi hai, nó chỉ còn khoảng một phần trăm.",
+   "visual": {
+    "type": "stat",
+    "value": 1,
+    "from": 100,
+    "suffix": "%",
+    "label": "đàn cá tuyết sinh sản còn lại",
+    "note": "Newfoundland · 1992 · so với đỉnh ước tính",
+    "cue": "vậy mà"
+   },
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "một phần",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "ce_moratorium"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Theo cách nhìn của Donella Meadows, câu chuyện này không cần một kẻ phản diện. Chỉ cần nhiều quyết định, mỗi cái đều nghe rất hợp lý. Cuối clip, bạn sẽ có ba cách nhìn để thấy cái bẫy ấy, trước khi bước vào.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Không cần…",
+      "cross": true,
+      "items": [
+       {
+        "icon": "mask",
+        "label": "Một kẻ phản diện",
+        "cue": "kẻ phản"
+       }
+      ]
+     },
+     {
+      "type": "trio",
+      "kicker": "Chỉ cần",
+      "cue": "chỉ cần",
+      "items": [
+       {
+        "icon": "checklist",
+        "label": "Nhiều quyết định"
+       },
+       {
+        "icon": "scale",
+        "label": "Cái nào cũng hợp lý",
+        "cue": "mỗi cái"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "binoculars",
+      "kicker": "Cuối clip",
+      "line": "Ba cách nhìn để thấy cái bẫy",
+      "cue": "cuối clip",
+      "line_cue": "ba cách"
+     }
+    ]
+   },
+   "sources": [
+    "meadows2008"
+   ]
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Review sách · Tập 15",
+    "title": "Tư Duy Hệ Thống",
+    "subtitle": "Thinking in Systems — Donella H. Meadows (2008)",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ],
+   "sources": [
+    "meadows2008"
+   ]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Ta hay nghĩ khủng hoảng xảy ra vì ai đó tham lam, hay ngu ngốc. Tìm ra người có lỗi là xong. Meadows cho rằng nhiều khi chính cấu trúc của hệ thống tạo ra hành vi của nó, dù ai đứng trong đó.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Điều ta hay tin",
+      "items": [
+       {
+        "icon": "coins",
+        "label": "Ai đó tham lam"
+       },
+       {
+        "icon": "brain",
+        "label": "Ai đó ngu ngốc",
+        "cue": "hay ngu"
+       }
+      ],
+      "line": "Tìm người có lỗi là xong.",
+      "line_cue": "tìm ra"
+     },
+     {
+      "type": "swap",
+      "kicker": "Donella Meadows",
+      "cue": "meadows cho",
+      "from": {
+       "label": "Người có lỗi",
+       "icon": "mask"
+      },
+      "to": {
+       "label": "Cấu trúc của hệ thống",
+       "icon": "gear",
+       "cue": "cấu trúc"
+      }
+     }
+    ]
+   },
+   "sources": [
+    "meadows2008"
+   ]
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "Meadows là nhà khoa học môi trường, tác giả chính của The Limits to Growth năm một nghìn chín trăm bảy mươi hai. Bà viết bản nháp cuốn sách này năm một nghìn chín trăm chín mươi ba, và mất năm hai nghìn lẻ một. Sách được in năm hai nghìn lẻ tám. Ở Việt Nam, sách có tên Tư Duy Hệ Thống.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Donella H. Meadows",
+      "initials": "DM",
+      "role": "Nhà khoa học môi trường",
+      "years": "1941 – 2001"
+     },
+     {
+      "type": "book",
+      "title": "Thinking in Systems",
+      "author": "Donella H. Meadows",
+      "year": "2008",
+      "kicker": "Tư Duy Hệ Thống",
+      "cue": "bà viết",
+      "facts": [
+       {
+        "big": "1993",
+        "text": "Bản nháp",
+        "cue": "bản nháp"
+       },
+       {
+        "big": "2008",
+        "text": "In sau khi bà mất",
+        "cue": "sách được"
+       },
+       {
+        "big": "VN",
+        "text": "Alpha Books",
+        "cue": "ở việt"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "meadows_bio",
+    "meadows2008",
+    "vn_edition"
+   ]
+  },
+  {
+   "id": "b03",
+   "act": "story",
+   "narration": "Giờ hãy đến Newfoundland, Canada, nơi người ta đánh cá tuyết từ nhiều thế kỷ. Theo The Canadian Encyclopedia, từ năm một nghìn chín trăm sáu mươi hai đến năm một nghìn chín trăm bảy mươi bảy, lượng cá có thể khai thác ở Grand Banks giảm ước tính tám mươi hai phần trăm.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "ship",
+      "kicker": "Newfoundland · Canada",
+      "line": "Nhiều thế kỷ đánh cá tuyết",
+      "line_cue": "nơi người"
+     },
+     {
+      "type": "stat",
+      "value": 82,
+      "prefix": "−",
+      "suffix": "%",
+      "label": "cá khai thác được · Grand Banks",
+      "note": "1962 – 1977 · ước tính",
+      "cue": "tám mươi"
+     }
+    ]
+   },
+   "sources": [
+    "ce_moratorium"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b04",
+   "act": "story",
+   "narration": "Năm một nghìn chín trăm bảy mươi bảy, Canada mở rộng vùng đánh cá ra hai trăm hải lý. Nhưng sản lượng của tàu Canada lại tiếp tục tăng. Mẻ lưới vẫn đầy, nên rất dễ tin rằng đàn cá vẫn ổn.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "compass",
+      "kicker": "1977",
+      "line": "Vùng đánh cá: 200 hải lý",
+      "line_cue": "mở rộng"
+     },
+     {
+      "type": "icon",
+      "icon": "ship",
+      "kicker": "Tàu Canada",
+      "line": "Mẻ lưới vẫn đầy",
+      "cue": "nhưng sản",
+      "line_cue": "mẻ lưới",
+      "motion": "rise"
+     },
+     {
+      "type": "icon",
+      "icon": "mirror",
+      "kicker": "Rất dễ tin",
+      "line": "“Đàn cá vẫn ổn.”",
+      "cue": "rất dễ"
+     }
+    ]
+   },
+   "sources": [
+    "ce_moratorium"
+   ]
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Năm một nghìn chín trăm tám mươi chín, các nhà khoa học khuyên giảm một nửa hạn ngạch đánh bắt. Chính phủ không làm theo.",
+   "visual": {
+    "type": "swap",
+    "kicker": "1989 · các nhà khoa học",
+    "cue": "khuyên giảm",
+    "strike_cue": "không làm",
+    "from": {
+     "label": "Giảm một nửa hạn ngạch",
+     "icon": "checklist"
+    },
+    "to": {
+     "label": "Không làm theo",
+     "icon": "lock",
+     "cue": "không làm"
+    }
+   },
+   "sources": [
+    "ce_moratorium"
+   ]
+  },
+  {
+   "id": "b06",
+   "act": "story",
+   "narration": "Ngày hai tháng bảy năm một nghìn chín trăm chín mươi hai, Bộ trưởng John Crosbie tuyên bố dừng đánh bắt cá tuyết hai năm. Gần ba mươi nghìn người ở Newfoundland mất việc. Một năm sau, lệnh dừng kéo dài vô thời hạn.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "timeline",
+      "title": "Lệnh dừng đánh bắt",
+      "events": [
+       {
+        "year": "2/7/1992",
+        "text": "Dừng hai năm",
+        "cue": "tuyên bố"
+       },
+       {
+        "year": "1993",
+        "text": "Kéo dài vô thời hạn",
+        "cue": "một năm"
+       }
+      ]
+     },
+     {
+      "type": "stat",
+      "value": 30000,
+      "prefix": "≈ ",
+      "label": "người mất việc ở Newfoundland",
+      "note": "The Canadian Encyclopedia · CBC",
+      "cue": "gần ba"
+     }
+    ]
+   },
+   "sources": [
+    "ce_moratorium",
+    "ce_cod",
+    "cbc2022"
+   ]
+  },
+  {
+   "id": "b07",
+   "act": "story",
+   "narration": "Và cá không quay lại ngay khi người ta ngừng đánh. Phải đến năm hai nghìn lẻ tám, đàn cá mới tăng rõ. Đến năm hai nghìn hai mươi tư, Canada mới mở lại đánh bắt thương mại, giữa nhiều lo ngại.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "hourglass",
+      "kicker": "Sau lệnh dừng",
+      "line": "Cá không quay lại ngay",
+      "line_cue": "không quay"
+     },
+     {
+      "type": "timeline",
+      "title": "Chờ đợi",
+      "cue": "phải đến",
+      "events": [
+       {
+        "year": "1992",
+        "text": "Dừng đánh bắt"
+       },
+       {
+        "year": "2008",
+        "text": "Đàn cá tăng rõ",
+        "cue": "tăng rõ"
+       },
+       {
+        "year": "2024",
+        "text": "Mở lại, giữa lo ngại",
+        "cue": "đến năm hai nghìn hai"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "ce_cod"
+   ]
+  },
+  {
+   "id": "b08",
+   "act": "principle",
+   "narration": "Bài học thứ nhất: nhìn cái kho, không chỉ dòng chảy. Theo ngôn ngữ của Meadows, đàn cá là một kho, còn mẻ lưới mỗi năm là dòng chảy ra. Như nước trong bồn tắm: nước xả ra mạnh không có nghĩa là bồn còn đầy.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "hourglass",
+      "kicker": "Bài học 1",
+      "line": "Nhìn cái kho, không chỉ dòng chảy."
+     },
+     {
+      "type": "compare",
+      "title": "Ngôn ngữ của Meadows",
+      "cue": "theo ngôn",
+      "left": {
+       "title": "Kho",
+       "items": [
+        "Đàn cá còn lại"
+       ]
+      },
+      "right": {
+       "title": "Dòng chảy",
+       "items": [
+        "Mẻ lưới mỗi năm"
+       ]
+      }
+     },
+     {
+      "type": "trio",
+      "kicker": "Như nước trong bồn tắm",
+      "cue": "như nước",
+      "items": [
+       {
+        "icon": "wave",
+        "label": "Nước xả ra mạnh"
+       },
+       {
+        "icon": "magnifier",
+        "label": "Bồn còn bao nhiêu?",
+        "cue": "bồn còn"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "meadows2008"
+   ]
+  },
+  {
+   "id": "b09",
+   "act": "principle",
+   "narration": "Bài học thứ hai: tôn trọng độ trễ. Trong hệ thống, tín hiệu thường đến muộn. Khi mẻ lưới bắt đầu vơi, đàn cá đã cạn. Khi đã dừng tay, phải chờ hơn mười lăm năm mới thấy cá tăng rõ. Meadows viết rằng độ trễ khiến ta phản ứng quá tay, hoặc quá muộn.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "clock",
+      "kicker": "Bài học 2",
+      "line": "Tôn trọng độ trễ."
+     },
+     {
+      "type": "trio",
+      "kicker": "Tín hiệu đến muộn",
+      "cue": "khi mẻ",
+      "items": [
+       {
+        "icon": "ship",
+        "label": "Lưới vơi: kho đã cạn"
+       },
+       {
+        "icon": "hourglass",
+        "label": "Dừng tay: chờ 15+ năm",
+        "cue": "khi đã"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "pendulum",
+      "kicker": "Meadows",
+      "line": "Quá tay, hoặc quá muộn",
+      "cue": "meadows viết",
+      "motion": "swing",
+      "period": 2.2
+     }
+    ]
+   },
+   "sources": [
+    "meadows2008",
+    "ce_cod"
+   ]
+  },
+  {
+   "id": "b10",
+   "act": "principle",
+   "narration": "Bài học thứ ba: đổi luật chơi, đừng chỉ chỉnh con số. Meadows xếp hạng những điểm có thể can thiệp vào hệ thống. Chỉnh một con số, như hạn ngạch hay thuế, thường yếu nhất. Mạnh hơn là đổi dòng thông tin, đổi luật chơi, đổi mục tiêu. Và mạnh nhất là đổi cách nghĩ đã sinh ra hệ thống.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "chess",
+      "kicker": "Bài học 3",
+      "line": "Đổi luật chơi, đừng chỉ chỉnh con số."
+     },
+     {
+      "type": "ladder",
+      "kicker": "Điểm can thiệp · Meadows",
+      "cue": "meadows xếp",
+      "levels": [
+       "Chỉnh con số",
+       "Đổi dòng thông tin",
+       "Đổi luật chơi",
+       "Đổi mục tiêu",
+       "Đổi cách nghĩ"
+      ],
+      "top_cue": "mạnh nhất",
+      "tags": [
+       {
+        "text": "Yếu nhất: con số",
+        "cue": "yếu nhất"
+       },
+       {
+        "text": "Mạnh nhất: cách nghĩ",
+        "cue": "mạnh nhất"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "meadows2008",
+    "leverage1999"
+   ]
+  },
+  {
+   "id": "b11",
+   "act": "complication",
+   "narration": "Ví dụ nổi tiếng nhất của sách: ở một khu nhà tại Hà Lan, nhà nào đặt đồng hồ điện ngay lối vào thì dùng điện ít hơn khoảng ba mươi phần trăm. Nhưng chính Meadows mở đầu bằng câu người ta kể rằng. Mình chưa tìm được nghiên cứu gốc. Hãy coi nó là minh họa, chưa phải bằng chứng.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Hà Lan · đồng hồ điện",
+      "items": [
+       {
+        "icon": "house",
+        "label": "Đồng hồ dưới hầm"
+       },
+       {
+        "icon": "eye",
+        "label": "Đồng hồ ở lối vào",
+        "cue": "ngay lối"
+       }
+      ],
+      "line": "Ít hơn khoảng 30% điện",
+      "line_cue": "ít hơn"
+     },
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Meadows mở đầu",
+      "line": "“Người ta kể rằng…”",
+      "cue": "nhưng chính"
+     },
+     {
+      "type": "swap",
+      "kicker": "Mình chưa tìm được nghiên cứu gốc",
+      "cue": "mình chưa",
+      "strike_cue": "hãy coi",
+      "from": {
+       "label": "Bằng chứng",
+       "icon": "scale"
+      },
+      "to": {
+       "label": "Minh họa",
+       "icon": "bulb",
+       "cue": "minh họa"
+      }
+     }
+    ]
+   },
+   "sources": [
+    "meadows2008",
+    "dutch_meters"
+   ],
+   "certainty": "attributed"
+  },
+  {
+   "id": "b12",
+   "act": "turn",
+   "narration": "Vậy tư duy hệ thống có giúp ta điều khiển được mọi thứ? Meadows trả lời là không. Bà viết: ta không thể điều khiển hệ thống, hay hiểu hết về nó. Nhưng ta có thể nhảy cùng nó.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "ship",
+      "kicker": "Vậy",
+      "line": "Điều khiển được mọi thứ?",
+      "line_cue": "điều khiển"
+     },
+     {
+      "type": "quote",
+      "text": "Ta không thể điều khiển hệ thống, hay hiểu hết về nó. Nhưng ta có thể nhảy cùng nó.",
+      "by": "Donella Meadows (lược dịch)",
+      "cue": "bà viết"
+     }
+    ]
+   },
+   "sources": [
+    "meadows2008"
+   ]
+  },
+  {
+   "id": "b13",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Lương tháng nào cũng về đều, nhưng số dư tài khoản của bạn cứ giảm dần suốt nửa năm. Tư duy hệ thống bảo bạn nhìn vào đâu trước?",
+   "visual": {
+    "type": "question",
+    "question": "Lương về đều, nhưng số dư giảm dần suốt 6 tháng. Nhìn vào đâu trước?",
+    "choices": [
+     "Lương tháng này cao hay thấp",
+     "Dòng vào so với dòng ra, và số dư mỗi tháng",
+     "Một khoản chi lớn hôm qua"
+    ],
+    "answer": "B — nhìn cái kho và các dòng chảy, không chỉ một con số",
+    "think_seconds": 5
+   }
+  },
+  {
+   "id": "b14",
+   "act": "recap",
+   "narration": "Vậy là ba bài học từ Tư Duy Hệ Thống. Nhìn cái kho, không chỉ dòng chảy. Tôn trọng độ trễ. Và đổi luật chơi, đừng chỉ chỉnh con số.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "book",
+      "kicker": "Tư Duy Hệ Thống",
+      "line": "Ba bài học."
+     },
+     {
+      "type": "list",
+      "title": "Ba bài học",
+      "check": true,
+      "cue": "nhìn cái",
+      "items": [
+       {
+        "text": "Nhìn cái kho, không chỉ dòng chảy",
+        "cue": "nhìn cái"
+       },
+       {
+        "text": "Tôn trọng độ trễ",
+        "cue": "tôn trọng"
+       },
+       {
+        "text": "Đổi luật chơi, đừng chỉ chỉnh con số",
+        "cue": "và đổi"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b15",
+   "act": "close",
+   "narration": "Không ai ở Newfoundland muốn mất đàn cá. Nhưng một hệ thống chỉ nhìn mẻ lưới hôm nay đã làm điều đó. Lần tới thấy một vấn đề cứ lặp lại, đừng chỉ hỏi ai có lỗi. Hãy hỏi: cái kho nào đang cạn dần, mà mình chưa thấy?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "ship",
+      "kicker": "Newfoundland",
+      "line": "Chỉ nhìn mẻ lưới hôm nay",
+      "line_cue": "chỉ nhìn",
+      "motion": "sink",
+      "motion_cue": "làm điều"
+     },
+     {
+      "type": "swap",
+      "kicker": "Lần tới",
+      "cue": "lần tới",
+      "strike_cue": "hãy hỏi",
+      "from": {
+       "label": "Ai có lỗi?",
+       "icon": "mask"
+      },
+      "to": {
+       "label": "Cái kho nào đang cạn?",
+       "icon": "hourglass",
+       "cue": "cái kho"
+      }
+     }
+    ]
+   },
+   "sources": [
+    "meadows2008",
+    "ce_moratorium"
+   ]
+  },
+  {
+   "id": "b16",
+   "act": "close",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
+   "visual": {
+    "type": "end",
+    "kicker": "Review sách · Tập 15",
+    "title": "Tư Duy Hệ Thống",
+    "ask": "Bạn muốn clip tiếp theo về cuốn sách nào?",
+    "ask_hint": "Một cuốn sách · một nhà tư duy · một chủ đề",
+    "ask_cue": "còn bạn",
+    "sources_line": "Nguồn: Meadows, Thinking in Systems (2008) · The Canadian Encyclopedia · CBC · xem mô tả",
+    "disclaimer": "Tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư.",
+    "sources_cue": "còn bạn"
+   }
+  }
+ ],
+ "pronounce": {}
+}

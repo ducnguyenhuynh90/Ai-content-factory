@@ -1,0 +1,811 @@
+{
+ "meta": {
+  "series": "Review sách · Tập 17",
+  "title": "Nghệ Thuật Tư Duy Rành Mạch",
+  "subtitle": "The Art of Thinking Clearly — Rolf Dobelli (2013)",
+  "topic": "books",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt thích đọc sách, muốn nhận ra những lỗi tư duy thường gặp khi tiêu tiền, đầu tư và ra quyết định",
+  "aspect": "4:3",
+  "target_minutes": [
+   3,
+   5
+  ],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
+  "learning_goals": [
+   "Kể lại câu chuyện Concorde (hiệp ước 1962 không có điều khoản rút lui, 20 chiếc được chế tạo, 'ngụy biện Concorde' năm 1976)",
+   "Dùng ba thói quen: tiền đã chi thì đã chìm; tìm bằng chứng chống lại mình (quy tắc vàng của Darwin); ghé thăm nghĩa địa",
+   "Biết cáo buộc đạo ý của Nassim Taleb năm 2013 và đọc sách như một bản tổng hợp, rồi tìm về nguồn gốc mỗi ý"
+  ],
+  "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư.",
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người dẫn chương trình sách lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively. Measured with Whisper on 12 names: Vietnamese respellings scored 0.76, original spelling 0.95.",
+  "brief": {
+   "target_viewer": "Người Việt 20–40 tuổi, đã trả trước một khóa học, một gói tập, giữ một khoản đầu tư đang lỗ 'cho đỡ phí'; thích sách tư duy dạng ngắn (giả định của người viết, chủ kênh xác nhận lại)",
+   "format": "Phân tích sách (book analysis), khoảng 4,5 phút, 4:3, minh họa icon vẽ tay, một giọng đọc",
+   "central_question": "Vì sao cả hai chính phủ vẫn đổ tiền vào Concorde, và làm sao mình thôi 'cố cho đỡ phí'?",
+   "transformation": "Trước khi xem, họ nghĩ người thông minh tự tránh được lỗi tư duy và 'đã lỡ bỏ tiền thì phải theo đến cùng'. Sau khi xem, họ kể lại được câu chuyện Concorde, dùng được ba thói quen (tiền đã chi thì đã chìm; tìm bằng chứng chống lại mình; ghé thăm nghĩa địa), và biết cuốn sách là bản tổng hợp từng bị Taleb cáo buộc đạo ý",
+   "discovery_goal": "Tìm kiếm (\"The Art of Thinking Clearly\", \"Rolf Dobelli\", \"Nghệ thuật tư duy rành mạch\", \"chi phí chìm\", \"ngụy biện Concorde\", \"thiên kiến xác nhận\", \"thiên kiến kẻ sống sót\") và đề xuất từ video sách tư duy; khán giả tập 2 (Kahneman), tập 8 (Taleb), tập 14 (Cialdini)",
+   "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn clip tiếp theo về cuốn sách nào?\" (lựa chọn của chủ kênh)",
+   "share_recipient": "Một người bạn đang 'cố cho đỡ phí' với một dự án, khóa học hay khoản đầu tư: câu hỏi 'từ hôm nay, đi tiếp có đáng không?' giúp nói chuyện mà không trách móc",
+   "evidence": "Dobelli 2011/2013 (sunk cost and the Concorde effect; confirmation bias and Darwin; survivorship bias and the graveyard); Wikipedia (Rolf Dobelli; The Art of Thinking Clearly); Shortform (cáo buộc của Taleb 2013); Hansard 22/1/1973 (no break clause); Johnman & Lynch, Twentieth Century British History (1964); Concorde (Wikipedia for Schools); Dawkins & Carlisle, Nature 1976; Darwin, Autobiography; bản tiếng Việt NXB Thế Giới 2016",
+   "constraints": "4–5 phút, 4:3, icon vẽ (không footage, không khuôn mặt người thật), một giọng đọc OmniVoice seed 99 speed 0.88, tên tiếng Anh giữ nguyên chính tả, số đọc bằng chữ, không khuyến nghị đầu tư, giữ lời miễn trừ; cáo buộc đạo ý nói công bằng cả hai phía"
+  },
+  "youtube": {
+   "title": "Vì sao đã biết lỗ vẫn không dừng? | The Art of Thinking Clearly – Dobelli",
+   "thumbnail_text": "Concorde · 1976–2003 · Khó dừng nhất: tiền đã chi",
+   "description": "Năm 1962, Anh và Pháp ký hiệp ước cùng chế tạo Concorde, không có điều khoản rút lui. Chỉ 20 chiếc được chế tạo, và năm 1976 hai nhà sinh học đặt tên cho kiểu lỗi này: ngụy biện Concorde, tiếp tục đầu tư chỉ vì đã lỡ đầu tư nhiều. Rolf Dobelli xếp nó trong 99 lỗi tư duy của The Art of Thinking Clearly (Nghệ Thuật Tư Duy Rành Mạch). Video kể lại câu chuyện Concorde, ba thói quen (tiền đã chi thì đã chìm; tìm bằng chứng chống lại mình, như quy tắc vàng của Darwin; ghé thăm nghĩa địa), cáo buộc đạo ý mà Nassim Taleb đưa ra năm 2013, và một bài tập nhỏ với gói tập bạn đã trả trước.\n\nTóm tắt và cảm nhận cá nhân; nội dung giáo dục, không phải lời khuyên đầu tư. Hình phễu ở bài học 3 là minh họa, không phải số liệu.\n\nChương:\n- Concorde: khó dừng nhất là tiền đã chi\n- Người thông minh có miễn nhiễm?\n- Rolf Dobelli và 99 lỗi tư duy\n- Hiệp ước 1962 không có đường lui\n- 20 chiếc Concorde\n- \"Ngụy biện Concorde\", 1976\n- Bài học 1: tiền đã chi thì đã chìm\n- Bài học 2: tìm bằng chứng chống lại mình\n- Bài học 3: ghé thăm nghĩa địa\n- Cáo buộc của Taleb\n- Một bản tổng hợp\n- Thử một chút: gói tập đã trả trước\n- Ba bài học\n\nNguồn:\n- Rolf Dobelli, The Art of Thinking Clearly, Sceptre / HarperCollins, 2013 (bản gốc tiếng Đức: Die Kunst des klaren Denkens, Hanser, 2011; bản tiếng Việt: Nghệ Thuật Tư Duy Rành Mạch, NXB Thế Giới, 2016)\n- Wikipedia, The Art of Thinking Clearly: https://en.wikipedia.org/wiki/The_Art_of_Thinking_Clearly\n- Shortform, The Art of Thinking Clearly: Review & Critical Reception: https://www.shortform.com/blog/the-art-of-thinking-clearly-review/\n- Hansard, HC Deb 22 January 1973, Concorde: https://api.parliament.uk/historic-hansard/written-answers/1973/jan/22/concorde\n- Dawkins & Carlisle, Parental investment, mate desertion and a fallacy, Nature 262 (1976): https://www.nature.com/articles/262131a0\n- Charles Darwin, Autobiography (Darwin Online): https://darwin-online.org.uk/\n\nBạn muốn clip tiếp theo về cuốn sách nào? Để lại bình luận nhé.",
+   "tags": [
+    "The Art of Thinking Clearly",
+    "Rolf Dobelli",
+    "Nghệ thuật tư duy rành mạch",
+    "chi phí chìm",
+    "ngụy biện Concorde",
+    "thiên kiến xác nhận",
+    "thiên kiến kẻ sống sót",
+    "Concorde",
+    "Nassim Taleb",
+    "lỗi tư duy",
+    "review sách",
+    "tóm tắt sách",
+    "sách tư duy"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "dobelli2013",
+   "cite": "Rolf Dobelli, The Art of Thinking Clearly, Sceptre / HarperCollins, 2013 (German original Die Kunst des klaren Denkens, Carl Hanser, 2011): 99 short chapters; ch. 1 survivorship bias, 'visit the graveyards'; sunk cost fallacy, 'often referred to as the Concorde effect', Britain and France 'had long known' it would never work; confirmation bias, 'the mother of all misconceptions', Darwin's habit of noting contrary evidence"
+  },
+  {
+   "id": "dobelli_bio",
+   "cite": "Wikipedia, 'Rolf Dobelli': doctorate St. Gallen 1995; CFO and managing director at Swissair subsidiaries; co-founded getAbstract in 1999; the book (Hanser, 2011) debuted at No. 1 on Der Spiegel's list and was the bestselling nonfiction book in Germany and Switzerland in 2012; written as weekly newspaper columns",
+   "url": "https://en.wikipedia.org/wiki/Rolf_Dobelli"
+  },
+  {
+   "id": "wiki_book",
+   "cite": "Wikipedia, 'The Art of Thinking Clearly' (99 common thinking errors; originally weekly columns in German, Dutch and Swiss newspapers; plagiarism controversy with Nassim Nicholas Taleb)",
+   "url": "https://en.wikipedia.org/wiki/The_Art_of_Thinking_Clearly"
+  },
+  {
+   "id": "taleb_claim",
+   "cite": "Shortform, 'The Art of Thinking Clearly: Review & Critical Reception': in 2013 Taleb accused Dobelli of plagiarising ideas and sentences (including from an early draft of Antifragile he had given Dobelli); Dobelli said he referenced Taleb fairly; later editions added citations and a bibliography",
+   "url": "https://www.shortform.com/blog/the-art-of-thinking-clearly-review/"
+  },
+  {
+   "id": "hansard1973",
+   "cite": "Hansard, HC Deb 22 January 1973 vol 849 cc9-10W, Concorde: 'the 1962 treaty does not contain a break clause'",
+   "url": "https://api.parliament.uk/historic-hansard/written-answers/1973/jan/22/concorde"
+  },
+  {
+   "id": "johnman_lynch",
+   "cite": "Lewis Johnman & Frances M. B. Lynch, 'A Treaty too Far? Britain, France, and Concorde, 1961–1964', Twentieth Century British History (the 1964 government sought to cancel Concorde; the agreement carried the full force of an international treaty)",
+   "url": "https://bvbvf1.bib-bvb.de/vufind/PrimoRecord/cdi_proquest_miscellaneous_60627662"
+  },
+  {
+   "id": "concorde_facts",
+   "cite": "Concorde (Wikipedia for Schools): Anglo-French treaty of 29 Nov 1962; cruising speed about Mach 2; twenty aircraft built, six for development and fourteen for commercial service; in service 1976–2003",
+   "url": "https://kolibri.teacherinabox.org.au/modules/en-wikipedia_for_schools-static/wp/c/Concorde.htm"
+  },
+  {
+   "id": "dawkins1976",
+   "cite": "R. Dawkins & T. R. Carlisle, 'Parental investment, mate desertion and a fallacy', Nature 262, 131–133 (1 Jul 1976): the analogy with the British government's investment in Concorde ('Concorde fallacy'; Coleman & Gross 1991)",
+   "url": "https://www.nature.com/articles/262131a0"
+  },
+  {
+   "id": "darwin_auto",
+   "cite": "Charles Darwin, Autobiography (ed. Nora Barlow, Collins, 1958): 'I had, also, during many years followed a golden rule, namely, that whenever a published fact, a new observation or thought came across me, which was opposed to my general results, to make a memorandum of it without fail and at once; for I had found by experience that such facts and thoughts were far more apt to escape from the memory than favourable ones.'",
+   "url": "https://darwin-online.org.uk/"
+  },
+  {
+   "id": "vn_edition",
+   "cite": "Bản tiếng Việt 'Nghệ thuật tư duy rành mạch', Minh Thi dịch, NXB Thế Giới, Hà Nội, 2016, ISBN 9786047728206 (City of Parramatta Library catalogue)",
+   "url": "https://parralibrary.spydus.com/cgi-bin/spydus.exe/FULL/OPAC/BIBENQ/17559418/307443,18"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Tiền đã chi thì đã chìm",
+   "line": "Đừng hỏi mình đã bỏ ra bao nhiêu; hỏi: từ hôm nay, đi tiếp có đáng không?"
+  },
+  {
+   "name": "Tìm bằng chứng chống lại mình",
+   "line": "Như Darwin: ghi lại ngay điều trái với kết luận của mình, vì đó là điều dễ quên nhất."
+  },
+  {
+   "name": "Ghé thăm nghĩa địa",
+   "line": "Trước khi tin một câu chuyện thành công, hỏi: bao nhiêu người đã thử cách này và không ai nhắc đến?"
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Concorde bay nhanh gấp đôi tốc độ âm thanh. Nhưng thứ khó dừng nhất của nó là số tiền đã chi.",
+   "visual": {
+    "type": "icon",
+    "icon": "coins",
+    "kicker": "Concorde · 1976 – 2003",
+    "line": "Khó dừng nhất: tiền đã chi",
+    "motion": "sink",
+    "motion_cue": "tiền đã"
+   },
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "đã chi",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "concorde_facts",
+    "dobelli2013"
+   ]
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Rolf Dobelli gọi đó là ngụy biện chi phí chìm, một trong chín mươi chín lỗi tư duy trong cuốn sách của ông. Hôm nay, mình kể lại câu chuyện Concorde, rút ra ba thói quen, và kể một sự thật khó chịu về chính cuốn sách này.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "ship",
+      "kicker": "Rolf Dobelli",
+      "line": "Ngụy biện chi phí chìm",
+      "line_cue": "ngụy biện",
+      "motion": "sink",
+      "motion_cue": "chi phí"
+     },
+     {
+      "type": "trio",
+      "kicker": "Hôm nay",
+      "cue": "hôm nay",
+      "items": [
+       {
+        "icon": "coins",
+        "label": "Câu chuyện Concorde"
+       },
+       {
+        "icon": "key",
+        "label": "Ba thói quen",
+        "cue": "ba thói"
+       },
+       {
+        "icon": "mask",
+        "label": "Sự thật khó chịu",
+        "cue": "sự thật"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "dobelli2013",
+    "wiki_book"
+   ]
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Review sách · Tập 17",
+    "title": "Nghệ Thuật Tư Duy Rành Mạch",
+    "subtitle": "The Art of Thinking Clearly — Rolf Dobelli (2013)",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ],
+   "sources": [
+    "dobelli2013"
+   ]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Ta hay nghĩ người thông minh sẽ tự tránh được lỗi tư duy. Dobelli cho rằng không ai miễn nhiễm. Những lỗi này có hệ thống, nên cách tốt nhất là học gọi tên chúng, để nhận ra lúc mình sắp mắc.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Điều ta hay tin",
+      "items": [
+       {
+        "icon": "brain",
+        "label": "Đủ thông minh"
+       },
+       {
+        "icon": "shield",
+        "label": "Tự tránh được lỗi",
+        "cue": "tự tránh"
+       }
+      ]
+     },
+     {
+      "type": "swap",
+      "kicker": "Rolf Dobelli",
+      "cue": "dobelli cho",
+      "strike_cue": "không ai",
+      "from": {
+       "label": "Miễn nhiễm",
+       "icon": "shield"
+      },
+      "to": {
+       "label": "Gọi tên lỗi để nhận ra",
+       "icon": "magnifier",
+       "cue": "gọi tên"
+      }
+     }
+    ]
+   },
+   "sources": [
+    "dobelli2013"
+   ]
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "Dobelli là doanh nhân và nhà văn người Thụy Sĩ, đồng sáng lập getAbstract năm một nghìn chín trăm chín mươi chín. Sách viết từ những bài báo hằng tuần, ra bản tiếng Đức năm hai nghìn mười một và đứng đầu danh sách bán chạy của Der Spiegel. Ở Việt Nam, sách có tên Nghệ Thuật Tư Duy Rành Mạch.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Rolf Dobelli",
+      "initials": "RD",
+      "role": "Doanh nhân · nhà văn Thụy Sĩ",
+      "years": "getAbstract · 1999"
+     },
+     {
+      "type": "book",
+      "title": "The Art of Thinking Clearly",
+      "author": "Rolf Dobelli",
+      "year": "2013",
+      "kicker": "Nghệ Thuật Tư Duy Rành Mạch",
+      "cue": "sách viết",
+      "facts": [
+       {
+        "big": "99",
+        "text": "lỗi tư duy · chương ngắn",
+        "cue": "bài báo"
+       },
+       {
+        "big": "2011",
+        "text": "Tiếng Đức · số 1 Der Spiegel",
+        "cue": "bản tiếng"
+       },
+       {
+        "big": "VN",
+        "text": "NXB Thế Giới · 2016",
+        "cue": "ở việt"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "dobelli_bio",
+    "wiki_book",
+    "vn_edition"
+   ]
+  },
+  {
+   "id": "b03",
+   "act": "story",
+   "narration": "Năm một nghìn chín trăm sáu mươi hai, Anh và Pháp ký hiệp ước cùng chế tạo Concorde. Hiệp ước ấy không có điều khoản rút lui. Năm một nghìn chín trăm sáu mươi tư, chính phủ Anh muốn hủy những dự án quá tốn kém, trong đó có Concorde. Nhưng đây là một hiệp ước quốc tế, nên rút ra rất khó.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "letter",
+      "kicker": "Anh · Pháp · 1962",
+      "line": "Hiệp ước Concorde",
+      "line_cue": "ký hiệp"
+     },
+     {
+      "type": "icon",
+      "icon": "lock",
+      "kicker": "Hansard · 1973",
+      "line": "Không có điều khoản rút lui",
+      "cue": "hiệp ước ấy",
+      "line_cue": "không có"
+     },
+     {
+      "type": "swap",
+      "kicker": "1964 · chính phủ Anh",
+      "cue": "năm một nghìn chín trăm sáu mươi tư",
+      "strike_cue": "nhưng đây",
+      "from": {
+       "label": "Hủy dự án",
+       "icon": "door"
+      },
+      "to": {
+       "label": "Hiệp ước quốc tế: khó rút",
+       "icon": "anchor",
+       "cue": "rút ra"
+      }
+     }
+    ]
+   },
+   "sources": [
+    "concorde_facts",
+    "hansard1973",
+    "johnman_lynch"
+   ]
+  },
+  {
+   "id": "b04",
+   "act": "story",
+   "narration": "Năm một nghìn chín trăm bảy mươi sáu, Concorde bắt đầu chở khách. Nhưng chỉ có hai mươi chiếc được chế tạo, mười bốn chiếc cho khai thác thương mại. Theo Dobelli, cả hai nước từ lâu đã biết dự án sẽ không có lãi, nhưng vẫn tiếp tục đổ tiền.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stat",
+      "value": 20,
+      "label": "chiếc Concorde được chế tạo",
+      "note": "6 thử nghiệm · 14 khai thác thương mại"
+     },
+     {
+      "type": "icon",
+      "icon": "coins",
+      "kicker": "Theo Dobelli",
+      "line": "Biết khó lãi, vẫn đổ tiền",
+      "cue": "theo dobelli",
+      "motion": "sink",
+      "motion_cue": "đổ tiền"
+     }
+    ]
+   },
+   "sources": [
+    "concorde_facts",
+    "dobelli2013"
+   ]
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Cũng năm ấy, nhà sinh học Richard Dawkins và đồng nghiệp Carlisle viết trên tạp chí Nature về một kiểu lỗi: tiếp tục đầu tư chỉ vì đã lỡ đầu tư nhiều. Họ ví nó với Concorde. Từ đó, người ta gọi nó là ngụy biện Concorde.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "letter",
+      "kicker": "Nature · 1976",
+      "line": "Dawkins & Carlisle",
+      "line_cue": "richard dawkins"
+     },
+     {
+      "type": "trio",
+      "kicker": "Một kiểu lỗi",
+      "cue": "tiếp tục",
+      "items": [
+       {
+        "icon": "coins",
+        "label": "Đã lỡ đầu tư nhiều"
+       },
+       {
+        "icon": "snowball",
+        "label": "Nên đầu tư tiếp",
+        "cue": "họ ví"
+       }
+      ],
+      "line": "“Ngụy biện Concorde”",
+      "line_cue": "người ta"
+     }
+    ]
+   },
+   "sources": [
+    "dawkins1976"
+   ]
+  },
+  {
+   "id": "b05b",
+   "act": "example",
+   "narration": "Kiểu lỗi này không chỉ của các chính phủ. Ta ngồi xem nốt một bộ phim dở vì đã lỡ mua vé. Ta giữ một món đồ không dùng vì đã mua đắt. Và sâu bên dưới, ta không muốn thừa nhận mình đã sai.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "people",
+      "kicker": "Không chỉ các chính phủ",
+      "line": "Cả chúng ta mỗi ngày",
+      "line_cue": "không chỉ"
+     },
+     {
+      "type": "trio",
+      "kicker": "Ta cũng vậy",
+      "cue": "ta ngồi",
+      "items": [
+       {
+        "icon": "door",
+        "label": "Xem nốt phim dở"
+       },
+       {
+        "icon": "coins",
+        "label": "Giữ đồ vì đã mua đắt",
+        "cue": "ta giữ"
+       },
+       {
+        "icon": "mirror",
+        "label": "Không muốn nhận mình sai",
+        "cue": "sâu bên"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "dobelli2013"
+   ]
+  },
+  {
+   "id": "b06",
+   "act": "principle",
+   "narration": "Bài học thứ nhất: tiền đã chi thì đã chìm. Dobelli khuyên: đừng hỏi mình đã bỏ ra bao nhiêu. Hãy hỏi: từ hôm nay, đi tiếp có đáng không? Câu hỏi ấy dùng được cho một dự án, một khoản đầu tư đang lỗ, hay một khóa học mình đã chán.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "ship",
+      "kicker": "Bài học 1",
+      "line": "Tiền đã chi thì đã chìm.",
+      "motion": "sink",
+      "motion_cue": "đã chìm"
+     },
+     {
+      "type": "swap",
+      "kicker": "Dobelli khuyên",
+      "cue": "dobelli khuyên",
+      "strike_cue": "hãy hỏi",
+      "from": {
+       "label": "Đã bỏ ra bao nhiêu?",
+       "icon": "coins"
+      },
+      "to": {
+       "label": "Từ hôm nay, có đáng không?",
+       "icon": "compass",
+       "cue": "từ hôm"
+      }
+     },
+     {
+      "type": "trio",
+      "kicker": "Dùng được cho",
+      "cue": "câu hỏi ấy",
+      "items": [
+       {
+        "icon": "gear",
+        "label": "Một dự án"
+       },
+       {
+        "icon": "coin",
+        "label": "Khoản đầu tư đang lỗ",
+        "cue": "khoản đầu"
+       },
+       {
+        "icon": "book",
+        "label": "Khóa học đã chán",
+        "cue": "khóa học"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "dobelli2013"
+   ]
+  },
+  {
+   "id": "b07",
+   "act": "principle",
+   "narration": "Bài học thứ hai: tìm bằng chứng chống lại mình. Dobelli gọi thiên kiến xác nhận là mẹ của mọi lỗi tư duy. Ông nhắc đến Charles Darwin, người tự đặt một quy tắc vàng: hễ gặp điều trái với kết luận của mình, ghi lại ngay, vì những điều ấy dễ quên nhất.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Bài học 2",
+      "line": "Tìm bằng chứng chống lại mình."
+     },
+     {
+      "type": "icon",
+      "icon": "mirror",
+      "kicker": "Thiên kiến xác nhận",
+      "line": "Mẹ của mọi lỗi tư duy",
+      "cue": "dobelli gọi",
+      "line_cue": "mẹ của"
+     },
+     {
+      "type": "quote",
+      "text": "Hễ gặp một sự kiện hay ý nghĩ trái với kết luận của mình, tôi ghi lại ngay, vì chúng dễ trôi khỏi trí nhớ hơn nhiều.",
+      "by": "Charles Darwin, Tự truyện (lược dịch)",
+      "cue": "ông nhắc"
+     }
+    ]
+   },
+   "sources": [
+    "dobelli2013",
+    "darwin_auto"
+   ]
+  },
+  {
+   "id": "b08",
+   "act": "principle",
+   "narration": "Bài học thứ ba: ghé thăm nghĩa địa. Đó là cách Dobelli chữa thiên kiến kẻ sống sót. Ta chỉ nghe kể về người thành công, còn người thất bại thì lặng lẽ biến mất. Trước khi tin một câu chuyện thành công, hãy hỏi: bao nhiêu người đã thử cách này, mà không ai nhắc đến?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "lighthouse",
+      "kicker": "Bài học 3",
+      "line": "Ghé thăm nghĩa địa."
+     },
+     {
+      "type": "funnel",
+      "total": 100,
+      "keep": 3,
+      "cols": 20,
+      "label": "người cùng thử · minh họa",
+      "keep_label": "người được kể lại",
+      "cue": "ta chỉ",
+      "keep_cue": "người thất"
+     },
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Trước khi tin",
+      "line": "Bao nhiêu người không ai nhắc đến?",
+      "cue": "trước khi",
+      "line_cue": "bao nhiêu"
+     }
+    ]
+   },
+   "sources": [
+    "dobelli2013"
+   ]
+  },
+  {
+   "id": "b09",
+   "act": "complication",
+   "narration": "Giờ là sự thật khó chịu. Năm hai nghìn mười ba, Nassim Taleb cáo buộc Dobelli lấy ý, và cả câu chữ, từ sách của ông. Taleb nói từng gửi Dobelli bản thảo sớm của Antifragile. Dobelli cho rằng mình đã ghi nguồn đầy đủ. Các bản in sau có thêm chú thích và thư mục. Đến nay, chuyện này vẫn gây tranh cãi.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "mask",
+      "kicker": "2013 · Nassim Taleb cáo buộc",
+      "line": "Lấy ý, và cả câu chữ",
+      "line_cue": "lấy ý"
+     },
+     {
+      "type": "icon",
+      "icon": "letter",
+      "kicker": "Theo Taleb",
+      "line": "Bản thảo sớm của Antifragile",
+      "cue": "taleb nói"
+     },
+     {
+      "type": "trio",
+      "kicker": "Phía Dobelli",
+      "cue": "dobelli cho",
+      "items": [
+       {
+        "icon": "checklist",
+        "label": "Đã ghi nguồn"
+       },
+       {
+        "icon": "book",
+        "label": "Bản sau: thêm chú thích",
+        "cue": "các bản"
+       }
+      ],
+      "line": "Vẫn gây tranh cãi.",
+      "line_cue": "đến nay"
+     }
+    ]
+   },
+   "sources": [
+    "taleb_claim",
+    "wiki_book"
+   ],
+   "certainty": "disputed"
+  },
+  {
+   "id": "b10",
+   "act": "turn",
+   "narration": "Dù nhìn từ phía nào, đây vẫn là một bản tổng hợp. Nhiều ý trong sách đến từ các nhà nghiên cứu như Daniel Kahneman, Robert Cialdini hay chính Taleb. Hãy đọc nó như một cuốn sổ tay, rồi tìm về nguồn gốc của mỗi ý.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "puzzle",
+      "kicker": "Một bản tổng hợp",
+      "line": "Ghép từ nhiều nguồn",
+      "line_cue": "bản tổng"
+     },
+     {
+      "type": "trio",
+      "kicker": "Nhiều ý đến từ",
+      "cue": "nhiều ý",
+      "items": [
+       {
+        "icon": "brain",
+        "label": "Daniel Kahneman"
+       },
+       {
+        "icon": "people",
+        "label": "Robert Cialdini",
+        "cue": "robert"
+       },
+       {
+        "icon": "swan",
+        "label": "Nassim Taleb",
+        "cue": "chính taleb"
+       }
+      ]
+     },
+     {
+      "type": "swap",
+      "kicker": "Cách đọc",
+      "cue": "hãy đọc",
+      "strike_cue": "rồi tìm",
+      "from": {
+       "label": "Sổ tay",
+       "icon": "book"
+      },
+      "to": {
+       "label": "Tìm về nguồn gốc",
+       "icon": "magnifier",
+       "cue": "nguồn gốc"
+      }
+     }
+    ]
+   },
+   "sources": [
+    "wiki_book",
+    "taleb_claim",
+    "dobelli2013"
+   ]
+  },
+  {
+   "id": "b11",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Bạn đã trả trước một năm phòng tập. Mới hai tuần, bạn thấy ghét giờ tập và đau gối. Dobelli sẽ bảo bạn hỏi gì?",
+   "visual": {
+    "type": "question",
+    "question": "Đã trả trước 1 năm phòng tập. Hai tuần sau: chán, đau gối. Nên hỏi gì?",
+    "choices": [
+     "Phải đi cho đáng tiền chứ?",
+     "Từ hôm nay, đi tiếp có đáng không, bất kể đã trả bao nhiêu?",
+     "Mua thêm huấn luyện viên để có động lực?"
+    ],
+    "answer": "B — tiền đã chi thì đã chìm: chỉ hỏi tương lai",
+    "think_seconds": 5
+   }
+  },
+  {
+   "id": "b12",
+   "act": "recap",
+   "narration": "Vậy là ba bài học từ Nghệ Thuật Tư Duy Rành Mạch. Tiền đã chi thì đã chìm. Tìm bằng chứng chống lại mình. Và ghé thăm nghĩa địa.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "book",
+      "kicker": "Nghệ Thuật Tư Duy Rành Mạch",
+      "line": "Ba bài học."
+     },
+     {
+      "type": "list",
+      "title": "Ba bài học",
+      "check": true,
+      "cue": "tiền đã",
+      "items": [
+       {
+        "text": "Tiền đã chi thì đã chìm",
+        "cue": "tiền đã"
+       },
+       {
+        "text": "Tìm bằng chứng chống lại mình",
+        "cue": "tìm bằng"
+       },
+       {
+        "text": "Ghé thăm nghĩa địa",
+        "cue": "và ghé"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b13",
+   "act": "close",
+   "narration": "Concorde nghỉ hưu năm hai nghìn lẻ ba. Bài học của nó thì vẫn bay: tiền đã chi không phải lý do để chi tiếp. Và câu chuyện của chính cuốn sách nhắc thêm một điều: với mọi ý tưởng hay, hãy hỏi nó đến từ đâu.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "clock",
+      "kicker": "Concorde · 2003",
+      "line": "Nghỉ hưu, bài học vẫn bay",
+      "line_cue": "bài học"
+     },
+     {
+      "type": "swap",
+      "kicker": "Bài học của Concorde",
+      "cue": "tiền đã",
+      "strike_cue": "không phải",
+      "from": {
+       "label": "Đã chi, nên chi tiếp",
+       "icon": "coins"
+      },
+      "to": {
+       "label": "Chỉ hỏi tương lai",
+       "icon": "compass",
+       "cue": "chi tiếp"
+      }
+     },
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Với mọi ý tưởng hay",
+      "line": "Nó đến từ đâu?",
+      "cue": "và câu",
+      "line_cue": "hãy hỏi"
+     }
+    ]
+   },
+   "sources": [
+    "concorde_facts",
+    "taleb_claim"
+   ]
+  },
+  {
+   "id": "b14",
+   "act": "close",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
+   "visual": {
+    "type": "end",
+    "kicker": "Review sách · Tập 17",
+    "title": "Nghệ Thuật Tư Duy Rành Mạch",
+    "ask": "Bạn muốn clip tiếp theo về cuốn sách nào?",
+    "ask_hint": "Một cuốn sách · một nhà tư duy · một chủ đề",
+    "ask_cue": "còn bạn",
+    "sources_line": "Nguồn: Dobelli (2011; 2013) · Hansard (1973) · Dawkins & Carlisle, Nature (1976) · Darwin · xem mô tả",
+    "disclaimer": "Tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư.",
+    "sources_cue": "còn bạn"
+   }
+  }
+ ],
+ "pronounce": {}
+}

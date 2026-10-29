@@ -1,0 +1,852 @@
+{
+ "meta": {
+  "series": "Review sách · Tập 22",
+  "title": "Người Giàu Có Nhất Thành Babylon",
+  "subtitle": "The Richest Man in Babylon — George S. Clason (1926)",
+  "topic": "investing",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt mới đi làm, lương còn thấp, muốn bắt đầu để dành và đầu tư đúng cách",
+  "aspect": "4:3",
+  "target_minutes": [
+   3,
+   5
+  ],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
+  "learning_goals": [
+   "Kể lại truyện ngụ ngôn về Arkad (nói rõ là hư cấu): một phần mười để dành, mất sạch vì người thợ gạch, rồi 'ăn mất những đứa con' của tiền tiết kiệm",
+   "Giải thích ba ý lớn: trả cho mình trước; hỏi đúng người; để tiền đẻ ra tiền (lãi kép)",
+   "Biết giới hạn của cuốn sách: viết năm 1926, trước quỹ chỉ số; truyện ngụ ngôn giúp nhớ chứ không chứng minh"
+  ],
+  "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư.",
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người dẫn chương trình sách lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively.",
+  "brief": {
+   "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn clip tiếp theo về cuốn sách nào?\" (comment answering the end-card question)",
+   "target_viewer": "Người Việt 18–35 tuổi mới đi làm, lương còn thấp, nghĩ phải có thu nhập lớn hoặc một cú đầu tư đậm mới giàu được; có thể đã nghe tên sách nhưng không biết đó là truyện hư cấu (giả định, chủ kênh xác nhận lại)",
+   "format": "Phân tích sách (book analysis), 4–5 phút, 4:3, minh họa icon vẽ tay, một giọng đọc",
+   "central_question": "Một truyện ngụ ngôn năm 1926 dạy gì về việc để dành và đầu tư, và chỗ nào nó đã cũ?",
+   "transformation": "Trước khi xem, họ nghĩ lương thấp thì tiết kiệm vô ích và cuốn sách là chuyện có thật ở Babylon. Sau khi xem, họ biết đây là truyện hư cấu, kể lại được ba lần Arkad gặp Algamish (một phần mười; người thợ gạch; những đứa con của tiền tiết kiệm), dùng được ba câu hỏi (đã trả cho mình trước chưa? người khuyên mình đã làm việc ấy chưa? tiền lãi đang đi đâu?) và biết giới hạn của sách",
+   "discovery_goal": "Tìm kiếm (\"The Richest Man in Babylon\", \"Người giàu có nhất thành Babylon\", \"George Clason\", \"trả cho mình trước\", \"tiết kiệm 10%\", \"lãi kép\") và đề xuất từ video sách tài chính cá nhân; khán giả tập 3 và 10",
+   "share_recipient": "Một người bạn mới đi làm nói 'lương ít thế này để dành làm gì': câu chuyện Arkad và câu hỏi 'phần nào là của bạn để giữ?' giúp hai người nói về tiền mà không lên lớp nhau",
+   "evidence": "Clason 1926 (truyện ngụ ngôn; Arkad, Algamish, Azmur, Aggar; một phần mười; bảy cách chữa túi tiền lép); Wikipedia: The Richest Man in Babylon (tập sách mỏng từ 1926, ngân hàng và hãng bảo hiểm phát) và George Samuel Clason (1874–1957); Shortform (Azmur, thủy tinh, Aggar; phiến đất sét là khung truyện); Jeff Speakes ('ăn mất những đứa con'); Wikipedia Index fund (1975); VnExpress (tên sách tiếng Việt).",
+   "constraints": "4–5 phút, 4:3, icon vẽ, không khuôn mặt người thật (Clason là medallion chữ cái; nhân vật hư cấu không có chân dung), một giọng đọc OmniVoice seed 99 speed 0.88, tên tiếng Anh giữ nguyên, số đọc bằng chữ, nói rõ trên hình và trong lời đọc rằng truyện là hư cấu, 1/10 là mốc dễ nhớ chứ không phải công thức, không khuyến nghị sản phẩm tài chính, giữ lời miễn trừ"
+  },
+  "youtube": {
+   "title": "Một năm tiết kiệm, mất sạch vì một thợ gạch | Người Giàu Có Nhất Thành Babylon",
+   "thumbnail_text": "Một năm tiết kiệm. Mất sạch.",
+   "description": "Arkad tiết kiệm suốt một năm, rồi mất sạch vì giao tiền cho một người thợ gạch đi mua đá quý. Arkad không có thật: ông là nhân vật trong những truyện ngụ ngôn George S. Clason viết từ năm 1926, được ngân hàng và hãng bảo hiểm đem phát, rồi gom thành The Richest Man in Babylon (Người Giàu Có Nhất Thành Babylon). Video kể lại truyện Arkad và Algamish (nói rõ là hư cấu), ba bài học (trả cho mình trước; hỏi đúng người; để tiền đẻ ra tiền), giới hạn của một cuốn sách viết năm 1926, và một bài tập nhỏ.\n\nNội dung giáo dục, tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư. Arkad, Algamish, Azmur, Aggar và các phiến đất sét ở cuối sách đều là sáng tác của Clason, không phải tư liệu lịch sử. Con số một phần mười là mốc dễ nhớ trong truyện, không phải công thức.\n\nChương:\nMột năm tiết kiệm, mất sạch\nArkad không có thật\nĐiều nhiều người nghĩ về làm giàu\nGeorge Clason và những tập sách mỏng\nCần nói rõ: đây là truyện hư cấu\nBí mật của Algamish\nMột phần mười\nNgười thợ gạch và đá quý\nNhững đứa con của tiền tiết kiệm\nBảy cách chữa túi tiền lép\nBài học 1: trả cho mình trước\nBài học 2: hỏi đúng người\nBài học 3: để tiền đẻ ra tiền\nGiới hạn của cuốn sách\nThử một chút\nBa bài học\n\nNguồn:\n- George S. Clason, The Richest Man in Babylon, 1926: https://www.penguinrandomhouse.com/books/294317/the-richest-man-in-babylon-by-george-s-clason/9780451205360/\n- Wikipedia, The Richest Man in Babylon: https://en.wikipedia.org/wiki/The_Richest_Man_in_Babylon\n- Wikipedia, George Samuel Clason: https://en.wikipedia.org/wiki/George_Samuel_Clason\n- Shortform, Arkad: The Story of the Richest Man in Babylon: https://www.shortform.com/blog/?p=44906\n- Shortform, Alfred H. Shrewsbury and the Babylonian Clay Tablets: https://www.shortform.com/blog/alfred-h-shrewsbury/\n- Jeff Speakes, The Richest Man in Babylon: https://jeffspeakes.squarespace.com/essays/the-richest-man-in-babylon\n- VnExpress, Người giàu có nhất thành Babylon: https://vnexpress.net/nguoi-giau-co-nhat-thanh-babylon-2691682.html\n\nBạn muốn clip tiếp theo về cuốn sách nào? Để lại bình luận nhé.",
+   "tags": [
+    "The Richest Man in Babylon",
+    "Người giàu có nhất thành Babylon",
+    "George Clason",
+    "Arkad",
+    "trả cho mình trước",
+    "tiết kiệm 10%",
+    "lãi kép",
+    "tài chính cá nhân",
+    "review sách",
+    "tóm tắt sách",
+    "sách tài chính",
+    "quản lý tiền",
+    "đầu tư cho người mới"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "clason1926",
+   "cite": "George S. Clason, The Richest Man in Babylon, 1926 (fiction: parables set in ancient Babylon; Arkad the scribe and Algamish the moneylender; 'a part of all you earn is yours to keep'; not less than a tenth; Azmur the brickmaker and the worthless glass; Aggar the shieldmaker and the bronze; 'Seven Cures for a Lean Purse'; 'Five Laws of Gold'; the closing clay-tablet chapters)",
+   "url": "https://www.penguinrandomhouse.com/books/294317/the-richest-man-in-babylon-by-george-s-clason/9780451205360/"
+  },
+  {
+   "id": "wiki_book",
+   "cite": "Wikipedia, The Richest Man in Babylon (began in 1926 as a series of pamphlets of Babylonian parables distributed by banks and insurance companies, later compiled into the book; told by the fictional Arkad)",
+   "url": "https://en.wikipedia.org/wiki/The_Richest_Man_in_Babylon"
+  },
+  {
+   "id": "wiki_clason",
+   "cite": "Wikipedia, George Samuel Clason (1874-1957, born in Missouri; businessman; Clason Map Company and Clason Publishing Company, Denver)",
+   "url": "https://en.wikipedia.org/wiki/George_Samuel_Clason"
+  },
+  {
+   "id": "shortform_arkad",
+   "cite": "Shortform, 'Arkad: The Story of the Richest Man in Babylon' (the overnight copying job for Algamish; Arkad saves a tenth; Azmur buys 'jewels' in Tyre that are glass; Algamish: a brickmaker knows nothing of jewels; the loan to Aggar the shieldmaker for bronze)",
+   "url": "https://www.shortform.com/blog/?p=44906"
+  },
+  {
+   "id": "speakes",
+   "cite": "Jeff Speakes, 'The Richest Man in Babylon' (Algamish: Arkad has 'eaten the children' of his savings by spending the interest on feasts)",
+   "url": "https://jeffspeakes.squarespace.com/essays/the-richest-man-in-babylon"
+  },
+  {
+   "id": "shortform_tablets",
+   "cite": "Shortform, 'Alfred H. Shrewsbury and the Babylonian Clay Tablets' (the book's framing: an archaeology professor 'deciphers' tablets telling the fable of Dabasir)",
+   "url": "https://www.shortform.com/blog/alfred-h-shrewsbury/"
+  },
+  {
+   "id": "vn_title",
+   "cite": "VnExpress, 'Người giàu có nhất thành Babylon' (giới thiệu bản tiếng Việt)",
+   "url": "https://vnexpress.net/nguoi-giau-co-nhat-thanh-babylon-2691682.html"
+  },
+  {
+   "id": "wiki_index",
+   "cite": "Wikipedia, Index fund (the first index fund for individual investors: 31 Dec 1975)",
+   "url": "https://en.wikipedia.org/wiki/Index_fund"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Trả cho mình trước",
+   "line": "Để riêng một phần ngay khi nhận tiền, thay vì chờ cuối tháng xem còn dư bao nhiêu."
+  },
+  {
+   "name": "Hỏi đúng người",
+   "line": "Trước khi giao tiền, hỏi: người này đã thật sự làm việc ấy và chịu rủi ro của nó chưa?"
+  },
+  {
+   "name": "Để tiền đẻ ra tiền",
+   "line": "Tiền lãi là con của số tiền để dành; tiêu nó đi là mất cả lãi của lãi."
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Arkad tiết kiệm suốt một năm. Rồi mất sạch, vì nghe lời một người thợ gạch.",
+   "visual": {
+    "type": "statement",
+    "kicker": "Truyện ngụ ngôn · The Richest Man in Babylon",
+    "text": "Một năm tiết kiệm. Mất sạch.",
+    "highlight": [
+     "Mất sạch."
+    ]
+   },
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "mất sạch",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "clason1926",
+    "shortform_arkad"
+   ]
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Arkad không có thật. Ông là nhân vật trong truyện ngụ ngôn của George Clason. Nhưng sai lầm của ông thì rất thật. Đến cuối clip, bạn sẽ có ba bài học từ những câu chuyện ấy, và biết chỗ nào cuốn sách đã cũ.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "mask",
+      "kicker": "Arkad không có thật",
+      "line": "Nhân vật truyện ngụ ngôn.",
+      "line_cue": "ông là"
+     },
+     {
+      "type": "icon",
+      "icon": "mirror",
+      "kicker": "Nhưng sai lầm",
+      "cue": "nhưng sai",
+      "line": "Rất thật.",
+      "line_cue": "rất thật"
+     },
+     {
+      "type": "trio",
+      "kicker": "Đến cuối clip",
+      "cue": "đến cuối",
+      "items": [
+       {
+        "icon": "checklist",
+        "label": "Ba bài học"
+       },
+       {
+        "icon": "hourglass",
+        "label": "Chỗ sách đã cũ",
+        "cue": "chỗ nào"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "clason1926",
+    "wiki_book"
+   ]
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Review sách · Tập 22",
+    "title": "Người Giàu Có Nhất Thành Babylon",
+    "subtitle": "The Richest Man in Babylon — George S. Clason (1926)",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ],
+   "sources": [
+    "clason1926"
+   ]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Nhiều người nghĩ: muốn giàu thì cần thu nhập lớn, hoặc một cú đầu tư thật đậm. Lương còn thấp thì tiết kiệm làm gì. Clason viết cả cuốn sách, bằng những câu chuyện nhỏ, để cãi lại ý ấy.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Điều nhiều người nghĩ",
+      "items": [
+       {
+        "icon": "coins",
+        "label": "Cần thu nhập lớn"
+       },
+       {
+        "icon": "rocket",
+        "label": "Một cú thật đậm",
+        "cue": "một cú"
+       },
+       {
+        "icon": "coin",
+        "label": "Lương thấp: khỏi để dành",
+        "cue": "lương còn"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "book",
+      "kicker": "Clason cãi lại",
+      "cue": "clason",
+      "line": "Cả một cuốn sách.",
+      "line_cue": "cả cuốn"
+     }
+    ]
+   },
+   "sources": [
+    "clason1926"
+   ]
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "George Samuel Clason sinh năm một nghìn tám trăm bảy mươi tư, là một doanh nhân ở Denver. Từ năm một nghìn chín trăm hai mươi sáu, ông viết những tập sách mỏng về tiền bạc, được ngân hàng và hãng bảo hiểm đem phát, rồi gom thành cuốn sách này. Ở Việt Nam, sách có tên Người Giàu Có Nhất Thành Babylon.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "George S. Clason",
+      "initials": "GC",
+      "role": "Doanh nhân · Denver",
+      "years": "1874–1957"
+     },
+     {
+      "type": "icon",
+      "icon": "letter",
+      "kicker": "Từ 1926",
+      "cue": "từ năm",
+      "line": "Những tập sách mỏng, ngân hàng đem phát.",
+      "line_cue": "được ngân"
+     },
+     {
+      "type": "book",
+      "title": "The Richest Man in Babylon",
+      "author": "George S. Clason",
+      "year": "1926",
+      "kicker": "Gom thành sách",
+      "cue": "rồi gom",
+      "facts": [
+       {
+        "big": "1926",
+        "text": "Từ những tập sách mỏng"
+       },
+       {
+        "big": "VN",
+        "text": "Người Giàu Có Nhất Thành Babylon",
+        "cue": "ở việt"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "wiki_clason",
+    "wiki_book",
+    "vn_title"
+   ]
+  },
+  {
+   "id": "b03",
+   "act": "turn",
+   "narration": "Một điều cần nói rõ: đây là truyện hư cấu. Babylon là bối cảnh. Còn Arkad, những người cho vay, cả những phiến đất sét được một giáo sư khảo cổ dịch ra ở cuối sách, đều là sáng tác. Đừng đọc chúng như lịch sử.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Cần nói rõ",
+      "text": "Chuyện có thật ở Babylon.",
+      "strike": "Chuyện có thật",
+      "replace": "Truyện hư cấu",
+      "strike_cue": "đây là"
+     },
+     {
+      "type": "trio",
+      "kicker": "Đều là sáng tác",
+      "cue": "còn arkad",
+      "cross": true,
+      "items": [
+       {
+        "icon": "people",
+        "label": "Arkad"
+       },
+       {
+        "icon": "coins",
+        "label": "Người cho vay",
+        "cue": "những người"
+       },
+       {
+        "icon": "book",
+        "label": "Phiến đất sét \"được dịch\"",
+        "cue": "cả những"
+       }
+      ],
+      "line": "Không phải lịch sử.",
+      "line_cue": "đừng đọc"
+     }
+    ]
+   },
+   "sources": [
+    "wiki_book",
+    "shortform_tablets"
+   ]
+  },
+  {
+   "id": "b04",
+   "act": "story",
+   "narration": "Theo truyện, Arkad là một người chép thuê nghèo. Ông chép gấp một bản văn trong một đêm cho Algamish, người cho vay giàu có, để đổi lấy bí mật làm giàu. Bí mật ấy là: một phần những gì bạn kiếm được là của bạn để giữ.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "letter",
+      "kicker": "Theo truyện · Arkad, người chép thuê",
+      "line": "Chép gấp trong một đêm.",
+      "line_cue": "ông chép"
+     },
+     {
+      "type": "icon",
+      "icon": "key",
+      "kicker": "Để đổi lấy",
+      "cue": "để đổi",
+      "line": "Bí mật làm giàu."
+     },
+     {
+      "type": "quote",
+      "cue": "bí mật ấy",
+      "text": "Một phần những gì bạn kiếm được là của bạn để giữ.",
+      "by": "Algamish, nhân vật của Clason (lược dịch)"
+     }
+    ]
+   },
+   "sources": [
+    "clason1926",
+    "shortform_arkad"
+   ]
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Nghĩa là sao? Mỗi lần nhận tiền, bạn trả cho người may áo, người làm dép, nhưng quên trả cho chính mình. Algamish bảo: giữ lại không ít hơn một phần mười. Arkad làm theo, suốt một năm.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Mỗi lần nhận tiền, bạn trả cho",
+      "cue": "mỗi lần",
+      "items": [
+       {
+        "icon": "store",
+        "label": "Người bán hàng"
+       },
+       {
+        "icon": "mirror",
+        "label": "Quên trả cho chính mình",
+        "cue": "quên trả"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "coins",
+      "kicker": "Algamish bảo",
+      "cue": "algamish",
+      "line": "Giữ lại ít nhất 1/10.",
+      "line_cue": "giữ lại"
+     },
+     {
+      "type": "icon",
+      "icon": "sprout",
+      "motion": "grow",
+      "kicker": "Arkad làm theo",
+      "cue": "arkad làm",
+      "line": "Suốt một năm.",
+      "line_cue": "suốt"
+     }
+    ]
+   },
+   "sources": [
+    "clason1926",
+    "shortform_arkad"
+   ]
+  },
+  {
+   "id": "b06",
+   "act": "story",
+   "narration": "Rồi Arkad giao hết số tiền ấy cho Azmur, một người thợ gạch, nhờ mua đá quý ở thành Tyre. Azmur mang về toàn những mảnh thủy tinh vô giá trị. Một năm tiết kiệm, mất sạch.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "coins",
+      "kicker": "Arkad giao hết số tiền",
+      "line": "Cho một thợ gạch mua đá quý.",
+      "line_cue": "azmur"
+     },
+     {
+      "type": "icon",
+      "icon": "mask",
+      "motion": "sink",
+      "motion_cue": "mất sạch",
+      "kicker": "Azmur mang về",
+      "cue": "azmur mang",
+      "line": "Toàn thủy tinh vô giá trị.",
+      "line_cue": "toàn những"
+     }
+    ]
+   },
+   "sources": [
+    "clason1926",
+    "shortform_arkad"
+   ]
+  },
+  {
+   "id": "b07",
+   "act": "story",
+   "narration": "Lần sau, Arkad cho Aggar, một người làm khiên, vay để mua đồng, và nhận tiền lãi đều đặn. Nhưng ông đem tiền lãi đi mở tiệc. Algamish bảo: anh đã ăn mất những đứa con của số tiền tiết kiệm.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Lần sau · bắt đầu lại",
+      "items": [
+       {
+        "icon": "shield",
+        "label": "Aggar, người làm khiên"
+       },
+       {
+        "icon": "coin",
+        "label": "Vay để mua đồng",
+        "cue": "vay để"
+       },
+       {
+        "icon": "coins",
+        "label": "Tiền lãi đều đặn",
+        "cue": "nhận tiền"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "sprout",
+      "motion": "sink",
+      "motion_cue": "ăn mất",
+      "kicker": "Nhưng tiền lãi đem đi mở tiệc",
+      "cue": "nhưng ông",
+      "line": "Ăn mất những đứa con của số tiền.",
+      "line_cue": "algamish"
+     }
+    ]
+   },
+   "sources": [
+    "clason1926",
+    "shortform_arkad",
+    "speakes"
+   ]
+  },
+  {
+   "id": "b08",
+   "act": "story",
+   "narration": "Từ đó, Arkad để tiền lãi tiếp tục sinh lãi. Theo truyện, nhiều năm sau, ông trở thành người giàu nhất thành Babylon. Và Clason gom những điều Arkad học được thành bảy cách chữa một túi tiền lép.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "snowball",
+      "motion": "grow",
+      "kicker": "Từ đó",
+      "line": "Lãi tiếp tục sinh lãi.",
+      "line_cue": "để tiền"
+     },
+     {
+      "type": "icon",
+      "icon": "mountain",
+      "kicker": "Theo truyện, nhiều năm sau",
+      "cue": "nhiều năm",
+      "line": "Người giàu nhất thành Babylon.",
+      "line_cue": "ông trở"
+     },
+     {
+      "type": "icon",
+      "icon": "checklist",
+      "kicker": "Clason gom lại",
+      "cue": "và clason",
+      "line": "Bảy cách chữa túi tiền lép.",
+      "line_cue": "bảy cách"
+     }
+    ]
+   },
+   "sources": [
+    "clason1926",
+    "wiki_book"
+   ]
+  },
+  {
+   "id": "b08b",
+   "act": "story",
+   "narration": "Sách còn có năm quy luật của vàng. Quy luật cuối nói rằng vàng sẽ rời bỏ người ép nó sinh lời viển vông, hay nghe theo lời dụ dỗ của kẻ lừa đảo. Gần một trăm năm sau, câu ấy vẫn đúng với những lời mời lãi cao bất thường.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "coins",
+      "kicker": "Năm quy luật của vàng",
+      "line": "Quy luật cuối cùng.",
+      "line_cue": "quy luật cuối"
+     },
+     {
+      "type": "icon",
+      "icon": "bubble",
+      "motion": "crack",
+      "motion_cue": "lừa đảo",
+      "kicker": "Vàng rời bỏ người",
+      "cue": "vàng sẽ",
+      "line": "Ép tiền sinh lời viển vông.",
+      "line_cue": "ép nó"
+     },
+     {
+      "type": "icon",
+      "icon": "shield",
+      "kicker": "Gần một trăm năm sau",
+      "cue": "gần một",
+      "line": "Cẩn thận lời mời lãi cao bất thường.",
+      "line_cue": "vẫn đúng"
+     }
+    ]
+   },
+   "sources": [
+    "clason1926",
+    "wiki_book"
+   ]
+  },
+  {
+   "id": "b09",
+   "act": "principle",
+   "narration": "Bài học thứ nhất: trả cho mình trước. Đừng chờ cuối tháng xem còn dư bao nhiêu. Ngay khi nhận tiền, để riêng một phần. Con số một phần mười trong truyện là một mốc dễ nhớ, không phải một con số thần kỳ.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "lock",
+      "kicker": "Bài học 1",
+      "line": "Trả cho mình trước.",
+      "line_cue": "trả cho"
+     },
+     {
+      "type": "swap",
+      "kicker": "Đổi thứ tự",
+      "cue": "đừng chờ",
+      "strike_cue": "ngay khi",
+      "from": {
+       "label": "Chờ cuối tháng còn dư",
+       "icon": "hourglass"
+      },
+      "to": {
+       "label": "Để riêng ngay khi nhận",
+       "icon": "coins",
+       "cue": "ngay khi"
+      }
+     },
+     {
+      "type": "icon",
+      "icon": "compass",
+      "kicker": "1/10 trong truyện",
+      "cue": "con số",
+      "line": "Một mốc dễ nhớ, không phải phép màu.",
+      "line_cue": "một mốc"
+     }
+    ]
+   },
+   "sources": [
+    "clason1926"
+   ]
+  },
+  {
+   "id": "b10",
+   "act": "principle",
+   "narration": "Bài học thứ hai: hỏi đúng người. Algamish hỏi Arkad: sao lại tin một người thợ gạch hiểu về đá quý? Trước khi giao tiền, hãy hỏi: người này đã thật sự làm việc ấy, và chịu rủi ro của nó chưa?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "people",
+      "kicker": "Bài học 2",
+      "line": "Hỏi đúng người.",
+      "line_cue": "hỏi đúng"
+     },
+     {
+      "type": "swap",
+      "kicker": "Algamish hỏi",
+      "cue": "algamish",
+      "strike_cue": "trước khi",
+      "from": {
+       "label": "Thợ gạch bàn đá quý",
+       "icon": "mask"
+      },
+      "to": {
+       "label": "Người đã làm thật",
+       "icon": "compass",
+       "cue": "người này"
+      }
+     }
+    ]
+   },
+   "sources": [
+    "clason1926",
+    "shortform_arkad"
+   ]
+  },
+  {
+   "id": "b11",
+   "act": "principle",
+   "narration": "Bài học thứ ba: để tiền đẻ ra tiền. Tiền lãi là những đứa con của số tiền bạn để dành. Tiêu nó đi, bạn mất cả những đứa cháu sau này. Đó chính là lãi kép, kể bằng ngôn ngữ của Babylon.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "sprout",
+      "kicker": "Bài học 3",
+      "line": "Để tiền đẻ ra tiền.",
+      "line_cue": "để tiền"
+     },
+     {
+      "type": "trio",
+      "kicker": "Một gia đình đồng tiền",
+      "cue": "tiền lãi",
+      "items": [
+       {
+        "icon": "coin",
+        "label": "Tiền để dành"
+       },
+       {
+        "icon": "coins",
+        "label": "Con: tiền lãi",
+        "cue": "những đứa con"
+       },
+       {
+        "icon": "snowball",
+        "label": "Cháu: lãi của lãi",
+        "cue": "đứa cháu"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "snowball",
+      "motion": "grow",
+      "kicker": "Đó chính là",
+      "cue": "đó chính",
+      "line": "Lãi kép, kể theo kiểu Babylon.",
+      "line_cue": "lãi kép"
+     }
+    ]
+   },
+   "sources": [
+    "clason1926",
+    "speakes"
+   ]
+  },
+  {
+   "id": "b12",
+   "act": "complication",
+   "narration": "Cuốn sách cũng có giới hạn. Nó được viết từ năm một nghìn chín trăm hai mươi sáu, trước cả quỹ chỉ số. Cho một người làm khiên vay là một khoản cược dồn vào một người. Và một truyện ngụ ngôn hay chưa chứng minh được điều gì: nó chỉ giúp ta nhớ.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Giới hạn của cuốn sách",
+      "items": [
+       {
+        "icon": "hourglass",
+        "label": "Viết năm 1926"
+       },
+       {
+        "icon": "haystack",
+        "label": "Trước cả quỹ chỉ số",
+        "cue": "trước cả"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "target",
+      "kicker": "Cho một người làm khiên vay",
+      "cue": "cho một",
+      "line": "Một khoản cược dồn vào một người.",
+      "line_cue": "một khoản"
+     },
+     {
+      "type": "icon",
+      "icon": "book",
+      "kicker": "Truyện ngụ ngôn",
+      "cue": "và một",
+      "line": "Không chứng minh, chỉ giúp nhớ.",
+      "line_cue": "nó chỉ"
+     }
+    ]
+   },
+   "sources": [
+    "wiki_book",
+    "wiki_index",
+    "clason1926"
+   ]
+  },
+  {
+   "id": "b13",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Bạn nhận lương, trả tiền nhà, tiền ăn, rồi định cuối tháng còn bao nhiêu thì để dành bấy nhiêu. Theo Arkad, nên làm gì?",
+   "visual": {
+    "type": "question",
+    "question": "Nhận lương, chi tiêu, cuối tháng còn gì để nấy. Theo Arkad, nên làm gì?",
+    "choices": [
+     "Giữ nguyên: còn gì để nấy",
+     "Để riêng một phần ngay khi nhận lương",
+     "Chờ lương cao hơn rồi tính"
+    ],
+    "answer": "B — trả cho mình trước.",
+    "think_seconds": 5
+   }
+  },
+  {
+   "id": "b14",
+   "act": "recap",
+   "narration": "Vậy là ba bài học từ Người Giàu Có Nhất Thành Babylon. Trả cho mình trước. Hỏi đúng người. Và để tiền đẻ ra tiền.",
+   "visual": {
+    "type": "list",
+    "title": "Ba bài học",
+    "check": true,
+    "items": [
+     {
+      "text": "Trả cho mình trước",
+      "cue": "trả"
+     },
+     {
+      "text": "Hỏi đúng người",
+      "cue": "hỏi"
+     },
+     {
+      "text": "Để tiền đẻ ra tiền",
+      "cue": "và để"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b15",
+   "act": "close",
+   "narration": "Arkad không có thật. Nhưng một năm tiết kiệm mất vào tay một người thợ gạch thì ai cũng có thể gặp. Câu hỏi của Clason vẫn còn nguyên: trong mỗi đồng bạn kiếm được, phần nào là của bạn để giữ?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "mask",
+      "kicker": "Arkad không có thật",
+      "line": "Nhưng sai lầm ấy thì có.",
+      "line_cue": "nhưng một"
+     },
+     {
+      "type": "icon",
+      "icon": "people",
+      "kicker": "Một năm tiết kiệm, mất sạch",
+      "cue": "thì ai",
+      "line": "Ai cũng có thể gặp."
+     },
+     {
+      "type": "icon",
+      "icon": "coin",
+      "kicker": "Câu hỏi của Clason",
+      "cue": "câu hỏi",
+      "line": "Phần nào là của bạn để giữ?",
+      "line_cue": "trong mỗi"
+     }
+    ]
+   },
+   "sources": [
+    "clason1926"
+   ]
+  },
+  {
+   "id": "b16",
+   "act": "close",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
+   "visual": {
+    "type": "end",
+    "kicker": "Review sách · Tập 22",
+    "title": "Người Giàu Có Nhất Thành Babylon",
+    "ask": "Bạn muốn clip tiếp theo về cuốn sách nào?",
+    "ask_hint": "Một cuốn sách · một nhà đầu tư · một chủ đề",
+    "ask_cue": "còn bạn",
+    "sources_line": "Nguồn: Clason, The Richest Man in Babylon (1926; truyện ngụ ngôn) · Wikipedia · xem mô tả",
+    "disclaimer": "Nội dung giáo dục, tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư.",
+    "sources_cue": "còn bạn"
+   }
+  }
+ ],
+ "pronounce": {}
+}

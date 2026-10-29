@@ -1,0 +1,841 @@
+{
+ "meta": {
+  "series": "Review sách · Tập 13",
+  "title": "Sự Thật Về Thế Giới",
+  "subtitle": "Factfulness — Hans Rosling (2018)",
+  "topic": "books",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt thích đọc sách, muốn đọc tin tức và số liệu tỉnh táo hơn, không hoảng hốt cũng không chủ quan",
+  "aspect": "4:3",
+  "target_minutes": [
+   3,
+   5
+  ],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
+  "learning_goals": [
+   "Kể lại bài kiểm tra mười hai câu của Gapminder (người trả lời đúng khoảng 2/12, chọn bừa được 4/12) và câu chuyện chốt chặn đường ở Nacala năm 1981 như Rosling kể",
+   "Giải thích ba thói quen: tìm phần đông ở giữa, vừa tệ vừa đang tốt hơn, thấy gấp hãy chậm lại",
+   "Tách mức độ và xu hướng khi đọc một tin dữ, và biết sách bị phê bình ở đâu"
+  ],
+  "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư.",
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người dẫn chương trình sách lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively. Measured with Whisper on 12 names: Vietnamese respellings scored 0.76, original spelling 0.95.",
+  "brief": {
+   "target_viewer": "Người Việt 20–40 tuổi, đọc tin hằng ngày, thích sách tư duy, hay cảm thấy thế giới đang tệ đi; có thể chưa nghe tên Hans Rosling hay Gapminder (giả định của người viết, chủ kênh xác nhận lại)",
+   "format": "Phân tích sách (book analysis), khoảng 4,5 phút, 4:3, minh họa icon vẽ tay, một giọng đọc",
+   "central_question": "Vì sao phần lớn chúng ta trả lời về thế giới còn kém hơn chọn bừa, và làm sao đọc tin tức mà không bị nỗi sợ dắt đi?",
+   "transformation": "Trước khi xem, họ tin thế giới chia đôi giàu–nghèo và đang tệ đi, và nghĩ cứ có tin là đủ hiểu. Sau khi xem, họ kể lại được bài kiểm tra của Gapminder và sai lầm chốt chặn đường của chính Rosling ở Nacala, dùng được ba thói quen (tìm phần đông ở giữa; vừa tệ vừa đang tốt hơn; thấy gấp hãy chậm lại), và biết sách bị phê bình là quá lạc quan ở đâu",
+   "discovery_goal": "Tìm kiếm (\"Factfulness\", \"Hans Rosling\", \"Sự thật về thế giới\", \"Gapminder\", \"tư duy dựa trên dữ kiện\", \"thiên kiến tiêu cực\") và đề xuất từ video sách tư duy; khán giả tập 2 (Kahneman), tập 7 (Tetlock), tập 11 (Galef)",
+   "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn clip tiếp theo về cuốn sách nào?\" (lựa chọn của chủ kênh)",
+   "share_recipient": "Một người bạn hay người thân đang lo lắng vì tin tức, hoặc hay chia sẻ tin 'thế giới ngày càng tệ': em bé trong lồng ấp và câu hỏi 'con số này hai mươi năm trước là bao nhiêu?' cho hai người một cách nói chuyện không phải cãi nhau",
+   "evidence": "Rosling, Rosling & Rosling Rönnlund 2018 (ch. 1 gap instinct, ch. 2 negativity instinct, ch. 10 urgency instinct, phần năm rủi ro toàn cầu); Gapminder Misconception Study 2017 và kết quả câu 3; WEF và Wikipedia (tiểu sử Rosling, Nacala 1979–81, konzo, tiến sĩ 1986); NZ Herald (Anna Rosling Rönnlund kể chuyện chốt chặn đường); Cato Regulation 2018 (bốn mức thu nhập); Nature 2018 (năm rủi ro); Gapminder history (thành lập 2005); In These Times và Current Affairs (phê bình); bản tiếng Việt NXB Trẻ 2019",
+   "constraints": "4–5 phút, 4:3, icon vẽ (không footage, không khuôn mặt người thật), một giọng đọc OmniVoice seed 99 speed 0.88, tên tiếng Anh giữ nguyên chính tả, số đọc bằng chữ, không khuyến nghị đầu tư, giữ lời miễn trừ; kể chuyện thuyền lật ở Nacala nhẹ nhàng, không chi tiết gây sốc"
+  },
+  "youtube": {
+   "title": "Vì sao ta hiểu thế giới kém hơn chọn bừa? | Factfulness – Hans Rosling",
+   "thumbnail_text": "Factfulness · 2017 · Người: 2/12 · chọn bừa: 4/12",
+   "description": "Năm 2017, Gapminder hỏi khoảng 12.000 người ở 14 nước mười hai câu về thế giới. Trung bình mỗi người đúng khoảng hai câu. Chọn bừa (như một con tinh tinh) sẽ đúng bốn. Trong Factfulness (Sự Thật Về Thế Giới), Hans Rosling viết cùng Ola Rosling và Anna Rosling Rönnlund, giải thích vì sao: ta không thiếu tin tức, mà có những bản năng khiến ta đọc sai. Video kể lại câu hỏi về nghèo cùng cực, sai lầm chốt chặn đường của chính Rosling ở Nacala, Mozambique năm 1981, ba thói quen (tìm phần đông ở giữa; vừa tệ, vừa đang tốt hơn; thấy gấp, hãy chậm lại), lời phê bình rằng sách quá lạc quan, và một bài tập nhỏ khi bạn đọc một tin dữ.\n\nTóm tắt và cảm nhận cá nhân; nội dung giáo dục, không phải lời khuyên đầu tư. Bốn mức thu nhập là con số làm tròn trong sách (khoảng 1–3–2–1 tỷ người).\n\nChương:\n- 12 câu hỏi: người đúng 2, chọn bừa đúng 4\n- Ta không thiếu tin, ta đọc sai\n- Hans Rosling và Factfulness\n- Câu hỏi về nghèo cùng cực\n- Nacala, 1981: một căn bệnh lạ\n- Chốt chặn đường và những chiếc thuyền\n- Konzo: không phải bệnh lây\n- Gapminder\n- Bài học 1: tìm phần đông ở giữa\n- Bài học 2: vừa tệ, vừa đang tốt hơn\n- Bài học 3: thấy gấp, hãy chậm lại\n- Sách có quá lạc quan?\n- Thử một chút: đọc một tin dữ\n- Ba bài học\n\nNguồn:\n- Hans Rosling, Ola Rosling, Anna Rosling Rönnlund, Factfulness: Ten Reasons We're Wrong About the World – and Why Things Are Better Than You Think, Flatiron Books, 2018 (bản tiếng Việt: Sự Thật Về Thế Giới, NXB Trẻ, 2019)\n- Gapminder Misconception Study 2017: https://www.gapminder.org/ignorance/studies/gms/\n- Gapminder, kết quả câu hỏi về nghèo cùng cực: https://www.gapminder.org/ignorance/ignorance-test/results/question-3/\n- NZ Herald, Why you're wrong about the world: https://nzherald.co.nz/lifestyle/why-youre-wrong-about-the-world/GSQRLGDQRP3XNAXOYIUL24JVNE\n- Cato Institute, Regulation (Fall 2018), Challenging Our Grim Biases: https://www.cato.org/regulation/fall-2018/factfulness\n- Nature (2018), review of Factfulness: https://www.nature.com/articles/d41586-018-03921-y\n- World Economic Forum, Hans Rosling: https://www.weforum.org/people/hans-rosling\n- In These Times, Why You Shouldn't Listen to Self-Serving Optimists: https://inthesetimes.com/article/new-optimists-bill-gates-steven-pinker-hans-rosling-world-health\n\nBạn muốn clip tiếp theo về cuốn sách nào? Để lại bình luận nhé.",
+   "tags": [
+    "Factfulness",
+    "Hans Rosling",
+    "Sự thật về thế giới",
+    "Gapminder",
+    "Ola Rosling",
+    "Anna Rosling Rönnlund",
+    "tư duy dựa trên dữ kiện",
+    "thiên kiến tiêu cực",
+    "đọc tin tức",
+    "tư duy phản biện",
+    "review sách",
+    "tóm tắt sách",
+    "sách tư duy"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "rosling2018",
+   "cite": "Hans Rosling, Ola Rosling, Anna Rosling Rönnlund, Factfulness: Ten Reasons We're Wrong About the World – and Why Things Are Better Than You Think, Flatiron Books / Sceptre, 3 Apr 2018 (Introduction: the chimpanzee test; ch. 1 The Gap Instinct, four income levels; ch. 2 The Negativity Instinct, 'bad and better', the premature baby in the incubator; ch. 10 The Urgency Instinct, Nacala 1981, the roadblock and the capsized boats, 'insist on the data', 'be wary of drastic action'; the five global risks)"
+  },
+  {
+   "id": "gms2017",
+   "cite": "Gapminder Misconception Study 2017: about 12,000 people in 14 countries; average 2.2 correct of the first 12 questions; random guessing ('chimps') scores 4 of 12; only 10% beat random; question 13 (climate) not scored",
+   "url": "https://www.gapminder.org/ignorance/studies/gms/"
+  },
+  {
+   "id": "gm_q3",
+   "cite": "Gapminder, results for the extreme-poverty question ('In the last 20 years, the proportion of the world population living in extreme poverty has… almost doubled / remained more or less the same / almost halved'; correct: almost halved; on average 9% chose it)",
+   "url": "https://www.gapminder.org/ignorance/ignorance-test/results/question-3/"
+  },
+  {
+   "id": "rosling_bio",
+   "cite": "Hans Rosling (27/28 Jul 1948 – 7 Feb 2017): District Medical Officer, Nacala, Mozambique, 1979–81 (World Economic Forum profile); konzo investigation from Aug 1981, konzo linked to cassava with high cyanide intake among hunger-stricken populations, PhD Uppsala 1986; professor of international health, Karolinska Institutet; died of pancreatic cancer (Wikipedia 'Hans Rosling')",
+   "url": "https://www.weforum.org/people/hans-rosling"
+  },
+  {
+   "id": "nzherald",
+   "cite": "NZ Herald, 'Why you're wrong about the world' (interview with Anna Rosling Rönnlund, 2018): Rosling agreed with the mayor that a roadblock was a good idea; women and children drowned trying to get around it by boat; a story he had not told before the book",
+   "url": "https://nzherald.co.nz/lifestyle/why-youre-wrong-about-the-world/GSQRLGDQRP3XNAXOYIUL24JVNE"
+  },
+  {
+   "id": "cato2018",
+   "cite": "Cato Institute, Regulation (Fall 2018), 'Challenging Our Grim Biases' (review of Factfulness): Level 1 ≈ 1 billion people (≤ $2/day), Level 2 ≈ 3 billion ($2–8), Level 3 ≈ 2 billion ($8–32), Level 4 ≈ 1 billion (≥ $32)",
+   "url": "https://www.cato.org/regulation/fall-2018/factfulness"
+  },
+  {
+   "id": "nature2018",
+   "cite": "Nature (2018), review of Factfulness: the five risks Rosling says we should worry about: global pandemic, financial collapse, world war, climate change, extreme poverty",
+   "url": "https://www.nature.com/articles/d41586-018-03921-y"
+  },
+  {
+   "id": "gapminder_hist",
+   "cite": "Gapminder, 'History': founded in Stockholm on 25 Feb 2005 by Ola Rosling, Anna Rosling Rönnlund and Hans Rosling",
+   "url": "https://gapminder.org/about/about-gapminder/history"
+  },
+  {
+   "id": "critics",
+   "cite": "Criticism: In These Times, 'Why You Shouldn't Listen to Self-Serving Optimists Like Hans Rosling and Steven Pinker' (downplays biodiversity loss; GDP-based income measures); Current Affairs, 'Why Factfulness Cannot Save Us' (May 2021)",
+   "url": "https://inthesetimes.com/article/new-optimists-bill-gates-steven-pinker-hans-rosling-world-health"
+  },
+  {
+   "id": "vn_edition",
+   "cite": "Bản tiếng Việt 'Factfulness – Sự Thật Về Thế Giới', NXB Trẻ, 2019, dịch: Trần Thị Kim Chi, Hà Kim Ngân (review naraujapan.com; thông tin xuất bản yds.edu.vn)",
+   "url": "https://naraujapan.com/hoc-tu-sach/review-sach-factfulness-lieu-the-gioi-co-toi-te-nhu-ban-dang-nghi/"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Tìm phần đông ở giữa",
+   "line": "Thế giới không chia đôi giàu–nghèo: hãy hỏi phần lớn mọi người thật sự đang ở đâu."
+  },
+  {
+   "name": "Vừa tệ, vừa đang tốt hơn",
+   "line": "Tách mức độ (còn tệ) khỏi xu hướng (đang khá lên): cả hai có thể cùng đúng."
+  },
+  {
+   "name": "Thấy gấp, hãy chậm lại",
+   "line": "Khi ai đó bảo phải làm ngay, hãy đòi số liệu và hỏi hậu quả của chính hành động ấy."
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Mười hai câu hỏi về thế giới. Người ta chỉ đúng khoảng hai câu. Chọn bừa: đúng bốn.",
+   "visual": {
+    "type": "icon",
+    "icon": "dice",
+    "kicker": "Factfulness · 2017 · 12.000 người",
+    "line": "Người: 2/12 · chọn bừa: 4/12",
+    "motion": "shake",
+    "motion_cue": "chọn bừa"
+   },
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "bốn",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "gms2017",
+    "rosling2018"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Hans Rosling gọi đó là bài kiểm tra tinh tinh. Theo ông, ta không sai vì kém hiểu biết. Ta sai theo cùng một hướng: nghĩ thế giới tệ hơn thực tế. Và câu chuyện hôm nay bắt đầu bằng một sai lầm của chính ông, ở Mozambique, năm một nghìn chín trăm tám mươi mốt. Cuối clip, bạn sẽ có ba thói quen để nhìn đúng hơn.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Bài kiểm tra tinh tinh",
+      "items": [
+       {
+        "icon": "dice",
+        "label": "Tinh tinh: chọn bừa"
+       },
+       {
+        "icon": "brain",
+        "label": "Không phải kém hiểu biết",
+        "cue": "kém hiểu"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "eye",
+      "kicker": "Cùng một hướng sai",
+      "line": "Thấy tệ hơn thực tế",
+      "cue": "ta sai"
+     },
+     {
+      "type": "icon",
+      "icon": "mirror",
+      "kicker": "Mozambique · 1981",
+      "line": "Sai lầm của chính tác giả",
+      "cue": "và câu"
+     },
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Cuối clip",
+      "line": "Ba thói quen để nhìn đúng hơn",
+      "cue": "cuối clip"
+     }
+    ]
+   },
+   "sources": [
+    "rosling2018",
+    "gms2017"
+   ]
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Review sách · Tập 13",
+    "title": "Sự Thật Về Thế Giới",
+    "subtitle": "Factfulness — Hans Rosling (2018)",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ],
+   "sources": [
+    "rosling2018"
+   ]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Ta hay nghĩ thế giới chia làm hai: nước giàu và nước nghèo, và mọi thứ đang tệ đi. Rosling cho rằng ta không thiếu tin tức. Ta mang theo mười bản năng, khiến ta đọc sai chính những gì mình thấy.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Điều ta hay tin",
+      "items": [
+       {
+        "icon": "coins",
+        "label": "Nước giàu"
+       },
+       {
+        "icon": "coin",
+        "label": "Nước nghèo",
+        "cue": "nước nghèo"
+       }
+      ],
+      "line": "Và mọi thứ đang tệ đi.",
+      "line_cue": "mọi thứ"
+     },
+     {
+      "type": "swap",
+      "kicker": "Hans Rosling",
+      "cue": "rosling cho",
+      "from": {
+       "label": "Thiếu tin tức",
+       "icon": "letter"
+      },
+      "to": {
+       "label": "Mười bản năng đọc sai",
+       "icon": "brain",
+       "cue": "mười bản"
+      }
+     }
+    ]
+   },
+   "sources": [
+    "rosling2018"
+   ]
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "Rosling là bác sĩ, giáo sư y tế quốc tế người Thụy Điển. Ông viết sách cùng con trai Ola và con dâu Anna. Ông mất tháng hai năm hai nghìn mười bảy, trước khi sách ra đời. Ở Việt Nam, sách có tên Sự Thật Về Thế Giới.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Hans Rosling",
+      "initials": "HR",
+      "role": "Bác sĩ · giáo sư y tế quốc tế",
+      "years": "1948 – 2017"
+     },
+     {
+      "type": "book",
+      "title": "Sự Thật Về Thế Giới",
+      "author": "Hans · Ola · Anna Rosling",
+      "year": "2018",
+      "kicker": "Factfulness",
+      "cue": "ông viết",
+      "facts": [
+       {
+        "big": "3",
+        "text": "Ba tác giả, một gia đình",
+        "cue": "con trai"
+       },
+       {
+        "big": "2018",
+        "text": "Ra đời sau khi ông mất",
+        "cue": "ông mất"
+       },
+       {
+        "big": "VN",
+        "text": "NXB Trẻ · 2019",
+        "cue": "ở việt"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "rosling_bio",
+    "rosling2018",
+    "vn_edition"
+   ]
+  },
+  {
+   "id": "b03",
+   "act": "story",
+   "narration": "Một câu trong bài kiểm tra: hai mươi năm qua, tỷ lệ người nghèo cùng cực trên thế giới đã thế nào? Gần gấp đôi, giữ nguyên, hay giảm gần một nửa? Đáp án: giảm gần một nửa. Theo Gapminder, trung bình chỉ khoảng chín phần trăm người được hỏi chọn đúng.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "checklist",
+      "kicker": "Câu hỏi về nghèo cùng cực",
+      "line": "20 năm qua: tăng hay giảm?",
+      "line_cue": "hai mươi"
+     },
+     {
+      "type": "trio",
+      "kicker": "Ba lựa chọn",
+      "cue": "gần gấp",
+      "items": [
+       {
+        "icon": "rocket",
+        "label": "Gần gấp đôi"
+       },
+       {
+        "icon": "scale",
+        "label": "Giữ nguyên",
+        "cue": "giữ nguyên"
+       },
+       {
+        "icon": "target",
+        "label": "Giảm gần một nửa",
+        "cue": "hay giảm"
+       }
+      ],
+      "line": "Đáp án: giảm gần một nửa.",
+      "line_cue": "đáp án"
+     },
+     {
+      "type": "stat",
+      "value": 9,
+      "suffix": "%",
+      "label": "chọn đúng · trung bình",
+      "note": "Gapminder · 2017",
+      "cue": "theo gapminder"
+     }
+    ]
+   },
+   "sources": [
+    "gm_q3",
+    "rosling2018"
+   ]
+  },
+  {
+   "id": "b04",
+   "act": "story",
+   "narration": "Giờ quay về năm một nghìn chín trăm bảy mươi chín. Rosling khi ấy còn trẻ, làm bác sĩ huyện ở Nacala, một thành phố cảng phía bắc Mozambique. Năm một nghìn chín trăm tám mươi mốt, một căn bệnh lạ xuất hiện: nhiều người đột nhiên bị liệt chân.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "ship",
+      "kicker": "Nacala · Mozambique · 1979",
+      "line": "Bác sĩ huyện, thành phố cảng",
+      "line_cue": "làm bác"
+     },
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "1981",
+      "line": "Một căn bệnh lạ: liệt chân",
+      "cue": "năm một nghìn chín trăm tám",
+      "line_cue": "một căn"
+     }
+    ]
+   },
+   "sources": [
+    "rosling_bio",
+    "rosling2018"
+   ]
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Chưa biết bệnh có lây hay không, Rosling đồng ý với thị trưởng: dựng chốt, chặn xe buýt vào thành phố. Nghe rất hợp lý. Một bác sĩ thận trọng, một quyết định nhanh.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "lock",
+      "kicker": "Chốt chặn đường",
+      "line": "Chặn xe buýt vào thành phố",
+      "line_cue": "dựng chốt"
+     },
+     {
+      "type": "icon",
+      "icon": "lightning",
+      "kicker": "Nghe rất hợp lý",
+      "line": "Một quyết định nhanh",
+      "cue": "nghe rất",
+      "line_cue": "một bác"
+     }
+    ]
+   },
+   "sources": [
+    "rosling2018",
+    "nzherald"
+   ]
+  },
+  {
+   "id": "b06",
+   "act": "story",
+   "narration": "Nhưng người dân vẫn cần vào thành phố. Không có xe buýt, nhiều phụ nữ và trẻ em lên những chiếc thuyền đánh cá nhỏ để đi đường biển. Thuyền lật. Họ chết đuối. Nhiều năm sau, Rosling mới kể lại chuyện này trong sách, như một sai lầm của chính ông.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "store",
+      "kicker": "Người dân vẫn phải đi",
+      "line": "Vẫn cần vào chợ, vào phố",
+      "line_cue": "vẫn cần"
+     },
+     {
+      "type": "icon",
+      "icon": "ship",
+      "kicker": "Đi vòng bằng đường biển",
+      "line": "Thuyền đánh cá nhỏ",
+      "cue": "không có",
+      "motion": "sink",
+      "motion_cue": "thuyền lật"
+     },
+     {
+      "type": "icon",
+      "icon": "mirror",
+      "kicker": "Rosling kể lại",
+      "line": "Một sai lầm của chính ông",
+      "cue": "nhiều năm"
+     }
+    ]
+   },
+   "sources": [
+    "rosling2018",
+    "nzherald"
+   ]
+  },
+  {
+   "id": "b07",
+   "act": "story",
+   "narration": "Căn bệnh hóa ra không lây. Đó là konzo, do ăn sắn chưa chế biến kỹ trong thời đói kém. Rosling lấy bằng tiến sĩ năm một nghìn chín trăm tám mươi sáu nhờ nghiên cứu nó. Còn cái chốt, hóa ra không cần thiết.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "swap",
+      "kicker": "Hóa ra",
+      "from": {
+       "label": "Bệnh lây",
+       "icon": "people"
+      },
+      "to": {
+       "label": "Konzo: ngộ độc sắn",
+       "icon": "sprout",
+       "cue": "đó là"
+      }
+     },
+     {
+      "type": "icon",
+      "icon": "book",
+      "kicker": "Uppsala · 1986",
+      "line": "Luận án tiến sĩ về konzo",
+      "cue": "rosling lấy"
+     },
+     {
+      "type": "icon",
+      "icon": "lock",
+      "kicker": "Còn cái chốt",
+      "line": "Hóa ra không cần thiết",
+      "cue": "còn cái",
+      "motion": "crack",
+      "motion_cue": "không cần"
+     }
+    ]
+   },
+   "sources": [
+    "rosling_bio",
+    "rosling2018"
+   ]
+  },
+  {
+   "id": "b08",
+   "act": "story",
+   "narration": "Từ đó, Rosling dành nhiều năm đưa số liệu đến với mọi người. Năm hai nghìn lẻ năm, ông cùng Ola và Anna lập quỹ Gapminder ở Stockholm. Bài kiểm tra mười hai câu ở đầu clip là của Gapminder.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "lighthouse",
+      "kicker": "Từ đó",
+      "line": "Đưa số liệu đến mọi người",
+      "line_cue": "đưa số"
+     },
+     {
+      "type": "trio",
+      "kicker": "Gapminder · Stockholm · 2005",
+      "cue": "năm hai",
+      "items": [
+       {
+        "icon": "people",
+        "label": "Hans, Ola, Anna"
+       },
+       {
+        "icon": "checklist",
+        "label": "Bài kiểm tra 12 câu",
+        "cue": "bài kiểm"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "gapminder_hist",
+    "gms2017"
+   ]
+  },
+  {
+   "id": "b09",
+   "act": "principle",
+   "narration": "Bài học thứ nhất: tìm phần đông ở giữa. Rosling chia thế giới thành bốn mức thu nhập, không phải hai. Khoảng một tỷ người ở mức một, ba tỷ ở mức hai, hai tỷ ở mức ba, một tỷ ở mức bốn. Phần đông nhân loại sống ở giữa.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "people",
+      "kicker": "Bài học 1",
+      "line": "Tìm phần đông ở giữa."
+     },
+     {
+      "type": "chart",
+      "title": "Số người theo mức thu nhập (tỷ người, làm tròn)",
+      "cue": "rosling chia",
+      "points": [
+       [
+        "Mức 1",
+        1
+       ],
+       [
+        "Mức 2",
+        3
+       ],
+       [
+        "Mức 3",
+        2
+       ],
+       [
+        "Mức 4",
+        1
+       ]
+      ],
+      "annotations": [
+       {
+        "at": 1,
+        "text": "≈ 3 tỷ",
+        "cue": "ba tỷ"
+       },
+       {
+        "at": 2,
+        "text": "Phần đông ở giữa",
+        "cue": "phần đông"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "rosling2018",
+    "cato2018"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b10",
+   "act": "principle",
+   "narration": "Bài học thứ hai: vừa tệ, vừa đang tốt hơn. Rosling ví thế giới như một em bé sinh non trong lồng ấp. Em còn yếu, nên vẫn phải ở trong lồng. Nhưng mỗi ngày, em một khá hơn. Cả hai điều cùng đúng.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "scale",
+      "kicker": "Bài học 2",
+      "line": "Vừa tệ, vừa đang tốt hơn."
+     },
+     {
+      "type": "trio",
+      "kicker": "Em bé sinh non trong lồng ấp",
+      "cue": "rosling ví",
+      "items": [
+       {
+        "icon": "shield",
+        "label": "Còn yếu: vẫn trong lồng"
+       },
+       {
+        "icon": "sprout",
+        "label": "Mỗi ngày khá hơn",
+        "cue": "mỗi ngày"
+       }
+      ],
+      "line": "Cả hai cùng đúng.",
+      "line_cue": "cả hai"
+     }
+    ]
+   },
+   "sources": [
+    "rosling2018"
+   ]
+  },
+  {
+   "id": "b11",
+   "act": "principle",
+   "narration": "Bài học thứ ba: thấy gấp, hãy chậm lại. Ở Nacala, nỗi sợ khiến một bác sĩ giỏi quyết định quá vội. Rosling khuyên: khi ai đó bảo phải làm ngay, hãy đòi thêm số liệu, và hỏi hậu quả của chính hành động ấy.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "hourglass",
+      "kicker": "Bài học 3",
+      "line": "Thấy gấp, hãy chậm lại."
+     },
+     {
+      "type": "icon",
+      "icon": "lock",
+      "kicker": "Nacala · 1981",
+      "line": "Nỗi sợ, quyết định quá vội",
+      "cue": "ở nacala"
+     },
+     {
+      "type": "swap",
+      "kicker": "Rosling khuyên",
+      "cue": "rosling khuyên",
+      "strike_cue": "hãy đòi",
+      "from": {
+       "label": "Làm ngay",
+       "icon": "lightning"
+      },
+      "to": {
+       "label": "Đòi số liệu, hỏi hậu quả",
+       "icon": "magnifier",
+       "cue": "hỏi hậu"
+      }
+     }
+    ]
+   },
+   "sources": [
+    "rosling2018"
+   ]
+  },
+  {
+   "id": "b12",
+   "act": "complication",
+   "narration": "Nhưng sách cũng gây tranh cãi. Có người cho rằng Rosling quá lạc quan, nói nhẹ về mất đa dạng sinh học và bất bình đẳng. Công bằng mà nói, chính ông liệt kê năm rủi ro mình lo nhất: đại dịch toàn cầu, khủng hoảng tài chính, chiến tranh thế giới, biến đổi khí hậu, và nghèo cùng cực.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Lời phê bình",
+      "line": "Quá lạc quan?",
+      "line_cue": "quá lạc"
+     },
+     {
+      "type": "trio",
+      "kicker": "5 rủi ro ông lo nhất",
+      "cue": "công bằng",
+      "items": [
+       {
+        "icon": "people",
+        "label": "Đại dịch toàn cầu"
+       },
+       {
+        "icon": "bubble",
+        "label": "Khủng hoảng tài chính",
+        "cue": "khủng hoảng"
+       },
+       {
+        "icon": "wave",
+        "label": "Biến đổi khí hậu",
+        "cue": "biến đổi"
+       },
+       {
+        "icon": "coin",
+        "label": "Nghèo cùng cực",
+        "cue": "và nghèo"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "critics",
+    "nature2018",
+    "rosling2018"
+   ],
+   "certainty": "disputed"
+  },
+  {
+   "id": "b13",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Một bài báo viết: thế giới vẫn còn hàng trăm triệu người nghèo cùng cực. Bạn của bạn kết luận: mọi thứ đang tệ đi. Theo Rosling, câu nên hỏi đầu tiên là gì?",
+   "visual": {
+    "type": "question",
+    "question": "Tin: “Vẫn còn hàng trăm triệu người nghèo cùng cực.” Hỏi gì trước?",
+    "choices": [
+     "Ai phải chịu trách nhiệm?",
+     "Hai mươi năm trước, con số này là bao nhiêu?",
+     "Phải hành động ngay thế nào?"
+    ],
+    "answer": "B — tách mức độ và xu hướng: vừa tệ, vừa có thể đang tốt hơn",
+    "think_seconds": 5
+   }
+  },
+  {
+   "id": "b14",
+   "act": "recap",
+   "narration": "Vậy là ba bài học từ Sự Thật Về Thế Giới. Tìm phần đông ở giữa. Vừa tệ, vừa đang tốt hơn. Và thấy gấp, hãy chậm lại.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "book",
+      "kicker": "Sự Thật Về Thế Giới",
+      "line": "Ba bài học."
+     },
+     {
+      "type": "list",
+      "title": "Ba bài học",
+      "check": true,
+      "cue": "tìm phần",
+      "items": [
+       {
+        "text": "Tìm phần đông ở giữa",
+        "cue": "tìm phần"
+       },
+       {
+        "text": "Vừa tệ, vừa đang tốt hơn",
+        "cue": "vừa tệ"
+       },
+       {
+        "text": "Thấy gấp, hãy chậm lại",
+        "cue": "và thấy"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b15",
+   "act": "close",
+   "narration": "Con tinh tinh trong bài kiểm tra không biết gì về thế giới. Nó chỉ không mang theo nỗi sợ nào, nên không sai theo một hướng. Rosling không đòi ta lạc quan hơn. Ông chỉ mong ta nhìn đúng hơn. Lần tới gặp một tin dữ, bạn sẽ hỏi gì?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "dice",
+      "kicker": "Tinh tinh chọn bừa",
+      "line": "Không biết, nhưng cũng không sợ",
+      "line_cue": "nó chỉ"
+     },
+     {
+      "type": "swap",
+      "kicker": "Điều Rosling mong",
+      "cue": "rosling không",
+      "from": {
+       "label": "Lạc quan hơn",
+       "icon": "star"
+      },
+      "to": {
+       "label": "Nhìn đúng hơn",
+       "icon": "eye",
+       "cue": "nhìn đúng"
+      }
+     },
+     {
+      "type": "icon",
+      "icon": "letter",
+      "kicker": "Lần tới gặp một tin dữ",
+      "line": "Bạn sẽ hỏi gì?",
+      "cue": "lần tới"
+     }
+    ]
+   },
+   "sources": [
+    "rosling2018",
+    "gms2017"
+   ]
+  },
+  {
+   "id": "b16",
+   "act": "close",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
+   "visual": {
+    "type": "end",
+    "kicker": "Review sách · Tập 13",
+    "title": "Sự Thật Về Thế Giới",
+    "ask": "Bạn muốn clip tiếp theo về cuốn sách nào?",
+    "ask_hint": "Một cuốn sách · một nhà tư duy · một chủ đề",
+    "ask_cue": "còn bạn",
+    "sources_line": "Nguồn: Rosling, Factfulness (2018) · Gapminder (2017) · NZ Herald · Nature · xem mô tả",
+    "disclaimer": "Tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư.",
+    "sources_cue": "còn bạn"
+   }
+  }
+ ],
+ "pronounce": {}
+}

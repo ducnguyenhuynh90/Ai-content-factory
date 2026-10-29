@@ -1,0 +1,785 @@
+{
+ "meta": {
+  "series": "Review sách · Tập 14",
+  "title": "Thuyết Phục Bằng Tâm Lý",
+  "subtitle": "Influence — Robert B. Cialdini (1984)",
+  "topic": "books",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt thích đọc sách, muốn hiểu vì sao mình dễ bị thuyết phục khi mua sắm, đầu tư hay ra quyết định",
+  "aspect": "4:3",
+  "target_minutes": [
+   3,
+   5
+  ],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
+  "learning_goals": [
+   "Kể lại câu chuyện cửa hàng trang sức ở Arizona (theo lời Cialdini) và hành trình gần ba năm 'nằm vùng' của Cialdini trong các nghề thuyết phục",
+   "Gọi tên sáu nguyên tắc (và nguyên tắc thứ bảy, đồng lòng, trong bản 2021) và dùng ba cách tự vệ: nhận quà, đừng nhận nợ; đám đông không phải bằng chứng; hiếm chưa chắc đã ngon",
+   "Biết giới hạn của sách: vụ Kitty Genovese bị thổi phồng, và các tranh luận về lặp lại nghiên cứu"
+  ],
+  "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư.",
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người dẫn chương trình sách lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively. Measured with Whisper on 12 names: Vietnamese respellings scored 0.76, original spelling 0.95.",
+  "brief": {
+   "target_viewer": "Người Việt 20–40 tuổi, mua sắm online, hay gặp 'chỉ còn 3 suất', livestream bán hàng, lời mời đầu tư từ người quen; tin rằng mình đủ tỉnh táo để không bị dụ (giả định của người viết, chủ kênh xác nhận lại)",
+   "format": "Phân tích sách (book analysis), khoảng 4,5 phút, 4:3, minh họa icon vẽ tay, một giọng đọc",
+   "central_question": "Vì sao cả người tỉnh táo cũng nói 'có' với những lời mời mà sau đó họ hối hận, và làm sao nhận ra lúc ấy?",
+   "transformation": "Trước khi xem, họ nghĩ chỉ người cả tin mới bị thuyết phục. Sau khi xem, họ hiểu 'lối tắt' click, whirr qua câu chuyện cửa hàng ở Arizona và hành trình nằm vùng của Cialdini, gọi tên sáu (bảy) nguyên tắc, dùng được ba cách tự vệ, và biết phần nào của sách đang bị tranh luận",
+   "discovery_goal": "Tìm kiếm (\"Influence\", \"Robert Cialdini\", \"Thuyết phục bằng tâm lý\", \"6 nguyên tắc thuyết phục\", \"tâm lý học thuyết phục\", \"bằng chứng xã hội\", \"khan hiếm\") và đề xuất từ video sách tư duy; khán giả tập 2 (Kahneman), tập 6 (Annie Duke), tập 11 (Galef)",
+   "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn clip tiếp theo về cuốn sách nào?\" (lựa chọn của chủ kênh)",
+   "share_recipient": "Một người thân hay mua theo livestream, hoặc một người bạn đang được mời vào một 'cơ hội' mà 'ai cũng tham gia': câu hỏi 'không có sắp hết, mình có mua không?' là cách nhắc nhẹ, không phán xét",
+   "evidence": "Cialdini 1984 / 2021 (ch. 1 turquoise jewelry and click, whirr; introduction 'patsy' and undercover research; reciprocation and Hare Krishna; social proof and Genovese; scarcity and the cookie study; defenses); ASU W. P. Carey News 2021 (unity, 5 million copies); NPR 2012 (Hare Krishna airports); Worchel, Lee & Adewole 1975; Manning, Levine & Collins 2007; Genschow et al. 2021; bản tiếng Việt Alpha Books 2008",
+   "constraints": "4–5 phút, 4:3, icon vẽ (không footage, không khuôn mặt người thật), một giọng đọc OmniVoice seed 99 speed 0.88, tên tiếng Anh giữ nguyên chính tả, số đọc bằng chữ, không khuyến nghị đầu tư, giữ lời miễn trừ; chuyện Arizona chỉ có trong lời kể của Cialdini, nói rõ trên sóng"
+  },
+  "youtube": {
+   "title": "Vì sao người tỉnh táo vẫn bị thuyết phục? | Influence – Robert Cialdini",
+   "thumbnail_text": "Giảm nửa giá: ế · Đọc nhầm gấp đôi: bán sạch",
+   "description": "Theo lời Robert Cialdini kể, một cửa hàng ở Arizona giảm nửa giá một tủ trang sức mà vẫn không bán được; nhân viên đọc nhầm ghi chú thành gấp đôi, và tủ trang sức bán sạch. Khách không ngốc: họ dùng một lối tắt, đắt thì chắc là tốt. Influence (Thuyết Phục Bằng Tâm Lý) kể gần ba năm Cialdini giấu danh tính đi học nghề bán hàng, gây quỹ, quảng cáo, và sáu nguyên tắc ông rút ra (bản 2021 thêm nguyên tắc thứ bảy: đồng lòng). Video đi qua ba cách tự vệ (nhận quà, đừng nhận nợ; đám đông không phải bằng chứng; hiếm chưa chắc đã ngon), những phần của sách đang bị tranh luận (vụ Kitty Genovese, các thí nghiệm cũ được lặp lại), và một bài tập nhỏ ở hội chợ.\n\nTóm tắt và cảm nhận cá nhân; nội dung giáo dục, không phải lời khuyên đầu tư. Chuyện cửa hàng ở Arizona là lời kể của Cialdini, chưa có nguồn độc lập.\n\nChương:\n- Giảm nửa giá thì ế, gấp đôi thì bán sạch\n- Chỉ người cả tin mới bị dụ?\n- Robert Cialdini và Influence\n- Gần ba năm nằm vùng\n- Click, whirr: lối tắt trong đầu\n- Sáu nguyên tắc, và nguyên tắc thứ bảy\n- Bông hoa ở sân bay\n- Bài học 1: nhận quà, đừng nhận nợ\n- Bài học 2: đám đông không phải bằng chứng\n- Bài học 3: hiếm chưa chắc đã ngon\n- 38 nhân chứng: con số bị thổi phồng\n- Những thí nghiệm cũ có còn đứng vững?\n- Thử một chút: ở hội chợ\n- Ba bài học\n\nNguồn:\n- Robert B. Cialdini, Influence: The Psychology of Persuasion, 1984; New and Expanded edition, Harper Business, 2021 (bản tiếng Việt: Thuyết Phục Bằng Tâm Lý, Alpha Books)\n- ASU W. P. Carey News, The 'Godfather of Influence' has a new way to be more persuasive (2021): https://news.wpcarey.asu.edu/20210510-godfather-influence-has-new-way-be-more-persuasive\n- NPR, Give And Take: How The Rule Of Reciprocation Binds Us (2012): https://www.npr.org/sections/health-shots/2012/11/26/165570502/give-and-take-how-the-rule-of-reciprocation-binds-us\n- Worchel, Lee & Adewole, Effects of supply and demand on ratings of object value, JPSP 32(5), 1975\n- Manning, Levine & Collins, The Kitty Genovese murder and the social psychology of helping, American Psychologist 62, 2007: https://bps.org.uk/research-digest/truth-behind-story-kitty-genovese-and-bystander-effect\n- Genschow et al., Does social psychology persist over half a century? A direct replication of Cialdini et al.'s (1975) door-in-the-face technique, JPSP 120(2), 2021\n\nBạn muốn clip tiếp theo về cuốn sách nào? Để lại bình luận nhé.",
+   "tags": [
+    "Influence",
+    "Robert Cialdini",
+    "Thuyết phục bằng tâm lý",
+    "6 nguyên tắc thuyết phục",
+    "tâm lý học thuyết phục",
+    "có qua có lại",
+    "bằng chứng xã hội",
+    "khan hiếm",
+    "Kitty Genovese",
+    "khủng hoảng lặp lại",
+    "tư duy phản biện",
+    "review sách",
+    "tóm tắt sách",
+    "sách tư duy"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "cialdini",
+   "cite": "Robert B. Cialdini, Influence: The Psychology of Persuasion, William Morrow, 1984; New and Expanded edition, Harper Business, 4 May 2021 (Introduction: 'All my life I've been a patsy', answering ads for sales trainees, nearly three years in the 'compliance professions'; ch. 1: the turquoise jewelry in an Arizona store, 'times ½' read as 'times 2', click, whirr; reciprocation: Hare Krishna flowers, defense by redefining a trick as a trick; social proof: uncertainty and similarity, the Kitty Genovese case; scarcity: the cookie study, defense by noticing arousal and asking whether we want to use or to own)"
+  },
+  {
+   "id": "asu2021",
+   "cite": "ASU W. P. Carey News, 'The \"Godfather of Influence\" has a new way to be more persuasive' (10 May 2021): seventh principle Unity, 73-page chapter; Influence a 5 million-copy bestseller; Cialdini, Regents' Professor Emeritus of Psychology and Marketing, Arizona State University",
+   "url": "https://news.wpcarey.asu.edu/20210510-godfather-influence-has-new-way-be-more-persuasive"
+  },
+  {
+   "id": "npr2012",
+   "cite": "NPR, 'Give And Take: How The Rule Of Reciprocation Binds Us' (26 Nov 2012): Hare Krishna gifts at airports from the 1970s; Cialdini watched in airports; raised millions of dollars",
+   "url": "https://www.npr.org/sections/health-shots/2012/11/26/165570502/give-and-take-how-the-rule-of-reciprocation-binds-us"
+  },
+  {
+   "id": "worchel1975",
+   "cite": "Worchel, S., Lee, J., & Adewole, A. (1975). Effects of supply and demand on ratings of object value. Journal of Personality and Social Psychology, 32(5), 906–914 (cookies from a jar of two rated more desirable than from a jar of ten)",
+   "url": "https://uni-muenster.de/imperia/md/content/psyifp/aeechterhoff/vorlesungkommunikation/worchelleeeta_suppdemanobjval_jpsp1975.pdf"
+  },
+  {
+   "id": "manning2007",
+   "cite": "Manning, R., Levine, M., & Collins, A. (2007). The Kitty Genovese murder and the social psychology of helping: The parable of the 38 witnesses. American Psychologist, 62, 555–562 (no evidence that 38 people watched the murder); summary in BPS Research Digest",
+   "url": "https://bps.org.uk/research-digest/truth-behind-story-kitty-genovese-and-bystander-effect"
+  },
+  {
+   "id": "genovese_in_book",
+   "cite": "Cialdini's social-proof chapter uses the Kitty Genovese case (1964) and the bystander research of Latané and Darley (summaries: Atlas Society 'Why did Kitty Genovese die'; Elon University COM564 notes on chapter 4)",
+   "url": "https://www.atlassociety.org/post/why-did-kitty-genovese-die"
+  },
+  {
+   "id": "genschow2021",
+   "cite": "Genschow, O., Westfal, M., Crusius, J., et al. (2021). Does social psychology persist over half a century? A direct replication of Cialdini et al.'s (1975) classic door-in-the-face technique. Journal of Personality and Social Psychology, 120(2), e1–e7 (compliance rates similar to the original)",
+   "url": "https://research.tilburguniversity.edu/en/publications/does-social-psychology-persist-over-half-a-century-a-direct-repli/"
+  },
+  {
+   "id": "vn_edition",
+   "cite": "Bản tiếng Việt 'Thuyết phục bằng tâm lý' (Influence: The Psychology of Persuasion), NXB Lao động – Xã hội, Công ty Sách Alpha, 2008 (Thư viện số Quốc hội)",
+   "url": "https://thuvienso.quochoi.vn/handle/11742/96394?mode=full"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Nhận quà, đừng nhận nợ",
+   "line": "Nếu món quà hóa ra là mồi câu, gọi đúng tên nó là một chiêu bán hàng: bạn không nợ ai cả."
+  },
+  {
+   "name": "Đám đông không phải bằng chứng",
+   "line": "Khi thấy 'ai cũng làm', hỏi: họ biết gì mà mình chưa biết?"
+  },
+  {
+   "name": "Hiếm chưa chắc đã ngon",
+   "line": "Khi nôn nao vì 'sắp hết', dừng lại và hỏi: mình muốn dùng nó, hay chỉ muốn có nó?"
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Trang sức giảm nửa giá vẫn ế. Rồi nhân viên đọc nhầm thành gấp đôi, và bán sạch.",
+   "visual": {
+    "type": "icon",
+    "icon": "store",
+    "kicker": "Influence · Robert Cialdini",
+    "line": "Giá gấp đôi · bán sạch",
+    "motion": "rise",
+    "motion_cue": "gấp đôi"
+   },
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "bán sạch",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "cialdini"
+   ]
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Cialdini kể đó là cửa hàng của một người bạn ở Arizona; ngoài lời ông kể, mình chưa kiểm chứng được. Khách không ngốc. Họ chỉ dùng một lối tắt: đắt thì chắc là tốt. Cuối clip, bạn sẽ biết những lối tắt ấy bị khai thác thế nào, và ba cách để không bị dắt mũi.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "letter",
+      "kicker": "Arizona · theo lời Cialdini",
+      "line": "Một ghi chú bị đọc nhầm",
+      "line_cue": "một người"
+     },
+     {
+      "type": "trio",
+      "kicker": "Một lối tắt",
+      "cue": "khách không",
+      "items": [
+       {
+        "icon": "coins",
+        "label": "Đắt…"
+       },
+       {
+        "icon": "star",
+        "label": "…thì chắc là tốt",
+        "cue": "chắc là"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "shield",
+      "kicker": "Cuối clip",
+      "line": "Ba cách để không bị dắt mũi",
+      "cue": "cuối clip",
+      "line_cue": "và ba"
+     }
+    ]
+   },
+   "sources": [
+    "cialdini"
+   ],
+   "certainty": "attributed"
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Review sách · Tập 14",
+    "title": "Thuyết Phục Bằng Tâm Lý",
+    "subtitle": "Influence — Robert B. Cialdini (1984)",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ],
+   "sources": [
+    "cialdini"
+   ]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Ta hay nghĩ chỉ người cả tin mới bị thuyết phục. Nhưng Cialdini, một giáo sư tâm lý học, mở đầu sách bằng lời thú nhận: cả đời, ông là người rất dễ bị dụ.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Điều ta hay tin",
+      "items": [
+       {
+        "icon": "people",
+        "label": "Chỉ người cả tin"
+       },
+       {
+        "icon": "brain",
+        "label": "Mình đủ tỉnh táo",
+        "cue": "bị thuyết"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "mirror",
+      "kicker": "Cialdini thú nhận (lược dịch)",
+      "line": "“Cả đời, tôi dễ bị dụ.”",
+      "cue": "nhưng cialdini",
+      "line_cue": "lời thú"
+     }
+    ]
+   },
+   "sources": [
+    "cialdini"
+   ]
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "Robert Cialdini là giáo sư danh dự về tâm lý học và marketing ở Arizona State University. Influence ra đời năm một nghìn chín trăm tám mươi tư. Theo trường của ông, sách đã bán hơn năm triệu bản. Ở Việt Nam, sách có tên Thuyết Phục Bằng Tâm Lý.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Robert B. Cialdini",
+      "initials": "RC",
+      "role": "Giáo sư tâm lý học · ASU",
+      "years": "Influence · 1984"
+     },
+     {
+      "type": "book",
+      "title": "Influence",
+      "author": "Robert B. Cialdini",
+      "year": "1984",
+      "kicker": "Thuyết Phục Bằng Tâm Lý",
+      "cue": "influence ra",
+      "facts": [
+       {
+        "big": "1984",
+        "text": "Bản đầu tiên",
+        "cue": "ra đời"
+       },
+       {
+        "big": "5 triệu+",
+        "text": "bản đã bán · theo ASU",
+        "cue": "theo trường"
+       },
+       {
+        "big": "VN",
+        "text": "Alpha Books",
+        "cue": "ở việt"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "asu2021",
+    "cialdini",
+    "vn_edition"
+   ]
+  },
+  {
+   "id": "b03",
+   "act": "story",
+   "narration": "Để hiểu vì sao mình dễ bị dụ, Cialdini làm một việc lạ. Suốt gần ba năm, ông giấu danh tính, đi học nghề ở những nơi chuyên thuyết phục: bán bách khoa toàn thư, bán xe cũ, gây quỹ, quảng cáo.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "mask",
+      "kicker": "Gần ba năm",
+      "line": "Giấu danh tính, đi học nghề",
+      "line_cue": "giấu danh"
+     },
+     {
+      "type": "trio",
+      "kicker": "Những nơi chuyên thuyết phục",
+      "cue": "những nơi",
+      "items": [
+       {
+        "icon": "book",
+        "label": "Bách khoa toàn thư"
+       },
+       {
+        "icon": "key",
+        "label": "Xe cũ",
+        "cue": "xe cũ"
+       },
+       {
+        "icon": "people",
+        "label": "Gây quỹ, quảng cáo",
+        "cue": "gây quỹ"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "cialdini"
+   ]
+  },
+  {
+   "id": "b04",
+   "act": "story",
+   "narration": "Ông nhận ra các kỹ thuật ấy đều dựa vào vài lối tắt có sẵn trong đầu ta. Bình thường, chúng giúp ta quyết định nhanh, và thường là đúng. Cialdini gọi đó là phản ứng click, whirr: một tín hiệu bật lên, và cuộn băng tự chạy.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "brain",
+      "kicker": "Điều ông nhận ra",
+      "line": "Vài lối tắt có sẵn trong đầu",
+      "line_cue": "vài lối"
+     },
+     {
+      "type": "icon",
+      "icon": "gear",
+      "kicker": "Click, whirr",
+      "line": "Một tín hiệu, cuộn băng tự chạy",
+      "cue": "cialdini gọi",
+      "motion": "spin",
+      "motion_cue": "tự chạy"
+     }
+    ]
+   },
+   "sources": [
+    "cialdini"
+   ]
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Ông gom chúng thành sáu nguyên tắc: có qua có lại, cam kết và nhất quán, bằng chứng xã hội, thiện cảm, uy quyền, và khan hiếm. Bản năm hai nghìn hai mươi mốt thêm nguyên tắc thứ bảy: đồng lòng, cảm giác mình là người một nhà.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Sáu nguyên tắc · 1–3",
+      "items": [
+       {
+        "icon": "bridge",
+        "label": "Có qua có lại"
+       },
+       {
+        "icon": "anchor",
+        "label": "Cam kết, nhất quán",
+        "cue": "cam kết"
+       },
+       {
+        "icon": "people",
+        "label": "Bằng chứng xã hội",
+        "cue": "bằng chứng"
+       }
+      ]
+     },
+     {
+      "type": "trio",
+      "kicker": "Sáu nguyên tắc · 4–6",
+      "cue": "thiện cảm",
+      "items": [
+       {
+        "icon": "mirror",
+        "label": "Thiện cảm"
+       },
+       {
+        "icon": "shield",
+        "label": "Uy quyền",
+        "cue": "uy quyền"
+       },
+       {
+        "icon": "hourglass",
+        "label": "Khan hiếm",
+        "cue": "khan hiếm"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "house",
+      "kicker": "Bản 2021 · nguyên tắc thứ 7",
+      "line": "Đồng lòng: người một nhà",
+      "cue": "bản năm",
+      "line_cue": "đồng lòng"
+     }
+    ]
+   },
+   "sources": [
+    "cialdini",
+    "asu2021"
+   ]
+  },
+  {
+   "id": "b06",
+   "act": "story",
+   "narration": "Hãy xem nguyên tắc đầu tiên. Ở các sân bay Mỹ từ những năm một nghìn chín trăm bảy mươi, nhóm Hare Krishna tặng khách một bông hoa, rồi mới xin quyên góp. Nhiều người khó chịu, nhưng vẫn đưa tiền. Theo NPR, họ quyên được hàng triệu đô la theo cách đó.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "sprout",
+      "kicker": "Sân bay Mỹ · thập niên 1970",
+      "line": "Tặng một bông hoa, rồi xin tiền",
+      "line_cue": "tặng khách"
+     },
+     {
+      "type": "icon",
+      "icon": "scale",
+      "kicker": "Có qua có lại",
+      "line": "Khó chịu, nhưng vẫn đưa tiền",
+      "cue": "nhiều người",
+      "motion": "swing",
+      "period": 2.4
+     },
+     {
+      "type": "icon",
+      "icon": "coins",
+      "kicker": "Theo NPR",
+      "line": "Hàng triệu đô la",
+      "cue": "theo npr",
+      "line_cue": "hàng triệu"
+     }
+    ]
+   },
+   "sources": [
+    "npr2012",
+    "cialdini"
+   ]
+  },
+  {
+   "id": "b07",
+   "act": "principle",
+   "narration": "Bài học thứ nhất: nhận quà, đừng nhận nợ. Cialdini không khuyên từ chối mọi món quà. Ông khuyên: nếu món quà hóa ra là mồi câu, hãy gọi đúng tên nó, một chiêu bán hàng. Khi đó, bạn không nợ ai cả.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "scale",
+      "kicker": "Bài học 1",
+      "line": "Nhận quà, đừng nhận nợ."
+     },
+     {
+      "type": "trio",
+      "kicker": "Cialdini không khuyên",
+      "cross": true,
+      "cue": "cialdini không",
+      "items": [
+       {
+        "icon": "lock",
+        "label": "Từ chối mọi món quà"
+       }
+      ]
+     },
+     {
+      "type": "swap",
+      "kicker": "Ông khuyên",
+      "cue": "ông khuyên",
+      "strike_cue": "gọi đúng",
+      "from": {
+       "label": "Món nợ phải trả",
+       "icon": "anchor"
+      },
+      "to": {
+       "label": "Một chiêu bán hàng",
+       "icon": "mask",
+       "cue": "chiêu bán"
+      },
+      "line": "Bạn không nợ ai cả.",
+      "line_cue": "không nợ"
+     }
+    ]
+   },
+   "sources": [
+    "cialdini"
+   ]
+  },
+  {
+   "id": "b08",
+   "act": "principle",
+   "narration": "Bài học thứ hai: đám đông không phải bằng chứng. Theo Cialdini, ta làm theo người khác nhiều nhất khi đang phân vân, và khi họ giống mình. Lần tới thấy ai cũng mua, hãy hỏi: họ biết gì mà mình chưa biết?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "people",
+      "kicker": "Bài học 2",
+      "line": "Đám đông không phải bằng chứng."
+     },
+     {
+      "type": "trio",
+      "kicker": "Ta làm theo nhiều nhất khi…",
+      "cue": "theo cialdini",
+      "items": [
+       {
+        "icon": "fork",
+        "label": "Đang phân vân"
+       },
+       {
+        "icon": "mirror",
+        "label": "Họ giống mình",
+        "cue": "giống mình"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Thấy ai cũng mua",
+      "line": "Họ biết gì mà mình chưa biết?",
+      "cue": "lần tới",
+      "line_cue": "họ biết"
+     }
+    ]
+   },
+   "sources": [
+    "cialdini"
+   ]
+  },
+  {
+   "id": "b09",
+   "act": "principle",
+   "narration": "Bài học thứ ba: hiếm chưa chắc đã ngon. Trong một thí nghiệm năm một nghìn chín trăm bảy mươi lăm, cùng một loại bánh quy, nhưng bánh từ lọ chỉ còn hai chiếc được chấm hấp dẫn hơn bánh từ lọ mười chiếc. Cialdini khuyên: khi nôn nao vì sắp hết, hãy hỏi: mình muốn dùng nó, hay chỉ muốn có nó?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "hourglass",
+      "kicker": "Bài học 3",
+      "line": "Hiếm chưa chắc đã ngon."
+     },
+     {
+      "type": "compare",
+      "title": "Cùng một loại bánh · 1975",
+      "cue": "trong một",
+      "left": {
+       "title": "Lọ 10 chiếc",
+       "items": [
+        "Chấm kém hấp dẫn hơn"
+       ]
+      },
+      "right": {
+       "title": "Lọ 2 chiếc",
+       "items": [
+        "Chấm hấp dẫn hơn"
+       ]
+      }
+     },
+     {
+      "type": "swap",
+      "kicker": "Cialdini khuyên",
+      "cue": "cialdini khuyên",
+      "strike_cue": "hãy hỏi",
+      "from": {
+       "label": "Sợ hết hàng",
+       "icon": "hourglass"
+      },
+      "to": {
+       "label": "Mình cần dùng nó?",
+       "icon": "magnifier",
+       "cue": "muốn dùng"
+      }
+     }
+    ]
+   },
+   "sources": [
+    "worchel1975",
+    "cialdini"
+   ]
+  },
+  {
+   "id": "b10",
+   "act": "complication",
+   "narration": "Nhưng không phải ví dụ nào trong sách cũng đứng vững. Để minh họa bằng chứng xã hội, Cialdini kể vụ Kitty Genovese năm một nghìn chín trăm sáu mươi tư, với ba mươi tám nhân chứng đứng nhìn. Năm hai nghìn lẻ bảy, ba nhà tâm lý học cho thấy con số ấy bị thổi phồng. Câu chuyện đến nay vẫn gây tranh cãi.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Soi lại một ví dụ",
+      "line": "Một câu chuyện nổi tiếng",
+      "line_cue": "để minh"
+     },
+     {
+      "type": "statement",
+      "kicker": "New York · 1964 · Manning, Levine & Collins (2007)",
+      "text": "38 nhân chứng đứng nhìn",
+      "strike": "38 nhân chứng",
+      "replace": "Bị thổi phồng",
+      "strike_cue": "bị thổi",
+      "cue": "với ba"
+     }
+    ]
+   },
+   "sources": [
+    "genovese_in_book",
+    "manning2007"
+   ],
+   "certainty": "disputed"
+  },
+  {
+   "id": "b11",
+   "act": "complication",
+   "narration": "Rộng hơn, nhiều nghiên cứu sách dẫn đã có từ mấy chục năm trước, khi tâm lý học chưa tự kiểm tra lại mình. Có cái vẫn đứng vững: năm hai nghìn hai mươi mốt, thí nghiệm xin lớn trước, xin nhỏ sau của chính Cialdini được lặp lại, cho kết quả tương tự. Có cái vẫn đang gây tranh cãi.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "clock",
+      "kicker": "Mấy chục năm trước",
+      "line": "Trước làn sóng kiểm tra lặp lại",
+      "line_cue": "khi tâm"
+     },
+     {
+      "type": "trio",
+      "kicker": "Kiểm tra lại",
+      "cue": "có cái vẫn đứng",
+      "items": [
+       {
+        "icon": "anchor",
+        "label": "Xin lớn rồi nhỏ: vẫn vững"
+       },
+       {
+        "icon": "pendulum",
+        "label": "Một số khác: còn tranh cãi",
+        "cue": "có cái vẫn đang"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "genschow2021",
+    "cialdini"
+   ],
+   "certainty": "disputed"
+  },
+  {
+   "id": "b12",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Ở hội chợ, người bán mời bạn ăn thử miễn phí, rồi nói: chỉ còn ba suất giá này, hết hôm nay. Theo Cialdini, phản ứng nào tỉnh táo nhất?",
+   "visual": {
+    "type": "question",
+    "question": "Ăn thử miễn phí, rồi “chỉ còn 3 suất, hết hôm nay”. Tỉnh táo nhất là…",
+    "choices": [
+     "Mua ngay kẻo hết",
+     "Cảm ơn món thử, rồi hỏi: không “sắp hết”, mình có mua không?",
+     "Mắng người bán là lừa đảo"
+    ],
+    "answer": "B — nhận quà, đừng nhận nợ; hiếm chưa chắc đã ngon",
+    "think_seconds": 5
+   }
+  },
+  {
+   "id": "b13",
+   "act": "recap",
+   "narration": "Vậy là ba bài học từ Thuyết Phục Bằng Tâm Lý. Nhận quà, đừng nhận nợ. Đám đông không phải bằng chứng. Và hiếm chưa chắc đã ngon.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "book",
+      "kicker": "Thuyết Phục Bằng Tâm Lý",
+      "line": "Ba bài học."
+     },
+     {
+      "type": "list",
+      "title": "Ba bài học",
+      "check": true,
+      "cue": "nhận quà",
+      "items": [
+       {
+        "text": "Nhận quà, đừng nhận nợ",
+        "cue": "nhận quà"
+       },
+       {
+        "text": "Đám đông không phải bằng chứng",
+        "cue": "đám đông"
+       },
+       {
+        "text": "Hiếm chưa chắc đã ngon",
+        "cue": "và hiếm"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b14",
+   "act": "close",
+   "narration": "Những vị khách ở Arizona không trả tiền cho món trang sức. Họ trả cho một lối tắt. Lối tắt không xấu, nó giúp ta sống nhanh hơn mỗi ngày. Chỉ cần nhận ra lúc có người khác đang cầm lái nó. Lần tới, bạn có nghe thấy tiếng click không?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "store",
+      "kicker": "Arizona",
+      "line": "Họ trả tiền cho một lối tắt",
+      "line_cue": "họ trả"
+     },
+     {
+      "type": "icon",
+      "icon": "gear",
+      "kicker": "Lối tắt không xấu",
+      "line": "Giúp ta sống nhanh hơn mỗi ngày",
+      "cue": "lối tắt",
+      "motion": "spin",
+      "turns": 1.5
+     },
+     {
+      "type": "icon",
+      "icon": "ship",
+      "kicker": "Chỉ cần nhận ra",
+      "line": "Ai đang cầm lái?",
+      "cue": "chỉ cần",
+      "line_cue": "cầm lái"
+     }
+    ]
+   },
+   "sources": [
+    "cialdini"
+   ]
+  },
+  {
+   "id": "b15",
+   "act": "close",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
+   "visual": {
+    "type": "end",
+    "kicker": "Review sách · Tập 14",
+    "title": "Thuyết Phục Bằng Tâm Lý",
+    "ask": "Bạn muốn clip tiếp theo về cuốn sách nào?",
+    "ask_hint": "Một cuốn sách · một nhà tư duy · một chủ đề",
+    "ask_cue": "còn bạn",
+    "sources_line": "Nguồn: Cialdini, Influence (1984; 2021) · NPR (2012) · Manning và cộng sự (2007) · xem mô tả",
+    "disclaimer": "Tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư.",
+    "sources_cue": "còn bạn"
+   }
+  }
+ ],
+ "pronounce": {}
+}

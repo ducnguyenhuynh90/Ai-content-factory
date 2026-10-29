@@ -1,0 +1,944 @@
+{
+ "meta": {
+  "series": "Review sách · Tập 19",
+  "title": "Bước Đi Ngẫu Nhiên Trên Phố Wall",
+  "subtitle": "A Random Walk Down Wall Street — Burton G. Malkiel (1973)",
+  "topic": "investing",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt mới bắt đầu đầu tư, muốn biết có thắng được thị trường không và nên so với cái gì",
+  "aspect": "4:3",
+  "target_minutes": [
+   3,
+   5
+  ],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
+  "learning_goals": [
+   "Kể lại cuộc thi phi tiêu của The Wall Street Journal (1988–2002): chuyên gia dẫn 87–55 qua 142 vòng, nhưng có hiệu ứng ngày đăng báo",
+   "Giải thích ba ý lớn: hình dạng chưa phải dự báo; luôn so với cả thị trường, sau chi phí; trải rộng, đi đường dài",
+   "Phân biệt số liệu theo ấn bản: lời kêu gọi quỹ chỉ số (bản 1973) và con số khoảng 90% (Malkiel nói khi ra bản 2023)"
+  ],
+  "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư.",
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người dẫn chương trình sách lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively.",
+  "brief": {
+   "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn clip tiếp theo về cuốn sách nào?\" (comment answering the end-card question)",
+   "target_viewer": "Người Việt 20–40 tuổi mới đầu tư, hay xem biểu đồ, nghe 'chuyên gia' gợi ý mã và tin rằng chịu khó là thắng được thị trường; có thể đã nghe câu 'con khỉ ném phi tiêu' nhưng chưa biết cuộc thi thật (giả định, chủ kênh xác nhận lại)",
+   "format": "Phân tích sách (book analysis), 4–5 phút, 4:3, minh họa icon vẽ tay, một giọng đọc",
+   "central_question": "Khi phi tiêu đấu chuyên gia suốt 14 năm, ai thắng, và vì sao kết quả ấy vẫn ủng hộ lập luận của Malkiel?",
+   "transformation": "Trước khi xem, họ nghĩ đọc biểu đồ và nghe chuyên gia là cách thắng thị trường, hoặc tin chuyện 'khỉ thắng chuyên gia'. Sau khi xem, họ kể lại được cuộc thi thật (87–55, 10,2% so với 3,5% và Dow 5,6%), hiệu ứng ngày đăng báo (~4% trong hai ngày, theo Barber & Loeffler 1993), biết thước đo đúng là cả thị trường sau chi phí, và biết giới hạn: thị trường có bong bóng, nhưng đoán trước để kiếm lời đều đặn là rất khó",
+   "discovery_goal": "Tìm kiếm (\"A Random Walk Down Wall Street\", \"Bước đi ngẫu nhiên trên phố Wall\", \"Burton Malkiel\", \"khỉ ném phi tiêu\", \"quỹ chỉ số\", \"thị trường hiệu quả\") và đề xuất từ video sách đầu tư; khán giả tập 8 và 10",
+   "share_recipient": "Một người bạn vừa khoe thắng thị trường năm nay hoặc mê đọc biểu đồ: câu hỏi 'sau phí, nhiều năm, có hơn cả rổ không?' giúp hai người nói chuyện mà không chê nhau",
+   "evidence": "Malkiel 1973 (con khỉ bịt mắt; lời kêu gọi quỹ phí thấp mua cả rổ; biểu đồ tung xu); Bloomberg 2016; Wikipedia Index fund (quỹ của Bogle 31/12/1975); WSJ 18/4/2002 (142 vòng, 87–55; 10,2% / 3,5% / 5,6%); Daily Princetonian 5/2002 và Encyclopedia.com (Malkiel ném phi tiêu đầu tiên; 1988–2002); Barber & Loeffler, JFQA 1993 (~4% trong hai ngày); Priceonomics (Malkiel chê danh mục bốn cổ phiếu); CNBC 6/1/2023 (~90% trên 10 năm trở lên, dữ liệu SPIVA).",
+   "constraints": "4–5 phút, 4:3, icon vẽ, không khuôn mặt người thật, một giọng đọc OmniVoice seed 99 speed 0.88, tên tiếng Anh giữ nguyên, số đọc bằng chữ, biểu đồ tung xu ghi rõ minh họa, ghi rõ số liệu lấy từ ấn bản/nguồn nào, không khuyến nghị mã hay quỹ cụ thể, giữ lời miễn trừ"
+  },
+  "youtube": {
+   "title": "Phi tiêu đấu chuyên gia 14 năm: ai thắng? | A Random Walk Down Wall Street",
+   "thumbnail_text": "14 năm. Phi tiêu hay chuyên gia?",
+   "description": "Năm 1973, Burton Malkiel viết rằng một con khỉ bịt mắt ném phi tiêu cũng có thể chọn được danh mục tốt ngang chuyên gia. Từ 1988 đến 2002, The Wall Street Journal thử thật: chuyên gia chọn cổ phiếu, nhân viên tòa soạn ném phi tiêu, và Malkiel ném phi tiêu đầu tiên. Kết quả không như nhiều người đoán: chuyên gia dẫn trước. Nhưng câu chuyện chưa dừng ở đó. Video đi qua cuộc thi, hiệu ứng ngày đăng báo, lời kêu gọi quỹ chỉ số năm 1973, ba bài học từ A Random Walk Down Wall Street (Bước Đi Ngẫu Nhiên Trên Phố Wall), giới hạn của lập luận, và một bài tập nhỏ.\n\nNội dung giáo dục, tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư. Biểu đồ tung đồng xu là minh họa, không phải dữ liệu thị trường. Số liệu cuộc thi theo tổng kết của The Wall Street Journal (4/2002); con số khoảng 90% là lời Malkiel nói với CNBC khi ra bản kỷ niệm 50 năm (1/2023), dựa trên dữ liệu SPIVA; lời kêu gọi quỹ chỉ số là từ bản đầu tiên (1973). Kết quả quá khứ không phải lời hứa.\n\nChương:\nPhi tiêu đấu chuyên gia: ai thắng?\nĐiều nhiều người tin về việc thắng thị trường\nBurton Malkiel và cuốn sách năm 1973\nCon khỉ bịt mắt\nCuộc thi của The Wall Street Journal\n87–55: kết quả\nPhi tiêu thật ra đã thua\nHiệu ứng ngày đăng báo\nMẫu quá nhỏ, ý lớn của Malkiel\nLời kêu gọi quỹ chỉ số năm 1973\nBản 2023: khoảng 90%\nBài học 1: hình dạng chưa phải là dự báo\nBài học 2: so với cả thị trường, sau chi phí\nBài học 3: trải rộng, đi đường dài\nĐừng đọc sai Malkiel: thị trường có bong bóng\nThử một chút\nBa bài học\n\nNguồn:\n- Burton G. Malkiel, A Random Walk Down Wall Street, W. W. Norton, 1973; bản kỷ niệm 50 năm, 2023: https://en.wikipedia.org/wiki/A_Random_Walk_Down_Wall_Street\n- The Wall Street Journal's Dartboard Ends Its Run (Dow Jones, 18/4/2002): http://busecon.wvu.edu/divecon/finance/akurov/FIN322/Articles/WSJ%20Stock%20Picking.htm\n- The Daily Princetonian, Fourteen years of darts on Wall Street (5/2002): https://www.dailyprincetonian.com/article/2002/05/fourteen-years-of-darts-on-wall-street-lead-malkiel-to-reassert-stock-theory\n- Barber & Loeffler, The \"Dartboard\" Column: Second-Hand Information and Price Pressure, JFQA 28(2), 1993: https://econpapers.repec.org/article/cupjfinqa/v_3a28_3ay_3a1993_3ai_3a02_3ap_3a273-284_5f00.htm\n- Bloomberg, The Professor Who Was Right About Index Funds All Along (2016): https://www.bloomberg.com/news/articles/2016-09-22/the-professor-who-was-right-about-index-funds-all-along\n- CNBC, Malkiel's Random Walk stays relevant 50 years later (6/1/2023): https://www.cnbc.com/2023/01/06/malkiels-random-walk-down-wall-street-stays-relevant-50-years-later.html\n- Wikipedia, Index fund: https://en.wikipedia.org/wiki/Index_fund\n- Wikipedia, Random walk hypothesis: https://en.wikipedia.org/wiki/Random_walk_hypothesis\n- Priceonomics, How Well Do Blindfolded Monkeys Play the Stock Market?: https://priceonomics.com/how-well-do-blindfolded-monkeys-play-the-stock/\n- Encyclopedia.com, Malkiel, Burton G.: https://encyclopedia.com/arts/educational-magazines/malkiel-burton-gordon-1932\n\nBạn muốn clip tiếp theo về cuốn sách nào? Để lại bình luận nhé.",
+   "tags": [
+    "A Random Walk Down Wall Street",
+    "Bước đi ngẫu nhiên trên phố Wall",
+    "Burton Malkiel",
+    "khỉ ném phi tiêu",
+    "quỹ chỉ số",
+    "thị trường hiệu quả",
+    "Wall Street Journal dartboard",
+    "review sách",
+    "tóm tắt sách",
+    "sách đầu tư",
+    "đầu tư cho người mới",
+    "phân tích kỹ thuật",
+    "đa dạng hóa"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "malkiel1973",
+   "cite": "Burton G. Malkiel, A Random Walk Down Wall Street, W. W. Norton, 1st ed. 1973 (the blindfolded monkey; the call for a no-load, minimum-fee fund that buys the market; the students' coin-flip chart; chapters on speculative bubbles); 50th anniversary ed., January 2023",
+   "url": "https://en.wikipedia.org/wiki/A_Random_Walk_Down_Wall_Street"
+  },
+  {
+   "id": "bloomberg2016",
+   "cite": "Bloomberg, 'The Professor Who Was Right About Index Funds All Along', 22 Sep 2016 (the 1973 wording: 'a blindfolded monkey throwing darts at the stock listings could select a portfolio that would do just as well as one selected by the experts'; no such retail index fund then existed)",
+   "url": "https://www.bloomberg.com/news/articles/2016-09-22/the-professor-who-was-right-about-index-funds-all-along"
+  },
+  {
+   "id": "wiki_index",
+   "cite": "Wikipedia, Index fund (Malkiel 1973: 'a no-load, minimum management-fee mutual fund that simply buys the hundreds of stocks making up the broad stock-market averages and does no trading'; Bogle's First Index Investment Trust, 31 Dec 1975)",
+   "url": "https://en.wikipedia.org/wiki/Index_fund"
+  },
+  {
+   "id": "cnbc2023",
+   "cite": "CNBC, 'Malkiel's A Random Walk Down Wall Street stays relevant 50 years later', 6 Jan 2023 (50th anniversary edition; measured over a decade or more, about 90% of active managers are outperformed by a broad-based index fund, per S&P's SPIVA data)",
+   "url": "https://www.cnbc.com/2023/01/06/malkiels-random-walk-down-wall-street-stays-relevant-50-years-later.html"
+  },
+  {
+   "id": "wsj2002",
+   "cite": "The Wall Street Journal / Dow Jones, 'The Wall Street Journal's Dartboard Ends Its Run', 18 Apr 2002 (after 142 six-month contests the pros led the darts 87 to 55; average six-month gain: pros 10.2%, darts 3.5%, Dow Jones Industrial Average 5.6%)",
+   "url": "http://busecon.wvu.edu/divecon/finance/akurov/FIN322/Articles/WSJ%20Stock%20Picking.htm"
+  },
+  {
+   "id": "princetonian2002",
+   "cite": "The Daily Princetonian, 'Fourteen years of darts on Wall Street lead Malkiel to reassert stock theory', May 2002 (the Journal gave Malkiel the first dart; 142 contests later the experiment ended)",
+   "url": "https://www.dailyprincetonian.com/article/2002/05/fourteen-years-of-darts-on-wall-street-lead-malkiel-to-reassert-stock-theory"
+  },
+  {
+   "id": "encyc",
+   "cite": "Encyclopedia.com, Malkiel, Burton G(ordon) 1932- (Princeton economist; the Journal's Investment Dartboard ran 1988-2002; Malkiel threw the first dart)",
+   "url": "https://encyclopedia.com/arts/educational-magazines/malkiel-burton-gordon-1932"
+  },
+  {
+   "id": "barber1993",
+   "cite": "Brad M. Barber & Douglas Loeffler, 'The \"Dartboard\" Column: Second-Hand Information and Price Pressure', Journal of Financial and Quantitative Analysis 28(2), 1993, 273-284 (about 4% abnormal return in the two days after publication of the pros' picks, partly reversed within 25 trading days)",
+   "url": "https://econpapers.repec.org/article/cupjfinqa/v_3a28_3ay_3a1993_3ai_3a02_3ap_3a273-284_5f00.htm"
+  },
+  {
+   "id": "priceonomics",
+   "cite": "Priceonomics, 'How Well Do Blindfolded Monkeys Play the Stock Market?' (Malkiel threw the first dart and criticised the four-stock portfolios; overall results inconclusive)",
+   "url": "https://priceonomics.com/how-well-do-blindfolded-monkeys-play-the-stock/"
+  },
+  {
+   "id": "wiki_rw",
+   "cite": "Wikipedia, Random walk hypothesis (Malkiel's students' hypothetical $50 stock moved by coin flips; a chartist told him to buy immediately)",
+   "url": "https://en.wikipedia.org/wiki/Random_walk_hypothesis"
+  },
+  {
+   "id": "vn_title",
+   "cite": "Thư viện số Quốc hội, 'Bước đi ngẫu nhiên trên phố Wall' (NXB Lao động - Xã hội)",
+   "url": "https://thuvienso.quochoi.vn/handle/11742/95306?mode=full"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Hình dạng chưa phải là dự báo",
+   "line": "Một biểu đồ trông có xu hướng vẫn có thể chỉ là những lần tung đồng xu."
+  },
+  {
+   "name": "Luôn so với cả thị trường, sau chi phí",
+   "line": "Thắng phi tiêu chưa đủ; câu hỏi là sau phí, sau nhiều năm, có hơn cả rổ không."
+  },
+  {
+   "name": "Trải rộng, đi đường dài",
+   "line": "Nắm nhiều thứ, giữ đủ lâu, để may rủi của một lựa chọn không quyết định tất cả."
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Phi tiêu ném bừa đấu với chuyên gia chọn cổ phiếu. Mười bốn năm. Ai thắng?",
+   "visual": {
+    "type": "statement",
+    "kicker": "A Random Walk Down Wall Street · Burton Malkiel",
+    "text": "14 năm. Phi tiêu hay chuyên gia?",
+    "highlight": [
+     "chuyên gia?"
+    ]
+   },
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "ai thắng",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "wsj2002",
+    "encyc"
+   ]
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Câu trả lời không giống điều nhiều người vẫn đoán. Và chính vì vậy, nó dạy nhiều hơn. Đến cuối clip, bạn sẽ biết ai thắng, vì sao, và có ba bài học từ cuốn sách đã khơi ra cuộc thi ấy.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Câu trả lời",
+      "line": "Không như nhiều người đoán.",
+      "line_cue": "không giống"
+     },
+     {
+      "type": "trio",
+      "kicker": "Đến cuối clip",
+      "cue": "đến cuối",
+      "items": [
+       {
+        "icon": "scale",
+        "label": "Ai thắng"
+       },
+       {
+        "icon": "bulb",
+        "label": "Vì sao",
+        "cue": "vì sao"
+       },
+       {
+        "icon": "checklist",
+        "label": "Ba bài học",
+        "cue": "ba bài"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Review sách · Tập 19",
+    "title": "Bước Đi Ngẫu Nhiên Trên Phố Wall",
+    "subtitle": "A Random Walk Down Wall Street — Burton G. Malkiel (1973)",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ],
+   "sources": [
+    "malkiel1973"
+   ]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Nhiều người tin: chịu khó đọc biểu đồ, theo sát tin tức, chọn đúng thời điểm thì sẽ thắng thị trường. Chuyên gia làm toàn thời gian thì hẳn càng thắng. Năm một nghìn chín trăm bảy mươi ba, một giáo sư nghi ngờ chính điều ấy.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Điều nhiều người tin",
+      "items": [
+       {
+        "icon": "chart",
+        "label": "Đọc biểu đồ"
+       },
+       {
+        "icon": "letter",
+        "label": "Theo sát tin tức",
+        "cue": "theo sát"
+       },
+       {
+        "icon": "clock",
+        "label": "Chọn đúng thời điểm",
+        "cue": "chọn đúng"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "star",
+      "kicker": "Chuyên gia toàn thời gian",
+      "cue": "chuyên gia",
+      "line": "Hẳn càng thắng?",
+      "line_cue": "hẳn"
+     },
+     {
+      "type": "icon",
+      "icon": "scale",
+      "kicker": "1973 · một giáo sư",
+      "cue": "năm một",
+      "line": "Nghi ngờ chính điều ấy.",
+      "line_cue": "nghi ngờ"
+     }
+    ]
+   },
+   "sources": [
+    "malkiel1973"
+   ]
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "Burton Malkiel là giáo sư kinh tế ở Đại học Princeton. Cuốn sách ra đời năm một nghìn chín trăm bảy mươi ba, được cập nhật qua nhiều ấn bản, trong đó có bản kỷ niệm năm mươi năm, đầu năm hai nghìn hai mươi ba. Ở Việt Nam, sách có tên Bước Đi Ngẫu Nhiên Trên Phố Wall.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Burton G. Malkiel",
+      "initials": "BM",
+      "role": "Giáo sư kinh tế · Princeton",
+      "years": "sinh 1932"
+     },
+     {
+      "type": "book",
+      "title": "A Random Walk Down Wall Street",
+      "author": "Burton G. Malkiel",
+      "year": "1973",
+      "kicker": "Một cuốn sách, nhiều ấn bản",
+      "cue": "cuốn sách",
+      "facts": [
+       {
+        "big": "1973",
+        "text": "Bản đầu tiên"
+       },
+       {
+        "big": "2023",
+        "text": "Bản kỷ niệm 50 năm",
+        "cue": "bản kỷ"
+       },
+       {
+        "big": "VN",
+        "text": "Bước Đi Ngẫu Nhiên Trên Phố Wall",
+        "cue": "ở việt"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "encyc",
+    "malkiel1973",
+    "cnbc2023",
+    "vn_title"
+   ]
+  },
+  {
+   "id": "b03",
+   "act": "context",
+   "narration": "Trong bản đầu tiên, ông viết: một con khỉ bịt mắt ném phi tiêu vào bảng giá cổ phiếu cũng có thể chọn được một danh mục tốt ngang chuyên gia.",
+   "visual": {
+    "type": "quote",
+    "text": "Một con khỉ bịt mắt ném phi tiêu vào bảng giá cổ phiếu cũng có thể chọn được danh mục tốt ngang chuyên gia.",
+    "by": "Burton G. Malkiel, bản 1973 (lược dịch)",
+    "year": "1973"
+   },
+   "sources": [
+    "malkiel1973",
+    "bloomberg2016"
+   ]
+  },
+  {
+   "id": "b04",
+   "act": "story",
+   "narration": "Năm một nghìn chín trăm tám mươi tám, tờ The Wall Street Journal quyết định thử thật, và giữ cuộc thi đến năm hai nghìn lẻ hai. Chuyên gia chọn cổ phiếu. Nhân viên tòa soạn ném phi tiêu vào bảng niêm yết. Sáu tháng sau thì so kết quả. Người ném phi tiêu đầu tiên chính là Malkiel.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "letter",
+      "kicker": "1988–2002 · The Wall Street Journal",
+      "line": "Thử thật.",
+      "line_cue": "thử thật"
+     },
+     {
+      "type": "trio",
+      "kicker": "Luật chơi",
+      "cue": "chuyên gia",
+      "items": [
+       {
+        "icon": "people",
+        "label": "Chuyên gia chọn"
+       },
+       {
+        "icon": "target",
+        "label": "Phi tiêu chọn",
+        "cue": "nhân viên"
+       },
+       {
+        "icon": "clock",
+        "label": "6 tháng: so kết quả",
+        "cue": "sáu tháng"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "target",
+      "kicker": "Phi tiêu đầu tiên",
+      "cue": "người ném",
+      "line": "Do chính Malkiel ném.",
+      "line_cue": "chính là"
+     }
+    ]
+   },
+   "sources": [
+    "encyc",
+    "princetonian2002",
+    "wsj2002"
+   ]
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Theo tổng kết của chính tờ báo, qua một trăm bốn mươi hai vòng, chuyên gia thắng phi tiêu tám mươi bảy vòng, thua năm mươi lăm. Trung bình mỗi vòng sáu tháng, cổ phiếu chuyên gia chọn tăng mười phẩy hai phần trăm, phi tiêu ba phẩy năm, chỉ số Dow năm phẩy sáu.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stat",
+      "value": 87,
+      "label": "vòng chuyên gia thắng",
+      "note": "trên 142 vòng · phi tiêu thắng 55",
+      "cue": "tám mươi"
+     },
+     {
+      "type": "trio",
+      "kicker": "Trung bình mỗi vòng 6 tháng",
+      "cue": "trung bình",
+      "items": [
+       {
+        "icon": "people",
+        "label": "Chuyên gia +10,2%"
+       },
+       {
+        "icon": "target",
+        "label": "Phi tiêu +3,5%",
+        "cue": "phi tiêu ba"
+       },
+       {
+        "icon": "haystack",
+        "label": "Chỉ số Dow +5,6%",
+        "cue": "chỉ số"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "wsj2002",
+    "princetonian2002"
+   ]
+  },
+  {
+   "id": "b06",
+   "act": "turn",
+   "narration": "Vậy là phi tiêu thua. Nếu bạn từng nghe rằng con khỉ đánh bại chuyên gia, thì số liệu của cuộc thi này nói ngược lại. Nhưng câu chuyện chưa dừng ở đó.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Điều hay được kể",
+      "text": "Phi tiêu thắng chuyên gia.",
+      "strike": "Phi tiêu thắng",
+      "replace": "Chuyên gia dẫn trước",
+      "strike_cue": "nói ngược"
+     },
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Nhưng câu chuyện",
+      "cue": "nhưng câu",
+      "line": "Chưa dừng ở đó."
+     }
+    ]
+   },
+   "sources": [
+    "wsj2002"
+   ]
+  },
+  {
+   "id": "b07",
+   "act": "complication",
+   "narration": "Hai nhà nghiên cứu Brad Barber và Douglas Loeffler để ý một điều. Trong hai ngày sau khi báo đăng lựa chọn của chuyên gia, giá các cổ phiếu ấy tăng bất thường khoảng bốn phần trăm, rồi trả lại một phần. Có vẻ độc giả đã ùa vào mua theo.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Barber & Loeffler",
+      "initials": "BL",
+      "role": "Nghiên cứu về cột Dartboard",
+      "years": "1993"
+     },
+     {
+      "type": "trio",
+      "kicker": "Sau khi báo đăng",
+      "cue": "trong hai",
+      "items": [
+       {
+        "icon": "letter",
+        "label": "Báo đăng lựa chọn"
+       },
+       {
+        "icon": "rocket",
+        "label": "~+4% trong 2 ngày",
+        "cue": "tăng bất"
+       },
+       {
+        "icon": "wave",
+        "label": "Rồi trả lại một phần",
+        "cue": "rồi trả"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "people",
+      "kicker": "Độc giả ùa vào mua",
+      "cue": "có vẻ",
+      "line": "Một phần chiến thắng đến từ đây?"
+     }
+    ]
+   },
+   "sources": [
+    "barber1993"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b08",
+   "act": "complication",
+   "narration": "Mỗi bên chỉ có bốn cổ phiếu mỗi vòng, một mẫu quá nhỏ, và Malkiel đã chê đúng điểm này. Ý lớn của ông chưa bao giờ là phi tiêu giỏi. Mà là: rất khó thắng cả thị trường một cách đều đặn, sau chi phí.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Mỗi bên, mỗi vòng",
+      "items": [
+       {
+        "icon": "coin",
+        "label": "4 cổ phiếu"
+       },
+       {
+        "icon": "magnifier",
+        "label": "Mẫu quá nhỏ",
+        "cue": "một mẫu"
+       }
+      ]
+     },
+     {
+      "type": "swap",
+      "kicker": "Ý lớn của Malkiel",
+      "cue": "ý lớn",
+      "strike_cue": "mà là",
+      "from": {
+       "label": "Phi tiêu giỏi",
+       "icon": "target"
+      },
+      "to": {
+       "label": "Thắng đều: rất khó",
+       "icon": "haystack",
+       "cue": "mà là"
+      },
+      "line": "Sau chi phí.",
+      "line_cue": "sau chi"
+     }
+    ]
+   },
+   "sources": [
+    "priceonomics",
+    "malkiel1973"
+   ]
+  },
+  {
+   "id": "b09",
+   "act": "example",
+   "narration": "Ngay từ bản năm một nghìn chín trăm bảy mươi ba, ông kêu gọi một quỹ phí thấp, chỉ mua cả rổ cổ phiếu của chỉ số, không mua bán qua lại để đuổi theo người thắng. Khi đó người thường chưa mua được quỹ như vậy. Cuối năm một nghìn chín trăm bảy mươi lăm, John Bogle ra mắt quỹ chỉ số đầu tiên, chuyện của tập mười.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "haystack",
+      "kicker": "Malkiel kêu gọi, 1973",
+      "line": "Một quỹ phí thấp, mua cả rổ.",
+      "line_cue": "kêu gọi"
+     },
+     {
+      "type": "swap",
+      "kicker": "Không mua bán qua lại",
+      "cue": "không mua",
+      "strike_cue": "khi đó",
+      "from": {
+       "label": "Đuổi theo người thắng",
+       "icon": "rocket"
+      },
+      "to": {
+       "label": "Giữ cả rổ",
+       "icon": "haystack",
+       "cue": "khi đó"
+      }
+     },
+     {
+      "type": "timeline",
+      "title": "Từ lời kêu gọi đến quỹ chỉ số",
+      "cue": "cuối năm",
+      "events": [
+       {
+        "year": "1973",
+        "text": "Malkiel kêu gọi"
+       },
+       {
+        "year": "1975",
+        "text": "Bogle ra mắt quỹ chỉ số đầu tiên",
+        "cue": "john"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "wiki_index",
+    "bloomberg2016"
+   ]
+  },
+  {
+   "id": "b10",
+   "act": "example",
+   "narration": "Năm mươi năm sau, khi ra bản kỷ niệm năm hai nghìn hai mươi ba, Malkiel nói với CNBC: tính trên mười năm trở lên, khoảng chín mươi phần trăm nhà quản lý quỹ chủ động thua một quỹ chỉ số rộng.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "book",
+      "title": "A Random Walk Down Wall Street",
+      "author": "Burton G. Malkiel",
+      "year": "2023",
+      "kicker": "Bản kỷ niệm 50 năm",
+      "facts": [
+       {
+        "big": "2023",
+        "text": "Malkiel nói với CNBC",
+        "cue": "malkiel nói"
+       }
+      ]
+     },
+     {
+      "type": "stat",
+      "value": 90,
+      "suffix": "%",
+      "label": "quỹ chủ động thua quỹ chỉ số",
+      "from": 0,
+      "note": "~ từ 10 năm trở lên · dữ liệu SPIVA",
+      "cue": "khoảng chín"
+     }
+    ]
+   },
+   "sources": [
+    "cnbc2023"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b11",
+   "act": "principle",
+   "narration": "Bài học thứ nhất: hình dạng chưa phải là dự báo. Malkiel kể ông cho sinh viên tung đồng xu để vẽ giá một cổ phiếu tưởng tượng: mặt này thì lên, mặt kia thì xuống. Một chuyên gia biểu đồ nhìn vào và khuyên: mua ngay. Biểu đồ ấy chỉ là những lần tung xu.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "coin",
+      "kicker": "Bài học 1",
+      "line": "Hình dạng chưa phải là dự báo.",
+      "line_cue": "hình dạng"
+     },
+     {
+      "type": "chart",
+      "title": "Giá tưởng tượng từ tung xu (minh họa)",
+      "cue": "malkiel kể",
+      "points": [
+       [
+        "Ngày 1",
+        50
+       ],
+       [
+        "Ngày 2",
+        50.5
+       ],
+       [
+        "Ngày 3",
+        50
+       ],
+       [
+        "Ngày 4",
+        50.5
+       ],
+       [
+        "Ngày 5",
+        51
+       ],
+       [
+        "Ngày 6",
+        51.5
+       ],
+       [
+        "Ngày 7",
+        51
+       ],
+       [
+        "Ngày 8",
+        51.5
+       ],
+       [
+        "Ngày 9",
+        52
+       ],
+       [
+        "Ngày 10",
+        52.5
+       ]
+      ],
+      "annotations": [
+       {
+        "at": 9,
+        "text": "\"Mua ngay!\"",
+        "cue": "mua ngay"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "coin",
+      "motion": "spin",
+      "turns": 4,
+      "kicker": "Biểu đồ ấy",
+      "cue": "biểu đồ ấy",
+      "line": "Chỉ là những lần tung xu."
+     }
+    ]
+   },
+   "sources": [
+    "malkiel1973",
+    "wiki_rw"
+   ]
+  },
+  {
+   "id": "b12",
+   "act": "principle",
+   "narration": "Bài học thứ hai: luôn so với cả thị trường, sau chi phí. Thắng phi tiêu chưa có nghĩa là thắng chỉ số mà bạn có thể mua với phí thấp. Câu hỏi đúng là: sau phí, sau nhiều năm, mình có hơn được cả rổ không?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "scale",
+      "kicker": "Bài học 2",
+      "line": "So với cả thị trường, sau chi phí.",
+      "line_cue": "luôn so"
+     },
+     {
+      "type": "swap",
+      "kicker": "Thước đo đúng",
+      "cue": "thắng phi",
+      "strike_cue": "câu hỏi",
+      "from": {
+       "label": "Thắng phi tiêu",
+       "icon": "target"
+      },
+      "to": {
+       "label": "Hơn cả rổ, sau phí",
+       "icon": "haystack",
+       "cue": "câu hỏi"
+      }
+     }
+    ]
+   },
+   "sources": [
+    "malkiel1973",
+    "cnbc2023"
+   ]
+  },
+  {
+   "id": "b13",
+   "act": "principle",
+   "narration": "Bài học thứ ba: trải rộng, đi đường dài. Không ai biết trước phi tiêu nào sẽ trúng. Nắm nhiều thứ, giữ đủ lâu, để may rủi của từng lựa chọn bớt quyết định số phận của bạn.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "pie",
+      "kicker": "Bài học 3",
+      "line": "Trải rộng, đi đường dài.",
+      "line_cue": "trải rộng"
+     },
+     {
+      "type": "trio",
+      "kicker": "Vì không ai biết trước",
+      "cue": "không ai",
+      "items": [
+       {
+        "icon": "dice",
+        "label": "Phi tiêu nào trúng?"
+       },
+       {
+        "icon": "haystack",
+        "label": "Nắm nhiều thứ",
+        "cue": "nắm"
+       },
+       {
+        "icon": "hourglass",
+        "label": "Giữ đủ lâu",
+        "cue": "giữ"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "shield",
+      "kicker": "May rủi của một lựa chọn",
+      "cue": "để may",
+      "line": "Bớt quyết định tất cả.",
+      "line_cue": "bớt"
+     }
+    ]
+   },
+   "sources": [
+    "malkiel1973"
+   ]
+  },
+  {
+   "id": "b14",
+   "act": "complication",
+   "narration": "Nhưng đừng đọc sai Malkiel. Ông không nói thị trường luôn đúng. Sách của ông có cả những chương về bong bóng, từ hoa tulip đến thời dot-com. Giá có thể sai, có khi sai rất xa. Nhưng biết trước lúc nào nó sai để kiếm lời đều đặn thì cực kỳ khó.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "swap",
+      "kicker": "Đừng đọc sai Malkiel",
+      "strike_cue": "sách của",
+      "from": {
+       "label": "Thị trường luôn đúng",
+       "icon": "scale"
+      },
+      "to": {
+       "label": "Tulip, dot-com: bong bóng",
+       "icon": "bubble",
+       "cue": "hoa tulip"
+      }
+     },
+     {
+      "type": "icon",
+      "icon": "pendulum",
+      "motion": "swing",
+      "kicker": "Giá có thể sai",
+      "cue": "giá có",
+      "line": "Có khi sai rất xa.",
+      "line_cue": "có khi"
+     },
+     {
+      "type": "icon",
+      "icon": "binoculars",
+      "kicker": "Biết trước lúc nào?",
+      "cue": "nhưng biết",
+      "line": "Cực kỳ khó.",
+      "line_cue": "cực kỳ"
+     }
+    ]
+   },
+   "sources": [
+    "malkiel1973"
+   ]
+  },
+  {
+   "id": "b15",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Một người bạn khoe: năm nay danh mục của mình thắng cả phi tiêu lẫn mấy người trong nhóm. Theo Malkiel, câu hỏi nào đáng hỏi nhất?",
+   "visual": {
+    "type": "question",
+    "question": "Bạn khoe: năm nay thắng cả phi tiêu. Theo Malkiel, nên hỏi gì?",
+    "choices": [
+     "Năm sau nên chọn mã nào?",
+     "Sau phí, nhiều năm, có hơn chỉ số không?",
+     "Bạn ấy đọc biểu đồ kiểu gì?"
+    ],
+    "answer": "B — so với cả thị trường, sau chi phí.",
+    "think_seconds": 5
+   }
+  },
+  {
+   "id": "b16",
+   "act": "recap",
+   "narration": "Vậy là ba bài học từ Bước Đi Ngẫu Nhiên Trên Phố Wall. Hình dạng chưa phải là dự báo. Luôn so với cả thị trường, sau chi phí. Và trải rộng, đi đường dài.",
+   "visual": {
+    "type": "list",
+    "title": "Ba bài học",
+    "check": true,
+    "items": [
+     {
+      "text": "Hình dạng chưa phải là dự báo",
+      "cue": "hình"
+     },
+     {
+      "text": "Luôn so với cả thị trường, sau chi phí",
+      "cue": "luôn"
+     },
+     {
+      "text": "Trải rộng, đi đường dài",
+      "cue": "và trải"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b17",
+   "act": "close",
+   "narration": "Mười bốn năm, phi tiêu thua chuyên gia. Nhưng câu hỏi Malkiel để lại lớn hơn cuộc thi ấy: bạn đang so mình với một bảng phi tiêu, hay với cả thị trường?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "target",
+      "kicker": "Mười bốn năm",
+      "line": "Phi tiêu thua chuyên gia.",
+      "line_cue": "phi tiêu"
+     },
+     {
+      "type": "swap",
+      "kicker": "Câu hỏi Malkiel để lại",
+      "cue": "nhưng câu",
+      "strike_cue": "hay với",
+      "from": {
+       "label": "So với phi tiêu",
+       "icon": "target"
+      },
+      "to": {
+       "label": "So với cả thị trường",
+       "icon": "haystack",
+       "cue": "hay với"
+      }
+     }
+    ]
+   },
+   "sources": [
+    "wsj2002",
+    "malkiel1973"
+   ]
+  },
+  {
+   "id": "b18",
+   "act": "close",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
+   "visual": {
+    "type": "end",
+    "kicker": "Review sách · Tập 19",
+    "title": "Bước Đi Ngẫu Nhiên Trên Phố Wall",
+    "ask": "Bạn muốn clip tiếp theo về cuốn sách nào?",
+    "ask_hint": "Một cuốn sách · một nhà đầu tư · một chủ đề",
+    "ask_cue": "còn bạn",
+    "sources_line": "Nguồn: Malkiel, A Random Walk Down Wall Street (1973; bản 2023) · The Wall Street Journal (4/2002) · xem mô tả",
+    "disclaimer": "Nội dung giáo dục, tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư.",
+    "sources_cue": "còn bạn"
+   }
+  }
+ ],
+ "pronounce": {}
+}
