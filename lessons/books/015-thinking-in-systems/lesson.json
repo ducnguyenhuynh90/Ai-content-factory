@@ -320,13 +320,29 @@
       "line_cue": "nơi người"
      },
      {
+      "type": "timeline",
+      "title": "Grand Banks · cá có thể khai thác",
+      "cue": "theo the",
+      "events": [
+       {
+        "year": "1962",
+        "text": "Mốc so sánh"
+       },
+       {
+        "year": "1977",
+        "text": "Mười lăm năm sau",
+        "cue": "đến năm"
+       }
+      ]
+     },
+     {
       "type": "stat",
       "value": 82,
       "prefix": "−",
       "suffix": "%",
       "label": "cá khai thác được · Grand Banks",
       "note": "1962 – 1977 · ước tính",
-      "cue": "tám mươi"
+      "cue": "giảm ước"
      }
     ]
    },

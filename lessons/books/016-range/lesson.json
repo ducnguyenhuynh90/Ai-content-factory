@@ -500,7 +500,7 @@
   {
    "id": "b06",
    "act": "story",
-   "narration": "Epstein gọi giai đoạn ấy là thời kỳ nếm thử. Theo ông, nhiều người xuất sắc từng có một giai đoạn như vậy: thử nhiều thứ, biết mình hợp với gì, rồi mới chuyên sâu. Tiger mới là ngoại lệ.",
+   "narration": "Epstein gọi giai đoạn ấy là thời kỳ nếm thử. Theo ông, nhiều người xuất sắc từng có một giai đoạn như vậy: thử nhiều thứ, biết mình hợp với gì, rồi mới chuyên sâu. Tiger mới là ngoại lệ, không phải quy luật.",
    "visual": {
     "type": "shots",
     "shots": [
@@ -517,7 +517,7 @@
       "type": "icon",
       "icon": "hedgehog",
       "kicker": "Theo Epstein",
-      "line": "Tiger mới là ngoại lệ",
+      "line": "Tiger là ngoại lệ, không phải quy luật",
       "cue": "tiger mới"
      }
     ]
@@ -676,6 +676,13 @@
       "kicker": "Cedric Chin · Brian Martin",
       "line": "Nhiều giai thoại, ít chặt chẽ?",
       "line_cue": "dựa nhiều"
+     },
+     {
+      "type": "icon",
+      "icon": "target",
+      "kicker": "Lời phê bình",
+      "line": "Xem nhẹ luyện tập có chủ đích",
+      "cue": "và xem"
      },
      {
       "type": "icon",

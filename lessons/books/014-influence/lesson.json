@@ -349,6 +349,13 @@
      },
      {
       "type": "icon",
+      "icon": "compass",
+      "kicker": "Bình thường",
+      "line": "Quyết định nhanh, thường là đúng",
+      "cue": "bình thường"
+     },
+     {
+      "type": "icon",
       "icon": "gear",
       "kicker": "Click, whirr",
       "line": "Một tín hiệu, cuộn băng tự chạy",
@@ -434,10 +441,17 @@
     "shots": [
      {
       "type": "icon",
+      "icon": "bridge",
+      "kicker": "Nguyên tắc đầu tiên",
+      "line": "Có qua có lại"
+     },
+     {
+      "type": "icon",
       "icon": "sprout",
       "kicker": "Sân bay Mỹ · thập niên 1970",
       "line": "Tặng một bông hoa, rồi xin tiền",
-      "line_cue": "tặng khách"
+      "line_cue": "tặng khách",
+      "cue": "ở các"
      },
      {
       "type": "icon",
@@ -619,6 +633,13 @@
       "kicker": "Soi lại một ví dụ",
       "line": "Một câu chuyện nổi tiếng",
       "line_cue": "để minh"
+     },
+     {
+      "type": "icon",
+      "icon": "people",
+      "kicker": "Bằng chứng xã hội · New York",
+      "line": "Vụ Kitty Genovese · 1964",
+      "cue": "cialdini kể"
      },
      {
       "type": "statement",
