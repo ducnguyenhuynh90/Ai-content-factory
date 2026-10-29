@@ -308,7 +308,7 @@
   {
    "id": "b03",
    "act": "story",
-   "narration": "Giờ hãy đến Newfoundland, Canada, nơi người ta đánh cá tuyết từ nhiều thế kỷ. Theo The Canadian Encyclopedia, từ năm một nghìn chín trăm sáu mươi hai đến năm một nghìn chín trăm bảy mươi bảy, lượng cá có thể khai thác ở Grand Banks giảm ước tính tám mươi hai phần trăm.",
+   "narration": "Giờ hãy đến Newfoundland, Canada. Đây không phải ví dụ trong sách, nhưng là đúng kiểu hệ thống Meadows mô tả. Theo The Canadian Encyclopedia, từ năm một nghìn chín trăm sáu mươi hai đến năm một nghìn chín trăm bảy mươi bảy, lượng cá có thể khai thác ở Grand Banks giảm ước tính tám mươi hai phần trăm.",
    "visual": {
     "type": "shots",
     "shots": [
@@ -316,8 +316,8 @@
       "type": "icon",
       "icon": "ship",
       "kicker": "Newfoundland · Canada",
-      "line": "Nhiều thế kỷ đánh cá tuyết",
-      "line_cue": "nơi người"
+      "line": "Không phải ví dụ trong sách",
+      "line_cue": "đây không"
      },
      {
       "type": "timeline",
@@ -347,7 +347,8 @@
     ]
    },
    "sources": [
-    "ce_moratorium"
+    "ce_moratorium",
+    "meadows2008"
    ],
    "certainty": "estimate"
   },

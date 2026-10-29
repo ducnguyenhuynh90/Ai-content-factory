@@ -1,5 +1,5 @@
 # Tư Duy Hệ Thống
-_Review sách · Tập 15 · 787 words · ~3.4 min · 4:3_
+_Review sách · Tập 15 · 793 words · ~3.42 min · 4:3_
 
 ## Learning goals
 - Kể lại sự sụp đổ của đàn cá tuyết ở Newfoundland (1962–1992) và lệnh tạm dừng đánh bắt ngày 2/7/1992
@@ -19,7 +19,7 @@ _Review sách · Tập 15 · 787 words · ~3.4 min · 4:3_
 | t0 | context |  | title: Tư Duy Hệ Thống |
 | b01 | misconception | Ta hay nghĩ khủng hoảng xảy ra vì ai đó tham lam, hay ngu ngốc. Tìm ra người có lỗi là xong. Meadows cho rằng nhiều khi chính cấu trúc của hệ thống tạo ra hành vi của nó, dù ai đứng trong đó. | shots: shots |
 | b02 | context | Meadows là nhà khoa học môi trường, tác giả chính của The Limits to Growth năm một nghìn chín trăm bảy mươi hai. Bà viết bản nháp cuốn sách này năm một nghìn chín trăm chín mươi ba, và mất năm hai nghìn lẻ một. Sách được in năm hai nghìn lẻ tám. Ở Việt Nam, sách có tên Tư Duy Hệ Thống. | shots: shots |
-| b03 | story | Giờ hãy đến Newfoundland, Canada, nơi người ta đánh cá tuyết từ nhiều thế kỷ. Theo The Canadian Encyclopedia, từ năm một nghìn chín trăm sáu mươi hai đến năm một nghìn chín trăm bảy mươi bảy, lượng cá có thể khai thác ở Grand Banks giảm ước tính tám mươi hai phần trăm. _(estimate)_ | shots: shots |
+| b03 | story | Giờ hãy đến Newfoundland, Canada. Đây không phải ví dụ trong sách, nhưng là đúng kiểu hệ thống Meadows mô tả. Theo The Canadian Encyclopedia, từ năm một nghìn chín trăm sáu mươi hai đến năm một nghìn chín trăm bảy mươi bảy, lượng cá có thể khai thác ở Grand Banks giảm ước tính tám mươi hai phần trăm. _(estimate)_ | shots: shots |
 | b04 | story | Năm một nghìn chín trăm bảy mươi bảy, Canada mở rộng vùng đánh cá ra hai trăm hải lý. Nhưng sản lượng của tàu Canada lại tiếp tục tăng. Mẻ lưới vẫn đầy, nên rất dễ tin rằng đàn cá vẫn ổn. | shots: shots |
 | b05 | story | Năm một nghìn chín trăm tám mươi chín, các nhà khoa học khuyên giảm một nửa hạn ngạch đánh bắt. Chính phủ không làm theo. | swap: swap |
 | b06 | story | Ngày hai tháng bảy năm một nghìn chín trăm chín mươi hai, Bộ trưởng John Crosbie tuyên bố dừng đánh bắt cá tuyết hai năm. Gần ba mươi nghìn người ở Newfoundland mất việc. Một năm sau, lệnh dừng kéo dài vô thời hạn. | shots: shots |
