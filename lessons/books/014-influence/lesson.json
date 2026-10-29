@@ -618,7 +618,8 @@
    "sources": [
     "worchel1975",
     "cialdini"
-   ]
+   ],
+   "take": 1
   },
   {
    "id": "b10",
@@ -656,7 +657,8 @@
     "genovese_in_book",
     "manning2007"
    ],
-   "certainty": "disputed"
+   "certainty": "disputed",
+   "take": 2
   },
   {
    "id": "b11",
