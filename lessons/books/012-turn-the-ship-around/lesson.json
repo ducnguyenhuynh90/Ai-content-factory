@@ -40,6 +40,28 @@
    "share_recipient": "Một người mới lên trưởng nhóm, hoặc một đồng nghiệp/sếp hay bị hỏi 'em làm được chưa ạ?': câu chuyện 'vì ông bảo tôi làm vậy' và câu 'em định làm thế nào?' cho cả hai một cách làm việc mới để thử ngay tuần này",
    "evidence": "Marquet 2012 (sách); davidmarquet.com; Marquet, The Chiefs Take Charge, Submarine Review 2004; NavSource; Business Observer; Wikipedia (David Marquet; Arleigh Burke Fleet Trophy; USS Santa Fe); Penguin; Aerossurance (deliberate action); Signal v. Noise (trích sách); Terence Eden (phê bình). Xem gate/claims.md.",
    "constraints": "4–5 phút, 4:3, icon vẽ (không footage, không khuôn mặt người thật), một giọng đọc OmniVoice seed 99 speed 0.88, tên tiếng Anh giữ nguyên chính tả, số đọc bằng chữ, giữ lời miễn trừ; tập lãnh đạo, không có nội dung đầu tư"
+  },
+  "youtube": {
+   "title": "Vì sao cả nhóm vẫn làm theo một lệnh sai? | Turn the Ship Around",
+   "thumbnail_text": "USS Santa Fe · 1999 · “Vì ông bảo tôi làm vậy.” · Chờ lệnh → “Tôi dự định…”",
+   "description": "Một thuyền trưởng ra một lệnh không thể làm được, và sĩ quan của ông vẫn truyền lệnh đi: \"vì ông bảo tôi làm vậy\". L. David Marquet kể lại cách ông xoay chuyển tàu ngầm USS Santa Fe, từ đứng cuối hạm đội về giữ chân thủy thủ đến cúp Arleigh Burke năm 2000, bằng mô hình lãnh đạo – lãnh đạo (leader-leader). Video kể chuyện lệnh \"tiến hai phần ba\", ba bài học (nói \"tôi dự định\"; quyền đi cùng năng lực; ai cũng biết vì sao), hiểu lầm \"trao quyền là buông tay\", giới hạn của câu chuyện (phần lớn là lời kể của chính tác giả; tàu ngầm không phải văn phòng) và một bài tập nhỏ cho trưởng nhóm.\n\nTóm tắt và cảm nhận cá nhân; một số con số theo lời kể của tác giả (33 hay 36 người ký tiếp tùy nguồn).\n\nChương:\n0:00 Một lệnh không thể làm được\n0:22 Lãnh đạo giỏi có mọi câu trả lời?\n0:35 David Marquet và cuốn sách\n0:50 Đổi tàu vào phút chót\n1:07 Con tàu đứng cuối hạm đội\n1:22 \"Tiến hai phần ba!\"\n1:35 \"Vì ông bảo tôi làm vậy\"\n1:50 Người dẫn – người theo\n2:03 Lãnh đạo – lãnh đạo\n2:15 Bài học 1: nói \"tôi dự định\"\n2:33 Bài học 2: quyền đi cùng năng lực\n2:48 Bài học 3: ai cũng biết vì sao\n3:02 Con tàu xoay chuyển\n3:20 Đọc tỉnh táo\n3:38 Trao quyền không phải buông tay\n3:54 Thử một chút: email cho khách\n4:14 Ba bài học\n\nNguồn:\n- L. David Marquet, Turn the Ship Around! How to Create Leadership at Every Level, Greenleaf, 2012 (Portfolio/Penguin, 2013)\n- davidmarquet.com, My Story: https://davidmarquet.com/my-story/\n- Capt. David Marquet, The Chiefs Take Charge, The Submarine Review, 2004: https://archive.navalsubleague.org/2004/the-chiefs-take-charge\n- Business Observer, Marquet's Navy: https://www.businessobserverfl.com/article/marquets-navy\n- Wikipedia, David Marquet: https://en.wikipedia.org/wiki/David_Marquet\n- Wikipedia, Arleigh Burke Fleet Trophy: https://en.wikipedia.org/wiki/Arleigh_Burke_Fleet_Trophy\n- Aerossurance, Deliberate Action: https://aerossurance.com/helicopters/deliberate-action-mindfulness/\n- Terence Eden, Book review: Turn the Ship Around: https://shkspr.mobi/blog/2019/10/book-review-turn-the-ship-around-l-david-marquet/\n\nBạn muốn clip tiếp theo về cuốn sách nào? Để lại bình luận nhé.",
+   "tags": [
+    "Turn the Ship Around",
+    "David Marquet",
+    "L. David Marquet",
+    "Xoay chuyển con tàu",
+    "leader-leader",
+    "lãnh đạo",
+    "kỹ năng lãnh đạo",
+    "trao quyền",
+    "I intend to",
+    "USS Santa Fe",
+    "trưởng nhóm",
+    "quản lý đội nhóm",
+    "review sách",
+    "tóm tắt sách",
+    "sách lãnh đạo"
+   ]
   }
  },
  "sources": [
@@ -155,8 +177,7 @@
       "type": "icon",
       "icon": "submarine",
       "kicker": "USS Santa Fe · 1999",
-      "line": "Một lệnh không thể làm.",
-      "line_cue": "không thể"
+      "line": "Một lệnh không thể làm."
      },
      {
       "type": "icon",
@@ -479,20 +500,27 @@
     "type": "shots",
     "shots": [
      {
+      "type": "icon",
+      "icon": "gear",
+      "kicker": "Động cơ điện · USS Santa Fe",
+      "line": "Không có nấc 2/3.",
+      "line_cue": "không có"
+     },
+     {
       "type": "trio",
       "kicker": "Nấc 2/3 trên động cơ điện",
       "items": [
        {
         "icon": "submarine",
-        "label": "Tàu trước: có",
-        "cue": "con tàu"
+        "label": "Tàu trước: có"
        },
        {
         "icon": "submarine",
         "label": "Santa Fe: không",
         "cue": "nhưng chiếc"
        }
-      ]
+      ],
+      "cue": "con tàu"
      },
      {
       "type": "quote",
@@ -522,8 +550,7 @@
       "items": [
        {
         "icon": "star",
-        "label": "Người dẫn sai",
-        "cue": "người dẫn sai"
+        "label": "Người dẫn sai"
        },
        {
         "icon": "people",
@@ -641,10 +668,18 @@
     "shots": [
      {
       "type": "icon",
+      "icon": "key",
+      "kicker": "Trao quyền cho người chưa hiểu việc?",
+      "line": "Nguy hiểm.",
+      "line_cue": "nguy hiểm"
+     },
+     {
+      "type": "icon",
       "icon": "scale",
       "kicker": "Bài học 2",
       "line": "Quyền đi cùng năng lực",
-      "line_cue": "bài học"
+      "line_cue": "bài học",
+      "cue": "bài học"
      },
      {
       "type": "trio",
@@ -699,8 +734,7 @@
       "icon": "lighthouse",
       "kicker": "Biết tàu đang hướng tới đâu",
       "line": "Không cần chờ lệnh để làm đúng.",
-      "cue": "khi mọi",
-      "line_cue": "họ không"
+      "cue": "khi mọi"
      },
      {
       "type": "swap",
@@ -759,8 +793,7 @@
       "icon": "people",
       "kicker": "Theo các nguồn · sau này",
       "cue": "và khoảng",
-      "line": "Khoảng 10 người thành thuyền trưởng tàu ngầm.",
-      "line_cue": "trở thành"
+      "line": "~10 người thành thuyền trưởng."
      }
     ]
    },
@@ -792,12 +825,11 @@
      {
       "type": "trio",
       "kicker": "Chưa kiểm chứng độc lập",
-      "cue": "vài con",
+      "cue": "có nơi",
       "items": [
        {
         "icon": "checklist",
-        "label": "Nơi ghi: 33 người",
-        "cue": "ba mươi ba"
+        "label": "Nơi ghi: 33 người"
        },
        {
         "icon": "checklist",
@@ -873,7 +905,7 @@
         "cue": "rõ ràng"
        }
       ],
-      "center_label": "Leader-leader",
+      "center_label": "",
       "center_cue": "thiếu một",
       "cue": "kiểm soát"
      }
