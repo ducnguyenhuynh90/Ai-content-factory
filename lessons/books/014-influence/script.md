@@ -1,5 +1,5 @@
 # Thuyết Phục Bằng Tâm Lý
-_Review sách · Tập 14 · 770 words · ~3.32 min · 4:3_
+_Review sách · Tập 14 · 788 words · ~3.4 min · 4:3_
 
 ## Learning goals
 - Kể lại câu chuyện cửa hàng trang sức ở Arizona (theo lời Cialdini) và hành trình gần ba năm 'nằm vùng' của Cialdini trong các nghề thuyết phục
@@ -14,7 +14,7 @@ _Review sách · Tập 14 · 770 words · ~3.32 min · 4:3_
 ## Script
 | # | act | narration | on screen |
 |---|---|---|---|
-| h1 | hook | Trang sức giảm nửa giá vẫn ế. Rồi nhân viên đọc nhầm thành gấp đôi, và bán sạch. | icon: icon |
+| h1 | hook | Trang sức mãi không bán được. Chủ tiệm viết: giảm nửa giá. Nhưng nhân viên đọc nhầm thành gấp đôi, và bán sạch. | shots: shots |
 | h2 | context | Cialdini kể đó là cửa hàng của một người bạn ở Arizona; ngoài lời ông kể, mình chưa kiểm chứng được. Khách không ngốc. Họ chỉ dùng một lối tắt: đắt thì chắc là tốt. Cuối clip, bạn sẽ biết những lối tắt ấy bị khai thác thế nào, và ba cách để không bị dắt mũi. _(attributed)_ | shots: shots |
 | t0 | context |  | title: Thuyết Phục Bằng Tâm Lý |
 | b01 | misconception | Ta hay nghĩ chỉ người cả tin mới bị thuyết phục. Nhưng Cialdini, một giáo sư tâm lý học, mở đầu sách bằng lời thú nhận: cả đời, ông là người rất dễ bị dụ. | shots: shots |
@@ -22,10 +22,10 @@ _Review sách · Tập 14 · 770 words · ~3.32 min · 4:3_
 | b03 | story | Để hiểu vì sao mình dễ bị dụ, Cialdini làm một việc lạ. Suốt gần ba năm, ông giấu danh tính, đi học nghề ở những nơi chuyên thuyết phục: bán bách khoa toàn thư, bán xe cũ, gây quỹ, quảng cáo. | shots: shots |
 | b04 | story | Ông nhận ra các kỹ thuật ấy đều dựa vào vài lối tắt có sẵn trong đầu ta. Bình thường, chúng giúp ta quyết định nhanh, và thường là đúng. Cialdini gọi đó là phản ứng click, whirr: một tín hiệu bật lên, và cuộn băng tự chạy. | shots: shots |
 | b05 | story | Ông gom chúng thành sáu nguyên tắc: có qua có lại, cam kết và nhất quán, bằng chứng xã hội, thiện cảm, uy quyền, và khan hiếm. Bản năm hai nghìn hai mươi mốt thêm nguyên tắc thứ bảy: đồng lòng, cảm giác mình là người một nhà. | shots: shots |
-| b06 | story | Hãy xem nguyên tắc đầu tiên. Ở các sân bay Mỹ từ những năm một nghìn chín trăm bảy mươi, nhóm Hare Krishna tặng khách một bông hoa, rồi mới xin quyên góp. Nhiều người khó chịu, nhưng vẫn đưa tiền. Theo NPR, họ quyên được hàng triệu đô la theo cách đó. | shots: shots |
+| b06 | story | Hãy xem nguyên tắc đầu tiên. Vì sao một bông hoa miễn phí lại khiến người ta rút ví? Ở các sân bay Mỹ từ những năm một nghìn chín trăm bảy mươi, nhóm Hare Krishna tặng khách một bông hoa, rồi mới xin quyên góp. Nhiều người khó chịu, nhưng vẫn đưa tiền. Theo NPR, họ thu được hàng triệu đô la theo cách đó. | shots: shots |
 | b07 | principle | Bài học thứ nhất: nhận quà, đừng nhận nợ. Cialdini không khuyên từ chối mọi món quà. Ông khuyên: nếu món quà hóa ra là mồi câu, hãy gọi đúng tên nó, một chiêu bán hàng. Khi đó, bạn không nợ ai cả. | shots: shots |
 | b08 | principle | Bài học thứ hai: đám đông không phải bằng chứng. Theo Cialdini, ta làm theo người khác nhiều nhất khi đang phân vân, và khi họ giống mình. Lần tới thấy ai cũng mua, hãy hỏi: họ biết gì mà mình chưa biết? | shots: shots |
-| b09 | principle | Bài học thứ ba: hiếm chưa chắc đã ngon. Trong một thí nghiệm năm một nghìn chín trăm bảy mươi lăm, cùng một loại bánh quy, nhưng bánh từ lọ chỉ còn hai chiếc được chấm hấp dẫn hơn bánh từ lọ mười chiếc. Cialdini khuyên: khi nôn nao vì sắp hết, hãy hỏi: mình muốn dùng nó, hay chỉ muốn có nó? | shots: shots |
+| b09 | principle | Bài học thứ ba: hiếm chưa chắc đã ngon. Trong một thí nghiệm năm một nghìn chín trăm bảy mươi lăm, cùng một loại bánh quy, nhưng bánh ở lọ chỉ có hai chiếc được chấm hấp dẫn hơn bánh ở lọ mười chiếc. Cialdini khuyên: khi nôn nao vì sắp hết, hãy hỏi: mình muốn dùng nó, hay chỉ muốn có nó? | shots: shots |
 | b10 | complication | Nhưng không phải ví dụ nào trong sách cũng đứng vững. Để minh họa bằng chứng xã hội, Cialdini kể vụ Kitty Genovese năm một nghìn chín trăm sáu mươi tư, với ba mươi tám nhân chứng đứng nhìn. Năm hai nghìn lẻ bảy, ba nhà tâm lý học cho thấy con số ấy bị thổi phồng. Câu chuyện đến nay vẫn gây tranh cãi. _(disputed)_ | shots: shots |
 | b11 | complication | Rộng hơn, nhiều nghiên cứu sách dẫn đã có từ mấy chục năm trước, khi tâm lý học chưa tự kiểm tra lại mình. Có cái vẫn đứng vững: năm hai nghìn hai mươi mốt, thí nghiệm xin lớn trước, xin nhỏ sau của chính Cialdini được lặp lại, cho kết quả tương tự. Có cái vẫn đang gây tranh cãi. _(disputed)_ | shots: shots |
 | b12 | question | Giờ thử một chút nhé. Ở hội chợ, người bán mời bạn ăn thử miễn phí, rồi nói: chỉ còn ba suất giá này, hết hôm nay. Theo Cialdini, phản ứng nào tỉnh táo nhất? | question: Ăn thử miễn phí, rồi “chỉ còn 3 suất, hết hôm nay”. Tỉnh táo nhất là… |
