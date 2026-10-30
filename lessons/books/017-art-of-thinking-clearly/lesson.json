@@ -306,7 +306,8 @@
     "dobelli_bio",
     "wiki_book",
     "vn_edition"
-   ]
+   ],
+   "take": 3
   },
   {
    "id": "b03",
@@ -788,7 +789,8 @@
    "sources": [
     "concorde_facts",
     "taleb_claim"
-   ]
+   ],
+   "take": 1
   },
   {
    "id": "b14",
