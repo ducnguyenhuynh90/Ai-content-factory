@@ -1,5 +1,5 @@
 # Tư Duy Hệ Thống
-_Review sách · Tập 15 · 793 words · ~3.42 min · 4:3_
+_Review sách · Tập 15 · 811 words · ~3.5 min · 4:3_
 
 ## Learning goals
 - Kể lại sự sụp đổ của đàn cá tuyết ở Newfoundland (1962–1992) và lệnh tạm dừng đánh bắt ngày 2/7/1992
@@ -20,14 +20,14 @@ _Review sách · Tập 15 · 793 words · ~3.42 min · 4:3_
 | b01 | misconception | Ta hay nghĩ khủng hoảng xảy ra vì ai đó tham lam, hay ngu ngốc. Tìm ra người có lỗi là xong. Meadows cho rằng nhiều khi chính cấu trúc của hệ thống tạo ra hành vi của nó, dù ai đứng trong đó. | shots: shots |
 | b02 | context | Meadows là nhà khoa học môi trường, tác giả chính của The Limits to Growth năm một nghìn chín trăm bảy mươi hai. Bà viết bản nháp cuốn sách này năm một nghìn chín trăm chín mươi ba, và mất năm hai nghìn lẻ một. Sách được in năm hai nghìn lẻ tám. Ở Việt Nam, sách có tên Tư Duy Hệ Thống. | shots: shots |
 | b03 | story | Giờ hãy đến Newfoundland, Canada. Đây không phải ví dụ trong sách, nhưng là đúng kiểu hệ thống Meadows mô tả. Theo The Canadian Encyclopedia, từ năm một nghìn chín trăm sáu mươi hai đến năm một nghìn chín trăm bảy mươi bảy, lượng cá có thể khai thác ở Grand Banks giảm ước tính tám mươi hai phần trăm. _(estimate)_ | shots: shots |
-| b04 | story | Năm một nghìn chín trăm bảy mươi bảy, Canada mở rộng vùng đánh cá ra hai trăm hải lý. Nhưng sản lượng của tàu Canada lại tiếp tục tăng. Mẻ lưới vẫn đầy, nên rất dễ tin rằng đàn cá vẫn ổn. | shots: shots |
+| b04 | story | Năm một nghìn chín trăm bảy mươi bảy, Canada mở rộng vùng quản lý nghề cá ra hai trăm hải lý, một phần để hạn chế tàu nước ngoài. Nhưng tàu Canada lại đánh bắt ngày càng nhiều. Mẻ lưới vẫn đầy, thì có gì phải lo? | shots: shots |
 | b05 | story | Năm một nghìn chín trăm tám mươi chín, các nhà khoa học khuyên giảm một nửa hạn ngạch đánh bắt. Chính phủ không làm theo. | swap: swap |
 | b06 | story | Ngày hai tháng bảy năm một nghìn chín trăm chín mươi hai, Bộ trưởng John Crosbie tuyên bố dừng đánh bắt cá tuyết hai năm. Gần ba mươi nghìn người ở Newfoundland mất việc. Một năm sau, lệnh dừng kéo dài vô thời hạn. | shots: shots |
 | b07 | story | Và cá không quay lại ngay khi người ta ngừng đánh. Phải đến năm hai nghìn lẻ tám, đàn cá mới tăng rõ. Đến năm hai nghìn hai mươi tư, Canada mới mở lại đánh bắt thương mại, giữa nhiều lo ngại. | shots: shots |
 | b08 | principle | Bài học thứ nhất: nhìn cái kho, không chỉ dòng chảy. Theo ngôn ngữ của Meadows, đàn cá là một kho, còn mẻ lưới mỗi năm là dòng chảy ra. Như nước trong bồn tắm: nước xả ra mạnh không có nghĩa là bồn còn đầy. | shots: shots |
-| b09 | principle | Bài học thứ hai: tôn trọng độ trễ. Trong hệ thống, tín hiệu thường đến muộn. Khi mẻ lưới bắt đầu vơi, đàn cá đã cạn. Khi đã dừng tay, phải chờ hơn mười lăm năm mới thấy cá tăng rõ. Meadows viết rằng độ trễ khiến ta phản ứng quá tay, hoặc quá muộn. | shots: shots |
-| b10 | principle | Bài học thứ ba: đổi luật chơi, đừng chỉ chỉnh con số. Meadows xếp hạng những điểm có thể can thiệp vào hệ thống. Chỉnh một con số, như hạn ngạch hay thuế, thường yếu nhất. Mạnh hơn là đổi dòng thông tin, đổi luật chơi, đổi mục tiêu. Và mạnh nhất là đổi cách nghĩ đã sinh ra hệ thống. | shots: shots |
-| b11 | complication | Ví dụ nổi tiếng nhất của sách: ở một khu nhà tại Hà Lan, nhà nào đặt đồng hồ điện ngay lối vào thì dùng điện ít hơn khoảng ba mươi phần trăm. Nhưng chính Meadows mở đầu bằng câu người ta kể rằng. Mình chưa tìm được nghiên cứu gốc. Hãy coi nó là minh họa, chưa phải bằng chứng. _(attributed)_ | shots: shots |
+| b09 | principle | Bài học thứ hai: tôn trọng độ trễ. Vì sao đến lúc dừng thì đã quá muộn? Trong hệ thống, tín hiệu thường đến muộn. Khi mẻ lưới bắt đầu vơi, đàn cá đã cạn. Khi đã dừng tay, phải chờ hơn mười lăm năm mới thấy cá tăng rõ. Meadows viết rằng độ trễ khiến ta phản ứng quá tay, hoặc quá muộn. | shots: shots |
+| b10 | principle | Bài học thứ ba: đổi luật chơi, đừng chỉ chỉnh con số. Meadows xếp hạng mười hai điểm có thể can thiệp vào một hệ thống. Chỉnh một con số, như hạn ngạch hay thuế, thường yếu nhất. Mạnh hơn là đổi dòng thông tin, đổi luật chơi, đổi mục tiêu. Gần đỉnh thang là đổi cách nghĩ đã sinh ra hệ thống. | shots: shots |
+| b11 | complication | Một ví dụ nổi tiếng trong sách: ở một khu nhà tại Hà Lan, nhà nào đặt đồng hồ điện ngay lối vào thì dùng điện ít hơn khoảng ba mươi phần trăm. Nhưng chính Meadows dẫn chuyện này bằng mấy chữ: người ta kể rằng. Mình chưa tìm được nghiên cứu gốc. Hãy coi nó là minh họa, chưa phải bằng chứng. _(attributed)_ | shots: shots |
 | b12 | turn | Vậy tư duy hệ thống có giúp ta điều khiển được mọi thứ? Meadows trả lời là không. Bà viết: ta không thể điều khiển hệ thống, hay hiểu hết về nó. Nhưng ta có thể nhảy cùng nó. | shots: shots |
 | b13 | question | Giờ thử một chút nhé. Lương tháng nào cũng về đều, nhưng số dư tài khoản của bạn cứ giảm dần suốt nửa năm. Tư duy hệ thống bảo bạn nhìn vào đâu trước? | question: Lương về đều, nhưng số dư giảm dần suốt 6 tháng. Nhìn vào đâu trước? |
 | b14 | recap | Vậy là ba bài học từ Tư Duy Hệ Thống. Nhìn cái kho, không chỉ dòng chảy. Tôn trọng độ trễ. Và đổi luật chơi, đừng chỉ chỉnh con số. | shots: shots |
