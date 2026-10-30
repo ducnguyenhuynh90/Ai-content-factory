@@ -1,5 +1,5 @@
 # Tư Duy Hệ Thống
-_Review sách · Tập 15 · 811 words · ~3.5 min · 4:3_
+_Review sách · Tập 15 · 810 words · ~3.49 min · 4:3_
 
 ## Learning goals
 - Kể lại sự sụp đổ của đàn cá tuyết ở Newfoundland (1962–1992) và lệnh tạm dừng đánh bắt ngày 2/7/1992
@@ -24,7 +24,7 @@ _Review sách · Tập 15 · 811 words · ~3.5 min · 4:3_
 | b05 | story | Năm một nghìn chín trăm tám mươi chín, các nhà khoa học khuyên giảm một nửa hạn ngạch đánh bắt. Chính phủ không làm theo. | swap: swap |
 | b06 | story | Ngày hai tháng bảy năm một nghìn chín trăm chín mươi hai, Bộ trưởng John Crosbie tuyên bố dừng đánh bắt cá tuyết hai năm. Gần ba mươi nghìn người ở Newfoundland mất việc. Một năm sau, lệnh dừng kéo dài vô thời hạn. | shots: shots |
 | b07 | story | Và cá không quay lại ngay khi người ta ngừng đánh. Phải đến năm hai nghìn lẻ tám, đàn cá mới tăng rõ. Đến năm hai nghìn hai mươi tư, Canada mới mở lại đánh bắt thương mại, giữa nhiều lo ngại. | shots: shots |
-| b08 | principle | Bài học thứ nhất: nhìn cái kho, không chỉ dòng chảy. Theo ngôn ngữ của Meadows, đàn cá là một kho, còn mẻ lưới mỗi năm là dòng chảy ra. Như nước trong bồn tắm: nước xả ra mạnh không có nghĩa là bồn còn đầy. | shots: shots |
+| b08 | principle | Bài học thứ nhất: nhìn cái kho, không chỉ dòng chảy. Theo ngôn ngữ của Meadows, đàn cá là một kho, còn mẻ lưới mỗi năm là dòng chảy ra. Như nước trong bể: nước xả ra mạnh không có nghĩa là bể còn đầy. | shots: shots |
 | b09 | principle | Bài học thứ hai: tôn trọng độ trễ. Vì sao đến lúc dừng thì đã quá muộn? Trong hệ thống, tín hiệu thường đến muộn. Khi mẻ lưới bắt đầu vơi, đàn cá đã cạn. Khi đã dừng tay, phải chờ hơn mười lăm năm mới thấy cá tăng rõ. Meadows viết rằng độ trễ khiến ta phản ứng quá tay, hoặc quá muộn. | shots: shots |
 | b10 | principle | Bài học thứ ba: đổi luật chơi, đừng chỉ chỉnh con số. Meadows xếp hạng mười hai điểm có thể can thiệp vào một hệ thống. Chỉnh một con số, như hạn ngạch hay thuế, thường yếu nhất. Mạnh hơn là đổi dòng thông tin, đổi luật chơi, đổi mục tiêu. Gần đỉnh thang là đổi cách nghĩ đã sinh ra hệ thống. | shots: shots |
 | b11 | complication | Một ví dụ nổi tiếng trong sách: ở một khu nhà tại Hà Lan, nhà nào đặt đồng hồ điện ngay lối vào thì dùng điện ít hơn khoảng ba mươi phần trăm. Nhưng chính Meadows dẫn chuyện này bằng mấy chữ: người ta kể rằng. Mình chưa tìm được nghiên cứu gốc. Hãy coi nó là minh họa, chưa phải bằng chứng. _(attributed)_ | shots: shots |

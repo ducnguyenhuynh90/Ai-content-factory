@@ -493,7 +493,7 @@
   {
    "id": "b08",
    "act": "principle",
-   "narration": "Bài học thứ nhất: nhìn cái kho, không chỉ dòng chảy. Theo ngôn ngữ của Meadows, đàn cá là một kho, còn mẻ lưới mỗi năm là dòng chảy ra. Như nước trong bồn tắm: nước xả ra mạnh không có nghĩa là bồn còn đầy.",
+   "narration": "Bài học thứ nhất: nhìn cái kho, không chỉ dòng chảy. Theo ngôn ngữ của Meadows, đàn cá là một kho, còn mẻ lưới mỗi năm là dòng chảy ra. Như nước trong bể: nước xả ra mạnh không có nghĩa là bể còn đầy.",
    "visual": {
     "type": "shots",
     "shots": [
@@ -521,7 +521,7 @@
      },
      {
       "type": "trio",
-      "kicker": "Như nước trong bồn tắm",
+      "kicker": "Như nước trong bể",
       "cue": "như nước",
       "items": [
        {
@@ -531,7 +531,7 @@
        {
         "icon": "magnifier",
         "label": "Còn bao nhiêu?",
-        "cue": "bồn còn"
+        "cue": "bể còn"
        }
       ]
      }
