@@ -144,16 +144,16 @@
     "items": [
      {
       "icon": "hedgehog",
-      "label": "Tiger: golf từ 2 tuổi"
+      "label": "Tiger: golf, 2 tuổi"
      },
      {
       "icon": "fox",
-      "label": "Federer: chơi đủ môn",
+      "label": "Federer: đủ môn",
       "cue": "nhưng roger"
      }
     ],
     "line": "Cả hai lên số một.",
-    "line_cue": "số một"
+    "line_cue": "đủ môn"
    },
    "sfx": [
     {
@@ -263,11 +263,11 @@
      },
      {
       "type": "statement",
-      "kicker": "Anders Ericsson",
+      "kicker": "Ericsson đính chính",
       "text": "10.000 giờ là con số thần kỳ",
       "strike": "con số thần kỳ",
       "replace": "một con số trung bình",
-      "strike_cue": "trung bình",
+      "strike_cue": "đặc biệt",
       "cue": "nhưng chính"
      }
     ]
@@ -280,13 +280,13 @@
   {
    "id": "b01b",
    "act": "misconception",
-   "narration": "Ericsson còn kể: trong mười nghệ sĩ violin giỏi nhất của nghiên cứu năm một nghìn chín trăm chín mươi ba, một nửa chưa tập đủ mười nghìn giờ. Với ông, cách tập quan trọng hơn số giờ.",
+   "narration": "Ericsson còn kể: trong mười nghệ sĩ violin giỏi nhất của nghiên cứu năm một nghìn chín trăm chín mươi ba, đến năm hai mươi tuổi, một nửa vẫn chưa tập đủ mười nghìn giờ. Với ông, cách tập quan trọng hơn số giờ.",
    "visual": {
     "type": "shots",
     "shots": [
      {
       "type": "trio",
-      "kicker": "Berlin · 1993",
+      "kicker": "Berlin · 1993 · tính đến 20 tuổi",
       "items": [
        {
         "icon": "people",
@@ -309,16 +309,14 @@
       },
       "to": {
        "label": "Cách tập",
-       "icon": "target",
-       "cue": "cách tập"
+       "icon": "target"
       }
      }
     ]
    },
    "sources": [
     "ericsson_10000"
-   ],
-   "take": 1
+   ]
   },
   {
    "id": "b02",
@@ -376,16 +374,15 @@
     "shots": [
      {
       "type": "timeline",
-      "title": "Tiger Woods",
+      "title": "Tiger Woods · The Mike Douglas Show",
       "events": [
        {
         "year": "6/10/1978",
-        "text": "Lên truyền hình · 2 tuổi",
-        "cue": "cậu bé"
+        "text": "Lên tivi, 2 tuổi"
        },
        {
-        "year": "Mike Douglas Show",
-        "text": "Thi gạt bóng với Bob Hope",
+        "year": "Bob Hope",
+        "text": "Thi gạt bóng",
         "cue": "thi gạt"
        }
       ]
@@ -407,7 +404,7 @@
   {
    "id": "b04",
    "act": "story",
-   "narration": "Còn Federer thì khác. Theo Epstein, hồi nhỏ cậu chơi trượt tuyết, vật, bơi, trượt ván, bóng rổ, bóng ném, bóng bàn, cầu lông, và bóng đá. Mẹ cậu là huấn luyện viên quần vợt, nhưng không chịu dạy con.",
+   "narration": "Còn Federer thì sao? Theo Epstein, hồi nhỏ cậu chơi trượt tuyết, vật, bơi, trượt ván, bóng rổ, bóng ném, bóng bàn, cầu lông, và bóng đá. Mẹ cậu là huấn luyện viên quần vợt, nhưng không chịu dạy con.",
    "visual": {
     "type": "shots",
     "shots": [
@@ -434,7 +431,7 @@
        },
        {
         "icon": "people",
-        "label": "Bóng rổ, bóng đá…",
+        "label": "+ 7 môn nữa",
         "cue": "bóng rổ"
        }
       ]
@@ -468,12 +465,11 @@
       "events": [
        {
         "year": "~12 tuổi",
-        "text": "Bỏ bóng đá, chọn quần vợt",
-        "cue": "bỏ bóng"
+        "text": "Bỏ bóng đá, chọn quần vợt"
        },
        {
         "year": "2003",
-        "text": "Wimbledon đầu tiên · 21 tuổi",
+        "text": "Wimbledon đầu tiên",
         "cue": "năm hai"
        },
        {
@@ -487,7 +483,7 @@
       "type": "stat",
       "value": 20,
       "label": "danh hiệu Grand Slam đơn",
-      "note": "Roger Federer · giải nghệ 2022",
+      "note": "Roger Federer",
       "cue": "và giành"
      }
     ]
@@ -501,7 +497,7 @@
   {
    "id": "b06",
    "act": "story",
-   "narration": "Epstein gọi giai đoạn ấy là thời kỳ nếm thử. Theo ông, nhiều người xuất sắc từng có một giai đoạn như vậy: thử nhiều thứ, biết mình hợp với gì, rồi mới chuyên sâu. Tiger mới là ngoại lệ, không phải quy luật.",
+   "narration": "Epstein gọi giai đoạn ấy là thời kỳ nếm thử. Theo ông, nhiều người xuất sắc từng có một giai đoạn như vậy: thử nhiều thứ, biết mình hợp với gì, rồi mới chuyên sâu. Vậy ai mới là ngoại lệ? Với Epstein, đó là Tiger.",
    "visual": {
     "type": "shots",
     "shots": [
@@ -512,14 +508,15 @@
       "cols": 10,
       "label": "môn Federer từng chơi · theo Epstein",
       "keep_label": "Quần vợt",
-      "keep_cue": "rồi mới"
+      "keep_cue": "như vậy"
      },
      {
       "type": "icon",
       "icon": "hedgehog",
       "kicker": "Theo Epstein",
-      "line": "Tiger là ngoại lệ, không phải quy luật",
-      "cue": "tiger mới"
+      "line": "Tiger mới là ngoại lệ",
+      "cue": "vậy ai",
+      "line_cue": "đó là"
      }
     ]
    },
@@ -644,8 +641,8 @@
         "cue": "đi dạy"
        },
        {
-        "year": "1880 · 27 tuổi",
-        "text": "Bắt đầu vẽ",
+        "year": "1880",
+        "text": "Bắt đầu vẽ · 27 tuổi",
         "cue": "bắt đầu vẽ"
        }
       ]
@@ -676,7 +673,7 @@
       "icon": "magnifier",
       "kicker": "Cedric Chin · Brian Martin",
       "line": "Nhiều giai thoại, ít chặt chẽ?",
-      "line_cue": "dựa nhiều"
+      "line_cue": "phê bình"
      },
      {
       "type": "icon",
@@ -696,15 +693,14 @@
       "type": "swap",
       "kicker": "Tiger không sai",
       "cue": "tiger không",
-      "strike_cue": "chỉ là",
+      "strike_cue": "không sai",
       "from": {
        "label": "Luật chung cho mọi người",
        "icon": "checklist"
       },
       "to": {
-       "label": "Một con đường, không phải duy nhất",
-       "icon": "hedgehog",
-       "cue": "luật chung"
+       "label": "Một trong nhiều đường",
+       "icon": "hedgehog"
       }
      }
     ]
@@ -725,7 +721,7 @@
     "choices": [
      "Chọn ngay một ngành, cố đến cùng",
      "Hỏi: mình đã học được gì, hợp với gì, và đang ở sân nào?",
-     "Bỏ hết, vì đằng nào cũng muộn rồi"
+     "Cứ thử tiếp thật nhiều ngành, không cần nghĩ"
     ],
     "answer": "B — nếm thử có chủ đích, và biết mình đang ở sân nào",
     "think_seconds": 5
@@ -823,7 +819,7 @@
     "ask": "Bạn muốn clip tiếp theo về cuốn sách nào?",
     "ask_hint": "Một cuốn sách · một nhà tư duy · một chủ đề",
     "ask_cue": "còn bạn",
-    "sources_line": "Nguồn: Epstein, Range (2019) · GOLF.com · Wikipedia · Commoncog · Martin (2020) · xem mô tả",
+    "sources_line": "Nguồn: Epstein (2019) · GOLF.com · Wikipedia · Commoncog · Martin · xem mô tả",
     "disclaimer": "Tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư.",
     "sources_cue": "còn bạn"
    }

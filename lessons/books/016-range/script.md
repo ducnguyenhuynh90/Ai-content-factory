@@ -1,5 +1,5 @@
 # Hiểu Sâu, Biết Rộng, Kiểu Gì Cũng Thắng
-_Review sách · Tập 16 · 775 words · ~3.35 min · 4:3_
+_Review sách · Tập 16 · 783 words · ~3.38 min · 4:3_
 
 ## Learning goals
 - Kể lại hai con đường Tiger Woods (lên truyền hình đánh golf năm 2 tuổi) và Roger Federer (chơi nhiều môn, bỏ bóng đá khoảng năm 12 tuổi) như Epstein đặt cạnh nhau
@@ -18,12 +18,12 @@ _Review sách · Tập 16 · 775 words · ~3.35 min · 4:3_
 | h2 | context | Ta quen nghe câu chuyện của Tiger: bắt đầu sớm, tập một môn, thành thiên tài. David Epstein cho rằng câu chuyện của Federer mới phổ biến hơn, chỉ ít được kể. Cuối clip, bạn sẽ có ba lý do để không vội chọn một con đường duy nhất, và một lời cảnh báo về chính cuốn sách. | shots: shots |
 | t0 | context |  | title: Hiểu Sâu, Biết Rộng, Kiểu Gì Cũng Thắng |
 | b01 | misconception | Ta hay nghĩ muốn giỏi thì phải chọn sớm, và tập đủ mười nghìn giờ. Nhưng chính Anders Ericsson, nhà nghiên cứu đứng sau con số ấy, nói nó không có gì đặc biệt. Đó chỉ là một con số trung bình, của một nhóm nhỏ nghệ sĩ violin. | shots: shots |
-| b01b | misconception | Ericsson còn kể: trong mười nghệ sĩ violin giỏi nhất của nghiên cứu năm một nghìn chín trăm chín mươi ba, một nửa chưa tập đủ mười nghìn giờ. Với ông, cách tập quan trọng hơn số giờ. | shots: shots |
+| b01b | misconception | Ericsson còn kể: trong mười nghệ sĩ violin giỏi nhất của nghiên cứu năm một nghìn chín trăm chín mươi ba, đến năm hai mươi tuổi, một nửa vẫn chưa tập đủ mười nghìn giờ. Với ông, cách tập quan trọng hơn số giờ. | shots: shots |
 | b02 | context | David Epstein là nhà báo khoa học, từng viết cho Sports Illustrated và ProPublica, và là tác giả The Sports Gene. Range ra đời năm hai nghìn mười chín, và lên số một danh sách bán chạy của New York Times. Ở Việt Nam, sách có tên Hiểu Sâu, Biết Rộng, Kiểu Gì Cũng Thắng. | shots: shots |
 | b03 | story | Ngày sáu tháng mười năm một nghìn chín trăm bảy mươi tám, cậu bé Tiger hai tuổi lên chương trình The Mike Douglas Show, thi gạt bóng với danh hài Bob Hope. Câu chuyện thần đồng được bố dẫn dắt từ rất sớm ấy trở thành hình mẫu. | shots: shots |
-| b04 | story | Còn Federer thì khác. Theo Epstein, hồi nhỏ cậu chơi trượt tuyết, vật, bơi, trượt ván, bóng rổ, bóng ném, bóng bàn, cầu lông, và bóng đá. Mẹ cậu là huấn luyện viên quần vợt, nhưng không chịu dạy con. | shots: shots |
+| b04 | story | Còn Federer thì sao? Theo Epstein, hồi nhỏ cậu chơi trượt tuyết, vật, bơi, trượt ván, bóng rổ, bóng ném, bóng bàn, cầu lông, và bóng đá. Mẹ cậu là huấn luyện viên quần vợt, nhưng không chịu dạy con. | shots: shots |
 | b05 | story | Mãi đến khoảng mười hai tuổi, Federer mới bỏ bóng đá để tập trung vào quần vợt. Năm hai nghìn lẻ ba, hai mươi mốt tuổi, anh vô địch Wimbledon lần đầu. Rồi anh giữ ngôi số một thế giới hơn hai trăm ba mươi tuần liền, và giành hai mươi danh hiệu Grand Slam. _(estimate)_ | shots: shots |
-| b06 | story | Epstein gọi giai đoạn ấy là thời kỳ nếm thử. Theo ông, nhiều người xuất sắc từng có một giai đoạn như vậy: thử nhiều thứ, biết mình hợp với gì, rồi mới chuyên sâu. Tiger mới là ngoại lệ, không phải quy luật. | shots: shots |
+| b06 | story | Epstein gọi giai đoạn ấy là thời kỳ nếm thử. Theo ông, nhiều người xuất sắc từng có một giai đoạn như vậy: thử nhiều thứ, biết mình hợp với gì, rồi mới chuyên sâu. Vậy ai mới là ngoại lệ? Với Epstein, đó là Tiger. | shots: shots |
 | b07 | principle | Bài học thứ nhất: nếm thử trước khi chọn. Đừng sợ mình bắt đầu muộn hơn người khác. Theo Epstein, thời gian thử nhiều thứ không mất đi. Nó giúp bạn tìm ra việc thật sự hợp với mình. | shots: shots |
 | b08 | principle | Bài học thứ hai: biết mình đang ở sân nào. Epstein mượn ý của nhà tâm lý học Robin Hogarth. Có những sân dễ đoán, như golf hay cờ vua: luật rõ, phản hồi nhanh, chuyên sớm rất có lợi. Và có những sân khó lường: luật thay đổi, phản hồi đến muộn. Theo Epstein, phần lớn công việc và cuộc sống thuộc loại thứ hai. | shots: shots |
 | b09 | principle | Bài học thứ ba: rẽ ngang không phải là lạc đường. Epstein kể về Vincent van Gogh. Ông từng bán tranh, đi dạy học, bán sách, làm người truyền giáo, rồi mới bắt đầu vẽ năm hai mươi bảy tuổi. Với Epstein, sẵn sàng đổi hướng là một phần của con đường. | shots: shots |

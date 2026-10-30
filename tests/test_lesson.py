@@ -341,3 +341,13 @@ def test_no_inter_700():
     for f in ("scenes.py", "metaphors.py", "build.py"):
         src = (_P(__file__).parents[1] / "vfactory" / "lesson" / f).read_text()
         assert not _re.search(r"font-weight(:\s*|=\")700", src), f
+
+
+def test_youtube_metadata_schedules_private():
+    from vfactory import youtube
+
+    L = {"meta": {"title": "T", "youtube": {"title": "Tiêu đề", "description": "Mô tả", "tags": ["a", "b"]}}}
+    m = youtube.metadata(L, "2026-10-31T19:00:00+07:00")
+    assert m["status"] == {"privacyStatus": "private", "publishAt": "2026-10-31T19:00:00+07:00",
+                           "selfDeclaredMadeForKids": False, "containsSyntheticMedia": True}
+    assert m["snippet"]["title"] == "Tiêu đề" and m["snippet"]["tags"] == ["a", "b"]
