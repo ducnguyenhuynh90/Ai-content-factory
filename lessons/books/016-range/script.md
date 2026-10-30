@@ -1,5 +1,5 @@
 # Hiểu Sâu, Biết Rộng, Kiểu Gì Cũng Thắng
-_Review sách · Tập 16 · 783 words · ~3.38 min · 4:3_
+_Review sách · Tập 16 · 787 words · ~3.4 min · 4:3_
 
 ## Learning goals
 - Kể lại hai con đường Tiger Woods (lên truyền hình đánh golf năm 2 tuổi) và Roger Federer (chơi nhiều môn, bỏ bóng đá khoảng năm 12 tuổi) như Epstein đặt cạnh nhau
@@ -18,8 +18,8 @@ _Review sách · Tập 16 · 783 words · ~3.38 min · 4:3_
 | h2 | context | Ta quen nghe câu chuyện của Tiger: bắt đầu sớm, tập một môn, thành thiên tài. David Epstein cho rằng câu chuyện của Federer mới phổ biến hơn, chỉ ít được kể. Cuối clip, bạn sẽ có ba lý do để không vội chọn một con đường duy nhất, và một lời cảnh báo về chính cuốn sách. | shots: shots |
 | t0 | context |  | title: Hiểu Sâu, Biết Rộng, Kiểu Gì Cũng Thắng |
 | b01 | misconception | Ta hay nghĩ muốn giỏi thì phải chọn sớm, và tập đủ mười nghìn giờ. Nhưng chính Anders Ericsson, nhà nghiên cứu đứng sau con số ấy, nói nó không có gì đặc biệt. Đó chỉ là một con số trung bình, của một nhóm nhỏ nghệ sĩ violin. | shots: shots |
-| b01b | misconception | Ericsson còn kể: trong mười nghệ sĩ violin giỏi nhất của nghiên cứu năm một nghìn chín trăm chín mươi ba, đến năm hai mươi tuổi, một nửa vẫn chưa tập đủ mười nghìn giờ. Với ông, cách tập quan trọng hơn số giờ. | shots: shots |
-| b02 | context | David Epstein là nhà báo khoa học, từng viết cho Sports Illustrated và ProPublica, và là tác giả The Sports Gene. Range ra đời năm hai nghìn mười chín, và lên số một danh sách bán chạy của New York Times. Ở Việt Nam, sách có tên Hiểu Sâu, Biết Rộng, Kiểu Gì Cũng Thắng. | shots: shots |
+| b01b | misconception | Ericsson còn kể: trong mười nghệ sĩ violin giỏi nhất của nghiên cứu năm một nghìn chín trăm chín mươi ba, đến năm hai mươi tuổi, một nửa vẫn chưa tập đủ mười nghìn giờ. Với ông, điều quan trọng là cách tập, chứ không phải số giờ. | shots: shots |
+| b02 | context | David Epstein là nhà báo khoa học, từng viết cho Sports Illustrated và ProPublica, và là tác giả The Sports Gene. Range ra đời năm hai nghìn mười chín, và có mặt trong danh sách bán chạy của New York Times. Ở Việt Nam, sách có tên Hiểu Sâu, Biết Rộng, Kiểu Gì Cũng Thắng. | shots: shots |
 | b03 | story | Ngày sáu tháng mười năm một nghìn chín trăm bảy mươi tám, cậu bé Tiger hai tuổi lên chương trình The Mike Douglas Show, thi gạt bóng với danh hài Bob Hope. Câu chuyện thần đồng được bố dẫn dắt từ rất sớm ấy trở thành hình mẫu. | shots: shots |
 | b04 | story | Còn Federer thì sao? Theo Epstein, hồi nhỏ cậu chơi trượt tuyết, vật, bơi, trượt ván, bóng rổ, bóng ném, bóng bàn, cầu lông, và bóng đá. Mẹ cậu là huấn luyện viên quần vợt, nhưng không chịu dạy con. | shots: shots |
 | b05 | story | Mãi đến khoảng mười hai tuổi, Federer mới bỏ bóng đá để tập trung vào quần vợt. Năm hai nghìn lẻ ba, hai mươi mốt tuổi, anh vô địch Wimbledon lần đầu. Rồi anh giữ ngôi số một thế giới hơn hai trăm ba mươi tuần liền, và giành hai mươi danh hiệu Grand Slam. _(estimate)_ | shots: shots |
@@ -43,7 +43,7 @@ _Review sách · Tập 16 · 783 words · ~3.38 min · 4:3_
 - [ericsson_10000] Shortform, 'Debates Over the Ten-Thousand-Hour Rule' (Ericsson: nothing special about 10,000 hours; half of the ten best violinists in the 1993 Berlin study had not reached it; Epstein: 10,000 was an average and the range was not reported) — https://www.shortform.com/blog/ten-thousand-hours/
 - [vangogh] Vincent van Gogh: art dealer at Goupil & Cie from age 16, teacher in England, bookseller in Dordrecht, lay preacher in the Borinage; took up art in 1880 at 27 (New World Encyclopedia; Beyond Van Gogh); used by Epstein in Range (summaries: SuperSummary ch. 6–8) — https://www.newworldencyclopedia.org/entry/Vincent_van_Gogh
 - [critics] Criticism: Cedric Chin, Commoncog, 'Range' summary (book lacks the rigour of Epstein's newsletter; heavy on anecdote); Brian Martin, 'Range and expert performance' (25 Apr 2020: an unfortunate dismissal of insights about expert performance) — https://www.bmartin.cc/pubs/20Range.pdf
-- [epstein_bio] Wikipedia, 'David Epstein (journalist)'; Columbia SPS bio (former senior writer at Sports Illustrated; former science and investigative reporter at ProPublica; Range a #1 New York Times best seller) — https://en.wikipedia.org/wiki/David_Epstein_(journalist)
+- [epstein_bio] Wikipedia, 'David Epstein (journalist)'; Columbia SPS bio (former senior writer at Sports Illustrated; former science and investigative reporter at ProPublica; Range a New York Times best seller (11 weeks on the hardcover nonfiction list per a bestseller tracker; the '#1' label in bios may refer to a category list, unverified)) — https://en.wikipedia.org/wiki/David_Epstein_(journalist)
 - [vn_edition] Bản tiếng Việt 'Hiểu sâu, biết rộng, kiểu gì cũng thắng', Công ty Sách Alpha, 2021, 412 trang, dịch: Tôn Thất Kỷ Vân (thông tin trên likewise.com) — https://activity.likewise.com/books/4tzvzgEACAAJ
 
 ## Lint
