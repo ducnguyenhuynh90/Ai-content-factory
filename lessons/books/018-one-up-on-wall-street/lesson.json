@@ -293,7 +293,8 @@
     "wiki_lynch",
     "lynch1989",
     "vn_title"
-   ]
+   ],
+   "take": 1
   },
   {
    "id": "b03",
@@ -385,7 +386,8 @@
     "wiki_lynch",
     "fool_lynch"
    ],
-   "certainty": "estimate"
+   "certainty": "estimate",
+   "take": 3
   },
   {
    "id": "b05",

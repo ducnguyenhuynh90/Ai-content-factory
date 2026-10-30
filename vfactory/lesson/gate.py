@@ -159,7 +159,14 @@ def misread_numbers(narration: str, heard: str) -> list[str]:
             if any(x in VI_MAGNITUDE for x in cur):
                 runs.append(" ".join(cur))
             cur = []
-    return [r for r in runs if f" {r} " not in hs]
+    def heard_ok(r: str) -> bool:
+        if f" {r} " in hs:
+            return True
+        # Whisper writes "năm 1990" (the year) as plain "1990": accept the run without its leading "năm"
+        rest = r.split(" ", 1)
+        return rest[0] == "năm" and len(rest) == 2 and rest[1].split()[0] in VI_DIGITS and f" {rest[1]} " in hs
+
+    return [r for r in runs if not heard_ok(r)]
 
 
 def copy_lint(lesson: dict) -> list[str]:
