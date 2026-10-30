@@ -525,7 +525,8 @@
     "epstein2019",
     "federer_mother",
     "epstein_substack"
-   ]
+   ],
+   "take": 1
   },
   {
    "id": "b07",
@@ -566,7 +567,8 @@
    },
    "sources": [
     "epstein2019"
-   ]
+   ],
+   "take": 1
   },
   {
    "id": "b08",
@@ -761,7 +763,8 @@
       ]
      }
     ]
-   }
+   },
+   "take": 1
   },
   {
    "id": "b13",
@@ -806,7 +809,8 @@
    },
    "sources": [
     "epstein2019"
-   ]
+   ],
+   "take": 1
   },
   {
    "id": "b14",
