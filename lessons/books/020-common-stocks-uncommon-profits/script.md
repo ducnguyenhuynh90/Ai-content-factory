@@ -1,5 +1,5 @@
 # Cổ Phiếu Thường, Lợi Nhuận Phi Thường
-_Review sách · Tập 20 · 777 words · ~3.35 min · 4:3_
+_Review sách · Tập 20 · 794 words · ~3.43 min · 4:3_
 
 ## Learning goals
 - Kể lại chuyện Fisher mua Motorola năm 1955 và giữ đến năm 2004, như một chuyện lịch sử chứ không phải gợi ý mua
@@ -14,9 +14,9 @@ _Review sách · Tập 20 · 777 words · ~3.35 min · 4:3_
 ## Script
 | # | act | narration | on screen |
 |---|---|---|---|
-| h1 | hook | Năm một nghìn chín trăm năm mươi lăm, ông mua cổ phiếu một hãng làm radio. Rồi giữ gần năm mươi năm. | statement: 1955: mua. Giữ gần 50 năm. |
-| h2 | context | Không phải vì quên, cũng không phải nhờ may. Philip Fisher có một cách nghĩ khác về việc mua, và nhất là việc bán. Đến cuối clip, bạn sẽ có ba bài học từ cuốn sách của ông. | shots: shots |
-| t0 | context |  | title: Cổ Phiếu Thường, Lợi Nhuận Phi Thường |
+| h1 | hook | Năm một nghìn chín trăm năm mươi lăm, ông mua cổ phiếu một hãng làm radio. Rồi giữ nó gần nửa thế kỷ. | statement: 1955: mua. Giữ gần 50 năm. |
+| h2 | context | Không phải vì ông quên. Philip Fisher có một cách nghĩ khác về việc mua, và nhất là việc bán. Đến cuối clip, bạn sẽ có ba bài học từ cuốn sách của ông. | shots: shots |
+| t0 | context |  | title: Cổ Phiếu Thường, Lợi Nhuận Phi Thường |
 | b01 | misconception | Nhiều người tin: đầu tư giỏi là mua rẻ, bán đắt, và chốt lời thật nhanh. Lời gấp đôi rồi thì bán đi cho yên tâm. Fisher cho rằng chính thói quen ấy khiến người ta để vuột những công ty hiếm có nhất. | shots: shots |
 | b02 | context | Philip Fisher sinh năm một nghìn chín trăm lẻ bảy ở San Francisco. Năm một nghìn chín trăm ba mươi mốt, giữa cuộc Đại suy thoái, ông mở công ty tư vấn đầu tư của riêng mình. Năm một nghìn chín trăm năm mươi tám, ông viết cuốn sách này. Ở Việt Nam, sách có tên Cổ Phiếu Thường, Lợi Nhuận Phi Thường. | shots: shots |
 | b03 | story | Năm một nghìn chín trăm năm mươi lăm, Fisher mua cổ phiếu Motorola, khi đó chủ yếu là một hãng làm radio. Ông giữ nó cho tới khi qua đời, năm hai nghìn lẻ bốn. Gần năm mươi năm. Đây là chuyện lịch sử, không phải gợi ý mua. | shots: shots |
@@ -27,9 +27,9 @@ _Review sách · Tập 20 · 777 words · ~3.35 min · 4:3_
 | b08 | principle | Bài học thứ nhất: nghe ngóng, ghép mảnh. Báo cáo cho bạn con số. Những người làm việc quanh công ty cho bạn câu chuyện. Hãy nghe cả hai trước khi tin, và trước khi mua. | shots: shots |
 | b09 | principle | Bài học thứ hai: hỏi câu hỏi của mười năm. Fisher không hỏi quý tới lãi bao nhiêu. Ông hỏi: công ty này còn chỗ để lớn không, và ai sẽ tìm ra sản phẩm tiếp theo? Motorola năm ấy đã không dừng lại ở chiếc radio. | shots: shots |
 | b10 | principle | Bài học thứ ba: bán vì lý do, không vì giá. Trước khi bấm bán, hãy hỏi: mình đã sai, công ty đã đổi khác, hay có nơi tốt hơn hẳn cho số tiền này? Nếu chỉ vì giá đã lên, có thể bạn đang bán đi thứ hiếm nhất mình có. | shots: shots |
-| b11 | complication | Cách của Fisher có giá. Nghe ngóng tốn nhiều thời gian, và người thường khó gặp được ban lãnh đạo. Giữ lâu nghĩa là phải chịu những lần giá rơi sâu. Và Motorola là câu chuyện của người thắng: những công ty tăng trưởng khác của năm ấy, bao nhiêu đã biến mất? | shots: shots |
+| b11 | complication | Cách của Fisher có giá. Nghe ngóng tốn nhiều thời gian, và người thường khó gặp được ban lãnh đạo. Giữ lâu nghĩa là phải chịu những lần giá rơi sâu. Và Motorola là câu chuyện của người thắng: những công ty tăng trưởng khác của năm ấy, bao nhiêu đã biến mất? Một cổ phiếu thắng lớn chưa chứng minh được cả cách làm. Đó là lịch sử, không phải lời hứa. | shots: shots |
 | b12 | complication | Warren Buffett được cho là từng nói với tạp chí Forbes rằng ông là tám mươi lăm phần trăm Benjamin Graham, và mười lăm phần trăm Fisher. Có thể hiểu thế này: Graham dạy mua rẻ với biên an toàn, Fisher dạy nhìn vào chất lượng và tương lai của doanh nghiệp. _(attributed)_ | shots: shots |
-| b13 | question | Giờ thử một chút nhé. Bạn giữ cổ phiếu một công ty được ba năm, giá đã tăng gấp đôi. Theo Fisher, lý do nào đáng để bán nhất? | question: Giữ 3 năm, giá đã gấp đôi. Theo Fisher, lý do nào đáng để bán? |
+| b13 | question | Giờ thử một chút nhé. Bạn giữ cổ phiếu một công ty được ba năm, giá đã tăng gấp đôi. Theo Fisher, lý do nào đáng để bán nhất? | question: Giữ 3 năm, giá đã gấp đôi. Theo Fisher, lý do nào đáng để bán? |
 | b14 | recap | Vậy là ba bài học từ Cổ Phiếu Thường, Lợi Nhuận Phi Thường. Nghe ngóng, ghép mảnh. Hỏi câu hỏi của mười năm. Và bán vì lý do, không vì giá. | list: Ba bài học |
 | b15 | close | Fisher giữ một cổ phiếu suốt gần năm mươi năm, không phải vì ông không dám bán. Mà vì ông biết rõ mình đang chờ lý do nào để bán. Với thứ bạn đang nắm, lý do ấy là gì? | shots: shots |
 | b16 | close | Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau. | end: Cổ Phiếu Thường, Lợi Nhuận Phi Thường |
@@ -43,7 +43,7 @@ _Review sách · Tập 20 · 777 words · ~3.35 min · 4:3_
 - [points15] Freedom Isn't Free, 'Philip Fisher's 15 points' (point 1: products with market potential for a sizable increase in sales for at least several years; point 2: management's determination to develop new products; point 14: does management talk freely when things go well but 'clam up' when troubles occur?) — https://freedomisntfree.co.uk/articles/philip-fisher-15-points
 - [fool_sell] The Motley Fool, 'Sell and Don't Look Back', 30 Mar 2005 (Fisher's three reasons to sell: the original purchase was a mistake; the company no longer qualifies; a much better opportunity) — https://www.fool.com/investing/small-cap/2005/03/30/sell-and-dont-look-back.aspx
 - [safal] Safal Niveshak, 'Know when to sell' (quotes Fisher: 'If the job has been correctly done when a common stock is purchased, the time to sell it is almost never') — https://www.safalniveshak.com/smart-people-investing-know-when-to-sell/
-- [forbes] Forbes article reposted by Hedge Fund Alpha, quoting Buffett: 'I'm 15 percent Fisher and 85 percent Benjamin Graham' (date of the original issue not confirmed: treated as attributed) — https://hedgefundalpha.com/?p=1522465
+- [forbes] Forbes, 1969 profile of Warren Buffett, reposted by Hedge Fund Alpha: 'I'm 15% Phil Fisher and 85% Benjamin Graham' (issue dated 1 Nov 1969 per a Scribd copy; original not checked: treated as attributed) — https://hedgefundalpha.com/?p=1522465
 - [vn_title] Thư viện số Quốc hội, 'Cổ phiếu thường, lợi nhuận phi thường = Common Stocks and Uncommon Profits' (NXB Lao động - Xã hội, Alpha Books; bản quyền dịch 2009) — https://thuvienso.quochoi.vn/handle/11742/95304?mode=full
 
 ## Lint

@@ -169,6 +169,16 @@ def misread_numbers(narration: str, heard: str) -> list[str]:
     return [r for r in runs if not heard_ok(r)]
 
 
+def spoken_tokens(text: str, lang: str, heard: bool = False) -> list[str]:
+    """Words to compare script and listener on. In Vietnamese, Whisper writes numbers as digits ("50"), so spell them
+    out first and fold spelling variants, or "gần năm mươi năm" heard as "gần 50 năm" looks like two dropped words."""
+    if lang != "vi":
+        return [voice._norm(x) for x in text.split()]
+    if heard:
+        text = _vi_digits_to_words(text)
+    return _vi_canon([t for t in (voice._norm(x) for x in text.split()) if t])
+
+
 def copy_lint(lesson: dict) -> list[str]:
     """Typos a proofreader would circle: doubled words, stray spaces, digits in narration, unbalanced quotes."""
     issues = []
@@ -256,8 +266,7 @@ def run(lesson_path: str | Path, out_dir: str | Path, check: bool = True, listen
 
                 y, sr = sf.read(str(wav), dtype="float32")
                 heard = " ".join(x[0] for x in voice._heard_words(y, sr, lang))
-                nt = [voice._norm(x) for x in b["narration"].split()]
-                ht = [voice._norm(x) for x in heard.split()]
+                nt, ht = spoken_tokens(b["narration"], lang), spoken_tokens(heard, lang, heard=True)
                 sm = difflib.SequenceMatcher(None, nt, ht, autojunk=False)
                 gone = [" ".join(nt[a1:a2]) for op, a1, a2, _, _ in sm.get_opcodes() if op == "delete" and a2 - a1 >= 2]
                 bad = misread_numbers(b["narration"], heard) if lang == "vi" else []

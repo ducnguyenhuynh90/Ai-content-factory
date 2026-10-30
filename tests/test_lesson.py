@@ -353,3 +353,11 @@ def test_youtube_metadata_schedules_private():
     assert m["status"] == {"privacyStatus": "private", "publishAt": "2026-10-31T19:00:00+07:00",
                            "selfDeclaredMadeForKids": False, "containsSyntheticMedia": True}
     assert m["snippet"]["title"] == "Tiêu đề" and m["snippet"]["tags"] == ["a", "b"]
+
+
+def test_gate_dropped_words_spell_digits():
+    from vfactory.lesson import gate as g
+
+    a = g.spoken_tokens("Rồi giữ gần năm mươi năm.", "vi")
+    b = g.spoken_tokens("rồi giữ gần 50 năm.", "vi", heard=True)
+    assert a == b
