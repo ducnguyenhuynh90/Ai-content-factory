@@ -1,5 +1,5 @@
 # Những Bài Học Đầu Tư Từ Warren Buffett
-_Review sách · Tập 21 · 778 words · ~3.36 min · 4:3_
+_Review sách · Tập 21 · 898 words · ~3.86 min · 4:3_
 
 ## Learning goals
 - Kể lại chuyện Berkshire Hathaway: 1962 mua vì rẻ, 1964 chênh 1/8 đô với Seabury Stanton, 1965 giành quyền kiểm soát, 1985 đóng mảng dệt
@@ -21,9 +21,11 @@ _Review sách · Tập 21 · 778 words · ~3.36 min · 4:3_
 | b02 | context | Cuốn sách này không do Buffett ngồi viết. Năm một nghìn chín trăm chín mươi sáu, giáo sư luật Lawrence Cunningham tổ chức một hội thảo về thư Buffett gửi cổ đông, rồi xếp các lá thư theo chủ đề. Bản đầu ra năm sau đó, rồi được cập nhật nhiều lần. Ở Việt Nam, sách có tên Những Bài Học Đầu Tư Từ Warren Buffett. | shots: shots |
 | b03 | story | Quay lại năm một nghìn chín trăm sáu mươi hai. Buffett bắt đầu mua cổ phiếu Berkshire Hathaway, một hãng dệt ở New England, vì giá rẻ. Năm một nghìn chín trăm sáu mươi tư, theo lời Buffett kể, chủ tịch Seabury Stanton hứa mua lại cổ phiếu của ông với giá mười một phẩy năm đô. | shots: shots |
 | b04 | story | Nhưng thư chào mua chính thức lại ghi thấp hơn một phần tám đô. Buffett nổi giận. Ông mua thêm, giành quyền kiểm soát công ty năm một nghìn chín trăm sáu mươi lăm, rồi cho Stanton thôi việc. Giờ ông sở hữu một công việc kinh doanh mà chính ông gọi là tệ. | shots: shots |
+| b04b | story | Còn hai trăm tỷ đô là gì? Đó là ước tính của chính Buffett năm hai nghìn không trăm mười: nếu số vốn ấy đi thẳng vào bảo hiểm, Berkshire về sau có thể lớn hơn chừng ấy. Đó là chi phí cơ hội, không phải khoản lỗ. _(estimate)_ | shots: shots |
 | b05 | story | Hai mươi năm sau, Buffett vẫn cố giữ nhà máy chạy. Năm một nghìn chín trăm tám mươi lăm, ông đóng cửa mảng dệt. Theo thư năm ấy, máy móc từng tốn khoảng mười ba triệu đô, khi bán chỉ thu về khoảng một trăm sáu mươi ba nghìn đô. _(estimate)_ | shots: shots |
 | b06 | story | Trong thư năm một nghìn chín trăm tám mươi lăm, ông viết: nếu thấy mình ở trên một con thuyền rò rỉ kinh niên, thì sức lực dành cho việc đổi thuyền có lẽ hiệu quả hơn sức lực dành cho việc vá lỗ. | shots: shots |
-| b07 | principle | Bài học thứ nhất: chọn con thuyền trước tay chèo. Từ năm một nghìn chín trăm tám mươi, Buffett đã viết: khi một ban lãnh đạo nổi tiếng tài giỏi gặp một ngành nổi tiếng kinh tế tệ, thứ còn nguyên vẹn là danh tiếng của ngành. | shots: shots |
+| b06b | story | Vì sao vá mãi không được? Cũng trong thư ấy, Buffett giải thích, đại ý: vải dệt là thứ hàng ai cũng làm được. Khi một hãng mua máy mới để giảm chi phí, các hãng khác cũng làm vậy, và chi phí thấp hơn biến thành giá bán thấp hơn cho cả ngành. Phần lợi về tay khách hàng. Đó là kinh tế tệ của một ngành. | shots: shots |
+| b07 | principle | Bài học thứ nhất: chọn con thuyền trước tay chèo. Từ năm một nghìn chín trăm tám mươi, Buffett đã viết: trừ vài ngoại lệ, khi một ban lãnh đạo nổi tiếng tài giỏi gặp một ngành nổi tiếng kinh tế tệ, thứ còn nguyên vẹn là danh tiếng của ngành. | shots: shots |
 | b08 | principle | Bài học thứ hai: công ty tuyệt vời, giá hợp lý. Năm một nghìn chín trăm tám mươi chín, Buffett viết rằng sai lầm đầu tiên của ông là bị giá rẻ của Berkshire cám dỗ. Và ông kết luận: mua công ty tuyệt vời với giá hợp lý, tốt hơn nhiều so với công ty tầm thường với giá tuyệt vời. | shots: shots |
 | b09 | principle | Bài học thứ ba: viết ra sai lầm của mình. Buffett không giấu chuyện hãng dệt. Ông kể nó trong thư, nhiều lần, suốt mấy chục năm. Ghi lại lỗi một cách thẳng thắn là cách rẻ nhất để không trả học phí hai lần. | shots: shots |
 | b10 | complication | Một lời nhắc công bằng. Theo thư năm hai nghìn hai mươi tư, từ năm một nghìn chín trăm sáu mươi lăm, giá trị thị trường mỗi cổ phiếu Berkshire tăng trung bình khoảng mười chín phẩy chín phần trăm mỗi năm, danh nghĩa, so với khoảng mười phẩy bốn của S&P năm trăm có tính cổ tức. Đó là lịch sử, không phải lời hứa. _(estimate)_ | shots: shots |
