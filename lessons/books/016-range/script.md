@@ -3,11 +3,11 @@ _Review sách · Tập 16 · 787 words · ~3.4 min · 4:3_
 
 ## Learning goals
 - Kể lại hai con đường Tiger Woods (lên truyền hình đánh golf năm 2 tuổi) và Roger Federer (chơi nhiều môn, bỏ bóng đá khoảng năm 12 tuổi) như Epstein đặt cạnh nhau
-- Dùng ba ý: nếm thử trước khi chọn; biết mình đang ở sân nào (dễ đoán hay khó lường); rẽ ngang không phải là lạc đường
+- Dùng ba ý: khám phá trước khi chọn; biết mình đang ở sân nào (dễ đoán hay khó lường); rẽ ngang không phải là lạc đường
 - Biết giới hạn của sách: nhiều giai thoại, và chuyên sớm vẫn hiệu quả ở sân dễ đoán
 
 ## Principles
-1. **Nếm thử trước khi chọn** — Thời gian thử nhiều thứ không mất đi: nó giúp bạn tìm ra việc thật sự hợp với mình.
+1. **Khám phá trước khi chọn** — Thời gian thử nhiều thứ không mất đi: nó giúp bạn tìm ra việc thật sự hợp với mình.
 2. **Biết mình đang ở sân nào** — Sân dễ đoán (luật rõ, phản hồi nhanh) thưởng cho chuyên sớm; sân khó lường thưởng cho tầm nhìn rộng.
 3. **Rẽ ngang không phải là lạc đường** — Sẵn sàng đổi hướng là một phần của con đường, không phải dấu hiệu thất bại.
 
@@ -23,14 +23,14 @@ _Review sách · Tập 16 · 787 words · ~3.4 min · 4:3_
 | b03 | story | Ngày sáu tháng mười năm một nghìn chín trăm bảy mươi tám, cậu bé Tiger hai tuổi lên chương trình The Mike Douglas Show, thi gạt bóng với danh hài Bob Hope. Câu chuyện thần đồng được bố dẫn dắt từ rất sớm ấy trở thành hình mẫu. | shots: shots |
 | b04 | story | Còn Federer thì sao? Theo Epstein, hồi nhỏ cậu chơi trượt tuyết, vật, bơi, trượt ván, bóng rổ, bóng ném, bóng bàn, cầu lông, và bóng đá. Mẹ cậu là huấn luyện viên quần vợt, nhưng không chịu dạy con. | shots: shots |
 | b05 | story | Mãi đến khoảng mười hai tuổi, Federer mới bỏ bóng đá để tập trung vào quần vợt. Năm hai nghìn lẻ ba, hai mươi mốt tuổi, anh vô địch Wimbledon lần đầu. Rồi anh giữ ngôi số một thế giới hơn hai trăm ba mươi tuần liền, và giành hai mươi danh hiệu Grand Slam. _(estimate)_ | shots: shots |
-| b06 | story | Epstein gọi giai đoạn ấy là thời kỳ nếm thử. Theo ông, nhiều người xuất sắc từng có một giai đoạn như vậy: thử nhiều thứ, biết mình hợp với gì, rồi mới chuyên sâu. Vậy ai mới là ngoại lệ? Với Epstein, đó là Tiger. | shots: shots |
-| b07 | principle | Bài học thứ nhất: nếm thử trước khi chọn. Đừng sợ mình bắt đầu muộn hơn người khác. Theo Epstein, thời gian thử nhiều thứ không mất đi. Nó giúp bạn tìm ra việc thật sự hợp với mình. | shots: shots |
+| b06 | story | Epstein gọi giai đoạn ấy là thời kỳ khám phá. Theo ông, nhiều người xuất sắc từng có một giai đoạn như vậy: thử nhiều thứ, biết mình hợp với gì, rồi mới chuyên sâu. Vậy ai mới là ngoại lệ? Với Epstein, đó là Tiger. | shots: shots |
+| b07 | principle | Bài học thứ nhất: khám phá trước khi chọn. Đừng sợ mình bắt đầu muộn hơn người khác. Theo Epstein, thời gian thử nhiều thứ không mất đi. Nó giúp bạn tìm ra việc thật sự hợp với mình. | shots: shots |
 | b08 | principle | Bài học thứ hai: biết mình đang ở sân nào. Epstein mượn ý của nhà tâm lý học Robin Hogarth. Có những sân dễ đoán, như golf hay cờ vua: luật rõ, phản hồi nhanh, chuyên sớm rất có lợi. Và có những sân khó lường: luật thay đổi, phản hồi đến muộn. Theo Epstein, phần lớn công việc và cuộc sống thuộc loại thứ hai. | shots: shots |
 | b09 | principle | Bài học thứ ba: rẽ ngang không phải là lạc đường. Epstein kể về Vincent van Gogh. Ông từng bán tranh, đi dạy học, bán sách, làm người truyền giáo, rồi mới bắt đầu vẽ năm hai mươi bảy tuổi. Với Epstein, sẵn sàng đổi hướng là một phần của con đường. | shots: shots |
 | b10 | complication | Nhưng Range cũng gây tranh cãi. Những người phê bình như Cedric Chin hay Brian Martin cho rằng sách dựa nhiều vào giai thoại, và xem nhẹ nghiên cứu về luyện tập có chủ đích. Chính Epstein cũng thừa nhận: ở sân dễ đoán, chuyên sớm vẫn rất hiệu quả. Tiger không sai. Chỉ là con đường của anh không phải luật chung. _(disputed)_ | shots: shots |
 | b11 | question | Giờ thử một chút nhé. Em của bạn hai mươi tuổi, đã học thử ba ngành khác nhau, và lo mình chậm hơn bạn bè. Theo Range, lời khuyên nào hợp nhất? | question: 20 tuổi, đã thử 3 ngành, lo mình chậm hơn bạn bè. Range sẽ khuyên… |
-| b12 | recap | Vậy là ba bài học từ Hiểu Sâu, Biết Rộng, Kiểu Gì Cũng Thắng. Nếm thử trước khi chọn. Biết mình đang ở sân nào. Và rẽ ngang không phải là lạc đường. | shots: shots |
-| b13 | close | Tiger và Federer đều là huyền thoại. Một người bắt đầu sớm, một người bắt đầu rộng. Epstein không bảo bạn phải chọn Federer. Ông chỉ nhắc: đừng tự trách mình vì không có một tuổi thơ như Tiger. Có lẽ, con đường của bạn vẫn đang ở thời kỳ nếm thử. | shots: shots |
+| b12 | recap | Vậy là ba bài học từ Hiểu Sâu, Biết Rộng, Kiểu Gì Cũng Thắng. Khám phá trước khi chọn. Biết mình đang ở sân nào. Và rẽ ngang không phải là lạc đường. | shots: shots |
+| b13 | close | Tiger và Federer đều là huyền thoại. Một người bắt đầu sớm, một người bắt đầu rộng. Epstein không bảo bạn phải chọn Federer. Ông chỉ nhắc: đừng tự trách mình vì không có một tuổi thơ như Tiger. Có lẽ, con đường của bạn vẫn đang ở thời kỳ khám phá. | shots: shots |
 | b14 | close | Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau. | end: Hiểu Sâu, Biết Rộng, Kiểu Gì Cũng Thắng |
 
 ## Sources
