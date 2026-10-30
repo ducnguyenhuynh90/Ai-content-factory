@@ -33,7 +33,7 @@ _Review sách · Tập 22 · 774 words · ~3.34 min · 4:3_
 | b13 | question | Giờ thử một chút nhé. Bạn nhận lương, trả tiền nhà, tiền ăn, rồi định cuối tháng còn bao nhiêu thì để dành bấy nhiêu. Theo Arkad, nên làm gì? | question: Nhận lương, chi tiêu, cuối tháng còn gì để nấy. Theo Arkad, nên làm gì? |
 | b14 | recap | Vậy là ba bài học từ Người Giàu Có Nhất Thành Babylon. Trả cho mình trước. Hỏi đúng người. Và để tiền đẻ ra tiền. | list: Ba bài học |
 | b15 | close | Arkad không có thật. Nhưng một năm tiết kiệm mất vào tay một người thợ gạch thì ai cũng có thể gặp. Câu hỏi của Clason vẫn còn nguyên: trong mỗi đồng bạn kiếm được, phần nào là của bạn để giữ? | shots: shots |
-| b16 | close | Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau. | end: Người Giàu Có Nhất Thành Babylon |
+| b16 | close | Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau. | end: Người Giàu Có Nhất Thành Babylon |
 
 ## Sources
 - [clason1926] George S. Clason, The Richest Man in Babylon, 1926 (fiction: parables set in ancient Babylon; Arkad the scribe and Algamish the moneylender; 'a part of all you earn is yours to keep'; not less than a tenth; Azmur the brickmaker and the worthless glass; Aggar the shieldmaker and the bronze; 'Seven Cures for a Lean Purse'; 'Five Laws of Gold'; the closing clay-tablet chapters) — https://www.penguinrandomhouse.com/books/294317/the-richest-man-in-babylon-by-george-s-clason/9780451205360/
