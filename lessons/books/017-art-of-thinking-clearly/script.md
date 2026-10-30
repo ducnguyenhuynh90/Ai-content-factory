@@ -1,5 +1,5 @@
 # Nghệ Thuật Tư Duy Rành Mạch
-_Review sách · Tập 17 · 787 words · ~3.4 min · 4:3_
+_Review sách · Tập 17 · 788 words · ~3.4 min · 4:3_
 
 ## Learning goals
 - Kể lại câu chuyện Concorde (hiệp ước 1962 không có điều khoản rút lui, 20 chiếc được chế tạo, 'ngụy biện Concorde' năm 1976)
@@ -15,10 +15,10 @@ _Review sách · Tập 17 · 787 words · ~3.4 min · 4:3_
 | # | act | narration | on screen |
 |---|---|---|---|
 | h1 | hook | Concorde bay nhanh gấp đôi tốc độ âm thanh. Nhưng thứ khó dừng nhất của nó là số tiền đã chi. | icon: icon |
-| h2 | context | Rolf Dobelli gọi đó là ngụy biện chi phí chìm, một trong chín mươi chín lỗi tư duy trong cuốn sách của ông. Hôm nay, mình kể lại câu chuyện Concorde, rút ra ba thói quen, và kể một sự thật khó chịu về chính cuốn sách này. | shots: shots |
-| t0 | context |  | title: Nghệ Thuật Tư Duy Rành Mạch |
+| h2 | context | Rolf Dobelli gọi đó là cái bẫy chi phí chìm, một trong chín mươi chín lỗi tư duy trong cuốn sách của ông. Hôm nay, mình kể lại câu chuyện Concorde, rút ra ba thói quen, và kể một sự thật khó chịu về chính cuốn sách này. | shots: shots |
+| t0 | context |  | title: Nghệ Thuật Tư Duy Rành Mạch |
 | b01 | misconception | Ta hay nghĩ người thông minh sẽ tự tránh được lỗi tư duy. Dobelli cho rằng không ai miễn nhiễm. Những lỗi này có hệ thống, nên cách tốt nhất là học gọi tên chúng, để nhận ra lúc mình sắp mắc. | shots: shots |
-| b02 | context | Dobelli là doanh nhân và nhà văn người Thụy Sĩ, đồng sáng lập getAbstract năm một nghìn chín trăm chín mươi chín. Sách viết từ những bài báo hằng tuần, ra bản tiếng Đức năm hai nghìn mười một và đứng đầu danh sách bán chạy của Der Spiegel. Ở Việt Nam, sách có tên Nghệ Thuật Tư Duy Rành Mạch. | shots: shots |
+| b02 | context | Dobelli là doanh nhân và nhà văn người Thụy Sĩ. Năm một nghìn chín trăm chín mươi chín, ông đồng sáng lập getAbstract. Sách viết từ những bài báo hằng tuần, ra bản tiếng Đức năm hai nghìn mười một và đứng đầu danh sách bán chạy của Der Spiegel. Ở Việt Nam, sách có tên Nghệ Thuật Tư Duy Rành Mạch. | shots: shots |
 | b03 | story | Năm một nghìn chín trăm sáu mươi hai, Anh và Pháp ký hiệp ước cùng chế tạo Concorde. Hiệp ước ấy không có điều khoản rút lui. Năm một nghìn chín trăm sáu mươi tư, chính phủ Anh muốn hủy những dự án quá tốn kém, trong đó có Concorde. Nhưng đây là một hiệp ước quốc tế, nên rút ra rất khó. | shots: shots |
 | b04 | story | Năm một nghìn chín trăm bảy mươi sáu, Concorde bắt đầu chở khách. Nhưng chỉ có hai mươi chiếc được chế tạo, mười bốn chiếc cho khai thác thương mại. Theo Dobelli, cả hai nước từ lâu đã biết dự án sẽ không có lãi, nhưng vẫn tiếp tục đổ tiền. | shots: shots |
 | b05 | story | Cũng năm ấy, nhà sinh học Richard Dawkins và đồng nghiệp Carlisle viết trên tạp chí Nature về một kiểu lỗi: tiếp tục đầu tư chỉ vì đã lỡ đầu tư nhiều. Họ ví nó với Concorde. Từ đó, người ta gọi nó là ngụy biện Concorde. | shots: shots |
