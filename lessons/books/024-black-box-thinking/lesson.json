@@ -42,7 +42,7 @@
    "constraints": "4–5 phút, 4:3, icon vẽ (không footage, không khuôn mặt người thật, không hình máy bay rơi, không chi tiết y khoa gây sốc), một giọng đọc OmniVoice seed 99 speed 0.88, tên tiếng Anh giữ nguyên chính tả, số đọc bằng chữ; câu chuyện Elaine Bromiley kể ngắn, trân trọng, không đổ lỗi cho cá nhân bác sĩ; con số tử vong nói rõ là ước tính và có ước tính khác thấp hơn; tên sách tiếng Việt là tạm dịch"
   },
   "youtube": {
-   "title": "Vì sao máy bay an toàn mà lỗi khác cứ lặp lại? | Black Box Thinking",
+   "title": "Máy bay học từ lỗi, sao ta không? | Black Box Thinking – Syed",
    "thumbnail_text": "Hàng không · 2013 · Hơn 3 tỷ người bay. Chỉ 210 thiệt mạng.",
    "description": "Năm 2013, hơn 3 tỷ người đi máy bay thương mại, và theo IATA, 210 người thiệt mạng. Matthew Syed cho rằng bí mật nằm ở hộp đen (thật ra màu cam) và cách cả ngành hàng không học từ mỗi lần sai. Trong Black Box Thinking (tạm dịch: Tư Duy Hộp Đen), ông đặt nó cạnh những nơi lỗi bị giấu đi. Video kể lại chuyến bay United 173 (1978) và Crew Resource Management, câu chuyện của Elaine Bromiley (2005) và cuộc điều tra độc lập mà chồng chị, phi công Martin Bromiley, đề nghị, khác biệt giữa vòng lặp mở và vòng lặp đóng, ba thói quen (thất bại là dữ liệu; sửa hệ thống, đừng đổ lỗi; thử nhỏ, sai sớm), một con số gây tranh cãi, và một bài tập nhỏ.\n\nTóm tắt và cảm nhận cá nhân; nội dung giáo dục, không phải lời khuyên y khoa. Con số \"hơn 400.000 ca tử vong mỗi năm ở Mỹ\" là ước tính của John T. James (2013) mà sách dẫn; một phân tích tổng hợp năm 2020 (Rodwin và cộng sự) ước tính khoảng 22.000 ca, với cách đếm khác. Chuyện vòi phun Unilever (45 thế hệ, 449 lần thất bại) kể theo Syed. Tên sách tiếng Việt là tạm dịch; chúng tôi chưa xác nhận được một bản dịch đã xuất bản. Với lòng kính trọng gửi tới gia đình Bromiley.\n\nChương:\n3 tỷ người bay, 210 thiệt mạng\nHộp đen thật ra màu cam\nThất bại có đáng xấu hổ?\nMatthew Syed và Black Box Thinking\nUnited 173, 1978\nSửa cả hệ thống: Crew Resource Management\nElaine Bromiley, 2005\nMartin Bromiley và cuộc điều tra độc lập\nVòng lặp mở, vòng lặp đóng\nBài học 1: thất bại là dữ liệu\nBài học 2: sửa hệ thống, đừng đổ lỗi\nBài học 3: thử nhỏ, sai sớm\nMột con số gây tranh cãi\nThử một chút: dự án trễ hạn\nBa bài học\n\nNguồn:\n- Matthew Syed, Black Box Thinking, John Murray, 2015\n- IATA, 2013 safety performance (1/4/2014): https://www.iata.org/en/pressroom/pressroom-archive/2014-press-releases/2014-04-01-02/\n- NTSB AAR-79-7, United Airlines Flight 173; FAA Lessons Learned: https://www.faa.gov/lessons_learned/transport_airplane/accidents/N8082U\n- ATSB, Black box flight recorders: https://www.atsb.gov.au/node/11504\n- MDDUS Insight (2016), Accidents will happen: https://www.mddus.com/resources/publications-library/insight/spring-2016/accidents-will-happen\n- Harmer, Independent Review on the care given to Mrs Elaine Bromiley (2005): https://explore.psychsafety.com/n/harmer-bromiley-2005/\n- Clinical Human Factors Group: https://www.healthmanagement.org/s/zoom-on-martin-bromiley-clinical-human-factors-group\n- John T. James, Journal of Patient Safety (2013): https://journals.lww.com/journalpatientsafety/fulltext/2013/09000/a_new,_evidence_based_estimate_of_patient_harms.2.aspx\n- Rodwin et al., J Gen Intern Med (2020): https://pubmed.ncbi.nlm.nih.gov/31965525/\n- Matthew Syed, What 449 'Failures' Can Teach Us About Success: https://www.goodreads.com/author_blog_posts/9379808-what-449-failures-can-teach-us-about-success\n\nBạn muốn clip tiếp theo về cuốn sách nào? Để lại bình luận nhé.",
    "tags": [
@@ -160,13 +160,20 @@
   {
    "id": "h2",
    "act": "context",
-   "narration": "Đó là số liệu năm hai nghìn mười ba. Chiếc hộp ấy là hộp đen, thứ thật ra được sơn màu cam cho dễ tìm. Nhưng sức mạnh của nó nằm ở cách cả ngành học từ mỗi lần sai. Đến cuối clip, bạn sẽ thấy hai thế giới đối xử với sai lầm rất khác nhau, vì sao lại thế, và ba thói quen bạn mang theo được.",
+   "narration": "Đó là số liệu năm hai nghìn mười ba. Chiếc hộp ấy là hộp đen, thứ thật ra được sơn màu cam, để dễ tìm sau tai nạn. Nhưng sức mạnh của nó nằm ở cách cả ngành học từ mỗi lần sai. Đến cuối clip, bạn sẽ thấy hai thế giới đối xử với sai lầm khác nhau, vì sao, và ba thói quen bạn mang theo được.",
    "visual": {
     "type": "shots",
     "shots": [
      {
+      "type": "icon",
+      "icon": "clock",
+      "kicker": "Hàng không thương mại",
+      "line": "Số liệu năm 2013"
+     },
+     {
       "type": "statement",
       "kicker": "Hộp đen",
+      "cue": "chiếc hộp",
       "text": "Hộp đen thì màu đen",
       "strike": "màu đen",
       "replace": "Thật ra: màu cam",
@@ -318,16 +325,23 @@
   {
    "id": "b03",
    "act": "story",
-   "narration": "Bắt đầu từ bầu trời. Tháng Mười Hai năm một nghìn chín trăm bảy mươi tám, chuyến bay United Airlines một trăm bảy mươi ba gặp trục trặc ở bánh đáp, gần Portland. Cơ trưởng mải xử lý nó, cho máy bay bay vòng chờ, trong khi nhiên liệu cạn dần.",
+   "narration": "Tháng Mười Hai năm một nghìn chín trăm bảy mươi tám, chuyến bay United Airlines một trăm bảy mươi ba gặp trục trặc ở bánh đáp, gần Portland. Cơ trưởng mải xử lý nó, cho máy bay bay vòng chờ, trong khi nhiên liệu cạn dần.",
    "visual": {
     "type": "shots",
     "shots": [
      {
       "type": "icon",
+      "icon": "clock",
+      "kicker": "Tháng 12 · 1978",
+      "line": "United Airlines 173",
+      "line_cue": "united"
+     },
+     {
+      "type": "icon",
       "icon": "gear",
-      "kicker": "United 173 · Portland · 1978",
+      "kicker": "Gần Portland",
+      "cue": "gặp trục",
       "line": "Trục trặc bánh đáp",
-      "line_cue": "trục trặc",
       "motion": "shake",
       "motion_cue": "bánh đáp"
      },
@@ -357,8 +371,7 @@
       "type": "icon",
       "icon": "clock",
       "kicker": "28/12/1978",
-      "line": "Mười người thiệt mạng",
-      "line_cue": "mười người"
+      "line": "Mười người thiệt mạng"
      },
      {
       "type": "icon",
@@ -378,7 +391,7 @@
   {
    "id": "b05",
    "act": "story",
-   "narration": "Ngành hàng không không dừng ở việc chỉ ra lỗi của một người. Họ sửa cả hệ thống. Cơ quan điều tra Mỹ khuyến nghị đào tạo lại cách tổ lái làm việc với nhau: cơ trưởng lắng nghe, người khác dám lên tiếng. Từ đó ra đời Crew Resource Management, nay được dùng khắp thế giới.",
+   "narration": "Ngành hàng không đã không dừng ở việc chỉ ra lỗi của một người. Họ sửa cả hệ thống, để lỗi ấy khó lặp lại. Cơ quan điều tra Mỹ khuyến nghị đào tạo lại cách tổ lái làm việc với nhau: cơ trưởng lắng nghe, người khác dám lên tiếng. Từ đó ra đời Crew Resource Management, nay được dùng khắp thế giới.",
    "visual": {
     "type": "shots",
     "shots": [
@@ -403,19 +416,25 @@
       "items": [
        {
         "icon": "people",
-        "label": "Cơ trưởng lắng nghe"
+        "label": "Tổ lái là một đội"
+       },
+       {
+        "icon": "eye",
+        "label": "Cơ trưởng lắng nghe",
+        "cue": "cơ trưởng"
        },
        {
         "icon": "bulb",
         "label": "Dám lên tiếng",
         "cue": "người khác"
-       },
-       {
-        "icon": "compass",
-        "label": "Dùng khắp thế giới",
-        "cue": "từ đó"
        }
-      ],
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "compass",
+      "kicker": "Nay dùng khắp thế giới",
+      "cue": "từ đó",
       "line": "Crew Resource Management",
       "line_cue": "crew"
      }
@@ -429,16 +448,31 @@
   {
    "id": "b06",
    "act": "story",
-   "narration": "Giờ sang một phòng mổ ở Anh, tháng Ba năm hai nghìn lẻ năm. Elaine Bromiley, ba mươi bảy tuổi, vào viện cho một ca phẫu thuật xoang thông thường. Sau khi gây mê, đường thở của chị gặp sự cố. Theo báo cáo điều tra sau này, các bác sĩ cố mãi một cách, và dường như không nhận ra thời gian đang trôi. Chị mất mười ba ngày sau đó.",
+   "narration": "Giờ sang một phòng mổ ở Anh, tháng Ba năm hai nghìn lẻ năm. Elaine Bromiley, ba mươi bảy tuổi, vào viện cho một ca phẫu thuật xoang thông thường. Sau khi gây mê, đường thở của chị gặp sự cố. Theo báo cáo điều tra, các bác sĩ cố mãi một cách, và dường như không nhận ra thời gian đang trôi. Chị mất mười ba ngày sau đó.",
    "visual": {
     "type": "shots",
     "shots": [
+     {
+      "type": "icon",
+      "icon": "door",
+      "kicker": "Anh · tháng 3/2005",
+      "line": "Một phòng mổ"
+     },
      {
       "type": "portrait",
       "name": "Elaine Bromiley",
       "initials": "EB",
       "role": "Ca mổ xoang thông thường",
-      "years": "Anh · 3/2005"
+      "years": "37 tuổi · 2005",
+      "cue": "elaine"
+     },
+     {
+      "type": "icon",
+      "icon": "clock",
+      "kicker": "Sau khi gây mê",
+      "cue": "sau khi",
+      "line": "Đường thở gặp sự cố",
+      "line_cue": "đường thở"
      },
      {
       "type": "icon",
@@ -534,6 +568,14 @@
      },
      {
       "type": "icon",
+      "icon": "dice",
+      "kicker": "Vòng lặp đóng",
+      "cue": "ở vòng",
+      "line": "Giấu đi, đổ cho xui rủi",
+      "line_cue": "lỗi bị"
+     },
+     {
+      "type": "icon",
       "icon": "lock",
       "kicker": "Theo Syed, ngành y",
       "cue": "theo ông",
@@ -566,7 +608,7 @@
       "items": [
        {
         "icon": "letter",
-        "label": "Ghi lại điều đã xảy ra"
+        "label": "Ghi lại điều xảy ra"
        },
        {
         "icon": "clock",
@@ -713,7 +755,7 @@
       "icon": "magnifier",
       "kicker": "Cách đếm khác nhau",
       "cue": "một phân",
-      "line": "Ước tính, không phải sự thật chắc chắn",
+      "line": "Ước tính, chưa chắc chắn",
       "line_cue": "đếm theo"
      }
     ]
@@ -743,8 +785,14 @@
       "icon": "lighthouse",
       "kicker": "2007 · Martin Bromiley",
       "cue": "và câu",
-      "line": "Clinical Human Factors Group",
-      "line_cue": "clinical"
+      "line": "Clinical Human Factors Group"
+     },
+     {
+      "type": "icon",
+      "icon": "bridge",
+      "kicker": "Mang cách học từ lỗi",
+      "cue": "để mang",
+      "line": "Từ buồng lái vào bệnh viện"
      }
     ]
    },
@@ -816,16 +864,14 @@
       "type": "icon",
       "icon": "lock",
       "kicker": "Hộp đen · màu cam",
-      "line": "Không ngăn được tai nạn",
-      "line_cue": "không ngăn"
+      "line": "Không ngăn được tai nạn"
      },
      {
       "type": "icon",
       "icon": "lighthouse",
       "kicker": "Nó chỉ đảm bảo",
       "cue": "nó chỉ",
-      "line": "Không thất bại nào bị lãng phí",
-      "line_cue": "không thất"
+      "line": "Không thất bại nào lãng phí"
      },
      {
       "type": "icon",
