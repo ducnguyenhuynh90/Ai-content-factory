@@ -198,8 +198,7 @@
       "icon": "key",
       "kicker": "Thứ bị bỏ quên",
       "cue": "thứ bị",
-      "line": "Một con số đi kèm.",
-      "line_cue": "một con"
+      "line": "Một con số đi kèm."
      },
      {
       "type": "trio",
@@ -254,7 +253,7 @@
   {
    "id": "b01",
    "act": "misconception",
-   "narration": "Ta hay nghĩ dự báo tốt là một con số chắc nịch. Và càng nhiều dữ liệu thì càng đoán đúng. Nate Silver cho rằng không hẳn. Dữ liệu càng nhiều thì nhiễu cũng càng nhiều, còn tín hiệu thật thì hiếm.",
+   "narration": "Ta hay nghĩ dự báo tốt là một con số chắc nịch. Và càng có nhiều dữ liệu trong tay, thì càng đoán đúng. Nate Silver cho rằng không hẳn. Dữ liệu càng nhiều thì nhiễu cũng càng nhiều, còn tín hiệu thật thì hiếm.",
    "visual": {
     "type": "shots",
     "shots": [
@@ -269,12 +268,12 @@
        {
         "icon": "chart",
         "label": "Nhiều dữ liệu",
-        "cue": "càng nhiều"
+        "cue": "càng có"
        },
        {
         "icon": "bulb",
         "label": "Đoán đúng hơn",
-        "cue": "đoán đúng"
+        "cue": "thì càng"
        }
       ]
      },
@@ -304,7 +303,7 @@
   {
    "id": "b02",
    "act": "context",
-   "narration": "Nate Silver là nhà thống kê người Mỹ. Năm hai nghìn lẻ tám, trên trang FiveThirtyEight, ông đoán đúng bốn mươi chín trên năm mươi bang trong bầu cử tổng thống Mỹ. Năm hai nghìn mười hai, ông ra cuốn sách này, đi qua bóng chày, bài xì phé, chuyện thời tiết, rồi động đất và kinh tế.",
+   "narration": "Nate Silver là nhà thống kê người Mỹ. Năm hai nghìn lẻ tám, trên trang FiveThirtyEight, ông đoán đúng bốn mươi chín trên năm mươi bang trong bầu cử tổng thống Mỹ. Năm hai nghìn mười hai, ông ra cuốn sách này, đi qua bóng chày, bài xì phé, chuyện thời tiết, rồi đến động đất và kinh tế.",
    "visual": {
     "type": "shots",
     "shots": [
@@ -346,7 +345,7 @@
        {
         "icon": "chart",
         "label": "Động đất, kinh tế",
-        "cue": "rồi động"
+        "cue": "đến động"
        }
       ]
      }
@@ -370,7 +369,6 @@
       "icon": "wave",
       "kicker": "Grand Forks · North Dakota",
       "line": "Sông Red River dâng cao",
-      "line_cue": "sông red",
       "motion": "rise"
      },
      {
@@ -612,7 +610,7 @@
   {
    "id": "b06",
    "act": "turn",
-   "narration": "Vì sao thời tiết giỏi lên, mà hai lĩnh vực kia thì không? Theo Silver, người dự báo thời tiết hiểu khá rõ cơ chế của bầu khí quyển, có máy tính mạnh, và được thực tế chấm điểm mỗi ngày. Còn với động đất và kinh tế, dữ liệu nhiều, mà tín hiệu thật thì ít.",
+   "narration": "Vì sao thời tiết giỏi lên, mà hai lĩnh vực kia thì không? Theo Silver, người dự báo thời tiết hiểu rõ cơ chế của bầu khí quyển, có máy tính mạnh, và được thực tế chấm điểm mỗi ngày. Còn với động đất và kinh tế, dữ liệu nhiều, mà tín hiệu thật thì ít.",
    "visual": {
     "type": "shots",
     "shots": [
@@ -716,7 +714,7 @@
   {
    "id": "b08",
    "act": "principle",
-   "narration": "Bài học thứ hai: ba mươi phần trăm vẫn xảy ra. Theo Silver, Weather Channel từng báo hai mươi phần trăm khả năng mưa, trong khi thực tế chỉ mưa khoảng năm phần trăm, vì người xem ghét bị ướt bất ngờ. Một dự báo tốt thì khớp: nói ba mươi, thì khoảng ba lần trong mười sẽ xảy ra.",
+   "narration": "Bài học thứ hai: ba mươi phần trăm vẫn xảy ra. Theo Silver, Weather Channel từng báo hai mươi phần trăm khả năng mưa, mà thực tế chỉ mưa khoảng năm phần trăm, vì người xem ghét bị ướt bất ngờ. Một dự báo tốt thì khớp: nói ba mươi, thì khoảng ba lần trong mười sẽ xảy ra.",
    "visual": {
     "type": "shots",
     "shots": [
@@ -843,7 +841,7 @@
   {
    "id": "b11",
    "act": "complication",
-   "narration": "Cuốn sách cũng có giới hạn. Nhà thống kê Kaiser Fung cho rằng Silver nói quá tay khi xem phương pháp Bayes, tức cập nhật niềm tin theo bằng chứng mới, như lời giải chung. Và đọc xong, bạn sẽ không đoán được tương lai. Bạn chỉ bớt tin vào những con số chắc nịch.",
+   "narration": "Cuốn sách cũng có giới hạn. Nhà thống kê Kaiser Fung cho rằng Silver nói quá tay khi xem phương pháp Bayes, tức cập nhật niềm tin theo bằng chứng mới, như lời giải chung. Đọc xong, bạn sẽ không đoán được tương lai. Bạn chỉ bớt tin vào những con số chắc nịch.",
    "visual": {
     "type": "shots",
     "shots": [
@@ -857,7 +855,7 @@
      {
       "type": "swap",
       "kicker": "Đọc xong sách",
-      "cue": "và đọc",
+      "cue": "đọc xong",
       "strike_cue": "không đoán",
       "from": {
        "label": "Đoán được tương lai",
