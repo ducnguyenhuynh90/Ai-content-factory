@@ -1,5 +1,5 @@
 # Misbehaving: Vì Sao Ta Hành Xử Lệch Với Tiền
-_Review sách · Tập 27 · 923 words · ~3.97 min · 4:3_
+_Review sách · Tập 27 · 922 words · ~3.95 min · 4:3_
 
 ## Learning goals
 - Kể lại chuyện bát hạt điều (Rochester, những năm 1970), tấm bảng 'Danh sách' của Thaler, thí nghiệm chiếc cốc (1990) và giải Nobel 2017
@@ -15,7 +15,7 @@ _Review sách · Tập 27 · 923 words · ~3.97 min · 4:3_
 | # | act | narration | on screen |
 |---|---|---|---|
 | h1 | hook | Thaler cất bát hạt điều đi. Nhưng khách lại cảm ơn ông. Theo kinh tế học cổ điển, điều đó thật vô lý. | statement: Cất bát hạt điều. Khách cảm ơn. |
-| h2 | context | Một bữa tối, một tấm bảng đầy những chuyện ngớ ngẩn, và cuối cùng là một giải Nobel. Đến cuối clip, bạn sẽ thấy câu chuyện ấy dạy gì về tiền, và ba bài học bạn mang theo được. | shots: shots |
+| h2 | context | Một bữa tối, một tấm bảng đầy những chuyện ngớ ngẩn, rồi một giải Nobel. Và ba bài học về tiền mà bạn mang theo được. | shots: shots |
 | t0 | context |  | title: Misbehaving: Vì Sao Ta Hành Xử Lệch Với Tiền |
 | b01 | misconception | Nhiều người nghĩ: khi đụng tới tiền, con người tính toán lý trí. Có thêm lựa chọn thì không bao giờ thiệt. Và ai sai thì thị trường sẽ sửa. Suốt nhiều thập niên, kinh tế học cũng giả định như vậy: con người như những cỗ máy tính toán. | shots: shots |
 | b02 | context | Richard Thaler, nhà kinh tế học ở Đại học Chicago, dùng hai cái tên. Econ là cỗ máy trong sách giáo khoa. Human là người thật, như bạn và mình. Năm hai nghìn không trăm mười lăm, ông kể lại hành trình chứng minh Human khác Econ, trong cuốn Misbehaving. | shots: shots |
@@ -26,10 +26,11 @@ _Review sách · Tập 27 · 923 words · ~3.97 min · 4:3_
 | b07 | story | Có những dòng về sau được đem vào phòng thí nghiệm. Trong một bài báo năm một nghìn chín trăm chín mươi, Thaler cùng Daniel Kahneman và Jack Knetsch phát cốc cho một nửa số sinh viên. Người có cốc đòi giá bán khoảng gấp đôi giá mà người chưa có chịu trả. Họ gọi đó là hiệu ứng sở hữu. _(estimate)_ | shots: shots |
 | b08 | story | Từ tấm bảng ấy đến Stockholm là một chặng dài. Năm hai nghìn không trăm mười bảy, Thaler nhận giải Nobel kinh tế, vì những đóng góp cho kinh tế học hành vi. Được hỏi sẽ tiêu tiền thưởng thế nào, ông đùa: sẽ cố tiêu nó một cách phi lý nhất có thể. | shots: shots |
 | b09 | principle | Bài học thứ nhất: cất bát hạt điều đi. Đừng chỉ trông vào ý chí; hãy sắp xếp lại môi trường. Thaler và Shlomo Benartzi làm vậy với tiết kiệm: người lao động hứa trước, mỗi lần tăng lương thì tự động trích thêm. Ở công ty đầu tiên áp dụng, tỷ lệ tiết kiệm của người tham gia tăng từ ba phẩy năm lên mười ba phẩy sáu phần trăm, sau bốn mươi tháng. | shots: shots |
+| b09b | complication | Đó là so sánh trước và sau của những người tự chọn tham gia, chưa phải bằng chứng nhân quả. | statement: So trước và sau, chưa phải nhân quả. |
 | b10 | principle | Bài học thứ hai: bớt nhìn danh mục. Theo ước tính của Kahneman và Tversky, nỗi đau khi mất tiền lớn khoảng gấp đôi niềm vui khi được cùng số tiền. Nhìn càng dày, ta càng hay thấy lỗ. Trong một thí nghiệm năm một nghìn chín trăm chín mươi bảy, nhóm nhận thông tin dày nhất chọn ít rủi ro nhất, và kiếm ít tiền nhất. _(estimate)_ | shots: shots |
 | b11 | principle | Bài học thứ ba: hỏi lại thứ mình đang giữ. Hiệu ứng sở hữu có thể khiến ta quý một cổ phiếu chỉ vì nó đang nằm trong tay mình. Một câu hỏi mình thấy hữu ích: nếu hôm nay chưa có nó, mình có mua nó với giá này không? | shots: shots |
 | b12 | complication | Một lời nhắc công bằng. Misbehaving là hồi ký của người trong cuộc, kể từ phía Thaler. Và không phải kết quả nào cũng vững như nhau. Năm hai nghìn không trăm lẻ năm, Plott và Zeiler làm lại thí nghiệm cốc với cách hỏi khác, hướng dẫn kỹ hơn, và khoảng chênh biến mất. Đến nay, chuyện này vẫn còn gây tranh cãi. _(disputed)_ | shots: shots |
-| b13 | complication | Còn những thiết kế kiểu cất bát hạt điều, mà Thaler và Cass Sunstein gọi là cú hích, ngoài đời thì sao? Năm hai nghìn không trăm hai mươi hai, DellaVigna và Linos xem hơn một trăm hai mươi thử nghiệm của hai đơn vị cú hích ở Mỹ. Tác động trung bình khoảng một phẩy bốn điểm phần trăm, nhỏ hơn nhiều so với các bài báo học thuật. Có tác dụng, nhưng không phải phép màu. _(estimate)_ | shots: shots |
+| b13 | complication | Thaler và Cass Sunstein gọi những thiết kế kiểu cất bát hạt điều là cú hích. Năm hai nghìn không trăm hai mươi hai, DellaVigna và Linos tổng hợp một trăm hai mươi sáu thử nghiệm ngoài đời ở Mỹ: tác động trung bình chỉ khoảng một phẩy bốn điểm phần trăm, nhỏ hơn nhiều so với các bài báo học thuật. Có tác dụng, nhưng không phải phép màu. _(estimate)_ | shots: shots |
 | b14 | question | Giờ thử một chút nhé. Bạn muốn đầu tư đều mỗi tháng, nhưng tháng nào tiền cũng tiêu hết trước. Theo Thaler, cách nào đáng thử nhất? | question: Muốn đầu tư đều, nhưng tháng nào cũng tiêu hết. Theo Thaler, thử gì? |
 | b15 | recap | Vậy là ba bài học từ Misbehaving. Cất bát hạt điều đi. Bớt nhìn danh mục. Và hỏi lại thứ mình đang giữ. | list: Ba bài học |
 | b16 | close | Thaler không thắng bát hạt điều bằng ý chí. Ông thắng bằng cách mang nó vào bếp. Bài giảng Nobel của ông có tên: Từ hạt điều đến cú hích. Còn bát hạt điều của bạn, đang nằm ở đâu? | shots: shots |
