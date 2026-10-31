@@ -10,7 +10,7 @@ PLAN.json is a list of {"lesson", "video", "thumbnail", "publish_at"} (publish_a
 "2026-10-31T19:00:00+07:00"). Each video is uploaded as private with status.publishAt, so YouTube publishes it at that
 time; title, description and tags come from the lesson's meta.youtube. Uploaded ids are written to
 PLAN.json.done so a rerun skips them; --limit N uploads at most N new videos (an upload costs 1,600 of the default
-10,000 daily quota units, so about 6 a day), and a quota error stops the run cleanly so the next day's run resumes. Note: videos uploaded from an API project that has not passed YouTube's audit
+10,000 daily quota units, so about 6 a day), and a quota or channel upload-limit error stops the run cleanly so the next day's run resumes. Note: videos uploaded from an API project that has not passed YouTube's audit
 stay private (publishAt does not make them public) until the project is audited.
 """
 from __future__ import annotations
@@ -107,8 +107,9 @@ def schedule(plan_path: str, dry: bool, limit: int | None = None) -> None:
         try:
             vid = upload(tok, Path(item["video"]), meta)
         except urllib.error.HTTPError as e:
-            if e.code == 403 and b"quota" in e.read().lower():
-                print("daily upload quota reached; rerun after midnight Pacific time")
+            body = e.read().lower()
+            if (e.code == 403 and b"quota" in body) or b"uploadlimitexceeded" in body:
+                print("daily upload limit reached (API quota or the channel's own cap); the next run resumes here")
                 break
             raise
         try:
