@@ -1,0 +1,829 @@
+{
+ "meta": {
+  "series": "Review sách · Tập 30",
+  "title": "Nhà Đầu Tư Dhandho",
+  "subtitle": "The Dhandho Investor — Mohnish Pabrai (2007)",
+  "topic": "investing",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt mới bắt đầu đầu tư hoặc muốn góp vốn làm ăn nhỏ, sợ rủi ro nhưng nghĩ muốn lời phải liều",
+  "aspect": "4:3",
+  "target_minutes": [
+   3,
+   5
+  ],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
+  "learning_goals": [
+   "Kể lại ví dụ Papa Patel trong sách: rời Uganda sau năm 1972, mua nhà nghỉ khoảng 50.000 đô với khoảng 5.000 đô tiền mặt, cả nhà tự làm, chi phí thấp, giá phòng rẻ hơn; nếu thất bại chỉ mất khoảng 5.000 đô",
+   "Giải thích ba ý lớn của Pabrai: sấp thắng, ngửa thua ít; ít cược, cược lớn, cược thưa; sao chép điều đã chạy",
+   "Biết giới hạn: con số ~400%/năm là phép tính minh họa, 'hơn nửa số nhà nghỉ' là con số của Pabrai năm 2007, chi phí thấp được trả bằng sức lao động của cả gia đình, và trên thị trường chứng khoán phần thua không luôn nhỏ (quỹ của Pabrai giảm khoảng 60% năm 2008)"
+  ],
+  "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư.",
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người dẫn chương trình sách lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively.",
+  "brief": {
+   "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn clip tiếp theo về cuốn sách nào?\" (comment answering the end-card question)",
+   "target_viewer": "Người Việt 20–40 tuổi mới đầu tư hoặc đang được rủ góp vốn làm ăn; nghĩ 'muốn lời nhiều phải liều nhiều' (giả định của người viết, chủ kênh xác nhận lại)",
+   "format": "Phân tích sách (book analysis), 4–5 phút, 4:3, minh họa icon vẽ tay, một giọng đọc",
+   "central_question": "Vì sao Pabrai cho rằng một gia đình gần như trắng tay mua nhà nghỉ lại là một ván cược ít rủi ro, và mình dùng phép tính ấy thế nào?",
+   "transformation": "Trước khi xem, họ nghĩ lời lớn luôn đi với rủi ro lớn. Sau khi xem, họ kể lại được ví dụ Papa Patel (Uganda 1972, nhà nghỉ ~50.000 đô, ~5.000 đô tiền mặt, cả nhà tự làm, thua thì mất ~5.000 đô), dùng được ba ý (sấp thắng, ngửa thua ít; ít cược, cược lớn, cược thưa; sao chép điều đã chạy), và biết giới hạn: con số minh họa, cái giá bằng sức lao động, và năm 2008 của chính Pabrai",
+   "discovery_goal": "Tìm kiếm (\"The Dhandho Investor\", \"Mohnish Pabrai\", \"Dhandho\", \"heads I win tails I don't lose much\", \"Patel motel\", \"đầu tư ít rủi ro\") và đề xuất từ video sách đầu tư; khán giả tập 4, 9 và 29",
+   "share_recipient": "Một người bạn đang được rủ góp vốn mở quán hay đầu tư 'lời gấp đôi': câu hỏi 'nếu sai, mình mất bao nhiêu?' giúp hai người bàn chuyện mà không cãi nhau",
+   "evidence": "Pabrai, The Dhandho Investor (Wiley 2007): chương 1 'Patel Motel Dhandho' (Papa Patel rời Kampala, Uganda; nhà nghỉ ~50.000 đô, ~5.000 đô tiền mặt; ~400%/năm minh họa; thua thì mất tiền đặt cọc và đi làm thuê), 'hơn nửa số nhà nghỉ ở Mỹ' do người Patel làm chủ, Dhandho = 'làm ăn tạo ra của cải' (tiếng Gujarat), chương 'Heads, I Win; Tails, I Don't Lose Much', chương 10 'Few Bets, Big Bets, Infrequent Bets', ý 'copycats rather than innovators'; Motley Fool review 29/6/2007; GuruFocus (Why the Patels owned so many motels); Africanews 2022 (trục xuất người gốc Á khỏi Uganda 1972); Commercial Observer 2016 (ước tính khác về tỷ lệ); GuruFocus (quỹ Pabrai giảm ~60% năm 2008; đại hội 2009 nhắc ~70%); Wikipedia Mohnish Pabrai (lập Pabrai Investment Funds 1999); William Green, Richer, Wiser, Happier (2021) (Pabrai tự nhận 'shameless cloner').",
+   "constraints": "4–5 phút, 4:3, icon vẽ, không khuôn mặt người thật, một giọng đọc OmniVoice seed 99 speed 0.88, tên tiếng Anh giữ nguyên, số đọc bằng chữ, nói rõ các con số nhà nghỉ là ví dụ minh họa làm tròn của Pabrai, kể chuyện cộng đồng Patel một cách tôn trọng như Pabrai kể (sự cần cù và một phép tính, không khuôn mẫu sắc tộc), không khuyến nghị cổ phiếu nào, không lặp chuyện Buffett, giữ lời miễn trừ"
+  },
+  "youtube": {
+   "title": "Sấp thắng, ngửa thua ít: bài học từ nhà nghỉ Patel | Dhandho",
+   "thumbnail_text": "Sấp: thắng. Ngửa: chỉ thua ít.",
+   "description": "Trong The Dhandho Investor (2007), Mohnish Pabrai kể ví dụ về Papa Patel: một người cha rời Uganda sau năm 1972, sang Mỹ gần như trắng tay, mua một nhà nghỉ nhỏ giá khoảng 50.000 đô với khoảng 5.000 đô tiền mặt, cả nhà tự vận hành, chi phí thấp nên giá phòng rẻ hơn. Nếu thất bại, gia đình mất khoảng 5.000 đô và quay lại đi làm thuê. Pabrai gói điều ấy trong một câu: sấp, tôi thắng; ngửa, tôi không thua bao nhiêu. Video đi qua ví dụ ấy, ba bài học (sấp thắng, ngửa thua ít; ít cược, cược lớn, cược thưa; sao chép điều đã chạy), giới hạn khi đọc sách, và một bài tập nhỏ.\n\nNội dung giáo dục, tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư. Không cổ phiếu nào trong video là gợi ý mua. Các con số nhà nghỉ (50.000 đô, 5.000 đô, ~400%/năm) là ví dụ minh họa làm tròn trong sách, không phải số liệu của một gia đình có thật. \"Hơn nửa số nhà nghỉ ở Mỹ\" là con số Pabrai đưa ra năm 2007; các nguồn khác ước tính khác nhau. Mức giảm khoảng 60% của quỹ Pabrai năm 2008 là theo GuruFocus (có nguồn ghi khoảng 70%). Nhận xét về cái giá bằng sức lao động là của người làm video. Chúng tôi chưa tìm thấy bản tiếng Việt chính thức; tên \"Nhà Đầu Tư Dhandho\" là tên tạm của kênh. Câu trích là lược dịch.\n\nChương:\n- Sấp thắng, ngửa chỉ thua ít\n- Điều nhiều người nghĩ về rủi ro\n- Cuốn sách, tác giả và chữ Dhandho\n- Papa Patel và năm 1972\n- Nhà nghỉ 50.000 đô\n- Vì sao họ thắng giá\n- Nếu thất bại thì sao?\n- Một mô hình được sao chép\n- Bài học 1: sấp thắng, ngửa thua ít\n- Bài học 2: ít cược, cược lớn, cược thưa\n- Bài học 3: sao chép điều đã chạy\n- Những điều nên nói thẳng\n- Thử một chút\n- Ba bài học\n\nNguồn:\n- Mohnish Pabrai, The Dhandho Investor: The Low-Risk Value Method to High Returns, Wiley, 2007: https://www.wiley-vch.de/en/areas-interest/finance-economics-law/the-dhandho-investor-978-0-470-04389-9\n- Wiley, trích chương 1 'Patel Motel Dhandho': https://catalogimages.wiley.com/images/db/pdf/9780470043899.excerpt.pdf\n- Motley Fool, Foolish Book Review: The Dhandho Investor (29/6/2007): https://www.fool.com/investing/general/2007/06/29/foolish-book-review-the-dhandho-investor.aspx\n- GuruFocus, The Dhandho Investor: Why the Patels Owned So Many Motels: https://www.gurufocus.com/news/862082/the-dhandho-investor-why-the-patels-owned-so-many-motels\n- Africanews, UK city marks 50 years of the arrival of Ugandan Asians (2022): https://www.africanews.com/2022/08/04/uk-city-marks-50-years-of-the-arrival-of-ugandan-asians-after-been-expelled-by-idi-amin//\n- Commercial Observer, Powerful Patels (2016): https://commercialobserver.com/2016/11/powerful-patels-a-look-into-the-quiet-community-of-indian-u-s-hotel-owners\n- GuruFocus, What did hedge fund star Mohnish Pabrai do after his fund dropped 60% in 2008?: https://www.gurufocus.com/news/296570/what-monish-pabrai-did-after-getting-his-hat-handed-to-him-in-2008\n- Wikipedia, Mohnish Pabrai: https://en.wikipedia.org/wiki/Mohnish_Pabrai\n\nBạn muốn clip tiếp theo về cuốn sách nào? Để lại bình luận nhé.",
+   "tags": [
+    "The Dhandho Investor",
+    "Mohnish Pabrai",
+    "Dhandho",
+    "Nhà đầu tư Dhandho",
+    "heads I win tails I don't lose much",
+    "Patel motel",
+    "đầu tư ít rủi ro",
+    "biên an toàn",
+    "review sách",
+    "tóm tắt sách",
+    "sách đầu tư",
+    "đầu tư giá trị",
+    "đầu tư cho người mới",
+    "tư duy đầu tư"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "pabrai2007",
+   "cite": "Mohnish Pabrai, The Dhandho Investor: The Low-Risk Value Method to High Returns, Wiley, 2007 (ch. 1 'Patel Motel Dhandho': Papa Patel, a refugee from Kampala, Uganda, buys a small motel for about $50,000 with about $5,000 in cash and the rest borrowed; the family runs it, costs are low, rates are the lowest around; an illustrative ~400% annual return on the $5,000; if it fails the bank takes the motel and the family goes back to wage jobs; Patels own over half of all US motels; 'Dhandho' is Gujarati for endeavors that create wealth; 'Heads, I win; tails, I don't lose much'; ch. 10 'Few Bets, Big Bets, Infrequent Bets'; investing in copycats rather than innovators)",
+   "url": "https://www.wiley-vch.de/en/areas-interest/finance-economics-law/the-dhandho-investor-978-0-470-04389-9"
+  },
+  {
+   "id": "wiley_ch1",
+   "cite": "Wiley, chapter 1 excerpt 'Patel Motel Dhandho' (could not be opened from this session; contents cross-checked through the summaries below)",
+   "url": "https://catalogimages.wiley.com/images/db/pdf/9780470043899.excerpt.pdf"
+  },
+  {
+   "id": "fool2007",
+   "cite": "The Motley Fool, 'Foolish Book Review: The Dhandho Investor', 29 Jun 2007 (independent review of the 2007 book and its Patel motel framework)",
+   "url": "https://www.fool.com/investing/general/2007/06/29/foolish-book-review-the-dhandho-investor.aspx"
+  },
+  {
+   "id": "guru_patels",
+   "cite": "GuruFocus, 'The Dhandho Investor: Why the Patels Owned So Many Motels' (secondary summary of ch. 1: $50,000 motel, ~$5,000 cash, $12-13 a night, family labor, ~400% illustrative return, downside = the down payment)",
+   "url": "https://www.gurufocus.com/news/862082/the-dhandho-investor-why-the-patels-owned-so-many-motels"
+  },
+  {
+   "id": "uganda1972",
+   "cite": "Africanews, 'UK city marks 50 years of the arrival of Ugandan Asians after being expelled by Idi Amin', 4 Aug 2022 (Idi Amin's 1972 expulsion of Uganda's Asian community)",
+   "url": "https://www.africanews.com/2022/08/04/uk-city-marks-50-years-of-the-arrival-of-ugandan-asians-after-been-expelled-by-idi-amin//"
+  },
+  {
+   "id": "co2016",
+   "cite": "Commercial Observer, 'Powerful Patels: A Look Into the Quiet Community of Indian U.S. Hotel Owners', Nov 2016 (other estimates of the share of US motels/hotels owned by Indian-American, mostly Patel, families; figures differ by source and definition)",
+   "url": "https://commercialobserver.com/2016/11/powerful-patels-a-look-into-the-quiet-community-of-indian-u-s-hotel-owners"
+  },
+  {
+   "id": "guru2008",
+   "cite": "GuruFocus, 'What did hedge fund star Mohnish Pabrai do after his fund dropped 60% in 2008?' and 'Pabrai Funds 2009 annual meeting transcript, part 4' (the 2008 loss given as about 60%; a questioner at the 2009 meeting put it at about 70%)",
+   "url": "https://www.gurufocus.com/news/296570/what-monish-pabrai-did-after-getting-his-hat-handed-to-him-in-2008"
+  },
+  {
+   "id": "wiki_pabrai",
+   "cite": "Wikipedia, Mohnish Pabrai (engineer, founded IT firm TransTech, founded Pabrai Investment Funds in 1999)",
+   "url": "https://en.wikipedia.org/wiki/Mohnish_Pabrai"
+  },
+  {
+   "id": "green2021",
+   "cite": "William Green, Richer, Wiser, Happier (Scribner, 2021), chapter on Mohnish Pabrai (describes himself as a 'shameless cloner' of better investors' ideas)",
+   "url": "https://www.dezerv.in/blog/can-you-beat-the-market-by-copying-warren-buffett/"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Sấp thắng, ngửa thua ít",
+   "line": "Hỏi 'nếu sai, mất bao nhiêu?' trước khi hỏi 'lời bao nhiêu?'."
+  },
+  {
+   "name": "Ít cược, cược lớn, cược thưa",
+   "line": "Cơ hội tốt hiếm; phần lớn thời gian là chờ, rồi dồn sức khi tỷ lệ nghiêng hẳn."
+  },
+  {
+   "name": "Sao chép điều đã chạy",
+   "line": "Chép một mô hình đã được chứng minh thường an toàn hơn phát minh cái mới."
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Sấp thì thắng, ngửa chỉ thua ít. Mohnish Pabrai học điều ấy từ những chủ nhà nghỉ.",
+   "visual": {
+    "type": "statement",
+    "kicker": "The Dhandho Investor · 2007",
+    "text": "Sấp: thắng. Ngửa: chỉ thua ít.",
+    "highlight": [
+     "thua ít"
+    ]
+   },
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "ngửa",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "pabrai2007"
+   ]
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Những chủ nhà nghỉ ấy là các gia đình mang họ Patel, gốc từ bang Gujarat của Ấn Độ. Đến cuối clip, bạn sẽ thấy phép tính đơn giản đằng sau cách họ làm ăn, và ba bài học Pabrai rút ra cho người đầu tư.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "house",
+      "kicker": "Họ Patel · Gujarat, Ấn Độ",
+      "line": "Những gia đình chủ nhà nghỉ.",
+      "line_cue": "các gia"
+     },
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Đến cuối clip",
+      "cue": "đến cuối",
+      "line": "Một phép tính đơn giản.",
+      "line_cue": "phép tính"
+     },
+     {
+      "type": "icon",
+      "icon": "checklist",
+      "kicker": "Ba bài học",
+      "cue": "và ba",
+      "line": "Cho người đầu tư.",
+      "line_cue": "rút ra"
+     }
+    ]
+   },
+   "sources": [
+    "pabrai2007"
+   ]
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Review sách · Tập 30",
+    "title": "Nhà Đầu Tư Dhandho",
+    "subtitle": "The Dhandho Investor · Mohnish Pabrai, 2007",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ],
+   "sources": [
+    "pabrai2007"
+   ]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Nhiều người nghĩ: muốn lời nhiều thì phải chịu rủi ro lớn. Lời càng cao, càng dễ mất trắng. Pabrai cho rằng không nhất thiết như vậy. Có những ván cược mà phần thua nhỏ và biết trước, còn phần thắng thì lớn.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "scale",
+      "kicker": "Điều nhiều người nghĩ",
+      "line": "Lời lớn, rủi ro lớn.",
+      "line_cue": "muốn lời"
+     },
+     {
+      "type": "icon",
+      "icon": "rocket",
+      "kicker": "Lời càng cao",
+      "cue": "lời càng",
+      "line": "Càng dễ mất trắng.",
+      "line_cue": "càng dễ"
+     },
+     {
+      "type": "swap",
+      "kicker": "Pabrai: không nhất thiết",
+      "cue": "pabrai cho",
+      "strike_cue": "có những",
+      "from": {
+       "label": "Cứ lời lớn là liều",
+       "icon": "dice"
+      },
+      "to": {
+       "label": "Thua nhỏ, thắng lớn",
+       "icon": "shield",
+       "cue": "còn phần"
+      }
+     }
+    ]
+   },
+   "sources": [
+    "pabrai2007"
+   ]
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "The Dhandho Investor ra năm hai nghìn không trăm lẻ bảy. Tác giả Mohnish Pabrai là một kỹ sư gốc Ấn Độ ở Mỹ, từng lập một công ty công nghệ, rồi năm một nghìn chín trăm chín mươi chín mở quỹ đầu tư riêng. Theo Pabrai, Dhandho là một từ tiếng Gujarat, nghĩa là làm ăn để tạo ra của cải.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "book",
+      "title": "The Dhandho Investor",
+      "author": "Mohnish Pabrai",
+      "year": "2007",
+      "kicker": "Wiley · 2007"
+     },
+     {
+      "type": "portrait",
+      "name": "Mohnish Pabrai",
+      "initials": "MP",
+      "role": "Kỹ sư gốc Ấn Độ ở Mỹ",
+      "years": "Tác giả · 2007",
+      "cue": "tác giả"
+     },
+     {
+      "type": "icon",
+      "icon": "gear",
+      "kicker": "Trước khi đầu tư",
+      "cue": "từng lập",
+      "line": "Lập công ty công nghệ."
+     },
+     {
+      "type": "icon",
+      "icon": "coins",
+      "kicker": "1999",
+      "cue": "rồi năm",
+      "line": "Mở quỹ đầu tư riêng.",
+      "line_cue": "mở quỹ"
+     },
+     {
+      "type": "statement",
+      "kicker": "Dhandho · tiếng Gujarat",
+      "cue": "theo pabrai",
+      "text": "Làm ăn để tạo ra của cải",
+      "highlight": [
+       "của cải"
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "pabrai2007",
+    "wiki_pabrai",
+    "fool2007"
+   ]
+  },
+  {
+   "id": "b03",
+   "act": "story",
+   "narration": "Pabrai kể về một người cha điển hình, ông gọi là Papa Patel. Năm một nghìn chín trăm bảy mươi hai, chính quyền Idi Amin trục xuất cộng đồng người gốc Á khỏi Uganda. Nhiều gia đình gốc Gujarat ở đó mất gần hết tài sản. Một phần trong số họ sang Mỹ, làm lại từ đầu.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Papa Patel",
+      "initials": "PP",
+      "role": "Nhân vật điển hình trong sách",
+      "years": "Uganda · Mỹ"
+     },
+     {
+      "type": "icon",
+      "icon": "door",
+      "kicker": "1972 · Uganda",
+      "cue": "năm một",
+      "line": "Người gốc Á bị trục xuất.",
+      "line_cue": "trục xuất"
+     },
+     {
+      "type": "icon",
+      "icon": "ship",
+      "kicker": "Gần như trắng tay",
+      "cue": "nhiều gia",
+      "line": "Sang Mỹ, làm lại từ đầu.",
+      "line_cue": "một phần"
+     }
+    ]
+   },
+   "sources": [
+    "pabrai2007",
+    "uganda1972",
+    "guru_patels"
+   ]
+  },
+  {
+   "id": "b04",
+   "act": "story",
+   "narration": "Ở Mỹ, Papa Patel thấy một nhà nghỉ nhỏ đang được bán rẻ. Trong ví dụ của Pabrai, giá khoảng năm mươi nghìn đô. Gia đình góp khoảng năm nghìn đô tiền mặt, phần còn lại vay ngân hàng. Cả nhà dọn vào ở ngay trong nhà nghỉ, và tự làm mọi việc.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "house",
+      "kicker": "Một nhà nghỉ nhỏ",
+      "line": "Đang được bán rẻ.",
+      "line_cue": "đang được"
+     },
+     {
+      "type": "stat",
+      "value": 50,
+      "prefix": "~",
+      "suffix": " nghìn $",
+      "label": "giá nhà nghỉ · ví dụ của Pabrai",
+      "cue": "trong ví"
+     },
+     {
+      "type": "compare",
+      "title": "Tiền ở đâu ra?",
+      "cue": "gia đình",
+      "left": {
+       "title": "Tiền nhà",
+       "items": [
+        "~5.000 $"
+       ]
+      },
+      "right": {
+       "title": "Vay ngân hàng",
+       "items": [
+        "Phần còn lại"
+       ]
+      }
+     },
+     {
+      "type": "icon",
+      "icon": "people",
+      "kicker": "Cả nhà cùng làm",
+      "cue": "cả nhà",
+      "line": "Ở ngay trong nhà nghỉ.",
+      "line_cue": "dọn"
+     }
+    ]
+   },
+   "sources": [
+    "pabrai2007",
+    "guru_patels"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Không thuê nhân viên, nên chi phí rất thấp. Nhờ vậy, họ bán phòng rẻ hơn các nhà nghỉ quanh đó, và có nhiều khách hơn. Theo phép tính minh họa của Pabrai, mỗi năm gia đình thu về khoảng bốn trăm phần trăm trên năm nghìn đô bỏ ra ban đầu. Đó là ví dụ làm tròn, không phải số liệu thật.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Vì sao họ thắng giá",
+      "items": [
+       {
+        "icon": "hammer",
+        "label": "Tự làm, chi phí thấp"
+       },
+       {
+        "icon": "coin",
+        "label": "Phòng rẻ hơn",
+        "cue": "họ bán"
+       },
+       {
+        "icon": "key",
+        "label": "Nhiều khách hơn",
+        "cue": "nhiều khách"
+       }
+      ]
+     },
+     {
+      "type": "stat",
+      "value": 400,
+      "prefix": "~",
+      "suffix": "%",
+      "label": "mỗi năm, trên 5.000 $ ban đầu",
+      "note": "phép tính minh họa của Pabrai",
+      "cue": "khoảng"
+     },
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Ví dụ làm tròn",
+      "cue": "đó là",
+      "line": "Không phải số liệu thật.",
+      "line_cue": "không phải"
+     }
+    ]
+   },
+   "sources": [
+    "pabrai2007",
+    "guru_patels"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b06",
+   "act": "story",
+   "narration": "Còn nếu thất bại? Ngân hàng lấy lại nhà nghỉ. Gia đình mất khoảng năm nghìn đô, rồi đi làm thuê, đúng việc họ vẫn sẽ làm nếu không mua. Pabrai gói lại trong một câu: sấp, tôi thắng; ngửa, tôi không thua bao nhiêu.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "house",
+      "motion": "crack",
+      "motion_cue": "ngân hàng",
+      "kicker": "Nếu thất bại?",
+      "line": "Ngân hàng lấy lại nhà nghỉ.",
+      "line_cue": "ngân hàng"
+     },
+     {
+      "type": "compare",
+      "title": "Hai khả năng",
+      "cue": "gia đình",
+      "left": {
+       "title": "Ngửa: thua",
+       "items": [
+        "Mất ~5.000 $",
+        "Quay lại làm thuê"
+       ]
+      },
+      "right": {
+       "title": "Sấp: thắng",
+       "items": [
+        "~400%/năm (minh họa)"
+       ]
+      }
+     },
+     {
+      "type": "quote",
+      "cue": "pabrai gói",
+      "text": "Sấp, tôi thắng. Ngửa, tôi không thua bao nhiêu.",
+      "by": "Mohnish Pabrai, The Dhandho Investor (lược dịch)"
+     }
+    ]
+   },
+   "sources": [
+    "pabrai2007",
+    "guru_patels"
+   ]
+  },
+  {
+   "id": "b07",
+   "act": "story",
+   "narration": "Khi một gia đình làm được, họ hàng và người quen làm theo, cùng một mô hình. Theo Pabrai, đến khi sách ra năm hai nghìn không trăm lẻ bảy, các gia đình Patel sở hữu hơn nửa số nhà nghỉ ở Mỹ. Các nguồn khác đưa ra những ước tính khác nhau, nhưng đều là một tỷ lệ rất lớn.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Một mô hình lan ra",
+      "items": [
+       {
+        "icon": "house",
+        "label": "Một nhà làm được"
+       },
+       {
+        "icon": "people",
+        "label": "Họ hàng làm theo",
+        "cue": "họ hàng"
+       },
+       {
+        "icon": "checklist",
+        "label": "Cùng một mô hình",
+        "cue": "cùng một"
+       }
+      ]
+     },
+     {
+      "type": "statement",
+      "kicker": "Theo Pabrai, 2007",
+      "cue": "theo pabrai",
+      "text": "Hơn nửa số nhà nghỉ ở Mỹ",
+      "highlight": [
+       "Hơn nửa"
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Các nguồn khác",
+      "cue": "các nguồn",
+      "line": "Ước tính khác nhau.",
+      "line_cue": "những ước"
+     }
+    ]
+   },
+   "sources": [
+    "pabrai2007",
+    "fool2007",
+    "co2016"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b08",
+   "act": "principle",
+   "narration": "Bài học thứ nhất: sấp thắng, ngửa thua ít. Trước khi hỏi mình có thể lời bao nhiêu, Pabrai hỏi: nếu sai, mình mất bao nhiêu? Khi phần thua đã nhỏ và biết trước, phần thắng mới đáng để nghĩ tới.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "coin",
+      "motion": "spin",
+      "kicker": "Bài học 1",
+      "line": "Sấp thắng, ngửa thua ít.",
+      "line_cue": "sấp"
+     },
+     {
+      "type": "swap",
+      "kicker": "Câu hỏi đầu tiên",
+      "cue": "trước khi",
+      "strike_cue": "pabrai hỏi",
+      "from": {
+       "label": "Lời được bao nhiêu?",
+       "icon": "rocket"
+      },
+      "to": {
+       "label": "Sai thì mất gì?",
+       "icon": "shield",
+       "cue": "nếu sai"
+      }
+     },
+     {
+      "type": "icon",
+      "icon": "umbrella",
+      "kicker": "Phần thua nhỏ, biết trước",
+      "cue": "khi phần",
+      "line": "Rồi mới nghĩ phần thắng.",
+      "line_cue": "phần thắng"
+     }
+    ]
+   },
+   "sources": [
+    "pabrai2007"
+   ]
+  },
+  {
+   "id": "b09",
+   "act": "principle",
+   "narration": "Bài học thứ hai: ít cược, cược lớn, cược thưa. Gia đình Patel dồn gần hết vốn vào một nhà nghỉ, nhưng chỉ khi giá đã rẻ và phần thua đã rõ. Theo Pabrai, cơ hội như vậy hiếm. Phần lớn thời gian, việc của người đầu tư là chờ.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "target",
+      "kicker": "Bài học 2",
+      "line": "Ít cược, cược lớn, cược thưa.",
+      "line_cue": "ít cược"
+     },
+     {
+      "type": "trio",
+      "kicker": "Khi nào thì dồn vốn?",
+      "cue": "gia đình",
+      "items": [
+       {
+        "icon": "house",
+        "label": "Một nhà nghỉ"
+       },
+       {
+        "icon": "coin",
+        "label": "Giá đã rẻ",
+        "cue": "giá đã"
+       },
+       {
+        "icon": "shield",
+        "label": "Phần thua đã rõ",
+        "cue": "phần thua"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "hourglass",
+      "kicker": "Cơ hội như vậy hiếm",
+      "cue": "theo pabrai",
+      "line": "Phần lớn thời gian: chờ.",
+      "line_cue": "phần lớn"
+     }
+    ]
+   },
+   "sources": [
+    "pabrai2007"
+   ]
+  },
+  {
+   "id": "b10",
+   "act": "principle",
+   "narration": "Bài học thứ ba: sao chép điều đã chạy. Các gia đình Patel không phát minh ra nhà nghỉ. Họ chép một mô hình mà người đi trước đã chứng minh, rồi làm tốt hơn một chút. Bản thân Pabrai cũng tự nhận: ông học đầu tư bằng cách sao chép những người giỏi hơn mình.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "mirror",
+      "kicker": "Bài học 3",
+      "line": "Sao chép điều đã chạy.",
+      "line_cue": "sao chép"
+     },
+     {
+      "type": "swap",
+      "kicker": "Không phát minh, mà chép",
+      "cue": "các gia",
+      "strike_cue": "họ chép",
+      "from": {
+       "label": "Phát minh cái mới",
+       "icon": "bulb"
+      },
+      "to": {
+       "label": "Chép điều đã chạy",
+       "icon": "checklist",
+       "cue": "rồi làm"
+      }
+     },
+     {
+      "type": "icon",
+      "icon": "binoculars",
+      "kicker": "Pabrai tự nhận",
+      "cue": "bản thân",
+      "line": "Chép người giỏi hơn mình.",
+      "line_cue": "sao chép những"
+     }
+    ]
+   },
+   "sources": [
+    "pabrai2007",
+    "green2021"
+   ]
+  },
+  {
+   "id": "b11",
+   "act": "complication",
+   "narration": "Nhưng theo mình, có vài điều nên nói thẳng. Chi phí thấp của những nhà nghỉ ấy được trả bằng mồ hôi: cả gia đình làm việc rất nhiều giờ. Trên thị trường chứng khoán, phần thua không phải lúc nào cũng nhỏ như ta tính. Năm hai nghìn không trăm lẻ tám, theo GuruFocus, quỹ của chính Pabrai giảm khoảng sáu mươi phần trăm.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Theo mình",
+      "line": "Vài điều nên nói thẳng.",
+      "line_cue": "vài điều"
+     },
+     {
+      "type": "icon",
+      "icon": "clock",
+      "kicker": "Chi phí thấp, trả bằng mồ hôi",
+      "line": "Cả nhà làm rất nhiều giờ.",
+      "line_cue": "cả gia",
+      "cue": "chi phí"
+     },
+     {
+      "type": "icon",
+      "icon": "wave",
+      "kicker": "Trên thị trường chứng khoán",
+      "cue": "trên thị",
+      "line": "Phần thua không luôn nhỏ.",
+      "line_cue": "phần thua"
+     },
+     {
+      "type": "stat",
+      "value": 60,
+      "prefix": "~",
+      "suffix": "%",
+      "label": "quỹ của Pabrai giảm · năm 2008",
+      "note": "theo GuruFocus · có nguồn ghi ~70%",
+      "cue": "năm hai"
+     }
+    ]
+   },
+   "sources": [
+    "guru_patels",
+    "guru2008"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b12",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Một người quen rủ bạn góp vốn mở quán. Họ hứa lời gấp đôi, nhưng không ai nói được nếu quán ế thì bạn mất bao nhiêu. Theo Pabrai, câu hỏi nào nên hỏi trước?",
+   "visual": {
+    "type": "question",
+    "question": "Rủ góp vốn mở quán, hứa lời gấp đôi. Theo Pabrai, hỏi gì trước?",
+    "choices": [
+     "Lời gấp đôi thật không?",
+     "Nếu ế, mình mất bao nhiêu?",
+     "Ai khác đã góp chưa?"
+    ],
+    "answer": "B — sấp thắng, ngửa thua ít.",
+    "think_seconds": 5
+   }
+  },
+  {
+   "id": "b13",
+   "act": "recap",
+   "narration": "Vậy là ba bài học từ The Dhandho Investor. Sấp thắng, ngửa thua ít. Ít cược, cược lớn, cược thưa. Và sao chép điều đã chạy.",
+   "visual": {
+    "type": "list",
+    "title": "Ba bài học",
+    "check": true,
+    "items": [
+     {
+      "text": "Sấp thắng, ngửa thua ít",
+      "cue": "sấp"
+     },
+     {
+      "text": "Ít cược, cược lớn, cược thưa",
+      "cue": "ít cược"
+     },
+     {
+      "text": "Sao chép điều đã chạy",
+      "cue": "và sao"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b14",
+   "act": "close",
+   "narration": "Papa Patel đến Mỹ gần như trắng tay. Thứ ông có là một phép tính: nếu sai, nhà mình mất gì? Câu hỏi ấy không tốn đồng nào. Lần tới, trước một cơ hội, hãy hỏi nó trước khi hỏi mình lời bao nhiêu.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "house",
+      "kicker": "Papa Patel",
+      "line": "Gần như trắng tay.",
+      "line_cue": "gần như"
+     },
+     {
+      "type": "icon",
+      "icon": "key",
+      "kicker": "Một phép tính",
+      "cue": "thứ ông",
+      "line": "Nếu sai, mất gì?",
+      "line_cue": "nếu sai"
+     },
+     {
+      "type": "icon",
+      "icon": "compass",
+      "kicker": "Không tốn đồng nào",
+      "cue": "câu hỏi ấy",
+      "line": "Hỏi nó trước tiên.",
+      "line_cue": "hãy hỏi"
+     }
+    ]
+   },
+   "sources": [
+    "pabrai2007"
+   ]
+  },
+  {
+   "id": "b15",
+   "act": "close",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
+   "visual": {
+    "type": "end",
+    "kicker": "Review sách · Tập 30",
+    "title": "Nhà Đầu Tư Dhandho",
+    "ask": "Bạn muốn clip tiếp theo về cuốn sách nào?",
+    "ask_hint": "Một cuốn sách · một nhà đầu tư · một chủ đề",
+    "ask_cue": "còn bạn",
+    "sources_line": "Nguồn: Pabrai, The Dhandho Investor (2007) · Motley Fool (2007) · GuruFocus · Africanews (2022)",
+    "disclaimer": "Nội dung giáo dục, tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư.",
+    "sources_cue": "còn bạn"
+   }
+  }
+ ],
+ "pronounce": {}
+}
