@@ -1,0 +1,973 @@
+{
+ "meta": {
+  "series": "Review sách · Tập 25",
+  "title": "Tín Hiệu Và Độ Nhiễu",
+  "subtitle": "The Signal and the Noise — Nate Silver (2012)",
+  "topic": "books",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt thích đọc sách tư duy, ngày nào cũng nghe dự báo (thời tiết, thị trường, giá nhà) mà chưa biết đọc chúng thế nào",
+  "aspect": "4:3",
+  "target_minutes": [
+   3,
+   5
+  ],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
+  "learning_goals": [
+   "Kể lại chuyện lũ Grand Forks 1997: dự báo đỉnh lũ 49 feet, đê khoảng 51 feet, nước lên khoảng 54 feet, và biên sai số khoảng ±9 feet (theo Silver) không được nói ra",
+   "Giải thích vì sao, theo Silver, dự báo thời tiết giỏi lên (bão: trật ~350 dặm còn ~100 dặm) còn động đất và kinh tế thì không",
+   "Dùng ba thói quen: nói kèm sai số; ba mươi phần trăm vẫn xảy ra; tìm tín hiệu, đừng đuổi theo nhiễu, và biết giới hạn của sách"
+  ],
+  "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư.",
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người dẫn chương trình sách lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively. 'feet' is said as the English word; metres are on screen only.",
+  "brief": {
+   "target_viewer": "Người Việt 20–40 tuổi, ngày nào cũng nghe dự báo (mưa, giá vàng, thị trường, giá nhà), hay tin một con số chắc nịch hoặc bỏ qua hết; thích sách tư duy (giả định của người viết, chủ kênh xác nhận lại)",
+   "format": "Phân tích sách (book analysis), 4–5 phút, 4:3, minh họa icon vẽ tay, một giọng đọc",
+   "central_question": "Vì sao một dự báo lũ 'không trật nhiều' vẫn để nước tràn vào thành phố, và làm sao đọc đúng một con số dự báo?",
+   "transformation": "Trước khi xem, họ nghĩ dự báo tốt là một con số chắc chắn, nhiều dữ liệu là đoán đúng, và 30% nghĩa là 'không xảy ra'. Sau khi xem, họ kể lại được chuyện Grand Forks 1997 (49, 51, 54 feet, ±9 feet theo Silver), biết vì sao dự báo thời tiết giỏi lên còn động đất và kinh tế thì không, dùng được ba thói quen (nói kèm sai số; 30% vẫn xảy ra; tìm tín hiệu, đừng đuổi theo nhiễu), và biết giới hạn của sách",
+   "discovery_goal": "Tìm kiếm (\"The Signal and the Noise\", \"Nate Silver\", \"Tín hiệu và độ nhiễu\", \"dự báo\", \"xác suất\", \"sai số\", \"FiveThirtyEight\") và đề xuất từ video sách tư duy; khán giả tập 6 (Thinking in Bets), tập 7 (Superforecasting), tập 8 (Fooled by Randomness)",
+   "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn clip tiếp theo về cuốn sách nào?\" (comment answering the end-card question)",
+   "share_recipient": "Một người bạn hay tin một con số dự báo chắc nịch (giá nhà, thị trường, ngày xong dự án): câu hỏi 'cộng trừ bao nhiêu?' giúp hai người nói chuyện mà không cãi nhau",
+   "evidence": "Silver 2012 (ch. 4 weather, ch. 5 earthquakes, ch. 6 Grand Forks and economists' intervals); Boston Globe review 29/9/2012 (49, 51, 54 feet); NWS 1997 Red River service assessment, App. B (54,35 ft, levees overtopped); National Academies, App. C (49-ft outlook); Wikipedia + Star Tribune (>50.000 evacuated; damage $3,5–4 tỷ; downtown fire); Substack summaries (±9 ft); USGS FAQ (earthquakes cannot be predicted); AMS paper (track errors fell >50% since 1990); Wikipedia Wet bias / Bickel & Kim 2008; Mic / inkl (2016: 28,6–29%); TPM (2008: 49/50); Kaiser Fung review (Bayes critique); Goodreads (bản tiếng Việt)",
+   "constraints": "4–5 phút, 4:3, icon vẽ, không khuôn mặt người thật, một giọng đọc OmniVoice seed 99 speed 0.88, tên tiếng Anh giữ nguyên chính tả, số đọc bằng chữ, nói rõ ±9 feet, 350→100 dặm và 'gần một nửa' là theo Silver/ước tính, không khuyến nghị đầu tư, giữ lời miễn trừ, chuyện bầu cử 2016 kể trung lập (chỉ là một dự báo xác suất)"
+  },
+  "youtube": {
+   "title": "Dự báo 49 feet, nước lên 54 | The Signal and the Noise – Silver",
+   "thumbnail_text": "Grand Forks · 1997 · Dự báo 49 ft. Đê 51 ft. Nước lên 54 ft.",
+   "description": "Mùa xuân năm 1997, Cục Khí tượng Quốc gia Mỹ dự báo sông Red River ở Grand Forks (North Dakota) sẽ lên đỉnh 49 feet (khoảng 14,9 m). Đê của thành phố cao khoảng 51 feet. Nước lên khoảng 54 feet và tràn qua đê. Theo Nate Silver trong The Signal and the Noise (Tín Hiệu Và Độ Nhiễu), dự báo ấy không trật nhiều: thứ bị bỏ quên là biên sai số, khoảng cộng trừ 9 feet. Video kể lại câu chuyện, vì sao dự báo thời tiết giỏi lên còn động đất và kinh tế thì không, ba bài học (nói kèm sai số; ba mươi phần trăm vẫn xảy ra; tìm tín hiệu, đừng đuổi theo nhiễu), giới hạn của sách, và một bài tập nhỏ với ứng dụng thời tiết.\n\nTóm tắt và cảm nhận cá nhân; nội dung giáo dục, không phải lời khuyên đầu tư. Các con số ±9 feet, bão trật khoảng 350 dặm còn khoảng 100 dặm, Weather Channel 20% mà thực tế khoảng 5%, và khoảng tin cậy 90% của các nhà kinh tế trật gần một nửa số lần là theo Silver (và các bản tóm tắt sách), làm tròn; thiệt hại lũ là ước tính (3,5–4 tỷ đô tùy nguồn). Hình 10 lần báo mưa ở bài học 2 là minh họa. Tên sách tiếng Việt theo danh mục Goodreads (Alphabooks, 2020); chúng tôi chưa xác nhận với nhà xuất bản.\n\nChương:\nGrand Forks 1997: 49, 51, 54 feet\nĐiều ta hay tin về dự báo\nNate Silver và cuốn sách\nĐê còn dư hai feet\nBiên sai số không được nói ra\nHơn 50.000 người rời nhà\nThời tiết: câu chuyện thành công\nĐộng đất: chưa ai đoán được\nKinh tế: khoảng 90% trật gần nửa số lần\nVì sao khác nhau?\nBài học 1: nói kèm sai số\nBài học 2: ba mươi phần trăm vẫn xảy ra\nBài học 3: tìm tín hiệu, đừng đuổi theo nhiễu\n2016: một dự báo 29%\nGiới hạn của cuốn sách\nThử một chút: ba mươi phần trăm mưa\nBa bài học\n\nNguồn:\n- Nate Silver, The Signal and the Noise: Why So Many Predictions Fail — but Some Don't, Penguin Press, 2012\n- Boston Globe, review 'The Signal and the Noise' (29/9/2012): https://www.bostonglobe.com/arts/books/2012/09/29/review-the-signal-and-noise-nate-silver/acHgfDUAFwE5Z8awk5HCCO/story.html\n- NWS, Red River Flood April 1997 service assessment, Appendix B: https://www.weather.gov/owp/oh_Dis_Svy_RedR_Apr97_Append_B\n- National Academies Press, Appendix C (timeline of NWS outlooks): https://nap.nationalacademies.org/read/10597/chapter/9\n- Wikipedia, 1997 Red River flood in the United States: https://en.wikipedia.org/wiki/1997_Red_River_flood_in_the_United_States\n- Star Tribune, Grand Forks marks 20th anniversary of devastating Red River flood: https://www.startribune.com/grand-forks-marks-20th-anniversary-of-devastating-red-river-flood/418739053\n- USGS, Can you predict earthquakes?: https://www.usgs.gov/faqs/can-you-predict-earthquakes\n- Wikipedia, Wet bias: https://en.wikipedia.org/wiki/Wet_bias\n- Mic, 2016 election forecasters: how did they do?: https://mic.com/articles/158901/2016-election-forecasters-how-did-they-do\n- Kaiser Fung & Cathy O'Neil, reviews (Statistical Modeling blog): https://statmodeling.stat.columbia.edu/2012/12/two-reviews-of-nate-silvers-new-book-from-kaiser-fung-and-cathy-oneil/\n\nBạn muốn clip tiếp theo về cuốn sách nào? Để lại bình luận nhé.",
+   "tags": [
+    "The Signal and the Noise",
+    "Nate Silver",
+    "Tín hiệu và độ nhiễu",
+    "FiveThirtyEight",
+    "dự báo",
+    "xác suất",
+    "sai số",
+    "tư duy xác suất",
+    "lũ Grand Forks 1997",
+    "dự báo thời tiết",
+    "review sách",
+    "tóm tắt sách",
+    "sách tư duy"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "silver2012",
+   "cite": "Nate Silver, The Signal and the Noise: Why So Many Predictions Fail — but Some Don't, Penguin Press, New York, 2012: ch. 4 (weather; hurricane track forecasts; Weather Channel wet bias), ch. 5 (earthquakes cannot be predicted; overfitting), ch. 6 'How to Drown in Three Feet of Water' (Grand Forks 1997: 49-ft forecast, ~51-ft levees, ~54-ft crest, historical margin of error about ±9 ft not communicated; economists' 90% prediction intervals for GDP missed far more often than one time in ten)"
+  },
+  {
+   "id": "globe2012",
+   "cite": "Boston Globe, review of The Signal and the Noise (29 Sep 2012): the Weather Service predicted a crest of 49 feet; the levees were good up to 51 feet; the river reached 54 feet and poured into Grand Forks",
+   "url": "https://www.bostonglobe.com/arts/books/2012/09/29/review-the-signal-and-noise-nate-silver/acHgfDUAFwE5Z8awk5HCCO/story.html"
+  },
+  {
+   "id": "nws1997",
+   "cite": "NWS, Service Assessment: Red River of the North flood, April 1997, Appendix B (levees overtopped/breached 19 Apr; observed crest 54.35 ft)",
+   "url": "https://www.weather.gov/owp/oh_Dis_Svy_RedR_Apr97_Append_B"
+  },
+  {
+   "id": "nap_appc",
+   "cite": "National Academies Press, report on the 1997 Red River flood, Appendix C: NWS outlook of a 49-ft crest (the 1979 record), raised only from 16 April",
+   "url": "https://nap.nationalacademies.org/read/10597/chapter/9"
+  },
+  {
+   "id": "wiki_flood",
+   "cite": "Wikipedia, '1997 Red River flood in the United States': crest 54.35 ft (16.6 m) on 21 April; the mayor ordered more than 50,000 people out; downtown fire destroyed 11 buildings; property damage about $3.5 billion",
+   "url": "https://en.wikipedia.org/wiki/1997_Red_River_flood_in_the_United_States"
+  },
+  {
+   "id": "startrib",
+   "cite": "Star Tribune, 'Grand Forks marks 20th anniversary of devastating Red River flood' (2017): 52,000 residents evacuated; damage near $4 billion",
+   "url": "https://www.startribune.com/grand-forks-marks-20th-anniversary-of-devastating-red-river-flood/418739053"
+  },
+  {
+   "id": "summ_9ft",
+   "cite": "Summaries of Silver ch. 6 (K. J. Labuz, '#53 - Beware of Forecasts'; Humanitarians AI, 'The Signal and the Noise'): the 49-ft crest prediction had a margin of error of plus or minus nine feet, not communicated to the public",
+   "url": "https://kjlabuz.substack.com/p/53-beware-of-forecasts"
+  },
+  {
+   "id": "hurricane",
+   "cite": "Silver, 'The Weatherman Is Not a Moron', New York Times Magazine, 7 Sep 2012 (book excerpt): ~25 years earlier, three-day hurricane landfall forecasts missed by about 350 miles on average; now about 100 miles (as quoted in reviews); corroborated by AMS conference paper: 24–72 h official track errors fell by a little more than 50% since 1990",
+   "url": "https://ams.confex.com/ams/pdfpapers/137870.pdf"
+  },
+  {
+   "id": "usgs",
+   "cite": "USGS FAQ, 'Can you predict earthquakes?': neither the USGS nor any other scientists have ever predicted a major earthquake; a prediction must define date and time, location and magnitude; scientists can only calculate the probability of a significant earthquake in an area within a number of years",
+   "url": "https://www.usgs.gov/faqs/can-you-predict-earthquakes"
+  },
+  {
+   "id": "spf",
+   "cite": "Silver ch. 6 on the Survey of Professional Forecasters (since 1968): 90% prediction intervals for GDP should miss about one time in ten; actual GDP fell outside them about half the time (as summarized by Blinkist and other summaries)",
+   "url": "https://www.blinkist.com/en/books/the-signal-and-the-noise-en"
+  },
+  {
+   "id": "wetbias",
+   "cite": "Wikipedia, 'Wet bias' (citing Silver 2012 and Bickel & Kim, Monthly Weather Review 2008): when the Weather Channel said 20% chance of rain it rained about 5% of the time; NWS forecasts found unbiased (Eric Floehr); local TV worse",
+   "url": "https://en.wikipedia.org/wiki/Wet_bias"
+  },
+  {
+   "id": "e2016",
+   "cite": "Mic, '2016 election forecasters — how did they do?'; inkl/Independent: FiveThirtyEight's final 2016 forecast gave Clinton 71.4% and Trump 28.6%; Fox News, 'Nate Silver fires back at critics'",
+   "url": "https://mic.com/articles/158901/2016-election-forecasters-how-did-they-do"
+  },
+  {
+   "id": "e2008",
+   "cite": "Talking Points Memo, 'Nate Silver's Seven Most Memorable Predictions': in 2008 Silver correctly predicted 49 of 50 states (missed Indiana); 2012: all 50",
+   "url": "https://talkingpointsmemo.com/dc/nate-silver-s-seven-most-memorable-predictions"
+  },
+  {
+   "id": "fung",
+   "cite": "Kaiser Fung's review, reproduced on Andrew Gelman's Statistical Modeling blog (Dec 2012): rejects Silver's claim that moving research from frequentist to Bayesian methods would make it more accurate",
+   "url": "https://statmodeling.stat.columbia.edu/2012/12/two-reviews-of-nate-silvers-new-book-from-kaiser-fung-and-cathy-oneil/"
+  },
+  {
+   "id": "vn_title",
+   "cite": "Goodreads editions list: Vietnamese edition 'Tín Hiệu Và Độ Nhiễu', Alphabooks, 18 Jul 2020, 560 pages (not confirmed with the publisher)",
+   "url": "https://www.goodreads.com/work/editions/19175796-the-signal-and-the-noise-why-so-many-predictions-fail---but-some-don-t?page=3"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Nói kèm sai số",
+   "line": "Một con số dự báo không kèm khoảng sai số chỉ là một nửa câu trả lời."
+  },
+  {
+   "name": "Ba mươi phần trăm vẫn xảy ra",
+   "line": "Một khả năng ba mươi phần trăm sẽ xảy ra khoảng ba lần trong mười; đừng coi nó là không."
+  },
+  {
+   "name": "Tìm tín hiệu, đừng đuổi theo nhiễu",
+   "line": "Trước một quy luật đẹp trong dữ liệu, hỏi: có cơ chế nào giải thích nó, và nó có đứng vững với dữ liệu mới không?"
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Dự báo nói nước sông lên bốn mươi chín feet. Đê cao năm mươi mốt. Nhưng nước lên tới năm mươi tư.",
+   "visual": {
+    "type": "statement",
+    "kicker": "Grand Forks · 1997",
+    "text": "Dự báo 49 ft. Đê 51 ft. Nước lên 54 ft.",
+    "highlight": [
+     "Nước lên 54 ft."
+    ]
+   },
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "nhưng nước",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "globe2012",
+    "nws1997",
+    "silver2012"
+   ]
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Grand Forks, mùa xuân năm một nghìn chín trăm chín mươi bảy. Dự báo ấy không trật nhiều. Thứ bị bỏ quên là một con số đi kèm. Đến cuối clip, bạn sẽ biết con số ấy, vì sao dự báo thời tiết giỏi lên, và ba bài học.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "wave",
+      "kicker": "Grand Forks · mùa xuân 1997",
+      "line": "Dự báo không trật nhiều.",
+      "line_cue": "dự báo ấy",
+      "motion": "rise"
+     },
+     {
+      "type": "icon",
+      "icon": "key",
+      "kicker": "Thứ bị bỏ quên",
+      "cue": "thứ bị",
+      "line": "Một con số đi kèm.",
+      "line_cue": "một con"
+     },
+     {
+      "type": "trio",
+      "kicker": "Đến cuối clip",
+      "cue": "đến cuối",
+      "items": [
+       {
+        "icon": "key",
+        "label": "Con số bị quên"
+       },
+       {
+        "icon": "umbrella",
+        "label": "Thời tiết giỏi lên",
+        "cue": "vì sao"
+       },
+       {
+        "icon": "checklist",
+        "label": "Ba bài học",
+        "cue": "ba bài"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "silver2012",
+    "globe2012"
+   ]
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Review sách · Tập 25",
+    "title": "Tín Hiệu Và Độ Nhiễu",
+    "subtitle": "The Signal and the Noise — Nate Silver (2012)",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ],
+   "sources": [
+    "silver2012"
+   ]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Ta hay nghĩ dự báo tốt là một con số chắc nịch. Và càng nhiều dữ liệu thì càng đoán đúng. Nate Silver cho rằng không hẳn. Dữ liệu càng nhiều thì nhiễu cũng càng nhiều, còn tín hiệu thật thì hiếm.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Điều ta hay tin",
+      "items": [
+       {
+        "icon": "target",
+        "label": "Một con số chắc nịch"
+       },
+       {
+        "icon": "chart",
+        "label": "Nhiều dữ liệu",
+        "cue": "càng nhiều"
+       },
+       {
+        "icon": "bulb",
+        "label": "Đoán đúng hơn",
+        "cue": "đoán đúng"
+       }
+      ]
+     },
+     {
+      "type": "swap",
+      "kicker": "Nate Silver",
+      "cue": "cho rằng",
+      "strike_cue": "không hẳn",
+      "from": {
+       "label": "Nhiều dữ liệu, đoán đúng",
+       "icon": "chart"
+      },
+      "to": {
+       "label": "Nhiều dữ liệu, nhiều nhiễu",
+       "icon": "haystack",
+       "cue": "dữ liệu càng"
+      },
+      "line": "Tín hiệu thật thì hiếm.",
+      "line_cue": "còn tín"
+     }
+    ]
+   },
+   "sources": [
+    "silver2012"
+   ]
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "Nate Silver là nhà thống kê người Mỹ. Năm hai nghìn lẻ tám, trên trang FiveThirtyEight, ông đoán đúng bốn mươi chín trên năm mươi bang trong bầu cử tổng thống Mỹ. Năm hai nghìn mười hai, ông ra cuốn sách này, đi qua bóng chày, bài xì phé, chuyện thời tiết, rồi động đất và kinh tế.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Nate Silver",
+      "initials": "NS",
+      "role": "Nhà thống kê · FiveThirtyEight",
+      "years": "2008 · đúng 49/50 bang"
+     },
+     {
+      "type": "book",
+      "title": "The Signal and the Noise",
+      "author": "Nate Silver",
+      "year": "2012",
+      "kicker": "Tín Hiệu Và Độ Nhiễu",
+      "cue": "năm hai nghìn mười",
+      "facts": [
+       {
+        "big": "2012",
+        "text": "Penguin Press · New York"
+       }
+      ]
+     },
+     {
+      "type": "trio",
+      "kicker": "Một cuốn sách, nhiều lĩnh vực",
+      "cue": "đi qua",
+      "items": [
+       {
+        "icon": "cards",
+        "label": "Bóng chày, xì phé"
+       },
+       {
+        "icon": "umbrella",
+        "label": "Thời tiết",
+        "cue": "chuyện thời"
+       },
+       {
+        "icon": "chart",
+        "label": "Động đất, kinh tế",
+        "cue": "rồi động"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "e2008",
+    "silver2012",
+    "vn_title"
+   ]
+  },
+  {
+   "id": "b03",
+   "act": "story",
+   "narration": "Quay lại Grand Forks, North Dakota. Mùa xuân ấy, sông Red River dâng cao. Cục Khí tượng Quốc gia Mỹ dự báo đỉnh lũ bốn mươi chín feet. Theo Silver, đê của thành phố chịu được đến năm mươi mốt feet. Trên giấy, vẫn còn dư hai feet.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "wave",
+      "kicker": "Grand Forks · North Dakota",
+      "line": "Sông Red River dâng cao",
+      "line_cue": "sông red",
+      "motion": "rise"
+     },
+     {
+      "type": "stat",
+      "value": 49,
+      "suffix": " ft",
+      "label": "dự báo đỉnh lũ",
+      "note": "≈ 14,9 m · Cục Khí tượng Quốc gia Mỹ",
+      "cue": "cục khí"
+     },
+     {
+      "type": "stat",
+      "value": 51,
+      "suffix": " ft",
+      "label": "đê chịu được đến",
+      "note": "≈ 15,5 m · theo Silver",
+      "cue": "theo silver"
+     },
+     {
+      "type": "icon",
+      "icon": "shield",
+      "kicker": "Trên giấy",
+      "cue": "trên giấy",
+      "line": "Còn dư 2 feet.",
+      "line_cue": "vẫn còn"
+     }
+    ]
+   },
+   "sources": [
+    "globe2012",
+    "nap_appc",
+    "silver2012"
+   ]
+  },
+  {
+   "id": "b04",
+   "act": "story",
+   "narration": "Nhưng theo Silver, những dự báo lũ kiểu này có biên sai số khoảng chín feet, lên hoặc xuống. Con số ấy không được nói cho người dân. Tháng tư năm ấy, nước lên khoảng năm mươi tư feet, và tràn qua đê.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stat",
+      "value": 9,
+      "prefix": "± ",
+      "suffix": " ft",
+      "label": "biên sai số · theo Silver",
+      "note": "≈ ± 2,7 m",
+      "cue": "khoảng chín"
+     },
+     {
+      "type": "icon",
+      "icon": "lock",
+      "kicker": "Biên sai số ấy",
+      "cue": "con số",
+      "line": "Không được nói cho người dân."
+     },
+     {
+      "type": "icon",
+      "icon": "wave",
+      "motion": "rise",
+      "kicker": "Tháng 4/1997",
+      "cue": "tháng tư",
+      "line": "Nước lên ~54 ft, tràn qua đê.",
+      "line_cue": "nước lên"
+     }
+    ]
+   },
+   "sources": [
+    "silver2012",
+    "summ_9ft",
+    "nws1997",
+    "wiki_flood"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b04b",
+   "act": "story",
+   "narration": "Hơn năm mươi nghìn người phải rời nhà. Giữa dòng nước, một đám cháy thiêu rụi nhiều tòa nhà ở khu trung tâm. Thiệt hại ước tính từ ba phẩy năm đến khoảng bốn tỷ đô, tùy nguồn.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stat",
+      "value": 50,
+      "prefix": "> ",
+      "suffix": " nghìn",
+      "label": "người phải rời nhà",
+      "note": "Grand Forks · tháng 4/1997",
+      "cue": "năm mươi"
+     },
+     {
+      "type": "icon",
+      "icon": "house",
+      "kicker": "Khu trung tâm",
+      "cue": "giữa dòng",
+      "line": "Một đám cháy giữa dòng lũ."
+     },
+     {
+      "type": "icon",
+      "icon": "coins",
+      "kicker": "Thiệt hại · ước tính",
+      "cue": "thiệt hại",
+      "line": "3,5 – 4 tỷ đô, tùy nguồn"
+     }
+    ]
+   },
+   "sources": [
+    "wiki_flood",
+    "startrib"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Dự báo thời tiết lại là câu chuyện thành công của cuốn sách. Theo Silver, khoảng hai mươi lăm năm trước khi sách ra, dự báo nơi bão đổ bộ trước ba ngày trật trung bình khoảng ba trăm năm mươi dặm. Đến lúc sách ra, chỉ còn khoảng một trăm dặm.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "umbrella",
+      "kicker": "Dự báo thời tiết",
+      "line": "Câu chuyện thành công",
+      "line_cue": "câu chuyện"
+     },
+     {
+      "type": "stat",
+      "value": 350,
+      "prefix": "~",
+      "suffix": " dặm",
+      "label": "bão: trật trung bình, trước 3 ngày",
+      "note": "≈ 560 km · khoảng 25 năm trước 2012 · theo Silver",
+      "cue": "theo silver"
+     },
+     {
+      "type": "stat",
+      "value": 100,
+      "from": 350,
+      "prefix": "~",
+      "suffix": " dặm",
+      "label": "trật trung bình, lúc sách ra",
+      "note": "≈ 160 km · theo Silver",
+      "cue": "đến lúc"
+     }
+    ]
+   },
+   "sources": [
+    "silver2012",
+    "hurricane"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b05b",
+   "act": "story",
+   "narration": "Còn động đất thì sao? Theo Cục Địa chất Mỹ, chưa nhà khoa học nào từng dự báo được một trận động đất lớn, với ngày giờ cụ thể, ở nơi chốn cụ thể, và cường độ cụ thể. Họ chỉ tính được xác suất cho một vùng.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "mountain",
+      "motion": "crack",
+      "motion_cue": "động đất",
+      "kicker": "Còn động đất?",
+      "line": "Chưa ai dự báo được",
+      "line_cue": "chưa nhà"
+     },
+     {
+      "type": "trio",
+      "kicker": "Cục Địa chất Mỹ (USGS)",
+      "cue": "với ngày",
+      "cross": true,
+      "items": [
+       {
+        "icon": "clock",
+        "label": "Ngày giờ"
+       },
+       {
+        "icon": "compass",
+        "label": "Nơi chốn",
+        "cue": "ở nơi"
+       },
+       {
+        "icon": "lightning",
+        "label": "Cường độ",
+        "cue": "và cường"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "dice",
+      "kicker": "Điều làm được",
+      "cue": "họ chỉ",
+      "line": "Xác suất cho một vùng"
+     }
+    ]
+   },
+   "sources": [
+    "usgs",
+    "silver2012"
+   ]
+  },
+  {
+   "id": "b05c",
+   "act": "story",
+   "narration": "Kinh tế cũng vậy. Khi các nhà kinh tế chắc chín mươi phần trăm về một khoảng tăng trưởng, lẽ ra họ chỉ trật khoảng một lần trong mười. Theo số liệu Silver dẫn, từ năm một nghìn chín trăm sáu mươi tám, họ trật gần một nửa số lần.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "target",
+      "kicker": "Kinh tế · khoảng chắc 90%",
+      "line": "Lẽ ra trật 1 lần trong 10",
+      "line_cue": "lẽ ra"
+     },
+     {
+      "type": "stat",
+      "value": 50,
+      "prefix": "gần ",
+      "suffix": "%",
+      "label": "số lần trật, từ 1968",
+      "note": "GDP Mỹ · theo số liệu Silver dẫn · ước tính",
+      "cue": "theo số"
+     }
+    ]
+   },
+   "sources": [
+    "spf",
+    "silver2012"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b06",
+   "act": "turn",
+   "narration": "Vì sao thời tiết giỏi lên, mà hai lĩnh vực kia thì không? Theo Silver, người dự báo thời tiết hiểu khá rõ cơ chế của bầu khí quyển, có máy tính mạnh, và được thực tế chấm điểm mỗi ngày. Còn với động đất và kinh tế, dữ liệu nhiều, mà tín hiệu thật thì ít.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "scale",
+      "kicker": "Vì sao khác nhau?",
+      "line": "Thời tiết · động đất · kinh tế"
+     },
+     {
+      "type": "trio",
+      "kicker": "Người dự báo thời tiết",
+      "cue": "theo silver",
+      "items": [
+       {
+        "icon": "book",
+        "label": "Hiểu cơ chế vật lý"
+       },
+       {
+        "icon": "gear",
+        "label": "Máy tính mạnh",
+        "cue": "có máy"
+       },
+       {
+        "icon": "checklist",
+        "label": "Chấm điểm mỗi ngày",
+        "cue": "được thực"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "haystack",
+      "kicker": "Động đất · kinh tế",
+      "cue": "còn với",
+      "line": "Nhiều dữ liệu, ít tín hiệu.",
+      "line_cue": "dữ liệu nhiều"
+     }
+    ]
+   },
+   "sources": [
+    "silver2012"
+   ]
+  },
+  {
+   "id": "b07",
+   "act": "principle",
+   "narration": "Bài học thứ nhất: nói kèm sai số. Ở Grand Forks, con số bốn mươi chín không hề vô lý. Thứ thiếu là nửa câu sau: cộng trừ khoảng chín feet. Khi bạn dự báo doanh thu hay ngày xong việc, hãy nói kèm một khoảng, đừng chỉ một con số.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "target",
+      "kicker": "Bài học 1",
+      "line": "Nói kèm sai số."
+     },
+     {
+      "type": "swap",
+      "kicker": "Grand Forks · 1997",
+      "cue": "ở grand",
+      "strike_cue": "thứ thiếu",
+      "from": {
+       "label": "49 ft",
+       "icon": "target"
+      },
+      "to": {
+       "label": "49 ft, ± 9 ft",
+       "icon": "scale",
+       "cue": "cộng trừ"
+      }
+     },
+     {
+      "type": "trio",
+      "kicker": "Khi bạn dự báo",
+      "cue": "khi bạn",
+      "items": [
+       {
+        "icon": "chart",
+        "label": "Doanh thu"
+       },
+       {
+        "icon": "clock",
+        "label": "Ngày xong việc",
+        "cue": "ngày xong"
+       },
+       {
+        "icon": "compass",
+        "label": "Một khoảng, không một số",
+        "cue": "một khoảng"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "silver2012",
+    "summ_9ft"
+   ]
+  },
+  {
+   "id": "b08",
+   "act": "principle",
+   "narration": "Bài học thứ hai: ba mươi phần trăm vẫn xảy ra. Theo Silver, Weather Channel từng báo hai mươi phần trăm khả năng mưa, trong khi thực tế chỉ mưa khoảng năm phần trăm, vì người xem ghét bị ướt bất ngờ. Một dự báo tốt thì khớp: nói ba mươi, thì khoảng ba lần trong mười sẽ xảy ra.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "dice",
+      "kicker": "Bài học 2",
+      "line": "30% vẫn xảy ra."
+     },
+     {
+      "type": "compare",
+      "title": "Weather Channel, theo Silver",
+      "cue": "theo silver",
+      "left": {
+       "title": "Báo khả năng mưa",
+       "items": [
+        "20%"
+       ]
+      },
+      "right": {
+       "title": "Thực tế mưa",
+       "items": [
+        "~5% số lần"
+       ]
+      }
+     },
+     {
+      "type": "funnel",
+      "total": 10,
+      "keep": 3,
+      "cols": 10,
+      "label": "lần báo 30% · minh họa",
+      "keep_label": "lần trời mưa",
+      "cue": "một dự",
+      "keep_cue": "khoảng ba"
+     }
+    ]
+   },
+   "sources": [
+    "silver2012",
+    "wetbias"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b09",
+   "act": "principle",
+   "narration": "Bài học thứ ba: tìm tín hiệu, đừng đuổi theo nhiễu. Khi thấy một quy luật đẹp trong dữ liệu, hãy hỏi thêm: có cơ chế nào giải thích nó không? Nó có đứng vững với dữ liệu mới không? Nếu không, có thể đó chỉ là nhiễu.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "haystack",
+      "kicker": "Bài học 3",
+      "line": "Tìm tín hiệu, đừng đuổi theo nhiễu."
+     },
+     {
+      "type": "trio",
+      "kicker": "Thấy một quy luật đẹp?",
+      "cue": "khi thấy",
+      "items": [
+       {
+        "icon": "chart",
+        "label": "Một quy luật đẹp"
+       },
+       {
+        "icon": "gear",
+        "label": "Có cơ chế không?",
+        "cue": "có cơ"
+       },
+       {
+        "icon": "checklist",
+        "label": "Đứng vững với dữ liệu mới?",
+        "cue": "nó có"
+       }
+      ],
+      "line": "Nếu không: có thể chỉ là nhiễu.",
+      "line_cue": "nếu không"
+     }
+    ]
+   },
+   "sources": [
+    "silver2012"
+   ]
+  },
+  {
+   "id": "b10",
+   "act": "complication",
+   "narration": "Năm hai nghìn mười sáu, FiveThirtyEight cho Donald Trump khoảng hai mươi chín phần trăm cơ hội thắng. Ông thắng, và không ít người chê Silver đoán sai. Nhưng một việc có khả năng gần ba phần mười vẫn xảy ra, và khá thường. Một dự báo xác suất không thể chấm đúng sai chỉ qua một lần.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stat",
+      "value": 29,
+      "prefix": "~",
+      "suffix": "%",
+      "label": "cơ hội thắng của Donald Trump",
+      "note": "FiveThirtyEight · dự báo cuối · 2016",
+      "cue": "hai mươi chín"
+     },
+     {
+      "type": "icon",
+      "icon": "scale",
+      "kicker": "Ông thắng",
+      "cue": "ông thắng",
+      "line": "Bị chê là đoán sai"
+     },
+     {
+      "type": "icon",
+      "icon": "dice",
+      "kicker": "Gần 3 phần 10",
+      "cue": "nhưng một",
+      "line": "Không chấm qua một lần.",
+      "line_cue": "một dự"
+     }
+    ]
+   },
+   "sources": [
+    "e2016"
+   ]
+  },
+  {
+   "id": "b11",
+   "act": "complication",
+   "narration": "Cuốn sách cũng có giới hạn. Nhà thống kê Kaiser Fung cho rằng Silver nói quá tay khi xem phương pháp Bayes, tức cập nhật niềm tin theo bằng chứng mới, như lời giải chung. Và đọc xong, bạn sẽ không đoán được tương lai. Bạn chỉ bớt tin vào những con số chắc nịch.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "book",
+      "kicker": "Cuốn sách cũng có giới hạn",
+      "line": "Quá tay với Bayes?",
+      "line_cue": "nói quá"
+     },
+     {
+      "type": "swap",
+      "kicker": "Đọc xong sách",
+      "cue": "và đọc",
+      "strike_cue": "không đoán",
+      "from": {
+       "label": "Đoán được tương lai",
+       "icon": "eye"
+      },
+      "to": {
+       "label": "Bớt tin số chắc nịch",
+       "icon": "magnifier",
+       "cue": "bạn chỉ"
+      }
+     }
+    ]
+   },
+   "sources": [
+    "fung",
+    "silver2012"
+   ]
+  },
+  {
+   "id": "b12",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Ứng dụng thời tiết báo ba mươi phần trăm khả năng mưa chiều nay. Bạn đi xe máy tới một cuộc hẹn quan trọng. Theo Silver, bạn nên nghĩ thế nào?",
+   "visual": {
+    "type": "question",
+    "question": "App báo 30% mưa. Bạn đi xe máy tới một cuộc hẹn quan trọng. Nghĩ sao?",
+    "choices": [
+     "30% là gần như không mưa?",
+     "10 lần như thế, ~3 lần mưa: mang áo mưa?",
+     "Dự báo nào cũng sai, bỏ qua?"
+    ],
+    "answer": "B — ba mươi phần trăm vẫn xảy ra.",
+    "think_seconds": 5
+   }
+  },
+  {
+   "id": "b13",
+   "act": "recap",
+   "narration": "Vậy là ba bài học từ The Signal and the Noise. Nói kèm sai số. Ba mươi phần trăm vẫn xảy ra. Và tìm tín hiệu, đừng đuổi theo nhiễu.",
+   "visual": {
+    "type": "list",
+    "title": "Ba bài học",
+    "check": true,
+    "items": [
+     {
+      "text": "Nói kèm sai số",
+      "cue": "nói kèm"
+     },
+     {
+      "text": "Ba mươi phần trăm vẫn xảy ra",
+      "cue": "ba mươi"
+     },
+     {
+      "text": "Tìm tín hiệu, đừng đuổi theo nhiễu",
+      "cue": "và tìm"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b14",
+   "act": "close",
+   "narration": "Ở Grand Forks, con số bốn mươi chín feet không trật quá xa. Thứ còn thiếu là một câu thật thà: dự báo này có thể lệch chừng này. Lần tới, khi nghe một con số chắc nịch, về giá nhà hay về thị trường, hãy hỏi thêm: cộng trừ bao nhiêu?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "wave",
+      "kicker": "Grand Forks · 1997",
+      "line": "49 ft: không trật quá xa."
+     },
+     {
+      "type": "icon",
+      "icon": "letter",
+      "kicker": "Thứ còn thiếu",
+      "cue": "thứ còn",
+      "line": "Có thể lệch chừng này.",
+      "line_cue": "dự báo này"
+     },
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Lần tới, hãy hỏi",
+      "cue": "lần tới",
+      "line": "Cộng trừ bao nhiêu?",
+      "line_cue": "cộng trừ"
+     }
+    ]
+   },
+   "sources": [
+    "silver2012",
+    "globe2012"
+   ]
+  },
+  {
+   "id": "b15",
+   "act": "close",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
+   "visual": {
+    "type": "end",
+    "kicker": "Review sách · Tập 25",
+    "title": "Tín Hiệu Và Độ Nhiễu",
+    "ask": "Bạn muốn clip tiếp theo về cuốn sách nào?",
+    "ask_hint": "Một cuốn sách · một nhà tư duy · một chủ đề",
+    "ask_cue": "còn bạn",
+    "sources_line": "Nguồn: Silver (2012) · NWS (1997) · USGS · Boston Globe · xem mô tả",
+    "disclaimer": "Tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư.",
+    "sources_cue": "còn bạn"
+   }
+  }
+ ],
+ "pronounce": {}
+}

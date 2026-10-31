@@ -1,0 +1,864 @@
+{
+ "meta": {
+  "series": "Review sách · Tập 24",
+  "title": "Tư Duy Hộp Đen",
+  "subtitle": "Black Box Thinking — Matthew Syed (2015)",
+  "topic": "books",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt thích đọc sách tư duy, đi làm trong nhóm, muốn biến sai lầm (của mình và của nhóm) thành bài học thay vì giấu đi",
+  "aspect": "4:3",
+  "target_minutes": [
+   3,
+   5
+  ],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
+  "learning_goals": [
+   "Kể lại hai câu chuyện của sách: United Airlines 173 (1978) dẫn tới Crew Resource Management, và ca mổ của Elaine Bromiley (2005) cùng cuộc điều tra độc lập mà chồng chị, phi công Martin Bromiley, đề nghị",
+   "Dùng ba thói quen: thất bại là dữ liệu; sửa hệ thống, đừng đổ lỗi; thử nhỏ, sai sớm (vòi phun Unilever: 45 thế hệ, 449 lần thất bại)",
+   "Biết con số 'hơn 400.000 ca tử vong mỗi năm' mà sách dẫn là một ước tính năm 2013, và một phân tích năm 2020 ước tính thấp hơn nhiều (~22.000)"
+  ],
+  "disclaimer": "Nội dung giáo dục, tóm tắt và cảm nhận cá nhân; không phải lời khuyên y khoa.",
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người dẫn chương trình sách lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively.",
+  "brief": {
+   "target_viewer": "Người Việt 20–40 tuổi đi làm trong nhóm, từng thấy (hoặc từng làm) cảnh giấu lỗi vì sợ bị trách; thích sách tư duy, chưa đọc Syed (giả định của người viết, chủ kênh xác nhận lại)",
+   "format": "Phân tích sách (book analysis), khoảng 4–5 phút, 4:3, minh họa icon vẽ tay, một giọng đọc",
+   "central_question": "Vì sao ngành hàng không học được từ mỗi tai nạn, còn nhiều nơi khác cứ lặp lại cùng một lỗi?",
+   "transformation": "Trước khi xem, họ nghĩ thất bại là điều đáng xấu hổ nên giấu đi, và người giỏi thì ít sai. Sau khi xem, họ kể lại được United 173 (1978) và câu chuyện Elaine Bromiley (2005), hiểu khác biệt giữa vòng lặp mở và vòng lặp đóng, dùng được ba thói quen (thất bại là dữ liệu; sửa hệ thống, đừng đổ lỗi; thử nhỏ, sai sớm), và biết con số 400.000 là ước tính gây tranh cãi",
+   "discovery_goal": "Tìm kiếm (\"Black Box Thinking\", \"Matthew Syed\", \"tư duy hộp đen\", \"học từ thất bại\", \"hộp đen máy bay\", \"Elaine Bromiley\", \"vòng lặp đóng\") và đề xuất từ video sách tư duy; khán giả tập 11 (Scout Mindset), tập 16 (Range), tập 17 (Dobelli), tập 23 (Principles)",
+   "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn clip tiếp theo về cuốn sách nào?\" (comment answering the end-card question)",
+   "share_recipient": "Một người trưởng nhóm hay đồng nghiệp vừa trải qua một dự án hỏng: câu hỏi 'điều gì khiến một người tốt mắc lỗi này?' giúp họp rút kinh nghiệm mà không ai phải phòng thủ",
+   "evidence": "Syed, Black Box Thinking (John Murray, 2015): Elaine Bromiley, United 173, vòng lặp mở/đóng, vòi phun Unilever (45 thế hệ, 449 lần thất bại), số liệu IATA 2013, ước tính 400.000 (James 2013); IATA thông cáo 1/4/2014 (2013: 210 người thiệt mạng, hơn 3 tỷ người bay, 36,4 triệu chuyến); NTSB AAR-79-7 và FAA Lessons Learned (United 173, 28/12/1978, cạn nhiên liệu, khuyến nghị đào tạo tổ lái); ATSB (hộp đen màu cam); MDDUS Insight 2016 (Elaine Bromiley, 29/3/2005, 37 tuổi, mất 13 ngày sau); Harmer, Independent Review 2005 ('oblivious to the passing of time'; có thể vẫn không cứu được); Clinical Human Factors Group (2007); James, J Patient Saf 2013; Rodwin et al., J Gen Intern Med 2020",
+   "constraints": "4–5 phút, 4:3, icon vẽ (không footage, không khuôn mặt người thật, không hình máy bay rơi, không chi tiết y khoa gây sốc), một giọng đọc OmniVoice seed 99 speed 0.88, tên tiếng Anh giữ nguyên chính tả, số đọc bằng chữ; câu chuyện Elaine Bromiley kể ngắn, trân trọng, không đổ lỗi cho cá nhân bác sĩ; con số tử vong nói rõ là ước tính và có ước tính khác thấp hơn; tên sách tiếng Việt là tạm dịch"
+  },
+  "youtube": {
+   "title": "Vì sao máy bay an toàn mà lỗi khác cứ lặp lại? | Black Box Thinking",
+   "thumbnail_text": "Hàng không · 2013 · Hơn 3 tỷ người bay. Chỉ 210 thiệt mạng.",
+   "description": "Năm 2013, hơn 3 tỷ người đi máy bay thương mại, và theo IATA, 210 người thiệt mạng. Matthew Syed cho rằng bí mật nằm ở hộp đen (thật ra màu cam) và cách cả ngành hàng không học từ mỗi lần sai. Trong Black Box Thinking (tạm dịch: Tư Duy Hộp Đen), ông đặt nó cạnh những nơi lỗi bị giấu đi. Video kể lại chuyến bay United 173 (1978) và Crew Resource Management, câu chuyện của Elaine Bromiley (2005) và cuộc điều tra độc lập mà chồng chị, phi công Martin Bromiley, đề nghị, khác biệt giữa vòng lặp mở và vòng lặp đóng, ba thói quen (thất bại là dữ liệu; sửa hệ thống, đừng đổ lỗi; thử nhỏ, sai sớm), một con số gây tranh cãi, và một bài tập nhỏ.\n\nTóm tắt và cảm nhận cá nhân; nội dung giáo dục, không phải lời khuyên y khoa. Con số \"hơn 400.000 ca tử vong mỗi năm ở Mỹ\" là ước tính của John T. James (2013) mà sách dẫn; một phân tích tổng hợp năm 2020 (Rodwin và cộng sự) ước tính khoảng 22.000 ca, với cách đếm khác. Chuyện vòi phun Unilever (45 thế hệ, 449 lần thất bại) kể theo Syed. Tên sách tiếng Việt là tạm dịch; chúng tôi chưa xác nhận được một bản dịch đã xuất bản. Với lòng kính trọng gửi tới gia đình Bromiley.\n\nChương:\n3 tỷ người bay, 210 thiệt mạng\nHộp đen thật ra màu cam\nThất bại có đáng xấu hổ?\nMatthew Syed và Black Box Thinking\nUnited 173, 1978\nSửa cả hệ thống: Crew Resource Management\nElaine Bromiley, 2005\nMartin Bromiley và cuộc điều tra độc lập\nVòng lặp mở, vòng lặp đóng\nBài học 1: thất bại là dữ liệu\nBài học 2: sửa hệ thống, đừng đổ lỗi\nBài học 3: thử nhỏ, sai sớm\nMột con số gây tranh cãi\nThử một chút: dự án trễ hạn\nBa bài học\n\nNguồn:\n- Matthew Syed, Black Box Thinking, John Murray, 2015\n- IATA, 2013 safety performance (1/4/2014): https://www.iata.org/en/pressroom/pressroom-archive/2014-press-releases/2014-04-01-02/\n- NTSB AAR-79-7, United Airlines Flight 173; FAA Lessons Learned: https://www.faa.gov/lessons_learned/transport_airplane/accidents/N8082U\n- ATSB, Black box flight recorders: https://www.atsb.gov.au/node/11504\n- MDDUS Insight (2016), Accidents will happen: https://www.mddus.com/resources/publications-library/insight/spring-2016/accidents-will-happen\n- Harmer, Independent Review on the care given to Mrs Elaine Bromiley (2005): https://explore.psychsafety.com/n/harmer-bromiley-2005/\n- Clinical Human Factors Group: https://www.healthmanagement.org/s/zoom-on-martin-bromiley-clinical-human-factors-group\n- John T. James, Journal of Patient Safety (2013): https://journals.lww.com/journalpatientsafety/fulltext/2013/09000/a_new,_evidence_based_estimate_of_patient_harms.2.aspx\n- Rodwin et al., J Gen Intern Med (2020): https://pubmed.ncbi.nlm.nih.gov/31965525/\n- Matthew Syed, What 449 'Failures' Can Teach Us About Success: https://www.goodreads.com/author_blog_posts/9379808-what-449-failures-can-teach-us-about-success\n\nBạn muốn clip tiếp theo về cuốn sách nào? Để lại bình luận nhé.",
+   "tags": [
+    "Black Box Thinking",
+    "Matthew Syed",
+    "Tư duy hộp đen",
+    "học từ thất bại",
+    "hộp đen máy bay",
+    "Elaine Bromiley",
+    "Crew Resource Management",
+    "an toàn người bệnh",
+    "vòng lặp đóng",
+    "tư duy",
+    "review sách",
+    "tóm tắt sách",
+    "sách tư duy"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "syed2015",
+   "cite": "Matthew Syed, Black Box Thinking: The Surprising Truth About Success, John Murray, London, 2015 (US: Black Box Thinking: Why Most People Never Learn from Their Mistakes—But Some Do, Portfolio, 2015). Ch. 1 opens with Elaine Bromiley and contrasts healthcare with aviation (IATA 2013 figures; James 2013 'more than 400,000' estimate); United Airlines 173 and crew resource management; closed loops (failure does not lead to progress) vs open loops; blame and concealment; Unilever's detergent nozzle (45 generations, 449 failures)"
+  },
+  {
+   "id": "syed_bio",
+   "cite": "Wikipedia, 'Matthew Syed': British table tennis player, represented Great Britain at the 1992 and 2000 Olympics; journalist and columnist for The Times; Black Box Thinking (John Murray, 2015), a Sunday Times number one bestseller",
+   "url": "https://en.wikipedia.org/wiki/Matthew_Syed"
+  },
+  {
+   "id": "syed_449",
+   "cite": "Matthew Syed, 'What 449 ‘Failures’ Can Teach Us About Success' (author blog, Goodreads): Unilever's nozzle, ten variations per round, the best kept; outstanding after 45 generations and 449 failures",
+   "url": "https://www.goodreads.com/author_blog_posts/9379808-what-449-failures-can-teach-us-about-success"
+  },
+  {
+   "id": "iata2014",
+   "cite": "IATA press release, 1 April 2014, '2013 safety performance': 210 fatalities in commercial aviation accidents in 2013 (414 in 2012); more than 3 billion people flew safely on 36.4 million flights",
+   "url": "https://www.iata.org/en/pressroom/pressroom-archive/2014-press-releases/2014-04-01-02/"
+  },
+  {
+   "id": "ntsb173",
+   "cite": "NTSB Aircraft Accident Report AAR-79-7, United Airlines Flight 173, DC-8-61 N8082U, Portland, Oregon, 28 December 1978 (fuel exhaustion while the crew dealt with a landing-gear problem; 10 killed; probable cause: the captain's failure to monitor and respond to the fuel state and to crewmembers' advisories; contributing: other crewmembers did not successfully communicate their concern; recommendation on participative management for captains and assertiveness training for other crewmembers); FAA Lessons Learned: N8082U, widely cited as the catalyst for crew resource management",
+   "url": "https://www.faa.gov/lessons_learned/transport_airplane/accidents/N8082U"
+  },
+  {
+   "id": "atsb_box",
+   "cite": "Australian Transport Safety Bureau, 'Black box flight recorders' (despite the name, recorders are painted bright orange so they can be found); KLM blog, '5 fascinating facts about the black box'",
+   "url": "https://www.atsb.gov.au/node/11504"
+  },
+  {
+   "id": "mddus2016",
+   "cite": "MDDUS Insight, Spring 2016, 'Accidents will happen': Elaine Bromiley, a healthy 37-year-old, admitted for routine sinus surgery on 29 March 2005; airway problems after anaesthesia; she died thirteen days later; her husband Martin, an airline pilot, focused on understanding what went wrong rather than on blame and insisted on an independent investigation",
+   "url": "https://www.mddus.com/resources/publications-library/insight/spring-2016/accidents-will-happen"
+  },
+  {
+   "id": "harmer2005",
+   "cite": "Prof. Michael Harmer, Independent Review on the care given to Mrs Elaine Bromiley on 29 March 2005 (published with the family's consent): the clinicians 'appeared to become oblivious to the passing of time'; even if management had been perfect, Elaine's life might still have been lost (as summarised by The Field Guide to Psychological Safety and RCEM Learning)",
+   "url": "https://explore.psychsafety.com/n/harmer-bromiley-2005/"
+  },
+  {
+   "id": "chfg",
+   "cite": "HealthManagement.org, 'Zoom on Martin Bromiley, Clinical Human Factors Group' (Martin Bromiley founded the CHFG in 2007 to promote patient safety through human factors); Difficult Airway Society medal 2014; RCEM Learning, 'Elaine Bromiley case' (used in patient-safety training)",
+   "url": "https://www.healthmanagement.org/s/zoom-on-martin-bromiley-clinical-human-factors-group"
+  },
+  {
+   "id": "james2013",
+   "cite": "John T. James, 'A New, Evidence-based Estimate of Patient Harms Associated with Hospital Care', Journal of Patient Safety 9(3):122–128, 2013 (estimate: more than 400,000 premature deaths a year in the US associated with preventable harm in hospitals)",
+   "url": "https://journals.lww.com/journalpatientsafety/fulltext/2013/09000/a_new,_evidence_based_estimate_of_patient_harms.2.aspx"
+  },
+  {
+   "id": "rodwin2020",
+   "cite": "Benjamin A. Rodwin et al., 'Rate of Preventable Mortality in Hospitalized Patients: a Systematic Review and Meta-analysis', J Gen Intern Med 35(7):2099–2106, 2020 (pooled rate 3.1% of inpatient deaths; about 22,165 preventable deaths a year when extrapolated to the US); Yale News, 28 Jan 2020",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31965525/"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Thất bại là dữ liệu",
+   "line": "Như hộp đen: ghi lại điều đã xảy ra khi còn nhớ rõ, không để tự trách, mà để biết lần sau sửa ở đâu."
+  },
+  {
+   "name": "Sửa hệ thống, đừng đổ lỗi",
+   "line": "Khi người ta sợ bị phạt, họ giấu lỗi; hãy hỏi điều gì khiến một người tốt mắc lỗi này."
+  },
+  {
+   "name": "Thử nhỏ, sai sớm",
+   "line": "Làm nhiều phiên bản nhỏ, giữ bản tốt nhất, rồi lặp lại: mỗi lần sai là một bước."
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Hơn ba tỷ người đi máy bay. Chỉ hai trăm mười người thiệt mạng. Bí mật: một chiếc hộp màu cam.",
+   "visual": {
+    "type": "statement",
+    "kicker": "Hàng không · 2013 · IATA",
+    "text": "Hơn 3 tỷ người bay. Chỉ 210 thiệt mạng.",
+    "highlight": [
+     "210"
+    ]
+   },
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "hộp màu",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "iata2014",
+    "syed2015"
+   ]
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Đó là số liệu năm hai nghìn mười ba. Chiếc hộp ấy là hộp đen, thứ thật ra được sơn màu cam cho dễ tìm. Nhưng sức mạnh của nó nằm ở cách cả ngành học từ mỗi lần sai. Đến cuối clip, bạn sẽ thấy hai thế giới đối xử với sai lầm rất khác nhau, vì sao lại thế, và ba thói quen bạn mang theo được.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Hộp đen",
+      "text": "Hộp đen thì màu đen",
+      "strike": "màu đen",
+      "replace": "Thật ra: màu cam",
+      "strike_cue": "màu cam"
+     },
+     {
+      "type": "icon",
+      "icon": "people",
+      "kicker": "Sức mạnh thật sự",
+      "cue": "nhưng sức",
+      "line": "Cả ngành cùng học",
+      "line_cue": "cả ngành"
+     },
+     {
+      "type": "trio",
+      "kicker": "Đến cuối clip",
+      "cue": "đến cuối",
+      "items": [
+       {
+        "icon": "scale",
+        "label": "Hai thế giới"
+       },
+       {
+        "icon": "magnifier",
+        "label": "Vì sao",
+        "cue": "vì sao"
+       },
+       {
+        "icon": "checklist",
+        "label": "Ba thói quen",
+        "cue": "và ba"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "iata2014",
+    "atsb_box",
+    "syed2015"
+   ],
+   "take": 1
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Review sách · Tập 24",
+    "title": "Tư Duy Hộp Đen",
+    "subtitle": "Black Box Thinking — Matthew Syed (2015)",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ],
+   "sources": [
+    "syed2015"
+   ]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Ta hay nghĩ thất bại là điều đáng xấu hổ, nên giấu đi là tốt nhất. Và người giỏi thì ít khi sai. Syed cho rằng chính thái độ ấy khiến ta lặp lại cùng một lỗi.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Điều ta hay tin",
+      "items": [
+       {
+        "icon": "mask",
+        "label": "Thất bại đáng xấu hổ"
+       },
+       {
+        "icon": "lock",
+        "label": "Giấu đi cho yên",
+        "cue": "nên giấu"
+       },
+       {
+        "icon": "star",
+        "label": "Người giỏi ít sai",
+        "cue": "và người"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "snowball",
+      "kicker": "Theo Matthew Syed",
+      "cue": "syed cho",
+      "line": "Giấu lỗi thì lặp lại lỗi",
+      "line_cue": "chính thái",
+      "motion": "grow",
+      "motion_cue": "lặp lại"
+     }
+    ]
+   },
+   "sources": [
+    "syed2015"
+   ]
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "Matthew Syed từng là tay vợt bóng bàn hàng đầu nước Anh, hai lần dự Olympic, rồi trở thành nhà báo của tờ The Times. Năm hai nghìn mười lăm, ông viết Black Box Thinking. Tạm dịch: Tư Duy Hộp Đen.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Matthew Syed",
+      "initials": "MS",
+      "role": "Cựu tay vợt · nhà báo The Times",
+      "years": "Olympic 1992 · 2000"
+     },
+     {
+      "type": "book",
+      "title": "Black Box Thinking",
+      "author": "Matthew Syed",
+      "year": "2015",
+      "kicker": "Tạm dịch: Tư Duy Hộp Đen",
+      "cue": "năm hai",
+      "facts": [
+       {
+        "big": "2015",
+        "text": "John Murray · Portfolio"
+       },
+       {
+        "big": "VN",
+        "text": "Tạm dịch: Tư Duy Hộp Đen",
+        "cue": "tạm dịch"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "syed_bio",
+    "syed2015"
+   ]
+  },
+  {
+   "id": "b03",
+   "act": "story",
+   "narration": "Bắt đầu từ bầu trời. Tháng Mười Hai năm một nghìn chín trăm bảy mươi tám, chuyến bay United Airlines một trăm bảy mươi ba gặp trục trặc ở bánh đáp, gần Portland. Cơ trưởng mải xử lý nó, cho máy bay bay vòng chờ, trong khi nhiên liệu cạn dần.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "gear",
+      "kicker": "United 173 · Portland · 1978",
+      "line": "Trục trặc bánh đáp",
+      "line_cue": "trục trặc",
+      "motion": "shake",
+      "motion_cue": "bánh đáp"
+     },
+     {
+      "type": "icon",
+      "icon": "hourglass",
+      "kicker": "Bay vòng chờ",
+      "cue": "cơ trưởng",
+      "line": "Nhiên liệu cạn dần",
+      "line_cue": "nhiên liệu"
+     }
+    ]
+   },
+   "sources": [
+    "ntsb173",
+    "syed2015"
+   ]
+  },
+  {
+   "id": "b04",
+   "act": "story",
+   "narration": "Máy bay rơi trước khi về được đến đường băng. Mười người thiệt mạng. Hộp ghi âm buồng lái cho thấy các thành viên khác trong tổ lái đã nhắc về nhiên liệu, nhưng không làm cơ trưởng hiểu mức nguy cấp.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "clock",
+      "kicker": "28/12/1978",
+      "line": "Mười người thiệt mạng",
+      "line_cue": "mười người"
+     },
+     {
+      "type": "icon",
+      "icon": "lock",
+      "kicker": "Hộp ghi âm buồng lái",
+      "cue": "hộp ghi",
+      "line": "Đã nhắc, nhưng chưa đủ rõ",
+      "line_cue": "đã nhắc"
+     }
+    ]
+   },
+   "sources": [
+    "ntsb173",
+    "syed2015"
+   ]
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Ngành hàng không không dừng ở việc chỉ ra lỗi của một người. Họ sửa cả hệ thống. Cơ quan điều tra Mỹ khuyến nghị đào tạo lại cách tổ lái làm việc với nhau: cơ trưởng lắng nghe, người khác dám lên tiếng. Từ đó ra đời Crew Resource Management, nay được dùng khắp thế giới.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "swap",
+      "kicker": "Sau United 173",
+      "strike_cue": "họ sửa",
+      "from": {
+       "label": "Lỗi của một người",
+       "icon": "eye"
+      },
+      "to": {
+       "label": "Sửa cả hệ thống",
+       "icon": "gear",
+       "cue": "cả hệ"
+      }
+     },
+     {
+      "type": "trio",
+      "kicker": "Cơ quan điều tra khuyến nghị",
+      "cue": "cơ quan",
+      "items": [
+       {
+        "icon": "people",
+        "label": "Cơ trưởng lắng nghe"
+       },
+       {
+        "icon": "bulb",
+        "label": "Dám lên tiếng",
+        "cue": "người khác"
+       },
+       {
+        "icon": "compass",
+        "label": "Dùng khắp thế giới",
+        "cue": "từ đó"
+       }
+      ],
+      "line": "Crew Resource Management",
+      "line_cue": "crew"
+     }
+    ]
+   },
+   "sources": [
+    "ntsb173",
+    "syed2015"
+   ]
+  },
+  {
+   "id": "b06",
+   "act": "story",
+   "narration": "Giờ sang một phòng mổ ở Anh, tháng Ba năm hai nghìn lẻ năm. Elaine Bromiley, ba mươi bảy tuổi, vào viện cho một ca phẫu thuật xoang thông thường. Sau khi gây mê, đường thở của chị gặp sự cố. Theo báo cáo điều tra sau này, các bác sĩ cố mãi một cách, và dường như không nhận ra thời gian đang trôi. Chị mất mười ba ngày sau đó.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Elaine Bromiley",
+      "initials": "EB",
+      "role": "Ca mổ xoang thông thường",
+      "years": "Anh · 3/2005"
+     },
+     {
+      "type": "icon",
+      "icon": "hourglass",
+      "kicker": "Theo báo cáo điều tra",
+      "cue": "theo báo",
+      "line": "Không nhận ra thời gian trôi",
+      "line_cue": "không nhận"
+     },
+     {
+      "type": "icon",
+      "icon": "tree",
+      "kicker": "Mười ba ngày sau",
+      "cue": "chị mất",
+      "line": "Chị qua đời."
+     }
+    ]
+   },
+   "sources": [
+    "mddus2016",
+    "harmer2005",
+    "syed2015"
+   ]
+  },
+  {
+   "id": "b06b",
+   "act": "story",
+   "narration": "Chồng chị, Martin Bromiley, là một phi công. Anh không đi tìm người để trừng phạt. Anh đề nghị một cuộc điều tra độc lập, như ngành hàng không vẫn làm. Báo cáo cũng ghi nhận: dù xử lý hoàn hảo, có thể vẫn không cứu được chị.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Martin Bromiley",
+      "initials": "MB",
+      "role": "Phi công · chồng chị Elaine"
+     },
+     {
+      "type": "swap",
+      "kicker": "Martin Bromiley",
+      "cue": "anh không",
+      "strike_cue": "anh đề",
+      "from": {
+       "label": "Tìm người để phạt",
+       "icon": "hammer"
+      },
+      "to": {
+       "label": "Điều tra độc lập",
+       "icon": "magnifier",
+       "cue": "điều tra"
+      }
+     },
+     {
+      "type": "icon",
+      "icon": "scale",
+      "kicker": "Báo cáo cũng ghi nhận",
+      "cue": "báo cáo",
+      "line": "Có thể vẫn không cứu được",
+      "line_cue": "dù xử"
+     }
+    ]
+   },
+   "sources": [
+    "mddus2016",
+    "harmer2005",
+    "syed2015"
+   ]
+  },
+  {
+   "id": "b07",
+   "act": "turn",
+   "narration": "Syed gọi đó là khác biệt giữa vòng lặp mở và vòng lặp đóng. Ở vòng lặp đóng, lỗi bị giấu đi hoặc đổ cho xui rủi, nên không ai học được gì. Theo ông, ngành y thường nghiêng về phía ấy, vì sợ bị đổ lỗi và sợ bị kiện.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "compare",
+      "title": "Theo Syed",
+      "left": {
+       "title": "Vòng lặp mở",
+       "items": [
+        "Lỗi được mở ra",
+        "Cả ngành học"
+       ]
+      },
+      "right": {
+       "title": "Vòng lặp đóng",
+       "items": [
+        "Lỗi bị giấu",
+        "Không ai học"
+       ]
+      }
+     },
+     {
+      "type": "icon",
+      "icon": "lock",
+      "kicker": "Theo Syed, ngành y",
+      "cue": "theo ông",
+      "line": "Sợ bị trách, sợ bị kiện",
+      "line_cue": "sợ bị"
+     }
+    ]
+   },
+   "sources": [
+    "syed2015"
+   ]
+  },
+  {
+   "id": "b08",
+   "act": "principle",
+   "narration": "Bài học thứ nhất: thất bại là dữ liệu. Như hộp đen, hãy ghi lại điều gì đã xảy ra, ngay khi còn nhớ rõ. Không phải để tự trách, mà để biết lần sau sửa ở đâu.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Bài học 1",
+      "line": "Thất bại là dữ liệu."
+     },
+     {
+      "type": "trio",
+      "kicker": "Như hộp đen",
+      "cue": "như hộp",
+      "items": [
+       {
+        "icon": "letter",
+        "label": "Ghi lại điều đã xảy ra"
+       },
+       {
+        "icon": "clock",
+        "label": "Khi còn nhớ rõ",
+        "cue": "ngay khi"
+       },
+       {
+        "icon": "compass",
+        "label": "Lần sau sửa ở đâu",
+        "cue": "mà để"
+       }
+      ],
+      "line": "Không phải để tự trách.",
+      "line_cue": "không phải"
+     }
+    ]
+   },
+   "sources": [
+    "syed2015"
+   ]
+  },
+  {
+   "id": "b09",
+   "act": "principle",
+   "narration": "Bài học thứ hai: sửa hệ thống, đừng đổ lỗi. Syed cho rằng khi người ta sợ bị phạt, họ giấu lỗi, và vòng lặp đóng lại. Thay vì hỏi ai sai, hãy hỏi như Martin Bromiley: điều gì khiến những người giỏi, có tâm, vẫn mắc lỗi này?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "gear",
+      "kicker": "Bài học 2",
+      "line": "Sửa hệ thống, đừng đổ lỗi.",
+      "motion": "spin"
+     },
+     {
+      "type": "icon",
+      "icon": "lock",
+      "kicker": "Theo Syed",
+      "cue": "syed cho",
+      "line": "Sợ bị phạt thì giấu lỗi",
+      "line_cue": "sợ bị"
+     },
+     {
+      "type": "swap",
+      "kicker": "Hãy hỏi như Martin Bromiley",
+      "cue": "thay vì",
+      "strike_cue": "hãy hỏi",
+      "from": {
+       "label": "Ai sai?",
+       "icon": "hammer"
+      },
+      "to": {
+       "label": "Điều gì khiến người giỏi mắc lỗi?",
+       "icon": "puzzle",
+       "cue": "điều gì"
+      }
+     }
+    ]
+   },
+   "sources": [
+    "syed2015",
+    "mddus2016"
+   ]
+  },
+  {
+   "id": "b10",
+   "act": "principle",
+   "narration": "Bài học thứ ba: thử nhỏ, sai sớm. Syed kể chuyện Unilever cần một vòi phun bột giặt tốt hơn. Nhóm của họ làm nhiều phiên bản hơi khác nhau, giữ bản tốt nhất, rồi lặp lại. Sau bốn mươi lăm thế hệ và bốn trăm bốn mươi chín lần thất bại, họ có một chiếc vòi xuất sắc.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "sprout",
+      "kicker": "Bài học 3",
+      "line": "Thử nhỏ, sai sớm."
+     },
+     {
+      "type": "icon",
+      "icon": "factory",
+      "kicker": "Unilever · theo Syed",
+      "cue": "syed kể",
+      "line": "Vòi phun bột giặt",
+      "line_cue": "vòi phun"
+     },
+     {
+      "type": "icon",
+      "icon": "gear",
+      "kicker": "Mỗi vòng",
+      "cue": "nhóm của",
+      "line": "Nhiều bản, giữ bản tốt nhất",
+      "line_cue": "giữ bản",
+      "motion": "spin"
+     },
+     {
+      "type": "stat",
+      "value": 449,
+      "label": "lần thất bại",
+      "note": "45 thế hệ · theo Syed",
+      "cue": "sau bốn"
+     }
+    ]
+   },
+   "sources": [
+    "syed2015",
+    "syed_449"
+   ]
+  },
+  {
+   "id": "b11",
+   "act": "complication",
+   "certainty": "estimate",
+   "narration": "Giờ là mặt còn lại. Syed dẫn một ước tính năm hai nghìn mười ba: mỗi năm ở Mỹ, hơn bốn trăm nghìn ca tử vong sớm liên quan đến tổn hại có thể phòng tránh trong bệnh viện. Nhưng đó là ước tính, và gây tranh cãi. Một phân tích năm hai nghìn hai mươi, đếm theo cách khác, ra khoảng hai mươi hai nghìn ca mỗi năm.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "scale",
+      "kicker": "Mặt còn lại",
+      "line": "Một con số gây tranh cãi",
+      "line_cue": "ước tính"
+     },
+     {
+      "type": "compare",
+      "title": "Tử vong có thể phòng tránh, Mỹ · ước tính",
+      "cue": "hơn bốn",
+      "left": {
+       "title": "James, 2013",
+       "items": [
+        "> 400.000 / năm"
+       ]
+      },
+      "right": {
+       "title": "Rodwin, 2020",
+       "items": [
+        "~ 22.000 / năm"
+       ]
+      }
+     },
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Cách đếm khác nhau",
+      "cue": "một phân",
+      "line": "Ước tính, không phải sự thật chắc chắn",
+      "line_cue": "đếm theo"
+     }
+    ]
+   },
+   "sources": [
+    "syed2015",
+    "james2013",
+    "rodwin2020"
+   ]
+  },
+  {
+   "id": "b12",
+   "act": "turn",
+   "narration": "Con số nào gần đúng hơn thì ý chính của Syed vẫn đứng vững: lỗi bị giấu thì không ai học được. Và câu chuyện của Elaine đã đi xa. Năm hai nghìn lẻ bảy, Martin Bromiley lập Clinical Human Factors Group, để mang cách học từ lỗi vào bệnh viện.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "lock",
+      "kicker": "Ý chính vẫn đứng vững",
+      "line": "Lỗi bị giấu, không ai học",
+      "line_cue": "lỗi bị"
+     },
+     {
+      "type": "icon",
+      "icon": "lighthouse",
+      "kicker": "2007 · Martin Bromiley",
+      "cue": "và câu",
+      "line": "Clinical Human Factors Group",
+      "line_cue": "clinical"
+     }
+    ]
+   },
+   "sources": [
+    "chfg",
+    "syed2015"
+   ]
+  },
+  {
+   "id": "b13",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Nhóm của bạn trễ hạn dự án lần thứ ba. Theo Syed, việc nên làm trước tiên là gì?",
+   "visual": {
+    "type": "question",
+    "question": "Nhóm trễ hạn dự án lần thứ ba. Theo Syed, làm gì trước?",
+    "choices": [
+     "Tìm xem ai có lỗi để kỷ luật?",
+     "Cùng xem lại cả quá trình, ghi ra vì sao trễ, sửa một chỗ?",
+     "Lần sau cố gắng hơn là được?"
+    ],
+    "answer": "B — mở hộp đen: thất bại là dữ liệu",
+    "think_seconds": 5
+   }
+  },
+  {
+   "id": "b14",
+   "act": "recap",
+   "narration": "Vậy là ba bài học từ Tư Duy Hộp Đen. Thất bại là dữ liệu. Sửa hệ thống, đừng đổ lỗi. Và thử nhỏ, sai sớm.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "book",
+      "kicker": "Black Box Thinking",
+      "line": "Ba bài học."
+     },
+     {
+      "type": "list",
+      "title": "Ba bài học",
+      "check": true,
+      "cue": "thất bại",
+      "items": [
+       {
+        "text": "Thất bại là dữ liệu",
+        "cue": "thất bại"
+       },
+       {
+        "text": "Sửa hệ thống, đừng đổ lỗi",
+        "cue": "sửa hệ"
+       },
+       {
+        "text": "Thử nhỏ, sai sớm",
+        "cue": "và thử"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b15",
+   "act": "close",
+   "narration": "Hộp đen không màu đen, và nó không ngăn được tai nạn. Nó chỉ đảm bảo một điều: không thất bại nào bị lãng phí. Lần sai gần nhất của bạn, bạn đã mở hộp đen của nó chưa?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "lock",
+      "kicker": "Hộp đen · màu cam",
+      "line": "Không ngăn được tai nạn",
+      "line_cue": "không ngăn"
+     },
+     {
+      "type": "icon",
+      "icon": "lighthouse",
+      "kicker": "Nó chỉ đảm bảo",
+      "cue": "nó chỉ",
+      "line": "Không thất bại nào bị lãng phí",
+      "line_cue": "không thất"
+     },
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Lần sai gần nhất của bạn",
+      "cue": "lần sai",
+      "line": "Đã mở hộp đen chưa?",
+      "line_cue": "bạn đã"
+     }
+    ]
+   },
+   "sources": [
+    "atsb_box",
+    "syed2015"
+   ],
+   "take": 1
+  },
+  {
+   "id": "b16",
+   "act": "close",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
+   "visual": {
+    "type": "end",
+    "kicker": "Review sách · Tập 24",
+    "title": "Tư Duy Hộp Đen",
+    "ask": "Bạn muốn clip tiếp theo về cuốn sách nào?",
+    "ask_hint": "Một cuốn sách · một nhà tư duy · một chủ đề",
+    "ask_cue": "còn bạn",
+    "sources_line": "Nguồn: Syed (2015) · NTSB (1979) · IATA (2014) · báo cáo Harmer (2005) · xem mô tả",
+    "disclaimer": "Tóm tắt và cảm nhận cá nhân; không phải lời khuyên y khoa.",
+    "sources_cue": "còn bạn"
+   }
+  }
+ ],
+ "pronounce": {}
+}

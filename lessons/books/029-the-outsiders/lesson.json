@@ -1,0 +1,855 @@
+{
+ "meta": {
+  "series": "Review sách · Tập 29",
+  "title": "Tám CEO Đi Ngược Đám Đông",
+  "subtitle": "The Outsiders — William N. Thorndike Jr. (2012)",
+  "topic": "investing",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt mới bắt đầu đầu tư hoặc đang làm quản lý, muốn hiểu 'phân bổ vốn' qua một câu chuyện thật",
+  "aspect": "4:3",
+  "target_minutes": [
+   3,
+   5
+  ],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
+  "learning_goals": [
+   "Kể lại chuyện Henry Singleton ở Teledyne: lập công ty năm 1960, dùng cổ phiếu giá cao mua khoảng 130 công ty, dừng năm 1969, rồi từ 1972 đến 1984 mua lại khoảng 90% cổ phiếu khi giá rẻ",
+   "Giải thích ba ý lớn của Thorndike: phân bổ vốn là việc thật; giá quyết định lựa chọn; đo trên mỗi cổ phần",
+   "Đọc con số khoảng 20,4%/năm so với khoảng 8% của S&P 500 (1963–1990) là tính toán của tác giả, là lịch sử chứ không phải lời hứa, và biết giới hạn: tám CEO được chọn sau khi đã thắng; mua lại cổ phiếu khi giá đắt là phá giá trị"
+  ],
+  "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư.",
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người dẫn chương trình sách lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively.",
+  "brief": {
+   "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn clip tiếp theo về cuốn sách nào?\" (comment answering the end-card question)",
+   "target_viewer": "Người Việt 20–40 tuổi mới đầu tư hoặc đang quản lý một nhóm, một công ty nhỏ; nghĩ CEO giỏi là làm công ty to ra và chưa từng nghe 'phân bổ vốn' (giả định của người viết, chủ kênh xác nhận lại)",
+   "format": "Phân tích sách (book analysis), 4–5 phút, 4:3, minh họa icon vẽ tay, một giọng đọc",
+   "central_question": "Vì sao một CEO mua khoảng 130 công ty, rồi quay sang mua lại chính cổ phiếu của mình, và hai việc ấy vì sao lại là cùng một quyết định?",
+   "transformation": "Trước khi xem, họ nghĩ việc của CEO là làm công ty to ra và mua lại cổ phiếu là dấu hiệu hết ý tưởng. Sau khi xem, họ kể lại được chuyện Teledyne (1960, ~130 công ty, 1969 dừng, 1972–1984 mua lại ~90% cổ phiếu), dùng được ba ý (phân bổ vốn là việc thật; giá quyết định lựa chọn; đo trên mỗi cổ phần) cho đồng tiền của chính mình, và biết giới hạn: con số 20,4% là tính toán của tác giả cho một giai đoạn đã qua, tám CEO được chọn sau khi đã thắng",
+   "discovery_goal": "Tìm kiếm (\"The Outsiders\", \"William Thorndike\", \"Henry Singleton\", \"Teledyne\", \"phân bổ vốn\", \"capital allocation\", \"mua lại cổ phiếu\") và đề xuất từ video sách đầu tư; khán giả tập 1 (Good to Great), tập 5 và tập 21",
+   "share_recipient": "Một người bạn đang làm chủ hoặc quản lý, đang muốn 'mở rộng cho to': câu hỏi 'ở giá hôm nay, đồng tiền tiếp theo nên đi đâu?' giúp hai người nói chuyện mà không chê nhau",
+   "evidence": "Thorndike, The Outsiders (HBR Press 2012: tám CEO; năm lựa chọn phân bổ vốn; chương Singleton: ~130 công ty, 1969 dừng, 1972–1984 tám lần chào mua, ~90% cổ phiếu, 20,4% so với 8,0% của S&P 500, 1963–1990); Thorndike, JACF 26(4), 2014 (trích chương Singleton); Fortune 21/11/2012 (mua lại lần đầu 1972, lần cuối 5/1984; ~85% cổ phiếu); Encyclopedia.com / International Directory of Company Histories, Teledyne Inc. (130 công ty, dừng 1969); Wikipedia Henry Earl Singleton (Sc.D. MIT 1950; lập Teledyne 1960 với George Kozmetsky).",
+   "constraints": "4–5 phút, 4:3, icon vẽ, không khuôn mặt người thật, một giọng đọc OmniVoice seed 99 speed 0.88, tên tiếng Anh giữ nguyên, số đọc bằng chữ, nói rõ 20,4% là tính toán của tác giả cho 1963–1990 và là lịch sử, không khuyến nghị mua cổ phiếu nào (Teledyne hôm nay là công ty khác hẳn), không lặp chuyện Buffett/Berkshire của tập 21, giữ lời miễn trừ"
+  },
+  "youtube": {
+   "title": "Mua 130 công ty, rồi mua lại chính mình | The Outsiders",
+   "thumbnail_text": "Mua ~130 công ty. Rồi mua chính mình.",
+   "description": "Henry Singleton, nhà đồng sáng lập Teledyne, dùng cổ phiếu được định giá cao của công ty để mua khoảng 130 công ty trong thập niên 1960. Năm 1969 ông dừng hẳn. Từ 1972 đến 1984, khi cổ phiếu Teledyne rẻ, ông chào mua lại cổ phiếu của chính công ty tám lần, tổng cộng khoảng 90% số cổ phiếu (theo Thorndike; Fortune 2012 ghi khoảng 85%). Video đi qua câu chuyện ấy trong The Outsiders của William N. Thorndike Jr., năm chỗ mà đồng tiền của một công ty có thể đi, ba bài học (phân bổ vốn là việc thật; giá quyết định lựa chọn; đo trên mỗi cổ phần), giới hạn khi đọc sách, và một bài tập nhỏ.\n\nNội dung giáo dục, tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư. Không cổ phiếu nào trong video là gợi ý mua; Teledyne Technologies ngày nay là một công ty khác hẳn thời Singleton. Con số khoảng 20,4%/năm so với khoảng 8% của S&P 500 (1963–1990) là tính toán của Thorndike trong sách; chúng tôi chưa kiểm tra được cách tính (cổ tức, danh nghĩa). Đó là lịch sử, không phải lời hứa. Số công ty (~130) và tỷ lệ cổ phiếu mua lại (~90%) là con số làm tròn, các nguồn ghi hơi khác nhau. Ý \"tám CEO được chọn sau khi đã thắng\" là nhận xét của người làm video. Chúng tôi chưa tìm thấy bản tiếng Việt chính thức; tên \"Tám CEO Đi Ngược Đám Đông\" là tên tạm của kênh.\n\nChương:\n- 130 công ty, rồi mua lại chính mình\n- Điều nhiều người nghĩ về việc của CEO\n- Cuốn sách và tác giả\n- Phân bổ vốn là gì?\n- 1960: Henry Singleton và Teledyne\n- 1969: dừng mua\n- 1972–1984: mua lại chính mình\n- Chiếc bánh và những miếng bánh\n- 1963–1990: lịch sử, không phải lời hứa\n- Bài học 1: phân bổ vốn là việc thật\n- Bài học 2: giá quyết định lựa chọn\n- Bài học 3: đo trên mỗi cổ phần\n- Đọc sách cho tỉnh táo\n- Thử một chút\n- Ba bài học\n\nNguồn:\n- William N. Thorndike Jr., The Outsiders: Eight Unconventional CEOs and Their Radically Rational Blueprint for Success, Harvard Business Review Press, 2012: https://www.oreilly.com/library/view/-/9781422187586/\n- William N. Thorndike Jr., An Unconventional Conglomerateur: Henry Singleton and Teledyne, Journal of Applied Corporate Finance 26(4), 2014: https://ideas.repec.org/a/bla/jacrfn/v26y2014i4p81-88.html\n- Fortune, Beating the market by buying back stock (21/11/2012): https://fortune.com/2012/11/21/beating-the-market-by-buying-back-stock\n- Teledyne Inc., International Directory of Company Histories (Encyclopedia.com): https://encyclopedia.com/books/politics-and-business-magazines/teledyne-inc\n- Wikipedia, Henry Earl Singleton: https://en.wikipedia.org/wiki/Henry_Earl_Singleton\n\nBạn muốn clip tiếp theo về cuốn sách nào? Để lại bình luận nhé.",
+   "tags": [
+    "The Outsiders",
+    "William Thorndike",
+    "Henry Singleton",
+    "Teledyne",
+    "phân bổ vốn",
+    "capital allocation",
+    "mua lại cổ phiếu",
+    "review sách",
+    "tóm tắt sách",
+    "sách đầu tư",
+    "đầu tư giá trị",
+    "đầu tư cho người mới",
+    "tư duy đầu tư",
+    "CEO"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "thorndike2012",
+   "cite": "William N. Thorndike Jr., The Outsiders: Eight Unconventional CEOs and Their Radically Rational Blueprint for Success, Harvard Business Review Press, 2012 (eight CEOs; capital allocation: five ways to deploy capital - invest in existing operations, acquire other businesses, pay dividends, pay down debt, repurchase stock; Singleton chapter: about 130 acquisitions in the 1960s paid largely with high-multiple Teledyne stock, acquisitions stopped in 1969, eight tender offers 1972-1984 retiring about 90% of shares, 20.4% compound annual return to shareholders 1963-1990 vs 8.0% for the S&P 500, by the author's calculation)",
+   "url": "https://www.oreilly.com/library/view/-/9781422187586/"
+  },
+  {
+   "id": "thorndike2014",
+   "cite": "William N. Thorndike Jr., 'An Unconventional Conglomerateur: Henry Singleton and Teledyne', Journal of Applied Corporate Finance 26(4), Fall 2014, pp. 81-88, DOI 10.1111/jacf.12092 (excerpt of the Singleton chapter, 1963-1990; massive share repurchases in the 1970s and '80s when valuations were low)",
+   "url": "https://ideas.repec.org/a/bla/jacrfn/v26y2014i4p81-88.html"
+  },
+  {
+   "id": "fortune2012",
+   "cite": "Fortune, 'Beating the market by buying back stock', 21 Nov 2012 (Teledyne's first repurchase in 1972 at about $8 a share split-adjusted, the last at $200 in May 1984; about 85% of shares repurchased - a slightly lower figure than Thorndike's ~90%)",
+   "url": "https://fortune.com/2012/11/21/beating-the-market-by-buying-back-stock"
+  },
+  {
+   "id": "teledyne_hist",
+   "cite": "International Directory of Company Histories, 'Teledyne, Inc.' (via Encyclopedia.com): about 130 companies bought in the eight years ending 1969, mostly with Teledyne stock; acquisitions halted in 1969 as the stock's multiple fell and acquisition prices rose",
+   "url": "https://encyclopedia.com/books/politics-and-business-magazines/teledyne-inc"
+  },
+  {
+   "id": "wiki_singleton",
+   "cite": "Wikipedia, Henry Earl Singleton (Sc.D. in electrical engineering, MIT, 1950; left Litton and co-founded Teledyne with George Kozmetsky in 1960)",
+   "url": "https://en.wikipedia.org/wiki/Henry_Earl_Singleton"
+  },
+  {
+   "id": "west_st",
+   "cite": "West St. Investing, 'Henry Singleton: The Greatest Capital Allocator in American Business' (secondary, used only for context: at the time repurchases were widely seen as a sign of a company without investment ideas; 1972-1984 buybacks of ~90% of shares)",
+   "url": "https://weststinvesting.substack.com/p/henry-singleton-the-greatest-capital"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Phân bổ vốn là việc thật",
+   "line": "Mỗi đồng tiền là một lựa chọn: hỏi nó đi đâu thì sinh giá trị nhất."
+  },
+  {
+   "name": "Giá quyết định lựa chọn",
+   "line": "Cùng một hành động, tốt hay xấu tùy giá: dùng thứ đang đắt, mua thứ đang rẻ."
+  },
+  {
+   "name": "Đo trên mỗi cổ phần",
+   "line": "To hơn chưa chắc giàu hơn; hãy đo phần mình thật sự sở hữu."
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Henry Singleton mua khoảng một trăm ba mươi công ty. Rồi ông quay sang mua lại chính công ty mình.",
+   "visual": {
+    "type": "statement",
+    "kicker": "The Outsiders · Thorndike",
+    "text": "Mua ~130 công ty. Rồi mua chính mình.",
+    "highlight": [
+     "chính mình"
+    ]
+   },
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "rồi ông",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "thorndike2012",
+    "teledyne_hist"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Không phải liều, cũng không phải may. Đến cuối clip, bạn sẽ thấy vì sao hai việc tưởng ngược nhau ấy là cùng một quyết định, và ba bài học cho đồng tiền của chính bạn.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "fork",
+      "kicker": "Mua người khác, rồi mua chính mình",
+      "line": "Không liều, không may.",
+      "line_cue": "không phải"
+     },
+     {
+      "type": "icon",
+      "icon": "puzzle",
+      "kicker": "Hai việc tưởng ngược nhau",
+      "cue": "vì sao",
+      "line": "Cùng một quyết định.",
+      "line_cue": "tưởng"
+     },
+     {
+      "type": "icon",
+      "icon": "coin",
+      "kicker": "Ba bài học",
+      "cue": "và ba",
+      "line": "Cho đồng tiền của chính bạn.",
+      "line_cue": "đồng tiền"
+     }
+    ]
+   },
+   "sources": [
+    "thorndike2012"
+   ]
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Review sách · Tập 29",
+    "title": "Tám CEO Đi Ngược Đám Đông",
+    "subtitle": "The Outsiders · William N. Thorndike Jr., 2012",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ],
+   "sources": [
+    "thorndike2012"
+   ]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Nhiều người nghĩ: việc của một CEO là làm công ty to ra. Doanh thu tăng, mua thêm công ty, càng lớn càng giỏi. Còn mua lại cổ phiếu của chính mình? Thời ấy, việc đó thường bị xem là dấu hiệu hết ý tưởng. Thorndike kể một câu chuyện khác.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Điều nhiều người nghĩ",
+      "items": [
+       {
+        "icon": "factory",
+        "label": "Càng to càng giỏi"
+       },
+       {
+        "icon": "chart",
+        "label": "Doanh thu tăng",
+        "cue": "doanh thu"
+       },
+       {
+        "icon": "store",
+        "label": "Mua thêm công ty",
+        "cue": "mua thêm"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "pie",
+      "kicker": "Mua lại cổ phiếu?",
+      "cue": "còn mua",
+      "line": "Bị xem là hết ý tưởng.",
+      "line_cue": "thời ấy"
+     },
+     {
+      "type": "icon",
+      "icon": "book",
+      "kicker": "The Outsiders",
+      "cue": "thorndike kể",
+      "line": "Một câu chuyện khác."
+     }
+    ]
+   },
+   "sources": [
+    "thorndike2012",
+    "west_st"
+   ]
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "The Outsiders ra năm hai nghìn không trăm mười hai, của William Thorndike, một nhà đầu tư vào các công ty tư nhân. Ông chọn tám CEO, phần lớn ít khi lên báo. Điểm chung của họ, theo ông: coi việc phân bổ vốn là công việc quan trọng nhất.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "book",
+      "title": "The Outsiders",
+      "author": "William N. Thorndike Jr.",
+      "year": "2012",
+      "kicker": "Nhà đầu tư · công ty tư nhân",
+      "facts": [
+       {
+        "big": "2012",
+        "text": "Harvard Business Review Press",
+        "cue": "của william"
+       },
+       {
+        "big": "8",
+        "text": "CEO, ít khi lên báo",
+        "cue": "ông chọn"
+       },
+       {
+        "big": "Vốn",
+        "text": "phân bổ là việc chính",
+        "cue": "điểm chung"
+       }
+      ]
+     },
+     {
+      "type": "portrait",
+      "name": "William N. Thorndike Jr.",
+      "initials": "WT",
+      "role": "Nhà đầu tư · tác giả",
+      "years": "The Outsiders · 2012",
+      "cue": "coi việc"
+     }
+    ]
+   },
+   "sources": [
+    "thorndike2012"
+   ]
+  },
+  {
+   "id": "b03",
+   "act": "context",
+   "narration": "Phân bổ vốn là gì? Theo Thorndike, tiền một công ty làm ra chỉ có năm chỗ để đi. Ba chỗ quen thuộc: đầu tư lại vào chính nó, mua công ty khác, trả cổ tức cho cổ đông. Và hai chỗ còn lại: trả nợ, và mua lại cổ phiếu. Chọn chỗ nào, ở giá nào, mới là việc thật của CEO.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "coins",
+      "kicker": "Phân bổ vốn là gì?",
+      "line": "Tiền chỉ có năm chỗ đi.",
+      "line_cue": "tiền một"
+     },
+     {
+      "type": "trio",
+      "kicker": "Ba chỗ quen thuộc",
+      "cue": "ba chỗ",
+      "items": [
+       {
+        "icon": "factory",
+        "label": "Đầu tư lại"
+       },
+       {
+        "icon": "store",
+        "label": "Mua công ty khác",
+        "cue": "mua công"
+       },
+       {
+        "icon": "coin",
+        "label": "Trả cổ tức",
+        "cue": "trả cổ"
+       }
+      ]
+     },
+     {
+      "type": "trio",
+      "kicker": "Hai chỗ còn lại, và một lựa chọn",
+      "cue": "và hai",
+      "items": [
+       {
+        "icon": "anchor",
+        "label": "Trả nợ"
+       },
+       {
+        "icon": "pie",
+        "label": "Mua lại cổ phiếu",
+        "cue": "và mua"
+       },
+       {
+        "icon": "compass",
+        "label": "Chọn chỗ, chọn giá",
+        "cue": "chọn chỗ"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "thorndike2012"
+   ]
+  },
+  {
+   "id": "b04",
+   "act": "story",
+   "narration": "Quay lại năm một nghìn chín trăm sáu mươi. Henry Singleton, một kỹ sư có bằng tiến sĩ của MIT, cùng một người bạn lập ra Teledyne. Suốt thập niên ấy, cổ phiếu Teledyne được thị trường trả giá rất cao so với lợi nhuận. Singleton dùng chính cổ phiếu đắt ấy làm tiền, để đi mua công ty.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "clock",
+      "kicker": "Quay lại",
+      "line": "Năm 1960."
+     },
+     {
+      "type": "portrait",
+      "name": "Henry Singleton",
+      "initials": "HS",
+      "role": "Kỹ sư · tiến sĩ MIT",
+      "years": "Kỹ sư · nhà sáng lập",
+      "cue": "henry"
+     },
+     {
+      "type": "icon",
+      "icon": "factory",
+      "kicker": "1960 · đồng sáng lập",
+      "cue": "cùng một",
+      "line": "Teledyne ra đời.",
+      "line_cue": "lập ra"
+     },
+     {
+      "type": "icon",
+      "icon": "scale",
+      "kicker": "Thập niên 1960",
+      "cue": "suốt thập",
+      "line": "Giá cao so với lợi nhuận.",
+      "line_cue": "rất cao"
+     },
+     {
+      "type": "swap",
+      "kicker": "Cổ phiếu đắt làm tiền",
+      "cue": "singleton dùng",
+      "strike_cue": "để đi",
+      "from": {
+       "label": "Cổ phiếu Teledyne",
+       "icon": "pie"
+      },
+      "to": {
+       "label": "Công ty khác",
+       "icon": "store",
+       "cue": "mua công"
+      }
+     }
+    ]
+   },
+   "sources": [
+    "wiki_singleton",
+    "thorndike2012",
+    "teledyne_hist"
+   ]
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Chưa đầy mười năm, Teledyne mua khoảng một trăm ba mươi công ty. Rồi năm một nghìn chín trăm sáu mươi chín, cổ phiếu Teledyne không còn đắt, còn giá các công ty để mua lại tăng lên. Singleton dừng hẳn. Theo Thorndike, ông giải tán đội đi mua công ty, và không làm thêm thương vụ lớn nào nữa.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stat",
+      "value": 130,
+      "prefix": "~",
+      "suffix": " công ty",
+      "label": "Teledyne mua · thập niên 1960",
+      "cue": "khoảng"
+     },
+     {
+      "type": "compare",
+      "title": "1969: cán cân đảo chiều",
+      "cue": "rồi năm",
+      "left": {
+       "title": "Cổ phiếu Teledyne",
+       "items": [
+        "Hết đắt"
+       ]
+      },
+      "right": {
+       "title": "Công ty để mua",
+       "items": [
+        "Đắt lên"
+       ]
+      }
+     },
+     {
+      "type": "icon",
+      "icon": "door",
+      "kicker": "Singleton dừng hẳn",
+      "cue": "singleton dừng",
+      "line": "Giải tán đội đi mua.",
+      "line_cue": "ông giải"
+     }
+    ]
+   },
+   "sources": [
+    "thorndike2012",
+    "teledyne_hist"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b06",
+   "act": "story",
+   "narration": "Năm một nghìn chín trăm bảy mươi hai, khi cổ phiếu Teledyne đang rẻ, Singleton chào mua lại cổ phiếu của chính công ty. Ông làm như vậy tám lần. Đến năm một nghìn chín trăm tám mươi tư, theo Thorndike, khoảng chín mươi phần trăm số cổ phiếu đã được mua lại.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "pie",
+      "kicker": "1972 · cổ phiếu đang rẻ",
+      "line": "Mua lại chính mình.",
+      "line_cue": "singleton chào"
+     },
+     {
+      "type": "stat",
+      "value": 8,
+      "suffix": " lần",
+      "label": "chào mua lại · 1972–1984",
+      "cue": "tám lần"
+     },
+     {
+      "type": "funnel",
+      "cue": "đến năm",
+      "total": 100,
+      "start_full": true,
+      "keep": 10,
+      "keep_cue": "khoảng",
+      "cols": 20,
+      "label": "Cứ 100 cổ phiếu năm 1972",
+      "keep_label": "Năm 1984: còn ~10"
+     }
+    ]
+   },
+   "sources": [
+    "thorndike2012",
+    "fortune2012",
+    "thorndike2014"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b07",
+   "act": "story",
+   "narration": "Vì sao điều đó có lợi? Hãy hình dung công ty là một chiếc bánh. Mua lại cổ phiếu, số miếng ít đi, và mỗi cổ đông ở lại giữ một miếng to hơn. Mua khi giá rẻ, thì miếng to hơn ấy có được với giá hời. Theo Thorndike, lợi nhuận trên mỗi cổ phần của Teledyne nhờ vậy tăng vọt.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "pie",
+      "motion": "grow",
+      "kicker": "Công ty như một chiếc bánh",
+      "line": "Ít miếng hơn, miếng to hơn.",
+      "line_cue": "số miếng"
+     },
+     {
+      "type": "icon",
+      "icon": "coin",
+      "kicker": "Mua khi giá rẻ",
+      "cue": "mua khi",
+      "line": "Miếng to hơn, giá hời.",
+      "line_cue": "miếng to hơn ấy"
+     },
+     {
+      "type": "icon",
+      "icon": "chart",
+      "kicker": "Lợi nhuận mỗi cổ phần",
+      "cue": "theo thorndike",
+      "line": "Tăng vọt.",
+      "line_cue": "tăng"
+     }
+    ]
+   },
+   "sources": [
+    "thorndike2012",
+    "thorndike2014"
+   ]
+  },
+  {
+   "id": "b08",
+   "act": "story",
+   "narration": "Kết quả? Theo tính toán của Thorndike, từ năm một nghìn chín trăm sáu mươi ba đến năm một nghìn chín trăm chín mươi, cổ đông Teledyne có lợi nhuận kép khoảng hai mươi phẩy bốn phần trăm mỗi năm, so với khoảng tám phần trăm của S&P năm trăm. Đó là con số của tác giả, cho một giai đoạn đã qua: lịch sử, không phải lời hứa.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Kết quả?",
+      "line": "Theo tính toán của Thorndike.",
+      "line_cue": "theo tính"
+     },
+     {
+      "type": "compare",
+      "title": "Lợi nhuận kép mỗi năm, 1963–1990",
+      "cue": "cổ đông",
+      "left": {
+       "title": "Teledyne",
+       "items": [
+        "~20,4%/năm"
+       ]
+      },
+      "right": {
+       "title": "S&P 500",
+       "items": [
+        "~8%/năm"
+       ]
+      }
+     },
+     {
+      "type": "icon",
+      "icon": "hourglass",
+      "kicker": "Con số của tác giả",
+      "cue": "đó là",
+      "line": "Lịch sử, không phải lời hứa.",
+      "line_cue": "lịch sử"
+     }
+    ]
+   },
+   "sources": [
+    "thorndike2012",
+    "thorndike2014"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b09",
+   "act": "principle",
+   "narration": "Bài học thứ nhất: phân bổ vốn là việc thật. Singleton không chỉ điều hành nhà máy. Ông coi mỗi đồng tiền là một lựa chọn: đi đâu thì sinh giá trị nhất? Với bạn cũng vậy. Lương, tiền tiết kiệm, cả thời gian, đều là vốn cần phân bổ.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "compass",
+      "kicker": "Bài học 1",
+      "line": "Phân bổ vốn là việc thật.",
+      "line_cue": "phân bổ"
+     },
+     {
+      "type": "icon",
+      "icon": "fork",
+      "kicker": "Mỗi đồng tiền là một lựa chọn",
+      "cue": "ông coi",
+      "line": "Đi đâu sinh giá trị nhất?",
+      "line_cue": "đi đâu"
+     },
+     {
+      "type": "trio",
+      "kicker": "Vốn của bạn",
+      "cue": "với bạn",
+      "items": [
+       {
+        "icon": "coin",
+        "label": "Lương"
+       },
+       {
+        "icon": "coins",
+        "label": "Tiền tiết kiệm",
+        "cue": "tiền tiết"
+       },
+       {
+        "icon": "hourglass",
+        "label": "Thời gian",
+        "cue": "cả thời"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "thorndike2012"
+   ]
+  },
+  {
+   "id": "b10",
+   "act": "principle",
+   "narration": "Bài học thứ hai: giá quyết định lựa chọn. Cùng là cổ phiếu Teledyne. Khi nó đắt, Singleton đem nó đi đổi lấy công ty khác. Khi nó rẻ, ông mua nó về. Ông không gắn bó với hành động nào; ông chỉ hỏi: ở giá này, lựa chọn nào tốt nhất?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "scale",
+      "kicker": "Bài học 2",
+      "line": "Giá quyết định lựa chọn.",
+      "line_cue": "giá quyết"
+     },
+     {
+      "type": "compare",
+      "title": "Cùng một cổ phiếu Teledyne",
+      "cue": "cùng là",
+      "left": {
+       "title": "Khi đắt",
+       "items": [
+        "Đổi lấy công ty khác"
+       ]
+      },
+      "right": {
+       "title": "Khi rẻ",
+       "items": [
+        "Mua nó về"
+       ]
+      }
+     },
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Không gắn bó với hành động",
+      "cue": "ông không",
+      "line": "Ở giá này, chọn gì?",
+      "line_cue": "ở giá"
+     }
+    ]
+   },
+   "sources": [
+    "thorndike2012"
+   ]
+  },
+  {
+   "id": "b11",
+   "act": "principle",
+   "narration": "Bài học thứ ba: đo trên mỗi cổ phần. Công ty to hơn chưa chắc làm bạn giàu hơn. Thứ Singleton theo dõi là giá trị trên mỗi cổ phần, tức phần bạn thật sự sở hữu. Teledyne ít cổ phiếu đi nhiều, nhưng mỗi cổ phiếu quý hơn.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "target",
+      "kicker": "Bài học 3",
+      "line": "Đo trên mỗi cổ phần.",
+      "line_cue": "đo trên"
+     },
+     {
+      "type": "swap",
+      "kicker": "Thước đo của Singleton",
+      "cue": "công ty to",
+      "strike_cue": "thứ singleton",
+      "from": {
+       "label": "Công ty to hơn",
+       "icon": "factory"
+      },
+      "to": {
+       "label": "Mỗi phần quý hơn",
+       "icon": "pie",
+       "cue": "giá trị trên"
+      },
+      "line": "Ít cổ phiếu, mỗi phần quý hơn.",
+      "line_cue": "teledyne ít"
+     }
+    ]
+   },
+   "sources": [
+    "thorndike2012"
+   ]
+  },
+  {
+   "id": "b12",
+   "act": "complication",
+   "narration": "Nhưng theo mình, nên đọc sách này cho tỉnh táo. Tám CEO được chọn sau khi họ đã thắng; những người làm giống vậy mà thua thì không có mặt trong sách. Và mua lại cổ phiếu không tự động là tốt: mua lúc giá đắt là đốt tiền của cổ đông. Singleton thắng vì ông mua khi rẻ, không phải chỉ vì ông mua.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "binoculars",
+      "kicker": "Đọc cho tỉnh táo",
+      "line": "Chọn sau khi đã thắng.",
+      "line_cue": "tám"
+     },
+     {
+      "type": "icon",
+      "icon": "people",
+      "kicker": "Người làm giống mà thua",
+      "cue": "những người",
+      "line": "Không có trong sách.",
+      "line_cue": "không có"
+     },
+     {
+      "type": "swap",
+      "kicker": "Mua lại cổ phiếu",
+      "cue": "và mua",
+      "strike_cue": "mua lúc",
+      "from": {
+       "label": "Cứ mua là tốt",
+       "icon": "pie"
+      },
+      "to": {
+       "label": "Chỉ tốt khi rẻ",
+       "icon": "scale",
+       "cue": "singleton thắng"
+      }
+     }
+    ]
+   },
+   "sources": [
+    "thorndike2012"
+   ]
+  },
+  {
+   "id": "b13",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Bạn vừa nhận một khoản thưởng. Bạn bè rủ mua một món đang hot, ai cũng đang mua. Theo bài học từ Singleton, câu hỏi nào nên hỏi trước?",
+   "visual": {
+    "type": "question",
+    "question": "Có khoản thưởng, bạn bè rủ mua món đang hot. Hỏi gì trước?",
+    "choices": [
+     "Ai cũng mua, sao mình không?",
+     "Ở giá này, chỗ nào đáng nhất?",
+     "Mua gì cho to, cho nhanh?"
+    ],
+    "answer": "B — giá quyết định lựa chọn.",
+    "think_seconds": 5
+   }
+  },
+  {
+   "id": "b14",
+   "act": "recap",
+   "narration": "Vậy là ba bài học từ The Outsiders. Phân bổ vốn là việc thật. Giá quyết định lựa chọn. Và đo trên mỗi cổ phần.",
+   "visual": {
+    "type": "list",
+    "title": "Ba bài học",
+    "check": true,
+    "items": [
+     {
+      "text": "Phân bổ vốn là việc thật",
+      "cue": "phân"
+     },
+     {
+      "text": "Giá quyết định lựa chọn",
+      "cue": "giá"
+     },
+     {
+      "text": "Đo trên mỗi cổ phần",
+      "cue": "và đo"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b15",
+   "act": "close",
+   "narration": "Singleton mua khoảng một trăm ba mươi công ty, rồi mua lại chính mình. Nghe như ngược nhau. Nhưng cả hai lần, ông chỉ hỏi một câu. Câu ấy giờ là của bạn: ở giá hôm nay, đồng tiền tiếp theo của mình nên đi đâu?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "store",
+      "kicker": "~130 công ty",
+      "line": "Rồi mua lại chính mình.",
+      "line_cue": "rồi mua"
+     },
+     {
+      "type": "icon",
+      "icon": "key",
+      "kicker": "Hai việc ngược nhau?",
+      "cue": "nghe như",
+      "line": "Cùng một câu hỏi.",
+      "line_cue": "ông chỉ"
+     },
+     {
+      "type": "icon",
+      "icon": "compass",
+      "kicker": "Câu hỏi của bạn",
+      "cue": "câu ấy",
+      "line": "Đồng tiền tiếp theo đi đâu?",
+      "line_cue": "ở giá"
+     }
+    ]
+   },
+   "sources": [
+    "thorndike2012",
+    "teledyne_hist"
+   ]
+  },
+  {
+   "id": "b16",
+   "act": "close",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
+   "visual": {
+    "type": "end",
+    "kicker": "Review sách · Tập 29",
+    "title": "Tám CEO Đi Ngược Đám Đông",
+    "ask": "Bạn muốn clip tiếp theo về cuốn sách nào?",
+    "ask_hint": "Một cuốn sách · một CEO · một chủ đề",
+    "ask_cue": "còn bạn",
+    "sources_line": "Nguồn: Thorndike, The Outsiders (2012) · Thorndike, JACF (2014) · Fortune (2012) · Company Histories: Teledyne",
+    "disclaimer": "Nội dung giáo dục, tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư.",
+    "sources_cue": "còn bạn"
+   }
+  }
+ ],
+ "pronounce": {}
+}
