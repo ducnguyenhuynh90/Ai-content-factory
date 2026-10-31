@@ -1,0 +1,816 @@
+{
+ "meta": {
+  "series": "Review sách · Tập 31",
+  "title": "Chống Lại Thần Linh: Câu Chuyện Về Rủi Ro",
+  "subtitle": "Against the Gods: The Remarkable Story of Risk — Peter L. Bernstein (1996)",
+  "topic": "investing",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt mới bắt đầu đầu tư, coi rủi ro là xui xẻo hoặc tin rằng có con số là hết rủi ro",
+  "aspect": "4:3",
+  "target_minutes": [
+   3,
+   5
+  ],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
+  "learning_goals": [
+   "Kể lại bài toán chia tiền cược: Pacioli 1494 chia theo ván đã thắng; Pascal và Fermat 1654 chia theo những gì còn có thể xảy ra (ván 2–1, mỗi người đặt 32: 48 và 16)",
+   "Dùng ba ý: nhìn tới, đừng nhìn lại; rủi ro tùy người gánh (Bernoulli 1738); con số là công cụ, không phải thần",
+   "Biết giới hạn: câu chuyện Pascal–Fermat gọn hơn lịch sử (Cardano đi trước), và rủi ro đo được khác với bất định (Knight, Keynes 1921)"
+  ],
+  "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư.",
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người dẫn chương trình sách lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively.",
+  "title_note": "Chưa tìm thấy bản tiếng Việt đã xuất bản; tựa Việt là tạm dịch và được nói rõ trong video.",
+  "brief": {
+   "target_viewer": "Người Việt 20–40 tuổi mới đầu tư, nghĩ rủi ro là 'hên xui' hoặc tin một con số (xác suất, mô hình) là đủ an toàn; thích lịch sử và câu chuyện (giả định của người viết, chủ kênh xác nhận lại)",
+   "format": "Phân tích sách (book analysis), 4–5 phút, 4:3, minh họa icon vẽ tay, một giọng đọc",
+   "central_question": "Một ván cược bỏ dở năm 1654 đã thay đổi cách con người nghĩ về tương lai ra sao, và mình dùng được gì từ đó?",
+   "transformation": "Trước khi xem, họ nghĩ rủi ro là số phận không đo được, hoặc có con số là hết rủi ro. Sau khi xem, họ kể lại được bài toán chia tiền cược (Pacioli 1494; Pascal và Fermat 1654; 48 và 16), dùng được ba ý (nhìn tới, đừng nhìn lại; rủi ro tùy người gánh; con số là công cụ, không phải thần) và biết giới hạn: xúc xắc có luật rõ, thị trường thì không",
+   "discovery_goal": "Tìm kiếm (\"Against the Gods\", \"Peter Bernstein\", \"lịch sử rủi ro\", \"Pascal Fermat\", \"bài toán chia tiền cược\", \"quản trị rủi ro\") và đề xuất từ video sách đầu tư; khán giả tập 6 (Thinking in Bets), tập 8 (Fooled by Randomness), tập 9 (The Most Important Thing)",
+   "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn clip tiếp theo về cuốn sách nào?\" (comment answering the end-card question)",
+   "share_recipient": "Một người bạn hay nói 'hên xui thôi' hoặc 'mô hình nói an toàn mà': câu hỏi 'còn những ngả nào có thể xảy ra, và mình gánh được ngả xấu nhất không?' giúp hai người nói chuyện mà không chê nhau",
+   "evidence": "Bernstein 1996 (luận điểm: làm chủ rủi ro là ranh giới giữa thời hiện đại và quá khứ; 'risicare'; con số chỉ là công cụ); thư Pascal gửi Fermat 29/7/1654 (32 pistole mỗi người, ván ba, 2–1: 48 và 16); Problem of points (Pacioli 1494, de Méré); Bernoulli 1738, bản dịch Econometrica 1954 (vé 20.000 ducat, bán 9.000); Boston Fed Regional Review 1997 (tóm tắt sách, Markowitz 1952); Graunt 1662; Lloyd's khoảng 1688; Knight và Keynes 1921; Cardano; cáo phó Bernstein 2009 (1919–2009, biên tập viên sáng lập Journal of Portfolio Management)",
+   "constraints": "4–5 phút, 4:3, icon vẽ, không khuôn mặt người thật (Pascal, Fermat, Bernstein là huy hiệu chữ cái), một giọng đọc OmniVoice seed 99 speed 0.88, tên tiếng Anh/Pháp giữ nguyên, số đọc bằng chữ, không khuyến nghị đầu tư, giữ lời miễn trừ; luận điểm 'chống lại thần linh' nói rõ là của Bernstein; phép chia kiểu Pacioli cho ván 2–1 ghi rõ là minh họa"
+  },
+  "youtube": {
+   "title": "Ván cược bỏ dở năm 1654 và cách con người đo tương lai",
+   "thumbnail_text": "Một ván cược bỏ dở. Tương lai rời tay thần linh.",
+   "description": "Năm 1654, Blaise Pascal viết thư cho Pierre de Fermat về một câu đố cũ: một ván cược bị dừng giữa chừng thì chia tiền thế nào cho công bằng? Theo Peter L. Bernstein trong Against the Gods: The Remarkable Story of Risk (1996), lời giải của họ đánh dấu lúc con người bắt đầu tính tương lai bằng số, thay vì để mặc cho thần linh. Video đi qua câu đố của Luca Pacioli (1494), cách Pascal chia 64 đồng pistole thành 48 và 16, ba bài học (nhìn tới, đừng nhìn lại; rủi ro tùy người gánh; con số là công cụ, không phải thần), giới hạn của câu chuyện, và một bài tập nhỏ.\n\nNội dung giáo dục, tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư. Chưa tìm thấy bản tiếng Việt đã xuất bản: tựa \"Chống Lại Thần Linh\" là tạm dịch. Phép chia theo ván đã thắng cho ván 2–1 (khoảng 43 và 21) là minh họa của chúng tôi theo quy tắc Pacioli, không phải con số trong sách. \"Ranh giới giữa thời hiện đại và quá khứ\" là luận điểm của Bernstein. Các câu trích là lược dịch.\n\nChương:\nMột ván cược bỏ dở, hai lá thư\nĐiều nhiều người nghĩ về rủi ro\nPeter Bernstein và Against the Gods\n1494: câu đố của Pacioli\n1654: Pascal viết cho Fermat\nChia 64 đồng thế nào?\nNhìn tới ván sau: 48 và 16\nTừ xúc xắc đến bảo hiểm\nBài học 1: nhìn tới, đừng nhìn lại\nBài học 2: rủi ro tùy người gánh\nBài học 3: con số là công cụ, không phải thần\nGiới hạn: Cardano, Knight và Keynes\nThử một chút\nBa bài học\n\nNguồn:\n- Peter L. Bernstein, Against the Gods: The Remarkable Story of Risk, John Wiley & Sons, 1996: https://www.wiley.com/en-us/Against+the+Gods%3A+The+Remarkable+Story+of+Risk-p-9780471295631\n- Fermat and Pascal on Probability (bản dịch thư 1654), University of York: https://www.york.ac.uk/depts/maths/histstat/pascal.pdf\n- Correspondence on the Problem of Points (R. J. Pulskamp): https://probabilityandfinance.com/pulskamp/Pascal/Sources/pasfer.pdf\n- Wikipedia, Problem of points: https://en.wikipedia.org/wiki/Problem_of_points\n- Daniel Bernoulli (1738), Exposition of a New Theory on the Measurement of Risk, Econometrica 22 (1954): https://cw.fel.cvut.cz/b191/_media/courses/xp36vpd/bernoulli-theorymeasurementofrisk.pdf\n- Federal Reserve Bank of Boston, Book Review: Against the Gods (1997): https://www.bostonfed.org/publications/regional-review/1997/spring/book-review-against-the-gods.aspx\n- Jason Zweig, Peter L. Bernstein, 1919–2009: https://jasonzweig.com/?p=6672\n- Lloyd's, lịch sử: https://www.lloyds.com/about-lloyds/history\n\nBạn muốn clip tiếp theo về cuốn sách nào? Để lại bình luận nhé.",
+   "tags": [
+    "Against the Gods",
+    "Peter Bernstein",
+    "lịch sử rủi ro",
+    "quản trị rủi ro",
+    "Pascal Fermat",
+    "bài toán chia tiền cược",
+    "xác suất",
+    "Daniel Bernoulli",
+    "review sách",
+    "tóm tắt sách",
+    "sách đầu tư",
+    "tư duy đầu tư",
+    "đầu tư cho người mới"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "bernstein1996",
+   "cite": "Peter L. Bernstein, Against the Gods: The Remarkable Story of Risk, John Wiley & Sons, 1996 (thesis: the mastery of risk, 'the notion that the future is more than a whim of the gods', is the revolutionary idea that marks the boundary between modern times and the past; 'risk' from the early Italian risicare, 'to dare'; 'numbers are only tools... they may indeed become fetishes'; chapters on Pacioli, Cardano, Pascal and Fermat, Graunt, Bernoulli, Markowitz, Knight and Keynes)",
+   "url": "https://www.wiley.com/en-us/Against+the+Gods%3A+The+Remarkable+Story+of+Risk-p-9780471295631"
+  },
+  {
+   "id": "pascal1654",
+   "cite": "Pascal to Fermat, letter of Wednesday 29 July 1654, in 'Fermat and Pascal on Probability' (tr. from Oeuvres de Fermat; D. E. Smith, A Source Book in Mathematics, 1929): two players, a game of three points, each has staked 32 pistoles; at two games to one the leader is certain of 32 and the other 32 is shared: 'he will then have 48 pistoles and the other 16'; Fermat's replies use the enumeration of possible outcomes",
+   "url": "https://www.york.ac.uk/depts/maths/histstat/pascal.pdf"
+  },
+  {
+   "id": "pulskamp",
+   "cite": "R. J. Pulskamp (tr.), Correspondence on the Problem of Points, Blaise Pascal and Pierre Fermat (summer 1654 letters; second independent translation of the 48/16 division)",
+   "url": "https://probabilityandfinance.com/pulskamp/Pascal/Sources/pasfer.pdf"
+  },
+  {
+   "id": "points_wiki",
+   "cite": "Wikipedia, Problem of points (Luca Pacioli, Summa de arithmetica, 1494, divides in proportion to rounds won; Tartaglia objects; around 1654 the Chevalier de Méré posed the problem to Pascal, who discussed it with Fermat)",
+   "url": "https://en.wikipedia.org/wiki/Problem_of_points"
+  },
+  {
+   "id": "bernoulli1738",
+   "cite": "Daniel Bernoulli, 'Specimen theoriae novae de mensura sortis' (1738), tr. 'Exposition of a New Theory on the Measurement of Risk', Econometrica 22 (1954), 23-36 (a very poor fellow with a lottery ticket worth nothing or 20,000 ducats with equal probability would not be ill-advised to sell it for 9,000; a rich man would be ill-advised to refuse to buy it at that price)",
+   "url": "https://cw.fel.cvut.cz/b191/_media/courses/xp36vpd/bernoulli-theorymeasurementofrisk.pdf"
+  },
+  {
+   "id": "bostonfed1997",
+   "cite": "Federal Reserve Bank of Boston, Regional Review (Spring 1997), Book Review: Against the Gods (summary of the book's history from early probability to Markowitz's 1952 portfolio theory and behavioural finance)",
+   "url": "https://www.bostonfed.org/publications/regional-review/1997/spring/book-review-against-the-gods.aspx"
+  },
+  {
+   "id": "bernstein_obit",
+   "cite": "Jason Zweig, 'Peter L. Bernstein, 1919-2009' (economist and money manager; founding editor of The Journal of Portfolio Management; died 5 June 2009 aged 90); New York Times obituary, 8 June 2009, 'Peter L. Bernstein, Explainer of Risks of Stocks, Dies at 90'",
+   "url": "https://jasonzweig.com/?p=6672"
+  },
+  {
+   "id": "graunt_lloyds",
+   "cite": "John Graunt, Natural and Political Observations ... upon the Bills of Mortality (London, 1662), the first life tables; Lloyd's of London began in Edward Lloyd's coffee house, around 1688, where ship owners and underwriters met; both covered by Bernstein",
+   "url": "https://www.lloyds.com/about-lloyds/history"
+  },
+  {
+   "id": "markowitz1952",
+   "cite": "Harry Markowitz, 'Portfolio Selection', The Journal of Finance 7(1), March 1952, 77-91 (diversification as a trade-off between expected return and variance)",
+   "url": "https://doi.org/10.2307/2975974"
+  },
+  {
+   "id": "knight_keynes",
+   "cite": "Frank H. Knight, Risk, Uncertainty and Profit (1921): measurable risk vs uncertainty 'radically distinct'; John Maynard Keynes, A Treatise on Probability (1921) and 'We simply do not know' (QJE, 1937); Bernstein discusses both",
+   "url": "https://papers.ssrn.com/abstract=3853917"
+  },
+  {
+   "id": "cardano",
+   "cite": "Gerolamo Cardano, Liber de ludo aleae (written c. 1564, published 1663), the first systematic treatment of the odds of dice; Bernstein devotes a chapter to him",
+   "url": "https://en.wikipedia.org/wiki/Liber_de_ludo_aleae"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Nhìn tới, đừng nhìn lại",
+   "line": "Giá trị nằm ở những gì còn có thể xảy ra, không ở tỷ số đã qua."
+  },
+  {
+   "name": "Rủi ro tùy người gánh",
+   "line": "Cùng một canh bạc, người cần tiền và người dư tiền nên chọn khác nhau."
+  },
+  {
+   "name": "Con số là công cụ, không phải thần",
+   "line": "Xác suất đo được khi luật chơi rõ; đời thật có những điều không ai gán nổi con số."
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Một ván cược bỏ dở, hai lá thư. Rồi tương lai thôi là chuyện của thần linh.",
+   "visual": {
+    "type": "statement",
+    "kicker": "Pascal · Fermat · 1654",
+    "text": "Một ván cược bỏ dở. Tương lai rời tay thần linh.",
+    "highlight": [
+     "thần linh."
+    ]
+   },
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "rồi",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "pascal1654",
+    "bernstein1996"
+   ]
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Đó là luận điểm của Peter Bernstein trong Against the Gods. Đến cuối clip, bạn sẽ thấy hai nhà toán học chia ván cược ấy thế nào, và ba bài học về rủi ro mà bạn mang theo được.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "book",
+      "kicker": "Against the Gods",
+      "line": "Luận điểm của Peter Bernstein."
+     },
+     {
+      "type": "trio",
+      "kicker": "Đến cuối clip",
+      "cue": "đến cuối",
+      "items": [
+       {
+        "icon": "letter",
+        "label": "Hai lá thư"
+       },
+       {
+        "icon": "scale",
+        "label": "Chia ván cược",
+        "cue": "chia ván"
+       },
+       {
+        "icon": "checklist",
+        "label": "Ba bài học",
+        "cue": "ba bài"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "bernstein1996"
+   ]
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Review sách · Tập 31",
+    "title": "Chống Lại Thần Linh",
+    "subtitle": "Against the Gods · Peter L. Bernstein, 1996",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ],
+   "sources": [
+    "bernstein1996"
+   ]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Nhiều người nghĩ: rủi ro là xui xẻo. Là số phận, không ai đo được. Có người lại nghĩ ngược hẳn: có con số rồi thì hết rủi ro. Bernstein kể một câu chuyện nằm giữa hai cực ấy.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Điều nhiều người nghĩ",
+      "items": [
+       {
+        "icon": "dice",
+        "label": "Rủi ro là xui xẻo"
+       },
+       {
+        "icon": "star",
+        "label": "Là số phận",
+        "cue": "là số"
+       },
+       {
+        "icon": "magnifier",
+        "label": "Không ai đo được",
+        "cue": "không ai"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "chart",
+      "kicker": "Hoặc ngược hẳn",
+      "cue": "nghĩ ngược",
+      "line": "Có con số là hết rủi ro.",
+      "line_cue": "có con"
+     },
+     {
+      "type": "icon",
+      "icon": "pendulum",
+      "kicker": "Bernstein kể",
+      "cue": "bernstein kể",
+      "line": "Câu chuyện giữa hai cực.",
+      "motion": "swing"
+     }
+    ]
+   },
+   "sources": [
+    "bernstein1996"
+   ]
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "Peter Bernstein là nhà kinh tế và người quản lý tiền, biên tập viên sáng lập của Journal of Portfolio Management. Against the Gods ra năm một nghìn chín trăm chín mươi sáu, kể lịch sử của rủi ro, từ xúc xắc đến phố Wall. Mình chưa tìm thấy bản tiếng Việt, nên tựa sách ở đây là tạm dịch.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Peter L. Bernstein",
+      "initials": "PB",
+      "role": "Nhà kinh tế · quản lý tiền",
+      "years": "1919–2009"
+     },
+     {
+      "type": "book",
+      "title": "Against the Gods",
+      "author": "Peter L. Bernstein",
+      "year": "1996",
+      "kicker": "Chống Lại Thần Linh (tạm dịch)",
+      "cue": "against",
+      "facts": [
+       {
+        "big": "1996",
+        "text": "John Wiley & Sons"
+       },
+       {
+        "big": "Rủi ro",
+        "text": "từ xúc xắc đến phố Wall",
+        "cue": "kể lịch"
+       },
+       {
+        "big": "VN",
+        "text": "chưa thấy bản dịch · tạm dịch",
+        "cue": "mình chưa"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "bernstein_obit",
+    "bernstein1996",
+    "bostonfed1997"
+   ]
+  },
+  {
+   "id": "b03",
+   "act": "story",
+   "narration": "Câu chuyện bắt đầu từ một câu đố cũ. Năm một nghìn bốn trăm chín mươi tư, Luca Pacioli hỏi: một ván cược bị dừng giữa chừng, tiền cược chia thế nào cho công bằng? Ông đề xuất chia theo số ván mỗi người đã thắng. Nghe hợp lý, phải không?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "dice",
+      "kicker": "1494 · Luca Pacioli",
+      "line": "Ván cược dừng giữa chừng."
+     },
+     {
+      "type": "icon",
+      "icon": "scale",
+      "kicker": "Câu đố",
+      "cue": "tiền cược",
+      "line": "Chia thế nào cho công bằng?"
+     },
+     {
+      "type": "icon",
+      "icon": "hourglass",
+      "kicker": "Pacioli đề xuất",
+      "cue": "ông đề",
+      "line": "Chia theo số ván đã thắng.",
+      "line_cue": "chia theo"
+     }
+    ]
+   },
+   "sources": [
+    "points_wiki",
+    "bernstein1996"
+   ]
+  },
+  {
+   "id": "b04",
+   "act": "story",
+   "narration": "Một trăm sáu mươi năm sau, câu đố được cho là đến tay Blaise Pascal qua một người mê cờ bạc, Chevalier de Méré. Mùa hè năm một nghìn sáu trăm năm mươi tư, Pascal viết thư bàn với Pierre de Fermat, một luật sư ở Toulouse làm toán lúc rảnh.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Blaise Pascal",
+      "initials": "BP",
+      "role": "Nhà toán học · Paris",
+      "years": "1623–1662"
+     },
+     {
+      "type": "icon",
+      "icon": "cards",
+      "kicker": "Được cho là",
+      "cue": "qua một",
+      "line": "Qua Chevalier de Méré."
+     },
+     {
+      "type": "icon",
+      "icon": "letter",
+      "kicker": "Mùa hè 1654",
+      "cue": "mùa hè",
+      "line": "Thư gửi Pierre de Fermat.",
+      "line_cue": "pierre"
+     }
+    ]
+   },
+   "sources": [
+    "points_wiki",
+    "pascal1654",
+    "bernstein1996"
+   ],
+   "certainty": "attributed"
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Bài toán thế này. Hai người, mỗi người đặt ba mươi hai đồng pistole. Ai thắng ba ván trước thì lấy cả sáu mươi tư. Tỷ số đang hai một thì phải dừng. Chia theo kiểu Pacioli, người dẫn được khoảng bốn mươi ba đồng. Pascal ra một con số khác.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Thư Pascal, 29/7/1654",
+      "items": [
+       {
+        "icon": "coins",
+        "label": "Mỗi người 32"
+       },
+       {
+        "icon": "target",
+        "label": "Thắng 3 ván: lấy 64",
+        "cue": "ai thắng"
+       },
+       {
+        "icon": "clock",
+        "label": "Dừng ở 2–1",
+        "cue": "tỷ số"
+       }
+      ]
+     },
+     {
+      "type": "compare",
+      "title": "Chia theo ván đã thắng · minh họa",
+      "cue": "chia theo",
+      "left": {
+       "title": "Người dẫn 2",
+       "items": [
+        "~43 pistole"
+       ]
+      },
+      "right": {
+       "title": "Người có 1",
+       "items": [
+        "~21 pistole"
+       ]
+      }
+     },
+     {
+      "type": "icon",
+      "icon": "bulb",
+      "kicker": "Pascal",
+      "cue": "pascal ra",
+      "line": "Một con số khác."
+     }
+    ]
+   },
+   "sources": [
+    "pascal1654",
+    "pulskamp",
+    "points_wiki"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b06",
+   "act": "story",
+   "narration": "Pascal không nhìn lại tỷ số đã qua. Ông nhìn tới ván tiếp theo, rồi hỏi: chuyện gì có thể xảy ra? Nếu người dẫn thắng, anh ta lấy cả sáu mươi tư. Nếu thua, hai đều, mỗi người lấy lại ba mươi hai. Vậy ba mươi hai là chắc chắn của anh ta. Ba mươi hai còn lại, may rủi như nhau, chia đôi. Bốn mươi tám, và mười sáu.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "swap",
+      "kicker": "Cách nhìn của Pascal",
+      "strike_cue": "ông nhìn",
+      "from": {
+       "label": "Nhìn lại tỷ số",
+       "icon": "hourglass"
+      },
+      "to": {
+       "label": "Nhìn tới ván sau",
+       "icon": "binoculars",
+       "cue": "ván tiếp"
+      }
+     },
+     {
+      "type": "icon",
+      "icon": "fork",
+      "kicker": "Ván tiếp theo",
+      "cue": "nếu người",
+      "line": "Thắng: 64 · Thua: 32",
+      "line_cue": "nếu thua"
+     },
+     {
+      "type": "compare",
+      "title": "32 chắc chắn + nửa của 32",
+      "cue": "vậy ba",
+      "left": {
+       "title": "Người dẫn 2–1",
+       "items": [
+        "48 pistole"
+       ]
+      },
+      "right": {
+       "title": "Người có 1",
+       "items": [
+        "16 pistole"
+       ]
+      }
+     }
+    ]
+   },
+   "sources": [
+    "pascal1654",
+    "pulskamp"
+   ]
+  },
+  {
+   "id": "b07",
+   "act": "story",
+   "narration": "Fermat giải cùng bài theo cách khác: liệt kê mọi kết cục có thể. Hai cách, một đáp số. Theo Bernstein, đây là lúc con người bắt đầu tính tương lai bằng số, thay vì hỏi thần linh. Ý ấy lớn dần thành bảng tuổi thọ, bảo hiểm tàu biển, và lý thuyết danh mục đầu tư.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "puzzle",
+      "kicker": "Fermat trả lời",
+      "line": "Liệt kê mọi kết cục.",
+      "line_cue": "liệt kê"
+     },
+     {
+      "type": "icon",
+      "icon": "compass",
+      "kicker": "Theo Bernstein",
+      "cue": "theo bernstein",
+      "line": "Tính tương lai bằng số.",
+      "line_cue": "tính tương"
+     },
+     {
+      "type": "timeline",
+      "title": "Ý ấy lớn dần",
+      "cue": "ý ấy",
+      "events": [
+       {
+        "year": "1662",
+        "text": "Graunt: bảng tử vong London"
+       },
+       {
+        "year": "~1688",
+        "text": "Quán Lloyd's: bảo hiểm tàu",
+        "cue": "bảo hiểm"
+       },
+       {
+        "year": "1952",
+        "text": "Markowitz: danh mục",
+        "cue": "lý thuyết"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "pascal1654",
+    "bernstein1996",
+    "graunt_lloyds",
+    "markowitz1952",
+    "bostonfed1997"
+   ]
+  },
+  {
+   "id": "b08",
+   "act": "principle",
+   "narration": "Bài học thứ nhất: nhìn tới, đừng nhìn lại. Tỷ số đã qua chỉ cho bạn biết mình đang đứng ở đâu. Giá trị nằm ở những gì còn có thể xảy ra. Trước một quyết định, hãy liệt kê các ngả đường phía trước, và hỏi mỗi ngả nặng bao nhiêu.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "binoculars",
+      "kicker": "Bài học 1",
+      "line": "Nhìn tới, đừng nhìn lại."
+     },
+     {
+      "type": "icon",
+      "icon": "hourglass",
+      "kicker": "Tỷ số đã qua",
+      "cue": "tỷ số",
+      "line": "Chỉ là chỗ mình đang đứng.",
+      "line_cue": "chỉ cho"
+     },
+     {
+      "type": "icon",
+      "icon": "fork",
+      "kicker": "Liệt kê các ngả đường",
+      "cue": "trước một",
+      "line": "Mỗi ngả nặng bao nhiêu?",
+      "line_cue": "và hỏi"
+     }
+    ]
+   },
+   "sources": [
+    "pascal1654",
+    "bernstein1996"
+   ]
+  },
+  {
+   "id": "b09",
+   "act": "principle",
+   "narration": "Bài học thứ hai: rủi ro tùy người gánh. Năm một nghìn bảy trăm ba mươi tám, Daniel Bernoulli hỏi: một người rất nghèo cầm tấm vé, nửa phần trúng hai mươi nghìn đồng ducat, nửa phần trắng tay. Bán vé lấy chín nghìn có dại không? Ông cho là không. Còn người giàu thì mua lại tấm vé với giá ấy là hợp lý.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "scale",
+      "kicker": "Bài học 2",
+      "line": "Rủi ro tùy người gánh."
+     },
+     {
+      "type": "icon",
+      "icon": "dice",
+      "kicker": "1738 · Daniel Bernoulli",
+      "cue": "năm một",
+      "line": "50%: 20.000 ducat · 50%: 0",
+      "line_cue": "nửa phần"
+     },
+     {
+      "type": "compare",
+      "title": "Vé bán giá 9.000 ducat",
+      "cue": "bán vé",
+      "left": {
+       "title": "Người rất nghèo",
+       "items": [
+        "Bán: không dại"
+       ]
+      },
+      "right": {
+       "title": "Người giàu",
+       "items": [
+        "Mua: hợp lý"
+       ]
+      }
+     }
+    ]
+   },
+   "sources": [
+    "bernoulli1738",
+    "bernstein1996"
+   ]
+  },
+  {
+   "id": "b10",
+   "act": "principle",
+   "narration": "Bài học thứ ba: con số là công cụ, không phải thần. Bernstein viết, đại ý: con số chỉ là công cụ, chúng không có linh hồn, và có thể thành thứ được tôn thờ. Pascal tính được vì xúc xắc có luật chơi rõ ràng. Đời thật thì không phải lúc nào cũng vậy.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "hammer",
+      "kicker": "Bài học 3",
+      "line": "Con số là công cụ, không phải thần."
+     },
+     {
+      "type": "quote",
+      "cue": "con số chỉ",
+      "text": "Con số chỉ là công cụ. Chúng không có linh hồn, và có thể thành thứ được tôn thờ.",
+      "by": "Peter L. Bernstein, Against the Gods (lược dịch)"
+     },
+     {
+      "type": "icon",
+      "icon": "dice",
+      "kicker": "Xúc xắc: luật chơi rõ",
+      "cue": "pascal tính",
+      "line": "Đời thật: không phải lúc nào cũng vậy.",
+      "line_cue": "đời thật"
+     }
+    ]
+   },
+   "sources": [
+    "bernstein1996"
+   ]
+  },
+  {
+   "id": "b11",
+   "act": "complication",
+   "narration": "Nhưng đọc công bằng thì câu chuyện gọn hơn lịch sử thật. Cardano đã tính xác suất xúc xắc từ thế kỷ mười sáu, và chính Bernstein kể về ông. Sách cũng nhắc Frank Knight và John Maynard Keynes: có những điều bất định mà không ai gán nổi xác suất. Theo mình, thị trường giống đời thật hơn là giống xúc xắc.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Đọc công bằng",
+      "text": "Pascal và Fermat là người đầu tiên.",
+      "strike": "là người đầu tiên.",
+      "replace": "Cardano đi trước",
+      "strike_cue": "cardano"
+     },
+     {
+      "type": "trio",
+      "kicker": "Knight · Keynes · 1921",
+      "cue": "sách cũng",
+      "items": [
+       {
+        "icon": "dice",
+        "label": "Rủi ro: biết xác suất"
+       },
+       {
+        "icon": "wave",
+        "label": "Bất định: không ai biết",
+        "cue": "có những"
+       },
+       {
+        "icon": "chart",
+        "label": "Thị trường: gần bất định",
+        "cue": "theo mình"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "cardano",
+    "knight_keynes",
+    "bernstein1996"
+   ]
+  },
+  {
+   "id": "b12",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Bạn cầm một tấm vé: nửa phần trúng hai trăm triệu, nửa phần không được gì. Có người trả ngay chín mươi triệu. Bạn đang cần tiền gấp để trả nợ. Theo Bernoulli, bán có dại không?",
+   "visual": {
+    "type": "question",
+    "question": "Vé: 50% trúng 200 triệu, 50% trắng tay. Ai đó trả 90 triệu. Bạn cần tiền gấp: bán?",
+    "choices": [
+     "Dại: trung bình vé đáng 100 triệu",
+     "Không dại: với người đang cần, 90 triệu chắc chắn đáng hơn",
+     "Đừng tính, hỏi thầy bói"
+    ],
+    "answer": "B — rủi ro tùy người gánh.",
+    "think_seconds": 5
+   }
+  },
+  {
+   "id": "b13",
+   "act": "recap",
+   "narration": "Vậy là ba bài học từ Against the Gods. Nhìn tới, đừng nhìn lại. Rủi ro tùy người gánh. Và con số là công cụ, không phải thần.",
+   "visual": {
+    "type": "list",
+    "title": "Ba bài học",
+    "check": true,
+    "items": [
+     {
+      "text": "Nhìn tới, đừng nhìn lại",
+      "cue": "nhìn tới"
+     },
+     {
+      "text": "Rủi ro tùy người gánh",
+      "cue": "rủi ro"
+     },
+     {
+      "text": "Con số là công cụ, không phải thần",
+      "cue": "và con"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b14",
+   "act": "close",
+   "narration": "Pascal và Fermat không đoán ai sẽ thắng. Họ đếm những gì còn có thể xảy ra, rồi chia cho công bằng. Chống lại thần linh, theo nghĩa của Bernstein, không phải là biết trước tương lai. Mà là thôi để mặc nó cho số phận.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "dice",
+      "kicker": "1654",
+      "line": "Không đoán ai sẽ thắng."
+     },
+     {
+      "type": "icon",
+      "icon": "scale",
+      "kicker": "Họ đếm",
+      "cue": "họ đếm",
+      "line": "Rồi chia cho công bằng."
+     },
+     {
+      "type": "swap",
+      "kicker": "Chống lại thần linh",
+      "cue": "chống lại",
+      "strike_cue": "mà là",
+      "from": {
+       "label": "Biết trước tương lai",
+       "icon": "eye"
+      },
+      "to": {
+       "label": "Thôi phó mặc số phận",
+       "icon": "compass",
+       "cue": "thôi để"
+      }
+     }
+    ]
+   },
+   "sources": [
+    "pascal1654",
+    "bernstein1996"
+   ]
+  },
+  {
+   "id": "b15",
+   "act": "close",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
+   "visual": {
+    "type": "end",
+    "kicker": "Review sách · Tập 31",
+    "title": "Chống Lại Thần Linh",
+    "ask": "Bạn muốn clip tiếp theo về cuốn sách nào?",
+    "ask_hint": "Một cuốn sách · một nhà đầu tư · một chủ đề",
+    "ask_cue": "còn bạn",
+    "sources_line": "Nguồn: Bernstein, Against the Gods (1996) · thư Pascal–Fermat (1654) · Bernoulli (1738) · xem mô tả",
+    "disclaimer": "Nội dung giáo dục, tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư.",
+    "sources_cue": "còn bạn"
+   }
+  }
+ ],
+ "pronounce": {}
+}

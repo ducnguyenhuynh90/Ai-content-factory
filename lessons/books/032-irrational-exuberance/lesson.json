@@ -1,0 +1,868 @@
+{
+ "meta": {
+  "series": "Review sách · Tập 32",
+  "title": "Sự Phấn Khích Phi Lý",
+  "subtitle": "Irrational Exuberance — Robert J. Shiller (2000; 2005; 2015)",
+  "topic": "investing",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt mới đầu tư, từng nghe 'bong bóng' và 'chỉ số CAPE' nhưng tưởng chúng là tín hiệu canh đỉnh",
+  "aspect": "4:3",
+  "target_minutes": [
+   3,
+   5
+  ],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
+  "learning_goals": [
+   "Kể lại chuỗi sự kiện: Shiller và Campbell trình bày ở Fed 3/12/1996; Greenspan nói 'irrational exuberance' 5/12/1996; thị trường còn tăng hơn ba năm; sách ra tháng 3/2000, cùng tháng Nasdaq lên đỉnh, rồi Nasdaq mất khoảng 78% đến 10/2002",
+   "Dùng ba ý của Shiller: giá tăng tự kể chuyện (vòng phản hồi); coi chừng chuyện thời đại mới; la bàn, không phải đồng hồ (CAPE nói về lợi nhuận dài hạn, không hẹn ngày)",
+   "Biết giới hạn: CAPE cao có thể kéo dài nhiều năm, Siegel phê bình cách tính, Fama nghi ngờ khái niệm bong bóng; không có dự báo nào trong video"
+  ],
+  "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư.",
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người dẫn chương trình sách lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively.",
+  "title_note": "Chưa tìm thấy bản tiếng Việt đã xuất bản; tựa Việt là tạm dịch và được nói rõ trong video.",
+  "brief": {
+   "target_viewer": "Người Việt 20–40 tuổi mới đầu tư, thấy báo nói 'định giá cao như năm 2000' và không biết nên hiểu thế nào; nghĩ bong bóng chỉ dành cho người khờ hoặc ai thấy bong bóng thì biết ngày vỡ (giả định của người viết, chủ kênh xác nhận lại)",
+   "format": "Phân tích sách (book analysis), 4–5 phút, 4:3, minh họa icon vẽ tay, một biểu đồ dữ liệu thật, một giọng đọc",
+   "central_question": "Cuốn sách về bong bóng ra đúng tháng Nasdaq lên đỉnh, nhưng lời cảnh báo cùng tên đã có từ bốn năm trước: vì sao 'đúng' mà vẫn không hẹn được ngày?",
+   "transformation": "Trước khi xem, họ nghĩ CAPE cao nghĩa là sắp sập, hoặc giá cao hẳn có lý do. Sau khi xem, họ kể lại được chuỗi 1996–2002 (Fed 3/12, Greenspan 5/12, S&P từ ~744 lên 1.527, sách 3/2000, Nasdaq −78%), dùng được ba ý (giá tăng tự kể chuyện; coi chừng chuyện thời đại mới; la bàn, không phải đồng hồ) và biết giới hạn: CAPE không phải tín hiệu canh thời điểm",
+   "discovery_goal": "Tìm kiếm (\"Irrational Exuberance\", \"Robert Shiller\", \"CAPE\", \"chỉ số Shiller P/E\", \"bong bóng dot-com\", \"Greenspan phấn khích phi lý\") và đề xuất từ video sách đầu tư; khán giả tập 19 (A Random Walk), tập 9 (The Most Important Thing), tập 31 (Against the Gods)",
+   "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn clip tiếp theo về cuốn sách nào?\" (comment answering the end-card question)",
+   "share_recipient": "Một người bạn vừa đọc tin 'định giá cao kỷ lục' và định bán hết, hoặc đang 'lần này khác' mua thêm: câu 'la bàn, không phải đồng hồ' giúp hai người nói chuyện mà không ai phải đoán đỉnh",
+   "evidence": "Shiller 2000/2005/2015 (Princeton University Press; vòng phản hồi, 'Ponzi tự nhiên', tư duy thời đại mới); Greenspan 5/12/1996 (federalreserve.gov); CFO.com và Campbell–Shiller NBER w8221 (trình bày ở Fed 3/12/1996); tech-insider 6/12/1996 (Tokyo −3,2%); Wikipedia sách (tháng 3/2000) và PBS Frontline (trùng đỉnh Nasdaq); Reuters/Fox Business (Nasdaq 5.048,62 ngày 10/3/2000, 1.114,11 ngày 9/10/2002, −78%); Calculated Risk (S&P ~744 ngày 5/12/1996); AP (S&P 1.527,46 ngày 24/3/2000); dữ liệu CAPE của Shiller qua thetrading.tools/chartrow (~44,2 tháng 12/1999, ~32,6 năm 1929); The Wealth Advisor (CAPE ~28 tháng 12/1996, một nguồn); Campbell & Shiller 1998 JPM; Siegel 2016 FAJ; KVA 2013 (Nobel chia ba)",
+   "constraints": "4–5 phút, 4:3, icon vẽ, không khuôn mặt người thật, một giọng đọc OmniVoice seed 99 speed 0.88, tên tiếng Anh giữ nguyên, số đọc bằng chữ, không dự báo thị trường, không nói CAPE hiện nay là bao nhiêu, nói rõ CAPE không phải tín hiệu canh thời điểm, chỉ số là giá danh nghĩa chưa tính cổ tức, giữ lời miễn trừ"
+  },
+  "youtube": {
+   "title": "Sách về bong bóng ra đúng tháng đỉnh Nasdaq | Shiller",
+   "thumbnail_text": "Sách ra tháng 3/2000. Cùng tháng, Nasdaq lên đỉnh.",
+   "description": "Ngày 5/12/1996, Alan Greenspan hỏi: làm sao biết khi nào \"sự phấn khích phi lý\" đã đẩy giá tài sản lên quá mức? Hai ngày trước đó, Robert Shiller và John Campbell đã trình bày trước Fed rằng giá cổ phiếu cao so với lợi nhuận. Vậy mà thị trường Mỹ còn tăng thêm hơn ba năm. Tháng 3/2000, sách Irrational Exuberance của Shiller ra mắt; cùng tháng, Nasdaq lên đỉnh, rồi mất khoảng 78% đến tháng 10/2002. Video đi qua câu chuyện, chỉ số CAPE, ba bài học (giá tăng tự kể chuyện; coi chừng chuyện thời đại mới; la bàn, không phải đồng hồ), giới hạn của CAPE, và một bài tập nhỏ.\n\nNội dung giáo dục, tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư. Video không dự báo thị trường. CAPE không phải tín hiệu canh thời điểm mua bán: nó có thể ở mức cao rất nhiều năm. Các chỉ số Nasdaq và S&P 500 trong video là điểm đóng cửa, danh nghĩa, chưa tính cổ tức; đó là lịch sử, không phải lời hứa. Các mức CAPE (~28, ~32,6, ~44,2) là xấp xỉ theo dữ liệu của Shiller qua các nguồn thứ cấp. Chưa tìm thấy bản tiếng Việt đã xuất bản: tựa \"Sự Phấn Khích Phi Lý\" là tạm dịch. Các câu trích là lược dịch.\n\nChương:\nSách ra đúng tháng Nasdaq lên đỉnh\nĐiều nhiều người nghĩ về bong bóng\nRobert Shiller và cuốn sách\n3/12/1996: Shiller ở Fed\n5/12/1996: Greenspan đặt câu hỏi\nThị trường vẫn tăng hơn ba năm\nCAPE là gì?\nNasdaq 1996–2002\nBài học 1: giá tăng tự kể chuyện\nBài học 2: coi chừng chuyện thời đại mới\nBài học 3: la bàn, không phải đồng hồ\nĐúng mà quá sớm\nNhững người không đồng ý\nThử một chút\nBa bài học\n\nNguồn:\n- Robert J. Shiller, Irrational Exuberance, Princeton University Press (2000; 2nd ed. 2005; 3rd ed. 2015): https://press.princeton.edu/books/paperback/9780691173122/irrational-exuberance\n- Alan Greenspan, The Challenge of Central Banking in a Democratic Society (5/12/1996): https://www.federalreserve.gov/boarddocs/speeches/1996/19961205.htm\n- Campbell & Shiller, Valuation Ratios and the Long-Run Stock Market Outlook: An Update, NBER w8221: https://www.nber.org/papers/w8221.pdf\n- CFO.com, Start Making Sense: https://www.cfo.com/news/start-making-sense/684208/\n- PBS Frontline, Robert Shiller (trích lời tựa): https://www.pbs.org/wgbh/pages/frontline/shows/dotcon/historical/shiller.html\n- Wikipedia, Irrational Exuberance (book): https://en.wikipedia.org/wiki/Irrational_Exuberance_(book)\n- Wikipedia, Closing milestones of the Nasdaq Composite: https://en.wikipedia.org/wiki/Closing_milestones_of_the_Nasdaq_Composite\n- Fox Business, Milestones for the Nasdaq composite index: https://www.foxbusiness.com/markets/milestones-for-the-nasdaq-composite-index\n- Calculated Risk, Party like it's 1996 (2009): https://www.calculatedriskblog.com/2009/02/party-like-its-1996.html\n- Royal Swedish Academy of Sciences, The Prize in Economic Sciences 2013: https://www.kva.se/en/news/ekonomipriset-2013-2/\n- Hedge Fund Alpha, Jeremy Siegel on problems with CAPE: https://hedgefundalpha.com/education/jeremy-siegel-academic-paper-problems-cape/\n\nBạn muốn clip tiếp theo về cuốn sách nào? Để lại bình luận nhé.",
+   "tags": [
+    "Irrational Exuberance",
+    "Robert Shiller",
+    "CAPE",
+    "Shiller P/E",
+    "bong bóng chứng khoán",
+    "bong bóng dot-com",
+    "Alan Greenspan",
+    "phấn khích phi lý",
+    "review sách",
+    "tóm tắt sách",
+    "sách đầu tư",
+    "tư duy đầu tư",
+    "đầu tư cho người mới"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "shiller2000",
+   "cite": "Robert J. Shiller, Irrational Exuberance, Princeton University Press, March 2000; 2nd ed. 2005 (adds the housing market); 3rd ed. 2015 (adds the bond market and the 2013 Nobel lecture). Part I: twelve precipitating factors and amplification mechanisms, 'naturally occurring Ponzi processes' (feedback loops); Part II: news media and 'new era' economic thinking; the CAPE (price over ten-year average real earnings)",
+   "url": "https://press.princeton.edu/books/paperback/9780691173122/irrational-exuberance"
+  },
+  {
+   "id": "greenspan1996",
+   "cite": "Alan Greenspan, 'The Challenge of Central Banking in a Democratic Society', Francis Boyer Lecture, American Enterprise Institute, 5 December 1996 ('But how do we know when irrational exuberance has unduly escalated asset values, which then become subject to unexpected and prolonged contractions...?')",
+   "url": "https://www.federalreserve.gov/boarddocs/speeches/1996/19961205.htm"
+  },
+  {
+   "id": "fed_dec3",
+   "cite": "CFO.com, 'Start Making Sense' (on 3 December 1996 Shiller made a sobering presentation to the Board of Governors of the Federal Reserve; two days later Greenspan coined the phrase); Campbell & Shiller, 'Valuation Ratios and the Long-Run Stock Market Outlook: An Update', NBER w8221 (2001): they amplified their testimony and published it in 1998",
+   "url": "https://www.nber.org/papers/w8221.pdf"
+  },
+  {
+   "id": "cfo",
+   "cite": "CFO.com, 'Start Making Sense' (Shiller's 3 Dec 1996 presentation to the Fed Board)",
+   "url": "https://www.cfo.com/news/start-making-sense/684208/"
+  },
+  {
+   "id": "tokyo1996",
+   "cite": "Contemporary report, 6 Dec 1996, 'The Market Shaker': the Japanese stock market plunged 3.2 percent, its largest drop of the year, and Hong Kong fell almost 3 percent; Wikipedia, Irrational exuberance (Tokyo closed off about 3%)",
+   "url": "https://tech-insider.org/markets/research/1996/1206.html"
+  },
+  {
+   "id": "book_date",
+   "cite": "Wikipedia, Irrational Exuberance (book) (published March 2000 by Princeton University Press; the dot-com bubble peaked, as measured by the Nasdaq, the month of publication); PBS Frontline excerpt (publication coincided with the Nasdaq peak in March 2000)",
+   "url": "https://en.wikipedia.org/wiki/Irrational_Exuberance_(book)"
+  },
+  {
+   "id": "pbs",
+   "cite": "PBS Frontline, 'Dot Con', Robert Shiller page with preface excerpt (Greenspan's 5 Dec 1996 speech; book publication coincided with the March 2000 Nasdaq peak)",
+   "url": "https://www.pbs.org/wgbh/pages/frontline/shows/dotcon/historical/shiller.html"
+  },
+  {
+   "id": "nasdaq",
+   "cite": "Nasdaq Composite closes: year-end 1996 1,291.03; 1997 1,570.35; 1998 2,192.69; 1999 4,069.31; 2000 2,470.52; 2001 1,950.40; record close 5,048.62 on 10 Mar 2000; closing low 1,114.11 on 9 Oct 2002 (-78% close to close; Reuters gives 78.4%). Wikipedia, Closing milestones of the Nasdaq Composite; Fox Business, Milestones for the Nasdaq composite index",
+   "url": "https://en.wikipedia.org/wiki/Closing_milestones_of_the_Nasdaq_Composite"
+  },
+  {
+   "id": "foxnasdaq",
+   "cite": "Fox Business, 'Milestones for the Nasdaq composite index' (record close 5,048.62 on 10 March 2000; closed at 1,114 on 9 Oct 2002)",
+   "url": "https://www.foxbusiness.com/markets/milestones-for-the-nasdaq-composite-index"
+  },
+  {
+   "id": "sp500",
+   "cite": "S&P 500 about 744 when Greenspan spoke on 5 Dec 1996 (Calculated Risk, 'Party like it's 1996', 2009); record close 1,527.46 on 24 March 2000 (AP, May 2007; Wikipedia, Closing milestones of the S&P 500); 2002 bear-market low about 777 (Credit Writedowns: lowest since 1997). Price index, nominal, dividends excluded",
+   "url": "https://www.calculatedriskblog.com/2009/02/party-like-its-1996.html"
+  },
+  {
+   "id": "cape_data",
+   "cite": "Shiller's CAPE data (online data, Yale) as reported by thetrading.tools and chartrow.com: record about 44.2 in December 1999; about 32.6 at the 1929 peak; long-run median about 16-17. Approximate; secondary sources differ in decimals",
+   "url": "https://www.thetrading.tools/shiller-cape"
+  },
+  {
+   "id": "cape1996",
+   "cite": "The Wealth Advisor, 'Keep buying: 5 reasons stock prices are not irrationally exuberant' (in December 1996, when Greenspan gave his speech, the Shiller PE was about 28; it hit 43 in March 2000). Single source: treated as an estimate",
+   "url": "https://www.thewealthadvisor.com/article/keep-buying-5-reasons-stock-prices-are-not-irrationally-exuberant"
+  },
+  {
+   "id": "campbell_shiller1998",
+   "cite": "John Y. Campbell and Robert J. Shiller, 'Valuation Ratios and the Long-Run Stock Market Outlook', The Journal of Portfolio Management 24(2), Winter 1998, 11-26 (high valuation ratios have historically been followed by below-average returns over the following ten years; a forecast of long-run returns, not of timing)",
+   "url": "https://econpapers.repec.org/paper/cwlcwldpp/1295.htm"
+  },
+  {
+   "id": "siegel2016",
+   "cite": "Jeremy J. Siegel, 'The Shiller CAPE Ratio: A New Look', Financial Analysts Journal 72(3), 2016 (changes in accounting standards for earnings bias the CAPE upward), summarised by Hedge Fund Alpha",
+   "url": "https://hedgefundalpha.com/education/jeremy-siegel-academic-paper-problems-cape/"
+  },
+  {
+   "id": "nobel2013",
+   "cite": "Royal Swedish Academy of Sciences, The Prize in Economic Sciences 2013, to Eugene F. Fama, Lars Peter Hansen and Robert J. Shiller 'for their empirical analysis of asset prices'; NBER note: Fama is skeptical that 'bubble' is a well-defined term",
+   "url": "https://www.kva.se/en/news/ekonomipriset-2013-2/"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Giá tăng tự kể chuyện",
+   "line": "Giá lên sinh ra câu chuyện, câu chuyện kéo người mua mới, và giá lên tiếp: một vòng phản hồi."
+  },
+  {
+   "name": "Coi chừng chuyện thời đại mới",
+   "line": "Công nghệ có thể là thật; câu hỏi là giá đã trả trước cho nó bao nhiêu."
+  },
+  {
+   "name": "La bàn, không phải đồng hồ",
+   "line": "Định giá cao gợi ý lợi nhuận dài hạn thấp hơn, không cho biết ngày giá giảm."
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Sách cảnh báo bong bóng ra đúng tháng Nasdaq lên đỉnh. Rồi chỉ số mất gần tám mươi phần trăm.",
+   "visual": {
+    "type": "statement",
+    "kicker": "Irrational Exuberance · Robert Shiller",
+    "text": "Sách ra tháng 3/2000. Cùng tháng, Nasdaq lên đỉnh.",
+    "highlight": [
+     "lên đỉnh."
+    ]
+   },
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "rồi",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "book_date",
+    "nasdaq"
+   ]
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Nhưng lạ hơn: cái tên trên bìa sách đã nổi tiếng từ bốn năm trước. Và sau lời cảnh báo ấy, thị trường còn tăng thêm hơn ba năm. Đến cuối clip, bạn sẽ hiểu vì sao, và có ba bài học mang theo được.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "hourglass",
+      "kicker": "Lạ hơn",
+      "line": "Cái tên đã có từ 1996."
+     },
+     {
+      "type": "icon",
+      "icon": "rocket",
+      "kicker": "Sau lời cảnh báo",
+      "cue": "và sau",
+      "line": "Còn tăng thêm hơn ba năm.",
+      "line_cue": "thị trường"
+     },
+     {
+      "type": "trio",
+      "kicker": "Đến cuối clip",
+      "cue": "đến cuối",
+      "items": [
+       {
+        "icon": "bubble",
+        "label": "Bong bóng lớn ra sao"
+       },
+       {
+        "icon": "magnifier",
+        "label": "Vì sao không hẹn ngày",
+        "cue": "vì sao"
+       },
+       {
+        "icon": "checklist",
+        "label": "Ba bài học",
+        "cue": "ba bài"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "greenspan1996",
+    "sp500"
+   ]
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Review sách · Tập 32",
+    "title": "Sự Phấn Khích Phi Lý",
+    "subtitle": "Irrational Exuberance · Robert J. Shiller, 2000",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ],
+   "sources": [
+    "shiller2000"
+   ]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Nhiều người nghĩ: bong bóng chỉ dành cho người khờ. Giá đã cao thì hẳn có lý do. Và ai thấy được bong bóng thì sẽ biết ngày nó vỡ. Cuốn sách này nói khác, ở cả ba điểm.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Điều nhiều người nghĩ",
+      "items": [
+       {
+        "icon": "people",
+        "label": "Chỉ người khờ mắc"
+       },
+       {
+        "icon": "scale",
+        "label": "Giá cao hẳn có lý do",
+        "cue": "giá đã"
+       },
+       {
+        "icon": "clock",
+        "label": "Thấy là biết ngày vỡ",
+        "cue": "và ai"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "book",
+      "kicker": "Robert Shiller",
+      "cue": "cuốn sách",
+      "line": "Nói khác, ở cả ba điểm."
+     }
+    ]
+   },
+   "sources": [
+    "shiller2000"
+   ]
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "Robert Shiller là giáo sư kinh tế ở Yale. Năm hai nghìn mười ba, ông chia giải Nobel kinh tế với Eugene Fama và Lars Peter Hansen. Sách ra tháng Ba năm hai nghìn, tái bản năm hai nghìn lẻ năm thêm phần nhà đất, và năm hai nghìn mười lăm thêm trái phiếu. Mình chưa thấy bản tiếng Việt, nên tựa ở đây là tạm dịch.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Robert J. Shiller",
+      "initials": "RS",
+      "role": "Giáo sư kinh tế · Yale",
+      "years": "Nobel 2013, chia ba"
+     },
+     {
+      "type": "timeline",
+      "title": "Irrational Exuberance",
+      "cue": "sách ra",
+      "events": [
+       {
+        "year": "2000",
+        "text": "Bản đầu · cổ phiếu"
+       },
+       {
+        "year": "2005",
+        "text": "Thêm nhà đất",
+        "cue": "tái bản"
+       },
+       {
+        "year": "2015",
+        "text": "Thêm trái phiếu",
+        "cue": "và năm"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "book",
+      "kicker": "Sự Phấn Khích Phi Lý",
+      "cue": "mình chưa",
+      "line": "Tựa tạm dịch."
+     }
+    ]
+   },
+   "sources": [
+    "nobel2013",
+    "shiller2000",
+    "book_date"
+   ]
+  },
+  {
+   "id": "b03",
+   "act": "story",
+   "narration": "Quay lại ngày ba tháng Mười Hai năm một nghìn chín trăm chín mươi sáu. Shiller và đồng nghiệp John Campbell trình bày trước Hội đồng Thống đốc Fed: theo họ, giá cổ phiếu đã cao so với lợi nhuận. Hai ngày sau, Alan Greenspan, chủ tịch Fed, lên phát biểu ở American Enterprise Institute.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "3/12/1996 · trước Fed",
+      "line": "Giá đã cao so với lợi nhuận.",
+      "line_cue": "theo họ"
+     },
+     {
+      "type": "portrait",
+      "name": "Alan Greenspan",
+      "initials": "AG",
+      "role": "Chủ tịch Fed",
+      "years": "5/12/1996 · AEI",
+      "cue": "hai ngày"
+     }
+    ]
+   },
+   "sources": [
+    "fed_dec3",
+    "cfo",
+    "greenspan1996"
+   ]
+  },
+  {
+   "id": "b04",
+   "act": "story",
+   "narration": "Giữa một bài nói dài về ngân hàng trung ương, ông hỏi một câu: làm sao ta biết khi nào sự phấn khích phi lý đã đẩy giá tài sản lên quá mức? Phiên kế tiếp, chứng khoán Tokyo giảm khoảng ba phẩy hai phần trăm.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "quote",
+      "text": "Làm sao ta biết khi nào sự phấn khích phi lý đã đẩy giá tài sản lên quá mức?",
+      "by": "Alan Greenspan, 5/12/1996 (lược dịch)"
+     },
+     {
+      "type": "stat",
+      "value": 3.2,
+      "decimals": 1,
+      "prefix": "-",
+      "suffix": "%",
+      "label": "Tokyo · phiên kế tiếp",
+      "note": "6/12/1996",
+      "cue": "chứng khoán"
+     }
+    ]
+   },
+   "sources": [
+    "greenspan1996",
+    "tokyo1996"
+   ]
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Rồi điều lạ xảy ra: thị trường Mỹ không dừng lại. Hôm Greenspan phát biểu, S&P năm trăm ở khoảng bảy trăm bốn mươi điểm. Tháng Ba năm hai nghìn, nó đóng cửa hơn một nghìn năm trăm. Hơn gấp đôi, trong chưa đầy bốn năm.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "rocket",
+      "kicker": "Rồi điều lạ xảy ra",
+      "line": "Thị trường không dừng lại.",
+      "line_cue": "thị trường"
+     },
+     {
+      "type": "stat",
+      "from": 744,
+      "value": 1527,
+      "label": "S&P 500 · điểm đóng cửa",
+      "note": "5/12/1996 đến 24/3/2000 · danh nghĩa, chưa tính cổ tức",
+      "cue": "hôm greenspan"
+     }
+    ]
+   },
+   "sources": [
+    "sp500"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b06",
+   "act": "story",
+   "narration": "Shiller đo độ đắt bằng một tỷ số gọi là CAPE: giá chia cho lợi nhuận trung bình mười năm, đã trừ lạm phát. Theo dữ liệu của ông, tháng Mười Hai năm một nghìn chín trăm chín mươi chín, tỷ số ấy lên khoảng bốn mươi tư, cao chưa từng thấy lúc đó. Năm một nghìn chín trăm hai mươi chín, đỉnh của nó chỉ khoảng ba mươi hai.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "scale",
+      "kicker": "CAPE của Shiller",
+      "line": "Giá / lợi nhuận 10 năm, trừ lạm phát",
+      "line_cue": "giá chia"
+     },
+     {
+      "type": "compare",
+      "title": "CAPE · dữ liệu Shiller, xấp xỉ",
+      "cue": "theo dữ",
+      "left": {
+       "title": "Đỉnh 1929",
+       "items": [
+        "~32,6"
+       ]
+      },
+      "right": {
+       "title": "Tháng 12/1999",
+       "items": [
+        "~44,2"
+       ]
+      }
+     }
+    ]
+   },
+   "sources": [
+    "cape_data",
+    "shiller2000"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b07",
+   "act": "story",
+   "narration": "Sách ra tháng Ba năm hai nghìn. Ngày mười tháng Ba, Nasdaq đóng cửa ở đỉnh hơn năm nghìn điểm. Đến tháng Mười năm hai nghìn lẻ hai, nó còn khoảng một nghìn một trăm. Cuốn sách không hẹn ngày sập. Nó lập luận rằng giá đã cao bất thường so với lợi nhuận.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "chart",
+      "title": "Nasdaq Composite · điểm đóng cửa, danh nghĩa",
+      "points": [
+       [
+        "1996",
+        1291
+       ],
+       [
+        "1997",
+        1570
+       ],
+       [
+        "1998",
+        2193
+       ],
+       [
+        "1999",
+        4069
+       ],
+       [
+        "3/2000",
+        5049
+       ],
+       [
+        "2000",
+        2471
+       ],
+       [
+        "2001",
+        1950
+       ],
+       [
+        "10/2002",
+        1114
+       ]
+      ],
+      "annotations": [
+       {
+        "at": 4,
+        "text": "Đỉnh 10/3/2000 · 5.049",
+        "cue": "ngày mười"
+       },
+       {
+        "at": 7,
+        "text": "9/10/2002 · 1.114 · -78%",
+        "cue": "đến tháng"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "bubble",
+      "kicker": "Cuốn sách không hẹn ngày",
+      "cue": "cuốn sách",
+      "line": "Giá cao bất thường so với lợi nhuận.",
+      "line_cue": "nó lập"
+     }
+    ]
+   },
+   "sources": [
+    "nasdaq",
+    "foxnasdaq",
+    "book_date",
+    "shiller2000"
+   ]
+  },
+  {
+   "id": "b08",
+   "act": "principle",
+   "narration": "Bài học thứ nhất: giá tăng tự kể chuyện. Shiller gọi đó là vòng phản hồi. Giá lên, báo chí và người quen kể chuyện vì sao giá lên, người mới đổ tiền vào, và giá lên tiếp. Ông ví nó như một kiểu Ponzi tự nhiên: không cần ai lừa ai.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "bubble",
+      "kicker": "Bài học 1",
+      "line": "Giá tăng tự kể chuyện."
+     },
+     {
+      "type": "flywheel",
+      "kicker": "Vòng phản hồi · Shiller",
+      "cue": "shiller gọi",
+      "from_angle": 0,
+      "to_angle": 900,
+      "ease": "power2.in",
+      "marks": [
+       {
+        "text": "Giá lên",
+        "cue": "giá lên"
+       },
+       {
+        "text": "Kể chuyện vì sao",
+        "cue": "báo chí"
+       },
+       {
+        "text": "Người mới đổ tiền",
+        "cue": "người mới"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "snowball",
+      "kicker": "Một kiểu Ponzi tự nhiên",
+      "cue": "ông ví",
+      "line": "Không cần ai lừa ai."
+     }
+    ]
+   },
+   "sources": [
+    "shiller2000"
+   ]
+  },
+  {
+   "id": "b09",
+   "act": "principle",
+   "narration": "Bài học thứ hai: coi chừng chuyện thời đại mới. Shiller kể những làn sóng niềm tin rằng kinh tế đã bước sang một thời đại mới: những năm hai mươi, rồi cuối những năm chín mươi với internet. Mỗi lần, người ta tin lần này khác. Công nghệ có thể là thật. Câu hỏi là giá đã trả trước cho nó bao nhiêu.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "rocket",
+      "kicker": "Bài học 2",
+      "line": "Coi chừng chuyện thời đại mới."
+     },
+     {
+      "type": "trio",
+      "kicker": "Làn sóng thời đại mới",
+      "cue": "những năm",
+      "items": [
+       {
+        "icon": "factory",
+        "label": "Thập niên 1920"
+       },
+       {
+        "icon": "lightning",
+        "label": "Cuối 1990, internet",
+        "cue": "rồi cuối"
+       },
+       {
+        "icon": "people",
+        "label": "Lần này khác?",
+        "cue": "mỗi lần"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "coins",
+      "kicker": "Công nghệ có thể là thật",
+      "cue": "công nghệ",
+      "line": "Giá đã trả trước bao nhiêu?",
+      "line_cue": "câu hỏi"
+     }
+    ]
+   },
+   "sources": [
+    "shiller2000"
+   ]
+  },
+  {
+   "id": "b10",
+   "act": "principle",
+   "narration": "Bài học thứ ba: la bàn, không phải đồng hồ. CAPE cao không cho biết khi nào giá giảm. Theo nghiên cứu của Campbell và Shiller, trong lịch sử, định giá cao thường đi trước lợi nhuận mười năm thấp hơn trung bình. Nó chỉ hướng dài hạn, không hẹn giờ.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "swap",
+      "kicker": "Bài học 3",
+      "strike_cue": "không phải",
+      "from": {
+       "label": "Đồng hồ hẹn giờ",
+       "icon": "clock"
+      },
+      "to": {
+       "label": "La bàn chỉ hướng",
+       "icon": "compass",
+       "cue": "cape cao"
+      }
+     },
+     {
+      "type": "icon",
+      "icon": "hourglass",
+      "kicker": "Campbell & Shiller, 1998",
+      "cue": "theo nghiên",
+      "line": "10 năm sau: thường thấp hơn",
+      "line_cue": "định giá"
+     },
+     {
+      "type": "icon",
+      "icon": "compass",
+      "kicker": "Lịch sử, không phải lời hứa",
+      "cue": "nó chỉ",
+      "line": "Hướng dài hạn, không hẹn giờ."
+     }
+    ]
+   },
+   "sources": [
+    "campbell_shiller1998",
+    "shiller2000"
+   ]
+  },
+  {
+   "id": "b11",
+   "act": "complication",
+   "narration": "Giờ là phần công bằng. Tháng Mười Hai năm một nghìn chín trăm chín mươi sáu, CAPE đã ở khoảng hai mươi tám. Ai bán hết ngay khi đó đã đứng ngoài hơn ba năm tăng giá. Dù đến năm hai nghìn lẻ hai, S&P năm trăm lại về gần mức cũ. Theo mình, đó là đúng về giá, nhưng quá sớm về thời điểm.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stat",
+      "value": 28,
+      "prefix": "~",
+      "label": "CAPE · tháng 12/1996",
+      "note": "ước tính, một nguồn thứ cấp",
+      "cue": "tháng mười"
+     },
+     {
+      "type": "icon",
+      "icon": "bench",
+      "kicker": "Bán hết ngay khi đó",
+      "cue": "ai bán",
+      "line": "Đứng ngoài hơn ba năm tăng giá.",
+      "line_cue": "đứng ngoài"
+     },
+     {
+      "type": "compare",
+      "title": "S&P 500 · điểm, danh nghĩa",
+      "cue": "dù đến",
+      "left": {
+       "title": "5/12/1996",
+       "items": [
+        "~744"
+       ]
+      },
+      "right": {
+       "title": "Đáy 10/2002",
+       "items": [
+        "~777"
+       ]
+      }
+     }
+    ]
+   },
+   "sources": [
+    "cape1996",
+    "sp500"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b11b",
+   "act": "complication",
+   "narration": "Và không phải ai cũng đồng ý với Shiller. Jeremy Siegel cho rằng thay đổi trong cách tính lợi nhuận làm CAPE trông cao hơn thực tế. Còn Eugene Fama, người cùng nhận Nobel, nghi ngờ chính khái niệm bong bóng. Một con số, nhiều cách đọc.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Jeremy Siegel, 2016",
+      "line": "Cách tính đổi, CAPE bị đẩy cao.",
+      "line_cue": "thay đổi"
+     },
+     {
+      "type": "portrait",
+      "name": "Eugene Fama",
+      "initials": "EF",
+      "role": "Nobel 2013, cùng Shiller",
+      "years": "Nghi ngờ khái niệm bong bóng",
+      "cue": "còn eugene"
+     },
+     {
+      "type": "icon",
+      "icon": "eye",
+      "kicker": "Không phải ai cũng đồng ý",
+      "cue": "một con",
+      "line": "Một con số, nhiều cách đọc."
+     }
+    ]
+   },
+   "sources": [
+    "siegel2016",
+    "nobel2013"
+   ]
+  },
+  {
+   "id": "b12",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Bạn đọc tin: chỉ số định giá của thị trường đang cao hơn nhiều so với trung bình lịch sử. Theo Shiller, cách hiểu nào hợp lý nhất?",
+   "visual": {
+    "type": "question",
+    "question": "Tin: định giá thị trường cao hơn nhiều so với trung bình lịch sử. Hiểu thế nào?",
+    "choices": [
+     "Sắp sập rồi, bán hết ngay",
+     "Lợi nhuận dài hạn có thể thấp hơn: xem lại mình gánh được bao nhiêu rủi ro",
+     "Lần này khác, mua thêm"
+    ],
+    "answer": "B — la bàn, không phải đồng hồ.",
+    "think_seconds": 5
+   }
+  },
+  {
+   "id": "b13",
+   "act": "recap",
+   "narration": "Vậy là ba bài học từ Irrational Exuberance. Giá tăng tự kể chuyện. Coi chừng chuyện thời đại mới. Và la bàn, không phải đồng hồ.",
+   "visual": {
+    "type": "list",
+    "title": "Ba bài học",
+    "check": true,
+    "items": [
+     {
+      "text": "Giá tăng tự kể chuyện",
+      "cue": "giá tăng"
+     },
+     {
+      "text": "Coi chừng chuyện thời đại mới",
+      "cue": "coi chừng"
+     },
+     {
+      "text": "La bàn, không phải đồng hồ",
+      "cue": "và la"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b14",
+   "act": "close",
+   "narration": "Greenspan hỏi: làm sao biết khi nào phấn khích đã quá đà? Shiller không trả lời bằng một ngày. Ông trả lời bằng một la bàn, và một lời nhắc: khi ai cũng kể cùng một câu chuyện, hãy hỏi mình đang trả bao nhiêu cho câu chuyện ấy.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "bubble",
+      "kicker": "Greenspan, 1996",
+      "line": "Khi nào là quá đà?"
+     },
+     {
+      "type": "swap",
+      "kicker": "Câu trả lời của Shiller",
+      "cue": "shiller không",
+      "strike_cue": "ông trả",
+      "from": {
+       "label": "Một ngày",
+       "icon": "clock"
+      },
+      "to": {
+       "label": "Một la bàn",
+       "icon": "compass",
+       "cue": "một la"
+      }
+     },
+     {
+      "type": "icon",
+      "icon": "people",
+      "kicker": "Khi ai cũng kể một chuyện",
+      "cue": "khi ai",
+      "line": "Mình đang trả bao nhiêu?",
+      "line_cue": "hãy hỏi"
+     }
+    ]
+   },
+   "sources": [
+    "greenspan1996",
+    "shiller2000"
+   ]
+  },
+  {
+   "id": "b15",
+   "act": "close",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
+   "visual": {
+    "type": "end",
+    "kicker": "Review sách · Tập 32",
+    "title": "Sự Phấn Khích Phi Lý",
+    "ask": "Bạn muốn clip tiếp theo về cuốn sách nào?",
+    "ask_hint": "Một cuốn sách · một nhà đầu tư · một chủ đề",
+    "ask_cue": "còn bạn",
+    "sources_line": "Nguồn: Shiller, Irrational Exuberance (2000) · Greenspan (5/12/1996) · Campbell & Shiller (1998) · xem mô tả",
+    "disclaimer": "Nội dung giáo dục, tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư.",
+    "sources_cue": "còn bạn"
+   }
+  }
+ ],
+ "pronounce": {}
+}
