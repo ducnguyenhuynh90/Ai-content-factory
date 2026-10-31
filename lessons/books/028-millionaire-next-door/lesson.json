@@ -1,0 +1,835 @@
+{
+ "meta": {
+  "series": "Review sách · Tập 28",
+  "title": "Triệu Phú Nhà Bên",
+  "subtitle": "The Millionaire Next Door — Thomas J. Stanley & William D. Danko (1996)",
+  "topic": "investing",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt có thu nhập khá, nghĩ rằng thu nhập cao và vẻ ngoài sang là dấu hiệu giàu",
+  "aspect": "4:3",
+  "target_minutes": [
+   3,
+   5
+  ],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
+  "learning_goals": [
+   "Kể lại phát hiện của Stanley & Danko (1996): triệu phú định nghĩa bằng tài sản ròng ≥ 1 triệu $, khoảng 3,5% hộ Mỹ, chân dung điển hình (~57 tuổi, ~80% thế hệ đầu, ~2/3 tự kinh doanh, ít lái xe đời mới), và câu 'Big hat, no cattle'",
+   "Tự tính được tài sản ròng kỳ vọng (tuổi × thu nhập trước thuế ÷ 10) và hiểu ngưỡng tích lũy giỏi (≥ 2×) / kém (≤ 1/2)",
+   "Áp dụng ba bài học (thu nhập không phải của cải; sống dưới mức thu nhập; nuôi bò trước, mua mũ sau) và biết giới hạn: thiên kiến kẻ sống sót (Taleb), dữ liệu Mỹ thập niên 1990, mẫu từ khu giàu, lạm phát"
+  ],
+  "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư.",
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người dẫn chương trình sách lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively.",
+  "brief": {
+   "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn clip tiếp theo về cuốn sách nào?\" (comment answering the end-card question)",
+   "target_viewer": "Người Việt 22–40 tuổi đi làm, thu nhập khá, chịu áp lực 'trông cho xứng'; tin rằng lương cao là giàu (giả định, chủ kênh xác nhận lại)",
+   "format": "Phân tích sách (book analysis), 4–5 phút, 4:3, minh họa icon vẽ tay, một giọng đọc",
+   "central_question": "Vì sao nhiều người thu nhập cao lại không giàu, còn triệu phú thật thì trông như hàng xóm bình thường?",
+   "transformation": "Trước khi xem, họ đo giàu bằng thu nhập và vẻ ngoài. Sau khi xem, họ tự tính được tài sản ròng kỳ vọng theo công thức của sách, kể lại được chân dung triệu phú năm 1996 và câu 'mũ to, không bò', áp dụng ba bài học, và biết sách có giới hạn: chỉ khảo sát người đã giàu, dữ liệu Mỹ thập niên 1990",
+   "discovery_goal": "Tìm kiếm (\"The Millionaire Next Door\", \"triệu phú nhà bên\", \"tài sản ròng\", \"công thức tài sản ròng kỳ vọng\", \"sống dưới mức thu nhập\") và đề xuất từ video tài chính cá nhân; khán giả tập 3 (Tâm lý học về tiền) và 22",
+   "share_recipient": "Một người bạn vừa được tăng lương và đang định đổi xe: câu hỏi 'bạn đang mua mũ hay nuôi bò?' mở một cuộc nói chuyện không phán xét",
+   "evidence": "Stanley & Danko 1996 (định nghĩa ≥ 1 triệu $; 3,5 triệu hộ ≈ 3,5%; ~57 tuổi; ~80% thế hệ đầu; ~2/3 tự kinh doanh; 23,5% lái xe đời mới nhất; ~37% mua xe cũ; công thức tuổi × thu nhập ÷ 10; PAW ≥ 2×, UAW ≤ 1/2; 'Big Hat, No Cattle'; 'live well below their means'); BookBrowse excerpt; UAlbany (Danko); LibraryThing/AJC (Stanley 1944–2015); Next Big Idea Club (Vanderkam: 37% xe cũ); Taleb 2001 (Fooled by Randomness, chương 'Too Many Millionaires Next Door'); BLS CPI (lạm phát 1996–2025 ≈ 2×).",
+   "constraints": "4–5 phút, 4:3, icon vẽ, không khuôn mặt người thật, một giọng đọc OmniVoice seed 99 speed 0.88, tên tiếng Anh giữ nguyên, số đọc bằng chữ, không khuyến nghị sản phẩm hay cổ phiếu nào, ví dụ công thức ghi rõ minh họa, nói rõ giới hạn và ước tính, giữ lời miễn trừ"
+  },
+  "youtube": {
+   "title": "Mũ to, không bò: vì sao lương cao vẫn chưa giàu (sách 1996)",
+   "thumbnail_text": "Mũ to. Không một con bò.",
+   "description": "\"Big hat, no cattle\" (mũ to, không bò): theo The Millionaire Next Door (1996) của Thomas J. Stanley và William D. Danko, đó là cách những người giàu ở Texas tả người trông giàu mà không giàu. Hai giáo sư marketing khảo sát người giàu ở Mỹ suốt khoảng hai mươi năm và thấy triệu phú điển hình sống khá bình thường: ít lái xe đời mới, nhiều người tự kinh doanh, phần lớn tự làm giàu ở thế hệ đầu. Video đi qua chân dung đó, công thức tài sản ròng kỳ vọng (tuổi × thu nhập trước thuế ÷ 10), ba bài học (thu nhập không phải của cải; sống dưới mức thu nhập; nuôi bò trước, mua mũ sau), những giới hạn của cuốn sách, và một bài tập nhỏ.\n\nNội dung giáo dục, tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư. Các con số (3,5% hộ gia đình, ~57 tuổi, ~80% thế hệ đầu, ~2/3 tự kinh doanh, 23,5% lái xe đời mới nhất, ~37% mua xe cũ) là kết quả khảo sát của sách về nước Mỹ giữa thập niên 1990, từ một mẫu chọn ở khu dân cư giàu có, không phải mẫu ngẫu nhiên toàn quốc. Ví dụ 40 tuổi, 100 nghìn $/năm là minh họa. 'Một triệu đô năm 1996 nay khoảng gấp đôi' là ước tính theo chỉ số giá tiêu dùng Mỹ (BLS). Lời phê bình về thiên kiến kẻ sống sót là của Nassim Taleb trong Fooled by Randomness. 'Triệu phú nhà bên' là tên tạm dịch; chúng tôi chưa xác nhận được bản dịch tiếng Việt chính thức. Các câu trích là lược dịch.\n\nChương:\n0:00 Mũ to, không bò\n Điều nhiều người nghĩ\n Ai viết cuốn sách này?\n Thế nào là giàu?\n Chân dung triệu phú năm 1996\n Chiếc xe của triệu phú\n Big hat, no cattle\n Công thức tài sản ròng kỳ vọng\n Tích lũy giỏi, tích lũy kém\n Bài học 1: thu nhập không phải của cải\n Bài học 2: sống dưới mức thu nhập\n Bài học 3: nuôi bò trước, mua mũ sau\n Thiên kiến kẻ sống sót\n Dữ liệu của một thời\n Thử một chút\n Ba bài học\n\nNguồn:\n- Thomas J. Stanley & William D. Danko, The Millionaire Next Door: The Surprising Secrets of America's Wealthy, Longstreet Press, 1996\n- BookBrowse, trích đoạn The Millionaire Next Door: https://www.bookbrowse.com/excerpts/index.cfm/book_number/242/page_number/1/the-millionaire-next-door\n- University at Albany, William D. Danko: https://www.albany.edu/feature97/danko\n- LibraryThing, Thomas J. Stanley (1944–2015): https://www.librarything.com/a/2290\n- Laura Vanderkam, Next Big Idea Club, Why Millionaires' Money Habits Are Different Than We Think: https://nextbigideaclub.com/magazine/laura-vanderkam-millionaires-money-habits-different-think/8875/\n- Nassim N. Taleb, Fooled by Randomness (2001), chương 'Too Many Millionaires Next Door'\n- Bankers Anonymous, Book Review: The Millionaire Next Door: https://www.bankers-anonymous.com/book/book-review-the-millionaire-next-door-the-surprising-secrets-of-americas-wealthy/\n- US Bureau of Labor Statistics, CPI Inflation Calculator: https://www.bls.gov/data/inflation_calculator.htm\n\nBạn muốn clip tiếp theo về cuốn sách nào? Để lại bình luận nhé.",
+   "tags": [
+    "The Millionaire Next Door",
+    "triệu phú nhà bên",
+    "Thomas Stanley",
+    "William Danko",
+    "tài sản ròng",
+    "sống dưới mức thu nhập",
+    "tài chính cá nhân",
+    "tiết kiệm",
+    "thiên kiến kẻ sống sót",
+    "review sách",
+    "tóm tắt sách",
+    "sách đầu tư",
+    "tư duy tiền bạc"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "stanley1996",
+   "cite": "Thomas J. Stanley & William D. Danko, The Millionaire Next Door: The Surprising Secrets of America's Wealthy, Longstreet Press, 1996 (wealthy = net worth of $1 million or more; about 3.5 million of 100 million US households, 3.5%; typical millionaire about 57, married; about 80% first-generation affluent; self-employed are under 20% of workers but about two-thirds of millionaires; 23.5% drive a current-model-year car; expected net worth = age × realized pretax annual household income from all sources except inheritances ÷ 10; PAW at twice the expected level or more, UAW at half or less; 'Big Hat, No Cattle'; first of seven common denominators: 'They live well below their means')",
+   "url": "https://www.bookbrowse.com/excerpts/index.cfm/book_number/242/page_number/1/the-millionaire-next-door"
+  },
+  {
+   "id": "excerpt",
+   "cite": "BookBrowse, excerpt pages of The Millionaire Next Door (the 3.5% definition; the expected-net-worth formula with the worked example of a 61-year-old earning $235,000; the 'wise and wealthy Texans' who say 'Big hat, no cattle')",
+   "url": "https://www.bookbrowse.com/excerpts/index.cfm/book_number/242/page_number/4/the-millionaire-next-door"
+  },
+  {
+   "id": "albany",
+   "cite": "University at Albany, 'University at Albany Professor Hits New York Times Best Seller List' (William D. Danko, marketing professor; the book rests on about two decades of surveys and interviews with Thomas J. Stanley)",
+   "url": "https://www.albany.edu/feature97/danko"
+  },
+  {
+   "id": "stanley_bio",
+   "cite": "LibraryThing author page, Thomas J. Stanley (1944-2015); Atlanta Journal-Constitution, March 2015 (former Georgia State University marketing professor, died in a car crash near Marietta at 71)",
+   "url": "https://www.librarything.com/a/2290"
+  },
+  {
+   "id": "vanderkam",
+   "cite": "Laura Vanderkam, 'Why Millionaires' Money Habits Are Different Than We Think', Next Big Idea Club (quotes the book: 'nearly 37 percent' of millionaires bought their cars used, so about 63% bought new)",
+   "url": "https://nextbigideaclub.com/magazine/laura-vanderkam-millionaires-money-habits-different-think/8875/"
+  },
+  {
+   "id": "taleb2001",
+   "cite": "Nassim Nicholas Taleb, Fooled by Randomness (2001; rev. 2004), chapter 8 'Too Many Millionaires Next Door' (the book's sample suffers from survivorship bias: it studies only those who became rich)",
+   "url": "https://www.bankers-anonymous.com/book/book-review-fooled-by-randomness/"
+  },
+  {
+   "id": "bankers_anon",
+   "cite": "Bankers Anonymous (Michael Taylor), 'Book Review: The Millionaire Next Door' (Big Hat, No Cattle; notes the survivorship-bias criticism)",
+   "url": "https://www.bankers-anonymous.com/book/book-review-the-millionaire-next-door-the-surprising-secrets-of-americas-wealthy/"
+  },
+  {
+   "id": "survey_method",
+   "cite": "Secondary accounts of the book's method: surveys sent to households in affluent neighbourhoods identified by geocoding, about 1,115 respondents of whom 385 had net worth of $1 million or more (a finance professor's review, Financial Services Review; methods appendix of the book)",
+   "url": "https://openjournals.libs.uga.edu/fsr/article/download/3828/3275/10852"
+  },
+  {
+   "id": "bls_cpi",
+   "cite": "US Bureau of Labor Statistics, CPI Inflation Calculator (CPI-U annual average 1996 about 157 vs 2025 about 322: $1 million in 1996 is roughly $2 million today; estimate)",
+   "url": "https://www.bls.gov/data/inflation_calculator.htm"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Thu nhập không phải của cải",
+   "line": "Thu nhập là thứ bạn kiếm; của cải là thứ bạn giữ lại."
+  },
+  {
+   "name": "Sống dưới mức thu nhập",
+   "line": "Phần chênh giữa thu và chi là chỗ của cải lớn lên."
+  },
+  {
+   "name": "Nuôi bò trước, mua mũ sau",
+   "line": "Ưu tiên tự do tài chính hơn việc khoe địa vị."
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Mũ thật to, nhưng không có con bò nào. Theo hai nhà nghiên cứu Mỹ, nhiều người thu nhập cao sống đúng như thế.",
+   "visual": {
+    "type": "statement",
+    "kicker": "The Millionaire Next Door",
+    "text": "Mũ to. Không một con bò.",
+    "highlight": [
+     "Không một con bò."
+    ]
+   },
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "không có",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "stanley1996",
+    "excerpt"
+   ]
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Còn triệu phú thật thì nhiều khi sống ngay cạnh nhà bạn, lái xe cũ, và chẳng ai đoán ra. Đến cuối clip, bạn sẽ có một công thức để tự soi mình, ba bài học, và cả những chỗ cuốn sách có thể sai.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "house",
+      "kicker": "Triệu phú thật",
+      "line": "Ngay cạnh nhà bạn.",
+      "line_cue": "sống ngay"
+     },
+     {
+      "type": "trio",
+      "kicker": "Đến cuối clip",
+      "cue": "bạn sẽ",
+      "items": [
+       {
+        "icon": "target",
+        "label": "Một công thức tự soi"
+       },
+       {
+        "icon": "checklist",
+        "label": "Ba bài học",
+        "cue": "ba bài"
+       },
+       {
+        "icon": "magnifier",
+        "label": "Chỗ sách có thể sai",
+        "cue": "và cả"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "stanley1996"
+   ]
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Review sách · Tập 28",
+    "title": "Triệu Phú Nhà Bên",
+    "subtitle": "The Millionaire Next Door · Stanley & Danko, 1996",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ],
+   "sources": [
+    "stanley1996"
+   ]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Nhiều người nghĩ: người giàu thì phải sống sang, nhà to, đồng hồ đắt. Và thu nhập cao nghĩa là giàu. Theo cuốn sách này, hai điều đó thường không đi cùng nhau.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Điều nhiều người nghĩ",
+      "items": [
+       {
+        "icon": "house",
+        "label": "Nhà to"
+       },
+       {
+        "icon": "clock",
+        "label": "Đồng hồ đắt",
+        "cue": "đồng hồ"
+       },
+       {
+        "icon": "coins",
+        "label": "Thu nhập cao là giàu",
+        "cue": "và thu"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "book",
+      "kicker": "Theo cuốn sách",
+      "cue": "theo cuốn",
+      "line": "Thường không đi cùng nhau.",
+      "line_cue": "hai điều"
+     }
+    ]
+   },
+   "sources": [
+    "stanley1996"
+   ]
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "Thomas Stanley là giáo sư marketing ở Georgia State, chuyên nghiên cứu người giàu ở Mỹ. Cùng William Danko, giáo sư ở Đại học Albany, ông khảo sát họ suốt khoảng hai mươi năm. Năm một nghìn chín trăm chín mươi sáu, họ in kết quả thành cuốn The Millionaire Next Door, tạm dịch là Triệu phú nhà bên.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Thomas J. Stanley",
+      "initials": "TS",
+      "role": "Giáo sư marketing · Georgia State",
+      "years": "1944–2015"
+     },
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "William D. Danko · ĐH Albany",
+      "cue": "cùng william",
+      "line": "~20 năm nghiên cứu người giàu.",
+      "line_cue": "ông khảo"
+     },
+     {
+      "type": "icon",
+      "icon": "book",
+      "kicker": "1996 · tạm dịch: Triệu phú nhà bên",
+      "cue": "năm một",
+      "line": "The Millionaire Next Door",
+      "line_cue": "họ in"
+     }
+    ]
+   },
+   "sources": [
+    "albany",
+    "stanley_bio",
+    "stanley1996"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b03",
+   "act": "story",
+   "narration": "Họ không đo giàu bằng thu nhập, mà bằng tài sản ròng, từ một triệu đô trở lên: tất cả những gì bạn có, trừ đi những gì bạn nợ. Theo ước tính trong sách, chỉ khoảng ba phẩy năm phần trăm hộ gia đình Mỹ thời đó đạt mức này.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "scale",
+      "kicker": "Tài sản ròng ≥ 1 triệu $",
+      "line": "Có, trừ đi nợ.",
+      "line_cue": "tất cả"
+     },
+     {
+      "type": "stat",
+      "value": 3.5,
+      "decimals": 1,
+      "suffix": "%",
+      "label": "hộ gia đình Mỹ là triệu phú",
+      "note": "ước tính trong sách · giữa thập niên 1990",
+      "cue": "theo ước"
+     }
+    ]
+   },
+   "sources": [
+    "stanley1996",
+    "excerpt"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b04",
+   "act": "story",
+   "narration": "Họ trông thế nào? Theo khảo sát trong sách, triệu phú điển hình khoảng năm mươi bảy tuổi, đã lập gia đình. Khoảng tám mươi phần trăm tự làm giàu ở thế hệ đầu tiên. Và khoảng hai phần ba tự kinh doanh.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "people",
+      "kicker": "Triệu phú điển hình",
+      "line": "~57 tuổi, đã lập gia đình.",
+      "line_cue": "khoảng năm"
+     },
+     {
+      "type": "stat",
+      "value": 80,
+      "prefix": "~",
+      "suffix": "%",
+      "label": "giàu ở thế hệ đầu tiên",
+      "note": "khảo sát trong sách · Mỹ, 1996",
+      "cue": "khoảng tám"
+     },
+     {
+      "type": "icon",
+      "icon": "store",
+      "kicker": "~2/3 tự kinh doanh",
+      "cue": "và khoảng",
+      "line": "Làm chủ công việc của mình."
+     }
+    ]
+   },
+   "sources": [
+    "stanley1996"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Còn xe? Theo sách, chỉ khoảng hai mươi ba phẩy năm phần trăm lái xe đời mới nhất của năm. Gần ba mươi bảy phần trăm mua xe cũ. Nhìn bề ngoài, bạn khó đoán ra họ.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stat",
+      "value": 23.5,
+      "decimals": 1,
+      "suffix": "%",
+      "label": "lái xe đời mới nhất",
+      "note": "triệu phú trong khảo sát · 1996",
+      "cue": "chỉ khoảng"
+     },
+     {
+      "type": "compare",
+      "title": "Triệu phú mua xe (sách, 1996)",
+      "cue": "gần ba",
+      "left": {
+       "title": "Mua xe mới",
+       "items": [
+        "~63%"
+       ]
+      },
+      "right": {
+       "title": "Mua xe cũ",
+       "items": [
+        "~37%"
+       ]
+      }
+     },
+     {
+      "type": "icon",
+      "icon": "mask",
+      "kicker": "Nhìn bề ngoài",
+      "cue": "nhìn bề",
+      "line": "Khó đoán ra họ."
+     }
+    ]
+   },
+   "sources": [
+    "stanley1996",
+    "vanderkam"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b06",
+   "act": "story",
+   "narration": "Sách kể, những người giàu ở Texas có một câu cho kiểu người ngược lại: mũ to, không bò. Thu nhập cao, chi tiêu cao, nhưng tài sản ròng thấp. Họ trông giàu, mà không giàu.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Thành ngữ Texas trong sách",
+      "text": "Big hat, no cattle.",
+      "highlight": [
+       "no cattle."
+      ]
+     },
+     {
+      "type": "trio",
+      "kicker": "Mũ to, không bò",
+      "cue": "thu nhập",
+      "items": [
+       {
+        "icon": "coins",
+        "label": "Thu nhập cao"
+       },
+       {
+        "icon": "store",
+        "label": "Chi tiêu cao",
+        "cue": "chi tiêu"
+       },
+       {
+        "icon": "coin",
+        "label": "Tài sản ròng thấp",
+        "cue": "nhưng tài"
+       }
+      ],
+      "line": "Trông giàu, mà không giàu.",
+      "line_cue": "họ trông"
+     }
+    ]
+   },
+   "sources": [
+    "stanley1996",
+    "excerpt",
+    "bankers_anon"
+   ]
+  },
+  {
+   "id": "b07",
+   "act": "story",
+   "narration": "Sách có một công thức để tự soi. Lấy tuổi của bạn nhân với thu nhập trước thuế một năm, không tính tiền thừa kế, rồi chia cho mười. Đó là tài sản ròng kỳ vọng. Ví dụ minh họa: bốn mươi tuổi, thu nhập một trăm nghìn đô một năm, thì mức kỳ vọng là bốn trăm nghìn đô.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "hourglass",
+      "kicker": "Công thức tự soi",
+      "line": "Tuổi × thu nhập trước thuế.",
+      "line_cue": "lấy tuổi"
+     },
+     {
+      "type": "statement",
+      "kicker": "Tài sản ròng kỳ vọng",
+      "cue": "rồi chia",
+      "text": "Tuổi × thu nhập / 10",
+      "highlight": [
+       "/ 10"
+      ]
+     },
+     {
+      "type": "stat",
+      "value": 400,
+      "suffix": " nghìn $",
+      "label": "40 tuổi · 100 nghìn $/năm",
+      "note": "ví dụ minh họa · 40 × 100 nghìn / 10",
+      "cue": "ví dụ"
+     }
+    ]
+   },
+   "sources": [
+    "stanley1996",
+    "excerpt"
+   ]
+  },
+  {
+   "id": "b08",
+   "act": "story",
+   "narration": "Nếu tài sản ròng của bạn gấp đôi mức kỳ vọng trở lên, sách gọi bạn là người tích lũy giỏi. Nếu chỉ bằng một nửa trở xuống, bạn là người tích lũy kém, dù thu nhập cao đến đâu.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "mountain",
+      "kicker": "Gấp đôi trở lên",
+      "line": "Người tích lũy giỏi.",
+      "line_cue": "sách gọi"
+     },
+     {
+      "type": "icon",
+      "icon": "wave",
+      "kicker": "Một nửa trở xuống",
+      "cue": "nếu chỉ",
+      "line": "Tích lũy kém, dù thu nhập cao.",
+      "line_cue": "bạn là người tích lũy kém"
+     }
+    ]
+   },
+   "sources": [
+    "stanley1996",
+    "excerpt"
+   ]
+  },
+  {
+   "id": "b09",
+   "act": "principle",
+   "narration": "Bài học thứ nhất: thu nhập không phải của cải. Theo hai tác giả, thu nhập là thứ bạn kiếm được; của cải là thứ bạn giữ lại. Kiếm nhiều mà tiêu hết, bạn không giàu lên. Bạn chỉ đang sống sang.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "coins",
+      "kicker": "Bài học 1",
+      "line": "Thu nhập không phải của cải."
+     },
+     {
+      "type": "compare",
+      "title": "Theo Stanley & Danko",
+      "cue": "theo hai",
+      "left": {
+       "title": "Thu nhập",
+       "items": [
+        "Thứ bạn kiếm"
+       ]
+      },
+      "right": {
+       "title": "Của cải",
+       "items": [
+        "Thứ bạn giữ lại"
+       ]
+      }
+     },
+     {
+      "type": "quote",
+      "cue": "kiếm nhiều",
+      "text": "Kiếm nhiều, tiêu hết: không giàu lên, chỉ đang sống sang.",
+      "by": "Stanley & Danko (lược dịch, đại ý)"
+     }
+    ]
+   },
+   "sources": [
+    "stanley1996"
+   ]
+  },
+  {
+   "id": "b10",
+   "act": "principle",
+   "narration": "Bài học thứ hai: sống dưới mức thu nhập. Đây là điểm chung đầu tiên trong bảy điểm chung mà sách tìm thấy ở những người giàu lên. Chiếc xe cũ không phải để khổ hạnh. Nó để phần chênh lệch có chỗ lớn lên.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "sprout",
+      "kicker": "Bài học 2",
+      "line": "Sống dưới mức thu nhập."
+     },
+     {
+      "type": "icon",
+      "icon": "checklist",
+      "kicker": "Điểm chung số 1 / 7",
+      "cue": "đây là",
+      "line": "Theo khảo sát của sách.",
+      "line_cue": "bảy điểm"
+     },
+     {
+      "type": "icon",
+      "icon": "snowball",
+      "motion": "grow",
+      "motion_cue": "lớn lên",
+      "kicker": "Phần chênh lệch",
+      "cue": "chiếc xe",
+      "line": "Có chỗ lớn lên.",
+      "line_cue": "nó để"
+     }
+    ]
+   },
+   "sources": [
+    "stanley1996"
+   ]
+  },
+  {
+   "id": "b11",
+   "act": "principle",
+   "narration": "Bài học thứ ba: nuôi bò trước, mua mũ sau. Theo sách, người tích lũy giỏi coi trọng tự do tài chính hơn việc khoe địa vị. Mỗi đồng chi cho vẻ ngoài là một đồng không làm việc cho bạn.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "key",
+      "kicker": "Bài học 3",
+      "line": "Nuôi bò trước, mua mũ sau."
+     },
+     {
+      "type": "icon",
+      "icon": "door",
+      "kicker": "Tự do tài chính",
+      "cue": "theo sách",
+      "line": "Hơn việc khoe địa vị.",
+      "line_cue": "hơn việc"
+     },
+     {
+      "type": "icon",
+      "icon": "coin",
+      "kicker": "Mỗi đồng cho vẻ ngoài",
+      "cue": "mỗi đồng",
+      "line": "Không làm việc cho bạn.",
+      "line_cue": "không làm"
+     }
+    ]
+   },
+   "sources": [
+    "stanley1996"
+   ]
+  },
+  {
+   "id": "b12",
+   "act": "complication",
+   "narration": "Giờ là những giới hạn. Nassim Taleb, trong cuốn Fooled by Randomness mà mình đã review ở tập tám, chỉ ra thiên kiến kẻ sống sót: sách chỉ khảo sát những người đã giàu. Những người cũng tiết kiệm, cũng liều mở doanh nghiệp, nhưng thất bại, thì không có trong mẫu. Cùng một thói quen liều lĩnh có thể dẫn tới giàu có, hoặc phá sản.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "swan",
+      "kicker": "Nassim Taleb",
+      "line": "Fooled by Randomness · tập 8.",
+      "line_cue": "mà mình"
+     },
+     {
+      "type": "statement",
+      "kicker": "Taleb chỉ ra",
+      "cue": "thiên kiến",
+      "text": "Thiên kiến kẻ sống sót.",
+      "highlight": [
+       "kẻ sống sót."
+      ]
+     },
+     {
+      "type": "funnel",
+      "total": 120,
+      "keep": 6,
+      "label": "người tiết kiệm, dám liều · minh họa",
+      "keep_label": "chỉ người đã giàu được hỏi",
+      "cue": "những người",
+      "keep_cue": "thì không"
+     },
+     {
+      "type": "icon",
+      "icon": "dice",
+      "kicker": "Cùng một thói quen liều",
+      "cue": "có thể",
+      "line": "Có thể giàu, hoặc phá sản."
+     }
+    ]
+   },
+   "sources": [
+    "taleb2001",
+    "bankers_anon"
+   ]
+  },
+  {
+   "id": "b13",
+   "act": "complication",
+   "narration": "Thêm nữa, đây là nước Mỹ giữa những năm một nghìn chín trăm chín mươi. Mẫu khảo sát chọn ở những khu dân cư giàu có, không phải ngẫu nhiên. Và một triệu đô năm ấy, tính theo lạm phát, nay khoảng gấp đôi. Đó là bức chân dung của một nhóm người, một thời, không phải lời hứa.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Dữ liệu của một thời",
+      "items": [
+       {
+        "icon": "compass",
+        "label": "Mỹ, thập niên 1990"
+       },
+       {
+        "icon": "house",
+        "label": "Mẫu ở khu giàu",
+        "cue": "mẫu khảo"
+       },
+       {
+        "icon": "people",
+        "label": "Không ngẫu nhiên",
+        "cue": "không phải ngẫu"
+       }
+      ]
+     },
+     {
+      "type": "stat",
+      "value": 2,
+      "prefix": "~",
+      "suffix": "×",
+      "label": "1 triệu $ năm 1996, nay",
+      "note": "ước tính theo chỉ số giá Mỹ (BLS)",
+      "cue": "tính theo"
+     },
+     {
+      "type": "icon",
+      "icon": "hourglass",
+      "kicker": "Một nhóm người, một thời",
+      "cue": "đó là",
+      "line": "Không phải lời hứa.",
+      "line_cue": "không phải lời"
+     }
+    ]
+   },
+   "sources": [
+    "survey_method",
+    "bls_cpi",
+    "stanley1996"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b14",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Bạn ba mươi tuổi, vừa được tăng lương. Theo tinh thần cuốn sách, bước nào hợp nhất?",
+   "visual": {
+    "type": "question",
+    "question": "Ba mươi tuổi, vừa được tăng lương. Theo cuốn sách, làm gì?",
+    "choices": [
+     "Đổi xe mới cho xứng tầm",
+     "Giữ mức sống, để phần tăng tích lũy",
+     "Vay mua nhà to hơn ngay"
+    ],
+    "answer": "B — sống dưới mức thu nhập.",
+    "think_seconds": 5
+   }
+  },
+  {
+   "id": "b15",
+   "act": "recap",
+   "narration": "Vậy là ba bài học từ The Millionaire Next Door. Thu nhập không phải của cải. Sống dưới mức thu nhập. Và nuôi bò trước, mua mũ sau.",
+   "visual": {
+    "type": "list",
+    "title": "Ba bài học",
+    "check": true,
+    "items": [
+     {
+      "text": "Thu nhập không phải của cải",
+      "cue": "thu nhập"
+     },
+     {
+      "text": "Sống dưới mức thu nhập",
+      "cue": "sống dưới"
+     },
+     {
+      "text": "Nuôi bò trước, mua mũ sau",
+      "cue": "và nuôi"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b16",
+   "act": "close",
+   "narration": "Cái mũ thì ai cũng nhìn thấy. Đàn bò thì thường nằm im trong sổ sách. Câu hỏi cuốn sách để lại: bạn đang mua mũ, hay đang nuôi bò?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "mask",
+      "kicker": "Cái mũ",
+      "line": "Ai cũng nhìn thấy."
+     },
+     {
+      "type": "icon",
+      "icon": "book",
+      "kicker": "Đàn bò",
+      "cue": "đàn bò",
+      "line": "Nằm im trong sổ sách."
+     },
+     {
+      "type": "swap",
+      "kicker": "Câu hỏi để lại",
+      "cue": "câu hỏi",
+      "strike_cue": "hay đang",
+      "from": {
+       "label": "Mua mũ",
+       "icon": "mask"
+      },
+      "to": {
+       "label": "Nuôi bò",
+       "icon": "sprout",
+       "cue": "hay đang"
+      }
+     }
+    ]
+   },
+   "sources": [
+    "stanley1996"
+   ]
+  },
+  {
+   "id": "b17",
+   "act": "close",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
+   "visual": {
+    "type": "end",
+    "kicker": "Review sách · Tập 28",
+    "title": "Triệu Phú Nhà Bên",
+    "ask": "Bạn muốn clip tiếp theo về cuốn sách nào?",
+    "ask_hint": "Một cuốn sách · một nhà đầu tư · một chủ đề",
+    "ask_cue": "còn bạn",
+    "sources_line": "Nguồn: Stanley & Danko, The Millionaire Next Door (1996) · Taleb, Fooled by Randomness · BLS CPI · xem mô tả",
+    "disclaimer": "Nội dung giáo dục, tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư.",
+    "sources_cue": "còn bạn"
+   }
+  }
+ ],
+ "pronounce": {}
+}

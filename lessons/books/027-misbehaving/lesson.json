@@ -1,0 +1,850 @@
+{
+ "meta": {
+  "series": "Review sách · Tập 27",
+  "title": "Misbehaving: Vì Sao Ta Hành Xử Lệch Với Tiền",
+  "subtitle": "Misbehaving: The Making of Behavioral Economics — Richard H. Thaler (2015)",
+  "topic": "investing",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt mới đầu tư, tin rằng mình quyết định về tiền một cách lý trí và chỉ cần cố gắng hơn là sẽ tiết kiệm được",
+  "aspect": "4:3",
+  "target_minutes": [
+   3,
+   5
+  ],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
+  "learning_goals": [
+   "Kể lại chuyện bát hạt điều (Rochester, những năm 1970), tấm bảng 'Danh sách' của Thaler, thí nghiệm chiếc cốc (1990) và giải Nobel 2017",
+   "Giải thích ba bài học: cất bát hạt điều đi (Save More Tomorrow, 3,5% lên 13,6% sau 40 tháng), bớt nhìn danh mục (né lỗ cận thị, thí nghiệm 1997), hỏi lại thứ mình đang giữ (hiệu ứng sở hữu)",
+   "Biết giới hạn: hiệu ứng sở hữu còn gây tranh cãi (Plott & Zeiler 2005), cú hích ngoài đời nhỏ hơn trong bài báo (DellaVigna & Linos 2022), và sách là hồi ký của người trong cuộc"
+  ],
+  "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư.",
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người dẫn chương trình sách lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively.",
+  "brief": {
+   "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn clip tiếp theo về cuốn sách nào?\" (comment answering the end-card question)",
+   "target_viewer": "Người Việt 20–40 tuổi mới đầu tư hoặc đang cố tiết kiệm, nghĩ rằng chỉ cần ý chí là đủ; đã nghe 'kinh tế học hành vi' nhưng chưa đọc Thaler (giả định, chủ kênh xác nhận lại)",
+   "format": "Phân tích sách (book analysis), 4–5 phút, 4:3, minh họa icon vẽ tay, một giọng đọc",
+   "central_question": "Vì sao một bát hạt điều bị cất đi lại làm khách vui hơn, và điều đó dạy gì về cách ta tiết kiệm và đầu tư?",
+   "transformation": "Trước khi xem, họ nghĩ con người quyết định về tiền lý trí và tiết kiệm chỉ là chuyện ý chí. Sau khi xem, họ kể lại được chuyện bát hạt điều, tấm bảng Danh sách, thí nghiệm chiếc cốc và Nobel 2017; áp dụng được ba bài học (sắp xếp môi trường, bớt nhìn danh mục, hỏi lại thứ đang giữ); và biết giới hạn: một số kết quả còn tranh cãi, cú hích ngoài đời nhỏ hơn trong bài báo",
+   "discovery_goal": "Tìm kiếm (\"Misbehaving\", \"Richard Thaler\", \"kinh tế học hành vi\", \"hiệu ứng sở hữu\", \"cú hích Nudge\", \"Nobel kinh tế 2017\") và đề xuất từ video sách đầu tư/tư duy; khán giả tập 2, 3 và 17",
+   "share_recipient": "Một người bạn hay than 'tháng nào cũng tiêu hết lương': câu hỏi 'bát hạt điều của bạn đang ở đâu?' gợi một cách sửa không cần trách ai thiếu ý chí",
+   "evidence": "Thaler 2015 (Misbehaving: bát hạt điều, Danh sách, Econ/Human); Chicago Booth Magazine 2015 (bữa tối những năm 1970); Rochester Review (tấm bảng); Nobel 2017 (thông cáo; bài giảng 'From Cashews to Nudges'); NBC/CSM 2017 ('as irrationally as possible'); Kahneman, Knetsch & Thaler 1990 (chiếc cốc, giá bán ~2× giá mua); Thaler & Benartzi 2004 (3,5% lên 13,6% sau 40 tháng); Tversky & Kahneman 1992 (hệ số né lỗ ~2,25); Thaler, Tversky, Kahneman & Schwartz 1997; Benartzi & Thaler 1995; Plott & Zeiler 2005; Isoni, Loomes & Sugden 2011; DellaVigna & Linos 2022 (126 thử nghiệm, 1,4 điểm %).",
+   "constraints": "4–5 phút, 4:3, icon vẽ, không khuôn mặt người thật, một giọng đọc OmniVoice seed 99 speed 0.88, tên tiếng Anh giữ nguyên, số đọc bằng chữ, không khuyến nghị cổ phiếu hay sản phẩm nào, nói rõ ước tính và tranh cãi, giữ lời miễn trừ"
+  },
+  "youtube": {
+   "title": "Một bát hạt điều dẫn tới giải Nobel | Misbehaving – Thaler",
+   "thumbnail_text": "Cất bát hạt điều. Khách cảm ơn.",
+   "description": "Những năm 1970, nhà kinh tế trẻ Richard Thaler cất bát hạt điều vào bếp trước bữa tối, và khách cảm ơn ông. Theo kinh tế học cổ điển, bớt một lựa chọn không thể làm ai vui hơn. Từ bát hạt điều ấy, Thaler bắt đầu ghi lên tấm bảng một danh sách những điều 'ngớ ngẩn' người thật hay làm, và hành trình đó dẫn tới giải Nobel kinh tế năm 2017. Video đi qua câu chuyện trong cuốn Misbehaving: The Making of Behavioral Economics (2015), thí nghiệm chiếc cốc, ba bài học về tiền (cất bát hạt điều đi; bớt nhìn danh mục; hỏi lại thứ mình đang giữ), những giới hạn và tranh cãi, và một bài tập nhỏ.\n\nNội dung giáo dục, tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư. Không sản phẩm hay cổ phiếu nào trong video là gợi ý mua. Con số 3,5% lên 13,6% là tỷ lệ tiết kiệm trung bình của người tham gia Save More Tomorrow ở công ty đầu tiên, so trước và sau 40 tháng, không phải ước tính nhân quả cho mọi người. 'Mất đau khoảng gấp đôi được vui' là ước tính của Tversky & Kahneman (1992). 'Giá bán khoảng gấp đôi giá mua' là kết quả trong thí nghiệm năm 1990; Plott & Zeiler (2005) thấy khoảng chênh biến mất với quy trình khác, và chuyện này vẫn còn tranh cãi. Câu hỏi 'nếu chưa có, hôm nay có mua không?' là gợi ý của người làm video, không phải trích dẫn từ sách. Sách chưa xác nhận được bản dịch tiếng Việt chính thức. Các câu trích là lược dịch.\n\nChương:\n0:00 Bát hạt điều và lời cảm ơn\n Điều nhiều người nghĩ\n Econ và Human\n Bữa tối ở Rochester\n Yếu tố tưởng như không liên quan\n Tấm bảng Danh sách\n Thí nghiệm chiếc cốc\n Nobel 2017\n Bài học 1: cất bát hạt điều đi\n Bài học 2: bớt nhìn danh mục\n Bài học 3: hỏi lại thứ mình đang giữ\n Giới hạn và tranh cãi\n Cú hích ngoài đời\n Thử một chút\n Ba bài học\n\nNguồn:\n- Richard H. Thaler, Misbehaving: The Making of Behavioral Economics, W. W. Norton, 2015: https://openlibrary.org/works/OL17940527W\n- Chicago Booth Magazine, A Bowl of Cashews (2015): https://www.chicagobooth.edu/magazine/2015/fall/a-bowl-of-cashews\n- University of Rochester Review, Thaler: https://www.rochester.edu/pr/Review/V80N2/0301_thaler.html\n- Nobel Prize 2017, thông cáo: https://www.nobelprize.org/prizes/economic-sciences/2017/press-release/\n- UChicago News, bài giảng Nobel 'From Cashews to Nudges': https://news.uchicago.edu/story/prof-richard-thaler-delivers-nobel-prize-lecture\n- NBC News (09/10/2017): https://www.nbcnews.com/business/economy/american-richard-thaler-wins-2017-nobel-prize-economics-n808911\n- Kahneman, Knetsch & Thaler (1990), JPE: https://econpapers.repec.org/RePEc:ucp:jpolec:v:98:y:1990:i:6:p:1325-48\n- Thaler & Benartzi (2004), Save More Tomorrow, JPE: https://econpapers.repec.org/RePEc:ucp:jpolec:v:112:y:2004:i:s1:p:s164-s187\n- Tversky & Kahneman (1992), Advances in Prospect Theory: https://doi.org/10.1007/BF00122574\n- Thaler, Tversky, Kahneman & Schwartz (1997), QJE: https://www.casact.org/abstract/effect-myopia-and-loss-aversion-risk-taking-experimental-test\n- Benartzi & Thaler (1995), Myopic Loss Aversion: https://www.nber.org/papers/w4369\n- Plott & Zeiler (2005), AER: https://econpapers.repec.org/RePEc:aea:aecrev:v:95:y:2005:i:3:p:530-545\n- DellaVigna & Linos (2022), RCTs to Scale: https://www.nber.org/papers/w27594\n\nBạn muốn clip tiếp theo về cuốn sách nào? Để lại bình luận nhé.",
+   "tags": [
+    "Misbehaving",
+    "Richard Thaler",
+    "kinh tế học hành vi",
+    "behavioral economics",
+    "Nobel kinh tế 2017",
+    "hiệu ứng sở hữu",
+    "Nudge cú hích",
+    "Save More Tomorrow",
+    "tâm lý đầu tư",
+    "review sách",
+    "tóm tắt sách",
+    "sách đầu tư",
+    "tài chính cá nhân"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "thaler2015",
+   "cite": "Richard H. Thaler, Misbehaving: The Making of Behavioral Economics, W. W. Norton, May 2015 (opening cashew anecdote and 'supposedly irrelevant factors'; Econs vs Humans; ch. 3 'The List', the 'dumb stuff people do' Thaler kept on his office blackboard from the mid-1970s)",
+   "url": "https://openlibrary.org/works/OL17940527W"
+  },
+  {
+   "id": "booth2015",
+   "cite": "Chicago Booth Magazine, 'A Bowl of Cashews with Professor Richard H. Thaler', Fall 2015 (a dinner party Thaler hosted in the 1970s; he removed the bowl of cashews and the guests thanked him)",
+   "url": "https://www.chicagobooth.edu/magazine/2015/fall/a-bowl-of-cashews"
+  },
+  {
+   "id": "rochester",
+   "cite": "University of Rochester Review, profile of Richard Thaler (as a young economist at Rochester he noted anomalies and chalked them up on his blackboard)",
+   "url": "https://www.rochester.edu/pr/Review/V80N2/0301_thaler.html"
+  },
+  {
+   "id": "nobel2017",
+   "cite": "The Royal Swedish Academy of Sciences, press release, 9 Oct 2017: Sveriges Riksbank Prize in Economic Sciences 2017 to Richard H. Thaler 'for his contributions to behavioural economics'",
+   "url": "https://www.nobelprize.org/prizes/economic-sciences/2017/press-release/"
+  },
+  {
+   "id": "nobel_lecture",
+   "cite": "UChicago News, 'Prof. Richard Thaler delivers Nobel Prize lecture', Dec 2017 (lecture 'From Cashews to Nudges: The Evolution of Behavioral Economics'; 'supposedly irrelevant factors'); published in the American Economic Review 108(6), 2018",
+   "url": "https://news.uchicago.edu/story/prof-richard-thaler-delivers-nobel-prize-lecture"
+  },
+  {
+   "id": "nbc2017",
+   "cite": "NBC News, 'American Richard Thaler Wins the 2017 Nobel Prize for Economics', 9 Oct 2017; also Christian Science Monitor and The Forward, 10 Oct 2017 (Thaler joked he would spend the prize money 'as irrationally as possible')",
+   "url": "https://www.nbcnews.com/business/economy/american-richard-thaler-wins-2017-nobel-prize-economics-n808911"
+  },
+  {
+   "id": "kkt1990",
+   "cite": "Daniel Kahneman, Jack L. Knetsch & Richard H. Thaler, 'Experimental Tests of the Endowment Effect and the Coase Theorem', Journal of Political Economy 98(6), 1990, pp. 1325-1348 (mugs given to half the subjects at random; median selling prices about twice median buying prices)",
+   "url": "https://econpapers.repec.org/RePEc:ucp:jpolec:v:98:y:1990:i:6:p:1325-48"
+  },
+  {
+   "id": "smart2004",
+   "cite": "Richard H. Thaler & Shlomo Benartzi, 'Save More Tomorrow: Using Behavioral Economics to Increase Employee Saving', Journal of Political Economy 112(S1), 2004, S164-S187 (first implementation: average saving rates of participants rose from 3.5% to 13.6% over 40 months; a before/after comparison of joiners, reviewed by the US DOL CLEAR)",
+   "url": "https://econpapers.repec.org/RePEc:ucp:jpolec:v:112:y:2004:i:s1:p:s164-s187"
+  },
+  {
+   "id": "tk1992",
+   "cite": "Amos Tversky & Daniel Kahneman, 'Advances in Prospect Theory: Cumulative Representation of Uncertainty', Journal of Risk and Uncertainty 5, 1992, pp. 297-323 (estimated loss-aversion coefficient about 2.25: losses weigh roughly twice as much as equal gains)",
+   "url": "https://doi.org/10.1007/BF00122574"
+  },
+  {
+   "id": "ttks1997",
+   "cite": "Richard H. Thaler, Amos Tversky, Daniel Kahneman & Alan Schwartz, 'The Effect of Myopia and Loss Aversion on Risk Taking: An Experimental Test', Quarterly Journal of Economics 112(2), 1997, pp. 647-661 (subjects with the most frequent feedback took the least risk and earned the least money)",
+   "url": "https://www.casact.org/abstract/effect-myopia-and-loss-aversion-risk-taking-experimental-test"
+  },
+  {
+   "id": "bt1995",
+   "cite": "Shlomo Benartzi & Richard H. Thaler, 'Myopic Loss Aversion and the Equity Premium Puzzle', Quarterly Journal of Economics 110(1), 1995, pp. 73-92 (NBER w4369, 1993)",
+   "url": "https://www.nber.org/papers/w4369"
+  },
+  {
+   "id": "pz2005",
+   "cite": "Charles R. Plott & Kathryn Zeiler, 'The Willingness to Pay-Willingness to Accept Gap, the Endowment Effect, Subject Misconceptions, and Experimental Procedures for Eliciting Valuations', American Economic Review 95(3), 2005, pp. 530-545 (with modified procedures and training, no WTP-WTA gap for mugs); comment by Isoni, Loomes & Sugden, AER 101(2), 2011 (gap persists for lotteries: the question is still debated)",
+   "url": "https://econpapers.repec.org/RePEc:aea:aecrev:v:95:y:2005:i:3:p:530-545"
+  },
+  {
+   "id": "dl2022",
+   "cite": "Stefano DellaVigna & Elizabeth Linos, 'RCTs to Scale: Comprehensive Evidence from Two Nudge Units', Econometrica 90(1), 2022, pp. 81-116 (126 RCTs by two US nudge units; average effect 1.4 percentage points, far smaller than in academic journals, where the working paper reports 8.7 points)",
+   "url": "https://www.nber.org/papers/w27594"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Cất bát hạt điều đi",
+   "line": "Đừng chỉ trông vào ý chí: sắp xếp lại môi trường để điều đúng thành điều dễ."
+  },
+  {
+   "name": "Bớt nhìn danh mục",
+   "line": "Nhìn càng dày, càng hay thấy lỗ, và nỗi đau mất mát đẩy ta tránh rủi ro quá mức."
+  },
+  {
+   "name": "Hỏi lại thứ mình đang giữ",
+   "line": "Có rồi dễ thấy quý hơn; hỏi: nếu chưa có, hôm nay mình có mua không?"
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Thaler cất bát hạt điều đi. Nhưng khách lại cảm ơn ông. Theo kinh tế học cổ điển, điều đó thật vô lý.",
+   "visual": {
+    "type": "statement",
+    "kicker": "Misbehaving · Richard H. Thaler",
+    "text": "Cất bát hạt điều. Khách cảm ơn.",
+    "highlight": [
+     "Khách cảm ơn."
+    ]
+   },
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "cảm ơn",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "thaler2015",
+    "booth2015"
+   ]
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Một bữa tối, một tấm bảng đầy những chuyện ngớ ngẩn, và cuối cùng là một giải Nobel. Đến cuối clip, bạn sẽ thấy câu chuyện ấy dạy gì về tiền, và ba bài học bạn mang theo được.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Một câu chuyện",
+      "items": [
+       {
+        "icon": "people",
+        "label": "Một bữa tối"
+       },
+       {
+        "icon": "checklist",
+        "label": "Một tấm bảng",
+        "cue": "một tấm"
+       },
+       {
+        "icon": "star",
+        "label": "Một giải Nobel",
+        "cue": "và cuối"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "compass",
+      "kicker": "Đến cuối clip",
+      "cue": "bạn sẽ",
+      "line": "Ba bài học về tiền.",
+      "line_cue": "dạy gì"
+     }
+    ]
+   },
+   "sources": [
+    "thaler2015",
+    "nobel2017"
+   ]
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Review sách · Tập 27",
+    "title": "Misbehaving: Vì Sao Ta Hành Xử Lệch Với Tiền",
+    "subtitle": "Richard H. Thaler · 2015",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ],
+   "sources": [
+    "thaler2015"
+   ]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Nhiều người nghĩ: khi đụng tới tiền, con người tính toán lý trí. Có thêm lựa chọn thì không bao giờ thiệt. Và ai sai thì thị trường sẽ sửa. Suốt nhiều thập niên, kinh tế học cũng giả định như vậy: con người như những cỗ máy tính toán.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Điều nhiều người nghĩ",
+      "items": [
+       {
+        "icon": "brain",
+        "label": "Tính toán lý trí"
+       },
+       {
+        "icon": "fork",
+        "label": "Thêm lựa chọn, không thiệt",
+        "cue": "có thêm"
+       },
+       {
+        "icon": "scale",
+        "label": "Thị trường tự sửa",
+        "cue": "và ai"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "gear",
+      "kicker": "Giả định của kinh tế học",
+      "cue": "suốt nhiều",
+      "line": "Con người như cỗ máy.",
+      "line_cue": "con người như"
+     }
+    ]
+   },
+   "sources": [
+    "thaler2015"
+   ]
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "Richard Thaler, nhà kinh tế học ở Đại học Chicago, dùng hai cái tên. Econ là cỗ máy trong sách giáo khoa. Human là người thật, như bạn và mình. Năm hai nghìn không trăm mười lăm, ông kể lại hành trình chứng minh Human khác Econ, trong cuốn Misbehaving.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Richard H. Thaler",
+      "initials": "RT",
+      "role": "Nhà kinh tế học · ĐH Chicago",
+      "years": "Tác giả Misbehaving"
+     },
+     {
+      "type": "compare",
+      "title": "Hai cái tên",
+      "cue": "econ là",
+      "left": {
+       "title": "Econ",
+       "items": [
+        "Cỗ máy trong sách"
+       ]
+      },
+      "right": {
+       "title": "Human",
+       "items": [
+        "Người thật, như ta"
+       ]
+      }
+     },
+     {
+      "type": "icon",
+      "icon": "book",
+      "kicker": "2015 · W. W. Norton",
+      "cue": "năm hai",
+      "line": "Misbehaving: Human khác Econ.",
+      "line_cue": "ông kể"
+     }
+    ]
+   },
+   "sources": [
+    "thaler2015",
+    "nobel2017"
+   ]
+  },
+  {
+   "id": "b03",
+   "act": "story",
+   "narration": "Chuyện bắt đầu ở Rochester, vào những năm một nghìn chín trăm bảy mươi. Thaler khi ấy còn là một nhà kinh tế trẻ. Ông mời bạn bè đến ăn tối, và trước bữa chính, đặt ra một bát hạt điều lớn. Mọi người bốc ăn liên tục.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "house",
+      "kicker": "Rochester · những năm 1970",
+      "line": "Một nhà kinh tế trẻ.",
+      "line_cue": "thaler khi"
+     },
+     {
+      "type": "icon",
+      "icon": "people",
+      "kicker": "Bữa tối với bạn bè",
+      "cue": "ông mời",
+      "line": "Một bát hạt điều lớn.",
+      "line_cue": "trước bữa"
+     },
+     {
+      "type": "icon",
+      "icon": "clock",
+      "motion": "spin",
+      "kicker": "Trước bữa chính",
+      "cue": "mọi người",
+      "line": "Bốc ăn liên tục."
+     }
+    ]
+   },
+   "sources": [
+    "thaler2015",
+    "booth2015"
+   ]
+  },
+  {
+   "id": "b04",
+   "act": "story",
+   "narration": "Thấy bữa chính sắp bị phá hỏng, Thaler cất bát hạt điều vào bếp. Khách cảm ơn ông. Theo lời Thaler kể, câu hỏi bật ra ngay sau đó: vì sao bớt đi một lựa chọn lại khiến người ta vui hơn?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "door",
+      "kicker": "Cất bát vào bếp",
+      "line": "Khách cảm ơn ông.",
+      "line_cue": "khách"
+     },
+     {
+      "type": "statement",
+      "kicker": "Theo lời Thaler kể",
+      "cue": "câu hỏi",
+      "text": "Bớt một lựa chọn, lại vui hơn?",
+      "highlight": [
+       "vui hơn?"
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "thaler2015",
+    "booth2015",
+    "nobel_lecture"
+   ]
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Theo lý thuyết, có thêm lựa chọn không bao giờ làm ta thiệt: không muốn thì đừng ăn. Nhưng người thật biết mình sẽ không dừng được. Thaler gọi những thứ như cái bát ấy là yếu tố tưởng như không liên quan. Lý thuyết bảo chúng vô can. Đời thực thì không.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "fork",
+      "kicker": "Theo lý thuyết",
+      "line": "Thêm lựa chọn, không thiệt.",
+      "line_cue": "có thêm"
+     },
+     {
+      "type": "icon",
+      "icon": "snowball",
+      "motion": "grow",
+      "kicker": "Người thật",
+      "cue": "nhưng người",
+      "line": "Biết mình không dừng được.",
+      "line_cue": "biết mình"
+     },
+     {
+      "type": "statement",
+      "kicker": "Thaler gọi là",
+      "cue": "cái bát",
+      "text": "Yếu tố tưởng như không liên quan.",
+      "highlight": [
+       "tưởng như"
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "thaler2015",
+    "nobel_lecture"
+   ]
+  },
+  {
+   "id": "b06",
+   "act": "story",
+   "narration": "Từ giữa những năm một nghìn chín trăm bảy mươi, Thaler ghi những chuyện như vậy lên tấm bảng trong phòng làm việc. Trong sách, ông gọi nó là Danh sách: những điều ngớ ngẩn người ta hay làm. Mỗi dòng là một chỗ Human lệch khỏi Econ.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "checklist",
+      "kicker": "Từ giữa những năm 1970",
+      "line": "Tấm bảng trong phòng làm việc.",
+      "line_cue": "tấm bảng"
+     },
+     {
+      "type": "statement",
+      "kicker": "The List · Danh sách",
+      "cue": "ông gọi",
+      "text": "Những điều ngớ ngẩn người ta hay làm.",
+      "highlight": [
+       "ngớ ngẩn"
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "compass",
+      "kicker": "Mỗi dòng",
+      "cue": "mỗi dòng",
+      "line": "Human lệch khỏi Econ."
+     }
+    ]
+   },
+   "sources": [
+    "thaler2015",
+    "rochester"
+   ]
+  },
+  {
+   "id": "b07",
+   "act": "story",
+   "narration": "Có những dòng về sau được đem vào phòng thí nghiệm. Trong một bài báo năm một nghìn chín trăm chín mươi, Thaler cùng Daniel Kahneman và Jack Knetsch phát cốc cho một nửa số sinh viên. Người có cốc đòi giá bán khoảng gấp đôi giá mà người chưa có chịu trả. Họ gọi đó là hiệu ứng sở hữu.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "1990 · Kahneman, Knetsch, Thaler",
+      "line": "Phát cốc cho nửa lớp.",
+      "line_cue": "thaler cùng"
+     },
+     {
+      "type": "compare",
+      "title": "Cùng một chiếc cốc",
+      "cue": "người có",
+      "left": {
+       "title": "Người có cốc",
+       "items": [
+        "Đòi bán: ~2×"
+       ]
+      },
+      "right": {
+       "title": "Người chưa có",
+       "items": [
+        "Chịu trả: 1×"
+       ]
+      }
+     },
+     {
+      "type": "icon",
+      "icon": "anchor",
+      "kicker": "Hiệu ứng sở hữu",
+      "cue": "họ gọi",
+      "line": "Có rồi, thấy quý hơn."
+     }
+    ]
+   },
+   "sources": [
+    "kkt1990"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b08",
+   "act": "story",
+   "narration": "Từ tấm bảng ấy đến Stockholm là một chặng dài. Năm hai nghìn không trăm mười bảy, Thaler nhận giải Nobel kinh tế, vì những đóng góp cho kinh tế học hành vi. Được hỏi sẽ tiêu tiền thưởng thế nào, ông đùa: sẽ cố tiêu nó một cách phi lý nhất có thể.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "star",
+      "kicker": "2017 · Nobel kinh tế",
+      "line": "Vì kinh tế học hành vi.",
+      "line_cue": "vì những"
+     },
+     {
+      "type": "statement",
+      "kicker": "Thaler đùa",
+      "cue": "được hỏi",
+      "text": "Tiêu tiền thưởng phi lý nhất có thể.",
+      "highlight": [
+       "phi lý nhất"
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "nobel2017",
+    "nbc2017"
+   ]
+  },
+  {
+   "id": "b09",
+   "act": "principle",
+   "narration": "Bài học thứ nhất: cất bát hạt điều đi. Đừng chỉ trông vào ý chí; hãy sắp xếp lại môi trường. Thaler và Shlomo Benartzi làm vậy với tiết kiệm: người lao động hứa trước, mỗi lần tăng lương thì tự động trích thêm. Ở công ty đầu tiên áp dụng, tỷ lệ tiết kiệm của người tham gia tăng từ ba phẩy năm lên mười ba phẩy sáu phần trăm, sau bốn mươi tháng.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "lock",
+      "kicker": "Bài học 1",
+      "line": "Cất bát hạt điều đi.",
+      "line_cue": "cất bát"
+     },
+     {
+      "type": "icon",
+      "icon": "clock",
+      "kicker": "Save More Tomorrow",
+      "cue": "thaler và",
+      "line": "Tăng lương, tự động trích thêm.",
+      "line_cue": "người lao"
+     },
+     {
+      "type": "stat",
+      "from": 3.5,
+      "value": 13.6,
+      "decimals": 1,
+      "suffix": "%",
+      "label": "tỷ lệ tiết kiệm sau 40 tháng",
+      "note": "người tham gia · công ty đầu tiên · Thaler & Benartzi 2004",
+      "cue": "ở công ty"
+     }
+    ]
+   },
+   "sources": [
+    "smart2004"
+   ]
+  },
+  {
+   "id": "b10",
+   "act": "principle",
+   "narration": "Bài học thứ hai: bớt nhìn danh mục. Theo ước tính của Kahneman và Tversky, nỗi đau khi mất tiền lớn khoảng gấp đôi niềm vui khi được cùng số tiền. Nhìn càng dày, ta càng hay thấy lỗ. Trong một thí nghiệm năm một nghìn chín trăm chín mươi bảy, nhóm nhận thông tin dày nhất chọn ít rủi ro nhất, và kiếm ít tiền nhất.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "eye",
+      "kicker": "Bài học 2",
+      "line": "Bớt nhìn danh mục."
+     },
+     {
+      "type": "icon",
+      "icon": "scale",
+      "kicker": "Mất đau ~2× được vui",
+      "cue": "nỗi đau",
+      "line": "Ước tính, Kahneman & Tversky."
+     },
+     {
+      "type": "compare",
+      "title": "Thí nghiệm 1997 · Thaler và cộng sự",
+      "cue": "trong một",
+      "left": {
+       "title": "Xem dày nhất",
+       "items": [
+        "Ít rủi ro nhất",
+        "Ít tiền nhất"
+       ]
+      },
+      "right": {
+       "title": "Xem thưa hơn",
+       "items": [
+        "Dám nhận rủi ro hơn"
+       ]
+      }
+     }
+    ]
+   },
+   "sources": [
+    "tk1992",
+    "ttks1997",
+    "bt1995"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b11",
+   "act": "principle",
+   "narration": "Bài học thứ ba: hỏi lại thứ mình đang giữ. Hiệu ứng sở hữu có thể khiến ta quý một cổ phiếu chỉ vì nó đang nằm trong tay mình. Một câu hỏi mình thấy hữu ích: nếu hôm nay chưa có nó, mình có mua nó với giá này không?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "mirror",
+      "kicker": "Bài học 3",
+      "line": "Hỏi lại thứ mình đang giữ."
+     },
+     {
+      "type": "icon",
+      "icon": "chart",
+      "kicker": "Hiệu ứng sở hữu",
+      "cue": "khiến ta",
+      "line": "Quý cổ phiếu vì đang giữ.",
+      "line_cue": "quý một"
+     },
+     {
+      "type": "statement",
+      "kicker": "Một câu hỏi để gỡ",
+      "cue": "một câu",
+      "text": "Chưa có nó, hôm nay có mua không?",
+      "highlight": [
+       "có mua không?"
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "kkt1990",
+    "thaler2015"
+   ]
+  },
+  {
+   "id": "b12",
+   "act": "complication",
+   "narration": "Một lời nhắc công bằng. Misbehaving là hồi ký của người trong cuộc, kể từ phía Thaler. Và không phải kết quả nào cũng vững như nhau. Năm hai nghìn không trăm lẻ năm, Plott và Zeiler làm lại thí nghiệm cốc với cách hỏi khác, hướng dẫn kỹ hơn, và khoảng chênh biến mất. Đến nay, chuyện này vẫn còn gây tranh cãi.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "letter",
+      "kicker": "Một lời nhắc công bằng",
+      "line": "Hồi ký của người trong cuộc.",
+      "line_cue": "misbehaving là"
+     },
+     {
+      "type": "trio",
+      "kicker": "Plott & Zeiler · 2005",
+      "cue": "năm hai",
+      "items": [
+       {
+        "icon": "magnifier",
+        "label": "Làm lại thí nghiệm cốc"
+       },
+       {
+        "icon": "checklist",
+        "label": "Hướng dẫn kỹ hơn",
+        "cue": "hướng dẫn"
+       },
+       {
+        "icon": "scale",
+        "label": "Khoảng chênh biến mất",
+        "cue": "và khoảng"
+       }
+      ],
+      "line": "Vẫn còn gây tranh cãi.",
+      "line_cue": "đến nay"
+     }
+    ]
+   },
+   "sources": [
+    "pz2005",
+    "thaler2015"
+   ],
+   "certainty": "disputed"
+  },
+  {
+   "id": "b13",
+   "act": "complication",
+   "narration": "Còn những thiết kế kiểu cất bát hạt điều, mà Thaler và Cass Sunstein gọi là cú hích, ngoài đời thì sao? Năm hai nghìn không trăm hai mươi hai, DellaVigna và Linos xem hơn một trăm hai mươi thử nghiệm của hai đơn vị cú hích ở Mỹ. Tác động trung bình khoảng một phẩy bốn điểm phần trăm, nhỏ hơn nhiều so với các bài báo học thuật. Có tác dụng, nhưng không phải phép màu.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "bulb",
+      "kicker": "Cú hích ngoài đời?",
+      "line": "Thaler và Sunstein gọi là cú hích.",
+      "line_cue": "mà thaler"
+     },
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "DellaVigna & Linos · 2022",
+      "cue": "năm hai",
+      "line": "126 thử nghiệm ngoài đời.",
+      "line_cue": "hơn một"
+     },
+     {
+      "type": "stat",
+      "value": 1.4,
+      "decimals": 1,
+      "suffix": " điểm %",
+      "label": "tác động trung bình",
+      "note": "126 thử nghiệm · nhỏ hơn nhiều so với bài báo học thuật",
+      "cue": "tác động"
+     },
+     {
+      "type": "icon",
+      "icon": "sprout",
+      "kicker": "Có tác dụng",
+      "cue": "có tác",
+      "line": "Nhưng không phải phép màu.",
+      "line_cue": "nhưng không"
+     }
+    ]
+   },
+   "sources": [
+    "dl2022"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b14",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Bạn muốn đầu tư đều mỗi tháng, nhưng tháng nào tiền cũng tiêu hết trước. Theo Thaler, cách nào đáng thử nhất?",
+   "visual": {
+    "type": "question",
+    "question": "Muốn đầu tư đều, nhưng tháng nào cũng tiêu hết. Theo Thaler, thử gì?",
+    "choices": [
+     "Tự hứa tháng sau cố hơn",
+     "Cài trích tiền tự động ngày lương về",
+     "Xem giá mỗi ngày cho có động lực"
+    ],
+    "answer": "B — cất bát hạt điều đi.",
+    "think_seconds": 5
+   }
+  },
+  {
+   "id": "b15",
+   "act": "recap",
+   "narration": "Vậy là ba bài học từ Misbehaving. Cất bát hạt điều đi. Bớt nhìn danh mục. Và hỏi lại thứ mình đang giữ.",
+   "visual": {
+    "type": "list",
+    "title": "Ba bài học",
+    "check": true,
+    "items": [
+     {
+      "text": "Cất bát hạt điều đi",
+      "cue": "cất"
+     },
+     {
+      "text": "Bớt nhìn danh mục",
+      "cue": "bớt"
+     },
+     {
+      "text": "Hỏi lại thứ mình đang giữ",
+      "cue": "và hỏi"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b16",
+   "act": "close",
+   "narration": "Thaler không thắng bát hạt điều bằng ý chí. Ông thắng bằng cách mang nó vào bếp. Bài giảng Nobel của ông có tên: Từ hạt điều đến cú hích. Còn bát hạt điều của bạn, đang nằm ở đâu?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "door",
+      "kicker": "Không bằng ý chí",
+      "line": "Mang bát vào bếp.",
+      "line_cue": "ông thắng"
+     },
+     {
+      "type": "icon",
+      "icon": "star",
+      "kicker": "Bài giảng Nobel · 2017",
+      "cue": "bài giảng",
+      "line": "Từ hạt điều đến cú hích.",
+      "line_cue": "của ông"
+     },
+     {
+      "type": "statement",
+      "kicker": "Câu hỏi để lại",
+      "cue": "còn bát",
+      "text": "Bát hạt điều của bạn ở đâu?",
+      "highlight": [
+       "của bạn"
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "nobel_lecture",
+    "booth2015"
+   ]
+  },
+  {
+   "id": "b17",
+   "act": "close",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
+   "visual": {
+    "type": "end",
+    "kicker": "Review sách · Tập 27",
+    "title": "Misbehaving: Vì Sao Ta Hành Xử Lệch Với Tiền",
+    "ask": "Bạn muốn clip tiếp theo về cuốn sách nào?",
+    "ask_hint": "Một cuốn sách · một nhà kinh tế · một chủ đề",
+    "ask_cue": "còn bạn",
+    "sources_line": "Nguồn: Thaler, Misbehaving (2015) · Nobel 2017 · KKT (1990) · Thaler & Benartzi (2004) · Plott & Zeiler (2005) · DellaVigna & Linos (2022)",
+    "disclaimer": "Nội dung giáo dục, tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư.",
+    "sources_cue": "còn bạn"
+   }
+  }
+ ],
+ "pronounce": {}
+}
