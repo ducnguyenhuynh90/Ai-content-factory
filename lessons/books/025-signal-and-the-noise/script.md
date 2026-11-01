@@ -1,5 +1,5 @@
 # Tín Hiệu Và Độ Nhiễu
-_Review sách · Tập 25 · 928 words · ~3.99 min · 4:3_
+_Review sách · Tập 25 · 918 words · ~3.95 min · 4:3_
 
 ## Learning goals
 - Kể lại chuyện lũ Grand Forks 1997: dự báo đỉnh lũ 49 feet, đê khoảng 51 feet, nước lên khoảng 54 feet, và biên sai số khoảng ±9 feet (theo Silver) không được nói ra
@@ -14,8 +14,8 @@ _Review sách · Tập 25 · 928 words · ~3.99 min · 4:3_
 ## Script
 | # | act | narration | on screen |
 |---|---|---|---|
-| h1 | hook | Dự báo nói nước sông lên bốn mươi chín feet. Đê cao năm mươi mốt. Nhưng nước lên tới năm mươi tư. | statement: Dự báo 49 ft. Đê 51 ft. Nước lên 54 ft. |
-| h2 | context | Grand Forks, mùa xuân năm một nghìn chín trăm chín mươi bảy. Dự báo ấy không trật nhiều. Thứ bị bỏ quên là một con số đi kèm. Đến cuối clip, bạn sẽ biết con số ấy, vì sao dự báo thời tiết giỏi lên, và ba bài học. | shots: shots |
+| h1 | hook | Dự báo nói nước sông lên bốn mươi chín feet. Đê cao năm mươi mốt. Nhưng nước lên tới năm mươi tư. | shots: shots |
+| h2 | context | Grand Forks, mùa xuân năm một nghìn chín trăm chín mươi bảy. Dự báo ấy không trật nhiều. Vậy vì sao thành phố vẫn ngập? Theo Silver, lý do là một con số đi kèm đã bị bỏ quên. | shots: shots |
 | t0 | context |  | title: Tín Hiệu Và Độ Nhiễu |
 | b01 | misconception | Ta hay nghĩ dự báo tốt là một con số chắc nịch. Và càng có nhiều dữ liệu trong tay, thì càng đoán đúng. Nate Silver cho rằng không hẳn. Dữ liệu càng nhiều thì nhiễu cũng càng nhiều, còn tín hiệu thật thì hiếm. | shots: shots |
 | b02 | context | Nate Silver là nhà thống kê người Mỹ. Năm hai nghìn lẻ tám, trên trang FiveThirtyEight, ông đoán đúng bốn mươi chín trên năm mươi bang trong bầu cử tổng thống Mỹ. Năm hai nghìn mười hai, ông ra cuốn sách này, đi qua bóng chày, bài xì phé, chuyện thời tiết, rồi đến động đất và kinh tế. | shots: shots |
