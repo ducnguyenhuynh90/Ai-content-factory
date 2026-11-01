@@ -1,5 +1,5 @@
 # Tư Duy Hộp Đen
-_Review sách · Tập 24 · 874 words · ~3.76 min · 4:3_
+_Review sách · Tập 24 · 860 words · ~3.7 min · 4:3_
 
 ## Learning goals
 - Kể lại hai câu chuyện của sách: United Airlines 173 (1978) dẫn tới Crew Resource Management, và ca mổ của Elaine Bromiley (2005) cùng cuộc điều tra độc lập mà chồng chị, phi công Martin Bromiley, đề nghị
@@ -14,15 +14,15 @@ _Review sách · Tập 24 · 874 words · ~3.76 min · 4:3_
 ## Script
 | # | act | narration | on screen |
 |---|---|---|---|
-| h1 | hook | Hơn ba tỷ người đi máy bay. Chỉ hai trăm mười người thiệt mạng. Bí mật: một chiếc hộp màu cam. | statement: Hơn 3 tỷ người bay. Chỉ 210 thiệt mạng. |
-| h2 | context | Đó là số liệu năm hai nghìn mười ba. Chiếc hộp ấy là hộp đen, thứ thật ra được sơn màu cam, để dễ tìm sau tai nạn. Nhưng sức mạnh của nó nằm ở cách cả ngành học từ mỗi lần sai. Đến cuối clip, bạn sẽ thấy hai thế giới đối xử với sai lầm khác nhau, vì sao, và ba thói quen bạn mang theo được. | shots: shots |
+| h1 | hook | Hơn ba tỷ người đi máy bay. Chỉ hai trăm mười người thiệt mạng. Bí mật: một chiếc hộp màu cam. | shots: shots |
+| h2 | context | Đó là số liệu năm hai nghìn mười ba. Chiếc hộp ấy là hộp đen, thật ra được sơn màu cam để dễ tìm. Nhưng sức mạnh của nó nằm ở cách cả ngành học từ mỗi lần sai. Vậy vì sao ở nhiều nơi khác, cùng một lỗi cứ lặp đi lặp lại? | shots: shots |
 | t0 | context |  | title: Tư Duy Hộp Đen |
 | b01 | misconception | Ta hay nghĩ thất bại là điều đáng xấu hổ, nên giấu đi là tốt nhất. Và người giỏi thì ít khi sai. Syed cho rằng chính thái độ ấy khiến ta lặp lại cùng một lỗi. | shots: shots |
 | b02 | context | Matthew Syed từng là tay vợt bóng bàn hàng đầu nước Anh, hai lần dự Olympic, rồi trở thành nhà báo của tờ The Times. Năm hai nghìn mười lăm, ông viết Black Box Thinking. Tạm dịch: Tư Duy Hộp Đen. | shots: shots |
 | b03 | story | Tháng Mười Hai năm một nghìn chín trăm bảy mươi tám, chuyến bay United Airlines một trăm bảy mươi ba gặp trục trặc ở bánh đáp, gần Portland. Cơ trưởng mải xử lý nó, cho máy bay bay vòng chờ, trong khi nhiên liệu cạn dần. | shots: shots |
 | b04 | story | Máy bay rơi trước khi về được đến đường băng. Mười người thiệt mạng. Hộp ghi âm buồng lái cho thấy các thành viên khác trong tổ lái đã nhắc về nhiên liệu, nhưng không làm cơ trưởng hiểu mức nguy cấp. | shots: shots |
 | b05 | story | Ngành hàng không đã không dừng ở việc chỉ ra lỗi của một người. Họ sửa cả hệ thống, để lỗi ấy khó lặp lại. Cơ quan điều tra Mỹ khuyến nghị đào tạo lại cách tổ lái làm việc với nhau: cơ trưởng lắng nghe, người khác dám lên tiếng. Từ đó ra đời Crew Resource Management, nay được dùng khắp thế giới. | shots: shots |
-| b06 | story | Giờ sang một phòng mổ ở Anh, tháng Ba năm hai nghìn lẻ năm. Elaine Bromiley, ba mươi bảy tuổi, vào viện cho một ca phẫu thuật xoang thông thường. Sau khi gây mê, đường thở của chị gặp sự cố. Theo báo cáo điều tra, các bác sĩ cố mãi một cách, và dường như không nhận ra thời gian đang trôi. Chị mất mười ba ngày sau đó. | shots: shots |
+| b06 | story | Còn trong bệnh viện thì sao? Tháng Ba năm hai nghìn lẻ năm, ở Anh. Elaine Bromiley, ba mươi bảy tuổi, vào viện cho một ca phẫu thuật xoang thông thường. Sau khi gây mê, đường thở của chị gặp sự cố. Theo báo cáo điều tra, các bác sĩ cố mãi một cách, và dường như không nhận ra thời gian đang trôi. Chị mất mười ba ngày sau đó. | shots: shots |
 | b06b | story | Chồng chị, Martin Bromiley, là một phi công. Anh không đi tìm người để trừng phạt. Anh đề nghị một cuộc điều tra độc lập, như ngành hàng không vẫn làm. Báo cáo cũng ghi nhận: dù xử lý hoàn hảo, có thể vẫn không cứu được chị. | shots: shots |
 | b07 | turn | Syed gọi đó là khác biệt giữa vòng lặp mở và vòng lặp đóng. Ở vòng lặp đóng, lỗi bị giấu đi hoặc đổ cho xui rủi, nên không ai học được gì. Theo ông, ngành y thường nghiêng về phía ấy, vì sợ bị đổ lỗi và sợ bị kiện. | shots: shots |
 | b08 | principle | Bài học thứ nhất: thất bại là dữ liệu. Như hộp đen, hãy ghi lại điều gì đã xảy ra, ngay khi còn nhớ rõ. Không phải để tự trách, mà để biết lần sau sửa ở đâu. | shots: shots |
