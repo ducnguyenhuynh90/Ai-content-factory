@@ -1,5 +1,5 @@
 # Nhà Đầu Tư Dhandho
-_Review sách · Tập 30 · 799 words · ~3.45 min · 4:3_
+_Review sách · Tập 30 · 805 words · ~3.47 min · 4:3_
 
 ## Learning goals
 - Kể lại ví dụ Papa Patel trong sách: rời Uganda sau năm 1972, mua nhà nghỉ khoảng 50.000 đô với khoảng 5.000 đô tiền mặt, cả nhà tự làm, chi phí thấp, giá phòng rẻ hơn; nếu thất bại chỉ mất khoảng 5.000 đô
@@ -21,7 +21,7 @@ _Review sách · Tập 30 · 799 words · ~3.45 min · 4:3_
 | b02 | context | The Dhandho Investor ra năm hai nghìn không trăm lẻ bảy. Tác giả Mohnish Pabrai là một kỹ sư gốc Ấn Độ ở Mỹ, từng lập một công ty công nghệ, rồi năm một nghìn chín trăm chín mươi chín mở quỹ đầu tư riêng. Theo Pabrai, Dhandho là một từ tiếng Gujarat, nghĩa là làm ăn để tạo ra của cải. | shots: shots |
 | b03 | story | Pabrai kể về một người cha điển hình, ông gọi là Papa Patel. Năm một nghìn chín trăm bảy mươi hai, chính quyền Idi Amin trục xuất cộng đồng người gốc Á khỏi Uganda. Nhiều gia đình gốc Gujarat ở đó mất gần hết tài sản. Một phần trong số họ sang Mỹ, làm lại từ đầu. | shots: shots |
 | b04 | story | Ở Mỹ, Papa Patel thấy một nhà nghỉ nhỏ đang được bán rẻ. Trong ví dụ của Pabrai, giá khoảng năm mươi nghìn đô. Gia đình góp khoảng năm nghìn đô tiền mặt, phần còn lại vay ngân hàng. Cả nhà dọn vào ở ngay trong nhà nghỉ, và tự làm mọi việc. _(estimate)_ | shots: shots |
-| b05 | story | Không thuê nhân viên, nên chi phí rất thấp. Nhờ vậy, họ bán phòng rẻ hơn các nhà nghỉ quanh đó, và có nhiều khách hơn. Theo phép tính minh họa của Pabrai, mỗi năm gia đình thu về khoảng bốn trăm phần trăm trên năm nghìn đô bỏ ra ban đầu. Đó là ví dụ làm tròn, không phải số liệu thật. _(estimate)_ | shots: shots |
+| b05 | story | Vì sao họ làm ăn được? Không thuê nhân viên, nên chi phí rất thấp. Nhờ vậy, họ bán phòng rẻ hơn các nhà nghỉ quanh đó, và có nhiều khách hơn. Theo phép tính minh họa của Pabrai, mỗi năm gia đình thu về khoảng bốn trăm phần trăm trên năm nghìn đô bỏ ra ban đầu. Đó là ví dụ làm tròn, không phải số liệu thật. _(estimate)_ | shots: shots |
 | b06 | story | Còn nếu thất bại? Ngân hàng lấy lại nhà nghỉ. Gia đình mất khoảng năm nghìn đô, rồi đi làm thuê, đúng việc họ vẫn sẽ làm nếu không mua. Pabrai gói lại trong một câu: sấp, tôi thắng; ngửa, tôi không thua bao nhiêu. | shots: shots |
 | b07 | story | Khi một gia đình làm được, họ hàng và người quen làm theo, cùng một mô hình. Theo Pabrai, đến khi sách ra năm hai nghìn không trăm lẻ bảy, các gia đình Patel sở hữu hơn nửa số nhà nghỉ ở Mỹ. Các nguồn khác đưa ra những ước tính khác nhau, nhưng đều là một tỷ lệ rất lớn. _(estimate)_ | shots: shots |
 | b08 | principle | Bài học thứ nhất: sấp thắng, ngửa thua ít. Trước khi hỏi mình có thể lời bao nhiêu, Pabrai hỏi: nếu sai, mình mất bao nhiêu? Khi phần thua đã nhỏ và biết trước, phần thắng mới đáng để nghĩ tới. | shots: shots |
