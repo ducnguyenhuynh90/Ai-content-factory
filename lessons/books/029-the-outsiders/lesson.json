@@ -581,7 +581,8 @@
     "thorndike2012",
     "thorndike2014"
    ],
-   "certainty": "estimate"
+   "certainty": "estimate",
+   "take": 3
   },
   {
    "id": "b09",
