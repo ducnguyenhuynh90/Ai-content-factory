@@ -2,7 +2,7 @@
 _Review sách · Tập 23 · 778 words · ~3.36 min · 4:3_
 
 ## Learning goals
-- Kể lại chuyện năm 1982 của Ray Dalio: dự báo đại suy thoái trước Quốc hội Mỹ, sai, gần như cả Bridgewater phải nghỉ việc, vay bố 4.000 đô
+- Kể lại chuyện năm 1982 của Ray Dalio: dự báo đại suy thoái trước Quốc hội Mỹ, sai, gần như cả Bridgewater phải nghỉ việc, mượn bố 4.000 đô
 - Dùng ba nguyên tắc: đau + suy ngẫm = tiến bộ; hỏi 'làm sao mình biết mình đúng?'; viết nguyên tắc ra giấy
 - Biết mặt còn lại: văn hóa 'minh bạch triệt để' của Bridgewater và tranh cãi quanh cuốn The Fund (2023); sách khuyên người đọc tự suy nghĩ chứ không chép nguyên tắc
 
@@ -15,13 +15,13 @@ _Review sách · Tập 23 · 778 words · ~3.36 min · 4:3_
 | # | act | narration | on screen |
 |---|---|---|---|
 | h1 | hook | Ray Dalio báo trước một cuộc đại suy thoái, ngay trước Quốc hội Mỹ. Rồi ông sai, và suýt trắng tay. | statement: Báo trước đại suy thoái. Rồi sai. |
-| h2 | context | Ông mất nhiều đến mức phải đi vay chính bố mình. Vậy mà về sau, ông gọi đó là một trong những điều tốt nhất từng xảy ra với mình. Đến cuối clip, bạn sẽ thấy vì sao, và mang theo ba nguyên tắc. | shots: shots |
+| h2 | context | Ông mất nhiều đến mức phải mượn tiền của chính bố mình. Vậy mà về sau, ông gọi đó là một trong những điều tốt nhất từng xảy ra với mình. Đến cuối clip, bạn sẽ thấy vì sao, và mang theo ba nguyên tắc. | shots: shots |
 | t0 | context |  | title: Nguyên Tắc: Cuộc Sống Và Công Việc |
 | b01 | misconception | Ta hay nghĩ người thành công là người hiếm khi sai, và luôn tự tin vào nhận định của mình. Dalio thì nghĩ khác. Theo ông, ai cũng sai. Điều tạo ra khác biệt là ta làm gì sau khi sai. | shots: shots |
 | b02 | context | Năm một nghìn chín trăm bảy mươi lăm, Dalio lập Bridgewater Associates từ căn hộ hai phòng ngủ của mình ở New York. Về sau, nó thành một trong những quỹ đầu tư lớn nhất thế giới. Cuốn Principles ra năm hai nghìn mười bảy, từ một bản ngắn ông đưa lên mạng miễn phí năm hai nghìn mười một. | shots: shots |
 | b03 | story | Quay lại năm một nghìn chín trăm tám mươi hai. Tháng Tám năm ấy, Mexico vỡ nợ, và nhiều nước khác theo sau. Dalio tin một cuộc đại suy thoái sắp đến. Ông nói điều ấy trên báo, trên truyền hình, và cả trước Quốc hội Mỹ. | shots: shots |
 | b04 | story | Nhưng ông đã sai. Theo lời Dalio kể, Cục Dự trữ Liên bang Mỹ nới lỏng tiền tệ, và thị trường chứng khoán bắt đầu một đợt tăng giá dài. Ông thua lỗ nặng, cả tiền của mình lẫn tiền của khách hàng. | shots: shots |
-| b05 | story | Rồi đến cái giá. Theo lời Dalio kể, ông phải cho gần như mọi người ở Bridgewater nghỉ việc, đến mức công ty chỉ còn lại một mình ông. Ông vay bố bốn nghìn đô la để lo chi tiêu cho gia đình. | shots: shots |
+| b05 | story | Rồi đến cái giá. Theo lời Dalio kể, ông phải cho gần như mọi người ở Bridgewater nghỉ việc, đến mức công ty chỉ còn lại một mình ông. Ông mượn bố bốn nghìn đô để lo chi tiêu cho gia đình. | shots: shots |
 | b06 | turn | Dalio kể, đó là một trải nghiệm rất đau. Nhưng nó đổi cách ông nghĩ. Thay vì tự nhủ: mình đúng, ông bắt đầu hỏi: làm sao mình biết là mình đúng? | shots: shots |
 | b07 | principle | Bài học thứ nhất: đau cộng suy ngẫm bằng tiến bộ. Đó là công thức Dalio viết trong sách. Theo ông, nỗi đau là tín hiệu rằng có điều cần học. Né tránh nó, ta mất bài học. Dừng lại suy ngẫm, ta tiến lên. | shots: shots |
 | b08 | principle | Bài học thứ hai: hỏi làm sao mình biết mình đúng. Sau năm một nghìn chín trăm tám mươi hai, Dalio đi tìm những người thông minh nhất mà không đồng ý với ông. Ông muốn hiểu lý lẽ của họ, chứ không phải để thắng một cuộc tranh luận. | shots: shots |
@@ -33,7 +33,7 @@ _Review sách · Tập 23 · 778 words · ~3.36 min · 4:3_
 | b12 | question | Giờ thử một chút nhé. Bạn vừa trượt một buổi phỏng vấn cho công việc bạn rất muốn. Theo Dalio, bạn nên làm gì trước tiên? | question: Trượt phỏng vấn cho công việc mơ ước. Theo Dalio, làm gì trước? |
 | b13 | recap | Vậy là ba bài học từ cuốn Principles của Ray Dalio. Đau cộng suy ngẫm bằng tiến bộ. Hỏi làm sao biết mình đúng. Và viết nguyên tắc ra giấy. | shots: shots |
 | b14 | close | Năm một nghìn chín trăm tám mươi hai, Dalio sai trước cả Quốc hội Mỹ. Ông không giấu lỗi ấy đi. Ông kể lại nó nhiều lần, và biến nó thành nguyên tắc. Lần tới bạn thấy đau vì sai, hãy hỏi: điều này đang dạy mình gì? | shots: shots |
-| b15 | close | Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau. | end: Nguyên Tắc: Cuộc Sống Và Công Việc |
+| b15 | close | Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau. | end: Nguyên Tắc (Principles) |
 
 ## Sources
 - [dalio2017] Ray Dalio, Principles: Life and Work, Simon & Schuster, New York, 19 Sept 2017. Part I 'Where I'm Coming From': Mexico defaulted in August 1982; Dalio had forecast a depression in columns, on TV and in testimony to Congress (November 1982); he was wrong: the Fed eased and the stock market began a long bull market; he lost money for himself and his clients, had to let go of everyone until he was the only one left, and borrowed $4,000 from his father to pay family bills; he moved from 'I'm right' to 'How do I know I'm right?' and sought out the smartest people who disagreed with him. 'Pain + Reflection = Progress'; writing down decision criteria and principles; 'think for yourself to decide what you want, what is true, and what you should do'; radical truth and radical transparency at Bridgewater (most meetings recorded)

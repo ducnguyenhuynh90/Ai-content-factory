@@ -20,7 +20,7 @@
    "secondary_color": "#12100E"
   },
   "learning_goals": [
-   "Kể lại chuyện năm 1982 của Ray Dalio: dự báo đại suy thoái trước Quốc hội Mỹ, sai, gần như cả Bridgewater phải nghỉ việc, vay bố 4.000 đô",
+   "Kể lại chuyện năm 1982 của Ray Dalio: dự báo đại suy thoái trước Quốc hội Mỹ, sai, gần như cả Bridgewater phải nghỉ việc, mượn bố 4.000 đô",
    "Dùng ba nguyên tắc: đau + suy ngẫm = tiến bộ; hỏi 'làm sao mình biết mình đúng?'; viết nguyên tắc ra giấy",
    "Biết mặt còn lại: văn hóa 'minh bạch triệt để' của Bridgewater và tranh cãi quanh cuốn The Fund (2023); sách khuyên người đọc tự suy nghĩ chứ không chép nguyên tắc"
   ],
@@ -34,7 +34,7 @@
    "target_viewer": "Người Việt 20–40 tuổi vừa trải qua một thất bại (thi trượt, mất việc, một dự án đổ vỡ, một khoản lỗ) và đang tự trách; thích sách tư duy, biết tên Ray Dalio nhưng chưa đọc Principles (giả định của người viết, chủ kênh xác nhận lại)",
    "format": "Phân tích sách (book analysis), khoảng 4–5 phút, 4:3, minh họa icon vẽ tay, một giọng đọc",
    "central_question": "Vì sao Ray Dalio gọi lần sai công khai năm 1982, khiến ông suýt trắng tay, là một trong những điều tốt nhất từng xảy ra với mình?",
-   "transformation": "Trước khi xem, họ nghĩ người thành công là người hiếm khi sai và thất bại là thứ nên quên đi. Sau khi xem, họ kể lại được chuyện năm 1982 (Mexico vỡ nợ, điều trần trước Quốc hội, thị trường tăng dài, chỉ còn một mình Dalio, 4.000 đô vay bố), dùng được ba nguyên tắc (đau + suy ngẫm = tiến bộ; hỏi làm sao mình biết mình đúng; viết nguyên tắc ra giấy), và biết văn hóa Bridgewater gây tranh cãi",
+   "transformation": "Trước khi xem, họ nghĩ người thành công là người hiếm khi sai và thất bại là thứ nên quên đi. Sau khi xem, họ kể lại được chuyện năm 1982 (Mexico vỡ nợ, điều trần trước Quốc hội, thị trường tăng dài, chỉ còn một mình Dalio, 4.000 đô mượn bố), dùng được ba nguyên tắc (đau + suy ngẫm = tiến bộ; hỏi làm sao mình biết mình đúng; viết nguyên tắc ra giấy), và biết văn hóa Bridgewater gây tranh cãi",
    "discovery_goal": "Tìm kiếm (\"Principles Ray Dalio\", \"Ray Dalio\", \"Nguyên tắc Ray Dalio\", \"Pain + Reflection = Progress\", \"Bridgewater\", \"minh bạch triệt để\", \"học từ thất bại\") và đề xuất từ video sách tư duy; khán giả tập 6 (Thinking in Bets), tập 11 (Scout Mindset), tập 17 (Dobelli)",
    "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn clip tiếp theo về cuốn sách nào?\" (comment answering the end-card question)",
    "share_recipient": "Một người bạn vừa trượt một kỳ thi hay mất một cơ hội: câu hỏi 'điều này đang dạy mình gì?' giúp nói chuyện mà không an ủi suông",
@@ -42,9 +42,9 @@
    "constraints": "4–5 phút, 4:3, icon vẽ (không footage, không khuôn mặt người thật), một giọng đọc OmniVoice seed 99 speed 0.88, tên tiếng Anh giữ nguyên chính tả, số đọc bằng chữ; không nói lợi nhuận của Bridgewater, không khuyến nghị đầu tư; chuyện năm 1982 kể theo lời Dalio; cuốn The Fund nói công bằng cả hai phía; tên sách tiếng Việt là tạm dịch"
   },
   "youtube": {
-   "title": "Sai trước Quốc hội Mỹ, rồi suýt trắng tay | Principles – Dalio",
-   "thumbnail_text": "Ray Dalio · 1982 · Báo trước đại suy thoái. Rồi sai.",
-   "description": "Năm 1982, Ray Dalio báo trước một cuộc đại suy thoái, trên báo, trên truyền hình và trước Quốc hội Mỹ. Ông đã sai. Theo lời ông kể, Bridgewater chỉ còn lại một mình ông, và ông phải vay bố 4.000 đô la để lo cho gia đình. Vậy mà về sau, Dalio gọi đó là một trong những điều tốt nhất từng xảy ra với mình. Video kể lại câu chuyện ấy, ba nguyên tắc từ Principles: Life and Work (tạm dịch: Nguyên Tắc: Cuộc Sống Và Công Việc): đau + suy ngẫm = tiến bộ; hỏi làm sao biết mình đúng; viết nguyên tắc ra giấy, mặt còn lại của văn hóa \"minh bạch triệt để\" ở Bridgewater cùng tranh cãi quanh cuốn The Fund (2023), và một bài tập nhỏ.\n\nTóm tắt và cảm nhận cá nhân; nội dung giáo dục, không phải lời khuyên đầu tư. Video không nói về lợi nhuận của Bridgewater. Chuyện năm 1982 được kể theo lời chính Dalio (sách, TED 2017). Mô tả của The Fund về văn hóa Bridgewater bị Dalio và Bridgewater bác bỏ; chúng tôi trình bày cả hai phía. Tên sách tiếng Việt là tạm dịch; chúng tôi chưa xác nhận được một bản dịch đã xuất bản. Các câu trích là lược dịch.\n\nChương:\nBáo trước đại suy thoái. Rồi sai.\nNgười thành công có hiếm khi sai?\nRay Dalio, Bridgewater và cuốn Principles\n1982: Mexico vỡ nợ, Dalio lên tiếng\nÔng đã sai\nChỉ còn một mình, và 4.000 đô vay bố\nLàm sao mình biết mình đúng?\nBài học 1: đau + suy ngẫm = tiến bộ\nBài học 2: hỏi làm sao biết mình đúng\nBài học 3: viết nguyên tắc ra giấy\nVòng năm bước\nMặt còn lại: minh bạch triệt để và The Fund\nHãy tự suy nghĩ\nThử một chút: trượt phỏng vấn\nBa bài học\n\nNguồn:\n- Ray Dalio, Principles: Life and Work, Simon & Schuster, 2017\n- Ray Dalio, How to build a company where the best ideas win, TED 2017: https://www.ted.com/talks/ray_dalio_how_to_build_a_company_where_the_best_ideas_win\n- principles.com: https://www.principles.com/\n- Institutional Investor, The Education of Ray Dalio: https://www.institutionalinvestor.com/article/b15130nxhjtqqq/the-education-of-ray-dalio\n- Fortune (13/8/2025): https://fortune.com/2025/08/13/billionaire-ray-dalio-broke-early-career-borrowed-4000-from-dad\n- Barry Ritholtz, MIB live with Ray Dalio (2018): https://ritholtz.com/2018/12/transcript-mib-live-with-ray-dalio\n- Wikipedia, Principles (book): https://en.wikipedia.org/wiki/Principles_(book)\n- Rob Copeland, The Fund, St. Martin's Press, 2023; Axios (7/11/2023): https://www.axios.com/2023/11/07/ray-dalio-investing-book-crying-employees-strippers-mental-health\n- Institutional Investor, Ray Dalio's response to The Fund: https://www.institutionalinvestor.com/article/2cfa0z6x8jzkwsgnk9e68/corner-office/ray-dalios-response-to-the-fund-a-new-book-that-dissects-bridgewater-associates\n\nBạn muốn clip tiếp theo về cuốn sách nào? Để lại bình luận nhé.",
+   "title": "Sai trước Quốc hội Mỹ, rồi suýt trắng tay | Principles – Ray Dalio",
+   "thumbnail_text": "Vậy mà gọi là điều tốt nhất?",
+   "description": "Năm 1982, Ray Dalio báo trước một cuộc đại suy thoái, trên báo, trên truyền hình và trước Quốc hội Mỹ. Ông đã sai. Theo lời ông kể, Bridgewater chỉ còn lại một mình ông, và ông phải mượn bố 4.000 đô la để lo cho gia đình. Vậy mà về sau, Dalio gọi đó là một trong những điều tốt nhất từng xảy ra với mình. Video kể lại câu chuyện ấy, ba nguyên tắc từ Principles: Life and Work (tạm dịch: Nguyên Tắc: Cuộc Sống Và Công Việc): đau + suy ngẫm = tiến bộ; hỏi làm sao biết mình đúng; viết nguyên tắc ra giấy, mặt còn lại của văn hóa \"minh bạch triệt để\" ở Bridgewater cùng tranh cãi quanh cuốn The Fund (2023), và một bài tập nhỏ.\n\nTóm tắt và cảm nhận cá nhân; nội dung giáo dục, không phải lời khuyên đầu tư. Video không nói về lợi nhuận của Bridgewater. Chuyện năm 1982 được kể theo lời chính Dalio (sách, TED 2017, phỏng vấn). Cuốn The Fund của nhà báo Rob Copeland mô tả văn hóa Bridgewater khắc nghiệt hơn nhiều so với trong Principles; Dalio và Bridgewater bác bỏ cuốn sách, gọi đó là mô tả sai lệch. Mình trình bày cả hai phía và không kết luận thay bạn. Mình chưa tìm thấy bản tiếng Việt chính thức; tên sách tiếng Việt là tạm dịch. Các câu của Dalio trong video là lược dịch, không phải trích nguyên văn.\n\nChương:\n0:00 Báo trước đại suy thoái. Rồi sai.\n0:22 Người thành công có hiếm khi sai?\n0:35 Ray Dalio, Bridgewater và cuốn Principles\n0:54 1982: Mexico vỡ nợ, Dalio lên tiếng\n1:09 Ông đã sai\n1:22 Chỉ còn một mình, và 4.000 đô mượn bố\n1:34 Làm sao mình biết mình đúng?\n1:44 Bài học 1: đau + suy ngẫm = tiến bộ\n1:58 Bài học 2: hỏi làm sao biết mình đúng\n2:12 Bài học 3: viết nguyên tắc ra giấy\n2:26 Vòng năm bước\n2:41 Mặt còn lại: minh bạch triệt để và The Fund\n3:10 Hãy tự suy nghĩ\n3:19 Thử một chút: trượt phỏng vấn\n3:37 Ba bài học\n\nNguồn:\n- Ray Dalio, Principles: Life and Work, Simon & Schuster, 2017\n- Ray Dalio, How to build a company where the best ideas win, TED 2017: https://www.ted.com/talks/ray_dalio_how_to_build_a_company_where_the_best_ideas_win\n- principles.com: https://www.principles.com/\n- Institutional Investor, The Education of Ray Dalio: https://www.institutionalinvestor.com/article/b15130nxhjtqqq/the-education-of-ray-dalio\n- CNBC (2/6/2022), Dalio: going broke 'was one of the best things that ever happened to me': https://www.cnbc.com/2022/06/02/ray-dalio-going-broke-was-one-of-the-best-things-to-ever-happen-to-me.html\n- Fortune (13/8/2025): https://fortune.com/2025/08/13/billionaire-ray-dalio-broke-early-career-borrowed-4000-from-dad\n- Barry Ritholtz, MIB live with Ray Dalio (2018): https://ritholtz.com/2018/12/transcript-mib-live-with-ray-dalio\n- Wikipedia, Principles (book): https://en.wikipedia.org/wiki/Principles_(book)\n- Rob Copeland, The Fund, St. Martin's Press, 2023; Axios (7/11/2023): https://www.axios.com/2023/11/07/ray-dalio-investing-book-crying-employees-strippers-mental-health\n- Institutional Investor, Ray Dalio's response to The Fund: https://www.institutionalinvestor.com/article/2cfa0z6x8jzkwsgnk9e68/corner-office/ray-dalios-response-to-the-fund-a-new-book-that-dissects-bridgewater-associates\n\nBạn muốn clip tiếp theo về cuốn sách nào? Để lại bình luận nhé.",
    "tags": [
     "Principles",
     "Ray Dalio",
@@ -52,6 +52,7 @@
     "Nguyên tắc Ray Dalio",
     "Bridgewater",
     "Pain + Reflection = Progress",
+    "The Fund Rob Copeland",
     "học từ thất bại",
     "minh bạch triệt để",
     "ra quyết định",
@@ -155,7 +156,7 @@
   {
    "id": "h2",
    "act": "context",
-   "narration": "Ông mất nhiều đến mức phải đi vay chính bố mình. Vậy mà về sau, ông gọi đó là một trong những điều tốt nhất từng xảy ra với mình. Đến cuối clip, bạn sẽ thấy vì sao, và mang theo ba nguyên tắc.",
+   "narration": "Ông mất nhiều đến mức phải mượn tiền của chính bố mình. Vậy mà về sau, ông gọi đó là một trong những điều tốt nhất từng xảy ra với mình. Đến cuối clip, bạn sẽ thấy vì sao, và mang theo ba nguyên tắc.",
    "visual": {
     "type": "shots",
     "shots": [
@@ -163,7 +164,7 @@
       "type": "icon",
       "icon": "coins",
       "kicker": "1982",
-      "line": "Phải đi vay chính bố mình",
+      "line": "Phải mượn tiền của bố mình",
       "motion": "shake",
       "motion_cue": "mất nhiều"
      },
@@ -242,7 +243,7 @@
       "items": [
        {
         "icon": "star",
-        "label": "Người thành công"
+        "label": "Thành công"
        },
        {
         "icon": "target",
@@ -353,9 +354,16 @@
      },
      {
       "type": "icon",
+      "icon": "wave",
+      "kicker": "Rồi lan rộng",
+      "cue": "và nhiều",
+      "line": "Nhiều nước khác theo sau"
+     },
+     {
+      "type": "icon",
       "icon": "lightning",
       "kicker": "Dalio tin",
-      "cue": "dalio tin",
+      "cue": "tin một",
       "line": "Đại suy thoái sắp đến"
      },
      {
@@ -374,7 +382,7 @@
        },
        {
         "icon": "scale",
-        "label": "Trước Quốc hội Mỹ",
+        "label": "Quốc hội Mỹ",
         "cue": "và cả"
        }
       ]
@@ -395,11 +403,11 @@
     "shots": [
      {
       "type": "statement",
-      "kicker": "Dự báo năm 1982",
-      "text": "Đại suy thoái sắp đến",
-      "strike": "Đại suy thoái sắp đến",
-      "replace": "Ông đã sai",
-      "strike_cue": "đã sai"
+      "kicker": "Dự báo đại suy thoái · 1982",
+      "text": "Ông đã sai.",
+      "highlight": [
+       "sai."
+      ]
      },
      {
       "type": "icon",
@@ -429,7 +437,7 @@
   {
    "id": "b05",
    "act": "story",
-   "narration": "Rồi đến cái giá. Theo lời Dalio kể, ông phải cho gần như mọi người ở Bridgewater nghỉ việc, đến mức công ty chỉ còn lại một mình ông. Ông vay bố bốn nghìn đô la để lo chi tiêu cho gia đình.",
+   "narration": "Rồi đến cái giá. Theo lời Dalio kể, ông phải cho gần như mọi người ở Bridgewater nghỉ việc, đến mức công ty chỉ còn lại một mình ông. Ông mượn bố bốn nghìn đô để lo chi tiêu cho gia đình.",
    "visual": {
     "type": "shots",
     "shots": [
@@ -452,9 +460,10 @@
       "type": "stat",
       "value": 4000,
       "suffix": " $",
-      "label": "vay bố, lo cho gia đình",
+      "label": "mượn bố, lo cho gia đình",
       "note": "Theo lời Dalio kể",
-      "cue": "ông vay"
+      "cue": "ông mượn",
+      "from": 4000
      }
     ]
    },
@@ -464,7 +473,7 @@
     "fortune2025",
     "ii_education"
    ],
-   "take": 1
+   "take": 2
   },
   {
    "id": "b06",
@@ -529,12 +538,12 @@
        },
        {
         "icon": "door",
-        "label": "Né tránh: mất bài học",
+        "label": "Né: mất bài học",
         "cue": "né tránh"
        },
        {
         "icon": "mirror",
-        "label": "Suy ngẫm: tiến lên",
+        "label": "Ngẫm: tiến lên",
         "cue": "dừng lại"
        }
       ]
@@ -570,7 +579,7 @@
        },
        {
         "icon": "fork",
-        "label": "Không đồng ý với mình",
+        "label": "Không đồng ý",
         "cue": "không đồng"
        },
        {
@@ -691,7 +700,8 @@
       "type": "icon",
       "icon": "eye",
       "kicker": "Mặt còn lại",
-      "line": "Minh bạch triệt để"
+      "line": "Minh bạch triệt để",
+      "line_cue": "minh bạch"
      },
      {
       "type": "trio",
@@ -704,7 +714,7 @@
        },
        {
         "icon": "scale",
-        "label": "Chấm điểm lẫn nhau",
+        "label": "Chấm điểm nhau",
         "cue": "đồng nghiệp"
        },
        {
@@ -908,10 +918,10 @@
    "visual": {
     "type": "end",
     "kicker": "Review sách · Tập 23",
-    "title": "Nguyên Tắc: Cuộc Sống Và Công Việc",
+    "title": "Nguyên Tắc (Principles)",
     "ask": "Bạn muốn clip tiếp theo về cuốn sách nào?",
     "ask_hint": "Một cuốn sách · một nhà tư duy · một chủ đề",
-    "ask_cue": "còn bạn",
+    "ask_cue": "hay chủ",
     "sources_line": "Nguồn: Dalio, Principles (2017) · TED (2017) · Copeland, The Fund (2023) · xem mô tả",
     "disclaimer": "Tóm tắt và cảm nhận cá nhân; không phải lời khuyên đầu tư.",
     "sources_cue": "còn bạn"
