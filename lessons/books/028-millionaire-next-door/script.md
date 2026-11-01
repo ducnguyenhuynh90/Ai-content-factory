@@ -1,5 +1,5 @@
 # Triệu Phú Nhà Bên
-_Review sách · Tập 28 · 792 words · ~3.42 min · 4:3_
+_Review sách · Tập 28 · 791 words · ~3.41 min · 4:3_
 
 ## Learning goals
 - Kể lại phát hiện của Stanley & Danko (1996): triệu phú định nghĩa bằng tài sản ròng ≥ 1 triệu $, khoảng 3,5% hộ Mỹ, chân dung điển hình (~57 tuổi, ~80% thế hệ đầu, ~2/3 tự kinh doanh, ít lái xe đời mới), và câu 'Big hat, no cattle'
@@ -28,7 +28,7 @@ _Review sách · Tập 28 · 792 words · ~3.42 min · 4:3_
 | b09 | principle | Bài học thứ nhất: thu nhập không phải của cải. Theo hai tác giả, thu nhập là thứ bạn kiếm được; của cải là thứ bạn giữ lại. Kiếm nhiều mà tiêu hết, bạn không giàu lên. Bạn chỉ đang sống sang. | shots: shots |
 | b10 | principle | Bài học thứ hai: sống dưới mức thu nhập. Đây là điểm chung đầu tiên trong bảy điểm chung mà sách tìm thấy ở những người giàu lên. Chiếc xe cũ không phải để khổ hạnh. Nó để phần chênh lệch có chỗ lớn lên. | shots: shots |
 | b11 | principle | Bài học thứ ba: nuôi bò trước, mua mũ sau. Theo sách, người tích lũy giỏi coi trọng tự do tài chính hơn việc khoe địa vị. Mỗi đồng chi cho vẻ ngoài là một đồng không làm việc cho bạn. | shots: shots |
-| b12 | complication | Giờ là những giới hạn. Nassim Taleb, trong cuốn Fooled by Randomness mà mình đã review ở tập tám, chỉ ra thiên kiến kẻ sống sót: sách chỉ khảo sát những người đã giàu. Những người cũng tiết kiệm, cũng liều mở doanh nghiệp, nhưng thất bại, thì không có trong mẫu. Cùng một thói quen liều lĩnh có thể dẫn tới giàu có, hoặc phá sản. | shots: shots |
+| b12 | complication | Giờ là những giới hạn. Nassim Taleb, trong cuốn Fooled by Randomness mà mình đã review ở tập tám, chỉ ra thiên kiến kẻ sống sót: sách chỉ khảo sát những người đã giàu. Những người cũng tiết kiệm, cũng liều mở doanh nghiệp, nhưng thất bại, thì không có trong mẫu. Cùng một lựa chọn dám liều, có người giàu lên, có người phá sản. | shots: shots |
 | b13 | complication | Thêm nữa, đây là nước Mỹ giữa những năm một nghìn chín trăm chín mươi. Mẫu khảo sát chọn ở những khu dân cư giàu có, không phải ngẫu nhiên. Và một triệu đô năm ấy, tính theo lạm phát, nay khoảng gấp đôi. Đó là bức chân dung của một nhóm người, một thời, không phải lời hứa. _(estimate)_ | shots: shots |
 | b14 | question | Giờ thử một chút nhé. Bạn ba mươi tuổi, vừa được tăng lương. Theo tinh thần cuốn sách, bước nào hợp nhất? | question: Ba mươi tuổi, vừa được tăng lương. Theo cuốn sách, làm gì? |
 | b15 | recap | Vậy là ba bài học từ The Millionaire Next Door. Thu nhập không phải của cải. Sống dưới mức thu nhập. Và nuôi bò trước, mua mũ sau. | list: Ba bài học |
