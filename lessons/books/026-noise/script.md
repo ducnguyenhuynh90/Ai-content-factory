@@ -1,5 +1,5 @@
 # Độ Nhiễu
-_Review sách · Tập 26 · 848 words · ~3.65 min · 4:3_
+_Review sách · Tập 26 · 838 words · ~3.61 min · 4:3_
 
 ## Learning goals
 - Kể lại cuộc kiểm tra nhiễu ở một công ty bảo hiểm: lãnh đạo đoán chênh khoảng 10%, thực tế chênh trung vị 55% (bồi thường: 43%), và chênh lệch án tù giữa các thẩm phán Mỹ (nghiên cứu 1974)
@@ -14,13 +14,13 @@ _Review sách · Tập 26 · 848 words · ~3.65 min · 4:3_
 ## Script
 | # | act | narration | on screen |
 |---|---|---|---|
-| h1 | hook | Lãnh đạo đoán hai chuyên viên sẽ chênh nhau khoảng mười phần trăm. Nhưng thực tế là năm mươi lăm. | statement: Đoán: chênh ~10%. Thực tế: 55%. |
-| h2 | context | Cùng một hồ sơ, cùng một công ty, chỉ khác người chấm. Khoảng chênh ấy có tên: nhiễu. Đến cuối clip, bạn sẽ thấy nó nằm ở đâu, kể cả trong tòa án, và ba cách để giảm nó. | shots: shots |
+| h1 | hook | Lãnh đạo đoán hai chuyên viên sẽ chênh nhau khoảng mười phần trăm. Nhưng thực tế là năm mươi lăm. | shots: shots |
+| h2 | context | Cùng một hồ sơ, cùng một công ty, chỉ khác người chấm. Khoảng chênh ấy có tên: nhiễu. Vậy vì sao không ai nhận ra nó, và làm cách nào để giảm? | shots: shots |
 | t0 | context |  | title: Độ Nhiễu |
 | b01 | misconception | Nói về sai lầm trong phán đoán, ta hay nghĩ đến thiên kiến: lệch hẳn về một phía. Ở tập hai, mình đã kể về chúng qua Daniel Kahneman. Cuốn sách này nói về lỗi thứ hai, ít ai thấy: cùng một vụ việc, mỗi người cho một đáp án, và cùng một người, mỗi lúc lại khác. | shots: shots |
 | b02 | context | Noise ra năm hai nghìn hai mươi mốt, của ba tác giả. Daniel Kahneman, nhà tâm lý học đoạt giải Nobel kinh tế. Olivier Sibony, giáo sư chiến lược ở HEC Paris. Và Cass Sunstein, giáo sư luật ở Harvard. Ba năm sau, Kahneman qua đời, ở tuổi chín mươi. | shots: shots |
 | b03 | story | Câu chuyện mở đầu ở một công ty bảo hiểm lớn. Kahneman và các cộng sự đưa cùng những hồ sơ khách hàng cho nhiều chuyên viên định phí. Trước khi đo, họ hỏi lãnh đạo: hai chuyên viên bất kỳ sẽ chênh nhau bao nhiêu? Câu trả lời phổ biến nhất: khoảng mười phần trăm. | shots: shots |
-| b04 | story | Kết quả: chênh lệch trung vị là năm mươi lăm phần trăm, gấp khoảng năm lần dự đoán. Khi một người báo phí chín nghìn năm trăm đô, người kia không báo mười nghìn năm trăm, mà là mười sáu nghìn bảy trăm. Với chuyên viên bồi thường, con số là bốn mươi ba phần trăm. | shots: shots |
+| b04 | story | Kết quả: chênh lệch trung vị là năm mươi lăm phần trăm, gấp khoảng năm lần dự đoán. Một người báo phí gần mười nghìn đô, thì người kia không báo nhỉnh hơn một chút, mà gần mười bảy nghìn. Với chuyên viên bồi thường, con số là bốn mươi ba phần trăm. | shots: shots |
 | b05 | story | Tòa án cũng vậy. Theo sách, trong một nghiên cứu năm một nghìn chín trăm bảy mươi tư, khoảng năm mươi thẩm phán Mỹ cùng xét những hồ sơ giả định giống hệt nhau. Cùng một kẻ buôn heroin có thể nhận từ một đến mười năm tù, tùy thẩm phán. Một vụ cướp ngân hàng: từ năm đến mười tám năm. | shots: shots |
 | b05b | story | Và nhiễu không chỉ nằm giữa người với người. Một nghiên cứu ở bang Louisiana thấy các thẩm phán tòa vị thành niên tuyên án nặng hơn trong tuần sau khi đội bóng bầu dục LSU thua bất ngờ. Cùng một thẩm phán, chỉ khác một tuần. | shots: shots |
 | b06 | principle | Bài học thứ nhất: chấm riêng, rồi mới gộp. Nhiều người cùng đoán, mỗi người một mình, rồi lấy trung bình, sẽ ít nhiễu hơn một người đoán. Nhưng chỉ khi họ không nghe nhau trước. Trong cuộc họp, hãy để mỗi người viết ý mình ra giấy, trước khi ai đó lên tiếng. | shots: shots |
