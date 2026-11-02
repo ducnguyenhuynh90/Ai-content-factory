@@ -13,7 +13,7 @@ from ..editor import brand as B
 from ..editor import hyperframes as H
 from ..editor.enhance import mix_stems
 from . import music, schema, voice
-from .scenes import Look, scene_file
+from .scenes import Look, highlights, scene_file
 
 ASPECTS = {"4:3": (1440, 1080), "16:9": (1920, 1080), "9:16": (1080, 1920), "1:1": (1080, 1080)}
 LEAD, TAIL = 0.45, 0.65  # seconds of picture before / after each narration line
@@ -107,7 +107,10 @@ def captions_file(look: Look, L: dict, timing: list[dict], times: dict, total: f
         if not tm["narr"] or b.get("captions") is False or b["visual"]["type"] == "end":
             continue
         base = tm["start"] + tm["lead"]
-        hl = {h.lower() for h in (b["visual"].get("highlight") or [])}
+        hlc: dict[str, str] = {}  # a highlighted word lights in its phrase's colour (the accent, or its concept's colour)
+        for h, entry in highlights(b["visual"]):
+            for x in h.lower().split():
+                hlc.setdefault(x.strip(".,;:?!…\"'“”"), look.color(entry, look.accent))
         groups = caption_groups(times[b["id"]])
         for gi, g in enumerate(groups):
             gid = f"cap{k}"
@@ -117,9 +120,9 @@ def captions_file(look: Look, L: dict, timing: list[dict], times: dict, total: f
             words = []
             for wi, w in enumerate(g):
                 wid = f"{gid}w{wi}"
-                acc = any(w["word"].lower().strip(".,;:?!…") in h.split() for h in hl)
+                lit = hlc.get(w["word"].lower().strip(".,;:?!…\"'“”"), look.ink)
                 words.append(f'<span id="{wid}" class="cw">{E(w["word"])}</span>')
-                tw.append(f'tl.fromTo("#{wid}", {{ color: "rgba(242,237,228,0.42)" }}, {{ color: "{look.accent if acc else look.ink}", duration: 0.12, ease: "none" }}, {base + w["start"]:.3f});')
+                tw.append(f'tl.fromTo("#{wid}", {{ color: "rgba(242,237,228,0.42)" }}, {{ color: "{lit}", duration: 0.12, ease: "none" }}, {base + w["start"]:.3f});')
             items.append(f'<div id="{gid}" class="clip cap" data-start="{t_in:.3f}" data-duration="{max(0.3, t_out - t_in):.3f}" data-track-index="0">'
                          f'<div id="{gid}i" class="capi">{" ".join(words)}</div></div>')
             tw.append(f'tl.fromTo("#{gid}i", {{ opacity: 0, y: 10, filter: "blur(6px)" }}, {{ opacity: 1, y: 0, filter: "blur(0px)", duration: 0.18, ease: "power2.out" }}, {t_in:.3f});')
@@ -202,7 +205,7 @@ def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: 
         stems.append({"file": str(out / "sfx.wav"), "role": "sfx", "gain_db": -8})
     mix_stems(stems, total, str(proj / "assets" / "mix.wav"), voice_lufs=-16.0, target_lufs=-16.0)
     # 3. scenes
-    look = Look({**brand(), **meta.get("look", {})}, W, Hh, meta.get("lang", "en"))
+    look = Look({**brand(), **meta.get("look", {})}, W, Hh, meta.get("lang", "en"), meta.get("concepts"))
     H.ensure_gsap(proj / "assets" / "vendor")
     grain_png(proj / "assets" / "grain.png")
     hosts = []
@@ -210,10 +213,10 @@ def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: 
         sid = b["id"]
         wt = times[sid]
 
-        def cue(word: str, default: float, wt=wt, lead=tm["lead"]) -> float:
+        def cue(word: str, default: float, after: float | None = None, wt=wt, lead=tm["lead"]) -> float:
             if not word or not wt:
                 return default
-            return lead + voice.find_word(wt, word, default - lead)
+            return lead + voice.find_word(wt, word, default - lead, after=None if after is None else after - lead)
 
         (proj / "compositions" / f"{sid}.html").write_text(
             scene_file(look, sid, b["visual"], tm["dur"], cue, tm["lead"] + tm["narr"], last=i == len(L["beats"]) - 1))
@@ -266,6 +269,7 @@ def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: 
     (proj / "compositions" / "chrome.html").write_text(f"""<template>
   <style>
     #root {{ position: absolute; inset: 0; }}
+    /* the series rail is a decorative brand mark (the title and end cards carry the series name at reading size) */
     #chrome-rail {{ position: absolute; left: {look.px(0.05)}px; top: {look.px(0.045)}px; font-family: '{brand()['font']}';
       font-weight: 800; font-size: {look.fs(0.026)}px; letter-spacing: 0.28em; text-transform: uppercase; color: {look.muted}; }}
     #chrome-prog {{ position: absolute; left: 0; bottom: 0; width: {W}px; height: 6px; background: {look.accent}; transform-origin: 0 50%; }}

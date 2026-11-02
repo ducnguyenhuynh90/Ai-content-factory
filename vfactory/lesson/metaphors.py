@@ -28,15 +28,17 @@ def _blur_in(sel: str, at: float, dur: float = 0.35, px: int = 8) -> str:
 
 
 def _head(L, sid, v, top: float = 0.13) -> tuple[str, list[str]]:
-    """Kicker + optional heading in the top band."""
+    """Kicker + optional heading in the top band, stacked in flow (a kicker that wraps pushes the heading down)."""
     m, tw = "", []
     if v.get("kicker"):
-        m += f'<div id="{sid}-k" class="kicker" style="position:absolute;left:{L.px(0.1)}px;top:{L.h * top:.0f}px;">{E(v["kicker"])}</div>'
+        m += f'<div id="{sid}-k" class="kicker">{E(v["kicker"])}</div>'
         tw.append(_fade(f"#{sid}-k", 0.05))
     if v.get("heading"):
-        m += (f'<div id="{sid}-hd" class="serif" style="position:absolute;left:{L.px(0.1)}px;right:{L.px(0.1)}px;'
-              f'top:{L.h * top + L.px(0.045):.0f}px;font-size:{L.fs(0.06)}px;line-height:1.15;">{E(v["heading"])}</div>')
+        m += (f'<div id="{sid}-hd" class="serif" style="margin-top:{L.px(0.008)}px;font-size:{L.fs(0.06)}px;line-height:1.15;">'
+              f'{E(v["heading"])}</div>')
         tw.append(_blur_in(f"#{sid}-hd", 0.2, 0.5))
+    if m:
+        m = f'<div style="position:absolute;left:{L.px(0.1)}px;right:{L.px(0.1)}px;top:{L.h * top:.0f}px;">{m}</div>'
     return m, tw
 
 
@@ -85,7 +87,7 @@ def funnel(L, sid, v, dur, cue):
         <g id="{sid}-field" fill="{L.ink}" opacity="0.55">{''.join(groups)}</g>
         {''.join(surv)}
       </svg>
-      {f'<div id="{sid}-st" style="position:absolute;left:0;right:0;top:{row_y + L.px(0.06):.0f}px;text-align:center;opacity:0;"><span class="serif acc" style="font-size:{L.fs(0.12)}px;line-height:1;">{E(v["stat"]["text"])}</span><div class="muted" style="font-size:{L.fs(0.03)}px;margin-top:{L.px(0.01)}px;">{E(v["stat"].get("label", ""))}</div></div>' if v.get('stat') else ''}
+      {f'<div id="{sid}-st" style="position:absolute;left:0;right:0;top:{row_y + L.px(0.06):.0f}px;text-align:center;opacity:0;"><span class="serif acc" style="font-size:{L.fs(0.12)}px;line-height:1;">{E(v["stat"]["text"])}</span><div class="muted" style="font-size:{L.fs(L.READ)}px;margin-top:{L.px(0.01)}px;">{E(v["stat"].get("label", ""))}</div></div>' if v.get('stat') else ''}
     </div>"""
     tw = [_fade(f"#{sid}-l", 0.05)] + tw
     if not full:
@@ -126,7 +128,7 @@ def ladder(L, sid, v, dur, cue):
                      f'border-radius:{L.px(0.012)}px;background:{"rgba(255,255,255,0.06)"};border:2px solid {L.muted}55;display:flex;align-items:center;'
                      f'padding-left:{L.px(0.025)}px;gap:{L.px(0.02)}px;transform-origin:0 50%;">'
                      f'<span class="serif" style="font-size:{L.fs(0.045)}px;color:{L.accent if top else L.muted};">{i + 1}</span>'
-                     f'<span style="font-size:{L.fs(0.03)}px;color:{L.ink if top else L.muted};">{E(lab)}</span></div>')
+                     f'<span style="font-size:{L.fs(L.READ)}px;color:{L.ink if top else L.muted};">{E(lab)}</span></div>')
         tw.append(_ft(f"#{sid}-s{i}", "opacity: 0, scaleX: 0.6", 'opacity: 1, scaleX: 1, duration: 0.45, ease: "expo.out"', 0.5 + build * i / n))
     t_top = cue(v.get("top_cue", ""), 0.6 + build)
     tw.append(_ft(f"#{sid}-s{n - 1}", "backgroundColor: \"rgba(255,255,255,0.06)\", borderColor: \"rgba(154,147,136,0.33)\"",
@@ -160,7 +162,7 @@ def venn(L, sid, v, dur, cue):
     rings = "".join(f'<circle id="{sid}-o{i}" cx="{x:.1f}" cy="{y:.1f}" r="{R}" fill="{L.ink}" fill-opacity="0.04" stroke="{L.ink}" '
                     f'stroke-opacity="0.75" stroke-width="3" opacity="0"/>' for i, (x, y) in enumerate(centers))
     labels = "".join(f'<text id="{sid}-lb{i}" x="{x:.1f}" y="{y:.1f}" text-anchor="{a}" fill="{L.ink}" font-family="Inter" font-weight="600" '
-                     f'font-size="{L.fs(0.03)}" opacity="0">{E(c["label"])}</text>' for i, ((x, y, a), c) in enumerate(zip(lab_pos, circles)))
+                     f'font-size="{L.fs(L.READ)}" opacity="0">{E(c["label"])}</text>' for i, ((x, y, a), c) in enumerate(zip(lab_pos, circles)))
     x2, y2 = centers[2]
     core = (f'<g clip-path="url(#{sid}-cp0)"><g clip-path="url(#{sid}-cp1)"><circle id="{sid}-core" cx="{x2:.1f}" cy="{y2:.1f}" r="{R}" '
             f'fill="{L.accent}" opacity="0"/></g></g>')
@@ -211,7 +213,7 @@ def flywheel(L, sid, v, dur, cue):
     if v.get("name"):
         right += (f'<div id="{sid}-nm" class="serif" style="font-size:{L.fs(0.07)}px;line-height:1.08;">{E(v["name"])}</div>')
     if v.get("line"):
-        right += f'<div id="{sid}-ln" class="muted" style="font-size:{L.fs(0.032)}px;line-height:1.4;margin-top:{L.px(0.02)}px;">{E(v["line"])}</div>'
+        right += f'<div id="{sid}-ln" class="muted" style="font-size:{L.fs(L.READ)}px;line-height:1.4;margin-top:{L.px(0.02)}px;">{E(v["line"])}</div>'
     marks = v.get("marks") or []  # [{"text": "vòng 1", "cue": "..."}]
     mk = "".join(f'<div id="{sid}-m{i}" style="font-size:{L.fs(0.034)}px;font-weight:600;margin-top:{L.px(0.018)}px;color:{L.accent if i == len(marks) - 1 else L.ink};">{E(x["text"])}</div>'
                  for i, x in enumerate(marks))
@@ -271,9 +273,9 @@ def halo(L, sid, v, dur, cue):
           <div id="{sid}-bx{i}" style="position:absolute;inset:0;border:2px solid {L.muted}66;border-radius:{L.px(0.016)}px;background:rgba(255,255,255,0.04);
             display:flex;flex-direction:column;align-items:center;justify-content:center;gap:{L.px(0.012)}px;">
             <div class="serif" style="font-size:{L.fs(0.05)}px;">{E(it['name'])}</div>
-            <div id="{sid}-bf{i}" class="acc" style="font-size:{L.fs(0.028)}px;font-weight:600;">{E(it.get('before', ''))}</div></div>
+            <div id="{sid}-bf{i}" class="acc" style="font-size:{L.fs(L.READ)}px;font-weight:600;">{E(it.get('before', ''))}</div></div>
           <div id="{sid}-sm{i}" style="position:absolute;left:50%;top:{chh + L.px(0.03)}px;transform-origin:50% 50%;white-space:nowrap;opacity:0;
-            padding:{L.px(0.008)}px {L.px(0.02)}px;border:3px solid #D8664B;color:#E77A5F;font-weight:800;letter-spacing:0.08em;font-size:{L.fs(0.028)}px;">{E(it.get('after', ''))}</div>
+            padding:{L.px(0.008)}px {L.px(0.02)}px;border:3px solid #D8664B;color:#E77A5F;font-weight:800;letter-spacing:0.08em;font-size:{L.fs(L.READ)}px;">{E(it.get('after', ''))}</div>
         </div>"""
         tw.append(_ft(f"#{sid}-cd{i}", "opacity: 0, y: 30", 'opacity: 1, y: 0, duration: 0.6, ease: "expo.out"', 0.4 + 0.25 * i))
         tw.append(_ft(f"#{sid}-hl{i}", "opacity: 0", 'opacity: 1, duration: 0.6, ease: "power2.out"', 0.8 + 0.25 * i))
@@ -317,20 +319,20 @@ def swap(L, sid, v, dur, cue):
     xa, xb = L.w * 0.18, L.w * 0.82 - s
     a, b = v["from"], v["to"]
     head, tw = _head(L, sid, v, 0.12)
-    ia = ICONS.get(a.get("icon", ""), lambda s, c: "")(s, L.ink)
-    ib = ICONS.get(b.get("icon", ""), lambda s, c: "")(s, L.accent)
+    ia = ICONS.get(L.icon_of(a), lambda s, c: "")(s, L.color(a, L.ink))
+    ib = ICONS.get(L.icon_of(b), lambda s, c: "")(s, L.color(b, L.accent))
     m = f"""<div id="{sid}-c" style="position:absolute;inset:0;">{head}
       <div id="{sid}-a" style="position:absolute;left:{xa:.0f}px;top:{y:.0f}px;width:{s}px;text-align:center;">
         <svg width="{s}" height="{s}" style="overflow:visible">{ia}
           <line id="{sid}-x" x1="-10" y1="{s + 10}" x2="{s + 10}" y2="-10" stroke="#E77A5F" stroke-width="{L.px(0.012)}" stroke-linecap="round"
             stroke-dasharray="{s * 1.6:.0f}" stroke-dashoffset="{s * 1.6:.0f}"/></svg>
-        <div style="font-size:{L.fs(0.032)}px;margin:{L.px(0.02)}px -{s * 0.4:.0f}px 0;font-weight:600;">{E(a['label'])}</div></div>
+        <div style="font-size:{L.fs(L.READ)}px;margin:{L.px(0.02)}px -{s * 0.4:.0f}px 0;font-weight:600;">{E(a['label'])}</div></div>
       <svg width="{L.w}" height="{L.h}" style="position:absolute;left:0;top:0;overflow:visible">
         <path id="{sid}-arw" d="M {xa + s + L.px(0.05):.0f} {y + s / 2:.0f} L {xb - L.px(0.05):.0f} {y + s / 2:.0f} m -{L.px(0.03)} -{L.px(0.025)} l {L.px(0.03)} {L.px(0.025)} l -{L.px(0.03)} {L.px(0.025)}"
           fill="none" stroke="{L.muted}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="{L.w:.0f}" stroke-dashoffset="{L.w:.0f}"/></svg>
       <div id="{sid}-b" style="position:absolute;left:{xb:.0f}px;top:{y:.0f}px;width:{s}px;text-align:center;">
         <svg width="{s}" height="{s}" style="overflow:visible">{ib}</svg>
-        <div class="acc" style="font-size:{L.fs(0.032)}px;margin:{L.px(0.02)}px -{s * 0.4:.0f}px 0;font-weight:600;white-space:nowrap;">{E(b['label'])}</div></div>
+        <div class="acc" style="font-size:{L.fs(L.READ)}px;margin:{L.px(0.02)}px -{s * 0.4:.0f}px 0;font-weight:600;white-space:nowrap;">{E(b['label'])}</div></div>
       {f'<div id="{sid}-ln" class="serif" style="position:absolute;left:0;right:0;top:{L.h * 0.76:.0f}px;text-align:center;font-size:{L.fs(0.06)}px;">{E(v["line"])}</div>' if v.get('line') else ''}
     </div>"""
     tw.append(_ft(f"#{sid}-a", "opacity: 0, y: 20", 'opacity: 1, y: 0, duration: 0.6, ease: "expo.out"', 0.3))
@@ -423,16 +425,16 @@ def company(L, sid, v, dur, cue):
     for i, f in enumerate(v.get("facts", [])):
         facts += (f'<div id="{sid}-f{i}" style="display:flex;gap:{L.px(0.015)}px;align-items:baseline;margin-top:{L.px(0.02)}px;">'
                   f'<span class="serif acc" style="font-size:{L.fs(0.045)}px;min-width:{L.px(0.17)}px;white-space:nowrap;">{E(f.get("big", ""))}</span>'
-                  f'<span style="font-size:{L.fs(0.027)}px;line-height:1.3;">{E(f["text"])}</span></div>')
+                  f'<span style="font-size:{L.fs(L.READ)}px;line-height:1.3;">{E(f["text"])}</span></div>')
         tw.append(_rise(f"#{sid}-f{i}", max(0.8, cue(f.get("cue", ""), 1.2 + i)), 0.5, 14))
     card = ""
     c = v.get("card")
     if c:
         card = f"""<div id="{sid}-cd" style="position:absolute;left:{rx - L.px(0.02):.0f}px;right:{L.px(0.05)}px;top:{L.h * 0.62:.0f}px;
           background:#EDE4D3;color:#1A1712;padding:{L.px(0.025)}px {L.px(0.03)}px;border-radius:4px;box-shadow:0 {L.px(0.012)}px {L.px(0.04)}px rgba(0,0,0,0.5);">
-          <div style="font-size:{L.fs(0.02)}px;letter-spacing:0.25em;font-weight:800;border-bottom:2px solid #1A1712;padding-bottom:{L.px(0.008)}px;">{E(c.get('kicker', ''))}</div>
+          <div style="font-size:{L.fs(L.READ)}px;letter-spacing:0.12em;font-weight:800;border-bottom:2px solid #1A1712;padding-bottom:{L.px(0.008)}px;">{E(c.get('kicker', ''))}</div>
           <div class="serif" style="font-size:{L.fs(0.05)}px;line-height:1.08;margin-top:{L.px(0.012)}px;">{E(c['title'])}</div>
-          <div style="font-size:{L.fs(0.026)}px;margin-top:{L.px(0.008)}px;opacity:0.75;">{E(c.get('sub', ''))}</div></div>"""
+          <div style="font-size:{L.fs(L.READ)}px;margin-top:{L.px(0.008)}px;opacity:0.75;">{E(c.get('sub', ''))}</div></div>"""
         tw.append(_ft(f"#{sid}-cd", "opacity: 0, y: 40, rotation: 6", 'opacity: 1, y: 0, rotation: -2, duration: 0.7, ease: "back.out(1.4)"',
                       max(1.5, cue(c.get("cue", ""), dur * 0.6))))
     name = (f'<div id="{sid}-nm" class="serif" style="font-size:{L.fs(0.06)}px;line-height:1;white-space:nowrap;">{E(v["name"])}</div>'
@@ -462,13 +464,13 @@ def rise(L, sid, v, dur, cue):
     m = f"""<div id="{sid}-c" style="position:absolute;inset:0;">{head}
       <svg width="{L.w}" height="{L.h}" style="position:absolute;left:0;top:0;overflow:visible">
         <line x1="{cx0:.0f}" y1="{yv(1):.0f}" x2="{cx1:.0f}" y2="{yv(1):.0f}" stroke="{L.muted}" stroke-width="2" stroke-dasharray="8 8"/>
-        <text x="{cx1:.0f}" y="{yv(1) + L.px(0.035):.0f}" text-anchor="end" fill="{L.muted}" font-family="Inter" font-size="{L.fs(0.022)}">{E(v.get('base_label', 'thị trường = 1×'))}</text>
+        <text x="{cx1:.0f}" y="{yv(1) + L.px(0.035):.0f}" text-anchor="end" fill="{L.muted}" font-family="Inter" font-size="{L.fs(L.READ)}">{E(v.get('base_label', 'thị trường = 1×'))}</text>
         <path id="{sid}-ln" d="{path}" fill="none" stroke="{L.accent}" stroke-width="{max(5, L.px(0.008))}" stroke-linecap="round" stroke-linejoin="round"
           stroke-dasharray="{ln:.0f}" stroke-dashoffset="{ln:.0f}"/>
         <text id="{sid}-v" x="{cx1 - L.px(0.02):.0f}" y="{pts[-1][1] - L.px(0.07):.0f}" text-anchor="end" fill="{L.accent}" font-family="EB Garamond" font-size="{L.fs(0.11)}" opacity="0">{E(v.get('value_text', ''))}</text>
-        <text id="{sid}-vl" x="{cx1 - L.px(0.02):.0f}" y="{pts[-1][1] - L.px(0.035):.0f}" text-anchor="end" fill="{L.ink}" font-family="Inter" font-size="{L.fs(0.022)}" opacity="0">{E(v.get('value_label', ''))}</text>
+        <text id="{sid}-vl" x="{cx1 - L.px(0.02):.0f}" y="{pts[-1][1] - L.px(0.035):.0f}" text-anchor="end" fill="{L.ink}" font-family="Inter" font-size="{L.fs(L.READ)}" opacity="0">{E(v.get('value_label', ''))}</text>
       </svg>
-      {f'<div id="{sid}-st" style="position:absolute;left:{cx0 + L.px(0.01):.0f}px;top:{L.h * 0.47:.0f}px;padding:{L.px(0.008)}px {L.px(0.02)}px;border:3px solid #D8664B;color:#E77A5F;font-weight:800;letter-spacing:0.08em;font-size:{L.fs(0.026)}px;opacity:0;">{E(stamp["text"])}</div>' if stamp else ''}
+      {f'<div id="{sid}-st" style="position:absolute;left:{cx0 + L.px(0.01):.0f}px;top:{L.h * 0.47:.0f}px;padding:{L.px(0.008)}px {L.px(0.02)}px;border:3px solid #D8664B;color:#E77A5F;font-weight:800;letter-spacing:0.08em;font-size:{L.fs(L.READ)}px;opacity:0;">{E(stamp["text"])}</div>' if stamp else ''}
     """
     tw.append(_ft(f"#{sid}-ln", f"strokeDashoffset: {ln:.0f}", f'strokeDashoffset: 0, duration: {min(2.6, dur * 0.3):.2f}, ease: "power2.in"', t_line))
     tw.append(_blur_in(f"#{sid}-v", t_line + min(2.6, dur * 0.3) - 0.2, 0.4))
@@ -488,7 +490,7 @@ def rise(L, sid, v, dur, cue):
     for i, r in enumerate(rk):
         is_h = i == hero
         rows += (f'<div id="{sid}-r{i}" style="position:absolute;left:{rx:.0f}px;top:{ry0 + i * (rh + L.px(0.015)):.0f}px;width:{rw:.0f}px;height:{rh}px;'
-                 f'border-radius:{L.px(0.012)}px;display:flex;align-items:center;padding-left:{L.px(0.025)}px;font-size:{L.fs(0.03)}px;'
+                 f'border-radius:{L.px(0.012)}px;display:flex;align-items:center;padding-left:{L.px(0.025)}px;font-size:{L.fs(L.READ)}px;'
                  f'font-weight:{800 if is_h else 500};color:{"#14110D" if is_h else L.muted};background:{L.accent if is_h else "rgba(255,255,255,0.05)"};'
                  f'border:2px solid {L.accent if is_h else L.muted + "44"};">{E(r["name"])}</div>')
         tw.append(_ft(f"#{sid}-r{i}", "opacity: 0, x: 30", 'opacity: 1, x: 0, duration: 0.5, ease: "expo.out"', 0.5 + 0.15 * i))
@@ -508,8 +510,8 @@ def rise(L, sid, v, dur, cue):
     for i, pr in enumerate(prods):
         x = px0 + i * (ps + gap)
         shelf += (f'<div id="{sid}-p{i}" style="position:absolute;left:{x:.0f}px;top:{shelf_y - ps - L.px(0.005):.0f}px;width:{ps}px;text-align:center;">'
-                  f'<svg width="{ps}" height="{ps}" style="overflow:visible">{ICONS.get(pr.get("icon", ""), lambda s, c: "")(ps, L.accent)}</svg>'
-                  f'<div style="position:absolute;top:{ps + L.px(0.015)}px;left:-{gap / 2 - 4:.0f}px;right:-{gap / 2 - 4:.0f}px;font-size:{L.fs(0.02)}px;'
+                  f'<svg width="{ps}" height="{ps}" style="overflow:visible">{ICONS.get(L.icon_of(pr), lambda s, c: "")(ps, L.color(pr, L.accent))}</svg>'
+                  f'<div style="position:absolute;top:{ps + L.px(0.015)}px;left:-{gap / 2 - 4:.0f}px;right:-{gap / 2 - 4:.0f}px;font-size:{L.fs(L.READ)}px;'
                   f'line-height:1.25;color:{L.ink};">{E(pr["label"])}</div></div>')
         tw.append(_ft(f"#{sid}-p{i}", "opacity: 0, y: 24", 'opacity: 1, y: 0, duration: 0.5, ease: "back.out(1.6)"',
                       max(1.0, cue(pr.get("cue", ""), dur * 0.45 + 0.4 * i))))
@@ -577,12 +579,12 @@ def trio(L, sid, v, dur, cue):
     cross = bool(v.get("cross"))
     for i, it in enumerate(items):
         x = x0 + i * (s_ + gap)
-        icon = ICONS.get(it.get("icon", ""), lambda s, c: "")(s_, L.accent)
+        icon = ICONS.get(L.icon_of(it), lambda s, c: "")(s_, L.color(it, L.accent))
         cells += (f'<div id="{sid}-i{i}" style="position:absolute;left:{x - L.px(0.04):.0f}px;top:{y:.0f}px;width:{s_ + L.px(0.08)}px;text-align:center;">'
                   f'<svg width="{s_}" height="{s_}" style="overflow:visible">{icon}'
                   + (f'<path id="{sid}-x{i}" d="M{-s_ * .05:.0f} {-s_ * .05:.0f} L{s_ * 1.05:.0f} {s_ * 1.05:.0f} M{s_ * 1.05:.0f} {-s_ * .05:.0f} L{-s_ * .05:.0f} {s_ * 1.05:.0f}" '
                      f'stroke="#E77A5F" stroke-width="{L.px(0.01)}" stroke-linecap="round" stroke-dasharray="{s_ * 3:.0f}" stroke-dashoffset="{s_ * 3:.0f}"/>' if cross else "")
-                  + f'</svg><div style="font-size:{L.fs(0.03)}px;line-height:1.25;margin-top:{L.px(0.02)}px;font-weight:600;">{E(it["label"])}</div></div>')
+                  + f'</svg><div style="font-size:{L.fs(L.READ)}px;line-height:1.25;margin-top:{L.px(0.02)}px;font-weight:600;">{E(it["label"])}</div></div>')
         at = max(0.3 + 0.2 * i, cue(it.get("cue", ""), 0.5 + (dur - 1.5) * i / n))
         tw.append(_ft(f"#{sid}-i{i}", "opacity: 0, y: 30, scale: 0.85", 'opacity: 1, y: 0, scale: 1, duration: 0.5, ease: "back.out(1.7)"', at))
         if cross:
@@ -639,7 +641,7 @@ def icon(L, sid, v, dur, cue):
     s_ = L.px(0.3)
     x, y = (L.w - s_) / 2, L.h * 0.2
     head, tw = _head(L, sid, v, 0.12)
-    art = ICONS.get(v.get("icon", ""), lambda s, c: "")(s_, L.accent)
+    art = ICONS.get(L.icon_of(v), lambda s, c: "")(s_, L.color(v, L.accent))
     steam = ""
     if v.get("steam"):
         for k in range(3):
@@ -702,7 +704,7 @@ def climb(L, sid, v, dur, cue):
         <text id="{sid}-rl" x="{lx:.0f}" y="{ly + L.px(0.06):.0f}" text-anchor="middle" fill="{L.ink}" font-family="EB Garamond" font-size="{L.fs(0.05)}" opacity="0">{E(v.get("rest", ""))}</text>
         <text id="{sid}-pl" x="{px:.0f}" y="{py - L.px(0.12):.0f}" text-anchor="middle" fill="{L.accent}" font-family="EB Garamond" font-size="{L.fs(0.06)}" opacity="0">{E(v.get("peak", ""))}</text>
       </svg>
-      {f'<div id="{sid}-ln" class="muted" style="position:absolute;left:{L.px(0.08)}px;width:{L.w * 0.4:.0f}px;top:{L.h * 0.26:.0f}px;font-size:{L.fs(0.032)}px;line-height:1.35;opacity:0;">{E(v["line"])}</div>' if v.get('line') else ''}
+      {f'<div id="{sid}-ln" class="muted" style="position:absolute;left:{L.px(0.08)}px;width:{L.w * 0.4:.0f}px;top:{L.h * 0.26:.0f}px;font-size:{L.fs(L.READ)}px;line-height:1.35;opacity:0;">{E(v["line"])}</div>' if v.get('line') else ''}
     </div>"""
     tw += [_fade(f"#{sid}-mt", 0.1, 0.6), _fade(f"#{sid}-fl", 0.5, 0.5), _blur_in(f"#{sid}-pl", 0.6, 0.4), _fade(f"#{sid}-bn", 0.7, 0.4),
            _ft(f"#{sid}-pt", f"strokeDashoffset: {plen:.0f}", f'strokeDashoffset: 0, duration: {t_stop - 0.3:.2f}, ease: "power1.inOut"', 0.3)]
@@ -726,17 +728,17 @@ def book(L, sid, v, dur, cue):
     cover = f"""<div id="{sid}-bk" style="position:absolute;left:{bx:.0f}px;top:{by:.0f}px;width:{bw}px;height:{bh}px;border-radius:6px {L.px(0.02)}px {L.px(0.02)}px 6px;
       background:linear-gradient(135deg, {L.accent} 0%, #B9844A 100%);box-shadow:{L.px(0.02)}px {L.px(0.02)}px {L.px(0.05)}px rgba(0,0,0,0.55), inset {L.px(0.018)}px 0 0 rgba(0,0,0,0.18);
       color:#17130E;padding:{L.px(0.04)}px {L.px(0.035)}px;display:flex;flex-direction:column;">
-      <div style="font-size:{L.fs(0.02)}px;letter-spacing:0.3em;font-weight:800;opacity:0.7;">{E(v.get('year', ''))}</div>
+      <div style="font-size:{L.fs(L.READ)}px;letter-spacing:0.15em;font-weight:800;opacity:0.7;">{E(v.get('year', ''))}</div>
       <div class="serif" style="font-size:{L.fs(0.07)}px;line-height:1;margin-top:{L.px(0.05)}px;">{E(v['title'])}</div>
       <div style="height:3px;width:40%;background:#17130E;margin:{L.px(0.03)}px 0;opacity:0.6;"></div>
-      <div style="font-size:{L.fs(0.026)}px;font-weight:600;margin-top:auto;">{E(v.get('author', ''))}</div></div>"""
+      <div style="font-size:{L.fs(L.READ)}px;font-weight:600;margin-top:auto;">{E(v.get('author', ''))}</div></div>"""
     tw.append(_ft(f"#{sid}-bk", "opacity: 0, rotationY: -35, x: -40", 'opacity: 1, rotationY: 0, x: 0, duration: 0.8, ease: "expo.out"', 0.15))
     rx = bx + bw + L.px(0.08)
     facts = ""
     for i, f in enumerate(v.get("facts", [])):
         facts += (f'<div id="{sid}-f{i}" style="display:flex;gap:{L.px(0.02)}px;align-items:baseline;margin-top:{L.px(0.03)}px;">'
                   f'<span class="serif acc" style="font-size:{L.fs(0.06)}px;min-width:{L.px(0.17)}px;white-space:nowrap;">{E(f.get("big", ""))}</span>'
-                  f'<span style="font-size:{L.fs(0.03)}px;line-height:1.3;">{E(f["text"])}</span></div>')
+                  f'<span style="font-size:{L.fs(L.READ)}px;line-height:1.3;">{E(f["text"])}</span></div>')
         tw.append(_rise(f"#{sid}-f{i}", max(0.6, cue(f.get("cue", ""), 1.0 + 1.2 * i)), 0.5, 14))
     m = (f'<div id="{sid}-c" style="position:absolute;inset:0;perspective:{L.px(1.5)}px;">{head}{cover}'
          f'<div style="position:absolute;left:{rx:.0f}px;right:{L.px(0.06)}px;top:{by + L.px(0.02):.0f}px;">{facts}</div></div>')

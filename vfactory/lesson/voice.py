@@ -439,10 +439,13 @@ def _match_times(toks: list[str], heard: list[tuple[str, float, float]], dur: fl
     return times
 
 
-def find_word(times: list[dict], needle: str, default: float = 0.0) -> float:
+def find_word(times: list[dict], needle: str, default: float = 0.0, after: float | None = None) -> float:
+    """Start time of the first word sequence that begins with `needle`; with `after`, the first one starting then or later."""
     n = needle.lower().strip()
     parts = n.split()
     for i in range(len(times)):
+        if after is not None and times[i]["start"] < after - 0.05:
+            continue
         seg = " ".join(re.sub(r"[^\w£$%'-]", "", times[j]["word"].lower()) for j in range(i, min(len(times), i + len(parts))))
         if seg.startswith(re.sub(r"[^\w£$%' -]", "", n)):
             return times[i]["start"]

@@ -24,7 +24,10 @@ LABELS = {
 
 
 class Look:
-    def __init__(self, brand: dict, width: int, height: int, lang: str = "en"):
+    READ = 1 / 30  # the readable floor: 36 px on a 1080 short side (a 4:3 frame seen ~480 px wide on a phone)
+    CONCEPT_B = "#E77A5F"  # coral: the second idea's colour (the first is the brand accent, gold in the book series)
+
+    def __init__(self, brand: dict, width: int, height: int, lang: str = "en", concepts: list[dict] | None = None):
         self.w, self.h = width, height
         self.t = LABELS.get(lang, LABELS["en"])
         self.accent = brand.get("primary_color", "#FF4F00")
@@ -34,13 +37,36 @@ class Look:
         self.sans = f"'{brand.get('font', 'Inter')}'"
         self.serif = "'EB Garamond'"
         self.u = min(width, height)  # layout unit
+        # two concept colours held for the whole film: idea A in the accent, idea B in coral (pictures, numbers, highlights)
+        self.colors = {"a": brand.get("concept_a", self.accent), "b": brand.get("concept_b", self.CONCEPT_B)}
+        self.concepts = {c["id"]: c for c in (concepts or []) if isinstance(c, dict) and c.get("id")}
 
     def px(self, f: float) -> int:
         return int(round(self.u * f))
 
     def fs(self, f: float) -> int:
-        """A font size: never under the 2.6%-of-short-side floor a phone can read (28 px at 1080)."""
-        return max(int(round(self.u * 0.026)) + 1, self.px(f))
+        """A font size: never under the readable floor (36 px at 1080; anything a viewer must read)."""
+        return max(int(round(self.u * self.READ)), self.px(f))
+
+    def color(self, obj, default: str | None = None) -> str:
+        """The colour an element is drawn in: its own `color` ("a", "b" or a hex), else its concept's colour, else default."""
+        c = obj.get("color") if isinstance(obj, dict) else None
+        if not c and isinstance(obj, dict) and obj.get("concept") in self.concepts:
+            c = self.concepts[obj["concept"]].get("color")
+        if c in self.colors:
+            return self.colors[c]
+        if isinstance(c, str) and re.fullmatch(r"#[0-9A-Fa-f]{6}", c):
+            return c
+        return default or self.accent
+
+    def icon_of(self, obj) -> str:
+        """The picture an element draws: its own `icon`, else the one its concept registered (one picture per idea)."""
+        if not isinstance(obj, dict):
+            return ""
+        if obj.get("icon"):
+            return obj["icon"]
+        c = self.concepts.get(obj.get("concept", ""), {})
+        return c.get("visual", "")
 
 
 def _ft(sel: str, frm: str, to: str, at: float, later: bool = False) -> str:
@@ -67,8 +93,8 @@ def base_css(L: Look, sid: str) -> str:
     #root {{ position: absolute; inset: 0; }}
     #{sid}-wrap {{ position: absolute; left: 0; top: 0; width: {L.w}px; height: {L.h}px; color: {L.ink};
       font-family: {L.sans}; }}
-    #{sid}-wrap .kicker {{ font-family: {L.sans}; font-weight: 800; font-size: {L.fs(0.022)}px; letter-spacing: 0.32em;
-      text-transform: uppercase; color: {L.accent}; }}
+    #{sid}-wrap .kicker {{ font-family: {L.sans}; font-weight: 800; font-size: {L.fs(L.READ)}px; letter-spacing: 0.14em;
+      line-height: 1.25; text-transform: uppercase; color: {L.accent}; }}
     #{sid}-wrap .serif {{ font-family: {L.serif}; font-weight: 500; }}
     #{sid}-wrap .muted {{ color: {L.muted}; }}
     #{sid}-wrap .acc {{ color: {L.accent}; }}
@@ -98,22 +124,53 @@ def _phrase_at(words: list[str], phrase: str) -> int:
     return -1
 
 
+def highlights(v: dict) -> list[tuple[str, dict]]:
+    """`highlight` entries as (phrase, entry): a plain phrase, or {"text", "color": "a"|"b"} / {"text", "concept"} for a
+    phrase drawn in a concept's colour."""
+    out = []
+    for h in v.get("highlight") or []:
+        if isinstance(h, str):
+            out.append((h, {}))
+        elif isinstance(h, dict) and h.get("text"):
+            out.append((h["text"], h))
+    return out
+
+
+def _cue_after(cue, word: str, default: float, after: float) -> float:
+    """The cue word's first occurrence at or after `after` (a later shot must not catch the same word spoken earlier
+    in the line). Cue functions without that option (tests, older callers) are asked plainly."""
+    try:
+        return cue(word, default, after=after)
+    except TypeError:
+        return cue(word, default)
+
+
+def strike_time(v: dict, dur: float, cue, drawn: float) -> float:
+    """When a myth is struck: on its `strike_cue` word, as soon as the struck words are on screen (`drawn`), never at
+    a fixed time; without a cue (or a cue not in the line) at ~60 % of the beat."""
+    t = cue(v["strike_cue"], dur * 0.6) if v.get("strike_cue") else dur * 0.6
+    return round(min(max(drawn + 0.15, t), max(drawn + 0.15, dur - 0.9)), 3)
+
+
 def statement(L, sid, v, dur, cue):
     """The key phrase, word by word out of a blur (one of HyperFrames' title entrances). A highlight underlines on
-    its cue word. A myth: `strike` names the wrong phrase, which is struck through on `strike_cue` while `replace`
-    writes the correction over it."""
+    its cue word, in the accent or in its concept's colour. A myth: `strike` names the wrong phrase, which is struck
+    through on `strike_cue` while `replace` writes the correction over it."""
     words = v["text"].split()
     groups = {}  # start index -> (end index, kind, i, phrase)
     spans = []
-    for i, h in enumerate(v.get("highlight") or []):
+    for i, (h, entry) in enumerate(highlights(v)):
         j = _phrase_at(words, h)
         if j >= 0:
             groups[j] = (j + len(h.split()), "hl", i, h)
-            spans.append((i, h))
+            spans.append((i, h, entry))
+    st_end = -1
     if v.get("strike"):
         j = _phrase_at(words, v["strike"])
         if j >= 0:
             groups[j] = (j + len(v["strike"].split()), "st", 0, v["strike"])
+            st_end = j + len(v["strike"].split()) - 1
+    colors = {i: L.color(entry, L.accent) for i, _, entry in spans}
     out, k, wi = [], 0, 0
     while k < len(words):
         if k in groups:
@@ -121,7 +178,8 @@ def statement(L, sid, v, dur, cue):
             inner = " ".join(f'<span id="{sid}-w{wi + n}" class="w">{E(w)}</span>' for n, w in enumerate(words[k:end]))
             wi += end - k
             if kind == "hl":
-                out.append(f'<span id="{sid}-h{i}" class="hl">{inner}<span id="{sid}-u{i}" class="ul"></span></span>')
+                c = colors.get(i, L.accent)
+                out.append(f'<span id="{sid}-h{i}" class="hl" style="color:{c}">{inner}<span id="{sid}-u{i}" class="ul" style="background:{c}"></span></span>')
             else:
                 out.append(f'<span id="{sid}-st" class="st">{inner}<span id="{sid}-sl" class="sl"></span>'
                            f'<span id="{sid}-rp" class="rp">{E(v.get("replace", ""))}</span></span>')
@@ -147,10 +205,11 @@ def statement(L, sid, v, dur, cue):
     for n in range(wi):  # per word: blur 6 px -> 0 and opacity 0 -> 1, ~0.09 s apart, no translate
         tw.append(_ft(f"#{sid}-w{n}", 'opacity: 0, filter: "blur(6px)"', 'opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power2.out"',
                       0.12 + 0.09 * n))
-    for i, h in spans:
-        tw.append(_ft(f"#{sid}-u{i}", "scaleX: 0", 'scaleX: 1, duration: 0.5, ease: "power3.out"', max(0.9, cue(h, 1.0 + i))))
+    for i, h, entry in spans:
+        tw.append(_ft(f"#{sid}-u{i}", "scaleX: 0", 'scaleX: 1, duration: 0.5, ease: "power3.out"',
+                      max(0.9, cue(entry.get("cue") or h, 1.0 + i))))
     if v.get("strike") and f'id="{sid}-st"' in text:
-        ts = max(1.0, cue(v.get("strike_cue", ""), dur * 0.6))
+        ts = strike_time(v, dur, cue, 0.12 + 0.09 * st_end + 0.2)
         tw.append(_ft(f"#{sid}-sl", "scaleX: 0", 'scaleX: 1, duration: 0.3, ease: "power3.out"', ts))
         tw.append(_ft(f"#{sid}-st .w", "opacity: 1", 'opacity: 0.4, duration: 0.3, ease: "power2.out"', ts + 0.15, later=True))
         tw.append(_ft(f"#{sid}-rp", 'opacity: 0, filter: "blur(8px)", y: 10', 'opacity: 1, filter: "blur(0px)", y: 0, duration: 0.4, ease: "expo.out"',
@@ -172,7 +231,7 @@ def stat(L, sid, v, dur, cue):
     pre, suf = E(v.get("prefix", "")), E(v.get("suffix", ""))
     m = f"""<div id="{sid}-c" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
       <div id="{sid}-l" class="kicker">{E(v['label'])}</div>
-      <div id="{sid}-n" class="serif" style="font-size:{L.fs(0.22)}px;line-height:1;margin:{L.px(0.03)}px 0;font-variant-numeric:tabular-nums;">{pre}<span id="{sid}-v">{_fmt_num(from_v, dec, L.t['locale'])}</span>{suf}</div>
+      <div id="{sid}-n" class="serif" style="font-size:{L.fs(0.22)}px;line-height:1;color:{L.color(v, L.ink)};margin:{L.px(0.03)}px 0;font-variant-numeric:tabular-nums;">{pre}<span id="{sid}-v">{_fmt_num(from_v, dec, L.t['locale'])}</span>{suf}</div>
       <div id="{sid}-no" class="muted" style="font-size:{L.fs(0.034)}px;max-width:{L.px(1.0)}px;">{E(v.get('note', ''))}</div></div>"""
     t0 = cue(v.get("cue", ""), 0.6) if v.get("cue") else 0.6
     count = min(2.6, max(1.2, dur * 0.45))
@@ -206,13 +265,13 @@ def chart(L, sid, v, dur, cue):
         gv = step * g
         gy = y0 + H - H * g / n_ticks
         grid.append(f'<line x1="{x0:.0f}" y1="{gy:.1f}" x2="{x0 + W:.0f}" y2="{gy:.1f}" stroke="{L.muted}" stroke-opacity="0.25" stroke-width="1"/>'
-                    f'<text x="{x0 - 14:.0f}" y="{gy + 6:.1f}" text-anchor="end" fill="{L.muted}" font-family="Inter" font-size="{L.fs(0.02)}">'
+                    f'<text x="{x0 - 14:.0f}" y="{gy + 6:.1f}" text-anchor="end" fill="{L.muted}" font-family="Inter" font-size="{L.fs(L.READ)}">'
                     f'{E(v.get("unit", ""))}{gv:,.0f}</text>')
     labels = []
     step = max(1, len(pts) // 6)
     for i in range(0, len(pts), step):
         labels.append(f'<text x="{xs[i]:.1f}" y="{y0 + H + L.px(0.04):.1f}" text-anchor="middle" fill="{L.muted}" '
-                      f'font-family="Inter" font-size="{L.fs(0.02)}">{E(str(pts[i][0]))}</text>')
+                      f'font-family="Inter" font-size="{L.fs(L.READ)}">{E(str(pts[i][0]))}</text>')
     draw_t0 = 0.5
     draw_d = max(1.5, dur * 0.62)
     ann, tw = [], []
@@ -227,7 +286,7 @@ def chart(L, sid, v, dur, cue):
         ann.append(f'<g id="{sid}-a{j}"><circle cx="{ax:.1f}" cy="{ay:.1f}" r="{L.px(0.011)}" fill="{L.accent}"/>'
                    f'<line x1="{ax:.1f}" y1="{ay:.1f}" x2="{ax:.1f}" y2="{ly + (8 if above else -L.px(0.03)):.1f}" stroke="{L.accent}" stroke-width="2"/>'
                    f'<text x="{ax + (16 if anchor == "start" else -16 if anchor == "end" else 0):.1f}" y="{ly:.1f}" text-anchor="{anchor}" fill="{L.ink}" font-family="Inter" font-weight="600" '
-                   f'font-size="{L.fs(0.024)}">{E(a["text"])}</text></g>')
+                   f'font-size="{L.fs(L.READ)}">{E(a["text"])}</text></g>')
         tw.append(_ft(f"#{sid}-a{j}", "opacity: 0, y: 8", 'opacity: 1, y: 0, duration: 0.45, ease: "back.out(2)"', at))
     m = f"""<div id="{sid}-c" style="position:absolute;inset:0;">
       <div id="{sid}-ti" class="kicker" style="position:absolute;left:{x0:.0f}px;top:{L.h * 0.13:.0f}px;">{E(v.get('title', ''))}</div>
@@ -250,16 +309,20 @@ def timeline(L, sid, v, dur, cue):
     x0, x1, y = L.w * 0.1, L.w * 0.9, L.h * 0.52
     items, tw = [], [_fade(f"#{sid}-ti", 0.1),
                      _ft(f"#{sid}-ln", "scaleX: 0", f'scaleX: 1, duration: {min(1.4, dur * 0.3):.2f}, ease: "power2.inOut"', 0.3)]
+    inset = (x1 - x0) * 0.12
+    gap = (x1 - x0 - 2 * inset) / max(1, n - 1) if n > 1 else (x1 - x0)
+    bw = min(L.px(0.36), 2 * gap - L.px(0.04))  # same-side neighbours are two steps apart: labels can be wide
     for i, e in enumerate(ev):
-        inset = (x1 - x0) * 0.12
         x = x0 + inset + (x1 - x0 - 2 * inset) * (i / max(1, n - 1) if n > 1 else 0.5)
+        bx = min(max(x, bw / 2 + L.px(0.02)), L.w - bw / 2 - L.px(0.02))  # the label stays inside the frame
         up = i % 2 == 0
         default_t = 0.8 + (dur - 1.8) * i / max(1, n)
         at = max(default_t * 0.6, cue(e.get("cue", ""), default_t)) if e.get("cue") else default_t
-        items.append(f"""<div id="{sid}-e{i}" style="position:absolute;left:{x - L.px(0.13):.0f}px;width:{L.px(0.26)}px;
-          top:{(y - L.px(0.21)) if up else (y + L.px(0.035)):.0f}px;text-align:center;">
-          <div class="serif acc" style="font-size:{L.fs(0.05)}px">{E(str(e['year']))}</div>
-          <div style="font-size:{L.fs(0.024)}px;line-height:1.3;margin-top:6px">{E(e['text'])}</div></div>
+        # labels above the line grow upwards from it, labels below grow downwards: a longer label never crosses the line
+        pos = f"bottom:{L.h - y + L.px(0.035):.0f}px;" if up else f"top:{y + L.px(0.035):.0f}px;"
+        items.append(f"""<div id="{sid}-e{i}" style="position:absolute;left:{bx - bw / 2:.0f}px;width:{bw:.0f}px;{pos}text-align:center;">
+          <div class="serif acc" style="font-size:{L.fs(0.05)}px;line-height:1.1;">{E(str(e['year']))}</div>
+          <div style="font-size:{L.fs(L.READ)}px;line-height:1.25;margin-top:6px">{E(e['text'])}</div></div>
           <div id="{sid}-d{i}" style="position:absolute;left:{x - L.px(0.011):.0f}px;top:{y - L.px(0.011):.0f}px;width:{L.px(0.022)}px;
           height:{L.px(0.022)}px;border-radius:50%;background:{L.accent};"></div>""")
         tw.append(_ft(f"#{sid}-d{i}", "scale: 0", 'scale: 1, duration: 0.35, ease: "back.out(3)"', at))
@@ -276,11 +339,11 @@ def quote(L, sid, v, dur, cue):
     badge = ""
     if attributed:
         badge = (f'<div id="{sid}-b" style="display:inline-block;margin-top:{L.px(0.03)}px;padding:6px 14px;border:2px solid {L.accent};'
-                 f'color:{L.accent};font-weight:600;font-size:{L.fs(0.019)}px;letter-spacing:0.2em;">{E(L.t['attributed'])}</div>')
+                 f'color:{L.accent};font-weight:600;font-size:{L.fs(L.READ)}px;letter-spacing:0.1em;">{E(L.t['attributed'])}</div>')
     m = f"""<div id="{sid}-c" style="position:absolute;left:{L.px(0.12)}px;right:{L.px(0.12)}px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;">
       <div id="{sid}-q" class="serif acc" style="font-size:{L.fs(0.2)}px;line-height:0.6;height:{L.px(0.09)}px;">&ldquo;</div>
       <div id="{sid}-t" class="serif" style="font-size:{L.fs(0.062)}px;line-height:1.22;font-style:italic;">{E(v['text'])}</div>
-      <div id="{sid}-by" style="margin-top:{L.px(0.035)}px;font-size:{L.fs(0.028)}px;font-weight:600;">— {E(v['by'])}{(', ' + E(str(v['year']))) if v.get('year') else ''}</div>
+      <div id="{sid}-by" style="margin-top:{L.px(0.035)}px;font-size:{L.fs(L.READ)}px;font-weight:600;">— {E(v['by'])}{(', ' + E(str(v['year']))) if v.get('year') else ''}</div>
       <div>{badge}</div></div>"""
     tw = [_fade(f"#{sid}-q", 0.15), _rise(f"#{sid}-t", 0.35, 0.9), _rise(f"#{sid}-by", 1.2)]
     if attributed:
@@ -309,7 +372,7 @@ def portrait(L, sid, v, dur, cue):
       <div id="{sid}-txt" style="position:absolute;left:{cx + r + L.px(0.06):.0f}px;right:{L.px(0.06)}px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;">
         <div id="{sid}-ro" class="kicker" style="letter-spacing:0.18em">{E(v.get('role', ''))}</div>
         <div id="{sid}-n" class="serif" style="font-size:{L.fs(0.085)}px;line-height:1.05;margin:{L.px(0.02)}px 0;">{E(v['name'])}</div>
-        <div id="{sid}-y" class="muted" style="font-size:{L.fs(0.032)}px;">{E(v.get('years', ''))}</div></div></div>"""
+        <div id="{sid}-y" class="muted" style="font-size:{L.fs(L.READ)}px;">{E(v.get('years', ''))}</div></div></div>"""
     tw = [_ft(f"#{sid}-ring", f"strokeDashoffset: {circ:.0f}", 'strokeDashoffset: 0, duration: 1.4, ease: "power2.inOut"', 0.2),
           _fade(f"#{sid}-h", 0.6, 1.0), _rise(f"#{sid}-i", 0.9, 0.8, 18), _fade(f"#{sid}-ro", 0.6),
           _rise(f"#{sid}-n", 0.8, 0.8), _rise(f"#{sid}-y", 1.2)]
@@ -321,7 +384,7 @@ def principle(L, sid, v, dur, cue):
       <div id="{sid}-num" class="serif" style="font-size:{L.fs(0.34)}px;line-height:1;color:#2A1A10;-webkit-text-stroke:2px {L.accent};">{int(v['n']):02d}</div>
       <div><div id="{sid}-k" class="kicker">{E(L.t['principle'])} {int(v['n'])}</div>
         <div id="{sid}-nm" class="serif" style="font-size:{L.fs(0.08)}px;line-height:1.08;margin:{L.px(0.02)}px 0;">{E(v['name'])}</div>
-        <div id="{sid}-ln" class="muted" style="font-size:{L.fs(0.032)}px;line-height:1.4;">{E(v.get('line', ''))}</div></div></div>"""
+        <div id="{sid}-ln" class="muted" style="font-size:{L.fs(L.READ)}px;line-height:1.4;">{E(v.get('line', ''))}</div></div></div>"""
     tw = [_ft(f"#{sid}-num", "opacity: 0, x: -30", 'opacity: 1, x: 0, duration: 0.8, ease: "expo.out"', 0.2),
           _fade(f"#{sid}-k", 0.5), _rise(f"#{sid}-nm", 0.7, 0.8), _rise(f"#{sid}-ln", max(1.4, cue(v.get("line_cue", ""), 1.4)))]
     return m, "", tw
@@ -332,7 +395,7 @@ def compare(L, sid, v, dur, cue):
     n = max(len(left.get("items", [])), len(right.get("items", [])))
 
     def col(side, data, x):
-        rows = "".join(f'<div id="{sid}-{side}{i}" style="font-size:{L.fs(0.03)}px;line-height:1.35;margin-top:{L.px(0.022)}px;">{E(t)}</div>'
+        rows = "".join(f'<div id="{sid}-{side}{i}" style="font-size:{L.fs(L.READ)}px;line-height:1.35;margin-top:{L.px(0.022)}px;">{E(t)}</div>'
                        for i, t in enumerate(data.get("items", [])))
         color = L.accent if side == "r" else L.muted
         return (f'<div style="position:absolute;left:{x}px;width:{L.w * 0.36:.0f}px;top:{L.h * 0.29:.0f}px;">'
@@ -407,7 +470,7 @@ def _ask_bubble(L, sid, v) -> str:
             f'background:rgba(255,255,255,0.07);border:2px solid {L.accent}88;">'
             f'<div id="{sid}-dots" style="position:absolute;left:{L.px(0.035)}px;top:{L.px(0.035)}px;">{dot}</div>'
             f'<div id="{sid}-aq" class="serif" style="font-size:{L.fs(0.045)}px;line-height:1.2;">{E(v["ask"])}</div>'
-            + (f'<div id="{sid}-ah" class="muted" style="font-size:{L.fs(0.024)}px;margin-top:{L.px(0.012)}px;">{E(v["ask_hint"])}</div>'
+            + (f'<div id="{sid}-ah" class="muted" style="font-size:{L.fs(L.READ)}px;margin-top:{L.px(0.012)}px;">{E(v["ask_hint"])}</div>'
                if v.get("ask_hint") else "") + '</div>')
 
 
@@ -415,10 +478,10 @@ def end(L, sid, v, dur, cue):
     m = f"""<div id="{sid}-c" style="position:absolute;left:{L.px(0.1)}px;right:{L.px(0.1)}px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;">
       <div id="{sid}-k" class="kicker">{E(v.get('kicker', L.t['done']))}</div>
       <div id="{sid}-t" class="serif" style="font-size:{L.fs(0.085)}px;line-height:1.08;margin:{L.px(0.025)}px 0;">{E(v['title'])}</div>
-      {f'<div id="{sid}-n" style="font-size:{L.fs(0.032)}px;"><span class="muted">{E(L.t['next'])}</span> {E(v["next"])}</div>' if v.get('next') else ''}
+      {f'<div id="{sid}-n" style="font-size:{L.fs(L.READ)}px;"><span class="muted">{E(L.t['next'])}</span> {E(v["next"])}</div>' if v.get('next') else ''}
       {_ask_bubble(L, sid, v) if v.get('ask') else ''}
-      {f'<div id="{sid}-cta" style="display:inline-block;align-self:flex-start;margin-top:{L.px(0.035)}px;padding:{L.px(0.014)}px {L.px(0.03)}px;background:{L.accent};color:#0B0B0B;font-weight:800;font-size:{L.fs(0.028)}px;border-radius:999px;">{E(v["cta"])}</div>' if v.get('cta') else ''}
-      <div id="{sid}-src" class="muted" style="position:absolute;left:0;right:0;bottom:{L.px(0.09)}px;font-size:{L.fs(0.019)}px;line-height:1.45;">
+      {f'<div id="{sid}-cta" style="display:inline-block;align-self:flex-start;margin-top:{L.px(0.035)}px;padding:{L.px(0.014)}px {L.px(0.03)}px;background:{L.accent};color:#0B0B0B;font-weight:800;font-size:{L.fs(L.READ)}px;border-radius:999px;">{E(v["cta"])}</div>' if v.get('cta') else ''}
+      <div id="{sid}-src" class="muted" style="margin-top:{L.px(0.05)}px;font-size:{L.fs(L.READ)}px;line-height:1.3;">
         {E(v.get('sources_line', ''))}<br/>{E(v.get('disclaimer', ''))}</div></div>"""
     tw = [_fade(f"#{sid}-k", 0.1), _rise(f"#{sid}-t", 0.3, 0.8)]
     t_next = max(0.9, cue(v.get("next_cue", ""), 0.9))
@@ -474,7 +537,7 @@ def hook(L, sid, v, dur, cue):
           stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="{down_len:.0f}" stroke-dashoffset="{down_len:.0f}"/>
         <circle id="{sid}-pk" cx="{xs[peak]:.1f}" cy="{ys[peak]:.1f}" r="{L.px(0.013)}" fill="{L.ink}" opacity="0"/>
         <text id="{sid}-pkl" x="{xs[peak] - (L.px(0.02) if breakout else 0):.1f}" y="{ys[peak] - L.px(0.035):.1f}" text-anchor="{'end' if breakout else 'middle'}" fill="{L.ink}" font-family="Inter"
-          font-weight="600" font-size="{L.fs(0.03)}">{E(v.get('peak_label', ''))}</text>
+          font-weight="600" font-size="{L.fs(L.READ)}">{E(v.get('peak_label', ''))}</text>
         <text id="{sid}-endl" x="{xs[-1]:.1f}" y="{ys[-1] - L.px(0.035):.1f}" text-anchor="end" fill="{L.accent}" font-family="Inter"
           font-weight="800" font-size="{L.fs(0.034)}">{E(v.get('end_label', ''))}</text>
       </svg>
@@ -530,12 +593,14 @@ def shots(L, sid, v, dur, cue):
     starts = [0.0]
     for i, sh in enumerate(items[1:], 1):
         default = dur * i / n
-        starts.append(max(starts[-1] + 1.5, min(dur - 1.5, cue(sh.get("cue", ""), default) if sh.get("cue") else default)))
+        at = _cue_after(cue, sh["cue"], default, starts[-1]) if sh.get("cue") else default
+        starts.append(max(starts[-1] + 1.5, min(dur - 1.5, at)))
     ends = starts[1:] + [dur]
     m, css, tw = [], [], []
     for i, (sh, t0, t1) in enumerate(zip(items, starts, ends)):
         ssid = f"{sid}s{i}"
-        local = (lambda w, d, t0=t0: (cue(w, d + t0) - t0) if w else d)
+        # cue words inside a shot are looked up from the shot's own start on (the same word said earlier is not its cue)
+        local = (lambda w, d, after=0.0, t0=t0: (_cue_after(cue, w, d + t0, t0 + after - 0.6) - t0) if w else d)
         # the shot's `cue` opens the shot; inside it, its own timings use their own cue fields (e.g. a swap's strike_cue)
         inner = {k: x for k, x in sh.items() if k != "cue"}
         gm, gcss, gtw = GENERATORS[sh["type"]](L, ssid, inner, t1 - t0, local)
