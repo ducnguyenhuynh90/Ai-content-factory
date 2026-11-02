@@ -64,6 +64,8 @@ def main(argv=None) -> int:
             print("ERROR  " + e)
         for w in rep["warnings"]:
             print("warn   " + w)
+        for w in rep.get("storyboard", []):
+            print("story  " + w)
         print(f"approval view: {md}")
         return 1 if rep["errors"] else 0
     if a.cmd == "build":

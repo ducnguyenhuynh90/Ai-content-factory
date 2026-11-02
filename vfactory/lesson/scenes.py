@@ -624,14 +624,15 @@ def scene_file(L: Look, sid: str, visual: dict, dur: float, cue, narr: float, la
         markup, css, tweens = gen(L, sid, visual, dur, cue, narr)
     else:
         markup, css, tweens = gen(L, sid, visual, dur, cue)
-    if not last:
+    if not last and not visual.get("_cont_next"):  # a board that the next beat continues does not blur away
         tweens.append(_exit(f"#{sid}-c", dur))
+    hold = ' data-hold="true"' if visual.get("_hold") else ""  # a declared still moment (the gate does not flag it)
     return f"""<template>
   <style>
     {base_css(L, sid)}
     {css}
   </style>
-  <div id="root" data-composition-id="{sid}" data-width="{L.w}" data-height="{L.h}">
+  <div id="root" data-composition-id="{sid}" data-width="{L.w}" data-height="{L.h}"{hold}>
     <div id="{sid}-wrap">{markup}</div>
   </div>
   <script>

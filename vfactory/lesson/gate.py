@@ -5,12 +5,15 @@ python -m vfactory.lesson gate LESSON.json --out BUILD_DIR   (BUILD_DIR is what 
 Writes BUILD_DIR/gate/report.json and pictures to look at:
   gate/hook.jpg      the first 6 s, one frame every 0.5 s (does frame 0 sell the video? does something move at once?)
   gate/scenes.jpg    middle and end frame of every beat (is every picture the image of its line? any glitch?)
+  gate/phone.jpg     the middle of every beat at 480 px wide (a phone held upright: is every label readable?)
   gate/thumb.jpg     the thumbnail as YouTube shows it (small: is the text readable at 320 px?)
   gate/opening.txt   the first 30 s as spoken, sentence by sentence with timestamps (rubric D)
 Hard fails (verdict "block") are technical defects no viewer should meet: dropped words, glyphs the fonts cannot draw,
 a broken layout or contrast. Everything else is evidence for the reviewer's judgment (video-gatekeeper rubric), tagged
 with the rubric category it informs: [D] opening, [E] structure, [I] presentation, [K] sharing, [L] conversion…
-Pacing findings (frozen screens, unread lines) inform [E]/[I]; they are not verdicts by themselves.
+Pacing findings (frozen screens, unread lines) inform [E]/[I]; they are not verdicts by themselves. Frozen screens are
+measured twice: HyperFrames' dead stretches (> 2 s) and the mean pixel change between frames 2.5 s apart (caption band
+excluded); a beat with `"hold": true` declares its stillness and is not flagged.
 """
 
 from __future__ import annotations
@@ -32,7 +35,11 @@ SAFE = set(" \n\t")
 # thresholds (seconds unless noted); see .claude/skills/video-gatekeeper/references/rubric.md for why
 HOOK_MAX_S = 7.5          # the hook's spoken line must land inside ~5-7 s
 FIRST_WORD_MAX_S = 0.6    # the voice starts at once
-DEAD_MAX_S = 3.0          # nothing on screen may stand still longer than this (a question's countdown excepted)
+DEAD_MAX_S = 2.0          # nothing on screen may stand still longer than this (a question's countdown or a declared hold excepted)
+FROZEN_STEP_S = 2.5       # the frozen-screen probe compares frames this far apart...
+FROZEN_DIFF = 4.0         # ...and calls a pair "nearly unchanged" below this mean pixel change (0-255)
+RICH_MEAN = 10.0          # a lively explainer averages at least this much change per step (dashi-animationstyle, measured)
+CAPTION_BAND = 0.16       # the bottom of the frame belongs to the captions: changing words there are not picture changes
 RATE_RANGE = (150, 245)   # Vietnamese syllables per minute, per line: chill but never sluggish or rushed
 QUESTION_PAUSE_MIN = 0.55  # silence after a spoken question
 
@@ -44,7 +51,8 @@ def _texts(v, out: list[str]) -> list[str]:
         for k, x in v.items():
             if k not in ("type", "icon", "cue", "motion", "motion_cue", "art", "ease", "line_cue", "keep_cue", "stop_cue",
                          "strike_cue", "next_cue", "cta_cue", "sources_cue", "ask_cue", "pass_cue", "why_cue", "top_cue",
-                         "center_cue", "label_cue", "fast_cue", "attribution"):
+                         "center_cue", "label_cue", "fast_cue", "attribution", "concept", "color", "action", "takeaway_cue",
+                         "overview_cue", "note_cue", "board_id", "start") and not k.startswith("_"):
                 _texts(x, out)
     elif isinstance(v, list):
         for x in v:
@@ -125,12 +133,22 @@ def vi_number(n: int) -> str:
     return " ".join(out)
 
 
+VI_CURRENCY = {"$": "đô la", "€": "euro", "£": "bảng"}
+_AMOUNT = r"\d{1,3}(?: ?[. ]\d{3})+(?!\d)(?:\s?,\d+)?|\d+(?:\s?,\d+)?"
+
+
 def _vi_digits_to_words(text: str) -> str:
-    """Whisper writes numbers as digits ('1.435', '6,9', '55.000'); spell them out so they compare with the script."""
+    """Whisper writes numbers as digits ('1.435', '6,9', '55.000') and money as symbols ('4.000$', '$4.000'); spell
+    them out the way the script says them (amount first, unit last) so they compare with the script."""
     def one(m):
         whole, frac = m.group(1), m.group(2)
         w = vi_number(int(re.sub(r"\D", "", whole)))
         return w + (" phẩy " + " ".join(VI_DIGITS[int(c)] for c in frac) if frac else "")
+    for sym, word in VI_CURRENCY.items():
+        s = re.escape(sym)
+        text = re.sub(rf"{s}\s?({_AMOUNT})", rf"\1 {word}", text)  # "$4.000" -> "4.000 đô la"
+        text = re.sub(rf"(?<=\d)\s?{s}", f" {word}", text)  # "4.000$" -> "4.000 đô la"
+        text = text.replace(sym, f" {word} ")
     text = text.replace("%", " phần trăm")
     text = re.sub(r"\b(\d{1,2})\s?[-/]\s?(\d{4})\b", r"\1 năm \2", text)  # "6-1986" = tháng sáu năm 1986
     text = re.sub(r"(?<=\d)\s?[-–]\s?(?=\d)", " ", text)  # "50-50"
@@ -221,6 +239,39 @@ def _contact(video: Path, times: list[float], out: Path, cols: int, width: int) 
     tmp.rmdir()
 
 
+def frame_changes(video: Path, step: float = FROZEN_STEP_S, band: float = CAPTION_BAND, size=(320, 240)) -> list[tuple[float, float]]:
+    """How much the picture changes: the mean absolute luma change (0-255) between frames `step` seconds apart, with
+    the caption band cut off. Returns [(t, change from t - step to t)]."""
+    w, h = size
+    r = subprocess.run(["ffmpeg", "-v", "error", "-i", str(video), "-vf", f"fps=1/{step},scale={w}:{h},format=gray",
+                        "-f", "rawvideo", "-"], capture_output=True)
+    n = len(r.stdout) // (w * h)
+    if n < 2:
+        return []
+    fr = np.frombuffer(r.stdout[: n * w * h], dtype=np.uint8).reshape(n, h, w)[:, : int(h * (1 - band)), :].astype(np.int16)
+    d = np.abs(np.diff(fr, axis=0)).mean(axis=(1, 2))
+    return [(round((i + 1) * step, 2), round(float(x), 2)) for i, x in enumerate(d)]
+
+
+def frozen_stretches(changes: list[tuple[float, float]], step: float = FROZEN_STEP_S, limit: float = FROZEN_DIFF,
+                     excused: list[tuple[float, float]] = ()) -> list[dict]:
+    """Runs of consecutive steps whose change is under `limit` (the screen looks frozen), unless the step lies in an
+    excused span (a question's countdown, the end card, a beat that declares a hold)."""
+    out, cur = [], None
+    for t, d in changes:
+        mid = t - step / 2
+        low = d < limit and not any(a <= mid <= b for a, b in excused)
+        if low:
+            if cur and abs(cur["end"] - (t - step)) < 1e-6:
+                cur["end"], cur["min_change"] = t, min(cur["min_change"], d)
+            else:
+                cur = {"start": round(t - step, 2), "end": t, "min_change": d}
+                out.append(cur)
+        else:
+            cur = None
+    return out
+
+
 def run(lesson_path: str | Path, out_dir: str | Path, check: bool = True, listen: bool = True) -> dict:
     lesson_path, out = Path(lesson_path), Path(out_dir)
     L = schema.load(lesson_path)
@@ -306,6 +357,10 @@ def run(lesson_path: str | Path, out_dir: str | Path, check: bool = True, listen
     if cl:
         warns += [f"[I] {x}" for x in cl]
 
+    # spans where a still screen is the point: a question's countdown, the end card, a beat that declares `hold`
+    still_spans = [(tm["start"], tm["start"] + tm["dur"]) for tm in timing["beats"]
+                   if beats[tm["id"]]["visual"]["type"] in ("question", "end") or beats[tm["id"]].get("hold")]
+
     # --- what HyperFrames measures on the real timeline: frozen stretches, unreadable lines, layout, contrast
     if check:
         r = subprocess.run(["npx", "--yes", "hyperframes", "check", "--json"], cwd=out / "hf", capture_output=True, text=True)
@@ -315,7 +370,7 @@ def run(lesson_path: str | Path, out_dir: str | Path, check: bool = True, listen
             for k, ok in metrics["hyperframes"].items():
                 if not ok:
                     fails.append(f"hyperframes {k} check failed: {[f.get('message', '')[:120] for f in d[k].get('findings', [])][:5]}")
-            q_spans = [(tm["start"], tm["start"] + tm["dur"]) for tm in timing["beats"] if beats[tm["id"]]["visual"]["type"] in ("question", "end")]
+            q_spans = still_spans
             for f in d.get("craft", {}).get("findings", []):
                 msg = f.get("message", "")
                 m = re.search(r"for ([\d.]+) s \(([\d.]+)", msg)
@@ -376,6 +431,23 @@ def run(lesson_path: str | Path, out_dir: str | Path, check: bool = True, listen
     metrics["coverage"] = {"script": True, "render": bool(video), "audio": True, "analytics": "not assessable",
                            "real_shares": "not assessable"}
 
+    # --- frozen screens, measured on the render: something visible should change every 2-3 s
+    if video:
+        ch = frame_changes(video)
+        if ch:
+            fz = frozen_stretches(ch, excused=still_spans)
+            mean = round(float(np.mean([d for _, d in ch])), 2)
+            metrics["frozen"] = {"step_s": FROZEN_STEP_S, "limit": FROZEN_DIFF, "mean_change": mean,
+                                 "pairs": len(ch), "pairs_low": sum(1 for _, d in ch if d < FROZEN_DIFF), "stretches": fz}
+            for f in fz:
+                ids = [tm["id"] for tm in timing["beats"] if tm["start"] < f["end"] and tm["start"] + tm["dur"] > f["start"]]
+                warns.append(f"[E] screen nearly unchanged {f['start']:.1f}-{f['end']:.1f}s (change {f['min_change']:.1f} < "
+                             f"{FROZEN_DIFF:.0f} per {FROZEN_STEP_S}s, caption band excluded; beats {ids}): add a cue, a shot or a "
+                             "slow move, or declare 'hold'")
+            if mean < RICH_MEAN:
+                warns.append(f"[E] the picture changes little overall: mean change {mean:.1f} per {FROZEN_STEP_S}s (lively "
+                             f"explainers measure ≥ {RICH_MEAN:.0f})")
+
     # --- pictures for the reviewer
     if video:
         _contact(video, [i * 0.5 for i in range(12)], g / "hook.jpg", 6, 360)
@@ -383,6 +455,9 @@ def run(lesson_path: str | Path, out_dir: str | Path, check: bool = True, listen
         for tm in timing["beats"]:
             mids += [tm["start"] + tm["dur"] * 0.5, tm["start"] + tm["dur"] - 0.4]
         _contact(video, mids, g / "scenes.jpg", 8, 300)
+        # the phone check: every beat's middle frame at 480 px wide (a 4:3 video on a phone held upright); text
+        # that is hard to read here is too small
+        _contact(video, [tm["start"] + tm["dur"] * 0.6 for tm in timing["beats"]], g / "phone.jpg", 4, 480)
         thumb = sorted(out.glob("*_thumbnail.png"))
         if thumb:
             subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(thumb[0]), "-vf", "scale=320:-1", str(g / "thumb.jpg")], capture_output=True)
@@ -400,6 +475,6 @@ def run(lesson_path: str | Path, out_dir: str | Path, check: bool = True, listen
     verdict = "block" if fails else ("revise" if warns else "pass")
     rep = {"lesson": str(lesson_path), "video": str(video) if video else None, "verdict": verdict, "fails": fails,
            "warnings": warns, "metrics": metrics,
-           "evidence": {k: str(g / f"{k}.jpg") for k in ("hook", "scenes", "thumb") if (g / f"{k}.jpg").exists()}}
+           "evidence": {k: str(g / f"{k}.jpg") for k in ("hook", "scenes", "phone", "thumb") if (g / f"{k}.jpg").exists()}}
     (g / "report.json").write_text(json.dumps(rep, ensure_ascii=False, indent=1))
     return rep

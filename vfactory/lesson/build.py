@@ -12,7 +12,7 @@ from .. import ffmpeg as ff
 from ..editor import brand as B
 from ..editor import hyperframes as H
 from ..editor.enhance import mix_stems
-from . import music, schema, voice
+from . import canvas, music, schema, voice
 from .scenes import Look, highlights, scene_file
 
 ASPECTS = {"4:3": (1440, 1080), "16:9": (1920, 1080), "9:16": (1080, 1920), "1:1": (1080, 1080)}
@@ -55,7 +55,7 @@ def plan_timing(L: dict, durs: dict[str, float]) -> list[dict]:
             d = max(d, 4.5)
         if v["type"] == "end":
             d = max(d + 1.5, 6.0)
-        if v["type"] in ("chart", "timeline", "list", "compare"):
+        if v["type"] in ("chart", "timeline", "list", "compare", "scenario", "board"):
             d += 0.8  # let the viewer read the finished graphic
         out.append({"id": b["id"], "start": round(t, 3), "dur": round(d, 3), "narr": narr, "lead": lead})
         t += d
@@ -209,8 +209,10 @@ def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: 
     H.ensure_gsap(proj / "assets" / "vendor")
     grain_png(proj / "assets" / "grain.png")
     hosts = []
+    visuals = canvas.resolve_boards([b["visual"] for b in L["beats"]])  # boards that run over several beats
     for i, (b, tm) in enumerate(zip(L["beats"], timing)):
         sid = b["id"]
+        vis = {**visuals[i], **({"_hold": True} if b.get("hold") else {})}
         wt = times[sid]
 
         def cue(word: str, default: float, after: float | None = None, wt=wt, lead=tm["lead"]) -> float:
@@ -219,7 +221,7 @@ def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: 
             return lead + voice.find_word(wt, word, default - lead, after=None if after is None else after - lead)
 
         (proj / "compositions" / f"{sid}.html").write_text(
-            scene_file(look, sid, b["visual"], tm["dur"], cue, tm["lead"] + tm["narr"], last=i == len(L["beats"]) - 1))
+            scene_file(look, sid, vis, tm["dur"], cue, tm["lead"] + tm["narr"], last=i == len(L["beats"]) - 1))
         hosts.append(f'<div id="{sid}" data-composition-id="{sid}" data-composition-src="compositions/{sid}.html" '
                      f'data-start="{tm["start"]:.3f}" data-duration="{tm["dur"]:.3f}" data-track-index="{10 + i % 2}" '
                      f'data-track-kind="graphics" data-width="{W}" data-height="{Hh}" style="z-index:10"></div>')
@@ -326,5 +328,6 @@ def script_markdown(L: dict) -> str:
            "## Principles", *[f"{i + 1}. **{p['name']}** — {p.get('line', '')}" for i, p in enumerate(L.get("principles", []))], "",
            "## Script", *rows, "", "## Sources", *[f"- [{s['id']}] {s['cite']}" + (f" — {s['url']}" if s.get('url') else '')
                                                      for s in L.get("sources", [])], "",
-           "## Lint", *[f"- ERROR: {e}" for e in rep["errors"]], *[f"- warning: {w}" for w in rep["warnings"]]]
+           "## Lint", *[f"- ERROR: {e}" for e in rep["errors"]], *[f"- warning: {w}" for w in rep["warnings"]],
+           *[f"- storyboard: {w}" for w in rep.get("storyboard", [])]]
     return "\n".join(out) + "\n"

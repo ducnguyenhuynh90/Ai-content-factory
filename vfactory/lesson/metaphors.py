@@ -912,3 +912,5 @@ ICONS = {k: (lambda f: (lambda s, c: _first_attrs(f(s, c))))(f) for k, f in ICON
 METAPHORS = {"funnel": funnel, "ladder": ladder, "venn": venn, "flywheel": flywheel, "halo": halo, "swap": swap,
              "company": company, "rise": rise, "trio": trio, "icon": icon, "book": book, "climb": climb}
 GENERATORS.update(METAPHORS)
+
+from . import canvas  # noqa: E402,F401  (scenario, board: built on the icons above; registers itself in GENERATORS)
