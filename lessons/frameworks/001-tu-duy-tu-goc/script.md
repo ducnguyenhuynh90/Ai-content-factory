@@ -1,5 +1,5 @@
 # Tư duy từ gốc
-_Khung tư duy · Tập 1 · 930 words · ~4.0 min · 4:3_
+_Khung tư duy · Tập 1 · 931 words · ~4.0 min · 4:3_
 
 ## Learning goals
 - Kể lại câu chuyện kỹ thuật 2001–2008: Musk được báo giá khoảng 15–20 triệu đô mỗi tên lửa ở Nga (theo lời ông), tự hỏi tên lửa làm từ gì, ước tính vật liệu chỉ khoảng 2% giá một tên lửa thông thường; SpaceX 2002, Falcon 1 hỏng ba lần rồi lên quỹ đạo ngày 28/9/2008; NASA góp tiền (2006) và ký hợp đồng (12/2008)
@@ -14,8 +14,8 @@ _Khung tư duy · Tập 1 · 930 words · ~4.0 min · 4:3_
 ## Script
 | # | act | narration | on screen |
 |---|---|---|---|
-| h1 | hook | Họ đòi tới hai mươi triệu đô một quả tên lửa. Elon Musk hỏi lại: nguyên liệu giá bao nhiêu? | shots: shots |
-| h2 | context | Câu trả lời là một con số nhỏ đến bất ngờ. Cách ông đi tới con số ấy có một cái tên: tư duy từ gốc. | shots: shots |
+| h1 | hook | Họ đòi tới hai mươi triệu đô một quả tên lửa. Elon Musk tự hỏi: nguyên liệu giá bao nhiêu? | shots: shots |
+| h2 | context | Câu trả lời là một con số nhỏ bất ngờ. Cách nghĩ ấy có một cái tên: tư duy từ gốc. | shots: shots |
 | t0 | context |  | title: Tư duy từ gốc |
 | b01 | misconception | Ta hay nghĩ: thứ gì đắt là vì nó vốn đắt. Ai cũng trả, chắc giá ấy đúng. Musk gọi đó là suy luận theo lối mòn, by analogy: làm giống người khác, sửa đi một chút. | shots: shots |
 | b02 | context | Hình dung hai người nấu phở. Một người mua gói gia vị, nấu đúng hướng dẫn. Người kia ninh nước dùng từ xương, nướng gừng, và biết mỗi thứ giá bao nhiêu. Cả hai đều có bát phở, nhưng chỉ người thứ hai biết vị ngọt từ đâu. | shots: shots |
@@ -28,13 +28,13 @@ _Khung tư duy · Tập 1 · 930 words · ~4.0 min · 4:3_
 | b10 | story | Năm hai nghìn lẻ hai, Musk lập SpaceX, theo lời ông, với khoảng một trăm triệu đô tiền túi. Nhưng biết giá chưa phải là có tên lửa. _(attributed)_ | shots: shots |
 | b11 | story | Falcon One hỏng ba lần. Lần một, năm hai nghìn lẻ sáu: rò nhiên liệu, cháy. Lần hai, năm sau: tới không gian, nhưng không vào quỹ đạo. Lần ba, năm hai nghìn lẻ tám: hai tầng va nhau. | timeline: Falcon 1 · đảo Omelek, Thái Bình Dương |
 | b12 | story | Theo lời Musk, tiền chỉ đủ cho khoảng ba lần phóng. Cuối tháng chín năm ấy, lần thứ tư, Falcon One vào quỹ đạo: tên lửa nhiên liệu lỏng tư nhân đầu tiên làm được, dù chỉ chở một khối tải giả. _(attributed)_ | shots: shots |
-| b13 | complication | Nhưng SpaceX không đi một mình. Năm hai nghìn lẻ sáu, NASA cam kết gần ba trăm triệu đô. Ba tháng sau lần thứ tư, thêm hợp đồng chở hàng khoảng một phẩy sáu tỷ đô. Từ gốc giúp thấy chỗ đắt vô lý; tiền của NASA giúp công ty sống sót. _(estimate)_ | shots: shots |
+| b13 | complication | Nhưng SpaceX không đi một mình. Năm hai nghìn lẻ sáu, NASA cam kết gần ba trăm triệu đô. Ba tháng sau lần thứ tư, thêm hợp đồng chở hàng khoảng một tỷ sáu trăm triệu đô. Từ gốc giúp thấy chỗ đắt vô lý; tiền của NASA giúp công ty sống sót. _(attributed)_ | shots: shots |
 | b15 | principle | Từ câu chuyện ấy, có ba nguyên tắc. Thứ nhất: tách tới nguyên liệu. Thứ này làm từ gì, và mỗi phần thật sự giá bao nhiêu? Như người biết từng thứ trong nồi xương. | board: board |
 | b16 | principle | Thứ hai: tách luật khỏi thói quen. Cái gì là giới hạn thật, như vật lý? Cái gì chỉ là xưa nay vẫn thế? Theo Musk, phần lớn giá tên lửa nằm ở loại thứ hai. | board: board |
 | b17 | example | Thử với một ly cà phê sữa đá năm mươi lăm nghìn trong trung tâm thương mại, số minh họa thôi. Nguyên liệu cộng lại khoảng mười nghìn. Hơn bốn mươi nghìn là mặt bằng, thương hiệu và công. Ở xe đầu hẻm, nguyên liệu vẫn thế, phần kia co lại: cả ly khoảng hai mươi nghìn. _(estimate)_ | scenario: scenario |
 | b18 | example | Không phải đừng mua cà phê: chỗ ngồi mát có thể rất đáng. Chỉ là giờ bạn biết mình trả cho phần nào. Tên lửa cũng vậy: SpaceX nhắm vào phần còn lại. | shots: shots |
 | b19 | principle | Thứ ba: lắp lại, rồi để thực tế chấm. Dựng phương án mới từ những mảnh bắt buộc, rồi thử. Falcon One hỏng ba lần trước khi lên quỹ đạo. Từ gốc cho bạn bản vẽ; chỉ thực tế mới chấm điểm. | board: board |
-| b20 | complication | Nhưng nồi xương cũng có chỗ dừng. Ninh xương mất cả đêm, không ai làm thế cho mọi bữa. Chính Musk nói phần lớn thời gian ta vẫn đi theo lối mòn, vì từ gốc tốn sức. | shots: shots |
+| b20 | complication | Nhưng hình ảnh nồi xương cũng có giới hạn. Một nồi nước dùng phải ninh cả đêm, không ai làm thế cho mọi bữa. Chính Musk nói phần lớn thời gian ta vẫn đi theo lối mòn, vì từ gốc tốn sức. | shots: shots |
 | b21 | complication | Đầu bếp giỏi vẫn học người đi trước: SpaceX thuê kỹ sư lão luyện, dùng cả ý tưởng từ thời Apollo. Và có món phải theo đúng công thức, như y tế, luật hay an toàn. | shots: shots |
 | b22 | question | Giờ thử một chút nhé. Một khóa học tiếng Anh báo giá ba mươi triệu đồng. Câu hỏi từ gốc đầu tiên bạn nên hỏi là gì? _(estimate)_ | question: Khóa tiếng Anh 30 triệu đồng. Câu hỏi từ gốc đầu tiên? |
 | b23 | recap | Đáp án là B: tách ra rồi, bạn vẫn có thể chọn khóa ấy, nhưng vì hiểu. Vậy là ba nguyên tắc. Tách tới nguyên liệu. Tách luật khỏi thói quen. Và lắp lại, rồi để thực tế chấm. | board: board |
@@ -53,7 +53,7 @@ _Khung tư duy · Tập 1 · 930 words · ~4.0 min · 4:3_
 - [musk_money] Elon Musk, CBS 60 Minutes (2012, via Space.com) and IAC 2017: SpaceX had money for about three launch attempts; a fourth failure 'would have been game over' (his words; phrasing varies)
 - [nasa_cots] NASA Commercial Orbital Transportation Services award, 18 August 2006: SpaceX about $278 million (later about $396 million) toward Falcon 9 and Dragon (Wikipedia 'COTS'; SpaceNews; NASA NTRS report) — https://en.wikipedia.org/wiki/Commercial_Orbital_Transportation_Services
 - [nasa_crs] NASA release, 23 December 2008: Commercial Resupply Services contracts for the International Space Station — SpaceX 12 flights, about $1.6 billion; Orbital Sciences 8 flights, about $1.9 billion (reported by Spaceflight Now, NASASpaceflight.com, SpaceNews)
-- [aristotle] Aristotle, Physics I.1, 184a10–16, transl. R. P. Hardie & R. K. Gaye (Oxford, 1930): we think we know a thing when we are acquainted with its primary causes or first principles 'and have carried our analysis as far as its simplest elements'; dates 384–322 BC per the Stanford Encyclopedia of Philosophy — https://plato.stanford.edu/entries/aristotle/
+- [aristotle] Aristotle, Physics I.1, 184a10–16, transl. R. P. Hardie & R. K. Gaye (Oxford, 1930): 'we do not think that we know a thing until we are acquainted with its primary conditions or first principles, and have carried our analysis as far as its simplest elements'; dates 384–322 BC per the Stanford Encyclopedia of Philosophy — https://plato.stanford.edu/entries/aristotle/
 - [urban2015] Tim Urban, 'The Cook and the Chef: Musk's Secret Sauce', Wait But Why, November 2015: the chef reasons from first principles (raw edible ingredients), the cook follows recipes; this episode's phở packet vs bone broth is our Vietnamese adaptation — https://waitbutwhy.com/2015/11/the-cook-and-the-chef-musks-secret-sauce.html
 - [merlin] Wikipedia, 'SpaceX Merlin': the Merlin engine's pintle injector traces back to the Apollo lunar module descent engine; propulsion led by experienced engineer Tom Mueller — https://en.wikipedia.org/wiki/SpaceX_Merlin
 - [minhhoa] Số minh họa của kênh (ước tính làm tròn, không phải khảo sát giá): ly cà phê sữa đá 55.000đ ở trung tâm thương mại, nguyên liệu khoảng 10.000đ, xe cà phê đầu hẻm khoảng 20.000đ; khóa học tiếng Anh 30 triệu đồng
