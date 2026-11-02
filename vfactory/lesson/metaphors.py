@@ -906,6 +906,26 @@ def _first_attrs(svg: str) -> str:
     return _TAG.sub(tag, svg)
 
 
+ICONS.update({
+    # kitchen set for cooking metaphors: a noodle bowl with chopsticks, a stock pot, a torn seasoning sachet, an iced glass
+    "bowl": lambda s, c: (f'<path d="M{s * .08} {s * .5} L{s * .92} {s * .5} C{s * .9} {s * .74} {s * .72} {s * .86} {s * .5} {s * .86} '
+                          f'C{s * .28} {s * .86} {s * .1} {s * .74} {s * .08} {s * .5} Z" fill="{c}" fill-opacity="0.15" {_st(s, c)}/>'
+                          f'<path d="M{s * .36} {s * .86} L{s * .34} {s * .94} L{s * .66} {s * .94} L{s * .64} {s * .86}" {_st(s, c)}/>'
+                          f'<path d="M{s * .56} {s * .44} L{s * .9} {s * .1} M{s * .64} {s * .46} L{s * .96} {s * .16}" {_st(s, c)}/>'
+                          f'<path d="M{s * .2} {s * .58} C{s * .35} {s * .64} {s * .5} {s * .56} {s * .7} {s * .62}" {_st(s, c, .03)}/>'),
+    "pot": lambda s, c: (f'<path d="M{s * .16} {s * .36} L{s * .84} {s * .36} L{s * .8} {s * .9} L{s * .2} {s * .9} Z" fill="{c}" fill-opacity="0.15" {_st(s, c)}/>'
+                         f'<path d="M{s * .1} {s * .3} L{s * .9} {s * .3} M{s * .16} {s * .46} L{s * .04} {s * .46} M{s * .84} {s * .46} L{s * .96} {s * .46}" {_st(s, c)}/>'
+                         f'<path d="M{s * .42} {s * .3} C{s * .42} {s * .22} {s * .58} {s * .22} {s * .58} {s * .3}" {_st(s, c)}/>'),
+    "packet": lambda s, c: (f'<path d="M{s * .22} {s * .22} L{s * .3} {s * .14} L{s * .38} {s * .22} L{s * .46} {s * .14} L{s * .54} {s * .22} '
+                            f'L{s * .62} {s * .14} L{s * .7} {s * .22} L{s * .78} {s * .14} L{s * .78} {s * .9} L{s * .22} {s * .9} Z" '
+                            f'fill="{c}" fill-opacity="0.15" {_st(s, c)}/>'
+                            f'<path d="M{s * .34} {s * .5} L{s * .66} {s * .5} M{s * .38} {s * .62} L{s * .62} {s * .62}" {_st(s, c, .04)}/>'),
+    "glass": lambda s, c: (f'<path d="M{s * .24} {s * .16} L{s * .76} {s * .16} L{s * .68} {s * .92} L{s * .32} {s * .92} Z" fill="{c}" fill-opacity="0.15" {_st(s, c)}/>'
+                           f'<rect x="{s * .36}" y="{s * .42}" width="{s * .12}" height="{s * .12}" {_st(s, c, .03)}/>'
+                           f'<rect x="{s * .5}" y="{s * .52}" width="{s * .12}" height="{s * .12}" {_st(s, c, .03)}/>'
+                           f'<path d="M{s * .58} {s * .02} L{s * .5} {s * .7}" {_st(s, c)}/>'),
+})
+
 ICONS = {k: (lambda f: (lambda s, c: _first_attrs(f(s, c))))(f) for k, f in ICONS.items()}
 
 

@@ -1,0 +1,1125 @@
+{
+ "meta": {
+  "series": "Khung tư duy · Tập 1",
+  "title": "Tư duy từ gốc",
+  "subtitle": "First principles thinking — tên lửa, nồi phở và một cái giá đắt",
+  "topic": "books",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt đi làm, hay phải quyết định mua gì, học gì, làm gì với một cái giá có vẻ hiển nhiên; thích chuyện khoa học, công nghệ và cách nghĩ",
+  "aspect": "4:3",
+  "target_minutes": [
+   3,
+   5
+  ],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
+  "learning_goals": [
+   "Kể lại câu chuyện kỹ thuật 2001–2008: Musk được báo giá khoảng 15–20 triệu đô mỗi tên lửa ở Nga (theo lời ông), tự hỏi tên lửa làm từ gì, ước tính vật liệu chỉ khoảng 2% giá một tên lửa thông thường; SpaceX 2002, Falcon 1 hỏng ba lần rồi lên quỹ đạo ngày 28/9/2008; NASA góp tiền (2006) và ký hợp đồng (12/2008)",
+   "Phân biệt tư duy theo lối mòn (gói gia vị: làm giống người khác, sửa chút ít) với tư duy từ gốc (nồi nước dùng ninh từ xương: biết từng nguyên liệu)",
+   "Dùng ba nguyên tắc: tách tới nguyên liệu; tách luật khỏi thói quen; lắp lại, rồi để thực tế chấm; và biết chỗ ẩn dụ dừng lại (chậm, tốn sức; vẫn học từ người đi trước; có việc phải theo đúng công thức)"
+  ],
+  "disclaimer": "Nội dung giáo dục; câu chuyện kể lại từ nguồn công khai.",
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người kể chuyện lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively. Nothing in the script depends on this particular voice.",
+  "concepts": [
+   {
+    "id": "tu_goc",
+    "visual": "pot",
+    "color": "a",
+    "shows": "nồi nước dùng ninh từ xương: biết nồi có gì, mỗi thứ góp gì và giá bao nhiêu, nên tự nấu được, kể cả món mới",
+    "omits": "ninh xương chậm và tốn sức, không ai làm vậy cho mọi bữa; đầu bếp giỏi vẫn học từ người đi trước; nguyên liệu rẻ không có nghĩa là món rẻ (2% là vật liệu so với giá thường thấy, không phải giá SpaceX bán)"
+   },
+   {
+    "id": "loi_mon",
+    "visual": "packet",
+    "color": "b",
+    "shows": "gói gia vị: nấu đúng hướng dẫn có sẵn, trả cái giá ai cũng trả, không cần biết bên trong có gì",
+    "omits": "đi theo lối mòn thường là đúng và tiết kiệm sức; có món phải theo đúng công thức (y tế, luật, an toàn); gói gia vị không có gì xấu"
+   }
+  ],
+  "brief": {
+   "target_viewer": "Người Việt 20–40 tuổi đi làm, hay gặp những cái giá 'xưa nay vẫn thế' (khóa học, đồ công nghệ, dịch vụ); nghĩ rằng thứ gì đắt là vì nó vốn đắt (giả định của người viết, chủ kênh xác nhận lại)",
+   "format": "Giải thích một khung tư duy qua một câu chuyện thật (concept explainer), 4–5 phút, 4:3, minh họa icon vẽ tay, một bảng xuyên suốt cho ba nguyên tắc, một ví dụ đổi trạng thái, một giọng đọc",
+   "central_question": "Khi ai cũng trả một cái giá, làm sao biết cái giá ấy có hợp lý, và tư duy từ gốc giúp gì, đến đâu?",
+   "transformation": "Trước khi xem, họ nghĩ giá đắt là vì nó vốn đắt, và 'first principles' là khẩu hiệu của người nổi tiếng. Sau khi xem, họ kể lại được câu chuyện Moscow – bảng tính – 2% – ba lần hỏng – lần thứ tư (và vai trò của NASA), phân biệt được gói gia vị với nồi nước dùng, tự tách một cái giá thường ngày (ly cà phê, khóa học) theo ba nguyên tắc, và biết khi nào không nên nghĩ lại từ đầu",
+   "discovery_goal": "Tìm kiếm (\"first principles thinking\", \"tư duy từ gốc\", \"tư duy nguyên lý gốc\", \"Elon Musk first principles\", \"SpaceX Falcon 1\", \"khung tư duy\") và đề xuất từ video tư duy, khoa học; tập mở đầu của series Khung tư duy, khán giả series Review sách",
+   "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn tập sau về khung tư duy nào?\" (comment answering the end-card question)",
+   "share_recipient": "Một người bạn sắp đóng một khoản tiền lớn vì 'ai cũng trả thế' (khóa học, đám cưới, đồ công nghệ): câu hỏi 'trong nồi này thật sự có gì?' giúp hai người bàn chuyện tiền mà không ai bị coi là keo kiệt",
+   "evidence": "Wired 10/2012 (Chris Anderson phỏng vấn Musk: ba chuyến sang Nga, 15–20 triệu đô mỗi quả, vật liệu ~2% giá thường thấy, ô tô 20–25%); TED 2013 (định nghĩa first principles vs analogy); Vance 2015 và lời kể của Jim Cantrell (Moscow 2001–2002, chuyến bay về); Stanford eCorner 2003 (Mars Oasis); Wikipedia History of SpaceX, Falcon 1, RatSat; Spaceflight Now (ba lần hỏng, 28/9/2008); NASA COTS 18/8/2006 (278 triệu đô); NASA CRS 23/12/2008 (12 chuyến, ~1,6 tỷ đô); Aristotle, Physics I.1 (Hardie & Gaye); Tim Urban, Wait But Why 2015 (người nấu và đầu bếp); Musk/Kevin Rose 2012 và CNBC 2020 (tốn nhiều năng lượng tư duy hơn); Wikipedia SpaceX Merlin (vòi phun pintle từ thời Apollo); số ly cà phê và khóa học là số minh họa của kênh",
+   "constraints": "4–5 phút, 4:3, icon vẽ, không khuôn mặt người thật (Musk, Aristotle là huy hiệu chữ cái), một giọng đọc (OmniVoice seed 99 speed 0.88, có thể đổi sang giọng nhân bản của chủ kênh), tên tiếng Anh giữ nguyên chính tả, số đọc bằng chữ và làm tròn khi đọc, số chính xác trên màn hình; chỉ dùng con số của chính Musk (15–20 triệu đô), nói rõ 2% so với cái gì; nói rõ vai trò của NASA; một câu trung lập về Musk, không chính trị; không có lời khuyên đầu tư; giữ lời miễn trừ"
+  },
+  "youtube": {
+   "title": "Tư duy từ gốc: bài học từ tên lửa đầu tiên của SpaceX",
+   "thumbnail_text": "Tới 20 triệu $ một quả? Ông hỏi: làm từ gì?",
+   "description": "Năm 2001–2002, Elon Musk sang Nga hỏi mua tên lửa và, theo lời ông, được báo giá khoảng 15–20 triệu đô mỗi quả. Thay vì trả giá ấy, ông hỏi: tên lửa làm từ gì, và vật liệu đó giá bao nhiêu ngoài thị trường? Ước tính của ông: khoảng 2% giá một tên lửa thông thường. Video kể lại câu chuyện kỹ thuật ấy (SpaceX 2002, Falcon 1 hỏng ba lần rồi lên quỹ đạo ngày 28/9/2008, và vai trò của NASA), giải thích tư duy từ gốc (first principles) bằng hình ảnh gói gia vị và nồi nước dùng ninh từ xương, ba nguyên tắc (tách tới nguyên liệu; tách luật khỏi thói quen; lắp lại, rồi để thực tế chấm), một ví dụ với ly cà phê sữa đá, và một câu hỏi để bạn tự thử.\n\nẨn dụ dừng ở đâu: ninh xương chậm và tốn sức, không ai làm vậy cho mọi bữa (chính Musk nói phần lớn thời gian ta suy luận theo lối mòn); đầu bếp giỏi vẫn học từ người đi trước (SpaceX dùng kỹ sư giàu kinh nghiệm, ý tưởng vòi phun từ thời Apollo và tiền của NASA); có món phải theo đúng công thức (y tế, luật, an toàn); và nguyên liệu rẻ không có nghĩa là món rẻ.\n\nLưu ý về số liệu: 15–20 triệu đô là con số Musk kể (Wired 2012); các nguồn khác ghi số khác. 2% là ước tính của Musk về tiền vật liệu chia cho giá thường thấy của một tên lửa thời đó; không phải giá SpaceX bán, cũng không so với giá của Nga. 'Khoảng 100 triệu đô tiền túi' và 'tiền đủ cho ba lần phóng' là lời Musk kể. Lời kể về chuyến bay về là của Jim Cantrell. Falcon 1 là tên lửa nhiên liệu lỏng do tư nhân phát triển đầu tiên lên quỹ đạo, chở một khối tải giả (RatSat, 165 kg). Số tiền ly cà phê và khóa học là số minh họa. Elon Musk là người gây nhiều tranh cãi; video kể một câu chuyện kỹ thuật 2001–2008, không đánh giá một con người. Hình ảnh người nấu theo công thức và người đầu bếp phỏng theo Tim Urban (Wait But Why, 2015).\n\nChương:\nGiá tới 20 triệu đô một quả\nĐiều ta hay nghĩ\nGói gia vị và nồi nước dùng\nMoscow, 2001\nTên lửa làm từ gì?\nKhoảng 2%: so với cái gì?\nAristotle và cái tên\nBa lần hỏng\nLần thứ tư, và NASA\nNguyên tắc 1: tách tới nguyên liệu\nNguyên tắc 2: tách luật khỏi thói quen\nLy cà phê 55.000đ\nNguyên tắc 3: lắp lại, rồi để thực tế chấm\nẨn dụ dừng ở đâu\nThử một chút: khóa học 30 triệu\nBa nguyên tắc\nTrong nồi này có gì?\n\nNguồn:\n- Chris Anderson, Elon Musk's Mission to Mars (Q&A), Wired, 10/2012: https://www.wired.com/2012/10/ff-elon-musk-qa/\n- Elon Musk, The mind behind Tesla, SpaceX, SolarCity, TED 2013: https://www.ted.com/talks/elon_musk_the_mind_behind_tesla_spacex_solarcity\n- Ashlee Vance, Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future, Ecco, 2015\n- Wikipedia, History of SpaceX: https://en.wikipedia.org/wiki/History_of_SpaceX\n- Wikipedia, Falcon 1: https://en.wikipedia.org/wiki/Falcon_1\n- Wikipedia, Commercial Orbital Transportation Services: https://en.wikipedia.org/wiki/Commercial_Orbital_Transportation_Services\n- NASA, Commercial Resupply Services contracts (23/12/2008), qua Spaceflight Now / SpaceNews\n- Aristotle, Physics I.1, bản dịch Hardie & Gaye (Oxford, 1930)\n- Tim Urban, The Cook and the Chef: Musk's Secret Sauce, Wait But Why, 11/2015: https://waitbutwhy.com/2015/11/the-cook-and-the-chef-musks-secret-sauce.html\n- Wikipedia, SpaceX Merlin: https://en.wikipedia.org/wiki/SpaceX_Merlin\n\nBạn muốn tập sau về khung tư duy nào? Để lại bình luận nhé.",
+   "tags": [
+    "tư duy từ gốc",
+    "first principles",
+    "first principles thinking",
+    "tư duy nguyên lý gốc",
+    "khung tư duy",
+    "mô hình tư duy",
+    "Elon Musk",
+    "SpaceX",
+    "Falcon 1",
+    "Aristotle",
+    "tư duy phản biện",
+    "ra quyết định",
+    "kỹ năng tư duy"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "wired2012",
+   "cite": "Chris Anderson, 'Elon Musk's Mission to Mars' (Q&A), Wired, October 2012: 'I went to Russia three times, in late 2001 and 2002, to see if I could negotiate the purchase of two ICBMs'; 'They would have cost me $15 million to $20 million each'; rocket made of aerospace-grade aluminum alloys, plus some titanium, copper and carbon fiber; materials cost 'around 2 percent of the typical price'; for Tesla 'probably 20 to 25 percent'; 'Physics teaches you to reason from first principles rather than by analogy' (wording cross-read from several pages quoting it; page not opened directly)",
+   "url": "https://www.wired.com/2012/10/ff-elon-musk-qa/"
+  },
+  {
+   "id": "ted2013",
+   "cite": "Elon Musk in conversation with Chris Anderson, TED 2013, 'The mind behind Tesla, SpaceX, SolarCity…': first principles = 'boil things down to their fundamental truths and reason up from there, as opposed to reasoning by analogy'; through most of life we reason by analogy, 'copying what other people do with slight variations' (quoted by CNBC 2020, NBC Chicago, Business Insider 2013)",
+   "url": "https://www.ted.com/talks/elon_musk_the_mind_behind_tesla_spacex_solarcity"
+  },
+  {
+   "id": "rose2012",
+   "cite": "Elon Musk, interview with Kevin Rose (Foundation, 2012), quoted by CNBC (2020) and Weinberg & McCann, Super Thinking (2019): first principles 'takes a lot more mental energy'; in daily life we reason by analogy"
+  },
+  {
+   "id": "vance2015",
+   "cite": "Ashlee Vance, Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future, Ecco, 2015; Bloomberg excerpt 'Elon Musk's Space Dream Almost Killed Tesla' (May 2015): Mars Oasis; Moscow trips with Jim Cantrell and Adeo Ressi (October 2001) and Mike Griffin (February 2002); the spreadsheet on the flight home"
+  },
+  {
+   "id": "cantrell",
+   "cite": "Jim Cantrell's account of the February 2002 flight home ('I think we can build a rocket ourselves', the spreadsheet), in interviews with Esquire (via Inverse) and Inc.; one participant's memory, wording varies"
+  },
+  {
+   "id": "stanford2003",
+   "cite": "Elon Musk, 'Opportunities in Space: Mars Oasis', Stanford eCorner talk, October 2003: a small greenhouse lander on Mars to rekindle public interest in space",
+   "url": "https://ecorner.stanford.edu/"
+  },
+  {
+   "id": "spacex_history",
+   "cite": "Wikipedia, 'History of SpaceX': incorporated 14 March 2002 (often dated 6 May 2002), first office in El Segundo, California; Musk's own account of investing about $100 million of his money by 2008 (Space.com / Discover 2008)",
+   "url": "https://en.wikipedia.org/wiki/History_of_SpaceX"
+  },
+  {
+   "id": "falcon1",
+   "cite": "Wikipedia 'Falcon 1' and 'RatSat'; Spaceflight Now launch reports: Omelek Island, Kwajalein Atoll; flight 1, 24 March 2006 (fuel leak, fire, lost about half a minute after liftoff); flight 2, 21 March 2007 (reached space, no orbit); flight 3, 2 August 2008 US time / 3 August UTC (stages collided at separation); flight 4, 28 September 2008: first privately developed liquid-fuel rocket to reach Earth orbit, carrying RatSat, a 165 kg dummy payload",
+   "url": "https://en.wikipedia.org/wiki/Falcon_1"
+  },
+  {
+   "id": "musk_money",
+   "cite": "Elon Musk, CBS 60 Minutes (2012, via Space.com) and IAC 2017: SpaceX had money for about three launch attempts; a fourth failure 'would have been game over' (his words; phrasing varies)"
+  },
+  {
+   "id": "nasa_cots",
+   "cite": "NASA Commercial Orbital Transportation Services award, 18 August 2006: SpaceX about $278 million (later about $396 million) toward Falcon 9 and Dragon (Wikipedia 'COTS'; SpaceNews; NASA NTRS report)",
+   "url": "https://en.wikipedia.org/wiki/Commercial_Orbital_Transportation_Services"
+  },
+  {
+   "id": "nasa_crs",
+   "cite": "NASA release, 23 December 2008: Commercial Resupply Services contracts for the International Space Station — SpaceX 12 flights, about $1.6 billion; Orbital Sciences 8 flights, about $1.9 billion (reported by Spaceflight Now, NASASpaceflight.com, SpaceNews)"
+  },
+  {
+   "id": "aristotle",
+   "cite": "Aristotle, Physics I.1, 184a10–16, transl. R. P. Hardie & R. K. Gaye (Oxford, 1930): we think we know a thing when we are acquainted with its primary causes or first principles 'and have carried our analysis as far as its simplest elements'; dates 384–322 BC per the Stanford Encyclopedia of Philosophy",
+   "url": "https://plato.stanford.edu/entries/aristotle/"
+  },
+  {
+   "id": "urban2015",
+   "cite": "Tim Urban, 'The Cook and the Chef: Musk's Secret Sauce', Wait But Why, November 2015: the chef reasons from first principles (raw edible ingredients), the cook follows recipes; this episode's phở packet vs bone broth is our Vietnamese adaptation",
+   "url": "https://waitbutwhy.com/2015/11/the-cook-and-the-chef-musks-secret-sauce.html"
+  },
+  {
+   "id": "merlin",
+   "cite": "Wikipedia, 'SpaceX Merlin': the Merlin engine's pintle injector traces back to the Apollo lunar module descent engine; propulsion led by experienced engineer Tom Mueller",
+   "url": "https://en.wikipedia.org/wiki/SpaceX_Merlin"
+  },
+  {
+   "id": "minhhoa",
+   "cite": "Số minh họa của kênh (ước tính làm tròn, không phải khảo sát giá): ly cà phê sữa đá 55.000đ ở trung tâm thương mại, nguyên liệu khoảng 10.000đ, xe cà phê đầu hẻm khoảng 20.000đ; khóa học tiếng Anh 30 triệu đồng"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Tách tới nguyên liệu",
+   "line": "Hỏi: thứ này làm từ gì, và mỗi phần thật sự giá bao nhiêu?"
+  },
+  {
+   "name": "Tách luật khỏi thói quen",
+   "line": "Phân biệt giới hạn thật (vật lý, nguyên liệu) với 'xưa nay vẫn làm thế'."
+  },
+  {
+   "name": "Lắp lại, rồi để thực tế chấm",
+   "line": "Dựng phương án mới từ những mảnh bắt buộc, rồi thử; được phép sai, miễn là học được."
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Họ đòi tới hai mươi triệu đô một quả tên lửa. Elon Musk hỏi lại: nguyên liệu giá bao nhiêu?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "rocket",
+      "color": "b",
+      "kicker": "Moscow · 2001–2002",
+      "line": "Tới 20 triệu $ một quả",
+      "line_cue": "hai mươi",
+      "action": "hiện giá"
+     },
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "color": "a",
+      "kicker": "Elon Musk hỏi lại",
+      "cue": "elon",
+      "line": "Nguyên liệu giá bao nhiêu?",
+      "line_cue": "nguyên liệu",
+      "action": "soi"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "nguyên liệu",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "wired2012"
+   ]
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Câu trả lời là một con số nhỏ đến bất ngờ. Cách ông đi tới con số ấy có một cái tên: tư duy từ gốc.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "coin",
+      "motion": "spin",
+      "turns": 1.5,
+      "kicker": "Câu trả lời",
+      "line": "Một con số nhỏ bất ngờ",
+      "line_cue": "nhỏ",
+      "action": "lật"
+     },
+     {
+      "type": "icon",
+      "concept": "tu_goc",
+      "steam": true,
+      "kicker": "Có một cái tên",
+      "cue": "cách ông",
+      "line": "Tư duy từ gốc",
+      "line_cue": "tư duy",
+      "action": "bốc hơi"
+     }
+    ]
+   },
+   "sources": [
+    "wired2012"
+   ]
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Khung tư duy · Tập 1",
+    "title": "Tư duy từ gốc",
+    "subtitle": "First principles thinking",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Ta hay nghĩ: thứ gì đắt là vì nó vốn đắt. Ai cũng trả, chắc giá ấy đúng. Musk gọi đó là suy luận theo lối mòn, by analogy: làm giống người khác, sửa đi một chút.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "store",
+      "kicker": "Điều ta hay nghĩ",
+      "line": "Đắt vì nó vốn đắt",
+      "line_cue": "thứ gì",
+      "action": "mở cửa"
+     },
+     {
+      "type": "icon",
+      "icon": "people",
+      "kicker": "Ai cũng trả giá ấy",
+      "cue": "ai cũng",
+      "line": "Chắc giá ấy đúng?",
+      "line_cue": "chắc",
+      "action": "xếp hàng"
+     },
+     {
+      "type": "icon",
+      "concept": "loi_mon",
+      "kicker": "Musk: lối mòn · by analogy",
+      "cue": "musk gọi",
+      "line": "Làm giống người khác",
+      "line_cue": "làm giống",
+      "action": "sao chép"
+     }
+    ]
+   },
+   "sources": [
+    "ted2013"
+   ]
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "Hình dung hai người nấu phở. Một người mua gói gia vị, nấu đúng hướng dẫn. Người kia ninh nước dùng từ xương, nướng gừng, và biết mỗi thứ giá bao nhiêu. Cả hai đều có bát phở, nhưng chỉ người thứ hai biết vị ngọt từ đâu.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "loi_mon",
+      "kicker": "Người nấu theo gói",
+      "line": "Gói gia vị, theo hướng dẫn",
+      "line_cue": "mua gói",
+      "action": "xé gói"
+     },
+     {
+      "type": "icon",
+      "concept": "tu_goc",
+      "steam": true,
+      "kicker": "Người hiểu nồi nước dùng",
+      "cue": "người kia",
+      "line": "Nước dùng ninh từ xương",
+      "line_cue": "ninh",
+      "action": "ninh"
+     },
+     {
+      "type": "trio",
+      "kicker": "Phỏng theo Tim Urban · 2015",
+      "heading": "Cả hai đều có bát phở",
+      "cue": "cả hai",
+      "action": "đặt cạnh",
+      "items": [
+       {
+        "concept": "loi_mon",
+        "label": "Theo gói"
+       },
+       {
+        "concept": "tu_goc",
+        "label": "Biết từng thứ",
+        "cue": "nhưng chỉ"
+       }
+      ],
+      "line": "Vị ngọt từ đâu?",
+      "line_cue": "vị ngọt"
+     }
+    ]
+   },
+   "sources": [
+    "urban2015"
+   ]
+  },
+  {
+   "id": "b03",
+   "act": "context",
+   "narration": "Cuối năm hai nghìn lẻ một, Elon Musk muốn đưa một nhà kính nhỏ lên sao Hỏa. Ông sang Nga hỏi mua tên lửa cũ đã cải tạo. Musk là người gây nhiều tranh cãi; ở đây mình chỉ kể một câu chuyện kỹ thuật.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Elon Musk",
+      "initials": "EM",
+      "role": "Doanh nhân công nghệ",
+      "years": "Câu chuyện 2001–2008",
+      "action": "khắc"
+     },
+     {
+      "type": "icon",
+      "icon": "sprout",
+      "motion": "grow",
+      "kicker": "Mars Oasis · 2001",
+      "cue": "muốn đưa",
+      "line": "Nhà kính nhỏ trên sao Hỏa",
+      "line_cue": "sao hỏa",
+      "action": "nảy mầm"
+     },
+     {
+      "type": "icon",
+      "icon": "rocket",
+      "kicker": "Moscow · cuối 2001",
+      "cue": "ông sang",
+      "line": "Hỏi mua tên lửa cải tạo",
+      "line_cue": "hỏi mua",
+      "action": "bay tới"
+     },
+     {
+      "type": "icon",
+      "icon": "scale",
+      "kicker": "Một câu chuyện kỹ thuật",
+      "cue": "musk là",
+      "line": "Không đánh giá một con người",
+      "line_cue": "ở đây",
+      "action": "cân"
+     }
+    ]
+   },
+   "sources": [
+    "stanford2003",
+    "vance2015"
+   ]
+  },
+  {
+   "id": "b04",
+   "act": "story",
+   "narration": "Theo lời Musk, ông sang Nga ba lần. Giá ông kể lại là khoảng mười lăm đến hai mươi triệu đô mỗi quả. Nguồn khác ghi số khác.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "compass",
+      "kicker": "Theo lời Musk",
+      "line": "Ba chuyến sang Nga",
+      "line_cue": "ba lần",
+      "action": "xoay hướng"
+     },
+     {
+      "type": "stat",
+      "value": 20,
+      "from": 20,
+      "prefix": "15–",
+      "suffix": " triệu $",
+      "color": "b",
+      "label": "mỗi quả · theo lời Musk",
+      "note": "Wired, 2012",
+      "cue": "giá ông",
+      "action": "hiện số"
+     },
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Các nguồn khác",
+      "cue": "nguồn khác",
+      "line": "Ghi số khác nhau",
+      "line_cue": "ghi số",
+      "action": "dò lại"
+     }
+    ]
+   },
+   "sources": [
+    "wired2012",
+    "vance2015"
+   ],
+   "certainty": "attributed"
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Trên chuyến bay về, theo Jim Cantrell, Musk được cho là đã nói: ta có thể tự làm. Rồi ông hỏi: tên lửa làm từ gì?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "bulb",
+      "kicker": "Chuyến bay về · theo Jim Cantrell",
+      "line": "Ta có thể tự làm.",
+      "line_cue": "ta có",
+      "action": "bật sáng"
+     },
+     {
+      "type": "icon",
+      "icon": "rocket",
+      "motion": "crack",
+      "motion_cue": "làm từ",
+      "kicker": "Một câu hỏi khác hẳn",
+      "cue": "rồi ông",
+      "line": "Tên lửa làm từ gì?",
+      "line_cue": "tên lửa",
+      "action": "tách đôi"
+     }
+    ]
+   },
+   "sources": [
+    "cantrell",
+    "vance2015"
+   ],
+   "certainty": "attributed"
+  },
+  {
+   "id": "b06",
+   "act": "story",
+   "narration": "Theo ông: nhôm hàng không, một ít titan, đồng và sợi carbon. Rồi ông hỏi tiếp: ngoài thị trường, những thứ ấy giá bao nhiêu? Ông không nhìn gói gia vị, mà nhìn vào nồi xương.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "puzzle",
+      "kicker": "Tên lửa làm từ gì? · theo Musk",
+      "line": "Nhôm · titan · đồng · carbon",
+      "line_cue": "nhôm",
+      "action": "tách mảnh"
+     },
+     {
+      "type": "icon",
+      "icon": "coins",
+      "color": "a",
+      "kicker": "Mua ngoài thị trường",
+      "cue": "rồi ông",
+      "line": "Mỗi thứ giá bao nhiêu?",
+      "line_cue": "những thứ",
+      "action": "chồng lên"
+     },
+     {
+      "type": "swap",
+      "kicker": "Ông nhìn chỗ khác",
+      "cue": "ông không",
+      "strike_cue": "mà nhìn",
+      "action": "đổi chỗ",
+      "from": {
+       "concept": "loi_mon",
+       "label": "Gói gia vị"
+      },
+      "to": {
+       "concept": "tu_goc",
+       "label": "Nồi xương",
+       "cue": "nồi xương"
+      }
+     }
+    ]
+   },
+   "sources": [
+    "wired2012"
+   ]
+  },
+  {
+   "id": "b07",
+   "act": "story",
+   "narration": "Kết quả, theo ước tính của Musk: tiền vật liệu chỉ khoảng hai phần trăm giá một tên lửa thông thường. Không phải giá SpaceX bán, cũng không so với giá của Nga. Nghĩa là gần hết cái giá nằm ngoài vật liệu.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stat",
+      "value": 2,
+      "prefix": "~",
+      "suffix": "%",
+      "color": "a",
+      "label": "tiền vật liệu / giá một tên lửa thông thường",
+      "note": "ước tính của Musk · Wired, 2012",
+      "action": "đếm lên"
+     },
+     {
+      "type": "statement",
+      "kicker": "Hay bị kể sai",
+      "cue": "không phải",
+      "text": "SpaceX bán tên lửa giá 2%",
+      "strike": "SpaceX bán tên lửa giá 2%",
+      "replace": "Vật liệu / giá thường thấy",
+      "strike_cue": "cũng không",
+      "action": "gạch bỏ"
+     },
+     {
+      "type": "icon",
+      "concept": "loi_mon",
+      "kicker": "Gần hết cái giá",
+      "cue": "nghĩa là",
+      "line": "Nằm ngoài vật liệu",
+      "line_cue": "nằm ngoài",
+      "action": "phồng ra"
+     }
+    ]
+   },
+   "sources": [
+    "wired2012"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b09",
+   "act": "context",
+   "narration": "Musk gọi cách nghĩ ấy là first principles, mình gọi là tư duy từ gốc: quy mọi thứ về sự thật nền tảng, rồi suy luận lên từ đó. Ý tưởng này có từ Aristotle: ta cho là đã hiểu một thứ khi lần tới những thành phần đơn giản nhất của nó.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "quote",
+      "text": "Quy mọi thứ về những sự thật nền tảng, rồi suy luận lên từ đó.",
+      "by": "Elon Musk, TED 2013 (lược dịch)",
+      "action": "hiện chữ"
+     },
+     {
+      "type": "portrait",
+      "name": "Aristotle",
+      "initials": "A",
+      "role": "Physics, quyển I",
+      "years": "384–322 TCN",
+      "cue": "ý tưởng",
+      "action": "khắc"
+     },
+     {
+      "type": "icon",
+      "concept": "tu_goc",
+      "steam": true,
+      "kicker": "Aristotle · Physics I.1 (lược dịch)",
+      "cue": "ta cho",
+      "line": "Tới thành phần đơn giản nhất",
+      "line_cue": "thành phần",
+      "action": "bốc hơi"
+     }
+    ]
+   },
+   "sources": [
+    "ted2013",
+    "aristotle"
+   ]
+  },
+  {
+   "id": "b10",
+   "act": "story",
+   "narration": "Năm hai nghìn lẻ hai, Musk lập SpaceX, theo lời ông, với khoảng một trăm triệu đô tiền túi. Nhưng biết giá chưa phải là có tên lửa.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "factory",
+      "kicker": "2002 · El Segundo, California",
+      "line": "SpaceX · ~100 triệu $ tiền túi",
+      "line_cue": "khoảng",
+      "action": "dựng lên"
+     },
+     {
+      "type": "icon",
+      "icon": "mountain",
+      "kicker": "Biết giá",
+      "cue": "nhưng biết",
+      "line": "Chưa phải là có tên lửa",
+      "line_cue": "chưa phải",
+      "action": "hiện dốc"
+     }
+    ]
+   },
+   "sources": [
+    "spacex_history",
+    "falcon1"
+   ],
+   "certainty": "attributed"
+  },
+  {
+   "id": "b11",
+   "act": "story",
+   "narration": "Falcon One hỏng ba lần. Lần một, năm hai nghìn lẻ sáu: rò nhiên liệu, cháy. Lần hai, năm sau: tới không gian, nhưng không vào quỹ đạo. Lần ba, năm hai nghìn lẻ tám: hai tầng va nhau.",
+   "visual": {
+    "type": "timeline",
+    "title": "Falcon 1 · đảo Omelek, Thái Bình Dương",
+    "action": "chấm mốc",
+    "events": [
+     {
+      "year": "3/2006",
+      "text": "Rò nhiên liệu, cháy",
+      "cue": "lần một"
+     },
+     {
+      "year": "3/2007",
+      "text": "Không vào quỹ đạo",
+      "cue": "lần hai"
+     },
+     {
+      "year": "8/2008",
+      "text": "Hai tầng va nhau",
+      "cue": "lần ba"
+     }
+    ]
+   },
+   "sources": [
+    "falcon1"
+   ]
+  },
+  {
+   "id": "b12",
+   "act": "story",
+   "narration": "Theo lời Musk, tiền chỉ đủ cho khoảng ba lần phóng. Cuối tháng chín năm ấy, lần thứ tư, Falcon One vào quỹ đạo: tên lửa nhiên liệu lỏng tư nhân đầu tiên làm được, dù chỉ chở một khối tải giả.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "hourglass",
+      "kicker": "Theo lời Musk",
+      "line": "Tiền đủ cho ~3 lần phóng",
+      "line_cue": "tiền chỉ",
+      "action": "cạn dần"
+     },
+     {
+      "type": "icon",
+      "icon": "rocket",
+      "motion": "rise",
+      "color": "a",
+      "kicker": "28/9/2008 · lần thứ tư",
+      "cue": "cuối tháng",
+      "line": "Vào quỹ đạo",
+      "line_cue": "vào quỹ",
+      "action": "bay lên"
+     },
+     {
+      "type": "icon",
+      "icon": "star",
+      "kicker": "Tư nhân · nhiên liệu lỏng",
+      "cue": "tên lửa nhiên",
+      "line": "Đầu tiên lên quỹ đạo",
+      "line_cue": "đầu tiên",
+      "action": "lóe sáng"
+     },
+     {
+      "type": "icon",
+      "icon": "anchor",
+      "kicker": "RatSat · 165 kg",
+      "cue": "dù chỉ",
+      "line": "Chỉ là tải giả",
+      "line_cue": "tải giả",
+      "action": "treo"
+     }
+    ]
+   },
+   "sources": [
+    "musk_money",
+    "falcon1"
+   ],
+   "certainty": "attributed"
+  },
+  {
+   "id": "b13",
+   "act": "complication",
+   "narration": "Nhưng SpaceX không đi một mình. Năm hai nghìn lẻ sáu, NASA cam kết gần ba trăm triệu đô. Ba tháng sau lần thứ tư, thêm hợp đồng chở hàng khoảng một phẩy sáu tỷ đô. Từ gốc giúp thấy chỗ đắt vô lý; tiền của NASA giúp công ty sống sót.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "people",
+      "kicker": "Nhưng",
+      "line": "Không đi một mình",
+      "line_cue": "không đi",
+      "action": "đứng cạnh"
+     },
+     {
+      "type": "icon",
+      "icon": "coins",
+      "kicker": "8/2006 · NASA COTS",
+      "cue": "năm hai",
+      "line": "Cam kết 278 triệu $",
+      "line_cue": "cam kết",
+      "action": "rót vào"
+     },
+     {
+      "type": "icon",
+      "icon": "checklist",
+      "kicker": "23/12/2008 · hợp đồng NASA",
+      "cue": "ba tháng",
+      "line": "12 chuyến · ~1,6 tỷ $",
+      "line_cue": "thêm hợp",
+      "action": "ký"
+     },
+     {
+      "type": "trio",
+      "kicker": "Nói cho công bằng",
+      "cue": "từ gốc",
+      "action": "ghép đôi",
+      "items": [
+       {
+        "concept": "tu_goc",
+        "label": "Thấy chỗ đắt vô lý"
+       },
+       {
+        "icon": "shield",
+        "label": "NASA giúp sống sót",
+        "cue": "tiền của"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "nasa_cots",
+    "nasa_crs"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b15",
+   "act": "principle",
+   "narration": "Từ câu chuyện ấy, có ba nguyên tắc. Thứ nhất: tách tới nguyên liệu. Thứ này làm từ gì, và mỗi phần thật sự giá bao nhiêu? Như người biết từng thứ trong nồi xương.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "focus": [
+     0
+    ],
+    "action": "lướt tới",
+    "regions": [
+     {
+      "concept": "tu_goc",
+      "label": "Tách tới nguyên liệu",
+      "note": "Làm từ gì? Mỗi phần bao nhiêu?",
+      "cue": "thứ nhất",
+      "note_cue": "thứ này"
+     },
+     {
+      "icon": "scale",
+      "label": "Tách luật khỏi thói quen",
+      "note": "Bắt buộc, hay quen thế?",
+      "cue": "thứ hai",
+      "note_cue": "cái gì chỉ"
+     },
+     {
+      "icon": "hammer",
+      "label": "Lắp lại, rồi để thực tế chấm",
+      "note": "Dựng từ mảnh bắt buộc, rồi thử",
+      "cue": "thứ ba",
+      "note_cue": "dựng"
+     }
+    ]
+   },
+   "sources": [
+    "wired2012",
+    "aristotle"
+   ]
+  },
+  {
+   "id": "b16",
+   "act": "principle",
+   "narration": "Thứ hai: tách luật khỏi thói quen. Cái gì là giới hạn thật, như vật lý? Cái gì chỉ là xưa nay vẫn thế? Theo Musk, phần lớn giá tên lửa nằm ở loại thứ hai.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "focus": [
+     1
+    ],
+    "action": "lướt sang"
+   },
+   "sources": [
+    "wired2012",
+    "ted2013"
+   ]
+  },
+  {
+   "id": "b17",
+   "act": "example",
+   "narration": "Thử với một ly cà phê sữa đá năm mươi lăm nghìn trong trung tâm thương mại, số minh họa thôi. Nguyên liệu cộng lại khoảng mười nghìn. Hơn bốn mươi nghìn là mặt bằng, thương hiệu và công. Ở xe đầu hẻm, nguyên liệu vẫn thế, phần kia co lại: cả ly khoảng hai mươi nghìn.",
+   "visual": {
+    "type": "scenario",
+    "kicker": "Số minh họa",
+    "heading": "Ly cà phê sữa đá",
+    "action": "kéo",
+    "before_label": "Trong trung tâm thương mại",
+    "after_label": "Xe đầu hẻm",
+    "cue": "ở xe",
+    "suffix": ".000đ",
+    "bars": [
+     {
+      "label": "Cả ly",
+      "before": 55,
+      "after": 20
+     },
+     {
+      "label": "Nguyên liệu",
+      "before": 10,
+      "after": 10,
+      "concept": "tu_goc",
+      "cue": "nguyên liệu"
+     },
+     {
+      "label": "Mặt bằng, thương hiệu, công",
+      "before": 45,
+      "after": 10,
+      "concept": "loi_mon",
+      "cue": "hơn bốn",
+      "delta": "−35"
+     }
+    ],
+    "takeaway": "Nguyên liệu vẫn thế. Phần kia co lại.",
+    "takeaway_cue": "co lại"
+   },
+   "sources": [
+    "minhhoa"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b18",
+   "act": "example",
+   "narration": "Không phải đừng mua cà phê: chỗ ngồi mát có thể rất đáng. Chỉ là giờ bạn biết mình trả cho phần nào. Tên lửa cũng vậy: SpaceX nhắm vào phần còn lại.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "bench",
+      "kicker": "Không phải: đừng mua",
+      "line": "Chỗ ngồi mát có thể đáng tiền",
+      "line_cue": "chỗ ngồi",
+      "action": "ngồi xuống"
+     },
+     {
+      "type": "icon",
+      "icon": "eye",
+      "kicker": "Chỉ là",
+      "cue": "chỉ là",
+      "line": "Biết mình trả cho phần nào",
+      "line_cue": "biết mình",
+      "action": "nhìn rõ"
+     },
+     {
+      "type": "icon",
+      "icon": "target",
+      "color": "b",
+      "kicker": "Tên lửa cũng vậy",
+      "cue": "tên lửa",
+      "line": "Nhắm vào phần còn lại",
+      "line_cue": "spacex",
+      "action": "ngắm"
+     }
+    ]
+   },
+   "sources": [
+    "wired2012",
+    "minhhoa"
+   ]
+  },
+  {
+   "id": "b19",
+   "act": "principle",
+   "narration": "Thứ ba: lắp lại, rồi để thực tế chấm. Dựng phương án mới từ những mảnh bắt buộc, rồi thử. Falcon One hỏng ba lần trước khi lên quỹ đạo. Từ gốc cho bạn bản vẽ; chỉ thực tế mới chấm điểm.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "focus": [
+     2
+    ],
+    "action": "lướt xuống"
+   },
+   "sources": [
+    "falcon1"
+   ]
+  },
+  {
+   "id": "b20",
+   "act": "complication",
+   "narration": "Nhưng nồi xương cũng có chỗ dừng. Ninh xương mất cả đêm, không ai làm thế cho mọi bữa. Chính Musk nói phần lớn thời gian ta vẫn đi theo lối mòn, vì từ gốc tốn sức.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "tu_goc",
+      "steam": true,
+      "kicker": "Ẩn dụ dừng ở đâu?",
+      "line": "Ninh xương mất cả đêm",
+      "line_cue": "ninh xương",
+      "action": "sôi lâu"
+     },
+     {
+      "type": "icon",
+      "icon": "clock",
+      "kicker": "Không ai làm thế mỗi bữa",
+      "cue": "không ai",
+      "line": "Từ gốc tốn sức",
+      "line_cue": "chính musk",
+      "action": "quay kim"
+     },
+     {
+      "type": "icon",
+      "concept": "loi_mon",
+      "kicker": "Theo Musk · phần lớn thời gian",
+      "cue": "lối mòn",
+      "line": "Lối mòn vẫn có ích",
+      "line_cue": "vì từ",
+      "action": "mở gói"
+     }
+    ]
+   },
+   "sources": [
+    "ted2013",
+    "rose2012"
+   ]
+  },
+  {
+   "id": "b21",
+   "act": "complication",
+   "narration": "Đầu bếp giỏi vẫn học người đi trước: SpaceX thuê kỹ sư lão luyện, dùng cả ý tưởng từ thời Apollo. Và có món phải theo đúng công thức, như y tế, luật hay an toàn.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "book",
+      "kicker": "Đầu bếp giỏi vẫn học",
+      "line": "Kỹ sư lão luyện · ý tưởng Apollo",
+      "line_cue": "spacex",
+      "action": "lật trang"
+     },
+     {
+      "type": "trio",
+      "kicker": "Có món phải theo đúng công thức",
+      "cue": "và có",
+      "action": "khóa lại",
+      "items": [
+       {
+        "icon": "shield",
+        "label": "Y tế",
+        "cue": "y tế"
+       },
+       {
+        "icon": "scale",
+        "label": "Luật",
+        "cue": "luật"
+       },
+       {
+        "icon": "lock",
+        "label": "An toàn",
+        "cue": "hay an"
+       }
+      ],
+      "line": "Theo chuẩn thì an toàn hơn",
+      "line_cue": "an toàn"
+     }
+    ]
+   },
+   "sources": [
+    "merlin",
+    "vance2015"
+   ]
+  },
+  {
+   "id": "b22",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Một khóa học tiếng Anh báo giá ba mươi triệu đồng. Câu hỏi từ gốc đầu tiên bạn nên hỏi là gì?",
+   "visual": {
+    "type": "question",
+    "question": "Khóa tiếng Anh 30 triệu đồng. Câu hỏi từ gốc đầu tiên?",
+    "choices": [
+     "Người khác thường trả bao nhiêu?",
+     "Mình cần kỹ năng gì, mỗi phần cần gì?",
+     "Có mã giảm giá không?"
+    ],
+    "answer": "B — tách tới nguyên liệu: giờ luyện, người sửa lỗi, tài liệu.",
+    "think_seconds": 5
+   },
+   "sources": [
+    "minhhoa"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b23",
+   "act": "recap",
+   "narration": "Đáp án là B: tách ra rồi, bạn vẫn có thể chọn khóa ấy, nhưng vì hiểu. Vậy là ba nguyên tắc. Tách tới nguyên liệu. Tách luật khỏi thói quen. Và lắp lại, rồi để thực tế chấm.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "action": "lùi xa",
+    "focus": [
+     {
+      "region": 0,
+      "cue": "tách ra"
+     }
+    ],
+    "overview": true,
+    "overview_cue": "vậy là",
+    "line": "Ba câu hỏi trước một cái giá",
+    "line_cue": "và lắp"
+   }
+  },
+  {
+   "id": "b24",
+   "act": "close",
+   "narration": "Người ta báo cho Musk một cái giá mà ai cũng trả. Ông hỏi nó làm từ gì. Lần tới, trước một cái giá hiển nhiên, hãy hỏi: trong nồi này thật sự có gì?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "rocket",
+      "color": "b",
+      "kicker": "Moscow · 2001–2002",
+      "line": "Một cái giá ai cũng trả",
+      "line_cue": "ai cũng",
+      "action": "đứng yên"
+     },
+     {
+      "type": "icon",
+      "icon": "puzzle",
+      "kicker": "Ông hỏi",
+      "cue": "ông hỏi",
+      "line": "Làm từ gì?",
+      "line_cue": "làm từ",
+      "action": "tách mảnh"
+     },
+     {
+      "type": "icon",
+      "concept": "tu_goc",
+      "steam": true,
+      "kicker": "Lần tới, hãy hỏi",
+      "cue": "lần tới",
+      "line": "Trong nồi này thật sự có gì?",
+      "line_cue": "trong nồi",
+      "action": "bốc hơi"
+     }
+    ]
+   },
+   "sources": [
+    "wired2012"
+   ]
+  },
+  {
+   "id": "b25",
+   "act": "close",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
+   "visual": {
+    "type": "end",
+    "kicker": "Khung tư duy · Tập 1",
+    "title": "Tư duy từ gốc",
+    "ask": "Bạn muốn tập sau về khung tư duy nào?",
+    "ask_hint": "Tư duy bậc hai · vòng tròn năng lực · chi phí cơ hội",
+    "ask_cue": "hay chủ",
+    "sources_line": "Nguồn: Wired (2012) · TED (2013) · Vance (2015) · NASA · Aristotle, Physics I · xem mô tả",
+    "disclaimer": "Nội dung giáo dục; câu chuyện kể lại từ nguồn công khai.",
+    "sources_cue": "còn bạn"
+   }
+  }
+ ],
+ "pronounce": {}
+}
