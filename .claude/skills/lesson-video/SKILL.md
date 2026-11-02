@@ -75,7 +75,15 @@ narration: a silent sting) · · `statement` (key phrase, highlighted words unde
 "attributed"` shows an ATTRIBUTED · NOT VERIFIED badge) · `portrait` (engraved medallion with initials — never a
 generated likeness of a real person) · `principle` · `compare` · `list` (recap with checks) · `question` (pause
 and think, countdown, answer) · `end` (next episode, CTA, sources, disclaimer).
+`scenario` (a worked example that changes state: 1-3 labelled `bars` with `before`/`after` values; on `cue` a slider
+scrubs from `before_label` to `after_label` while the bars and numbers move; `takeaway` + `takeaway_cue`; per-bar `cue`,
+`delta`, `concept`/`color`) · `board` (one continuous canvas: 2-6 `regions` of {icon or concept, label, note, cue}; the
+camera glides to each region on its cue word and the region draws itself; `overview: true` + `overview_cue` pulls back to
+the whole board for a recap, with an optional `line`; `board_id` + `focus: [indices]` continue the same board over
+several beats). Example: `docs/examples/engine-check.lesson.json`.
 `cue` fields name a word in that beat's narration; the visual lands when the word is spoken.
+Any picture may carry `concept` (one registered picture + colour per idea, `meta.concepts`), `color` (`"a"` gold,
+`"b"` coral) and `action` (the verb its object does); a beat may declare `"hold": true` for a deliberate still.
 
 ## Hard rules
 
@@ -83,5 +91,9 @@ and think, countdown, answer) · `end` (next episode, CTA, sources, disclaimer).
 - No generated faces or voices imitating real people; a portrait is a typographic medallion.
 - Investing lessons teach principles, never tips: no tickers to buy, no predictions, no "guaranteed". Every
   investing video carries the disclaimer (the linter enforces it).
-- On-screen text is the key phrase, not the narration (redundancy principle); minimum 28 px at 1080.
+- On-screen text is the key phrase, not the narration (redundancy principle); minimum 36 px at 1080 (the engine's floor;
+  only the decorative series rail is smaller). Check `gate/phone.jpg` at 480 px wide.
+- One picture per idea for the whole film (`meta.concepts`, see `references/script-craft.md` §3b); lint fails if a
+  concept is drawn two ways. Storyboard warnings ("story" lines) flag a slide show: > 30 % word cards, a word card first
+  or last, one picture > 8 s.
 - HyperFrames gates must pass clean (lint, layout, contrast, craft) before the final render.

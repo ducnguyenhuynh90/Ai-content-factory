@@ -84,7 +84,7 @@ answered along the way, not all withheld; new questions arise naturally; explana
 example or application; no repetition or detours; hard concepts get time; strong material placed where it helps;
 everything raised is resolved. *For every section: "The viewer now understands ___, which makes the next question
 ___."* Do NOT require a cut or surprise every N seconds: judge pacing by whether attention supports understanding.
-(The gate's frozen-screen and unread-line findings are evidence for this judgment, not verdicts.)
+(The gate's frozen-screen and unread-line findings are evidence for this judgment, not verdicts. Frozen screens are measured two ways: HyperFrames dead stretches > 2 s, and the mean pixel change between frames 2.5 s apart with the caption band excluded (< 4 = nearly unchanged; lively explainers average ≥ 10). A beat with `"hold": true` declares its stillness. `gate/phone.jpg` shows every beat at 480 px wide: any label you cannot read there is too small.)
 
 **F. Teaching and understanding (10)** — a specific learning outcome; terms explained; builds on what viewers know;
 examples and counterexamples; reasoning shown between steps; similar concepts separated; misconceptions addressed;

@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "series": "Kiểm tra engine",
+    "title": "Nhiễu và thiên kiến",
+    "subtitle": "Ví dụ cho scenario, board và hai màu khái niệm",
+    "topic": "books",
+    "angle": "concept",
+    "lang": "vi",
+    "aspect": "4:3",
+    "target_minutes": [0.2, 1.5],
+    "voice": "omnivoice:male, middle-aged, very low pitch",
+    "speed": 0.88,
+    "voice_seed": 99,
+    "music": "chill",
+    "captions": true,
+    "look": {"primary_color": "#E8B06A", "secondary_color": "#12100E"},
+    "disclaimer": "Nội dung giáo dục.",
+    "concepts": [
+      {"id": "noise", "visual": "dice", "color": "b",
+       "shows": "những phán đoán lẽ ra phải giống nhau lại tản mát", "omits": "vì sao chúng tản mát; khác biệt về sở thích không phải nhiễu"},
+      {"id": "bias", "visual": "target", "color": "a",
+       "shows": "mọi phán đoán cùng lệch về một phía", "omits": "lệch bao xa, và lệch có khi là cố ý"}
+    ]
+  },
+  "sources": [{"id": "noise2021", "cite": "Kahneman, Sibony & Sunstein, Noise: A Flaw in Human Judgment (2021)"}],
+  "principles": [{"name": "Chấm riêng, rồi mới gộp"}, {"name": "Chia nhỏ, rồi mới chấm"}, {"name": "Tự kiểm tra nhiễu"}],
+  "beats": [
+    {"id": "h1", "act": "hook", "sources": ["noise2021"],
+     "narration": "Cùng một hồ sơ, nhưng hai người chấm lại cho hai con số rất khác nhau.",
+     "visual": {"type": "shots", "shots": [
+       {"type": "icon", "concept": "noise", "kicker": "Cùng một hồ sơ", "line": "Hai người, hai con số", "line_cue": "hai người", "action": "tản ra"},
+       {"type": "stat", "value": 55, "suffix": "%", "label": "chênh lệch trong một cuộc kiểm tra", "color": "b", "cue": "rất khác", "action": "đếm lên"}]}},
+    {"id": "b1", "act": "example", "certainty": "estimate",
+     "narration": "Ví dụ minh họa: năm người nghe nhau rồi mới chấm, điểm chênh khoảng bốn mươi. Chấm riêng rồi mới gộp, khoảng chênh còn mười lăm.",
+     "visual": {"type": "scenario", "kicker": "Ví dụ minh họa", "heading": "Năm người chấm cùng một hồ sơ",
+                "before_label": "Nghe nhau rồi chấm", "after_label": "Chấm riêng rồi gộp", "cue": "chấm riêng",
+                "bars": [{"label": "Khoảng chênh giữa người chấm", "before": 40, "after": 15, "concept": "noise", "delta": "−25"},
+                         {"label": "Độ lệch so với đáp án", "before": 10, "after": 10, "concept": "bias"}],
+                "takeaway": "Bớt nhiễu, không cần người giỏi hơn.", "takeaway_cue": "còn mười", "action": "kéo"}},
+    {"id": "b2", "act": "principle",
+     "narration": "Ba thói quen. Chấm riêng, rồi mới gộp. Chia nhỏ, rồi mới chấm. Và tự kiểm tra nhiễu. Đặt cạnh nhau, đó là một quy trình.",
+     "visual": {"type": "board", "kicker": "Ba thói quen", "overview": true, "overview_cue": "đặt cạnh", "line": "Một quy trình, ba bước",
+                "regions": [{"icon": "people", "label": "Chấm riêng, rồi mới gộp", "cue": "chấm riêng"},
+                            {"icon": "puzzle", "label": "Chia nhỏ, rồi mới chấm", "cue": "chia nhỏ"},
+                            {"concept": "noise", "label": "Tự kiểm tra nhiễu", "cue": "và tự"}], "action": "lướt"}},
+    {"id": "b3", "act": "close",
+     "narration": "Thiên kiến kéo mọi người lệch về một phía. Còn nhiễu thì làm họ tản mát.",
+     "visual": {"type": "statement", "kicker": "Hai lỗi khác nhau", "text": "Thiên kiến lệch một phía. Nhiễu tản mát.",
+                "highlight": [{"text": "Thiên kiến", "concept": "bias", "cue": "thiên kiến"}, {"text": "Nhiễu", "concept": "noise", "cue": "còn nhiễu"}],
+                "action": "tách"}}
+  ]
+}

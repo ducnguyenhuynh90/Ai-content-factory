@@ -67,6 +67,43 @@ that… until finally… ever since…) for biographies; **And-But-Therefore** f
 - **Segmenting:** one scene per idea; the progress bar and series rail show where we are.
 - **Contiguity:** labels sit on the chart point they describe, not in a legend.
 
+## 3b. One picture per idea (`meta.concepts`, lint)
+
+Before writing beats, write the explanation model: the 1-3 core ideas, ONE picture for each that carries it through the
+whole film, and where each picture stops being true. Register them once:
+
+```json
+"concepts": [
+  {"id": "noise", "visual": "dice",   "color": "b", "shows": "judgments that should match are scattered",
+   "omits": "why they scatter; differences of taste are not noise"},
+  {"id": "bias",  "visual": "target", "color": "a", "shows": "every judgment off to the same side", "omits": "how far, or that it can be deliberate"}
+]
+```
+
+- `visual` is an icon key (`dice`, `target`, `scale`… see `ICONS` in `metaphors.py`) or a scene type (`funnel`, `flywheel`…).
+- Tag every picture that shows the idea with `"concept": "noise"` (a visual, a shot, a trio item, a board region, a
+  scenario bar, a statement highlight). A tagged element with no `icon` draws the registered one, in the concept's colour.
+- **Lint fails** when a tagged element draws the concept with a different picture (one idea drawn two ways is two ideas
+  to the viewer), or tags an unknown concept. It warns when `shows`/`omits` are missing, when two concepts share a
+  picture, or a concept is never drawn. Say the `omits` line on camera, in the limits beat.
+- **Two concept colours** for the whole film: `color: "a"` = the accent (gold `#E8B06A` in the book series),
+  `"b"` = coral `#E77A5F`. Use them on icons, stat numbers (`"color": "b"`), statement highlights
+  (`"highlight": [{"text": "nhiễu", "concept": "noise"}]`) and the same words in the captions. Nothing else uses them,
+  so the viewer follows idea A and idea B by colour. Override with `meta.look.concept_a` / `concept_b` (keep ≥ 4.5:1).
+
+## 3c. Storyboard (lint, warnings under "story")
+
+- **Pictures, not word cards:** at most 30 % of pictures text-led (`statement`, `stat`, `quote`, `list` with no icon);
+  the first and the last content pictures are images.
+- **Something visibly changes every 2-3 s;** one picture held > 8 s without a new shot reads as a slide. Split the line
+  with `shots` on cue words, or declare a deliberate still with `"hold": true` on the beat (the gate's frozen-screen
+  check then lets it be).
+- Give each shot an `action`: the verb its object does (`tản ra`, `đếm lên`, `kéo`, `lướt`). Once a lesson names
+  actions, every shot should; the same action three shots running reads as one shot repeated.
+- **Show the process change state** with `scenario` (before → after on a slider, one takeaway line) and keep one
+  board per chapter with `board` (the camera travels between regions; the recap pulls back to the whole board).
+- Text a viewer must read is ≥ 36 px at 1080 (the engine's floor); check `gate/phone.jpg` (480 px wide).
+
 ## 4. Facts
 
 - Primary first (the paper, the letter, the filing, the person's book); two sources for anything central.

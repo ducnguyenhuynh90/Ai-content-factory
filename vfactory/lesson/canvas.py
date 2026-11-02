@@ -165,12 +165,13 @@ def board(L, sid, v, dur, cue):
     fl = max(L.fs(0.045), math.ceil(L.fs(L.READ) / so) + 1)
     ic = int(ch * 0.42)
     cells, tw = "", []
-    head, htw = _head(L, sid, v, 0.08)
+    head, htw = _head(L, sid, v, 0.1)
     tw += htw
     cam0 = v.get("_cam0")
     if cam0 is None:
         cam0 = "overview" if v.get("start") == "overview" or not focus else focus[0][0]
-    op = {i: (1.0 if cam0 == "overview" or i == cam0 else 0.5) for i in range(n)}  # region brightness now
+    # region brightness now: drawn regions behind the camera rest at half; empty cells (only their faint frame) at full
+    op = {i: (1.0 if cam0 == "overview" or i == cam0 or i not in drawn else 0.5) for i in range(n)}
     for i, rg in enumerate(regions):
         x, y = lay["cells"][i]
         c = L.color(rg, L.accent)
@@ -178,7 +179,7 @@ def board(L, sid, v, dur, cue):
         hide = "" if i in drawn else "opacity:0;"
         note = (f'<div id="{sid}-rn{i}" class="muted" style="font-size:{fl}px;line-height:1.15;margin-top:{L.px(0.01)}px;{hide}">{E(rg["note"])}</div>'
                 if rg.get("note") else "")
-        cells += (f'<div id="{sid}-rw{i}" style="position:absolute;left:{x:.0f}px;top:{y:.0f}px;width:{cw}px;height:{ch}px;opacity:{op[i] if i in drawn else 1};">'
+        cells += (f'<div id="{sid}-rw{i}" style="position:absolute;left:{x:.0f}px;top:{y:.0f}px;width:{cw}px;height:{ch}px;opacity:{op[i]};">'
                   f'<div style="position:absolute;inset:0;border:2px solid {L.muted}33;border-radius:{L.px(0.03)}px;"></div>'
                   f'<div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 {L.px(0.02)}px;">'
                   f'<svg id="{sid}-ri{i}" width="{ic}" height="{ic}" style="overflow:visible;{hide}">{art}</svg>'
@@ -273,7 +274,7 @@ def board(L, sid, v, dur, cue):
     if v.get("line"):
         line = (f'<div id="{sid}-ln" class="serif" style="position:absolute;left:{L.px(0.08)}px;right:{L.px(0.08)}px;top:{L.h * 0.7:.0f}px;'
                 f'text-align:center;font-size:{L.fs(0.055)}px;line-height:1.15;opacity:0;">{E(v["line"])}</div>')
-        t_line = (t_over + 1.3) if t_over is not None else dur * 0.7
+        t_line = (t_over + 0.8) if t_over is not None else dur * 0.7
         tw.append(_blur_in(f"#{sid}-ln", max(t_line, cue(v.get("line_cue", ""), t_line)), 0.45))
     canvas = (f'<div id="{sid}-cv" style="position:absolute;left:0;top:0;width:{lay["bw"]:.0f}px;height:{lay["bh"]:.0f}px;transform-origin:0 0;">'
               f'<svg width="{lay["bw"]:.0f}" height="{lay["bh"]:.0f}" style="position:absolute;left:0;top:0;overflow:visible">{links}</svg>{cells}</div>')
