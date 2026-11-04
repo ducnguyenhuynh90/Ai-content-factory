@@ -1,0 +1,894 @@
+{
+ "meta": {
+  "series": "Khung tư duy · Tập 10",
+  "title": "Quan trọng và khẩn cấp",
+  "subtitle": "Ma trận Eisenhower — một câu trích năm 1954, một chiếc bình và mấy tảng đá",
+  "topic": "books",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt đi làm, cả ngày bận rộn với tin nhắn, thông báo, cuộc họp, mà cuối tuần nhìn lại việc lớn vẫn chưa động tới; thích chuyện lịch sử và cách nghĩ",
+  "aspect": "4:3",
+  "target_minutes": [
+   3,
+   5
+  ],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
+  "learning_goals": [
+   "Kể lại câu chuyện thật: ngày 19/8/1954 ở Evanston (khuôn viên Đại học Northwestern), Eisenhower dẫn lời một 'cựu hiệu trưởng đại học' không nêu tên: 'Tôi có hai loại vấn đề, khẩn cấp và quan trọng. Việc khẩn cấp thì không quan trọng, còn việc quan trọng thì chẳng bao giờ khẩn cấp.'; câu 'quan trọng hiếm khi gấp' là bản viết lại về sau; bảng bốn ô do Stephen Covey phổ biến (1989), cái tên 'ma trận Eisenhower' đến muộn hơn",
+   "Phân biệt việc quan trọng (đá lớn: không ai réo nhưng định hình cuộc đời) với việc khẩn cấp (cát: nhỏ, gấp, tự chảy vào lấp đầy thời gian), qua truyện ngụ ngôn chiếc bình (phổ biến qua First Things First, 1994; không phải chuyện có thật)",
+   "Dùng ba nguyên tắc: hỏi hai câu; đá lớn vào trước; gom cát một chỗ; và biết chỗ ẩn dụ dừng lại (có việc khẩn cấp thật sự quan trọng: bếp cháy, con sốt cao; đá lớn không tự dán nhãn)"
+  ],
+  "disclaimer": "Nội dung giáo dục; câu chuyện kể lại từ nguồn công khai.",
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người kể chuyện lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively. Nothing in the script depends on this particular voice.",
+  "concepts": [
+   {
+    "id": "quan_trong",
+    "visual": "mountain",
+    "color": "a",
+    "shows": "tảng đá lớn: việc quan trọng (sức khỏe, gia đình, học, mục tiêu dài hạn); không ai réo, nhưng phải đặt vào bình trước, nếu không sẽ không còn chỗ",
+    "omits": "đời thật không phải một chiếc bình cố định; đá lớn không tự dán nhãn, mỗi người tự chọn và chọn lại; có việc vừa gấp vừa quan trọng (bếp cháy, con sốt cao) thì làm ngay, không xếp lịch; hình vẽ là ngọn núi vì bộ icon chưa có hòn đá"
+   },
+   {
+    "id": "khan_cap",
+    "visual": "hourglass",
+    "color": "b",
+    "shows": "cát trong đồng hồ cát: việc nhỏ, gấp, tự chảy vào và lấp đầy thời gian (tin nhắn, thông báo, cuộc họp bất chợt), lúc nào cũng có vẻ hết giờ",
+    "omits": "không phải việc gấp nào cũng vô nghĩa; cát cũng cần làm (hóa đơn, hạn nộp); khẩn cấp thật như bếp cháy, con ốm là việc quan trọng nhất lúc ấy"
+   }
+  ],
+  "brief": {
+   "target_viewer": "Người Việt 20–40 tuổi đi làm, cả ngày trả lời tin nhắn và họp, thấy mình bận mà không tiến; nghĩ rằng việc nào réo to nhất là việc cần làm trước (giả định của người viết, chủ kênh xác nhận lại)",
+   "format": "Giải thích một khung tư duy qua một câu chuyện thật (concept explainer), 4–5 phút, 4:3, minh họa icon vẽ tay, một bảng xuyên suốt cho ba nguyên tắc, một ví dụ đổi trạng thái, một giọng đọc",
+   "central_question": "Vì sao bận cả ngày mà việc lớn vẫn nằm yên, và phân biệt quan trọng với khẩn cấp giúp gì, đến đâu?",
+   "transformation": "Trước khi xem, họ nghĩ việc gấp là việc cần làm trước và 'ma trận Eisenhower' là phát minh của Eisenhower. Sau khi xem, họ kể lại được câu trích năm 1954 (và việc ông dẫn lời người khác), biết bảng bốn ô do Covey phổ biến, hình dung được chiếc bình đá lớn – sỏi – cát (một truyện ngụ ngôn), tự xếp một tuần theo ba nguyên tắc, và biết khi nào việc gấp chính là việc quan trọng",
+   "discovery_goal": "Tìm kiếm (\"ma trận Eisenhower\", \"Eisenhower matrix\", \"quan trọng và khẩn cấp\", \"urgent vs important\", \"big rocks Covey\", \"quản lý thời gian\", \"khung tư duy\") và đề xuất từ video năng suất, tư duy; khán giả series Khung tư duy và Review sách",
+   "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn tập sau về khung tư duy nào?\" (comment answering the end-card question)",
+   "share_recipient": "Một người bạn hay than 'bận quá mà chẳng làm được gì': câu hỏi 'đá lớn tuần này của bạn đã vào bình chưa?' giúp nói chuyện mà không ai bị coi là lười",
+   "evidence": "The American Presidency Project, Address at the Second Assembly of the World Council of Churches, Evanston, Illinois, 19/8/1954 (lời dẫn và câu trích); Quote Investigator 9/5/2014 (Eisenhower dẫn lời một 'former college president' không nêu tên; người ấy chưa xác định; câu 'What is important is seldom urgent…' là bản viết lại về sau); Wikiquote, Dwight D. Eisenhower (cùng nhận định); Columbia University (Eisenhower là hiệu trưởng Columbia 1948–1953); Stephen R. Covey, The 7 Habits of Highly Effective People, 1989 (ma trận quản lý thời gian bốn ô, ô II là 'trái tim' của quản lý bản thân); Covey, A. Roger Merrill, Rebecca R. Merrill, First Things First, Simon & Schuster 1994 (truyện chiếc bình và những tảng đá lớn); số giờ trong tuần và tình huống ôn thi là số minh họa của kênh. Trang gốc chưa mở trực tiếp được (WebFetch bị chặn); đối chiếu nhiều bản tóm tắt tìm kiếm độc lập",
+   "constraints": "4–5 phút, 4:3, icon vẽ, không khuôn mặt người thật (Eisenhower, Covey là huy hiệu chữ cái hoặc bìa sách), một giọng đọc (OmniVoice seed 99 speed 0.88), tên tiếng Anh giữ nguyên chính tả, số đọc bằng chữ; câu trích phải nói rõ là Eisenhower dẫn lời người khác; không nói 'Eisenhower phát minh ma trận'; truyện chiếc bình phải gọi là truyện ngụ ngôn; không bàn chuyện quân sự, chính trị; giữ lời miễn trừ"
+  },
+  "youtube": {
+   "title": "Bận cả ngày mà việc lớn vẫn nằm yên? Ma trận Eisenhower",
+   "thumbnail_text": "Việc khẩn cấp thì không quan trọng. Nhưng câu ấy không phải của ông.",
+   "description": "Ngày 19/8/1954, ở Evanston, Illinois (khuôn viên Đại học Northwestern), Tổng thống Dwight D. Eisenhower phát biểu trước Đại hội lần thứ hai của Hội đồng các Giáo hội Thế giới. Giữa bài, ông dẫn lời một cựu hiệu trưởng đại học không nêu tên: 'Tôi có hai loại vấn đề, khẩn cấp và quan trọng. Việc khẩn cấp thì không quan trọng, còn việc quan trọng thì chẳng bao giờ khẩn cấp.' Video kể lại câu chuyện ấy, chuyện người đời sau gán câu nói cho chính ông, chuyện Stephen Covey vẽ bảng bốn ô năm 1989, giải thích khung tư duy 'quan trọng và khẩn cấp' bằng hình ảnh chiếc bình với đá lớn, sỏi và cát, ba nguyên tắc (hỏi hai câu; đá lớn vào trước; gom cát một chỗ), một ví dụ với một tuần làm việc, và một câu hỏi để bạn tự thử.\n\nẨn dụ dừng ở đâu: có việc khẩn cấp thật sự quan trọng (bếp cháy, con sốt cao): khi đó làm ngay, không xếp lịch. Cát cũng cần làm (hóa đơn, hạn nộp). Đời thật không phải một chiếc bình cố định, và đá lớn không tự dán nhãn: mỗi người tự chọn.\n\nLưu ý về nguồn: câu trích là lời Eisenhower dẫn lại, không phải câu ông tự nghĩ ra; người 'cựu hiệu trưởng' chưa được xác định (có người đoán là J. Roscoe Miller, hiệu trưởng Northwestern lúc ấy, nhưng ông đang đương nhiệm, không phải 'cựu'); bản quen thuộc 'việc quan trọng hiếm khi khẩn cấp, việc khẩn cấp hiếm khi quan trọng' là cách người đời sau viết lại. Chính Eisenhower từng là hiệu trưởng Đại học Columbia (1948–1953). Bảng bốn ô ('time management matrix') do Stephen Covey phổ biến trong The 7 Habits of Highly Effective People (1989); tên 'ma trận Eisenhower' xuất hiện về sau. Chuyện chiếc bình, đá lớn, sỏi và cát là truyện ngụ ngôn, phổ biến qua First Things First (Covey, A. Roger Merrill, Rebecca R. Merrill, 1994), không phải một sự kiện có thật. Số giờ trong tuần là số minh họa. Hình ngọn núi đứng thay cho tảng đá lớn.\n\nChương:\nViệc khẩn cấp thì không quan trọng?\nĐiều ta hay nghĩ\nChiếc bình (truyện ngụ ngôn)\nEvanston, 1954\nCâu trích, và người nói thật\nBảng bốn ô của Covey\nNguyên tắc 1: hỏi hai câu\nNguyên tắc 2: đá lớn vào trước\nMột tuần làm việc (số minh họa)\nNguyên tắc 3: gom cát một chỗ\nẨn dụ dừng ở đâu\nThử một chút: tin nhắn lúc ôn thi\nBa nguyên tắc\nĐá lớn của bạn\n\nNguồn:\n- The American Presidency Project, Dwight D. Eisenhower, Address at the Second Assembly of the World Council of Churches, Evanston, Illinois, 19/8/1954: https://www.presidency.ucsb.edu/documents/address-the-second-assembly-the-world-council-churches-evanston-illinois\n- Quote Investigator, What Is Important Is Seldom Urgent and What Is Urgent Is Seldom Important, 9/5/2014: https://quoteinvestigator.com/2014/05/09/urgent/\n- Wikiquote, Dwight D. Eisenhower: https://en.wikiquote.org/wiki/Dwight_D._Eisenhower\n- Columbia University Libraries, Dwight D. Eisenhower (hiệu trưởng 1948–1953): https://library.columbia.edu/libraries/rbml/uarchives/resources/presidents/eisenhower_dwight.html\n- Stephen R. Covey, The 7 Habits of Highly Effective People, Free Press, 1989\n- Stephen R. Covey, A. Roger Merrill, Rebecca R. Merrill, First Things First, Simon & Schuster, 1994\n\nBạn muốn tập sau về khung tư duy nào? Để lại bình luận nhé.",
+   "tags": [
+    "ma trận Eisenhower",
+    "Eisenhower matrix",
+    "quan trọng và khẩn cấp",
+    "urgent vs important",
+    "quản lý thời gian",
+    "khung tư duy",
+    "mô hình tư duy",
+    "Stephen Covey",
+    "7 thói quen hiệu quả",
+    "big rocks",
+    "ưu tiên công việc",
+    "năng suất",
+    "kỹ năng tư duy"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "app1954",
+   "cite": "Dwight D. Eisenhower, 'Address at the Second Assembly of the World Council of Churches, Evanston, Illinois', 19 August 1954 (The American Presidency Project, UC Santa Barbara): '…I illustrate it by quoting the statement of a former college president…' then 'I have two kinds of problems, the urgent and the important. The urgent are not important, and the important are never urgent.' (wording cross-read from several pages quoting the transcript; page not opened directly)",
+   "url": "https://www.presidency.ucsb.edu/documents/address-the-second-assembly-the-world-council-churches-evanston-illinois"
+  },
+  {
+   "id": "qi2014",
+   "cite": "Quote Investigator, 'What Is Important Is Seldom Urgent and What Is Urgent Is Seldom Important', 9 May 2014: Eisenhower presented a version of the adage at the 1954 Evanston assembly (Northwestern University campus) but credited an unnamed 'former college president'; Northwestern's president J. Roscoe Miller was then in office, not a former president, so the speaker remains unidentified; the 'seldom urgent… seldom important' wording is a later rephrasing",
+   "url": "https://quoteinvestigator.com/2014/05/09/urgent/"
+  },
+  {
+   "id": "wikiquote",
+   "cite": "Wikiquote, 'Dwight D. Eisenhower': lists the 1954 passage and notes he is quoting an unnamed 'former college president'",
+   "url": "https://en.wikiquote.org/wiki/Dwight_D._Eisenhower"
+  },
+  {
+   "id": "columbia",
+   "cite": "Columbia University Libraries, University Archives, 'Dwight D. Eisenhower': thirteenth president of Columbia University, 1948 to January 1953 (also Columbia C250 'Columbians Ahead of Their Time')",
+   "url": "https://library.columbia.edu/libraries/rbml/uarchives/resources/presidents/eisenhower_dwight.html"
+  },
+  {
+   "id": "covey1989",
+   "cite": "Stephen R. Covey, The 7 Habits of Highly Effective People (Free Press, 1989), Habit 3 'Put First Things First': the Time Management Matrix, urgent × important, four quadrants; Quadrant II (important, not urgent: relationships, planning, prevention, exercise) called 'the heart of effective personal management'; people in Quadrant III often think they are in Quadrant I (wording via several summaries)"
+  },
+  {
+   "id": "covey1994",
+   "cite": "Stephen R. Covey, A. Roger Merrill, Rebecca R. Merrill, First Things First: To Live, to Love, to Learn, to Leave a Legacy (Simon & Schuster, 1994): the story of a seminar leader filling a wide-mouth jar with big rocks, then gravel, sand and water — 'if you don't put the big rocks in first, you'll never get them in at all'; told as a story heard second-hand, a parable, origin unknown"
+  },
+  {
+   "id": "minhhoa",
+   "cite": "Số minh họa của kênh (không phải khảo sát): một tuần làm việc với khoảng 1 giờ cho việc quan trọng và 12 giờ cho tin nhắn, việc vặt, rồi 5 giờ và 8 giờ sau khi xếp lại; tình huống ôn thi và nhóm chat công ty"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Hỏi hai câu",
+   "line": "Việc này có gấp không? Và nó có quan trọng không? Hai câu, không phải một."
+  },
+  {
+   "name": "Đá lớn vào trước",
+   "line": "Đặt việc quan trọng vào lịch trước, khi tuần còn trống."
+  },
+  {
+   "name": "Gom cát một chỗ",
+   "line": "Việc nhỏ, gấp: gom vào vài khung giờ, đừng để nó chảy suốt cả ngày."
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Eisenhower từng nói: việc khẩn cấp thì không quan trọng. Nhưng câu ấy không phải của ông.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "khan_cap",
+      "kicker": "Dwight D. Eisenhower",
+      "line": "Khẩn cấp thì không quan trọng",
+      "line_cue": "việc khẩn",
+      "action": "chảy cát"
+     },
+     {
+      "type": "icon",
+      "icon": "mask",
+      "kicker": "Nhưng",
+      "cue": "nhưng câu",
+      "line": "Không phải câu của ông",
+      "line_cue": "không phải",
+      "action": "lật mặt nạ"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "không phải",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "app1954",
+    "qi2014"
+   ]
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Ông dẫn lời một người khác. Và từ câu ấy, người đời sau dựng cả một cách sắp xếp thời gian: tách việc quan trọng khỏi việc khẩn cấp.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "letter",
+      "kicker": "Một câu trích",
+      "line": "Lời một người khác",
+      "line_cue": "một người",
+      "action": "mở thư"
+     },
+     {
+      "type": "trio",
+      "kicker": "Một cách sắp xếp thời gian",
+      "cue": "người đời",
+      "action": "tách đôi",
+      "items": [
+       {
+        "concept": "quan_trong",
+        "label": "Quan trọng",
+        "cue": "quan trọng"
+       },
+       {
+        "concept": "khan_cap",
+        "label": "Khẩn cấp",
+        "cue": "khẩn cấp"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "app1954",
+    "covey1989"
+   ]
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Khung tư duy · Tập 10",
+    "title": "Quan trọng và khẩn cấp",
+    "subtitle": "Ma trận Eisenhower",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Ta hay nghĩ: việc nào réo to nhất là việc cần làm trước. Tin nhắn, thông báo, một cuộc họp bất chợt. Cả ngày bận rộn, vậy mà cuối tuần nhìn lại, việc lớn vẫn nằm yên.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "lightning",
+      "kicker": "Điều ta hay nghĩ",
+      "line": "Réo to nhất, làm trước",
+      "line_cue": "réo",
+      "action": "lóe lên"
+     },
+     {
+      "type": "trio",
+      "kicker": "Cả ngày",
+      "cue": "tin nhắn",
+      "action": "dồn tới",
+      "items": [
+       {
+        "icon": "letter",
+        "label": "Tin nhắn"
+       },
+       {
+        "icon": "bubble",
+        "label": "Thông báo",
+        "cue": "thông báo"
+       },
+       {
+        "icon": "people",
+        "label": "Họp bất chợt",
+        "cue": "một cuộc"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "concept": "quan_trong",
+      "kicker": "Cuối tuần nhìn lại",
+      "cue": "cả ngày",
+      "line": "Việc lớn vẫn nằm yên",
+      "line_cue": "việc lớn",
+      "action": "đứng im"
+     }
+    ]
+   },
+   "sources": [
+    "covey1989"
+   ]
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "Có một truyện ngụ ngôn, không phải chuyện có thật, được biết rộng rãi qua cuốn First Things First của Stephen Covey. Người ta kể rằng một người thầy đặt lên bàn một chiếc bình, vài tảng đá lớn, một xô sỏi và một xô cát.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "book",
+      "title": "First Things First",
+      "author": "Stephen R. Covey và cộng sự",
+      "year": "1994",
+      "kicker": "Truyện ngụ ngôn, không phải chuyện thật",
+      "action": "mở sách",
+      "facts": [
+       {
+        "big": "1994",
+        "text": "Phổ biến qua sách",
+        "cue": "được biết"
+       }
+      ]
+     },
+     {
+      "type": "trio",
+      "kicker": "Một chiếc bình · đá lớn · sỏi · cát",
+      "cue": "một người",
+      "action": "bày ra",
+      "items": [
+       {
+        "concept": "quan_trong",
+        "label": "Đá lớn",
+        "cue": "vài tảng"
+       },
+       {
+        "concept": "khan_cap",
+        "label": "Cát",
+        "cue": "một xô cát"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "covey1994"
+   ],
+   "certainty": "attributed"
+  },
+  {
+   "id": "b03",
+   "act": "context",
+   "narration": "Đổ cát vào trước, đá lớn không còn chỗ. Đặt đá lớn vào trước, sỏi lọt vào khe, cát chảy vào kẽ: tất cả đều vừa. Đá lớn là việc quan trọng. Cát là những việc nhỏ, gấp, tự chảy vào.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "swap",
+      "kicker": "Cùng một chiếc bình",
+      "action": "đổi thứ tự",
+      "strike_cue": "đặt đá",
+      "from": {
+       "concept": "khan_cap",
+       "label": "Cát trước"
+      },
+      "to": {
+       "concept": "quan_trong",
+       "label": "Đá lớn trước",
+       "cue": "đặt đá"
+      },
+      "line": "Tất cả đều vừa",
+      "line_cue": "tất cả"
+     },
+     {
+      "type": "trio",
+      "kicker": "Trong chiếc bình",
+      "cue": "đá lớn là",
+      "action": "gọi tên",
+      "items": [
+       {
+        "concept": "quan_trong",
+        "label": "Việc quan trọng"
+       },
+       {
+        "concept": "khan_cap",
+        "label": "Việc nhỏ, gấp",
+        "cue": "cát là"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "covey1994"
+   ]
+  },
+  {
+   "id": "b04",
+   "act": "story",
+   "narration": "Giờ đến câu chuyện có thật. Ngày mười chín tháng tám năm một nghìn chín trăm năm mươi tư, Tổng thống Dwight Eisenhower phát biểu trước một đại hội quốc tế của các giáo hội, tại khuôn viên Đại học Northwestern, thành phố Evanston.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Dwight D. Eisenhower",
+      "initials": "DE",
+      "role": "Tổng thống Mỹ, 1953–1961",
+      "years": "1890–1969",
+      "action": "khắc"
+     },
+     {
+      "type": "icon",
+      "icon": "people",
+      "kicker": "19/8/1954 · Evanston, Illinois",
+      "cue": "tổng thống",
+      "line": "Một đại hội các giáo hội",
+      "line_cue": "đại hội",
+      "action": "tụ họp"
+     },
+     {
+      "type": "icon",
+      "icon": "house",
+      "kicker": "Khuôn viên",
+      "cue": "tại khuôn",
+      "line": "Đại học Northwestern",
+      "line_cue": "đại học",
+      "action": "hiện ra"
+     }
+    ]
+   },
+   "sources": [
+    "app1954",
+    "qi2014"
+   ]
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Giữa bài, ông nói mình muốn dẫn lời một cựu hiệu trưởng đại học. Người ấy nói: tôi có hai loại vấn đề, khẩn cấp và quan trọng. Việc khẩn cấp thì không quan trọng, còn việc quan trọng thì chẳng bao giờ khẩn cấp.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "letter",
+      "kicker": "Eisenhower dẫn lời",
+      "line": "Một cựu hiệu trưởng đại học",
+      "line_cue": "một cựu",
+      "action": "mở thư"
+     },
+     {
+      "type": "quote",
+      "cue": "tôi có",
+      "text": "Việc khẩn cấp thì không quan trọng, còn việc quan trọng thì chẳng bao giờ khẩn cấp.",
+      "by": "một cựu hiệu trưởng, qua lời Eisenhower, 1954 (lược dịch)",
+      "action": "hiện chữ"
+     }
+    ]
+   },
+   "sources": [
+    "app1954",
+    "wikiquote"
+   ]
+  },
+  {
+   "id": "b06",
+   "act": "turn",
+   "narration": "Ông không nói tên người ấy, và đến nay người ta vẫn chưa biết chắc là ai. Thú vị là chính Eisenhower cũng từng làm hiệu trưởng Đại học Columbia. Còn câu quen thuộc hôm nay, việc quan trọng hiếm khi gấp, là bản người đời sau viết lại, rồi gán cho ông.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Người ấy là ai?",
+      "line": "Chưa biết chắc là ai",
+      "line_cue": "chưa biết",
+      "action": "dò tìm"
+     },
+     {
+      "type": "icon",
+      "icon": "book",
+      "kicker": "Columbia · 1948–1953",
+      "cue": "thú vị",
+      "line": "Ông cũng từng là hiệu trưởng",
+      "line_cue": "hiệu trưởng",
+      "action": "lật trang"
+     },
+     {
+      "type": "statement",
+      "kicker": "Hay bị kể sai",
+      "cue": "còn câu",
+      "text": "Câu của Eisenhower",
+      "strike": "Câu của Eisenhower",
+      "replace": "Ông dẫn lời, đời sau viết lại",
+      "strike_cue": "rồi gán",
+      "action": "gạch bỏ"
+     }
+    ]
+   },
+   "sources": [
+    "qi2014",
+    "wikiquote",
+    "columbia"
+   ]
+  },
+  {
+   "id": "b07",
+   "act": "story",
+   "narration": "Cái bảng bốn ô mang tên Eisenhower cũng ra đời muộn hơn. Năm một nghìn chín trăm tám mươi chín, trong cuốn The Seven Habits, Stephen Covey vẽ hai trục, quan trọng và khẩn cấp, thành bốn ô.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "checklist",
+      "kicker": "Ma trận Eisenhower",
+      "line": "Ra đời muộn hơn",
+      "line_cue": "ra đời",
+      "action": "kẻ ô"
+     },
+     {
+      "type": "book",
+      "title": "The 7 Habits",
+      "author": "Stephen R. Covey",
+      "year": "1989",
+      "kicker": "Ma trận quản lý thời gian",
+      "cue": "năm một",
+      "action": "mở sách",
+      "facts": [
+       {
+        "big": "2 trục",
+        "text": "Quan trọng · khẩn cấp",
+        "cue": "vẽ hai"
+       },
+       {
+        "big": "4 ô",
+        "text": "Bốn loại việc",
+        "cue": "thành bốn"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "covey1989",
+    "qi2014"
+   ]
+  },
+  {
+   "id": "b08",
+   "act": "story",
+   "narration": "Ô một: vừa gấp vừa quan trọng, như khủng hoảng, hạn chót. Ô hai: quan trọng mà chưa gấp, như sức khỏe, gia đình, việc học. Ô ba: gấp mà không quan trọng. Ô bốn: chẳng gấp, chẳng quan trọng. Theo Covey, ô hai là trái tim của việc tự quản lý mình.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Bốn ô của Covey",
+      "action": "lấp ô",
+      "items": [
+       {
+        "icon": "lightning",
+        "label": "Gấp và quan trọng"
+       },
+       {
+        "concept": "quan_trong",
+        "label": "Quan trọng, chưa gấp",
+        "cue": "ô hai"
+       }
+      ]
+     },
+     {
+      "type": "trio",
+      "kicker": "Bốn ô của Covey",
+      "cue": "ô ba",
+      "action": "lấp tiếp",
+      "items": [
+       {
+        "concept": "khan_cap",
+        "label": "Gấp, không quan trọng"
+       },
+       {
+        "icon": "tissue",
+        "label": "Chẳng gấp, chẳng quan trọng",
+        "cue": "ô bốn"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "concept": "quan_trong",
+      "kicker": "Theo Covey · ô hai",
+      "cue": "theo covey",
+      "line": "Trái tim của việc tự quản",
+      "line_cue": "trái tim",
+      "action": "sáng lên"
+     }
+    ]
+   },
+   "sources": [
+    "covey1989"
+   ]
+  },
+  {
+   "id": "b09",
+   "act": "story",
+   "narration": "Vì sao ô hai hay bị bỏ quên? Vì không ai réo nó, và nó luôn có thể để mai. Ô ba thì ồn ào, và theo Covey, ta hay tưởng mình đang ở ô một.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "quan_trong",
+      "kicker": "Ô hai",
+      "line": "Không ai réo nó",
+      "line_cue": "vì không",
+      "action": "lặng im"
+     },
+     {
+      "type": "icon",
+      "concept": "khan_cap",
+      "kicker": "Ô ba · theo Covey",
+      "cue": "ô ba",
+      "line": "Tưởng mình đang ở ô một",
+      "line_cue": "tưởng",
+      "action": "chảy cát"
+     }
+    ]
+   },
+   "sources": [
+    "covey1989"
+   ]
+  },
+  {
+   "id": "b10",
+   "act": "principle",
+   "narration": "Từ câu chuyện ấy, có ba nguyên tắc. Thứ nhất: hỏi hai câu. Việc này có gấp không? Và nó có quan trọng không? Thứ gì réo to chỉ trả lời được câu đầu.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "focus": [
+     0
+    ],
+    "action": "lướt tới",
+    "start": "overview",
+    "regions": [
+     {
+      "icon": "scale",
+      "label": "Hỏi hai câu",
+      "note": "Gấp? Quan trọng?",
+      "cue": "thứ nhất",
+      "note_cue": "việc này"
+     },
+     {
+      "concept": "quan_trong",
+      "label": "Đá lớn vào trước",
+      "note": "Lịch trống, đá vào",
+      "cue": "thứ hai",
+      "note_cue": "đặt việc"
+     },
+     {
+      "concept": "khan_cap",
+      "label": "Gom cát một chỗ",
+      "note": "Vài khung giờ",
+      "cue": "thứ ba",
+      "note_cue": "gom"
+     }
+    ]
+   },
+   "sources": [
+    "app1954",
+    "covey1989"
+   ]
+  },
+  {
+   "id": "b11",
+   "act": "principle",
+   "narration": "Thứ hai: đá lớn vào trước. Như người thầy trong truyện: đá lớn, rồi sỏi, rồi cát. Đặt việc quan trọng vào lịch khi tuần còn trống, trước khi tin nhắn kịp lấp đầy.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "focus": [
+     1
+    ],
+    "action": "lướt sang"
+   },
+   "sources": [
+    "covey1994"
+   ]
+  },
+  {
+   "id": "b12",
+   "act": "example",
+   "narration": "Thử với một tuần làm việc, số minh họa thôi. Trước: khoảng mười hai giờ cho tin nhắn, việc vặt, và chỉ một giờ cho việc quan trọng. Sau khi đặt đá lớn vào lịch trước: việc quan trọng lên năm giờ, việc vặt còn tám.",
+   "visual": {
+    "type": "scenario",
+    "kicker": "Số minh họa · giờ mỗi tuần",
+    "heading": "Một tuần làm việc",
+    "action": "kéo",
+    "before_label": "Cát vào trước",
+    "after_label": "Đá lớn vào trước",
+    "cue": "sau khi",
+    "suffix": " giờ",
+    "bars": [
+     {
+      "label": "Việc quan trọng",
+      "before": 1,
+      "after": 5,
+      "concept": "quan_trong",
+      "cue": "chỉ một"
+     },
+     {
+      "label": "Tin nhắn, việc vặt",
+      "before": 12,
+      "after": 8,
+      "concept": "khan_cap",
+      "cue": "mười hai"
+     }
+    ],
+    "takeaway": "Cát vẫn còn. Đá đã vào bình.",
+    "takeaway_cue": "việc vặt còn"
+   },
+   "sources": [
+    "minhhoa"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b13",
+   "act": "principle",
+   "narration": "Thứ ba: gom cát một chỗ. Việc nhỏ mà gấp vẫn phải làm, nhưng gom vào vài khung giờ, như đọc tin nhắn hai lần một ngày, thay vì để nó chảy suốt cả ngày.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "focus": [
+     2
+    ],
+    "action": "lướt xuống"
+   },
+   "sources": [
+    "covey1989"
+   ]
+  },
+  {
+   "id": "b14",
+   "act": "complication",
+   "narration": "Nhưng chiếc bình cũng có giới hạn. Có việc khẩn cấp thật sự quan trọng: bếp bốc cháy, con sốt cao. Khi ấy, đừng xếp lịch, hãy làm ngay. Và cát cũng cần làm: hóa đơn, hạn nộp.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "khan_cap",
+      "kicker": "Ẩn dụ dừng ở đâu?",
+      "line": "Chiếc bình có giới hạn",
+      "line_cue": "nhưng chiếc",
+      "action": "dừng lại"
+     },
+     {
+      "type": "trio",
+      "kicker": "Gấp, và rất quan trọng",
+      "cue": "có việc",
+      "action": "báo động",
+      "items": [
+       {
+        "icon": "lightning",
+        "label": "Bếp bốc cháy",
+        "cue": "bếp"
+       },
+       {
+        "icon": "people",
+        "label": "Con sốt cao",
+        "cue": "con sốt"
+       }
+      ],
+      "line": "Làm ngay",
+      "line_cue": "hãy làm"
+     },
+     {
+      "type": "icon",
+      "icon": "checklist",
+      "kicker": "Cát cũng cần làm",
+      "cue": "và cát",
+      "line": "Hóa đơn · hạn nộp",
+      "line_cue": "hóa đơn",
+      "action": "đánh dấu"
+     }
+    ]
+   },
+   "sources": [
+    "covey1989"
+   ]
+  },
+  {
+   "id": "b15",
+   "act": "complication",
+   "narration": "Và đời thật không phải một chiếc bình cố định. Với người này, đá lớn là sức khỏe; với người kia, là đứa con mới sinh. Đá lớn không tự dán nhãn: chính bạn phải chọn, và chọn lại khi đời thay đổi.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "quan_trong",
+      "kicker": "Đời thật",
+      "line": "Không phải bình cố định",
+      "line_cue": "không phải",
+      "action": "đổi dáng"
+     },
+     {
+      "type": "icon",
+      "icon": "compass",
+      "kicker": "Đá lớn không tự dán nhãn",
+      "cue": "đá lớn không",
+      "line": "Bạn chọn, và chọn lại",
+      "line_cue": "chính bạn",
+      "action": "xoay hướng"
+     }
+    ]
+   },
+   "sources": [
+    "covey1994"
+   ]
+  },
+  {
+   "id": "b16",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Bạn đang ôn cho kỳ thi tháng sau thì điện thoại rung: nhóm chat công ty bàn chuyện liên hoan. Bạn làm gì?",
+   "visual": {
+    "type": "question",
+    "question": "Đang ôn thi, nhóm chat công ty bàn liên hoan. Bạn làm gì?",
+    "choices": [
+     "Trả lời ngay kẻo lỡ",
+     "Ôn xong một tiếng, rồi đọc một thể",
+     "Thôi, hôm nay nghỉ ôn"
+    ],
+    "answer": "B — đá lớn vào trước, gom cát một chỗ.",
+    "think_seconds": 5
+   },
+   "sources": [
+    "minhhoa"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b17",
+   "act": "recap",
+   "narration": "Đáp án là B: tin nhắn vẫn đọc, chỉ là sau. Vậy là ba nguyên tắc. Hỏi hai câu. Đá lớn vào trước. Và gom cát một chỗ.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "action": "lùi xa",
+    "focus": [
+     {
+      "region": 1,
+      "cue": "đáp án"
+     }
+    ],
+    "overview": true,
+    "overview_cue": "vậy là",
+    "line": "Ba nguyên tắc cho một tuần",
+    "line_cue": "và gom"
+   }
+  },
+  {
+   "id": "b18",
+   "act": "close",
+   "narration": "Câu nói năm ấy không phải của Eisenhower, và chiếc bình chỉ là truyện ngụ ngôn. Nhưng câu hỏi thì có thật: tuần này, đá lớn của bạn đã vào bình chưa?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "letter",
+      "kicker": "Evanston · 1954",
+      "line": "Một câu dẫn lại",
+      "action": "gấp thư"
+     },
+     {
+      "type": "icon",
+      "concept": "quan_trong",
+      "kicker": "Tuần này",
+      "cue": "nhưng câu",
+      "line": "Đá lớn đã vào bình chưa?",
+      "line_cue": "đá lớn",
+      "action": "đặt vào"
+     }
+    ]
+   },
+   "sources": [
+    "app1954",
+    "covey1994"
+   ]
+  },
+  {
+   "id": "b19",
+   "act": "close",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
+   "visual": {
+    "type": "end",
+    "kicker": "Khung tư duy · Tập 10",
+    "title": "Quan trọng và khẩn cấp",
+    "ask": "Bạn muốn tập sau về khung tư duy nào?",
+    "ask_hint": "Tư duy từ gốc · biên an toàn · tối thiểu hóa hối tiếc",
+    "ask_cue": "hay chủ",
+    "sources_line": "Nguồn: Eisenhower, Evanston (1954) · Quote Investigator · Covey (1989, 1994) · xem mô tả",
+    "disclaimer": "Nội dung giáo dục; câu chuyện kể lại từ nguồn công khai.",
+    "sources_cue": "còn bạn"
+   }
+  }
+ ],
+ "pronounce": {}
+}
