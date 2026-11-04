@@ -8,11 +8,17 @@
   "lang": "vi",
   "audience": "người trẻ Việt đi làm, hay bị rủ góp vốn, mở quán, đầu tư theo phong trào; muốn biết khi nào nên quyết mạnh và khi nào nên đứng ngoài",
   "aspect": "4:3",
-  "target_minutes": [3, 5],
+  "target_minutes": [
+   3,
+   5
+  ],
   "voice": "omnivoice:male, middle-aged, very low pitch",
   "speed": 0.88,
   "music": "chill",
-  "look": {"primary_color": "#E8B06A", "secondary_color": "#12100E"},
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
   "learning_goals": [
    "Kể lại hai câu chuyện của Warren Buffett: năm 1983 Berkshire mua phần lớn Nebraska Furniture Mart từ Rose Blumkin (Mrs B, 89 tuổi) bằng một cái bắt tay, không kiểm toán, khoảng 55 triệu đô theo lời Buffett; năm 1999 ông đứng ngoài cơn sốt internet, bị Barron's hỏi 'What's wrong, Warren?', rồi Nasdaq mất gần 80% từ 3/2000 đến 10/2002",
    "Phân biệt quyết định trong vùng sáng của ngọn đèn (hiểu rõ) với quyết định ngoài vùng sáng (đoán mò), và câu của Buffett năm 1996: vòng tròn to hay nhỏ không quan trọng lắm, biết ranh giới mới sống còn",
@@ -55,143 +61,936 @@
    "title": "Vòng tròn năng lực: Buffett biết đèn mình chiếu tới đâu",
    "thumbnail_text": "55 triệu đô. Không kiểm toán. Rồi đứng ngoài cơn sốt.",
    "description": "Năm 1983, Warren Buffett mua phần lớn cửa hàng nội thất Nebraska Furniture Mart từ bà Rose Blumkin (Mrs B), 89 tuổi, bằng một cái bắt tay: theo lời ông, không kiểm toán, không kiểm kho, một tấm séc khoảng 55 triệu đô. Mười sáu năm sau, ông đứng ngoài cơn sốt cổ phiếu internet và bị tạp chí Barron's hỏi trên trang bìa: 'What's wrong, Warren?'. Cùng một người, cùng một khung tư duy: vòng tròn năng lực. Video kể lại hai câu chuyện ấy, giải thích khung tư duy bằng hình ảnh vòng sáng của một ngọn đèn trong đêm, ba nguyên tắc (vẽ đường biên; trong vùng sáng, dám quyết; ngoài vùng sáng, dám đứng yên), một ví dụ với thực đơn một quán cà phê nhỏ, và một câu hỏi để bạn tự thử.\n\nẨn dụ dừng ở đâu: vòng sáng của đèn thật thì cố định, còn vòng tròn năng lực nới ra được, chậm, bằng học (năm 2016 Berkshire bắt đầu mua Apple, một công ty Buffett được cho là nhìn như hàng tiêu dùng); đứng ngoài cũng có giá, ông bỏ lỡ cả những công ty công nghệ về sau rất thành công; và ở trong vùng sáng không bảo đảm thắng, chỉ giúp biết mình đang hiểu hay đang đoán.\n\nLưu ý về số liệu: 55 triệu đô là con số trong thư Buffett (tấm séc cho phần lớn cổ phần); các bài báo ghi 55 hoặc 60 triệu đô, 80% hoặc 90% cổ phần, nên video chỉ nói 'phần lớn'. '500 đô vay của anh trai' và năm 1937 là theo lời Buffett và tiểu sử bà (có nguồn ghi 1933). Câu 'thà vật nhau với gấu xám' trong thư 1983 và các câu trích thư 1996, 1999 là lược dịch. Mức giảm 23% là cổ phiếu Berkshire hạng A năm 1999 theo Barron's. Nasdaq Composite: đóng cửa 5.048,62 ngày 10/3/2000, 1.114,11 ngày 9/10/2002 (giảm khoảng 78%, chưa tính cổ tức). Đây là lịch sử, không phải lời hứa. Số món trong thực đơn quán cà phê và số tiền góp quán trà sữa là số minh họa. Nội dung giáo dục, không phải lời khuyên đầu tư.\n\nChương:\nMột cái bắt tay, một lần đứng ngoài\nĐiều ta hay nghĩ\nNgọn đèn trong đêm\nMrs B ở Omaha\nKhông kiểm toán\nVì sao không liều\nBiết ranh giới mới sống còn\nCơn sốt internet\nWhat's wrong, Warren?\nNguyên tắc 1: vẽ đường biên\nNguyên tắc 2: trong vùng sáng, dám quyết\nThực đơn quán cà phê (số minh họa)\nNguyên tắc 3: ngoài vùng sáng, dám đứng yên\nẨn dụ dừng ở đâu\nThử một chút: góp vốn mở quán trà sữa\nBa nguyên tắc\nĐèn của mình chiếu tới đâu?\n\nNguồn:\n- Warren Buffett, thư gửi cổ đông Berkshire Hathaway 1983, 1984, 1996, 1999, 2013: https://www.berkshirehathaway.com/letters/letters.html\n- Wikipedia, Rose Blumkin: https://en.wikipedia.org/wiki/Rose_Blumkin\n- Wikipedia, Nebraska Furniture Mart: https://en.wikipedia.org/wiki/Nebraska_Furniture_Mart\n- Andrew Bary, What's Wrong, Warren?, Barron's, 27/12/1999\n- Nasdaq Composite, đỉnh 10/3/2000 và đáy 9/10/2002 (Fox Business, Milestones for the Nasdaq composite; Wikipedia, Dot-com bubble)\n- Berkshire Hathaway, báo cáo 13F công bố 16/5/2016 (mua Apple), qua MacRumors và The Jakarta Post\n\nBạn muốn tập sau về khung tư duy nào? Để lại bình luận nhé.",
-   "tags": ["vòng tròn năng lực", "circle of competence", "Warren Buffett", "Berkshire Hathaway", "Nebraska Furniture Mart", "Rose Blumkin", "Mrs B", "bong bóng dot-com", "khung tư duy", "mô hình tư duy", "đầu tư giá trị", "ra quyết định", "kỹ năng tư duy"]
+   "tags": [
+    "vòng tròn năng lực",
+    "circle of competence",
+    "Warren Buffett",
+    "Berkshire Hathaway",
+    "Nebraska Furniture Mart",
+    "Rose Blumkin",
+    "Mrs B",
+    "bong bóng dot-com",
+    "khung tư duy",
+    "mô hình tư duy",
+    "đầu tư giá trị",
+    "ra quyết định",
+    "kỹ năng tư duy"
+   ]
   }
  },
  "sources": [
-  {"id": "brk1983", "cite": "Warren Buffett, Chairman's Letter 1983, Berkshire Hathaway: purchase of Nebraska Furniture Mart at year end (90% in the letter as widely quoted; other reports say 80%); Mrs B started the business in 1937 with $500; 'I'd rather wrestle grizzlies than compete with Mrs. B and her progeny' (wording cross-read from several secondary pages; page not opened directly)", "url": "https://www.berkshirehathaway.com/letters/1983.html"},
-  {"id": "brk1984", "cite": "Warren Buffett, Chairman's Letter 1984: 'NFM had never had an audit and we did not request one; we did not take an inventory nor verify the receivables; we did not check property titles'; Berkshire gave Mrs B a check for $55 million and she gave her word (quoted by GoingConcern and Business Insider; page not opened directly)", "url": "https://www.berkshirehathaway.com/letters/1984.html"},
-  {"id": "brk2013", "cite": "Warren Buffett, Chairman's Letter 2013: on his birthday in 1983 he visited Mrs B with a 1¼-page purchase proposal; 'though the company's financial statements were unaudited, I had no worries'; Mrs B simply told him what was what and her word was good enough (quoted by Benzinga, AOL/Yahoo Finance; page not opened directly)", "url": "https://www.berkshirehathaway.com/letters/2013ltr.pdf"},
-  {"id": "brk1996", "cite": "Warren Buffett, Chairman's Letter 1996: 'You don't have to be an expert on every company, or even many. You only have to be able to evaluate companies within your circle of competence. The size of that circle is not very important; knowing its boundaries, however, is vital.' (same wording on several independent pages: Wikipedia 'Circle of competence', IBJ, BusinessLive, Hedge Fund Alpha)", "url": "https://www.berkshirehathaway.com/letters/1996.html"},
-  {"id": "brk1999", "cite": "Warren Buffett, Chairman's Letter 1999 (published March 2000): 'Our problem — which we can't solve by studying up — is that we have no insights into which participants in the tech field possess a truly durable competitive advantage'; 'If we have a strength, it is in recognizing when we are operating well within our circle of competence and when we are approaching the perimeter' (quoted by several pages; page not opened directly)", "url": "https://www.berkshirehathaway.com/letters/1999.html"},
-  {"id": "blumkin", "cite": "Wikipedia 'Rose Blumkin' and 'Nebraska Furniture Mart'; Dallas Morning News, 'Blame it on Mrs. B' (2015); 1011now.com (2025): born Rose Gorelick, 3 December 1893, in the Russian Empire; emigrated to the US around 1917 (some accounts 1915); opened her furniture store in Omaha in 1937 (Wikipedia also gives 1933) with $500 borrowed from her brother; sold a majority to Berkshire Hathaway in 1983 on a handshake", "url": "https://en.wikipedia.org/wiki/Rose_Blumkin"},
-  {"id": "barrons1999", "cite": "Andrew Bary, 'What's Wrong, Warren?', Barron's cover story, 27 December 1999: Berkshire Class A shares down about 23% in 1999 against a return of about 20% for the S&P 500 with dividends; the knock was that Buffett had missed the tech boom (Bary's own retrospective, via Hedge Fund Alpha; Motley Fool 2000)", "url": "https://hedgefundalpha.com/news/whats-wrong-warren/"},
-  {"id": "nasdaq", "cite": "Nasdaq Composite: record close 5,048.62 on 10 March 2000; closing low 1,114.11 on 9 October 2002, a fall of about 78% (price index, before dividends) (Fox Business, 'Milestones for the Nasdaq composite'; Wikipedia, 'Dot-com bubble'; NZ Herald)", "url": "https://www.foxbusiness.com/markets/milestones-for-the-nasdaq-composite-index"},
-  {"id": "apple2016", "cite": "Berkshire Hathaway 13F filing disclosed 16 May 2016: 9.8 million Apple shares, its first Apple position (MacRumors, The Jakarta Post); Buffett is widely reported to see Apple as a consumer-products business more than a tech company (Motley Fool)", "url": "https://www.macrumors.com/2016/08/16/berkshire-hathaway-increases-stake-apple/"},
-  {"id": "minhhoa", "cite": "Số minh họa của kênh (không phải khảo sát): thực đơn một quán cà phê nhỏ 10 món (3 món chủ quán hiểu rõ, 7 món theo trào lưu) rút còn 5 món (4 món hiểu rõ, 1 món thử); góp 50 triệu đồng mở quán trà sữa"}
+  {
+   "id": "brk1983",
+   "cite": "Warren Buffett, Chairman's Letter 1983, Berkshire Hathaway: purchase of Nebraska Furniture Mart at year end (90% in the letter as widely quoted; other reports say 80%); Mrs B started the business in 1937 with $500; 'I'd rather wrestle grizzlies than compete with Mrs. B and her progeny' (wording cross-read from several secondary pages; page not opened directly)",
+   "url": "https://www.berkshirehathaway.com/letters/1983.html"
+  },
+  {
+   "id": "brk1984",
+   "cite": "Warren Buffett, Chairman's Letter 1984: 'NFM had never had an audit and we did not request one; we did not take an inventory nor verify the receivables; we did not check property titles'; Berkshire gave Mrs B a check for $55 million and she gave her word (quoted by GoingConcern and Business Insider; page not opened directly)",
+   "url": "https://www.berkshirehathaway.com/letters/1984.html"
+  },
+  {
+   "id": "brk2013",
+   "cite": "Warren Buffett, Chairman's Letter 2013: on his birthday in 1983 he visited Mrs B with a 1¼-page purchase proposal; 'though the company's financial statements were unaudited, I had no worries'; Mrs B simply told him what was what and her word was good enough (quoted by Benzinga, AOL/Yahoo Finance; page not opened directly)",
+   "url": "https://www.berkshirehathaway.com/letters/2013ltr.pdf"
+  },
+  {
+   "id": "brk1996",
+   "cite": "Warren Buffett, Chairman's Letter 1996: 'You don't have to be an expert on every company, or even many. You only have to be able to evaluate companies within your circle of competence. The size of that circle is not very important; knowing its boundaries, however, is vital.' (same wording on several independent pages: Wikipedia 'Circle of competence', IBJ, BusinessLive, Hedge Fund Alpha)",
+   "url": "https://www.berkshirehathaway.com/letters/1996.html"
+  },
+  {
+   "id": "brk1999",
+   "cite": "Warren Buffett, Chairman's Letter 1999 (published March 2000): 'Our problem — which we can't solve by studying up — is that we have no insights into which participants in the tech field possess a truly durable competitive advantage'; 'If we have a strength, it is in recognizing when we are operating well within our circle of competence and when we are approaching the perimeter' (quoted by several pages; page not opened directly)",
+   "url": "https://www.berkshirehathaway.com/letters/1999.html"
+  },
+  {
+   "id": "blumkin",
+   "cite": "Wikipedia 'Rose Blumkin' and 'Nebraska Furniture Mart'; Dallas Morning News, 'Blame it on Mrs. B' (2015); 1011now.com (2025): born Rose Gorelick, 3 December 1893, in the Russian Empire; emigrated to the US around 1917 (some accounts 1915); opened her furniture store in Omaha in 1937 (Wikipedia also gives 1933) with $500 borrowed from her brother; sold a majority to Berkshire Hathaway in 1983 on a handshake",
+   "url": "https://en.wikipedia.org/wiki/Rose_Blumkin"
+  },
+  {
+   "id": "barrons1999",
+   "cite": "Andrew Bary, 'What's Wrong, Warren?', Barron's cover story, 27 December 1999: Berkshire Class A shares down about 23% in 1999 against a return of about 20% for the S&P 500 with dividends; the knock was that Buffett had missed the tech boom (Bary's own retrospective, via Hedge Fund Alpha; Motley Fool 2000)",
+   "url": "https://hedgefundalpha.com/news/whats-wrong-warren/"
+  },
+  {
+   "id": "nasdaq",
+   "cite": "Nasdaq Composite: record close 5,048.62 on 10 March 2000; closing low 1,114.11 on 9 October 2002, a fall of about 78% (price index, before dividends) (Fox Business, 'Milestones for the Nasdaq composite'; Wikipedia, 'Dot-com bubble'; NZ Herald)",
+   "url": "https://www.foxbusiness.com/markets/milestones-for-the-nasdaq-composite-index"
+  },
+  {
+   "id": "apple2016",
+   "cite": "Berkshire Hathaway 13F filing disclosed 16 May 2016: 9.8 million Apple shares, its first Apple position (MacRumors, The Jakarta Post); Buffett is widely reported to see Apple as a consumer-products business more than a tech company (Motley Fool)",
+   "url": "https://www.macrumors.com/2016/08/16/berkshire-hathaway-increases-stake-apple/"
+  },
+  {
+   "id": "minhhoa",
+   "cite": "Số minh họa của kênh (không phải khảo sát): thực đơn một quán cà phê nhỏ 10 món (3 món chủ quán hiểu rõ, 7 món theo trào lưu) rút còn 5 món (4 món hiểu rõ, 1 món thử); góp 50 triệu đồng mở quán trà sữa"
+  }
  ],
  "principles": [
-  {"name": "Vẽ đường biên", "line": "Hỏi thật: mình giải thích được thứ này kiếm tiền thế nào, và điều gì làm nó hỏng không?"},
-  {"name": "Trong vùng sáng, dám quyết", "line": "Khi thật sự hiểu, bạn có thể quyết nhanh và lớn, như cái bắt tay với Mrs B."},
-  {"name": "Ngoài vùng sáng, dám đứng yên", "line": "Chưa hiểu thì chưa vào, kể cả khi người khác đang thắng và cười mình."}
+  {
+   "name": "Vẽ đường biên",
+   "line": "Hỏi thật: mình giải thích được thứ này kiếm tiền thế nào, và điều gì làm nó hỏng không?"
+  },
+  {
+   "name": "Trong vùng sáng, dám quyết",
+   "line": "Khi thật sự hiểu, bạn có thể quyết nhanh và lớn, như cái bắt tay với Mrs B."
+  },
+  {
+   "name": "Ngoài vùng sáng, dám đứng yên",
+   "line": "Chưa hiểu thì chưa vào, kể cả khi người khác đang thắng và cười mình."
+  }
  ],
  "beats": [
-  {"id": "h1", "act": "hook", "narration": "Warren Buffett mua một công ty năm mươi lăm triệu đô, chỉ bắt tay, không cần kiểm toán.",
-   "visual": {"type": "shots", "shots": [
-    {"type": "icon", "icon": "store", "kicker": "Omaha · 1983", "line": "55 triệu $ một công ty", "line_cue": "năm mươi", "action": "mở cửa"},
-    {"type": "trio", "cross": true, "kicker": "Theo lời Buffett", "cue": "không cần", "action": "gạch bỏ", "items": [{"icon": "checklist", "label": "Kiểm toán"}]}
-   ]},
-   "sfx": [{"kind": "hit", "cue": "không cần", "gain_db": -6}], "sources": ["brk1984", "brk2013"]},
-  {"id": "h2", "act": "context", "narration": "Mười sáu năm sau, ông bị chê vì không mua. Cùng một cách nghĩ: vòng tròn năng lực.",
-   "visual": {"type": "shots", "shots": [
-    {"type": "icon", "icon": "bubble", "kicker": "1999 · cơn sốt internet", "line": "Bị chê vì không mua", "line_cue": "bị chê", "action": "phồng lên"},
-    {"type": "icon", "concept": "vung_sang", "kicker": "Cùng một cách nghĩ", "cue": "cùng một", "line": "Vòng tròn năng lực", "line_cue": "vòng tròn", "action": "tỏa sáng"}
-   ]}, "sources": ["barrons1999"]},
-  {"id": "t0", "act": "context", "narration": "", "visual": {"type": "title", "kicker": "Khung tư duy · Tập 4", "title": "Vòng tròn năng lực", "subtitle": "Circle of competence", "hold": 3.0}, "sfx": [{"kind": "whoosh", "at": 0.0, "gain_db": -12}]},
-  {"id": "b01", "act": "misconception", "narration": "Ta hay nghĩ: người giỏi là người biết nhiều, cơ hội nào cũng phải chộp. Thấy người khác thắng mà mình đứng ngoài, là thua. Thế là ta lao vào cả những chỗ mình chưa hiểu.",
-   "visual": {"type": "shots", "shots": [
-    {"type": "icon", "icon": "brain", "kicker": "Điều ta hay nghĩ", "line": "Giỏi là biết nhiều", "line_cue": "người giỏi", "action": "phát sáng"},
-    {"type": "icon", "icon": "people", "kicker": "Người khác đang thắng", "cue": "thấy người", "line": "Đứng ngoài là thua?", "line_cue": "là thua", "action": "chen lên"},
-    {"type": "icon", "concept": "doan_mo", "kicker": "Thế là", "cue": "thế là", "line": "Lao vào chỗ chưa hiểu", "line_cue": "lao vào", "action": "lăn"}
-   ]}},
-  {"id": "b02", "act": "context", "narration": "Hình dung bạn cầm một ngọn đèn đi trong đêm. Trong vòng sáng, bạn thấy rõ từng bậc đá. Ngoài vòng sáng, chỉ còn đoán. Muốn đi an toàn, đèn không cần to; cần biết ánh sáng tắt ở đâu.",
-   "visual": {"type": "shots", "shots": [
-    {"type": "icon", "concept": "vung_sang", "kicker": "Một ngọn đèn trong đêm", "line": "Trong vòng sáng: thấy rõ", "line_cue": "trong vòng", "action": "chiếu sáng"},
-    {"type": "icon", "concept": "doan_mo", "kicker": "Ra khỏi vòng sáng", "cue": "ngoài vòng", "line": "Chỉ còn đoán", "line_cue": "chỉ còn", "action": "lăn"},
-    {"type": "trio", "kicker": "Đèn không cần to", "cue": "muốn đi", "action": "đặt cạnh", "items": [{"concept": "vung_sang", "label": "Thấy rõ"}, {"concept": "doan_mo", "label": "Đoán", "cue": "cần biết"}], "line": "Biết ánh sáng tắt ở đâu", "line_cue": "ánh sáng"}
-   ]}},
-  {"id": "b03", "act": "context", "narration": "Câu chuyện thứ nhất ở Omaha, Nebraska. Rose Blumkin, người ta gọi là Mrs B, là người nhập cư từ Nga. Theo tiểu sử bà và lời Buffett, năm một nghìn chín trăm ba mươi bảy, bà mở cửa hàng nội thất với khoảng năm trăm đô vay của anh trai.",
-   "visual": {"type": "shots", "shots": [
-    {"type": "portrait", "name": "Rose Blumkin · Mrs B", "initials": "RB", "role": "Người lập Nebraska Furniture Mart", "years": "Sinh năm 1893", "action": "khắc"},
-    {"type": "icon", "icon": "ship", "kicker": "Từ Nga sang Mỹ", "cue": "là người", "line": "Người nhập cư", "line_cue": "nhập cư", "action": "cập bến"},
-    {"type": "icon", "icon": "store", "kicker": "Omaha · 1937", "cue": "theo tiểu", "line": "Mở cửa hàng nội thất", "line_cue": "bà mở", "action": "mở cửa"},
-    {"type": "icon", "icon": "coin", "motion": "spin", "turns": 1.5, "kicker": "Vốn ban đầu", "cue": "với khoảng", "line": "500 $ vay anh trai", "line_cue": "năm trăm", "action": "lật"}
-   ]}, "sources": ["blumkin", "brk1983"], "certainty": "attributed"},
-  {"id": "b04", "act": "story", "narration": "Phương châm được cho là của bà: bán rẻ, và nói thật. Cửa hàng lớn dần. Buffett viết rằng ông thà vật nhau với gấu xám, còn hơn phải cạnh tranh với bà và con cháu bà.",
-   "visual": {"type": "shots", "shots": [
-    {"type": "icon", "icon": "scale", "kicker": "Phương châm, được cho là của bà", "line": "Bán rẻ, nói thật", "line_cue": "bán rẻ", "action": "cân"},
-    {"type": "icon", "icon": "house", "kicker": "Omaha, Nebraska", "cue": "cửa hàng", "line": "Cửa hàng lớn dần", "line_cue": "lớn dần", "action": "dựng lên"},
-    {"type": "quote", "text": "Thà vật nhau với gấu xám còn hơn cạnh tranh với Mrs B.", "by": "Warren Buffett, thư cổ đông 1983 (lược dịch)", "cue": "buffett viết", "action": "hiện chữ"}
-   ]}, "sources": ["brk1983", "blumkin"], "certainty": "attributed"},
-  {"id": "b05", "act": "story", "narration": "Năm một nghìn chín trăm tám mươi ba, bà đã tám mươi chín tuổi. Theo lời kể của Buffett, ông đến gặp bà với một bản đề nghị dài chỉ khoảng một trang giấy. Hai người bắt tay.",
-   "visual": {"type": "shots", "shots": [
-    {"type": "icon", "icon": "hourglass", "kicker": "1983", "line": "Mrs B · 89 tuổi", "line_cue": "tám mươi", "action": "chảy"},
-    {"type": "icon", "icon": "letter", "kicker": "Theo lời Buffett · thư 2013", "cue": "theo lời", "line": "Bản đề nghị hơn một trang", "line_cue": "bản đề", "action": "mở thư"},
-    {"type": "icon", "icon": "people", "color": "a", "kicker": "Rồi", "cue": "hai người", "line": "Một cái bắt tay", "line_cue": "bắt tay", "action": "bắt tay"}
-   ]}, "sources": ["brk2013", "blumkin"], "certainty": "attributed"},
-  {"id": "b06", "act": "story", "narration": "Buffett kể: không kiểm toán, không kiểm kho, không xem lại công nợ hay giấy tờ nhà đất. Berkshire viết một tấm séc khoảng năm mươi lăm triệu đô cho phần lớn cửa hàng. Đổi lại, bà đưa ông lời hứa.",
-   "visual": {"type": "shots", "shots": [
-    {"type": "trio", "cross": true, "kicker": "Theo thư Buffett, 1984", "action": "gạch bỏ", "items": [{"icon": "checklist", "label": "Kiểm toán"}, {"icon": "store", "label": "Kiểm kho", "cue": "không kiểm kho"}, {"icon": "letter", "label": "Giấy tờ", "cue": "giấy tờ"}]},
-    {"type": "stat", "value": 55, "from": 55, "suffix": " triệu $", "color": "a", "label": "cho phần lớn cửa hàng", "note": "theo thư Buffett · nguồn khác ghi 60", "cue": "berkshire viết", "action": "hiện số"},
-    {"type": "icon", "icon": "key", "kicker": "Đổi lại", "cue": "đổi lại", "line": "Lời hứa của bà", "line_cue": "lời hứa", "action": "trao"}
-   ]}, "sources": ["brk1984", "brk1983"], "certainty": "attributed"},
-  {"id": "b07", "act": "story", "narration": "Nghe như liều? Nhưng Buffett sống ở Omaha, đã thấy cửa hàng ấy nhiều năm, và hiểu một cửa hàng nội thất kiếm tiền thế nào. Với ông, đây là chỗ sáng nhất dưới ngọn đèn.",
-   "visual": {"type": "shots", "shots": [
-    {"type": "icon", "concept": "doan_mo", "kicker": "Nghe như", "line": "Liều?", "action": "lắc", "motion": "shake", "motion_cue": "liều"},
-    {"type": "icon", "icon": "eye", "kicker": "Omaha · nhiều năm", "cue": "nhưng buffett", "line": "Hiểu cửa hàng kiếm tiền ra sao", "line_cue": "và hiểu", "action": "nhìn rõ"},
-    {"type": "icon", "concept": "vung_sang", "kicker": "Với Buffett", "cue": "với ông", "line": "Chỗ sáng nhất", "line_cue": "chỗ sáng", "action": "tỏa sáng"}
-   ]}, "sources": ["brk1983", "brk2013"]},
-  {"id": "b08", "act": "context", "narration": "Năm một nghìn chín trăm chín mươi sáu, ông viết cho cổ đông: vòng tròn to hay nhỏ không quan trọng lắm; biết ranh giới của nó mới là sống còn.",
-   "visual": {"type": "shots", "shots": [
-    {"type": "icon", "concept": "vung_sang", "kicker": "Thư cổ đông · 1996", "line": "To hay nhỏ: không quan trọng lắm", "line_cue": "vòng tròn", "action": "nở ra"},
-    {"type": "quote", "text": "Biết ranh giới của nó mới là sống còn.", "by": "Warren Buffett, thư cổ đông 1996 (lược dịch)", "cue": "biết ranh", "action": "hiện chữ"}
-   ]}, "sources": ["brk1996"]},
-  {"id": "b09", "act": "story", "narration": "Câu chuyện thứ hai. Cuối những năm chín mươi, ai cũng đổ tiền vào cổ phiếu internet. Buffett đứng ngoài. Ông viết: ông không biết công ty công nghệ nào giữ được lợi thế lâu dài, và học thêm cũng không giải được.",
-   "visual": {"type": "shots", "shots": [
-    {"type": "icon", "icon": "bubble", "motion": "grow", "kicker": "Cuối thập niên 1990", "line": "Cơn sốt internet", "line_cue": "ai cũng", "action": "phồng lên"},
-    {"type": "icon", "icon": "bench", "kicker": "Buffett", "cue": "buffett đứng", "line": "Đứng ngoài", "line_cue": "đứng ngoài", "action": "ngồi xuống"},
-    {"type": "icon", "concept": "doan_mo", "kicker": "Thư cổ đông 1999 (lược dịch)", "cue": "ông viết", "line": "Ai giữ lợi thế lâu dài?", "line_cue": "lợi thế", "action": "lăn"}
-   ]}, "sources": ["brk1999"]},
-  {"id": "b10", "act": "story", "narration": "Cuối năm một nghìn chín trăm chín mươi chín, tạp chí Barron's hỏi trên trang bìa: What's wrong, Warren? Năm ấy, cổ phiếu Berkshire giảm khoảng hai mươi ba phần trăm, trong khi thị trường chung tăng.",
-   "visual": {"type": "shots", "shots": [
-    {"type": "icon", "icon": "magnifier", "kicker": "Barron's · 27/12/1999", "line": "What's wrong, Warren?", "line_cue": "what's", "action": "soi"},
-    {"type": "stat", "value": 23, "from": 0, "prefix": "−", "suffix": "%", "color": "b", "label": "cổ phiếu Berkshire hạng A · 1999", "note": "S&P 500 cùng năm: ~+20%", "cue": "năm ấy", "action": "đếm xuống"}
-   ]}, "sources": ["barrons1999"]},
-  {"id": "b11", "act": "story", "narration": "Rồi bong bóng vỡ. Từ đỉnh tháng ba năm hai nghìn tới đáy tháng mười năm hai nghìn lẻ hai, chỉ số Nasdaq mất khoảng bảy mươi tám phần trăm. Đây là lịch sử, không phải lời hứa cho lần sau.",
-   "visual": {"type": "shots", "shots": [
-    {"type": "icon", "icon": "bubble", "motion": "crack", "motion_cue": "vỡ", "kicker": "Tháng 3/2000", "line": "Bong bóng vỡ", "line_cue": "bong bóng", "action": "vỡ"},
-    {"type": "stat", "value": 78, "from": 0, "prefix": "−", "suffix": "%", "color": "b", "label": "Nasdaq Composite · 3/2000 → 10/2002", "note": "giá đóng cửa · chưa tính cổ tức", "cue": "từ đỉnh", "action": "đếm xuống"},
-    {"type": "icon", "icon": "hourglass", "kicker": "Đây là lịch sử", "cue": "đây là", "line": "Không phải lời hứa", "line_cue": "không phải", "action": "lật"}
-   ]}, "sources": ["nasdaq"]},
-  {"id": "b12", "act": "principle", "narration": "Từ hai câu chuyện ấy, có ba nguyên tắc. Thứ nhất: vẽ đường biên. Hỏi thật lòng: mình có giải thích được thứ này kiếm tiền thế nào, và điều gì làm nó hỏng không? Chỗ nào không trả lời được, đó là nơi đèn tắt.",
-   "visual": {"type": "board", "board_id": "ba-nguyen-tac", "kicker": "Ba nguyên tắc", "focus": [0], "action": "lướt tới", "start": "overview", "regions": [
-    {"concept": "vung_sang", "label": "Vẽ đường biên", "note": "Mình hiểu tới đâu?", "cue": "thứ nhất", "note_cue": "hỏi thật"},
-    {"icon": "target", "label": "Trong vùng sáng", "note": "Hiểu rõ, dám quyết", "cue": "thứ hai", "note_cue": "dám quyết"},
-    {"icon": "bench", "label": "Ngoài vùng sáng", "note": "Dám đứng yên", "cue": "thứ ba", "note_cue": "dám đứng"}
-   ]}, "sources": ["brk1996"]},
-  {"id": "b13", "act": "principle", "narration": "Thứ hai: trong vùng sáng, dám quyết. Buffett không cần kiểm toán, vì ông hiểu cửa hàng ấy. Biết rõ ranh giới, bạn mới dám làm lớn ở bên trong.",
-   "visual": {"type": "board", "board_id": "ba-nguyen-tac", "kicker": "Ba nguyên tắc", "focus": [1], "action": "lướt sang"}, "sources": ["brk1984"]},
-  {"id": "b14", "act": "example", "narration": "Thử với một quán cà phê nhỏ, số minh họa thôi. Chủ quán định bán mười món, nhưng chỉ ba món chị thật sự hiểu. Bảy món còn lại chạy theo trào lưu. Sau khi vẽ đường biên: năm món, bốn món chị hiểu rõ, chỉ một món để thử.",
-   "visual": {"type": "scenario", "kicker": "Số minh họa", "heading": "Thực đơn một quán nhỏ", "action": "kéo", "before_label": "Chạy theo trào lưu", "after_label": "Sau khi vẽ đường biên", "cue": "sau khi", "suffix": " món", "bars": [
-    {"label": "Cả thực đơn", "before": 10, "after": 5, "color": "#CFC6B8"},
-    {"label": "Món chị hiểu rõ", "before": 3, "after": 4, "concept": "vung_sang", "cue": "ba món"},
-    {"label": "Món theo trào lưu", "before": 7, "after": 1, "concept": "doan_mo", "cue": "bảy món"}
-   ], "takeaway": "Ít món hơn, nhưng sáng hơn.", "takeaway_cue": "chỉ một"}, "sources": ["minhhoa"], "certainty": "estimate"},
-  {"id": "b15", "act": "principle", "narration": "Thứ ba: ngoài vùng sáng, dám đứng yên, kể cả khi bị cười. Năm một nghìn chín trăm chín mươi chín, đứng ngoài trông như lỗi thời. Chưa hiểu thì chưa vào: đó cũng là một quyết định.",
-   "visual": {"type": "board", "board_id": "ba-nguyen-tac", "kicker": "Ba nguyên tắc", "focus": [2], "action": "lướt xuống"}, "sources": ["brk1999", "barrons1999"]},
-  {"id": "b16", "act": "complication", "narration": "Nhưng hình ảnh ngọn đèn cũng có chỗ dừng. Vòng sáng của đèn thật thì cố định; vòng tròn năng lực thì nới ra được, chậm, bằng học. Năm hai nghìn mười sáu, Berkshire bắt đầu mua Apple, một công ty mà Buffett được cho là nhìn như hàng tiêu dùng.",
-   "visual": {"type": "shots", "shots": [
-    {"type": "icon", "concept": "vung_sang", "kicker": "Ẩn dụ dừng ở đâu?", "line": "Đèn thật: vòng sáng cố định", "line_cue": "vòng sáng", "action": "đứng yên"},
-    {"type": "icon", "icon": "sprout", "motion": "grow", "kicker": "Vòng tròn năng lực", "cue": "vòng tròn", "line": "Nới ra, chậm, bằng học", "line_cue": "nới ra", "action": "nảy mầm"},
-    {"type": "icon", "icon": "book", "kicker": "2016 · Berkshire mua Apple", "cue": "năm hai", "line": "Nhìn như hàng tiêu dùng", "line_cue": "nhìn như", "action": "lật trang"}
-   ]}, "sources": ["apple2016"], "certainty": "attributed"},
-  {"id": "b17", "act": "complication", "narration": "Và đứng ngoài cũng có giá: ông bỏ lỡ cả những công ty công nghệ về sau rất thành công. Ở trong vùng sáng không bảo đảm thắng; nó chỉ giúp bạn biết mình đang hiểu, hay đang đoán.",
-   "visual": {"type": "shots", "shots": [
-    {"type": "icon", "icon": "door", "kicker": "Đứng ngoài cũng có giá", "line": "Bỏ lỡ cả công ty tốt", "line_cue": "bỏ lỡ", "action": "khép lại"},
-    {"type": "trio", "kicker": "Không bảo đảm thắng", "cue": "ở trong", "action": "đặt cạnh", "items": [{"concept": "vung_sang", "label": "Đang hiểu", "cue": "đang hiểu"}, {"concept": "doan_mo", "label": "Đang đoán", "cue": "hay đang"}], "line": "Mình đang ở phía nào?", "line_cue": "biết mình"}
-   ]}, "sources": ["brk1999"]},
-  {"id": "b18", "act": "question", "narration": "Giờ thử một chút nhé. Một người bạn rủ bạn góp năm mươi triệu mở quán trà sữa. Bạn chưa từng làm đồ uống. Câu hỏi đầu tiên nên hỏi là gì?",
-   "visual": {"type": "question", "question": "Góp 50 triệu mở quán trà sữa. Hỏi gì trước?", "choices": ["Trà sữa đang hot không?", "Mình hiểu gì, chỗ nào chưa biết?", "Ai cũng góp, mình có lỡ không?"], "answer": "B — vẽ đường biên trước, rồi mới quyết.", "think_seconds": 5}, "sources": ["minhhoa"], "certainty": "estimate"},
-  {"id": "b19", "act": "recap", "narration": "Đáp án là B: chưa hiểu thì học trước, hoặc chưa vào. Vậy là ba nguyên tắc. Vẽ đường biên. Trong vùng sáng, dám quyết. Và ngoài vùng sáng, dám đứng yên.",
-   "visual": {"type": "board", "board_id": "ba-nguyen-tac", "kicker": "Ba nguyên tắc", "action": "lùi xa", "focus": [{"region": 0, "cue": "chưa hiểu"}], "overview": true, "overview_cue": "vậy là", "line": "Đèn mình chiếu tới đâu?", "line_cue": "và ngoài"}},
-  {"id": "b20", "act": "close", "narration": "Một cái bắt tay không kiểm toán, và một lần đứng ngoài bị cười. Cùng một ngọn đèn. Lần tới, trước một cơ hội ai cũng lao vào, hãy hỏi: chỗ này, đèn của mình có chiếu tới không?",
-   "visual": {"type": "shots", "shots": [
-    {"type": "icon", "icon": "people", "kicker": "Omaha · 1983", "line": "Một cái bắt tay", "action": "bắt tay"},
-    {"type": "icon", "icon": "bench", "kicker": "1999", "cue": "và một", "line": "Một lần đứng ngoài", "line_cue": "đứng ngoài", "action": "ngồi yên"},
-    {"type": "icon", "concept": "vung_sang", "kicker": "Lần tới, hãy hỏi", "cue": "lần tới", "line": "Đèn mình có chiếu tới không?", "line_cue": "hãy hỏi", "action": "tỏa sáng"}
-   ]}, "sources": ["brk1984", "barrons1999"]},
-  {"id": "b21", "act": "close", "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
-   "visual": {"type": "end", "kicker": "Khung tư duy · Tập 4", "title": "Vòng tròn năng lực", "ask": "Bạn muốn tập sau về khung tư duy nào?", "ask_hint": "Biên an toàn · chi phí cơ hội · tối thiểu hóa hối tiếc", "ask_cue": "hay chủ", "sources_line": "Nguồn: thư cổ đông Berkshire 1983–2013 · Barron's (1999) · Nasdaq · xem mô tả", "disclaimer": "Nội dung giáo dục; câu chuyện kể lại từ nguồn công khai; không phải lời khuyên đầu tư.", "sources_cue": "còn bạn"}}
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Warren Buffett mua một công ty năm mươi lăm triệu đô, chỉ bắt tay, không cần kiểm toán.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "store",
+      "kicker": "Omaha · 1983",
+      "line": "55 triệu $ một công ty",
+      "line_cue": "năm mươi",
+      "action": "mở cửa"
+     },
+     {
+      "type": "trio",
+      "cross": true,
+      "kicker": "Theo lời Buffett",
+      "cue": "không cần",
+      "action": "gạch bỏ",
+      "items": [
+       {
+        "icon": "checklist",
+        "label": "Kiểm toán"
+       }
+      ]
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "không cần",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "brk1984",
+    "brk2013"
+   ]
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Mười sáu năm sau, ông bị chê vì không mua. Cùng một cách nghĩ: vòng tròn năng lực.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "bubble",
+      "kicker": "1999 · cơn sốt internet",
+      "line": "Bị chê vì không mua",
+      "line_cue": "bị chê",
+      "action": "phồng lên"
+     },
+     {
+      "type": "icon",
+      "concept": "vung_sang",
+      "kicker": "Cùng một cách nghĩ",
+      "cue": "cùng một",
+      "line": "Vòng tròn năng lực",
+      "line_cue": "vòng tròn",
+      "action": "tỏa sáng"
+     }
+    ]
+   },
+   "sources": [
+    "barrons1999"
+   ]
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Khung tư duy · Tập 4",
+    "title": "Vòng tròn năng lực",
+    "subtitle": "Circle of competence",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Ta hay nghĩ: người giỏi là người biết nhiều, cơ hội nào cũng phải chộp. Thấy người khác thắng mà mình đứng ngoài, là thua. Thế là ta lao vào cả những chỗ mình chưa hiểu.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "brain",
+      "kicker": "Điều ta hay nghĩ",
+      "line": "Giỏi là biết nhiều",
+      "line_cue": "người giỏi",
+      "action": "phát sáng"
+     },
+     {
+      "type": "icon",
+      "icon": "people",
+      "kicker": "Người khác đang thắng",
+      "cue": "thấy người",
+      "line": "Đứng ngoài là thua?",
+      "line_cue": "là thua",
+      "action": "chen lên"
+     },
+     {
+      "type": "icon",
+      "concept": "doan_mo",
+      "kicker": "Thế là",
+      "cue": "thế là",
+      "line": "Lao vào chỗ chưa hiểu",
+      "line_cue": "lao vào",
+      "action": "lăn"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "Hình dung bạn cầm một ngọn đèn đi trong đêm. Trong vòng sáng, bạn thấy rõ từng bậc đá. Ngoài vòng sáng, chỉ còn đoán. Muốn đi an toàn, đèn không cần to; cần biết ánh sáng tắt ở đâu.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "vung_sang",
+      "kicker": "Một ngọn đèn trong đêm",
+      "line": "Trong vòng sáng: thấy rõ",
+      "line_cue": "trong vòng",
+      "action": "chiếu sáng"
+     },
+     {
+      "type": "icon",
+      "concept": "doan_mo",
+      "kicker": "Ra khỏi vòng sáng",
+      "cue": "ngoài vòng",
+      "line": "Chỉ còn đoán",
+      "line_cue": "chỉ còn",
+      "action": "lăn"
+     },
+     {
+      "type": "trio",
+      "kicker": "Đèn không cần to",
+      "cue": "muốn đi",
+      "action": "đặt cạnh",
+      "items": [
+       {
+        "concept": "vung_sang",
+        "label": "Thấy rõ"
+       },
+       {
+        "concept": "doan_mo",
+        "label": "Đoán",
+        "cue": "cần biết"
+       }
+      ],
+      "line": "Biết ánh sáng tắt ở đâu",
+      "line_cue": "ánh sáng"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b03",
+   "act": "context",
+   "narration": "Câu chuyện thứ nhất ở Omaha, Nebraska. Rose Blumkin, người ta gọi là Mrs B, là người nhập cư từ Nga. Theo tiểu sử bà và lời Buffett, năm một nghìn chín trăm ba mươi bảy, bà mở cửa hàng nội thất với khoảng năm trăm đô vay của anh trai.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Rose Blumkin · Mrs B",
+      "initials": "RB",
+      "role": "Người lập Nebraska Furniture Mart",
+      "years": "Sinh năm 1893",
+      "action": "khắc"
+     },
+     {
+      "type": "icon",
+      "icon": "ship",
+      "kicker": "Từ Nga sang Mỹ",
+      "cue": "là người",
+      "line": "Người nhập cư",
+      "line_cue": "nhập cư",
+      "action": "cập bến"
+     },
+     {
+      "type": "icon",
+      "icon": "store",
+      "kicker": "Omaha · 1937",
+      "cue": "theo tiểu",
+      "line": "Mở cửa hàng nội thất",
+      "line_cue": "bà mở",
+      "action": "mở cửa"
+     },
+     {
+      "type": "icon",
+      "icon": "coin",
+      "motion": "spin",
+      "turns": 1.5,
+      "kicker": "Vốn ban đầu",
+      "cue": "với khoảng",
+      "line": "500 $ vay anh trai",
+      "line_cue": "năm trăm",
+      "action": "lật"
+     }
+    ]
+   },
+   "sources": [
+    "blumkin",
+    "brk1983"
+   ],
+   "certainty": "attributed"
+  },
+  {
+   "id": "b04",
+   "act": "story",
+   "narration": "Phương châm được cho là của bà: bán rẻ, và nói thật. Cửa hàng lớn dần. Buffett viết rằng ông thà vật nhau với gấu xám, còn hơn phải cạnh tranh với bà và con cháu bà.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "scale",
+      "kicker": "Phương châm, được cho là của bà",
+      "line": "Bán rẻ, nói thật",
+      "line_cue": "bán rẻ",
+      "action": "cân"
+     },
+     {
+      "type": "icon",
+      "icon": "house",
+      "kicker": "Omaha, Nebraska",
+      "cue": "cửa hàng",
+      "line": "Cửa hàng lớn dần",
+      "line_cue": "lớn dần",
+      "action": "dựng lên"
+     },
+     {
+      "type": "quote",
+      "text": "Thà vật nhau với gấu xám còn hơn cạnh tranh với Mrs B.",
+      "by": "Warren Buffett, thư cổ đông 1983 (lược dịch)",
+      "cue": "buffett viết",
+      "action": "hiện chữ"
+     }
+    ]
+   },
+   "sources": [
+    "brk1983",
+    "blumkin"
+   ],
+   "certainty": "attributed"
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Năm một nghìn chín trăm tám mươi ba, bà đã tám mươi chín tuổi. Theo lời kể của Buffett, ông đến gặp bà với một bản đề nghị dài chỉ khoảng một trang giấy. Hai người bắt tay.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "hourglass",
+      "kicker": "1983",
+      "line": "Mrs B · 89 tuổi",
+      "line_cue": "tám mươi",
+      "action": "chảy"
+     },
+     {
+      "type": "icon",
+      "icon": "letter",
+      "kicker": "Theo lời Buffett · thư 2013",
+      "cue": "theo lời",
+      "line": "Bản đề nghị hơn một trang",
+      "line_cue": "bản đề",
+      "action": "mở thư"
+     },
+     {
+      "type": "icon",
+      "icon": "people",
+      "color": "a",
+      "kicker": "Rồi",
+      "cue": "hai người",
+      "line": "Một cái bắt tay",
+      "line_cue": "bắt tay",
+      "action": "bắt tay"
+     }
+    ]
+   },
+   "sources": [
+    "brk2013",
+    "blumkin"
+   ],
+   "certainty": "attributed"
+  },
+  {
+   "id": "b06",
+   "act": "story",
+   "narration": "Buffett kể: không kiểm toán, không kiểm kho, không xem lại công nợ hay giấy tờ nhà đất. Berkshire viết một tấm séc khoảng năm mươi lăm triệu đô cho phần lớn cửa hàng. Đổi lại, bà đưa ông lời hứa.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "cross": true,
+      "kicker": "Theo thư Buffett, 1984",
+      "action": "gạch bỏ",
+      "items": [
+       {
+        "icon": "checklist",
+        "label": "Kiểm toán"
+       },
+       {
+        "icon": "store",
+        "label": "Kiểm kho",
+        "cue": "không kiểm kho"
+       },
+       {
+        "icon": "letter",
+        "label": "Giấy tờ",
+        "cue": "giấy tờ"
+       }
+      ]
+     },
+     {
+      "type": "stat",
+      "value": 55,
+      "from": 55,
+      "suffix": " triệu $",
+      "color": "a",
+      "label": "cho phần lớn cửa hàng",
+      "note": "theo thư Buffett · nguồn khác ghi 60",
+      "cue": "berkshire viết",
+      "action": "hiện số"
+     },
+     {
+      "type": "icon",
+      "icon": "key",
+      "kicker": "Đổi lại",
+      "cue": "đổi lại",
+      "line": "Lời hứa của bà",
+      "line_cue": "lời hứa",
+      "action": "trao"
+     }
+    ]
+   },
+   "sources": [
+    "brk1984",
+    "brk1983"
+   ],
+   "certainty": "attributed"
+  },
+  {
+   "id": "b07",
+   "act": "story",
+   "narration": "Nghe như liều? Nhưng Buffett sống ở Omaha, đã thấy cửa hàng ấy nhiều năm, và hiểu một cửa hàng nội thất kiếm tiền thế nào. Với ông, đây là chỗ sáng nhất dưới ngọn đèn.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "doan_mo",
+      "kicker": "Nghe như",
+      "line": "Liều?",
+      "action": "lắc",
+      "motion": "shake",
+      "motion_cue": "liều"
+     },
+     {
+      "type": "icon",
+      "icon": "eye",
+      "kicker": "Omaha · nhiều năm",
+      "cue": "nhưng buffett",
+      "line": "Hiểu cửa hàng kiếm tiền ra sao",
+      "line_cue": "và hiểu",
+      "action": "nhìn rõ"
+     },
+     {
+      "type": "icon",
+      "concept": "vung_sang",
+      "kicker": "Với Buffett",
+      "cue": "với ông",
+      "line": "Chỗ sáng nhất",
+      "line_cue": "chỗ sáng",
+      "action": "tỏa sáng"
+     }
+    ]
+   },
+   "sources": [
+    "brk1983",
+    "brk2013"
+   ]
+  },
+  {
+   "id": "b08",
+   "act": "context",
+   "narration": "Năm một nghìn chín trăm chín mươi sáu, ông viết cho cổ đông: vòng tròn to hay nhỏ không quan trọng lắm; biết ranh giới của nó mới là sống còn.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "vung_sang",
+      "kicker": "Thư cổ đông · 1996",
+      "line": "To hay nhỏ: không quan trọng lắm",
+      "line_cue": "vòng tròn",
+      "action": "nở ra"
+     },
+     {
+      "type": "quote",
+      "text": "Biết ranh giới của nó mới là sống còn.",
+      "by": "Warren Buffett, thư cổ đông 1996 (lược dịch)",
+      "cue": "biết ranh",
+      "action": "hiện chữ"
+     }
+    ]
+   },
+   "sources": [
+    "brk1996"
+   ]
+  },
+  {
+   "id": "b09",
+   "act": "story",
+   "narration": "Câu chuyện thứ hai. Cuối những năm chín mươi, ai cũng đổ tiền vào cổ phiếu internet. Buffett đứng ngoài. Ông viết: ông không biết công ty công nghệ nào giữ được lợi thế lâu dài, và học thêm cũng không giải được.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "bubble",
+      "motion": "grow",
+      "kicker": "Cuối thập niên 1990",
+      "line": "Cơn sốt internet",
+      "line_cue": "ai cũng",
+      "action": "phồng lên"
+     },
+     {
+      "type": "icon",
+      "icon": "bench",
+      "kicker": "Buffett",
+      "cue": "buffett đứng",
+      "line": "Đứng ngoài",
+      "line_cue": "đứng ngoài",
+      "action": "ngồi xuống"
+     },
+     {
+      "type": "icon",
+      "concept": "doan_mo",
+      "kicker": "Thư cổ đông 1999 (lược dịch)",
+      "cue": "ông viết",
+      "line": "Ai giữ lợi thế lâu dài?",
+      "line_cue": "lợi thế",
+      "action": "lăn"
+     }
+    ]
+   },
+   "sources": [
+    "brk1999"
+   ]
+  },
+  {
+   "id": "b10",
+   "act": "story",
+   "narration": "Cuối năm một nghìn chín trăm chín mươi chín, tạp chí Barron's hỏi trên trang bìa: What's wrong, Warren? Năm ấy, cổ phiếu Berkshire giảm khoảng hai mươi ba phần trăm, trong khi thị trường chung tăng.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Barron's · 27/12/1999",
+      "line": "What's wrong, Warren?",
+      "line_cue": "what's",
+      "action": "soi"
+     },
+     {
+      "type": "stat",
+      "value": 23,
+      "from": 0,
+      "prefix": "−",
+      "suffix": "%",
+      "color": "b",
+      "label": "cổ phiếu Berkshire hạng A · 1999",
+      "note": "S&P 500 cùng năm: ~+20%",
+      "cue": "năm ấy",
+      "action": "đếm xuống"
+     }
+    ]
+   },
+   "sources": [
+    "barrons1999"
+   ]
+  },
+  {
+   "id": "b11",
+   "act": "story",
+   "narration": "Rồi bong bóng vỡ. Từ đỉnh tháng ba năm hai nghìn tới đáy tháng mười năm hai nghìn lẻ hai, chỉ số Nasdaq mất khoảng bảy mươi tám phần trăm. Đây là lịch sử, không phải lời hứa cho lần sau.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "bubble",
+      "motion": "crack",
+      "motion_cue": "vỡ",
+      "kicker": "Tháng 3/2000",
+      "line": "Bong bóng vỡ",
+      "line_cue": "bong bóng",
+      "action": "vỡ"
+     },
+     {
+      "type": "stat",
+      "value": 78,
+      "from": 0,
+      "prefix": "−",
+      "suffix": "%",
+      "color": "b",
+      "label": "Nasdaq Composite · 3/2000 → 10/2002",
+      "note": "giá đóng cửa · chưa tính cổ tức",
+      "cue": "từ đỉnh",
+      "action": "đếm xuống"
+     },
+     {
+      "type": "icon",
+      "icon": "hourglass",
+      "kicker": "Đây là lịch sử",
+      "cue": "đây là",
+      "line": "Không phải lời hứa",
+      "line_cue": "không phải",
+      "action": "lật"
+     }
+    ]
+   },
+   "sources": [
+    "nasdaq"
+   ]
+  },
+  {
+   "id": "b12",
+   "act": "principle",
+   "narration": "Từ hai câu chuyện ấy, có ba nguyên tắc. Thứ nhất: vẽ đường biên. Hỏi thật lòng: mình có giải thích được thứ này kiếm tiền thế nào, và điều gì làm nó hỏng không? Chỗ nào không trả lời được, đó là nơi đèn tắt.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "focus": [
+     0
+    ],
+    "action": "lướt tới",
+    "start": "overview",
+    "regions": [
+     {
+      "concept": "vung_sang",
+      "label": "Vẽ đường biên",
+      "note": "Mình hiểu tới đâu?",
+      "cue": "thứ nhất",
+      "note_cue": "hỏi thật"
+     },
+     {
+      "icon": "target",
+      "label": "Trong vùng sáng",
+      "note": "Hiểu rõ, dám quyết",
+      "cue": "thứ hai",
+      "note_cue": "dám quyết"
+     },
+     {
+      "icon": "bench",
+      "label": "Ngoài vùng sáng",
+      "note": "Dám đứng yên",
+      "cue": "thứ ba",
+      "note_cue": "dám đứng"
+     }
+    ]
+   },
+   "sources": [
+    "brk1996"
+   ]
+  },
+  {
+   "id": "b13",
+   "act": "principle",
+   "narration": "Thứ hai: trong vùng sáng, dám quyết. Buffett không cần kiểm toán, vì ông hiểu cửa hàng ấy. Biết rõ ranh giới, bạn mới dám làm lớn ở bên trong.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "focus": [
+     1
+    ],
+    "action": "lướt sang"
+   },
+   "sources": [
+    "brk1984"
+   ]
+  },
+  {
+   "id": "b14",
+   "act": "example",
+   "narration": "Thử với một quán cà phê nhỏ, số minh họa thôi. Chủ quán định bán mười món, nhưng chỉ ba món chị thật sự hiểu. Bảy món còn lại chạy theo trào lưu. Sau khi vẽ đường biên: năm món, bốn món chị hiểu rõ, chỉ một món để thử.",
+   "visual": {
+    "type": "scenario",
+    "kicker": "Số minh họa",
+    "heading": "Thực đơn một quán nhỏ",
+    "action": "kéo",
+    "before_label": "Chạy theo trào lưu",
+    "after_label": "Sau khi vẽ đường biên",
+    "cue": "sau khi",
+    "suffix": " món",
+    "bars": [
+     {
+      "label": "Cả thực đơn",
+      "before": 10,
+      "after": 5,
+      "color": "#CFC6B8"
+     },
+     {
+      "label": "Món chị hiểu rõ",
+      "before": 3,
+      "after": 4,
+      "concept": "vung_sang",
+      "cue": "ba món"
+     },
+     {
+      "label": "Món theo trào lưu",
+      "before": 7,
+      "after": 1,
+      "concept": "doan_mo",
+      "cue": "bảy món"
+     }
+    ],
+    "takeaway": "Ít món hơn, nhưng sáng hơn.",
+    "takeaway_cue": "chỉ một"
+   },
+   "sources": [
+    "minhhoa"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b15",
+   "act": "principle",
+   "narration": "Thứ ba: ngoài vùng sáng, dám đứng yên, kể cả khi bị cười. Năm một nghìn chín trăm chín mươi chín, đứng ngoài trông như lỗi thời. Chưa hiểu thì chưa vào: đó cũng là một quyết định.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "focus": [
+     2
+    ],
+    "action": "lướt xuống"
+   },
+   "sources": [
+    "brk1999",
+    "barrons1999"
+   ],
+   "take": 1
+  },
+  {
+   "id": "b16",
+   "act": "complication",
+   "narration": "Nhưng hình ảnh ngọn đèn cũng có chỗ dừng. Vòng sáng của đèn thật thì cố định; vòng tròn năng lực thì nới ra được, chậm, bằng học. Năm hai nghìn mười sáu, Berkshire bắt đầu mua Apple, một công ty mà Buffett được cho là nhìn như hàng tiêu dùng.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "vung_sang",
+      "kicker": "Ẩn dụ dừng ở đâu?",
+      "line": "Đèn thật: vòng sáng cố định",
+      "line_cue": "vòng sáng",
+      "action": "đứng yên"
+     },
+     {
+      "type": "icon",
+      "icon": "sprout",
+      "motion": "grow",
+      "kicker": "Vòng tròn năng lực",
+      "cue": "vòng tròn",
+      "line": "Nới ra, chậm, bằng học",
+      "line_cue": "nới ra",
+      "action": "nảy mầm"
+     },
+     {
+      "type": "icon",
+      "icon": "book",
+      "kicker": "2016 · Berkshire mua Apple",
+      "cue": "năm hai",
+      "line": "Nhìn như hàng tiêu dùng",
+      "line_cue": "nhìn như",
+      "action": "lật trang"
+     }
+    ]
+   },
+   "sources": [
+    "apple2016"
+   ],
+   "certainty": "attributed"
+  },
+  {
+   "id": "b17",
+   "act": "complication",
+   "narration": "Và đứng ngoài cũng có giá: ông bỏ lỡ cả những công ty công nghệ về sau rất thành công. Ở trong vùng sáng không bảo đảm thắng; nó chỉ giúp bạn biết mình đang hiểu, hay đang đoán.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "door",
+      "kicker": "Đứng ngoài cũng có giá",
+      "line": "Bỏ lỡ cả công ty tốt",
+      "line_cue": "bỏ lỡ",
+      "action": "khép lại"
+     },
+     {
+      "type": "trio",
+      "kicker": "Không bảo đảm thắng",
+      "cue": "ở trong",
+      "action": "đặt cạnh",
+      "items": [
+       {
+        "concept": "vung_sang",
+        "label": "Đang hiểu",
+        "cue": "đang hiểu"
+       },
+       {
+        "concept": "doan_mo",
+        "label": "Đang đoán",
+        "cue": "hay đang"
+       }
+      ],
+      "line": "Mình đang ở phía nào?",
+      "line_cue": "biết mình"
+     }
+    ]
+   },
+   "sources": [
+    "brk1999"
+   ]
+  },
+  {
+   "id": "b18",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Một người bạn rủ bạn góp năm mươi triệu mở quán trà sữa. Bạn chưa từng làm đồ uống. Câu hỏi đầu tiên nên hỏi là gì?",
+   "visual": {
+    "type": "question",
+    "question": "Góp 50 triệu mở quán trà sữa. Hỏi gì trước?",
+    "choices": [
+     "Trà sữa đang hot không?",
+     "Mình hiểu gì, chỗ nào chưa biết?",
+     "Ai cũng góp, mình có lỡ không?"
+    ],
+    "answer": "B — vẽ đường biên trước, rồi mới quyết.",
+    "think_seconds": 5
+   },
+   "sources": [
+    "minhhoa"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b19",
+   "act": "recap",
+   "narration": "Đáp án là B: chưa hiểu thì học trước, hoặc chưa vào. Vậy là ba nguyên tắc. Vẽ đường biên. Trong vùng sáng, dám quyết. Và ngoài vùng sáng, dám đứng yên.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "action": "lùi xa",
+    "focus": [
+     {
+      "region": 0,
+      "cue": "chưa hiểu"
+     }
+    ],
+    "overview": true,
+    "overview_cue": "vậy là",
+    "line": "Đèn mình chiếu tới đâu?",
+    "line_cue": "và ngoài"
+   }
+  },
+  {
+   "id": "b20",
+   "act": "close",
+   "narration": "Một cái bắt tay không kiểm toán, và một lần đứng ngoài bị cười. Cùng một ngọn đèn. Lần tới, trước một cơ hội ai cũng lao vào, hãy hỏi: chỗ này, đèn của mình có chiếu tới không?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "people",
+      "kicker": "Omaha · 1983",
+      "line": "Một cái bắt tay",
+      "action": "bắt tay"
+     },
+     {
+      "type": "icon",
+      "icon": "bench",
+      "kicker": "1999",
+      "cue": "và một",
+      "line": "Một lần đứng ngoài",
+      "line_cue": "đứng ngoài",
+      "action": "ngồi yên"
+     },
+     {
+      "type": "icon",
+      "concept": "vung_sang",
+      "kicker": "Lần tới, hãy hỏi",
+      "cue": "lần tới",
+      "line": "Đèn mình có chiếu tới không?",
+      "line_cue": "hãy hỏi",
+      "action": "tỏa sáng"
+     }
+    ]
+   },
+   "sources": [
+    "brk1984",
+    "barrons1999"
+   ]
+  },
+  {
+   "id": "b21",
+   "act": "close",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
+   "visual": {
+    "type": "end",
+    "kicker": "Khung tư duy · Tập 4",
+    "title": "Vòng tròn năng lực",
+    "ask": "Bạn muốn tập sau về khung tư duy nào?",
+    "ask_hint": "Biên an toàn · chi phí cơ hội · tối thiểu hóa hối tiếc",
+    "ask_cue": "hay chủ",
+    "sources_line": "Nguồn: thư cổ đông Berkshire 1983–2013 · Barron's (1999) · Nasdaq · xem mô tả",
+    "disclaimer": "Nội dung giáo dục; câu chuyện kể lại từ nguồn công khai; không phải lời khuyên đầu tư.",
+    "sources_cue": "còn bạn"
+   }
+  }
  ],
  "pronounce": {}
 }
