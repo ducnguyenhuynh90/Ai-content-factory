@@ -1,5 +1,5 @@
 # Tối thiểu hóa hối tiếc
-_Khung tư duy · Tập 9 · 809 words · ~3.49 min · 4:3_
+_Khung tư duy · Tập 9 · 807 words · ~3.48 min · 4:3_
 
 ## Learning goals
 - Kể lại câu chuyện năm 1994: Jeff Bezos, 30 tuổi, phó chủ tịch cấp cao ở D. E. Shaw, đọc rằng lượng dùng web tăng khoảng 2.300% một năm (theo lời ông); sếp David Shaw đi bộ cùng ông khoảng hai tiếng ở Central Park và khuyên nghĩ thêm 48 tiếng; ông hình dung mình ở tuổi 80 nhìn lại (Academy of Achievement, 2001); lập công ty 7/1994 ở Bellevue, trang bán sách mở 7/1995; tự đánh giá cơ hội thành công khoảng 30%
@@ -20,11 +20,11 @@ _Khung tư duy · Tập 9 · 809 words · ~3.49 min · 4:3_
 | b01 | misconception | Ta hay quyết định lớn bằng một cái cân đặt ở hôm nay. Một bên là lương, tiền thưởng, sự ổn định. Bên kia là nỗi sợ thất bại. Cái cân ấy hay quên một người: chính mình, nhiều năm sau. | shots: shots |
 | b02 | context | Có một cách cân khác. Hình dung bạn ở tuổi tám mươi, cát trong đồng hồ gần cạn, nhìn lại cả đời mình. Từ chỗ ấy, nhiều thứ hôm nay rất nặng bỗng nhẹ đi, và vài thứ nhỏ lại nặng lên. | shots: shots |
 | b03 | context | Năm một nghìn chín trăm chín mươi tư, Jeff Bezos ba mươi tuổi, là phó chủ tịch cấp cao ở D. E. Shaw, một công ty đầu tư ở New York. Bezos là người gây nhiều tranh cãi; ở đây mình chỉ kể một quyết định năm ấy. | shots: shots |
-| b04 | story | Mùa xuân năm ấy, theo lời ông, ông đọc được rằng lượng dùng web tăng khoảng hai nghìn ba trăm phần trăm một năm. Ông nghĩ tới một hiệu sách trên mạng. _(attributed)_ | shots: shots |
+| b04 | story | Mùa xuân năm ấy, theo lời ông, ông đọc được một ước tính: lượng dùng web mỗi năm tăng gấp hơn hai mươi lần. Ông nghĩ tới một hiệu sách trên mạng. _(attributed)_ | shots: shots |
 | b05 | story | Ông nói với sếp, David Shaw. Theo Bezos kể, hai người đi bộ khoảng hai tiếng trong Central Park. Shaw bảo: ý tưởng hay, nhưng hợp hơn với người chưa có việc tốt. Rồi khuyên ông nghĩ thêm bốn mươi tám tiếng. _(attributed)_ | shots: shots |
 | b06 | story | Trong hai ngày ấy, ông dùng một cách nghĩ mà sau này ông gọi là khung tối thiểu hóa hối tiếc. Ông hình dung mình ở tuổi tám mươi, nhìn lại đời mình, và muốn có ít điều hối tiếc nhất. | shots: shots |
 | b07 | turn | Từ chỗ ấy nhìn lại, câu trả lời rõ ra. Thất bại, ông sẽ không tiếc. Điều ông có thể tiếc là chưa từng thử. Còn tiền thưởng cuối năm, mất vì nghỉ giữa chừng? Ở tuổi tám mươi, nó chẳng còn đáng kể. | shots: shots |
-| b08 | story | Năm ấy, ông rời D. E. Shaw. Tháng bảy, ông lập công ty trong gara một căn nhà thuê ở Bellevue, gần Seattle. Tháng bảy năm sau, trang bán sách mở cửa. | timeline: Từ phố Wall tới một gara |
+| b08 | story | Năm ấy, ông nghỉ việc. Tháng bảy, ông lập công ty trong gara một căn nhà thuê ở Bellevue, gần Seattle. Tháng bảy năm sau, trang bán sách mở cửa. | timeline: Từ phố Wall tới một gara |
 | b09 | complication | Nhưng đừng kể thiếu. Chính Bezos nói ông nghĩ cơ hội thành công chỉ khoảng ba mươi phần trăm. Năm một nghìn chín trăm chín mươi lăm, bố mẹ ông góp gần hai trăm năm mươi nghìn đô, và được báo trước: rất có thể mất trắng. _(attributed)_ | shots: shots |
 | b10 | principle | Từ câu chuyện ấy, có ba nguyên tắc. Thứ nhất: đứng ở tuổi tám mươi. Trước một ngã rẽ lớn, hãy hỏi: nhìn lại từ cuối đời, mình sẽ tiếc điều gì? | board: board |
 | b11 | principle | Thứ hai: tách hai loại tiếc. Tiếc vì chưa thử, hay tiếc vì đã làm? Theo nghiên cứu của Thomas Gilovich, trước mắt ta hay tiếc việc đã làm; về lâu dài, lại hay tiếc việc chưa làm. | board: board |
