@@ -722,7 +722,9 @@
       "type": "statement",
       "kicker": "Phần gây tranh cãi nhất",
       "text": "Sói đổi cả dòng sông",
-      "highlight": "dòng sông",
+      "highlight": [
+       "dòng sông"
+      ],
       "action": "đặt dấu hỏi"
      },
      {
