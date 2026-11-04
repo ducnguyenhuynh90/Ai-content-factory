@@ -16,7 +16,7 @@ _Khung tư duy · Tập 3 · 849 words · ~3.66 min · 4:3_
 |---|---|---|---|
 | h1 | hook | Năm một nghìn chín trăm lẻ hai, Hà Nội trả tiền cho mỗi đuôi chuột. Rồi chuột cụt đuôi xuất hiện. | shots: shots |
 | h2 | context | Đó không phải chuyện cười. Đó là một quy luật có tên riêng, và có cách để tránh nó. | shots: shots |
-| t0 | context |  | title: Khi thước đo thành mục tiêu |
+| t0 | context |  | title: Khi thước đo thành mục tiêu |
 | b01 | misconception | Ta hay nghĩ: muốn ít chuột, cứ trả tiền theo số chuột bắt được. Đo được thì quản được. Con số càng đẹp, việc càng tốt. Nghe rất hợp lý. | shots: shots |
 | b02 | context | Hình dung một cái nhiệt kế. Nó cho biết bạn có sốt không. Nhưng nếu một đứa trẻ muốn nghỉ học, hơ nhiệt kế trên ngọn nến, con số vọt lên bốn mươi hai độ, mà người chẳng ốm thêm chút nào. _(estimate)_ | shots: shots |
 | b03 | context | Hà Nội đầu thế kỷ hai mươi, thời Pháp thuộc. Theo Vann, người Pháp xây cống ngầm, trước hết cho khu phố Tây. Cống mới thành nhà của chuột, giữa lúc dịch hạch đang lan khắp châu Á. | shots: shots |
