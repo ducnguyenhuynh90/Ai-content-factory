@@ -1,5 +1,5 @@
 # Bản đồ không phải lãnh thổ
-_Khung tư duy · Tập 5 · 803 words · ~3.46 min · 4:3_
+_Khung tư duy · Tập 5 · 804 words · ~3.47 min · 4:3_
 
 ## Learning goals
 - Kể lại câu chuyện hòn đảo California: năm 1539 Ulloa đi tới cuối vịnh và bản đồ giữa thế kỷ 16 vẽ đúng một bán đảo; khoảng 1620 tu sĩ Antonio de la Ascensión được cho là vẽ nó thành đảo, từ 1622 hòn đảo lên bản đồ in, Briggs 1625 phổ biến nó; Kino đi đường bộ khoảng 1701 (bản đồ in ở Paris 1705); Consag 1746 và sắc lệnh 1747 của vua Ferdinand VI (theo nhiều tài liệu); Korzybski đặt tên 'bản đồ không phải lãnh thổ' năm 1931
@@ -16,15 +16,15 @@ _Khung tư duy · Tập 5 · 803 words · ~3.46 min · 4:3_
 |---|---|---|---|
 | h1 | hook | Hơn một trăm năm, bản đồ châu Âu vẽ sai California: thành một hòn đảo. | shots: shots |
 | h2 | context | Lạ hơn: trước đó, họ từng vẽ đúng. Bài học ấy có tên: bản đồ không phải lãnh thổ. | shots: shots |
-| t0 | context |  | title: Bản đồ không phải lãnh thổ |
-| b01 | misconception | Ta hay nghĩ: đã in thành bản đồ, đã nằm trong sách, thì chắc là đúng. Nhiều người chép lại, càng chắc. Nhưng chép lại không phải là đi xem. | shots: shots |
+| t0 | context |  | title: Bản đồ không phải lãnh thổ |
+| b01 | misconception | Chúng ta thường nghĩ: đã in thành bản đồ, đã nằm trong sách, thì chắc là đúng. Nhiều người chép lại, càng chắc. Nhưng chép lại không phải là đi xem. | shots: shots |
 | b02 | context | Hình dung một tấm bản đồ, và bờ biển thật. Bản đồ là nét mực ai đó vẽ, từ những gì họ thấy, hoặc nghe kể. Bờ biển thì không quan tâm ai vẽ gì: nó vẫn nằm đó. Muốn biết, phải đến xem. | shots: shots |
 | b03 | story | Năm một nghìn năm trăm ba mươi chín, nhà hàng hải Tây Ban Nha Francisco de Ulloa đi thuyền tới tận cuối vịnh California. Ông thấy vịnh khép lại, đất nối vào lục địa. Bản đồ giữa thế kỷ mười sáu vẽ một bán đảo: đúng. | shots: shots |
 | b04 | story | Rồi khoảng năm một nghìn sáu trăm hai mươi, tu sĩ Antonio de la Ascensión, người từng đi dọc bờ biển này, được cho là đã vẽ California thành một hòn đảo. Từ năm một nghìn sáu trăm hai mươi hai, hòn đảo lên bản đồ in. _(attributed)_ | shots: shots |
 | b05 | story | Năm một nghìn sáu trăm hai mươi lăm, một bản đồ của Henry Briggs in ở London được cho là đã gọi California là một hòn đảo lớn và đẹp. Các nhà in khắp châu Âu chép lại. Chép từ bản đồ, không phải từ bờ biển. _(attributed)_ | shots: shots |
 | b06 | story | Một nhà sưu tập ở Mỹ, Glen McLaughlin, đã gom được hàng trăm tấm bản đồ vẽ California là đảo; bộ sưu tập nay ở Đại học Stanford. Hơn một thế kỷ, lỗi ấy được in đi in lại. | shots: shots |
 | b07 | story | Rồi một linh mục dòng Tên, Eusebio Kino. Theo các nhà nghiên cứu bản đồ, lúc đầu chính ông cũng tin California là đảo. Khoảng năm một nghìn bảy trăm lẻ một, ông đi ngựa lên phía bắc, tới sông Colorado, và thấy đất liền một dải. Ông vẽ lại bản đồ: có đường bộ sang California. _(attributed)_ | shots: shots |
-| b08 | story | Nhưng bản đồ cũ không chịu biến mất. Năm một nghìn bảy trăm bốn mươi sáu, linh mục Fernando Consag lại đi thuyền tới cuối vịnh. Năm sau, theo nhiều tài liệu, vua Ferdinand Sáu được cho là đã ra sắc lệnh: California không phải là đảo. _(attributed)_ | shots: shots |
+| b08 | story | Nhưng bản đồ cũ không chịu biến mất. Đến năm một nghìn bảy trăm bốn mươi sáu, linh mục Fernando Consag lại đi thuyền tới tận cuối vịnh California. Một năm sau, vua Ferdinand Sáu được cho là đã ra sắc lệnh: California không phải là đảo. _(attributed)_ | shots: shots |
 | b09 | context | Gần hai trăm năm sau, năm một nghìn chín trăm ba mươi mốt, học giả Alfred Korzybski đặt tên cho bài học ấy: bản đồ không phải lãnh thổ. Nhưng ông nói thêm: nếu đúng, bản đồ có cấu trúc giống vùng đất, nên mới có ích. | shots: shots |
 | b10 | principle | Từ câu chuyện ấy, có ba nguyên tắc. Thứ nhất: hỏi ai đã tận mắt. Hàng trăm tấm bản đồ, nhưng phần lớn chép từ vài tấm. Nhiều bản sao không làm một điều thành đúng hơn. | board: board |
 | b11 | principle | Thứ hai: đi xem tận nơi. Ulloa, Kino, Consag đều làm một việc giống nhau: tới chỗ bản đồ nói, và nhìn. Thực địa là người chấm điểm cuối cùng. | board: board |
