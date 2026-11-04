@@ -926,6 +926,46 @@ ICONS.update({
                            f'<path d="M{s * .58} {s * .02} L{s * .5} {s * .7}" {_st(s, c)}/>'),
 })
 
+ICONS.update({
+    # thinking-framework set: jar, rock, flame, thermometer, candle, lantern, map, plane, grid (2x2 matrix)
+    "jar": lambda s, c: (f'<path d="M{s * .3} {s * .1} L{s * .7} {s * .1} L{s * .7} {s * .2} C{s * .86} {s * .26} {s * .86} {s * .4} {s * .86} {s * .5} '
+                         f'L{s * .86} {s * .86} C{s * .86} {s * .92} {s * .8} {s * .94} {s * .74} {s * .94} L{s * .26} {s * .94} '
+                         f'C{s * .2} {s * .94} {s * .14} {s * .92} {s * .14} {s * .86} L{s * .14} {s * .5} C{s * .14} {s * .4} {s * .14} {s * .26} {s * .3} {s * .2} Z" '
+                         f'fill="{c}" fill-opacity="0.08" {_st(s, c)}/>'
+                         f'<path d="M{s * .26} {s * .2} L{s * .74} {s * .2}" {_st(s, c, .03)}/>'),
+    "rock": lambda s, c: (f'<path d="M{s * .1} {s * .82} L{s * .18} {s * .5} L{s * .4} {s * .3} L{s * .66} {s * .34} L{s * .86} {s * .54} L{s * .9} {s * .82} Z" '
+                          f'fill="{c}" fill-opacity="0.18" {_st(s, c)}/>'
+                          f'<path d="M{s * .4} {s * .3} L{s * .46} {s * .56} L{s * .66} {s * .34} M{s * .46} {s * .56} L{s * .3} {s * .82}" {_st(s, c, .025)}/>'),
+    "flame": lambda s, c: (f'<path d="M{s * .5} {s * .06} C{s * .62} {s * .26} {s * .84} {s * .4} {s * .8} {s * .66} C{s * .77} {s * .84} {s * .64} {s * .94} {s * .5} {s * .94} '
+                           f'C{s * .34} {s * .94} {s * .2} {s * .82} {s * .2} {s * .64} C{s * .2} {s * .48} {s * .32} {s * .4} {s * .36} {s * .28} '
+                           f'C{s * .44} {s * .4} {s * .46} {s * .5} {s * .44} {s * .56} C{s * .54} {s * .42} {s * .56} {s * .24} {s * .5} {s * .06} Z" fill="{c}" fill-opacity="0.18" {_st(s, c)}/>'
+                           f'<path d="M{s * .5} {s * .9} C{s * .4} {s * .86} {s * .38} {s * .74} {s * .46} {s * .64} C{s * .5} {s * .72} {s * .62} {s * .76} {s * .58} {s * .86}" {_st(s, c, .03)}/>'),
+    "thermometer": lambda s, c: (f'<path d="M{s * .42} {s * .62} L{s * .42} {s * .16} C{s * .42} {s * .06} {s * .58} {s * .06} {s * .58} {s * .16} L{s * .58} {s * .62}" {_st(s, c)}/>'
+                                 f'<circle cx="{s * .5}" cy="{s * .76}" r="{s * .15}" fill="{c}" fill-opacity="0.35" {_st(s, c)}/>'
+                                 f'<path d="M{s * .5} {s * .64} L{s * .5} {s * .3}" {_st(s, c, .06)}/>'
+                                 f'<path d="M{s * .64} {s * .2} L{s * .72} {s * .2} M{s * .64} {s * .32} L{s * .72} {s * .32} M{s * .64} {s * .44} L{s * .72} {s * .44}" {_st(s, c, .025)}/>'),
+    "candle": lambda s, c: (f'<rect x="{s * .36}" y="{s * .42}" width="{s * .28}" height="{s * .48}" fill="{c}" fill-opacity="0.15" {_st(s, c)}/>'
+                            f'<path d="M{s * .5} {s * .42} L{s * .5} {s * .34}" {_st(s, c, .025)}/>'
+                            f'<path d="M{s * .5} {s * .08} C{s * .6} {s * .18} {s * .58} {s * .32} {s * .5} {s * .32} C{s * .42} {s * .32} {s * .4} {s * .18} {s * .5} {s * .08} Z" fill="{c}" fill-opacity="0.35" {_st(s, c)}/>'
+                            f'<path d="M{s * .24} {s * .92} L{s * .76} {s * .92}" {_st(s, c)}/>'),
+    "lantern": lambda s, c: (f'<path d="M{s * .5} {s * .04} L{s * .5} {s * .14} M{s * .38} {s * .14} L{s * .62} {s * .14}" {_st(s, c)}/>'
+                             f'<path d="M{s * .32} {s * .2} L{s * .68} {s * .2} L{s * .74} {s * .3} L{s * .74} {s * .76} L{s * .66} {s * .86} L{s * .34} {s * .86} L{s * .26} {s * .76} L{s * .26} {s * .3} Z" '
+                             f'fill="{c}" fill-opacity="0.12" {_st(s, c)}/>'
+                             f'<path d="M{s * .5} {s * .38} C{s * .58} {s * .46} {s * .57} {s * .6} {s * .5} {s * .62} C{s * .43} {s * .6} {s * .42} {s * .46} {s * .5} {s * .38} Z" fill="{c}" fill-opacity="0.5" {_st(s, c, .025)}/>'
+                             f'<path d="M{s * .3} {s * .94} L{s * .7} {s * .94}" {_st(s, c, .025)}/>'),
+    "map": lambda s, c: (f'<path d="M{s * .08} {s * .2} L{s * .36} {s * .1} L{s * .64} {s * .2} L{s * .92} {s * .1} L{s * .92} {s * .8} L{s * .64} {s * .9} L{s * .36} {s * .8} L{s * .08} {s * .9} Z" '
+                         f'fill="{c}" fill-opacity="0.12" {_st(s, c)}/>'
+                         f'<path d="M{s * .36} {s * .1} L{s * .36} {s * .8} M{s * .64} {s * .2} L{s * .64} {s * .9}" {_st(s, c, .025)}/>'
+                         f'<path d="M{s * .18} {s * .66} C{s * .3} {s * .5} {s * .5} {s * .62} {s * .54} {s * .44} C{s * .58} {s * .3} {s * .72} {s * .34} {s * .8} {s * .3}" {_st(s, c, .025)}/>'),
+    "plane": lambda s, c: (f'<path d="M{s * .5} {s * .04} C{s * .56} {s * .04} {s * .56} {s * .14} {s * .56} {s * .3} L{s * .94} {s * .52} L{s * .94} {s * .6} L{s * .56} {s * .5} '
+                           f'L{s * .56} {s * .76} L{s * .68} {s * .86} L{s * .68} {s * .92} L{s * .5} {s * .86} L{s * .32} {s * .92} L{s * .32} {s * .86} L{s * .44} {s * .76} '
+                           f'L{s * .44} {s * .5} L{s * .06} {s * .6} L{s * .06} {s * .52} L{s * .44} {s * .3} C{s * .44} {s * .14} {s * .44} {s * .04} {s * .5} {s * .04} Z" '
+                           f'fill="{c}" fill-opacity="0.15" {_st(s, c)}/>'),
+    "grid": lambda s, c: (f'<rect x="{s * .1}" y="{s * .1}" width="{s * .8}" height="{s * .8}" rx="{s * .04}" fill="{c}" fill-opacity="0.06" {_st(s, c)}/>'
+                          f'<path d="M{s * .5} {s * .1} L{s * .5} {s * .9} M{s * .1} {s * .5} L{s * .9} {s * .5}" {_st(s, c)}/>'
+                          f'<rect x="{s * .14}" y="{s * .14}" width="{s * .32}" height="{s * .32}" fill="{c}" fill-opacity="0.3"/>'),
+})
+
 ICONS = {k: (lambda f: (lambda s, c: _first_attrs(f(s, c))))(f) for k, f in ICONS.items()}
 
 

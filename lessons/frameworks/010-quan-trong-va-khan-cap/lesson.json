@@ -33,7 +33,7 @@
   "concepts": [
    {
     "id": "quan_trong",
-    "visual": "mountain",
+    "visual": "rock",
     "color": "a",
     "shows": "tảng đá lớn: việc quan trọng (sức khỏe, gia đình, học, mục tiêu dài hạn); không ai réo, nhưng phải đặt vào bình trước, nếu không sẽ không còn chỗ",
     "omits": "đời thật không phải một chiếc bình cố định; đá lớn không tự dán nhãn, mỗi người tự chọn và chọn lại; có việc vừa gấp vừa quan trọng (bếp cháy, con sốt cao) thì làm ngay, không xếp lịch; hình vẽ là ngọn núi vì bộ icon chưa có hòn đá"
@@ -744,7 +744,7 @@
       "action": "báo động",
       "items": [
        {
-        "icon": "lightning",
+        "icon": "flame",
         "label": "Bếp bốc cháy",
         "cue": "bếp"
        },
