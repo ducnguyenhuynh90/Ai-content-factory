@@ -2,6 +2,7 @@
 
     python -m vfactory.youtube whoami
     python -m vfactory.youtube schedule PLAN.json [--limit N] [--dry-run]
+    python -m vfactory.youtube playlist PLAN.json "Title" ["Description"]
 
 Credentials come from the environment (never from a file in the repo): YT_CLIENT_ID, YT_CLIENT_SECRET,
 YT_REFRESH_TOKEN (get them once with scripts/youtube_auth.py on your own computer).
@@ -18,6 +19,7 @@ from __future__ import annotations
 import json
 import os
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -121,8 +123,49 @@ def schedule(plan_path: str, dry: bool, limit: int | None = None) -> None:
         print(f"  uploaded https://youtu.be/{vid}")
 
 
+def playlist(plan_path: str, title: str, description: str = "") -> None:
+    """Keep one playlist holding every uploaded video of PLAN.json, in plan order. The playlist id is kept in
+    PLAN.json.playlist; reruns only add what is missing (scheduled private videos show up once they go public)."""
+    tok = token()
+    plan = json.loads(Path(plan_path).read_text())
+    done = json.loads(Path(plan_path + ".done").read_text())
+    pl_p = Path(plan_path + ".playlist")
+    if pl_p.exists():
+        pid = pl_p.read_text().strip()
+    else:
+        body = {"snippet": {"title": title, "description": description, "defaultLanguage": "vi"},
+                "status": {"privacyStatus": "public"}}
+        pid = json.load(call(tok, "POST", f"{API}/playlists?part=snippet,status", json.dumps(body).encode()))["id"]
+        pl_p.write_text(pid)
+        print(f"created playlist https://www.youtube.com/playlist?list={pid}")
+    have, page = set(), ""
+    while True:
+        for attempt in range(6):  # a new playlist can 404 for a few seconds
+            try:
+                r = json.load(call(tok, "GET", f"{API}/playlistItems?part=contentDetails&maxResults=50&playlistId={pid}{page}"))
+                break
+            except urllib.error.HTTPError as e:
+                if e.code != 404 or attempt == 5:
+                    raise
+                time.sleep(5)
+        have |= {i["contentDetails"]["videoId"] for i in r.get("items", [])}
+        if "nextPageToken" not in r:
+            break
+        page = f"&pageToken={r['nextPageToken']}"
+    for pos, item in enumerate(x for x in plan if x["lesson"] in done):
+        vid = done[item["lesson"]]
+        if vid in have:
+            continue
+        body = {"snippet": {"playlistId": pid, "position": pos, "resourceId": {"kind": "youtube#video", "videoId": vid}}}
+        call(tok, "POST", f"{API}/playlistItems?part=snippet", json.dumps(body).encode())
+        print(f"  added {vid} at {pos}")
+    print(f"playlist https://www.youtube.com/playlist?list={pid}")
+
+
 def main():
     a = sys.argv[1:]
+    if a[:1] == ["playlist"] and len(a) >= 3:
+        return playlist(a[1], a[2], a[3] if len(a) > 3 else "")
     if a[:1] == ["whoami"]:
         for c in whoami(token()):
             print(f"{c['title']}  (id {c['id']}, {c['subscribers']} subscribers)")
