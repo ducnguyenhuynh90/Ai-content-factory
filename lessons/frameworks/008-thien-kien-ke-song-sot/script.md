@@ -32,7 +32,7 @@ _Khung tư duy · Tập 8 · 825 words · ~3.56 min · 4:3_
 | b13 | principle | Thứ ba: so với cả nhóm ban đầu. Mười quán còn lại có thể giỏi thật, cũng có thể chỉ may. Chỉ khi đặt cạnh những quán đã đóng, bạn mới biết điều gì thật sự khác. | board: board |
 | b14 | complication | Nhưng hình ảnh lỗ đạn cũng có giới hạn. Chiếc máy bay trở về không giỏi hơn chiếc rơi; nó chỉ trúng đạn ở chỗ khác. Ngoài đời, kẻ sống sót có khi giỏi hơn thật: quán đông có thể vì cà phê ngon. Thiên kiến này không bảo thành công là may. Nó bảo: kiểm tra, đừng mặc định. | shots: shots |
 | b15 | complication | Và ống nhòm không phải lúc nào cũng thấy được những chiếc không về. Wald phải dùng toán và giả định để ước đoán phần đã mất. Giả định sai, kết luận cũng sai. | shots: shots |
-| b16 | question | Giờ thử một chút nhé. Bà bảo: đồ ngày xưa bền lắm, cái quạt bốn mươi năm vẫn chạy. Câu hỏi đầu tiên bạn nên hỏi là gì? _(estimate)_ | question: Bà bảo: quạt 40 năm vẫn chạy. Hỏi gì đầu tiên? |
+| b16 | question | Giờ thử một chút nhé. Bà bảo: đồ ngày xưa bền lắm, cái quạt bốn mươi năm vẫn chạy. Câu hỏi đầu tiên bạn nên hỏi là gì? _(estimate)_ | question: Quạt 40 năm vẫn chạy. Hỏi gì đầu tiên? |
 | b17 | recap | Đáp án là B: những cái quạt hỏng đã bị bỏ đi từ lâu, chỉ cái bền còn lại để khoe. Vậy là ba nguyên tắc. Hỏi ai đã rơi khỏi mẫu. Đọc cả chỗ trống. Và so với cả nhóm ban đầu. | board: board |
 | b18 | close | Những chiếc máy bay trở về kể chuyện của chúng. Câu trả lời lại nằm ở những chiếc không về. Lần tới, trước một câu chuyện thành công, hãy hỏi: ai đã không về để kể? | shots: shots |
 | b19 | close | Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau. | end: Thiên kiến kẻ sống sót |
