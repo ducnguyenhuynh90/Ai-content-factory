@@ -1,0 +1,1016 @@
+{
+ "meta": {
+  "series": "Khung tư duy · Tập 7",
+  "title": "Chi phí cơ hội",
+  "subtitle": "Opportunity cost — Ronald Wayne, 10% Apple và con đường không chọn",
+  "topic": "books",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt đi làm, hay cân nhắc học thêm, đổi việc, làm thêm cuối tuần, mua món lớn; thích chuyện công nghệ, doanh nghiệp và cách nghĩ",
+  "aspect": "4:3",
+  "target_minutes": [
+   3,
+   5
+  ],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
+  "learning_goals": [
+   "Kể lại câu chuyện Ronald Wayne: 41 tuổi, ký hợp đồng lập Apple ngày 1/4/1976 với 10% (Jobs, Wozniak mỗi người 45%), viết hợp đồng và vẽ logo Newton; đơn hàng Byte Shop và khoản vay mua linh kiện; Apple là hợp danh nên tài sản riêng phải chịu nợ; rút tên ngày 12/4/1976, nhận 800 đô rồi thêm 1.500 đô; chính ông nói chuyện 'bán 10% lấy 800 đô' không chính xác; ông nói không hối hận",
+   "Phân biệt cách đếm chi phí theo hóa đơn (đồng xu: chỉ số tiền mình trả) với chi phí cơ hội (ngã rẽ: thứ tốt nhất trên con đường không chọn)",
+   "Dùng ba nguyên tắc: gọi tên con đường kia; đếm cả thứ vô hình; chấm bằng lúc chọn; và biết chỗ ẩn dụ dừng lại (đời thật không thấy rõ con đường kia; nhìn lại không phải nhìn tới; đừng biến nó thành day dứt)"
+  ],
+  "disclaimer": "Nội dung giáo dục; câu chuyện kể lại từ nguồn công khai; không phải lời khuyên đầu tư.",
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người kể chuyện lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively. Nothing in the script depends on this particular voice.",
+  "concepts": [
+   {
+    "id": "chi_phi_co_hoi",
+    "visual": "fork",
+    "color": "a",
+    "shows": "một ngã rẽ: chọn một đường là bỏ lại đường kia; chi phí cơ hội là thứ tốt nhất trên con đường không chọn, gồm cả thứ không in giá (thời gian, rủi ro, sự yên tâm)",
+    "omits": "ở ngã rẽ thật ta thấy cả hai đường, trong đời con đường kia luôn mờ; giá trị con đường kia chỉ ước tính được, nhìn lại thì rõ hơn nhìn tới; đời có nhiều hơn hai lối và có lúc quay lại được; nghĩ mãi về mọi lối không chọn thì không đi nổi lối nào"
+   },
+   {
+    "id": "gia_hoa_don",
+    "visual": "coin",
+    "color": "b",
+    "shows": "đồng xu trên hóa đơn: chỉ đếm số tiền mình trả hay nhận, thứ nhìn thấy được",
+    "omits": "số tiền trên hóa đơn vẫn là một phần thật của chi phí; nhiều quyết định nhỏ chỉ cần nhìn hóa đơn là đủ"
+   }
+  ],
+  "brief": {
+   "target_viewer": "Người Việt 20–40 tuổi đi làm, hay cân nhắc học thạc sĩ, đổi việc, nhận làm thêm, và thường chỉ so số tiền phải trả (giả định của người viết, chủ kênh xác nhận lại)",
+   "format": "Giải thích một khung tư duy qua một câu chuyện thật (concept explainer), 4–5 phút, 4:3, minh họa icon vẽ tay, một bảng xuyên suốt cho ba nguyên tắc, một ví dụ đổi trạng thái, một giọng đọc",
+   "central_question": "Ronald Wayne rời Apple sau chưa đầy hai tuần và nói không hối hận: ông đã trả cái giá gì, và chi phí cơ hội giúp ta chọn tốt hơn đến đâu?",
+   "transformation": "Trước khi xem, họ nghĩ chi phí là số tiền mình trả, và Wayne là người 'bán hớ' nhất lịch sử. Sau khi xem, họ kể lại được câu chuyện 1/4 – Byte Shop – hợp danh – 12/4 – 800 đô (và lời đính chính của Wayne), phân biệt được đồng xu trên hóa đơn với ngã rẽ, tự tính giá thật của một quyết định (thạc sĩ, làm thêm cuối tuần), và biết nhìn lại không phải nhìn tới",
+   "discovery_goal": "Tìm kiếm (\"chi phí cơ hội\", \"opportunity cost\", \"Ronald Wayne\", \"người sáng lập thứ ba của Apple\", \"bán 10% Apple 800 đô\", \"khung tư duy\") và đề xuất từ video tư duy, kinh tế, công nghệ; khán giả series Review sách",
+   "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn tập sau về khung tư duy nào?\" (comment answering the end-card question)",
+   "share_recipient": "Một người bạn đang phân vân nghỉ việc đi học hay nhận việc làm thêm: câu hỏi 'mình đang bỏ lại con đường nào?' giúp hai người bàn mà không ai phán ai",
+   "evidence": "Sotheby's 12/2011 (hợp đồng 1/4/1976, phụ lục 12/4/1976, 800 đô, 1.500 đô; giá bán 1,59 triệu đô) qua Marketplace, KQED, Business Standard; Wikipedia Ronald Wayne và NextShark (41 tuổi, Atari, 10% để phân xử, viết hợp đồng, logo Newton; Byte Shop 50 máy, vay ~15.000 đô; hợp danh, tài sản riêng); Snopes (Wozniak kể 100 máy và Wayne rời sau vài tháng); Philadelphia Inquirer 2006 ('cơn lốc', 'quyết định theo hiểu biết lúc ấy'); Bloomberg TV qua nhiều báo ('người giàu nhất trong nghĩa trang'); AppleInsider 16/3/2026 (Wayne ở Computer History Museum: chuyện bán 10% lấy 800 đô 'hoàn toàn không chính xác'); Fortune 2025 (300–400 tỷ đô, giả định không pha loãng); số thạc sĩ và làm thêm là số minh họa",
+   "constraints": "4–5 phút, 4:3, icon vẽ, không khuôn mặt người thật (Wayne là huy hiệu chữ cái), một giọng đọc (OmniVoice seed 99 speed 0.88), tên tiếng Anh giữ nguyên chính tả, số đọc bằng chữ và làm tròn khi đọc, số chính xác trên màn hình; nói rõ con số hàng trăm tỷ đô là ước tính giả định không pha loãng; nói lời đính chính của Wayne; không ngụ ý nên mua cổ phiếu nào, nói rõ 'lịch sử, không phải lời khuyên'; giữ lời miễn trừ"
+  },
+  "youtube": {
+   "title": "Chi phí cơ hội: Ronald Wayne rời Apple và cái giá không in trên hóa đơn",
+   "thumbnail_text": "Rời Apple sau 12 ngày, nhận 800 $. Ông nói: không hối hận.",
+   "description": "Ngày 1/4/1976, Steve Jobs, Steve Wozniak và Ronald Wayne ký hợp đồng lập Apple; Wayne, 41 tuổi, giữ 10%. Ngày 12/4/1976 ông rút tên, theo giấy tờ nhận 800 đô, sau đó thêm 1.500 đô để từ bỏ mọi quyền. Báo chí hay gọi đó là sai lầm đắt giá; ông nói không hối hận. Video kể lại câu chuyện ấy cùng lý do của ông (đơn hàng Byte Shop và khoản vay mua linh kiện; Apple khi ấy là hợp danh nên tài sản riêng phải chịu nợ; ông có nhà, có xe, có tiền tiết kiệm), giải thích chi phí cơ hội (opportunity cost) bằng hình ảnh đồng xu trên hóa đơn và ngã rẽ, ba nguyên tắc (gọi tên con đường kia; đếm cả thứ vô hình; chấm bằng lúc chọn), một ví dụ với quyết định học thạc sĩ, và một câu hỏi để bạn tự thử.\n\nẨn dụ dừng ở đâu: ở ngã rẽ thật bạn thấy cả hai con đường, còn trong đời con đường kia luôn mờ; nhìn lại thì rõ, nhìn tới thì không (năm 1976 không ai thấy Apple của hôm nay); và nghĩ mãi về mọi con đường không chọn thì không đi nổi con đường nào.\n\nLưu ý về số liệu: ngày 1/4 và 12/4/1976, 800 đô và 1.500 đô lấy theo bộ hồ sơ Sotheby's bán năm 2011. Chính Wayne (Computer History Museum, 2026, theo AppleInsider) nói chuyện 'bán 10% lấy 800 đô' là không chính xác: theo ông, 800 đô là con số tượng trưng để gỡ tên ông khỏi hợp đồng. Wozniak từng kể Wayne rời đi sau vài tháng, và đơn hàng Byte Shop là 100 máy; phần lớn nguồn ghi 50 máy và khoản vay khoảng 15.000 đô. Con số 300–400 tỷ đô là ước tính của báo chí (Fortune, 2025), giả định 10% không bao giờ bị pha loãng. Câu 'người giàu nhất trong nghĩa trang' là lời ông nói đùa, trích lại từ phỏng vấn Bloomberg; Wayne nói ông không chắc mình nghĩ ra câu ấy. Học phí, lương và tiền làm thêm là số minh họa. Video kể lịch sử, không phải lời khuyên đầu tư, và không ngụ ý nên mua cổ phiếu nào.\n\nChương:\nRời Apple sau 12 ngày\nĐiều ta hay nghĩ: chi phí là tiền mình trả\nNgã rẽ\nRonald Wayne và ngày 1/4/1976\nMười phần trăm và logo Newton\nĐơn hàng Byte Shop\nHợp danh: tài sản riêng cũng phải chịu\nNgày 12/4: rút tên\nLời đính chính của Wayne\nHàng trăm tỷ đô: nhìn từ hôm nay\nNhìn từ năm ấy\nCơn lốc và nghĩa trang\nNguyên tắc 1: gọi tên con đường kia\nNguyên tắc 2: đếm cả thứ vô hình\nHọc thạc sĩ: cái giá thật (số minh họa)\nNguyên tắc 3: chấm bằng lúc chọn\nẨn dụ dừng ở đâu\nThử một chút: làm thêm cuối tuần\nBa nguyên tắc\nMình đang bỏ lại con đường nào?\n\nNguồn:\n- Sotheby's, Apple Computer Company partnership agreement (1/4/1976) and amendment (12/4/1976), sold 12/2011; Marketplace, 'Poor Ronald Wayne' (14/12/2011): https://www.marketplace.org/story/2011/12/14/poor-ronald-wayne\n- KQED, Sotheby's auctioning Apple Computer's founding contract (2011): https://www.kqed.org/news/49839/sothebys-auctioning-apple-computers-founding-contract\n- Wikipedia, Ronald Wayne: https://en.wikipedia.org/wiki/Ronald_Wayne\n- NextShark, Ronald Wayne interview: https://nextshark.com/ronald-wayne-interview\n- Philadelphia Inquirer, Apple's lost co-founder: no regrets (2006): https://www.inquirer.com/philly/business/technology/060910_apples_lost_co-founder_no_regrets.html\n- AppleInsider, The story about how the third Apple founder sold out for $800 isn't quite right (16/3/2026): https://appleinsider.com/articles/26/03/16/the-story-about-how-the-third-apple-founder-sold-out-for-800-isnt-quite-right\n- Snopes, Third Apple co-founder: https://www.snopes.com/fact-check/third-apple-cofounder/\n- Fortune, Apple cofounder Ronald Wayne sold his 10% stake early (2025): https://fortune.com/2025/06/24/apple-cofounder-ronald-wayne-sold-10-percent-stake-early-today-worth-300-billion-steve-jobs-steve-wozniak/\n\nBạn muốn tập sau về khung tư duy nào? Để lại bình luận nhé.",
+   "tags": [
+    "chi phí cơ hội",
+    "opportunity cost",
+    "khung tư duy",
+    "mô hình tư duy",
+    "Ronald Wayne",
+    "Apple",
+    "Steve Jobs",
+    "Steve Wozniak",
+    "ra quyết định",
+    "thiên kiến nhìn lại",
+    "hindsight bias",
+    "kỹ năng tư duy",
+    "tư duy kinh tế"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "sothebys2011",
+   "cite": "Sotheby's sale, December 2011: Apple Computer Company partnership agreement dated 1 April 1976, signed by Jobs, Wozniak and Wayne, with the amendment of 12 April 1976 by which Wayne withdrew and a Santa Clara County statement; per the documents Wayne received $800, and per Sotheby's a further $1,500; the lot sold for about $1.59 million with premium (Marketplace 14 Dec 2011; KQED; Business Standard)",
+   "url": "https://www.marketplace.org/story/2011/12/14/poor-ronald-wayne"
+  },
+  {
+   "id": "wayne_bio",
+   "cite": "Wikipedia 'Ronald Wayne' (born 17 May 1934; worked at Atari; 10% stake as tie-breaker between Jobs and Wozniak, 45% each; wrote the partnership agreement and the Apple I manual; drew the first logo, Isaac Newton under an apple tree) and NextShark interview: the Byte Shop (Paul Terrell) order for 50 assembled Apple I boards, Jobs's roughly $15,000 credit for parts, Wayne's worry that the Byte Shop was slow to pay; Apple as a general partnership, partners personally liable; Wayne had a house, car and savings that creditors could reach (read through search summaries and mirrors; pages not opened)",
+   "url": "https://en.wikipedia.org/wiki/Ronald_Wayne"
+  },
+  {
+   "id": "snopes",
+   "cite": "Snopes, 'Third Apple co-founder' fact check: quotes Wozniak's memoir iWoz on a 100-unit Byte Shop deal; Wozniak has also said Wayne left after a few months rather than 12 days",
+   "url": "https://www.snopes.com/fact-check/third-apple-cofounder/"
+  },
+  {
+   "id": "inquirer2006",
+   "cite": "Philadelphia Inquirer, 'Apple's lost co-founder: no regrets' (2006): Wayne: 'I just wasn't ready for the kind of whirlwind that Jobs and Wozniak represented'; he felt the company would succeed but questioned how much of a roller coaster it would be; 'You make a decision based on your understanding of the circumstances, and you live with it' (wording from search summaries; page not opened)",
+   "url": "https://www.inquirer.com/philly/business/technology/060910_apples_lost_co-founder_no_regrets.html"
+  },
+  {
+   "id": "cemetery",
+   "cite": "Wayne on Bloomberg Television, quoted by LADbible, Celebrity Net Worth and others: 'If I'd stayed with them, I was going to wind up the richest man in the cemetery'; Village Voice update: Jobs used a similar line in 1993 and Wayne could not say for sure where the phrase came from"
+  },
+  {
+   "id": "chm2026",
+   "cite": "AppleInsider, 'The story about how the third Apple founder sold out for $800 isn't quite right' (16 March 2026), reporting Wayne at the Computer History Museum's Apple 50th event: 'The story that I sold my 10% for $800 is totally inaccurate'; $800 was a nominal figure suggested to get his name off the contract, and Jobs later mailed him an $800 check (one report; page not opened)",
+   "url": "https://appleinsider.com/articles/26/03/16/the-story-about-how-the-third-apple-founder-sold-out-for-800-isnt-quite-right"
+  },
+  {
+   "id": "fortune2025",
+   "cite": "Fortune, 24 June 2025 and 12 December 2025: Wayne's 10% 'would be worth' about $300 billion / $400 billion today, figures that assume the stake was never diluted",
+   "url": "https://fortune.com/2025/06/24/apple-cofounder-ronald-wayne-sold-10-percent-stake-early-today-worth-300-billion-steve-jobs-steve-wozniak/"
+  },
+  {
+   "id": "minhhoa",
+   "cite": "Số minh họa của kênh (không phải khảo sát): món đồ 500.000đ; thạc sĩ hai năm, học phí khoảng 200 triệu đồng, lương 15 triệu đồng một tháng (24 tháng = 360 triệu); làm thêm cuối tuần trả 1 triệu đồng"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Gọi tên con đường kia",
+   "line": "Mỗi lần nói có, hỏi: mình đang nói không với điều gì?"
+  },
+  {
+   "name": "Đếm cả thứ vô hình",
+   "line": "Thời gian, sức lực, rủi ro, sự yên tâm cũng là cái giá, dù không in trên hóa đơn."
+  },
+  {
+   "name": "Chấm bằng lúc chọn",
+   "line": "Một quyết định tốt là hợp lý với thông tin lúc ấy, không phải với kết quả nhìn lại."
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Ông rời Apple chỉ sau mười hai ngày, nhận tám trăm đô. Ông nói: không hối hận.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "door",
+      "kicker": "Apple, những ngày đầu",
+      "line": "Rời đi sau 12 ngày",
+      "line_cue": "mười hai",
+      "action": "bước ra"
+     },
+     {
+      "type": "icon",
+      "concept": "gia_hoa_don",
+      "kicker": "Ông nhận",
+      "cue": "nhận",
+      "line": "800 $",
+      "line_cue": "tám trăm",
+      "action": "lật"
+     },
+     {
+      "type": "icon",
+      "icon": "bench",
+      "kicker": "Ông nói",
+      "cue": "ông nói",
+      "line": "Không hối hận",
+      "line_cue": "không hối",
+      "action": "ngồi yên"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "không hối",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "sothebys2011",
+    "inquirer2006"
+   ]
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Báo chí hay gọi đó là sai lầm đắt giá. Có một cách nhìn khác: chi phí cơ hội.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "letter",
+      "kicker": "Báo chí hay gọi",
+      "line": "Sai lầm đắt giá",
+      "line_cue": "sai lầm",
+      "action": "mở thư"
+     },
+     {
+      "type": "icon",
+      "concept": "chi_phi_co_hoi",
+      "kicker": "Một cách nhìn khác",
+      "cue": "có một",
+      "line": "Chi phí cơ hội",
+      "line_cue": "chi phí",
+      "action": "rẽ đôi"
+     }
+    ]
+   },
+   "sources": [
+    "fortune2025"
+   ]
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Khung tư duy · Tập 7",
+    "title": "Chi phí cơ hội",
+    "subtitle": "Opportunity cost",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Ta hay nghĩ: chi phí là số tiền mình trả. Món này năm trăm nghìn, vậy nó tốn năm trăm nghìn. Nhưng mỗi lần chọn, ta còn trả bằng một thứ không in trên hóa đơn.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "gia_hoa_don",
+      "kicker": "Điều ta hay nghĩ",
+      "line": "Chi phí = tiền mình trả",
+      "line_cue": "chi phí",
+      "action": "đếm"
+     },
+     {
+      "type": "icon",
+      "icon": "store",
+      "kicker": "Một món đồ",
+      "cue": "món này",
+      "line": "500.000đ là hết?",
+      "line_cue": "năm trăm",
+      "action": "mở cửa"
+     },
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Mỗi lần chọn",
+      "cue": "nhưng mỗi",
+      "line": "Thứ không in trên hóa đơn",
+      "line_cue": "không in",
+      "action": "soi"
+     }
+    ]
+   },
+   "sources": [
+    "minhhoa"
+   ]
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "Hình dung bạn đứng ở một ngã rẽ. Đi đường bên trái, bạn không chỉ tốn bước chân. Bạn còn bỏ lại mọi thứ ở đường bên phải. Thứ tốt nhất trên con đường không chọn: đó là chi phí cơ hội.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "chi_phi_co_hoi",
+      "kicker": "Một ngã rẽ",
+      "line": "Chọn một, bỏ một",
+      "line_cue": "ngã rẽ",
+      "action": "rẽ đôi"
+     },
+     {
+      "type": "icon",
+      "concept": "gia_hoa_don",
+      "kicker": "Thứ ta hay đếm",
+      "cue": "đi đường",
+      "line": "Bước chân, tiền trả",
+      "line_cue": "bước chân",
+      "action": "đếm"
+     },
+     {
+      "type": "trio",
+      "kicker": "Thứ ta hay quên",
+      "heading": "Hai thứ phải tính",
+      "cue": "bạn còn",
+      "action": "đặt cạnh",
+      "items": [
+       {
+        "concept": "gia_hoa_don",
+        "label": "Tiền trả"
+       },
+       {
+        "concept": "chi_phi_co_hoi",
+        "label": "Đường bỏ lại",
+        "cue": "thứ tốt"
+       }
+      ],
+      "line": "Chi phí cơ hội",
+      "line_cue": "đó là"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b03",
+   "act": "context",
+   "narration": "Ronald Wayne năm ấy bốn mươi mốt tuổi, làm ở Atari cùng Steve Jobs. Ngày một tháng tư, năm một nghìn chín trăm bảy mươi sáu, Jobs, Steve Wozniak và Wayne ký hợp đồng lập Apple. Jobs hai mươi mốt tuổi, Wozniak hai mươi lăm.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Ronald Wayne",
+      "initials": "RW",
+      "role": "Kỹ sư, đồng sáng lập Apple",
+      "years": "Sinh năm 1934",
+      "action": "khắc"
+     },
+     {
+      "type": "icon",
+      "icon": "checklist",
+      "kicker": "1/4/1976",
+      "cue": "ngày một",
+      "line": "Ba người ký lập Apple",
+      "line_cue": "ký hợp",
+      "action": "ký"
+     },
+     {
+      "type": "icon",
+      "icon": "people",
+      "kicker": "Hai người kia",
+      "cue": "jobs hai",
+      "line": "Jobs 21 · Wozniak 25",
+      "line_cue": "jobs hai",
+      "action": "đứng cạnh"
+     }
+    ]
+   },
+   "sources": [
+    "wayne_bio",
+    "sothebys2011"
+   ]
+  },
+  {
+   "id": "b04",
+   "act": "story",
+   "narration": "Jobs và Wozniak mỗi người bốn mươi lăm phần trăm. Wayne giữ mười phần trăm, để phân xử khi hai Steve bất đồng. Ông viết hợp đồng, vẽ cả logo đầu tiên: Isaac Newton ngồi dưới gốc táo.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stat",
+      "value": 10,
+      "from": 10,
+      "suffix": "%",
+      "color": "a",
+      "label": "phần của Wayne",
+      "note": "Jobs 45% · Wozniak 45%",
+      "cue": "wayne giữ",
+      "action": "hiện số"
+     },
+     {
+      "type": "icon",
+      "icon": "scale",
+      "kicker": "Người phân xử",
+      "cue": "để phân",
+      "line": "Khi hai Steve bất đồng",
+      "line_cue": "hai steve",
+      "action": "cân"
+     },
+     {
+      "type": "icon",
+      "icon": "tree",
+      "kicker": "Wayne viết hợp đồng, vẽ logo",
+      "cue": "ông viết",
+      "line": "Newton dưới gốc táo",
+      "line_cue": "isaac",
+      "action": "đung đưa"
+     }
+    ]
+   },
+   "sources": [
+    "wayne_bio",
+    "sothebys2011"
+   ]
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Rồi Jobs nhận đơn hàng năm mươi máy từ cửa hàng Byte Shop, và vay khoảng mười lăm nghìn đô mua linh kiện. Theo lời kể, Wayne lo cửa hàng ấy có tiếng chậm trả tiền.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "store",
+      "kicker": "Byte Shop",
+      "line": "Đơn hàng 50 máy",
+      "line_cue": "năm mươi",
+      "action": "đặt hàng"
+     },
+     {
+      "type": "icon",
+      "icon": "coins",
+      "kicker": "Vay mua linh kiện",
+      "cue": "và vay",
+      "line": "~15.000 $",
+      "line_cue": "mười lăm",
+      "action": "chồng lên"
+     },
+     {
+      "type": "icon",
+      "icon": "hourglass",
+      "kicker": "Wayne lo",
+      "cue": "theo lời",
+      "line": "Tiếng chậm trả tiền",
+      "line_cue": "chậm",
+      "action": "cạn dần"
+     }
+    ]
+   },
+   "sources": [
+    "wayne_bio",
+    "snopes"
+   ],
+   "certainty": "attributed"
+  },
+  {
+   "id": "b06",
+   "act": "story",
+   "narration": "Apple khi ấy là hợp danh: nếu nợ không trả nổi, chủ nợ có thể đòi tài sản riêng của từng người. Theo lời Wayne, hai Steve gần như chẳng có gì để mất. Còn ông có nhà, có xe, có tiền tiết kiệm.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "lock",
+      "kicker": "Hợp danh",
+      "line": "Tài sản riêng cũng phải chịu",
+      "line_cue": "chủ nợ",
+      "action": "ràng buộc"
+     },
+     {
+      "type": "icon",
+      "icon": "people",
+      "kicker": "Hai Steve",
+      "cue": "theo lời",
+      "line": "Gần như chẳng có gì để mất",
+      "line_cue": "gần như",
+      "action": "nhún vai"
+     },
+     {
+      "type": "icon",
+      "icon": "house",
+      "kicker": "Wayne",
+      "cue": "còn ông",
+      "line": "Nhà, xe, tiền tiết kiệm",
+      "line_cue": "có nhà",
+      "action": "đứng vững"
+     }
+    ]
+   },
+   "sources": [
+    "wayne_bio"
+   ]
+  },
+  {
+   "id": "b07",
+   "act": "turn",
+   "narration": "Ngày mười hai tháng tư, chưa đầy hai tuần sau, Wayne rút tên. Theo giấy tờ, ông nhận tám trăm đô, rồi sau đó thêm một nghìn năm trăm đô để từ bỏ mọi quyền về sau.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "door",
+      "kicker": "12/4/1976",
+      "line": "Wayne rút tên",
+      "line_cue": "wayne rút",
+      "action": "bước ra"
+     },
+     {
+      "type": "icon",
+      "concept": "gia_hoa_don",
+      "kicker": "Theo giấy tờ",
+      "cue": "theo giấy",
+      "line": "800 $",
+      "line_cue": "tám trăm",
+      "action": "trao"
+     },
+     {
+      "type": "icon",
+      "icon": "checklist",
+      "kicker": "Sau đó",
+      "cue": "rồi sau",
+      "line": "+1.500 $, từ bỏ mọi quyền",
+      "line_cue": "một nghìn",
+      "action": "ký"
+     }
+    ]
+   },
+   "sources": [
+    "sothebys2011"
+   ]
+  },
+  {
+   "id": "b08",
+   "act": "story",
+   "narration": "Nhưng chính Wayne nói chuyện ông bán mười phần trăm lấy tám trăm đô là không chính xác. Theo ông, tám trăm đô chỉ là con số tượng trưng để gỡ tên ông khỏi hợp đồng.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Hay được kể",
+      "text": "Bán 10% lấy 800 $",
+      "strike": "Bán 10% lấy 800 $",
+      "replace": "800 $: con số tượng trưng",
+      "strike_cue": "không chính",
+      "action": "gạch bỏ"
+     },
+     {
+      "type": "icon",
+      "icon": "letter",
+      "kicker": "Theo Wayne, 2026",
+      "cue": "theo ông",
+      "line": "Gỡ tên khỏi hợp đồng",
+      "line_cue": "gỡ tên",
+      "action": "xóa tên"
+     }
+    ]
+   },
+   "sources": [
+    "chm2026"
+   ]
+  },
+  {
+   "id": "b09",
+   "act": "story",
+   "narration": "Vậy ông đã bỏ lại gì? Nhìn từ hôm nay, báo chí hay ước tính hàng trăm tỷ đô. Nhưng phép tính ấy giả định mười phần trăm không bao giờ bị pha loãng, mà mỗi lần gọi vốn, phần của người sáng lập thường nhỏ đi.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "chi_phi_co_hoi",
+      "kicker": "Ông đã bỏ lại gì?",
+      "line": "Con đường kia",
+      "line_cue": "bỏ lại",
+      "action": "rẽ đôi"
+     },
+     {
+      "type": "stat",
+      "value": 400,
+      "from": 400,
+      "prefix": "300–",
+      "suffix": " tỷ $",
+      "color": "b",
+      "label": "ước tính của báo chí, 2025",
+      "note": "giả định 10% không bị pha loãng",
+      "cue": "nhìn từ",
+      "action": "hiện số"
+     },
+     {
+      "type": "icon",
+      "icon": "glass",
+      "kicker": "Mỗi lần gọi vốn",
+      "cue": "mỗi lần",
+      "line": "Phần sáng lập bị pha loãng",
+      "line_cue": "phần của",
+      "action": "pha loãng"
+     }
+    ]
+   },
+   "sources": [
+    "fortune2025"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b10",
+   "act": "story",
+   "narration": "Còn nhìn từ năm một nghìn chín trăm bảy mươi sáu? Một đường: mười phần trăm của một công ty ba người, đang mắc nợ. Đường kia: giữ ngôi nhà và sự yên tâm. Theo lời ông, ông tin Apple sẽ thành công, nhưng không biết sẽ chao đảo đến đâu.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "chi_phi_co_hoi",
+      "kicker": "Nhìn từ năm ấy",
+      "line": "Hai con đường",
+      "line_cue": "còn nhìn",
+      "action": "rẽ đôi"
+     },
+     {
+      "type": "trio",
+      "kicker": "Ngã rẽ năm 1976",
+      "cue": "một đường",
+      "action": "đặt cạnh",
+      "items": [
+       {
+        "icon": "rocket",
+        "label": "10% công ty mắc nợ"
+       },
+       {
+        "icon": "house",
+        "label": "Nhà và sự yên tâm",
+        "cue": "đường kia"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "wave",
+      "kicker": "Theo lời Wayne",
+      "cue": "theo lời",
+      "line": "Tin sẽ thành công, sợ chao đảo",
+      "line_cue": "chao",
+      "action": "chao đảo"
+     }
+    ]
+   },
+   "sources": [
+    "inquirer2006",
+    "wayne_bio"
+   ]
+  },
+  {
+   "id": "b11",
+   "act": "story",
+   "narration": "Ông nói mình chưa sẵn sàng cho cơn lốc mà hai Steve mang theo. Và nếu ở lại, ông đùa, có lẽ ông đã thành người giàu nhất trong nghĩa trang.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "lightning",
+      "kicker": "Wayne, 2006 · lược dịch",
+      "line": "Chưa sẵn sàng cho cơn lốc",
+      "line_cue": "cơn lốc",
+      "action": "lóe"
+     },
+     {
+      "type": "icon",
+      "icon": "coins",
+      "kicker": "Nếu ở lại, ông đùa",
+      "cue": "và nếu",
+      "line": "Giàu nhất trong nghĩa trang",
+      "line_cue": "giàu nhất",
+      "action": "chất đống"
+     }
+    ]
+   },
+   "sources": [
+    "inquirer2006",
+    "cemetery"
+   ],
+   "certainty": "attributed"
+  },
+  {
+   "id": "b12",
+   "act": "story",
+   "narration": "Ông nói ông không hối hận: bạn quyết định theo hiểu biết của mình lúc ấy, rồi sống với nó. Đó chính là cách chấm một chi phí cơ hội.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "quote",
+      "text": "Bạn quyết định theo hiểu biết của mình lúc ấy, rồi sống với nó.",
+      "by": "Ronald Wayne, 2006 (lược dịch)",
+      "action": "hiện chữ"
+     },
+     {
+      "type": "icon",
+      "concept": "chi_phi_co_hoi",
+      "kicker": "Cách chấm",
+      "cue": "đó chính",
+      "line": "Bằng hiểu biết lúc chọn",
+      "line_cue": "chi phí",
+      "action": "rẽ đôi"
+     }
+    ]
+   },
+   "sources": [
+    "inquirer2006"
+   ]
+  },
+  {
+   "id": "b13",
+   "act": "principle",
+   "narration": "Từ ngã rẽ ấy, có ba nguyên tắc. Thứ nhất: gọi tên con đường kia. Mỗi lần nói có, hỏi: mình đang nói không với điều gì? Đặt nó lên bàn, cạnh con đường mình chọn.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "focus": [
+     0
+    ],
+    "action": "lướt tới",
+    "regions": [
+     {
+      "concept": "chi_phi_co_hoi",
+      "label": "Gọi tên đường kia",
+      "note": "Mình bỏ lại gì?",
+      "cue": "thứ nhất",
+      "note_cue": "mỗi lần"
+     },
+     {
+      "icon": "hourglass",
+      "label": "Đếm cả thứ vô hình",
+      "note": "Thời gian? Rủi ro?",
+      "cue": "thứ hai",
+      "note_cue": "thời gian"
+     },
+     {
+      "icon": "lantern",
+      "label": "Chấm bằng lúc chọn",
+      "note": "Lúc ấy biết gì?",
+      "cue": "thứ ba",
+      "note_cue": "một quyết"
+     }
+    ],
+    "start": "overview"
+   },
+   "sources": [
+    "wayne_bio"
+   ]
+  },
+  {
+   "id": "b14",
+   "act": "principle",
+   "narration": "Thứ hai: đếm cả thứ vô hình. Thời gian, sức lực, rủi ro, sự yên tâm. Wayne không chỉ so tám trăm đô với mười phần trăm; ông đặt cả ngôi nhà của mình lên cân.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "focus": [
+     1
+    ],
+    "action": "lướt sang"
+   },
+   "sources": [
+    "wayne_bio"
+   ]
+  },
+  {
+   "id": "b15",
+   "act": "example",
+   "narration": "Thử một quyết định quen thuộc, số minh họa thôi: nghỉ việc học thạc sĩ hai năm. Học phí khoảng hai trăm triệu. Lương bỏ lỡ, nếu đang nhận mười lăm triệu một tháng, là ba trăm sáu mươi triệu. Tính cả con đường kia, cái giá thật hơn năm trăm triệu.",
+   "visual": {
+    "type": "scenario",
+    "kicker": "Số minh họa",
+    "heading": "Nghỉ việc học thạc sĩ 2 năm",
+    "action": "kéo",
+    "before_label": "Chỉ nhìn hóa đơn",
+    "after_label": "Tính cả đường kia",
+    "cue": "cái giá",
+    "suffix": " triệu",
+    "bars": [
+     {
+      "label": "Học phí",
+      "before": 200,
+      "after": 200,
+      "concept": "gia_hoa_don"
+     },
+     {
+      "label": "Lương bỏ lỡ",
+      "before": 0,
+      "after": 360,
+      "concept": "chi_phi_co_hoi",
+      "cue": "lương bỏ"
+     },
+     {
+      "label": "Cái giá thật",
+      "before": 200,
+      "after": 560,
+      "color": "#CFC6B8",
+      "cue": "tính cả"
+     }
+    ],
+    "takeaway": "Hơn 500 triệu, không phải 200.",
+    "takeaway_cue": "hơn năm"
+   },
+   "sources": [
+    "minhhoa"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b16",
+   "act": "example",
+   "narration": "Không phải đừng đi học: hai năm ấy có thể rất đáng. Chỉ là giờ bạn so đúng hai con đường, chứ không phải một tờ hóa đơn.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "book",
+      "kicker": "Không phải: đừng đi học",
+      "line": "Hai năm có thể rất đáng",
+      "line_cue": "hai năm",
+      "action": "lật trang"
+     },
+     {
+      "type": "trio",
+      "kicker": "Chỉ là",
+      "heading": "So đúng hai con đường",
+      "cue": "chỉ là",
+      "action": "đặt cạnh",
+      "cross": false,
+      "items": [
+       {
+        "concept": "chi_phi_co_hoi",
+        "label": "Hai con đường"
+       },
+       {
+        "concept": "gia_hoa_don",
+        "label": "Không chỉ hóa đơn",
+        "cue": "chứ không"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "minhhoa"
+   ]
+  },
+  {
+   "id": "b17",
+   "act": "principle",
+   "narration": "Thứ ba: chấm bằng lúc chọn. Một quyết định tốt là hợp lý với thông tin lúc ấy, không phải với kết quả năm mươi năm sau. Wayne tự chấm mình theo cách đó.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "focus": [
+     2
+    ],
+    "action": "lướt xuống"
+   },
+   "sources": [
+    "inquirer2006"
+   ]
+  },
+  {
+   "id": "b18",
+   "act": "complication",
+   "narration": "Nhưng hình ảnh ngã rẽ có chỗ dừng. Ở ngã rẽ thật, bạn nhìn được cả hai con đường. Trong đời, con đường kia luôn mờ: năm ấy không ai thấy được Apple của hôm nay. Nhìn lại thì cái gì cũng rõ; nhìn tới thì không.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "chi_phi_co_hoi",
+      "kicker": "Ẩn dụ dừng ở đâu?",
+      "line": "Ngã rẽ thật: thấy cả hai",
+      "line_cue": "ở ngã",
+      "action": "rẽ đôi"
+     },
+     {
+      "type": "icon",
+      "icon": "lantern",
+      "kicker": "Trong đời",
+      "cue": "trong đời",
+      "line": "Con đường kia luôn mờ",
+      "line_cue": "luôn mờ",
+      "action": "soi lối"
+     },
+     {
+      "type": "icon",
+      "icon": "mirror",
+      "kicker": "Nhìn lại thì rõ",
+      "cue": "nhìn lại",
+      "line": "Nhìn tới thì không",
+      "line_cue": "nhìn tới",
+      "action": "phản chiếu"
+     }
+    ]
+   },
+   "sources": [
+    "inquirer2006"
+   ]
+  },
+  {
+   "id": "b19",
+   "act": "complication",
+   "narration": "Và đừng biến chi phí cơ hội thành nỗi day dứt. Nghĩ mãi về mọi con đường không chọn, bạn sẽ không đi nổi con đường nào. Câu chuyện này cũng không có nghĩa là nên mua cổ phiếu nào: đó là lịch sử, không phải lời khuyên.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "brain",
+      "kicker": "Đừng thành day dứt",
+      "line": "Nghĩ mãi, không đi nổi",
+      "line_cue": "nghĩ mãi",
+      "action": "rối"
+     },
+     {
+      "type": "icon",
+      "icon": "shield",
+      "kicker": "Không phải lời khuyên đầu tư",
+      "cue": "câu chuyện",
+      "line": "Lịch sử, không phải lời khuyên",
+      "line_cue": "đó là",
+      "action": "chặn lại"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b20",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Cuối tuần này, bạn được mời làm thêm, trả một triệu. Nếu nhận, bạn lỡ buổi về quê ăn giỗ ông bà. Chi phí cơ hội của việc đi làm thêm là gì?",
+   "visual": {
+    "type": "question",
+    "question": "Làm thêm cuối tuần 1 triệu, lỡ buổi giỗ ở quê. Chi phí cơ hội?",
+    "choices": [
+     "Tiền xăng đi làm",
+     "Buổi giỗ cùng gia đình",
+     "Không có, vì được trả tiền"
+    ],
+    "answer": "B — thứ tốt nhất bạn bỏ lại.",
+    "think_seconds": 5
+   },
+   "sources": [
+    "minhhoa"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b21",
+   "act": "recap",
+   "narration": "Đáp án là B: một triệu là thứ bạn nhận, buổi giỗ là thứ bạn trả. Vậy là ba nguyên tắc. Gọi tên con đường kia. Đếm cả thứ vô hình. Và chấm bằng lúc chọn.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "action": "lùi xa",
+    "focus": [
+     {
+      "region": 0,
+      "cue": "buổi giỗ"
+     }
+    ],
+    "overview": true,
+    "overview_cue": "vậy là",
+    "line": "Ba câu hỏi ở mỗi ngã rẽ",
+    "line_cue": "và chấm"
+   }
+  },
+  {
+   "id": "b22",
+   "act": "close",
+   "narration": "Năm một nghìn chín trăm bảy mươi sáu, Wayne đứng ở ngã rẽ và chọn ngôi nhà, sự yên tâm. Lần tới khi nói có với điều gì, hãy hỏi: mình đang bỏ lại con đường nào?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "house",
+      "kicker": "Wayne · 1976",
+      "line": "Chọn ngôi nhà, sự yên tâm",
+      "line_cue": "chọn",
+      "action": "đứng vững"
+     },
+     {
+      "type": "icon",
+      "concept": "chi_phi_co_hoi",
+      "kicker": "Lần tới, hãy hỏi",
+      "cue": "lần tới",
+      "line": "Mình bỏ lại con đường nào?",
+      "line_cue": "hãy hỏi",
+      "action": "rẽ đôi"
+     }
+    ]
+   },
+   "sources": [
+    "sothebys2011",
+    "inquirer2006"
+   ]
+  },
+  {
+   "id": "b23",
+   "act": "close",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
+   "visual": {
+    "type": "end",
+    "kicker": "Khung tư duy · Tập 7",
+    "title": "Chi phí cơ hội",
+    "ask": "Bạn muốn tập sau về khung tư duy nào?",
+    "ask_hint": "Thiên kiến kẻ sống sót · tối thiểu hóa hối tiếc · quan trọng hay khẩn cấp",
+    "ask_cue": "hay chủ",
+    "sources_line": "Nguồn: Sotheby's (2011) · Inquirer (2006) · AppleInsider (2026) · Fortune · xem mô tả",
+    "disclaimer": "Nội dung giáo dục; câu chuyện kể lại từ nguồn công khai; không phải lời khuyên đầu tư.",
+    "sources_cue": "còn bạn"
+   }
+  }
+ ],
+ "pronounce": {}
+}

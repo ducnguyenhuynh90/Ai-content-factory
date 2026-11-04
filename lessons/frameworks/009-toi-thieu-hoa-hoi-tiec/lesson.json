@@ -760,15 +760,17 @@
         "icon": "coins",
         "label": "Để dành, người thân góp",
         "cue": "một khoản"
-       },
-       {
-        "icon": "house",
-        "label": "Có lẽ dễ tìm lại việc",
-        "cue": "thất bại"
        }
-      ],
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "house",
+      "kicker": "Thất bại: có lẽ vẫn có việc",
+      "cue": "thất bại",
       "line": "Ít đệm hơn: tính kỹ hơn",
-      "line_cue": "người ít"
+      "line_cue": "người ít",
+      "action": "trú lại"
      }
     ]
    },

@@ -47,4 +47,3 @@ _Khung tư duy · Tập 9 · 809 words · ~3.49 min · 4:3_
 - [minhhoa] Ví dụ minh họa của kênh (không phải khảo sát): Lan, 27 tuổi, làm ngân hàng, muốn nghỉ một năm học làm bánh và mở tiệm nhỏ; 'độ nặng trong lòng' chấm trên thang 10 (mất một năm lương 8 → 2; chưa từng thử 3 → 8)
 
 ## Lint
-- storyboard: b15 shot 1: one picture held ~10.0s (> 8s): add a shot on a cue word, or declare 'hold' on the beat
