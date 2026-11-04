@@ -1,0 +1,1017 @@
+{
+ "meta": {
+  "series": "Khung tư duy · Tập 3",
+  "title": "Khi thước đo thành mục tiêu",
+  "subtitle": "Goodhart's law — đuôi chuột, nhiệt kế và ngọn nến",
+  "topic": "books",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt đi làm, sống với KPI, điểm số, lượt xem; hay đặt con số làm mục tiêu cho mình, cho nhóm, cho con; thích chuyện lịch sử Hà Nội và cách nghĩ",
+  "aspect": "4:3",
+  "target_minutes": [
+   3,
+   5
+  ],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
+  "learning_goals": [
+   "Kể lại câu chuyện Hà Nội 1902 theo nghiên cứu của Michael G. Vann: cống ngầm khu phố Tây thành nhà của chuột; thuê người bắt chuột, có ngày khoảng 20.000 con; thưởng 1 xu mỗi con, nộp đuôi làm bằng; chuột cụt đuôi, trại nuôi chuột; chương trình thưởng bị dừng",
+   "Phân biệt thước đo làm đúng việc (nhiệt kế đo cơ thể) với thước đo bị biến thành mục tiêu (nhiệt kế hơ trên ngọn nến), và biết nguồn gốc định luật: Goodhart (1975), cách diễn đạt của Strathern (1997)",
+   "Dùng ba nguyên tắc: hỏi con số thay cho gì; nghĩ như người bị đo; dùng nhiều thước đo và nhìn tận nơi; và biết chỗ ẩn dụ dừng lại (vẫn cần đo, chỉ đừng để một con số làm mục tiêu duy nhất; không phải ai bị đo cũng đi tắt)"
+  ],
+  "disclaimer": "Nội dung giáo dục; câu chuyện kể lại từ nguồn công khai.",
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người kể chuyện lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively. Nothing in the script depends on this particular voice.",
+  "concepts": [
+   {
+    "id": "nhiet_ke",
+    "visual": "thermometer",
+    "color": "a",
+    "shows": "nhiệt kế đo đúng chỗ: con số là cửa sổ nhìn vào cơ thể; thước đo làm đúng việc khi ta nhìn qua nó vào thứ thật (ít chuột, khách quay lại, con hiểu bài)",
+    "omits": "nhiệt kế thật không bị ai hơ nến, nhưng thước đo trong công việc luôn có người bị đo và có tiền, áp lực gắn vào; một thước đo tốt vẫn chỉ nhìn được một mặt; không phải ai bị đo cũng đi tắt"
+   },
+   {
+    "id": "ho_nen",
+    "visual": "candle",
+    "color": "b",
+    "shows": "ngọn nến dưới nhiệt kế: đẩy con số lên mà cơ thể không đổi; khi con số thành mục tiêu, người ta làm đẹp con số thay vì đổi thực tế (nộp đuôi thay vì diệt chuột)",
+    "omits": "đừng vì thế mà vứt nhiệt kế: không đo thì không biết chuột nhiều hay ít; đặt mục tiêu bằng con số vẫn hữu ích khi có nhiều thước đo đi cùng và có người nhìn tận nơi"
+   }
+  ],
+  "brief": {
+   "target_viewer": "Người Việt 20–40 tuổi đi làm, sống với KPI, điểm số, lượt xem; hay đặt con số làm mục tiêu cho nhóm hoặc cho con (giả định của người viết, chủ kênh xác nhận lại)",
+   "format": "Giải thích một khung tư duy qua một câu chuyện thật (concept explainer), 4–5 phút, 4:3, icon vẽ tay, một bảng xuyên suốt cho ba nguyên tắc, một ví dụ đổi trạng thái, một giọng đọc",
+   "central_question": "Vì sao đặt một con số làm mục tiêu lại hay làm hỏng chính con số ấy, và dùng thước đo thế nào cho đúng?",
+   "transformation": "Trước khi xem, họ nghĩ đo được là quản được, con số càng đẹp việc càng tốt. Sau khi xem, họ kể lại được Hà Nội 1902 (cống ngầm – thuê bắt chuột – một xu một đuôi – chuột cụt đuôi – trại nuôi chuột) theo nghiên cứu của Vann, biết định luật Goodhart và câu của Strathern, phân biệt nhiệt kế đo cơ thể với nhiệt kế hơ nến, tự soi một con số thường ngày (đơn hàng, trang vở) theo ba nguyên tắc, và biết rằng vẫn cần đo",
+   "discovery_goal": "Tìm kiếm (\"định luật Goodhart\", \"Goodhart's law\", \"hiệu ứng rắn hổ mang\", \"cobra effect\", \"Hà Nội 1902 chuột\", \"bệnh thành tích\", \"KPI\", \"khung tư duy\") và đề xuất từ video lịch sử, tư duy; tập 3 của series Khung tư duy",
+   "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn tập sau về khung tư duy nào?\" (comment answering the end-card question)",
+   "share_recipient": "Một người quản lý hay phụ huynh sắp đặt thưởng theo một con số (đơn hàng, điểm, trang vở): câu hỏi 'mình đang chữa bệnh hay hơ nhiệt kế?' giúp bàn lại mục tiêu mà không ai bị coi là chống đo lường",
+   "evidence": "Vann 2003 (Of Rats, Rice, and Race), sách The Great Hanoi Rat Hunt (OUP), bài IIAS của Vann; Wikipedia, Atlas Obscura, Saigoneer (số ngày cao điểm ~20.000, 1 xu mỗi đuôi, chuột cụt đuôi, trại nuôi chuột); Goodhart 1975; Strathern 1997; số nhiệt kế, quán trà sữa, trang vở là số minh họa",
+   "constraints": "4–5 phút, 4:3, icon vẽ, không khuôn mặt người thật (Vann, Goodhart là huy hiệu chữ cái), một giọng đọc (OmniVoice seed 99 speed 0.88), tên tiếng Anh giữ nguyên, số đọc bằng chữ và làm tròn khi đọc, số chính xác trên màn hình; kể chuyện thuộc địa đúng sự thật và tôn trọng: không chế giễu người Việt bắt chuột, không hình ảnh ghê rợn; không đọc số ca dịch hạch (nguồn lệch nhau); không có lời khuyên đầu tư; giữ lời miễn trừ"
+  },
+  "youtube": {
+   "title": "Hà Nội 1902: trả tiền mua đuôi chuột, chuột lại nhiều thêm?",
+   "thumbnail_text": "Trả tiền cho mỗi đuôi chuột. Rồi chuột cụt đuôi xuất hiện.",
+   "description": "Năm 1902, chính quyền thuộc địa Pháp ở Hà Nội trả thưởng cho mỗi con chuột bị bắt, mỗi con một xu, và chỉ cần nộp cái đuôi làm bằng. Rồi người ta thấy chuột cụt đuôi chạy trong phố, và cả trại nuôi chuột ở ngoại ô. Video kể lại câu chuyện ấy theo nghiên cứu của nhà sử học Michael G. Vann, giải thích định luật Goodhart (khi thước đo thành mục tiêu) bằng hình ảnh nhiệt kế hơ trên ngọn nến, ba nguyên tắc (hỏi con số thay cho gì; nghĩ như người bị đo; dùng nhiều thước đo và nhìn tận nơi), một ví dụ về quán trà sữa, và một câu hỏi để bạn tự thử.\n\nẨn dụ dừng ở đâu: đừng vì thế mà vứt nhiệt kế. Không đếm gì thì không biết chuột nhiều hay ít; đo vẫn cần, chỉ đừng để một con số làm mục tiêu duy nhất. Và không phải ai bị đo cũng đi tắt: quy luật chỉ nói rằng khi tiền và áp lực dồn vào một con số, sẽ có người tìm ra đường tắt.\n\nLưu ý về số liệu: 'có ngày khoảng 20.000 con' là con số làm tròn; các bản kể dựa trên lưu trữ ghi 20.112 con ngày 21/6/1902 hoặc 20.114 con ngày 12/6. Năm và số ca dịch hạch ở Hà Nội khác nhau giữa các nguồn, nên video không đọc con số. Chuyện 'lúc dừng, chuột không hề ít đi' là theo các bản kể lại. Câu của Goodhart (1975) và câu của Marilyn Strathern (1997) là lược dịch; câu 'khi thước đo trở thành mục tiêu…' là cách diễn đạt của Strathern, không phải nguyên văn Goodhart. 'Hiệu ứng rắn hổ mang' ở Delhi là chuyện chưa kiểm chứng được, theo Vann. Nhiệt kế 42 °C, số đơn quán trà sữa và tiền thưởng trang vở là số minh họa. Đây là chuyện thời thuộc địa: người dân bị đặt vào một luật chơi do người khác đặt, và họ phản ứng với đúng luật chơi ấy.\n\nChương:\nTiền thưởng cho đuôi chuột\nĐiều ta hay nghĩ\nNhiệt kế và ngọn nến\nHà Nội, cống ngầm và chuột\nMichael G. Vann và lưu trữ\nMùa xuân 1902\nMột xu, một cái đuôi\nChuột cụt đuôi, trại nuôi chuột\nThước đo đổi việc\nHiệu ứng rắn hổ mang hay hiệu ứng chuột?\nGoodhart, 1975\nStrathern, 1997\nNguyên tắc 1: con số thay cho gì?\nNguyên tắc 2: nghĩ như người bị đo\nQuán trà sữa (số minh họa)\nNguyên tắc 3: nhiều thước đo, nhìn tận nơi\nẨn dụ dừng ở đâu\nThử một chút: thưởng con theo trang vở\nBa nguyên tắc\nChữa bệnh hay hơ nhiệt kế?\n\nNguồn:\n- Michael G. Vann, Of Rats, Rice, and Race: The Great Hanoi Rat Massacre, an Episode in French Colonial History, French Colonial History, 2003\n- Michael G. Vann & Liz Clarke, The Great Hanoi Rat Hunt: Empire, Disease, and Modernity in French Colonial Vietnam, Oxford University Press: https://www.oupcanada.com/catalog/9780190602697.html\n- Michael G. Vann, Rats and Sewers in 'Modern' and 'Civilized' French Hanoi, IIAS: https://www.iias.asia/the-review/rats-and-sewers-modern-and-civilized-french-hanoi\n- Atlas Obscura, The Great Hanoi Rat Massacre of 1902: https://www.atlasobscura.com/articles/hanoi-rat-massacre-1902\n- Wikipedia, Great Hanoi Rat Massacre: https://en.wikipedia.org/wiki/Great_Hanoi_Rat_Massacre\n- C. A. E. Goodhart, Problems of Monetary Management: The U.K. Experience, Reserve Bank of Australia, 1975\n- Marilyn Strathern, 'Improving ratings': audit in the British University system, European Review 5(3), 1997\n\nBạn muốn tập sau về khung tư duy nào? Để lại bình luận nhé.",
+   "tags": [
+    "định luật Goodhart",
+    "Goodhart's law",
+    "khi thước đo thành mục tiêu",
+    "khung tư duy",
+    "mô hình tư duy",
+    "hiệu ứng rắn hổ mang",
+    "cobra effect",
+    "lịch sử Hà Nội",
+    "Hà Nội 1902",
+    "KPI",
+    "bệnh thành tích",
+    "tư duy phản biện",
+    "ra quyết định",
+    "kỹ năng tư duy"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "vann2003",
+   "cite": "Michael G. Vann, 'Of Rats, Rice, and Race: The Great Hanoi Rat Massacre, an Episode in French Colonial History', French Colonial History (French Colonial Historical Society), May 2003 (listed on Vann's publications page; not opened): rat hunt of 1902, tail bounty, tail-less rats, rat farms",
+   "url": "https://www.csus.edu/indiv/v/vannm/publications.html"
+  },
+  {
+   "id": "vann_book",
+   "cite": "Michael G. Vann, illustrated by Liz Clarke, The Great Hanoi Rat Hunt: Empire, Disease, and Modernity in French Colonial Vietnam, Oxford University Press (Graphic History series), ISBN 9780190602697 (imprint listed as 2018 by most retailers, [2019] in one catalogue)",
+   "url": "https://www.oupcanada.com/catalog/9780190602697.html"
+  },
+  {
+   "id": "vann_iias",
+   "cite": "Michael G. Vann, 'Rats and Sewers in \"Modern\" and \"Civilized\" French Hanoi', The Newsletter / The Review, International Institute for Asian Studies: sewers built for the French quarter, rats in elite homes, Vietnamese rat catchers (via search summaries)",
+   "url": "https://www.iias.asia/the-review/rats-and-sewers-modern-and-civilized-french-hanoi"
+  },
+  {
+   "id": "wiki_rats",
+   "cite": "Wikipedia, 'Great Hanoi Rat Massacre' (via search summaries): April–June 1902; cause: third plague pandemic and the expansion of the French Quarter; bounty of 1 cent per rat, severed tail as proof; tail-less rats; outcome: bounty programme cancelled; Vann's 'Rat Effect' vs the unproven cobra story",
+   "url": "https://en.wikipedia.org/wiki/Great_Hanoi_Rat_Massacre"
+  },
+  {
+   "id": "atlas_rats",
+   "cite": "Atlas Obscura, 'The Great Hanoi Rat Massacre of 1902' (drawing on Vann): one cent per rat, tail as proof; daily counts above 10,000 in June, 20,112 on 21 June 1902 (other retellings: 20,114 on 12 June)",
+   "url": "https://www.atlasobscura.com/articles/hanoi-rat-massacre-1902"
+  },
+  {
+   "id": "saigoneer_rats",
+   "cite": "Saigoneer, 'The Great Hanoi Rat Massacre' and 'How Hanoi's Infectious Rats and Impish Locals Bamboozled the French in 1902' (Vann interview): rat farms outside the city; plague still reached Hanoi (dates and counts differ between retellings: 1902, 1903, 1906)",
+   "url": "https://saigoneer.com/hanoi-heritage/23265-author-michael-vann-on-hanoi-s-infamous-colonial-rat-hunt"
+  },
+  {
+   "id": "goodhart1975",
+   "cite": "C. A. E. Goodhart, 'Problems of Monetary Management: The U.K. Experience', Papers in Monetary Economics, Reserve Bank of Australia, 1975: 'Any observed statistical regularity will tend to collapse once pressure is placed upon it for control purposes' (wording via Wikipedia 'Goodhart's law' and several secondary sources; original not opened)",
+   "url": "https://en.wikipedia.org/wiki/Goodhart%27s_law"
+  },
+  {
+   "id": "strathern1997",
+   "cite": "Marilyn Strathern, ''Improving ratings': audit in the British University system', European Review 5(3) (1997) 305–321: the widely quoted phrasing 'When a measure becomes a target, it ceases to be a good measure' (attributed to this paper by Wikipedia and many sources; sentence not seen in the original here)",
+   "url": "https://www.cambridge.org/core/journals/european-review/article/improving-ratings-audit-inthe-british-university-system/FC2EE640C0C44E3DB87C29FB666E9AAB"
+  },
+  {
+   "id": "minhhoa",
+   "cite": "Số minh họa và tình huống của kênh (không phải khảo sát): nhiệt kế 37 → 42 °C khi hơ nến; quán trà sữa 60 → 90 đơn mỗi ca, 3 → 15 đơn sai, 40 → 25 khách quen quay lại; thưởng con 10.000đ mỗi trang vở"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Hỏi con số thay cho gì",
+   "line": "Gọi tên thứ thật mà con số đứng thay (ít chuột, không phải nhiều đuôi) và nhìn vào thứ ấy."
+  },
+  {
+   "name": "Nghĩ như người bị đo",
+   "line": "Hỏi: làm sao đạt con số mà không đạt mục tiêu? Nếu bạn nghĩ ra, người khác cũng sẽ nghĩ ra."
+  },
+  {
+   "name": "Nhiều thước đo, nhìn tận nơi",
+   "line": "Đặt vài con số đi cùng nhau, và thỉnh thoảng tự đi xem thực tế."
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Năm một nghìn chín trăm lẻ hai, Hà Nội trả tiền cho mỗi đuôi chuột. Rồi chuột cụt đuôi xuất hiện.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "coin",
+      "motion": "spin",
+      "turns": 1.5,
+      "color": "a",
+      "kicker": "Hà Nội, thời Pháp thuộc",
+      "line": "Tiền thưởng mỗi đuôi chuột",
+      "line_cue": "trả tiền",
+      "action": "lật"
+     },
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "color": "b",
+      "kicker": "Rồi người ta thấy",
+      "cue": "rồi chuột",
+      "line": "Chuột cụt đuôi",
+      "line_cue": "chuột cụt",
+      "action": "soi"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "cụt đuôi",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "vann2003",
+    "vann_book",
+    "wiki_rats"
+   ]
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Đó không phải chuyện cười. Đó là một quy luật có tên riêng, và có cách để tránh nó.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "book",
+      "kicker": "Không phải chuyện cười",
+      "line": "Một quy luật có tên",
+      "line_cue": "một quy",
+      "action": "mở ra"
+     },
+     {
+      "type": "icon",
+      "concept": "ho_nen",
+      "kicker": "Khi thước đo thành mục tiêu",
+      "cue": "và có",
+      "line": "Và cách tránh",
+      "line_cue": "cách để",
+      "action": "bập bùng"
+     }
+    ]
+   },
+   "sources": [
+    "goodhart1975"
+   ]
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Khung tư duy · Tập 3",
+    "title": "Khi thước đo thành mục tiêu",
+    "subtitle": "Goodhart's law",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Ta hay nghĩ: muốn ít chuột, cứ trả tiền theo số chuột bắt được. Đo được thì quản được. Con số càng đẹp, việc càng tốt. Nghe rất hợp lý.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "coins",
+      "kicker": "Điều ta hay nghĩ",
+      "line": "Trả tiền theo số chuột",
+      "line_cue": "cứ trả",
+      "action": "chồng lên"
+     },
+     {
+      "type": "icon",
+      "icon": "chart",
+      "kicker": "Đo được",
+      "cue": "đo được",
+      "line": "Thì quản được",
+      "line_cue": "thì quản",
+      "action": "vẽ lên"
+     },
+     {
+      "type": "icon",
+      "concept": "nhiet_ke",
+      "kicker": "Con số càng đẹp",
+      "cue": "con số",
+      "line": "Việc càng tốt?",
+      "line_cue": "việc càng",
+      "action": "dâng lên"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "Hình dung một cái nhiệt kế. Nó cho biết bạn có sốt không. Nhưng nếu một đứa trẻ muốn nghỉ học, hơ nhiệt kế trên ngọn nến, con số vọt lên bốn mươi hai độ, mà người chẳng ốm thêm chút nào.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "nhiet_ke",
+      "kicker": "Nhiệt kế đo cơ thể",
+      "line": "Có sốt không?",
+      "line_cue": "có sốt",
+      "action": "đo"
+     },
+     {
+      "type": "icon",
+      "concept": "ho_nen",
+      "kicker": "Muốn nghỉ học",
+      "cue": "nhưng nếu",
+      "line": "Hơ trên ngọn nến",
+      "line_cue": "hơ nhiệt",
+      "action": "hơ lửa"
+     },
+     {
+      "type": "stat",
+      "value": 42,
+      "from": 37,
+      "suffix": "°C",
+      "label": "nhiệt kế hơ trên nến",
+      "note": "minh họa · người không ốm thêm",
+      "color": "b",
+      "cue": "con số",
+      "action": "vọt lên"
+     }
+    ]
+   },
+   "sources": [
+    "minhhoa"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b03",
+   "act": "context",
+   "narration": "Hà Nội đầu thế kỷ hai mươi, thời Pháp thuộc. Theo Vann, người Pháp xây cống ngầm, trước hết cho khu phố Tây. Cống mới thành nhà của chuột, giữa lúc dịch hạch đang lan khắp châu Á.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "house",
+      "kicker": "Hà Nội · thời Pháp thuộc",
+      "line": "Cống ngầm cho khu phố Tây",
+      "line_cue": "người pháp",
+      "action": "xây"
+     },
+     {
+      "type": "icon",
+      "icon": "door",
+      "kicker": "Cống mới",
+      "cue": "cống mới",
+      "line": "Thành nhà của chuột",
+      "line_cue": "thành nhà",
+      "action": "mở ra"
+     },
+     {
+      "type": "icon",
+      "icon": "ship",
+      "kicker": "Dịch hạch",
+      "cue": "giữa lúc",
+      "line": "Đang lan khắp châu Á",
+      "line_cue": "đang lan",
+      "action": "cập bến"
+     }
+    ]
+   },
+   "sources": [
+    "vann_iias",
+    "wiki_rats"
+   ]
+  },
+  {
+   "id": "b04",
+   "act": "context",
+   "narration": "Câu chuyện được nhà sử học Michael G. Vann tìm lại trong lưu trữ thuộc địa, kể trong bài báo năm hai nghìn lẻ ba và cuốn sách The Great Hanoi Rat Hunt. Mình kể theo nghiên cứu của ông.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Michael G. Vann",
+      "initials": "MV",
+      "role": "Nhà sử học",
+      "years": "Sacramento State, California",
+      "action": "khắc"
+     },
+     {
+      "type": "book",
+      "title": "The Great Hanoi Rat Hunt",
+      "author": "Michael G. Vann · Liz Clarke",
+      "kicker": "Oxford University Press",
+      "cue": "kể trong",
+      "action": "mở bìa",
+      "facts": [
+       {
+        "big": "2003",
+        "text": "Of Rats, Rice, and Race",
+        "cue": "bài báo"
+       },
+       {
+        "big": "Sách",
+        "text": "Lịch sử bằng tranh",
+        "cue": "cuốn sách"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "vann2003",
+    "vann_book"
+   ]
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Mùa xuân năm một nghìn chín trăm lẻ hai, chính quyền thuê người Việt xuống cống bắt chuột. Số chuột bị giết mỗi ngày tăng dần. Có ngày khoảng hai mươi nghìn con.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "people",
+      "kicker": "Mùa xuân 1902",
+      "line": "Thuê người xuống cống",
+      "line_cue": "thuê",
+      "action": "xuống cống"
+     },
+     {
+      "type": "icon",
+      "icon": "chart",
+      "kicker": "Mỗi ngày",
+      "cue": "số chuột",
+      "line": "Tăng dần",
+      "line_cue": "tăng dần",
+      "action": "leo dốc"
+     },
+     {
+      "type": "stat",
+      "value": 20000,
+      "from": 0,
+      "prefix": "~",
+      "label": "con chuột trong một ngày · 6/1902",
+      "note": "các bản kể ghi ngày và số hơi khác nhau",
+      "color": "a",
+      "cue": "có ngày",
+      "action": "đếm lên"
+     }
+    ]
+   },
+   "sources": [
+    "wiki_rats",
+    "atlas_rats",
+    "vann_iias"
+   ],
+   "certainty": "disputed"
+  },
+  {
+   "id": "b06",
+   "act": "story",
+   "narration": "Rồi chính quyền mở thưởng cho mọi người: mỗi con chuột một xu. Để đỡ phải nhận cả đống xác chuột, chỉ cần nộp cái đuôi.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "coin",
+      "kicker": "Thưởng cho mọi người",
+      "line": "Mỗi con chuột: 1 xu",
+      "line_cue": "mỗi con",
+      "action": "trao"
+     },
+     {
+      "type": "swap",
+      "kicker": "Thứ được đếm đổi đi",
+      "cue": "để đỡ",
+      "strike_cue": "chỉ cần",
+      "action": "đổi chỗ",
+      "from": {
+       "concept": "nhiet_ke",
+       "label": "Số chuột thật"
+      },
+      "to": {
+       "concept": "ho_nen",
+       "label": "Số đuôi nộp lên",
+       "cue": "cái đuôi"
+      }
+     }
+    ]
+   },
+   "sources": [
+    "wiki_rats",
+    "atlas_rats",
+    "vann2003"
+   ]
+  },
+  {
+   "id": "b07",
+   "act": "story",
+   "narration": "Và người ta làm đúng điều được trả tiền. Theo Vann, quan chức bắt đầu thấy chuột không đuôi chạy trong phố: bắt, cắt đuôi, thả ra cho chúng đẻ tiếp. Rồi có cả trại nuôi chuột ở ngoại ô.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "ho_nen",
+      "kicker": "Làm đúng điều được trả tiền",
+      "line": "Nhắm vào cái đuôi",
+      "line_cue": "làm đúng",
+      "action": "bén lửa"
+     },
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Theo Vann",
+      "cue": "theo vann",
+      "line": "Chuột không đuôi trong phố",
+      "line_cue": "chuột không",
+      "action": "phát hiện"
+     },
+     {
+      "type": "trio",
+      "kicker": "Một vòng khép kín",
+      "cue": "bắt, cắt",
+      "action": "quay vòng",
+      "items": [
+       {
+        "icon": "lock",
+        "label": "Bắt, cắt đuôi",
+        "cue": "bắt, cắt"
+       },
+       {
+        "icon": "door",
+        "label": "Thả ra",
+        "cue": "thả ra"
+       },
+       {
+        "icon": "sprout",
+        "label": "Đẻ tiếp",
+        "cue": "đẻ tiếp"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "factory",
+      "kicker": "Ngoại ô",
+      "cue": "rồi có",
+      "line": "Trại nuôi chuột",
+      "line_cue": "trại nuôi",
+      "action": "mọc lên"
+     }
+    ]
+   },
+   "sources": [
+    "vann2003",
+    "wiki_rats",
+    "atlas_rats"
+   ]
+  },
+  {
+   "id": "b08",
+   "act": "story",
+   "narration": "Chương trình thưởng bị dừng. Người ta kể rằng lúc ấy chuột không hề ít đi, và dịch hạch vẫn đến Hà Nội. Thước đo đã đổi việc: từ đếm chuột chết thành đếm đuôi.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "hourglass",
+      "kicker": "Chương trình dừng",
+      "line": "Chuột không hề ít đi",
+      "line_cue": "chuột không",
+      "action": "hết giờ"
+     },
+     {
+      "type": "icon",
+      "icon": "ship",
+      "kicker": "Dịch hạch",
+      "cue": "và dịch",
+      "line": "Vẫn đến Hà Nội",
+      "line_cue": "vẫn đến",
+      "action": "cập bến"
+     },
+     {
+      "type": "trio",
+      "kicker": "Thước đo đổi việc",
+      "cue": "thước đo",
+      "action": "lệch đi",
+      "items": [
+       {
+        "concept": "nhiet_ke",
+        "label": "Đếm chuột chết",
+        "cue": "từ đếm"
+       },
+       {
+        "concept": "ho_nen",
+        "label": "Đếm đuôi",
+        "cue": "thành đếm"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "wiki_rats",
+    "saigoneer_rats"
+   ],
+   "certainty": "attributed"
+  },
+  {
+   "id": "b09",
+   "act": "complication",
+   "narration": "Ý này hay được kể bằng chuyện rắn hổ mang ở Delhi, gọi là hiệu ứng rắn hổ mang. Theo Vann, chuyện ấy chưa kiểm chứng được. Ông đề nghị gọi là hiệu ứng chuột, vì vụ Hà Nội có giấy tờ lưu trữ.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "book",
+      "kicker": "Hay được kể",
+      "line": "Rắn hổ mang ở Delhi",
+      "line_cue": "rắn hổ",
+      "action": "lật trang"
+     },
+     {
+      "type": "statement",
+      "kicker": "Theo Vann",
+      "cue": "theo vann",
+      "text": "Hiệu ứng rắn hổ mang",
+      "strike": "Hiệu ứng rắn hổ mang",
+      "replace": "Hiệu ứng chuột",
+      "strike_cue": "ông đề",
+      "action": "gạch bỏ"
+     },
+     {
+      "type": "icon",
+      "icon": "letter",
+      "kicker": "Vụ Hà Nội",
+      "cue": "vì vụ",
+      "line": "Có giấy tờ lưu trữ",
+      "line_cue": "có giấy",
+      "action": "mở hồ sơ"
+     }
+    ]
+   },
+   "sources": [
+    "wiki_rats",
+    "vann2003"
+   ],
+   "certainty": "attributed"
+  },
+  {
+   "id": "b10",
+   "act": "context",
+   "narration": "Quy luật này mang tên một nhà kinh tế người Anh, Charles Goodhart. Năm một nghìn chín trăm bảy mươi lăm, khi bàn về chính sách tiền tệ, ông viết: một quy luật thống kê sẽ sụp khi bị dùng để điều khiển.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Charles Goodhart",
+      "initials": "CG",
+      "role": "Nhà kinh tế, Anh",
+      "years": "Từng cố vấn Ngân hàng Anh",
+      "action": "khắc"
+     },
+     {
+      "type": "icon",
+      "icon": "coins",
+      "kicker": "1975",
+      "cue": "năm một",
+      "line": "Bàn về chính sách tiền tệ",
+      "line_cue": "khi bàn",
+      "action": "xếp chồng"
+     },
+     {
+      "type": "quote",
+      "text": "Quy luật thống kê nào cũng có xu hướng sụp đổ khi bị dùng để điều khiển.",
+      "by": "Charles Goodhart, 1975 (lược dịch)",
+      "cue": "ông viết",
+      "action": "hiện chữ"
+     }
+    ]
+   },
+   "sources": [
+    "goodhart1975"
+   ]
+  },
+  {
+   "id": "b11",
+   "act": "context",
+   "narration": "Năm một nghìn chín trăm chín mươi bảy, nhà nhân học Marilyn Strathern diễn đạt gọn hơn, và đó là câu hay được trích: khi thước đo trở thành mục tiêu, nó không còn là thước đo tốt.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "nhiet_ke",
+      "kicker": "Marilyn Strathern · 1997",
+      "line": "Diễn đạt gọn hơn",
+      "line_cue": "diễn đạt",
+      "action": "đo lại"
+     },
+     {
+      "type": "icon",
+      "concept": "ho_nen",
+      "kicker": "Câu hay được trích (lược dịch)",
+      "cue": "khi thước",
+      "line": "Thành mục tiêu thì hết là thước đo tốt",
+      "line_cue": "nó không",
+      "action": "nung nóng"
+     }
+    ]
+   },
+   "sources": [
+    "strathern1997"
+   ]
+  },
+  {
+   "id": "b12",
+   "act": "principle",
+   "narration": "Từ câu chuyện ấy, có ba nguyên tắc. Thứ nhất: hỏi con số thay cho điều gì. Hà Nội cần ít chuột, không cần nhiều đuôi. Như nhiệt kế: thứ ta cần là cơ thể khỏe.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "focus": [
+     0
+    ],
+    "action": "lướt tới",
+    "start": "overview",
+    "regions": [
+     {
+      "concept": "nhiet_ke",
+      "label": "Số thay cho gì?",
+      "note": "Nhìn vào thứ thật",
+      "cue": "thứ nhất",
+      "note_cue": "hà nội"
+     },
+     {
+      "icon": "mask",
+      "label": "Nghĩ như người bị đo",
+      "note": "Đi tắt thế nào?",
+      "cue": "thứ hai",
+      "note_cue": "làm sao"
+     },
+     {
+      "icon": "checklist",
+      "label": "Nhiều thước đo",
+      "note": "Và nhìn tận nơi",
+      "cue": "thứ ba",
+      "note_cue": "nhìn tận"
+     }
+    ]
+   },
+   "sources": [
+    "vann2003"
+   ]
+  },
+  {
+   "id": "b13",
+   "act": "principle",
+   "narration": "Thứ hai: nghĩ như người bị đo. Làm sao đạt con số mà không đạt mục tiêu? Cắt đuôi rồi thả chuột chính là đường tắt ấy. Nếu bạn nghĩ ra được, người khác cũng sẽ nghĩ ra.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "focus": [
+     1
+    ],
+    "action": "lướt sang"
+   },
+   "sources": [
+    "vann2003"
+   ]
+  },
+  {
+   "id": "b14",
+   "act": "example",
+   "narration": "Thử với một quán trà sữa, số minh họa thôi. Mỗi ca bán sáu mươi đơn, làm sai ba đơn, có bốn mươi khách quen quay lại. Chủ quán thưởng theo số đơn. Đơn lên chín mươi, nhưng đơn sai lên mười lăm, và khách quen chỉ còn hai mươi lăm.",
+   "visual": {
+    "type": "scenario",
+    "kicker": "Số minh họa",
+    "heading": "Quán trà sữa thưởng theo đơn",
+    "action": "kéo",
+    "before_label": "Trước khi thưởng",
+    "after_label": "Thưởng theo đơn",
+    "cue": "chủ quán",
+    "bars": [
+     {
+      "label": "Đơn mỗi ca",
+      "before": 60,
+      "after": 90,
+      "concept": "ho_nen",
+      "cue": "sáu mươi"
+     },
+     {
+      "label": "Đơn làm sai",
+      "before": 3,
+      "after": 15,
+      "color": "#CFC6B8",
+      "cue": "làm sai"
+     },
+     {
+      "label": "Khách quen quay lại",
+      "before": 40,
+      "after": 25,
+      "concept": "nhiet_ke",
+      "cue": "bốn mươi"
+     }
+    ],
+    "takeaway": "Con số đẹp lên. Quán thì chưa chắc.",
+    "takeaway_cue": "chỉ còn"
+   },
+   "sources": [
+    "minhhoa"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b15",
+   "act": "example",
+   "narration": "Không phải đừng thưởng theo đơn: đơn vẫn cần đếm. Chỉ là khi tiền đi theo một con số, hãy nhìn cả những con số đi cùng.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "tea",
+      "steam": true,
+      "kicker": "Không phải: đừng thưởng",
+      "line": "Đơn vẫn cần đếm",
+      "line_cue": "đơn vẫn",
+      "action": "bốc hơi"
+     },
+     {
+      "type": "icon",
+      "concept": "nhiet_ke",
+      "kicker": "Chỉ là",
+      "cue": "chỉ là",
+      "line": "Nhìn cả số đi cùng",
+      "line_cue": "hãy nhìn",
+      "action": "nhìn quanh"
+     }
+    ]
+   },
+   "sources": [
+    "minhhoa"
+   ]
+  },
+  {
+   "id": "b16",
+   "act": "principle",
+   "narration": "Thứ ba: dùng nhiều thước đo, và thỉnh thoảng nhìn tận nơi. Hà Nội đã có thể ra phố xem chuột còn nhiều không, chứ không chỉ đếm đuôi trên bàn giấy.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "focus": [
+     2
+    ],
+    "action": "lướt xuống"
+   },
+   "sources": [
+    "vann2003"
+   ]
+  },
+  {
+   "id": "b17",
+   "act": "complication",
+   "narration": "Nhưng hình ảnh nhiệt kế hơ nến cũng có giới hạn. Đừng vì thế mà vứt nhiệt kế. Không đếm gì, Hà Nội còn chẳng biết chuột nhiều hay ít. Đo vẫn cần; chỉ đừng để một con số làm mục tiêu duy nhất.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "nhiet_ke",
+      "kicker": "Ẩn dụ dừng ở đâu?",
+      "line": "Đừng vứt nhiệt kế",
+      "line_cue": "đừng vì",
+      "action": "giữ lại"
+     },
+     {
+      "type": "icon",
+      "icon": "chart",
+      "kicker": "Không đếm gì",
+      "cue": "không đếm",
+      "line": "Chẳng biết nhiều hay ít",
+      "line_cue": "chẳng biết",
+      "action": "trống trơn"
+     },
+     {
+      "type": "icon",
+      "concept": "ho_nen",
+      "kicker": "Đo vẫn cần",
+      "cue": "đo vẫn",
+      "line": "Đừng làm mục tiêu duy nhất",
+      "line_cue": "chỉ đừng",
+      "action": "tắt dần"
+     }
+    ]
+   },
+   "sources": [
+    "strathern1997"
+   ]
+  },
+  {
+   "id": "b18",
+   "act": "complication",
+   "narration": "Và không phải ai bị đo cũng tìm đường tắt. Nhiều người vẫn làm thật. Quy luật chỉ nói: khi tiền và áp lực dồn vào một con số, sẽ có người tìm ra đường tắt.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "people",
+      "kicker": "Không phải ai cũng vậy",
+      "line": "Nhiều người vẫn làm thật",
+      "line_cue": "nhiều người",
+      "action": "đứng thẳng"
+     },
+     {
+      "type": "icon",
+      "icon": "key",
+      "kicker": "Khi áp lực dồn vào số",
+      "cue": "quy luật",
+      "line": "Sẽ có người tìm đường tắt",
+      "line_cue": "sẽ có",
+      "action": "mở khóa"
+     }
+    ]
+   },
+   "sources": [
+    "goodhart1975",
+    "strathern1997"
+   ]
+  },
+  {
+   "id": "b19",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Bố mẹ thưởng con mười nghìn đồng cho mỗi trang vở viết xong. Điều gì dễ xảy ra nhất?",
+   "visual": {
+    "type": "question",
+    "question": "Thưởng con 10.000đ mỗi trang vở viết xong. Dễ xảy ra nhất?",
+    "choices": [
+     "Con viết cẩn thận hơn",
+     "Chữ to ra, trang nhiều lên",
+     "Con không đổi gì"
+    ],
+    "answer": "B — trang vở là cái đuôi; hãy nhìn cả nét chữ và bài con hiểu.",
+    "think_seconds": 5
+   },
+   "sources": [
+    "minhhoa"
+   ]
+  },
+  {
+   "id": "b20",
+   "act": "recap",
+   "narration": "Đáp án là B: trang vở là cái đuôi, bài con hiểu mới là con chuột. Vậy là ba nguyên tắc. Hỏi con số thay cho gì. Nghĩ như người bị đo. Và dùng nhiều thước đo, nhìn tận nơi.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "action": "lùi xa",
+    "focus": [
+     {
+      "region": 0,
+      "cue": "trang vở"
+     }
+    ],
+    "overview": true,
+    "overview_cue": "vậy là",
+    "line": "Ba câu hỏi trước một con số",
+    "line_cue": "và dùng"
+   }
+  },
+  {
+   "id": "b21",
+   "act": "close",
+   "narration": "Ở Hà Nội năm ấy, đuôi chuột nhiều lên mà chuột không ít đi. Lần tới, khi đặt một con số làm mục tiêu, hãy hỏi: mình đang chữa bệnh, hay đang hơ nhiệt kế trên nến?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "coins",
+      "kicker": "Hà Nội · 1902",
+      "line": "Đuôi nhiều lên, chuột không ít đi",
+      "line_cue": "đuôi chuột",
+      "action": "chất đống"
+     },
+     {
+      "type": "icon",
+      "concept": "nhiet_ke",
+      "kicker": "Lần tới, trước một con số",
+      "cue": "lần tới",
+      "line": "Mình đang chữa bệnh?",
+      "line_cue": "mình đang",
+      "action": "đo"
+     },
+     {
+      "type": "icon",
+      "concept": "ho_nen",
+      "kicker": "Hay là",
+      "cue": "hay đang",
+      "line": "Đang hơ nhiệt kế trên nến?",
+      "line_cue": "hơ nhiệt",
+      "action": "bập bùng"
+     }
+    ]
+   },
+   "sources": [
+    "vann2003"
+   ]
+  },
+  {
+   "id": "b25",
+   "act": "close",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
+   "visual": {
+    "type": "end",
+    "kicker": "Khung tư duy · Tập 3",
+    "title": "Khi thước đo thành mục tiêu",
+    "ask": "Bạn muốn tập sau về khung tư duy nào?",
+    "ask_hint": "Vòng tròn năng lực · biên an toàn · chi phí cơ hội",
+    "ask_cue": "hay chủ",
+    "sources_line": "Nguồn: Michael G. Vann (2003; The Great Hanoi Rat Hunt) · Goodhart (1975) · Strathern (1997) · xem mô tả",
+    "disclaimer": "Nội dung giáo dục; câu chuyện kể lại từ nguồn công khai.",
+    "sources_cue": "còn bạn"
+   }
+  }
+ ],
+ "pronounce": {}
+}

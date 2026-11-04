@@ -330,3 +330,8 @@ def test_strike_lands_on_its_cue_not_at_one_second():
     t_shot = float(re.search(r'"#bs1-shot", \{opacity: 0.*, ([\d.]+)\);', html).group(1))
     second = 0.45 + [w for w in wt if w["word"] == "Thật"][1]["start"]
     assert t_shot < second and at(html) == pytest.approx(second, abs=0.01)
+
+
+def test_highlight_given_as_one_string_is_one_phrase():
+    from vfactory.lesson import scenes
+    assert scenes.highlights({"highlight": "dòng sông"}) == [("dòng sông", {})]

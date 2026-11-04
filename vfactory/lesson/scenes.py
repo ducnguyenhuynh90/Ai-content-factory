@@ -128,7 +128,10 @@ def highlights(v: dict) -> list[tuple[str, dict]]:
     """`highlight` entries as (phrase, entry): a plain phrase, or {"text", "color": "a"|"b"} / {"text", "concept"} for a
     phrase drawn in a concept's colour."""
     out = []
-    for h in v.get("highlight") or []:
+    hs = v.get("highlight") or []
+    if isinstance(hs, (str, dict)):  # one phrase given bare: iterating a string would highlight every character
+        hs = [hs]
+    for h in hs:
         if isinstance(h, str):
             out.append((h, {}))
         elif isinstance(h, dict) and h.get("text"):
