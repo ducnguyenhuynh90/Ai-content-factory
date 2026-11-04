@@ -1,5 +1,5 @@
 # Thiên kiến kẻ sống sót
-_Khung tư duy · Tập 8 · 818 words · ~3.53 min · 4:3_
+_Khung tư duy · Tập 8 · 825 words · ~3.56 min · 4:3_
 
 ## Learning goals
 - Kể lại câu chuyện Abraham Wald và Statistical Research Group (Đại học Columbia, 1942–1945): dữ liệu duy nhất là vết đạn trên những chiếc máy bay trở về; Wald giả định đạn trúng gần như ngẫu nhiên, nên phần ít lỗ trên chiếc trở về là phần mà trúng vào thì máy bay không về; nguồn thật là các bản ghi nhớ của Wald (1943, in lại năm 1980) và bài phân tích của Mangel & Samaniego (1984)
@@ -14,17 +14,17 @@ _Khung tư duy · Tập 8 · 818 words · ~3.53 min · 4:3_
 ## Script
 | # | act | narration | on screen |
 |---|---|---|---|
-| h1 | hook | Những chiếc máy bay trở về đầy lỗ đạn. Chỗ cần bọc giáp lại là chỗ không có lỗ. | shots: shots |
-| h2 | context | Vì những chiếc trúng đạn ở chỗ ấy đã không về. Cái bẫy ở đây có một cái tên: thiên kiến kẻ sống sót. | shots: shots |
+| h1 | hook | Thế chiến hai, máy bay trở về đầy lỗ đạn. Nhưng chỗ cần bọc giáp lại là chỗ không có lỗ. | shots: shots |
+| h2 | context | Lý do: những chiếc trúng đạn ở chỗ ấy đã không về. Cái bẫy ở đây có một cái tên: thiên kiến kẻ sống sót. | shots: shots |
 | t0 | context |  | title: Thiên kiến kẻ sống sót |
 | b01 | misconception | Ta hay nghĩ: muốn biết điều gì làm nên thành công, hãy nhìn kỹ những người thành công. Muốn biết máy bay yếu ở đâu, hãy đếm lỗ trên chiếc trở về. Nghe rất hợp lý. Nhưng ta chỉ thấy những ai còn ở lại để kể. | shots: shots |
 | b02 | context | Hình dung bạn đứng ở đường băng, cầm kính lúp soi từng chiếc hạ cánh. Bạn thấy rất rõ. Nhưng những chiếc rơi ngoài kia không hạ cánh để bạn soi. Muốn thấy chúng, bạn cần một cái ống nhòm. | shots: shots |
 | b03 | context | Năm một nghìn chín trăm bốn mươi ba, ở Đại học Columbia, New York, một nhóm nhỏ các nhà thống kê làm việc cho quân đội Mỹ. Trong nhóm có Milton Friedman, và Abraham Wald, một nhà toán học di cư từ châu Âu. | shots: shots |
 | b04 | story | Câu hỏi là: trúng đạn vào phần nào thì máy bay dễ rơi nhất? Dữ liệu duy nhất trong tay là vết đạn trên những chiếc trở về. Mà giáp thì nặng, không thể bọc khắp thân. | shots: shots |
-| b05 | story | Cách đọc tự nhiên: chỗ nào nhiều lỗ, chỗ ấy cần bảo vệ. Wald đọc khác. Ông coi như đạn trúng khắp thân máy bay, gần như ngẫu nhiên. Vậy nếu chiếc trở về hiếm khi có lỗ ở một phần nào đó, thì những chiếc trúng vào phần ấy đã rơi. _(attributed)_ | shots: shots |
-| b06 | turn | Nói cách khác: lỗ trên chiếc trở về chỉ ra chỗ máy bay chịu được. Chỗ ít lỗ, như quanh động cơ trong nhiều bản kể, mới là chỗ chết người. _(attributed)_ | shots: shots |
+| b05 | story | Cách đọc tự nhiên: chỗ nào nhiều lỗ, chỗ ấy cần bảo vệ. Wald đọc khác. Ông coi như đạn trúng khắp thân máy bay, gần như ngẫu nhiên. Vậy nếu chiếc trở về hiếm khi có lỗ ở một phần nào đó, thì những chiếc trúng vào phần ấy đã rơi. | shots: shots |
+| b06 | turn | Nói cách khác: lỗ trên chiếc trở về chỉ ra chỗ máy bay chịu được. Chỗ ít lỗ, mà người ta kể là quanh động cơ, mới là chỗ chết người. _(attributed)_ | shots: shots |
 | b07 | complication | Giờ là phần hay bị kể sai. Hình máy bay chấm đỏ nổi tiếng trên mạng không phải của Wald. Đó là tranh minh họa vẽ khoảng năm hai nghìn lẻ năm, các chấm do người vẽ tự đặt. Báo cáo của Wald là những trang toán, không có hình ấy. | shots: shots |
-| b08 | complication | Còn đoạn đối thoại kịch tính, sĩ quan đòi bọc chỗ nhiều lỗ, Wald bảo ngược lại, phần lớn là lối kể lại về sau. Cái còn lại là các bản ghi nhớ năm một nghìn chín trăm bốn mươi ba, và bài phân tích của Mangel và Samaniego năm một nghìn chín trăm tám mươi tư. _(disputed)_ | shots: shots |
+| b08 | complication | Còn đoạn đối thoại kịch tính, sĩ quan đòi bọc chỗ nhiều lỗ, Wald bảo ngược lại, thì chưa kiểm chứng: phần lớn là lối kể lại về sau. Cái còn lại là các bản ghi nhớ năm một nghìn chín trăm bốn mươi ba, và bài phân tích của Mangel và Samaniego năm một nghìn chín trăm tám mươi tư. _(disputed)_ | shots: shots |
 | b09 | principle | Từ câu chuyện ấy, có ba nguyên tắc. Thứ nhất: hỏi ai đã rơi khỏi mẫu. Thứ mình đang thấy đã qua bộ lọc nào, và ai không còn ở đây để kể? | board: board |
 | b10 | principle | Thứ hai: đọc cả chỗ trống. Sự vắng mặt cũng là dữ liệu. Trên thân máy bay, chỗ không có lỗ nói nhiều hơn chỗ có lỗ. | board: board |
 | b11 | example | Thử với một con phố cà phê, số minh họa thôi. Đi dọc phố, bạn thấy mười quán, quán nào cũng đông. Dễ kết luận: mở quán ở đây là thắng. Nhưng hỏi bà bán nước đầu phố: ba năm qua, ở đây đã mở khoảng bốn mươi quán. Ba mươi quán đã đóng, không còn biển hiệu nào để bạn thấy. _(estimate)_ | scenario: scenario |
@@ -48,12 +48,3 @@ _Khung tư duy · Tập 8 · 818 words · ~3.53 min · 4:3_
 - [minhhoa] Ví dụ minh họa của kênh (không phải khảo sát): một con phố có 10 quán cà phê đang mở, trong khoảng 40 quán đã mở ở đó trong ba năm, 30 quán đã đóng; chuyện cái quạt điện 40 năm của bà
 
 ## Lint
-- ERROR: b05: marked attributed but the narration states it as fact; say so out loud
-- ERROR: b06: marked attributed but the narration states it as fact; say so out loud
-- ERROR: b08: marked disputed but the narration states it as fact; say so out loud
-- warning: hook has no tension: add the turn (but/then/lost/never/why...) that makes it a paradox, not a fact
-- warning: hook has no concrete anchor: name the person, the year or the number
-- warning: beat 2 should open a loop: promise the payoff for staying ('by the end you'll see... and three rules...')
-- storyboard: b03: one picture held ~8.8s (> 8s): add a shot on a cue word, or declare 'hold' on the beat
-- storyboard: b07: one picture held ~10.3s (> 8s): add a shot on a cue word, or declare 'hold' on the beat
-- storyboard: b08 shot 1: one picture held ~8.7s (> 8s): add a shot on a cue word, or declare 'hold' on the beat

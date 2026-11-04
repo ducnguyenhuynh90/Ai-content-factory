@@ -1,0 +1,1006 @@
+{
+ "meta": {
+  "series": "Khung tư duy · Tập 6",
+  "title": "Biên an toàn",
+  "subtitle": "Margin of safety — cây cầu Brooklyn, sợi dây xấu và 21 con voi",
+  "topic": "books",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt đi làm, hay lập kế hoạch, ngân sách, lịch hẹn và hứa hạn chót 'vừa khít'; thích chuyện lịch sử, kỹ thuật và cách nghĩ",
+  "aspect": "4:3",
+  "target_minutes": [
+   3,
+   5
+  ],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
+  "learning_goals": [
+   "Kể lại câu chuyện cầu Brooklyn: John Roebling thiết kế cáp chịu khoảng sáu lần tải dự tính (theo nhiều nguồn; có nguồn ghi sáu đến tám), mất năm 1869; năm 1878 phát hiện J. Lloyd Haigh tráo dây thép bị loại, biên an toàn của cáp mỏng đi (ước tính còn khoảng bốn đến năm lần); Washington Roebling cho thêm khoảng 150 sợi dây tốt mỗi cáp; khánh thành 24/5/1883, vụ chen lấn 30/5/1883; P. T. Barnum dắt 21 con voi qua cầu ngày 17/5/1884",
+   "Phân biệt cách nghĩ vừa khít (cái cân thăng bằng: sức chịu đúng bằng tải) với biên an toàn (cây cầu chịu được nhiều lần hơn biển báo)",
+   "Dùng ba nguyên tắc: để dư nhiều lần; phòng cái chưa thấy; mỏng đi thì bù lại; và biết chỗ ẩn dụ dừng lại (dư cũng có giá; đời thật không treo biển báo tải; phần dư không cứu được thiết kế sai)"
+  ],
+  "disclaimer": "Nội dung giáo dục; câu chuyện kể lại từ nguồn công khai; không phải lời khuyên đầu tư.",
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người kể chuyện lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively. Nothing in the script depends on this particular voice.",
+  "concepts": [
+   {
+    "id": "bien_an_toan",
+    "visual": "bridge",
+    "color": "a",
+    "shows": "cây cầu treo biển một mức tải nhưng thật ra chịu được nhiều lần hơn: ngày thường không ai thấy phần dư; ngày xấu (xe quá tải, sợi dây hỏng) chỉ cây cầu này còn đứng",
+    "omits": "dư cũng có giá (thép, tiền, thời gian); đời thật không treo biển báo tải, mức dư là một phán đoán; phần dư đỡ cái sai nhỏ, không cứu cái sai gốc; số 'sáu lần' là của dây cáp theo nhiều nguồn, không phải của mọi bộ phận cây cầu"
+   },
+   {
+    "id": "vua_khit",
+    "visual": "scale",
+    "color": "b",
+    "shows": "cái cân thăng bằng: sức chịu đúng bằng tải dự tính, không dư gì; ngày thường chạy tốt, chỉ cần lệch một chút là đổ",
+    "omits": "vừa khít không phải lúc nào cũng sai: có lúc tài nguyên quá hiếm để chừa dư; và người tính vừa khít không ngốc, họ chỉ tin rằng ước tính của mình đúng"
+   }
+  ],
+  "brief": {
+   "target_viewer": "Người Việt 20–40 tuổi đi làm, hay hứa hạn chót, lập ngân sách và lịch hẹn sát nút vì nghĩ 'tính đúng là đủ, dư ra là phí' (giả định của người viết, chủ kênh xác nhận lại)",
+   "format": "Giải thích một khung tư duy qua một câu chuyện thật (concept explainer), 4–5 phút, 4:3, minh họa icon vẽ tay, một bảng xuyên suốt cho ba nguyên tắc, một ví dụ đổi trạng thái, một giọng đọc",
+   "central_question": "Vì sao cây cầu Brooklyn vẫn đứng dù dây cáp bị tráo hàng xấu, và biên an toàn giúp gì cho một kế hoạch, một lời hứa, đến đâu?",
+   "transformation": "Trước khi xem, họ nghĩ tính đúng là đủ và phần dư là lãng phí. Sau khi xem, họ kể lại được câu chuyện Roebling – khoảng sáu lần – dây xấu của Haigh – thêm dây – 21 con voi, phân biệt được cái cân vừa khít với cây cầu dư nhiều lần, tự chừa dư cho một buổi hẹn hay một hạn chót, và biết dư quá cũng có giá",
+   "discovery_goal": "Tìm kiếm (\"biên an toàn\", \"margin of safety\", \"hệ số an toàn\", \"cầu Brooklyn\", \"Brooklyn Bridge elephants\", \"khung tư duy\") và đề xuất từ video tư duy, lịch sử, kỹ thuật; khán giả series Review sách (tập 4, Nhà Đầu Tư Thông Minh)",
+   "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn tập sau về khung tư duy nào?\" (comment answering the end-card question)",
+   "share_recipient": "Một người bạn hay hứa hạn chót sát nút hoặc tiêu vừa khít lương: câu hỏi 'cây cầu của mình chịu được bao nhiêu lần?' giúp nói chuyện mà không thành lên lớp",
+   "evidence": "McCullough, The Great Bridge (1972); Wikipedia Brooklyn Bridge và John A. Roebling; STRUCTURE magazine (hệ số an toàn của cáp là 6, tháp 2,5); Wikipedia Brooklyn Bridge (thiết kế 'sáu đến tám lần', sau vụ dây xấu còn khoảng bốn lần) và các nguồn khác (khoảng năm lần); 150 sợi dây thêm mỗi cáp, Haigh chịu chi phí (nhiều nguồn); vụ chen lấn 30/5/1883 (6sqft, Brownstoner, Bowery Boys); Barnum 17/5/1884 (History.com, 6sqft); Graham, The Intelligent Investor ch. 20; Buffett, The Superinvestors of Graham-and-Doddsville (1984); số buổi hẹn, cầu 10/60 tấn, hạn chót 2 tuần là số minh họa",
+   "constraints": "4–5 phút, 4:3, icon vẽ, không khuôn mặt người thật (Roebling, Barnum là huy hiệu chữ cái), không có hình con voi (không có icon voi; voi được kể bằng lời và chữ trên màn hình), một giọng đọc (OmniVoice seed 99 speed 0.88), tên tiếng Anh giữ nguyên chính tả, số đọc bằng chữ và làm tròn khi đọc, số chính xác trên màn hình; nói rõ 'khoảng sáu lần, có nguồn ghi sáu đến tám' và 'theo các ước tính, bốn đến năm lần'; phần đầu tư chỉ một câu, giữ lời miễn trừ"
+  },
+  "youtube": {
+   "title": "Biên an toàn: vì sao cầu Brooklyn vẫn đứng dù cáp bị tráo dây xấu?",
+   "thumbnail_text": "21 con voi qua một cây cầu mới. Vì sao cầu không sập?",
+   "description": "Ngày 17/5/1884, ông bầu gánh xiếc P. T. Barnum dắt 21 con voi đi qua cây cầu Brooklyn mới khánh thành. Cầu không sập, và lý do nằm trên bàn vẽ từ nhiều năm trước: John Roebling thiết kế dây cáp chịu được khoảng sáu lần tải nặng nhất ông dự tính. Video kể lại câu chuyện ấy (Roebling mất năm 1869; năm 1878 phát hiện nhà cung cấp J. Lloyd Haigh tráo dây thép bị loại vào cáp; Washington Roebling, khi đã đổ bệnh, cho thêm dây tốt để bù), giải thích biên an toàn (margin of safety) bằng hình ảnh cái cân vừa khít và cây cầu chịu nhiều lần hơn biển báo, ba nguyên tắc (để dư nhiều lần; phòng cái chưa thấy; mỏng đi thì bù lại), một ví dụ với buổi hẹn và kẹt xe, và một câu hỏi để bạn tự thử.\n\nẨn dụ dừng ở đâu: dư cũng có giá (một cây cầu chịu gấp năm mươi lần sẽ tốn thép đến mức có lẽ không ai xây nổi; đi sớm hai tiếng là mất cả buổi sáng); đời thật không treo biển báo tải, chọn dư bao nhiêu là một phán đoán; và phần dư đỡ cái sai nhỏ, không cứu được cái sai gốc.\n\nLưu ý về số liệu: 'khoảng sáu lần' là hệ số an toàn của dây cáp theo nhiều nguồn (STRUCTURE magazine ghi cáp 6, tháp 2,5); Wikipedia ghi Roebling thiết kế 'sáu đến tám lần' sức cần thiết. Sau vụ dây xấu, các nguồn ước tính cáp còn khoảng bốn (Wikipedia) đến năm lần; video nói 'bốn đến năm'. Con số 150 sợi dây thêm mỗi cáp và việc Haigh chịu chi phí lấy theo McCullough và các bài kể lại. Barnum dắt 21 con voi cùng 17 con lạc đà (có nguồn ghi 7 lạc đà và 10 lạc đà một bướu), Jumbo đi cuối theo phần lớn các nguồn. Vụ chen lấn ngày 30/5/1883 làm 12 người chết. Cây cầu 10 tấn / 60 tấn, buổi hẹn 30 phút và hạn chót 2 tuần là số minh họa. Câu ví cây cầu 30.000 pound của Warren Buffett là lược dịch. Video không phải lời khuyên đầu tư.\n\nChương:\n21 con voi qua một cây cầu mới\nĐiều ta hay nghĩ: tính đúng là đủ\nCái cân và cây cầu\nJohn Roebling và cây cầu treo dài nhất thời ấy\nKhoảng sáu lần\nSợi dây xấu của Haigh\nBiên an toàn bị ăn mất\nWashington bù lại\nKhánh thành và nỗi sợ\n21 con voi\nBiên an toàn là gì\nGraham và Buffett\nNguyên tắc 1: để dư nhiều lần\nNguyên tắc 2: phòng cái chưa thấy\nBuổi hẹn và kẹt xe (số minh họa)\nNguyên tắc 3: mỏng đi thì bù lại\nẨn dụ dừng ở đâu\nThử một chút: hạn chót hai tuần\nBa nguyên tắc\nCây cầu của mình chịu được bao nhiêu lần?\n\nNguồn:\n- David McCullough, The Great Bridge, Simon & Schuster, 1972 (chương về vụ dây cáp)\n- Wikipedia, Brooklyn Bridge: https://en.wikipedia.org/wiki/Brooklyn_Bridge\n- Wikipedia, John A. Roebling: https://en.wikipedia.org/wiki/John_A._Roebling\n- STRUCTURE magazine, Historic Structures: Brooklyn Bridge: https://www.structuremag.org/article/brooklyn-bridge-part-2/\n- History.com, Lesley Kennedy, P. T. Barnum's elephant procession on the Brooklyn Bridge: https://www.history.com/articles/brooklyn-bridge-elephant-procession-p-t-barnum-jumbo-1884\n- 6sqft, 21 elephants walked across the newly-opened Brooklyn Bridge: https://www.6sqft.com/in-1883-21-elephants-walked-across-the-newly-opened-brooklyn-bridge-to-prove-its-safety/\n- Brownstoner, The Brooklyn Bridge's deadly stampede (1883): https://www.brownstoner.com/history/brooklyn-bridge-death-stampede-tragedy-1883/\n- Benjamin Graham, The Intelligent Investor, ch. 20 'Margin of Safety as the Central Concept of Investment'\n- Warren Buffett, The Superinvestors of Graham-and-Doddsville, Hermes, 1984\n\nBạn muốn tập sau về khung tư duy nào? Để lại bình luận nhé.",
+   "tags": [
+    "biên an toàn",
+    "margin of safety",
+    "hệ số an toàn",
+    "khung tư duy",
+    "mô hình tư duy",
+    "cầu Brooklyn",
+    "Brooklyn Bridge",
+    "John Roebling",
+    "P. T. Barnum",
+    "quản lý rủi ro",
+    "ra quyết định",
+    "kỹ năng tư duy",
+    "Benjamin Graham"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "mccullough1972",
+   "cite": "David McCullough, The Great Bridge: The Epic Story of the Building of the Brooklyn Bridge, Simon & Schuster, 1972: Roebling's design 'six times as strong as it need be'; chapter 'Wire Fraud' (Haigh substituting rejected wire, discovered 1878; the bad wire 'cannot be removed'; 150 additional wires per cable at Haigh's expense); Washington Roebling's caisson disease, directing from his window in Brooklyn Heights with Emily Warren Roebling as go-between (book not opened; wording cross-read from several pages that quote it)"
+  },
+  {
+   "id": "wiki_bb",
+   "cite": "Wikipedia, 'Brooklyn Bridge': opened 24 May 1883; main span 1,595.5 ft (486.3 m), the longest suspension bridge in the world at opening and the first with steel-wire cables; Roebling designed it to be 'six to eight times as strong as he thought it needed to be'; after the wire fraud the bridge was reappraised as about four times as strong as necessary; 30 May 1883 stampede; Barnum's procession 17 May 1884 (read through mirrors and search summaries; page not opened directly)",
+   "url": "https://en.wikipedia.org/wiki/Brooklyn_Bridge"
+  },
+  {
+   "id": "structure",
+   "cite": "STRUCTURE magazine, 'Historic Structures: Brooklyn Bridge' (Frank Griggs / Oviatt, 2019): the cables' factor of safety is 6, the towers' 2½; Haigh's wire and the added wires (secondary summaries say the fix left the cables at about five)",
+   "url": "https://www.structuremag.org/article/brooklyn-bridge-part-2/"
+  },
+  {
+   "id": "wiki_jar",
+   "cite": "Wikipedia, 'John A. Roebling' and 'Washington Roebling': John A. Roebling (1806–1869), German-born engineer of wire-cable suspension bridges; his foot crushed by a ferry while surveying the site in late June 1869, died of tetanus on 22 July 1869; son Washington A. Roebling (1837–1926) became chief engineer",
+   "url": "https://en.wikipedia.org/wiki/John_A._Roebling"
+  },
+  {
+   "id": "stampede",
+   "cite": "Brownstoner, 'The Bridge Is Falling: The Story of the Brooklyn Bridge's Deadly Stampede'; 6sqft and Bowery Boys History: on 30 May 1883 (Decoration Day) a woman fell on the Manhattan-side stairs, someone screamed that the bridge was collapsing, 12 people were killed and dozens injured; the bridge did not collapse",
+   "url": "https://www.brownstoner.com/history/brooklyn-bridge-death-stampede-tragedy-1883/"
+  },
+  {
+   "id": "barnum",
+   "cite": "History.com (Lesley Kennedy), 'How P.T. Barnum's elephant parade proved the Brooklyn Bridge was safe'; 6sqft, '21 elephants walked across the newly-opened Brooklyn Bridge to prove its safety': evening of 17 May 1884, 21 elephants and 17 camels (some accounts: 7 camels and 10 dromedaries), Jumbo at the rear in most accounts; publicity for the circus and a show of the bridge's safety",
+   "url": "https://www.history.com/articles/brooklyn-bridge-elephant-procession-p-t-barnum-jumbo-1884"
+  },
+  {
+   "id": "graham",
+   "cite": "Benjamin Graham, The Intelligent Investor (1949; rev. 1973), chapter 20 'Margin of Safety as the Central Concept of Investment'; covered in episode 4 of the channel's Review sách series"
+  },
+  {
+   "id": "buffett1984",
+   "cite": "Warren Buffett, 'The Superinvestors of Graham-and-Doddsville', Hermes (Columbia Business School), Fall 1984: 'When you build a bridge, you insist it can carry 30,000 pounds, but you only drive 10,000 pound trucks across it' (wording from several pages quoting it; not opened directly)"
+  },
+  {
+   "id": "minhhoa",
+   "cite": "Số minh họa của kênh (không phải số đo): hai cây cầu cùng biển 10 tấn, một cây chịu 10 tấn, một cây chịu 60 tấn; buổi hẹn với đường 30 phút, kẹt xe 10 phút, đi sớm 15 phút; cây cầu 'gấp 50 lần'; hạn chót ước tính 2 tuần"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Để dư nhiều lần",
+   "line": "Ước tính tải nặng nhất có thể, rồi làm cho chịu được hơn hẳn thế."
+  },
+  {
+   "name": "Phòng cái chưa thấy",
+   "line": "Phần dư không dành cho rủi ro đã biết, mà cho thứ không ai lường trước."
+  },
+  {
+   "name": "Mỏng đi thì bù lại",
+   "line": "Khi phần dư bị ăn mòn, đừng coi như không sao: bù lại trước khi đi tiếp."
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Hai mươi mốt con voi đi qua một cây cầu mới. Vì sao cầu không sập?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "bien_an_toan",
+      "kicker": "Brooklyn, New York",
+      "line": "21 con voi qua cầu",
+      "line_cue": "hai mươi",
+      "action": "nối hai bờ"
+     },
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "kicker": "Vì sao?",
+      "cue": "vì sao",
+      "line": "Cầu không sập",
+      "line_cue": "cầu không",
+      "action": "soi"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "vì sao",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "barnum"
+   ]
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Lý do nằm trên bàn vẽ, từ nhiều năm trước. Cách nghĩ ấy có một cái tên: biên an toàn.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "compass",
+      "kicker": "Lý do",
+      "line": "Nằm trên bàn vẽ",
+      "line_cue": "bàn vẽ",
+      "action": "xoay"
+     },
+     {
+      "type": "icon",
+      "concept": "bien_an_toan",
+      "kicker": "Có một cái tên",
+      "cue": "cách nghĩ",
+      "line": "Biên an toàn",
+      "line_cue": "biên",
+      "action": "hiện ra"
+     }
+    ]
+   },
+   "sources": [
+    "mccullough1972"
+   ]
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Khung tư duy · Tập 6",
+    "title": "Biên an toàn",
+    "subtitle": "Margin of safety",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Ta hay nghĩ: tính đúng là đủ. Cần chịu bao nhiêu thì làm vừa bấy nhiêu, dư ra là phí. Ngân sách vừa khít, lịch hẹn vừa khít, hạn chót vừa khít.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "vua_khit",
+      "kicker": "Điều ta hay nghĩ",
+      "line": "Tính đúng là đủ",
+      "line_cue": "tính đúng",
+      "action": "cân bằng"
+     },
+     {
+      "type": "icon",
+      "icon": "coins",
+      "kicker": "Làm vừa bấy nhiêu",
+      "cue": "cần chịu",
+      "line": "Dư ra là phí?",
+      "line_cue": "dư ra",
+      "action": "đếm"
+     },
+     {
+      "type": "icon",
+      "icon": "clock",
+      "kicker": "Vừa khít khắp nơi",
+      "cue": "ngân sách",
+      "line": "Ngân sách · lịch hẹn · hạn chót",
+      "line_cue": "lịch hẹn",
+      "action": "quay kim"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "Hình dung hai cây cầu, cùng treo biển: tối đa mười tấn. Cây thứ nhất chịu được đúng mười tấn. Cây thứ hai chịu được sáu mươi. Ngày thường, chẳng ai thấy khác nhau. Chỉ đến hôm có chiếc xe quá tải, hay một thanh thép hỏng mà không ai biết.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "vua_khit",
+      "kicker": "Cầu thứ nhất · số minh họa",
+      "line": "Biển 10 tấn, chịu 10 tấn",
+      "line_cue": "cây thứ nhất",
+      "action": "thăng bằng"
+     },
+     {
+      "type": "icon",
+      "concept": "bien_an_toan",
+      "kicker": "Cầu thứ hai · số minh họa",
+      "cue": "cây thứ hai",
+      "line": "Biển 10 tấn, chịu 60 tấn",
+      "line_cue": "sáu mươi",
+      "action": "nối hai bờ"
+     },
+     {
+      "type": "trio",
+      "kicker": "Ngày thường: giống nhau",
+      "heading": "Khác nhau vào hôm xấu",
+      "cue": "ngày thường",
+      "action": "đặt cạnh",
+      "items": [
+       {
+        "concept": "vua_khit",
+        "label": "Vừa khít"
+       },
+       {
+        "concept": "bien_an_toan",
+        "label": "Dư nhiều lần",
+        "cue": "chỉ đến"
+       }
+      ],
+      "line": "Xe quá tải, thép hỏng",
+      "line_cue": "quá tải"
+     }
+    ]
+   },
+   "sources": [
+    "minhhoa"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b03",
+   "act": "context",
+   "narration": "Cây cầu thật là cầu Brooklyn ở New York. Người vẽ nó là John Roebling, kỹ sư cầu treo gốc Đức. Năm một nghìn tám trăm sáu mươi chín, ông bị thương ở bến phà và mất vài tuần sau. Con trai ông, Washington, nhận công trình.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "John A. Roebling",
+      "initials": "JR",
+      "role": "Kỹ sư cầu treo, gốc Đức",
+      "years": "1806–1869",
+      "action": "khắc"
+     },
+     {
+      "type": "icon",
+      "icon": "ship",
+      "kicker": "1869 · bến phà",
+      "cue": "năm một",
+      "line": "Bị thương, mất vài tuần sau",
+      "line_cue": "ông bị",
+      "action": "cập bến"
+     },
+     {
+      "type": "portrait",
+      "name": "Washington Roebling",
+      "initials": "WR",
+      "role": "Kỹ sư trưởng, con trai",
+      "years": "1837–1926",
+      "cue": "con trai",
+      "action": "nhận việc"
+     }
+    ]
+   },
+   "sources": [
+    "wiki_jar",
+    "mccullough1972"
+   ]
+  },
+  {
+   "id": "b04",
+   "act": "story",
+   "narration": "Thời ấy chưa có cầu treo nào dài như vậy, và cáp thép còn là thứ mới. Theo nhiều nguồn, Roebling tính cho dây cáp chịu được khoảng sáu lần tải nặng nhất ông dự tính. Có nguồn ghi sáu đến tám.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "bien_an_toan",
+      "kicker": "Nhịp chính ~486 m",
+      "line": "Cầu treo dài nhất thời ấy",
+      "line_cue": "chưa có",
+      "action": "vươn dài"
+     },
+     {
+      "type": "stat",
+      "value": 6,
+      "prefix": "~",
+      "suffix": " lần",
+      "color": "a",
+      "label": "sức chịu của cáp / tải dự tính",
+      "note": "theo nhiều nguồn · có nguồn ghi 6–8",
+      "cue": "theo nhiều",
+      "action": "đếm lên"
+     }
+    ]
+   },
+   "sources": [
+    "structure",
+    "wiki_bb",
+    "mccullough1972"
+   ],
+   "certainty": "attributed"
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Rồi năm một nghìn tám trăm bảy mươi tám, người ta phát hiện nhà cung cấp dây thép, J. Lloyd Haigh, đã lén tráo dây bị loại vào chỗ dây đã kiểm. Lúc ấy Washington đã đổ bệnh vì làm dưới móng cầu, chỉ huy từ cửa sổ, qua người vợ là Emily.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "factory",
+      "kicker": "1878 · nhà cung cấp dây",
+      "line": "J. Lloyd Haigh",
+      "line_cue": "nhà cung",
+      "action": "kéo dây"
+     },
+     {
+      "type": "icon",
+      "icon": "mask",
+      "kicker": "Lén tráo",
+      "cue": "đã lén",
+      "line": "Dây bị loại thay dây đã kiểm",
+      "line_cue": "dây bị",
+      "action": "đánh tráo"
+     },
+     {
+      "type": "icon",
+      "icon": "binoculars",
+      "kicker": "Washington đổ bệnh",
+      "cue": "lúc ấy",
+      "line": "Chỉ huy từ cửa sổ, qua Emily",
+      "line_cue": "chỉ huy",
+      "action": "dõi theo"
+     }
+    ]
+   },
+   "sources": [
+    "mccullough1972",
+    "structure"
+   ]
+  },
+  {
+   "id": "b06",
+   "act": "story",
+   "narration": "Dây xấu đã quấn vào cáp, không gỡ ra được nữa. Theo các ước tính, cáp giờ chỉ còn chịu khoảng bốn đến năm lần tải, thay vì sáu. Biên an toàn bị ăn mất một phần, mà nhìn từ ngoài không ai thấy.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "lock",
+      "kicker": "Đã quấn vào cáp",
+      "line": "Không gỡ ra được",
+      "line_cue": "không gỡ",
+      "action": "khóa chặt"
+     },
+     {
+      "type": "stat",
+      "value": 4,
+      "from": 4,
+      "prefix": "~",
+      "suffix": "–5 lần",
+      "color": "b",
+      "label": "còn lại, thay vì ~6",
+      "note": "ước tính · các nguồn khác nhau",
+      "cue": "theo các",
+      "action": "hiện số"
+     },
+     {
+      "type": "icon",
+      "concept": "bien_an_toan",
+      "kicker": "Nhìn từ ngoài không thấy",
+      "cue": "biên an",
+      "line": "Phần dư bị ăn mất",
+      "line_cue": "bị ăn",
+      "action": "mỏng đi"
+     }
+    ]
+   },
+   "sources": [
+    "wiki_bb",
+    "structure"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b07",
+   "act": "turn",
+   "narration": "Washington không phá cáp làm lại, cũng không coi như không sao. Ông cho thêm khoảng một trăm năm mươi sợi dây tốt vào mỗi sợi cáp, và theo nhiều nguồn, Haigh phải chịu chi phí. Phần dư bị ăn mất được bù lại.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "swap",
+      "kicker": "Washington chọn",
+      "strike_cue": "cũng không",
+      "action": "đổi chỗ",
+      "from": {
+       "icon": "mask",
+       "label": "Coi như không sao"
+      },
+      "to": {
+       "concept": "bien_an_toan",
+       "label": "Thêm dây tốt",
+       "cue": "ông cho"
+      }
+     },
+     {
+      "type": "icon",
+      "icon": "coins",
+      "kicker": "Theo nhiều nguồn",
+      "cue": "theo nhiều",
+      "line": "Haigh phải chịu chi phí",
+      "line_cue": "haigh",
+      "action": "trả lại"
+     },
+     {
+      "type": "icon",
+      "concept": "bien_an_toan",
+      "kicker": "~150 sợi mỗi cáp",
+      "cue": "phần dư",
+      "line": "Bù lại phần dư",
+      "line_cue": "được bù",
+      "action": "gia cố"
+     }
+    ]
+   },
+   "sources": [
+    "mccullough1972",
+    "structure"
+   ],
+   "certainty": "attributed"
+  },
+  {
+   "id": "b08",
+   "act": "story",
+   "narration": "Ngày hai mươi tư tháng năm, năm một nghìn tám trăm tám mươi ba, cầu khánh thành. Sáu ngày sau, có người hô cầu sắp sập. Đám đông chen nhau; mười hai người chết. Cầu không sập. Nhưng nỗi sợ thì ở lại.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "star",
+      "kicker": "24/5/1883",
+      "line": "Cầu khánh thành",
+      "line_cue": "cầu khánh",
+      "action": "lóe sáng"
+     },
+     {
+      "type": "icon",
+      "icon": "people",
+      "kicker": "30/5/1883 · một tin đồn",
+      "cue": "sáu ngày",
+      "line": "Chen nhau, 12 người chết",
+      "line_cue": "mười hai",
+      "action": "chen lấn"
+     },
+     {
+      "type": "icon",
+      "icon": "shield",
+      "kicker": "Cầu không sập",
+      "cue": "cầu không",
+      "line": "Nhưng nỗi sợ ở lại",
+      "line_cue": "nhưng",
+      "action": "đứng vững"
+     }
+    ]
+   },
+   "sources": [
+    "wiki_bb",
+    "stampede"
+   ]
+  },
+  {
+   "id": "b09",
+   "act": "story",
+   "narration": "Gần một năm sau, ngày mười bảy tháng năm, năm một nghìn tám trăm tám mươi tư, ông bầu gánh xiếc P. T. Barnum dắt hai mươi mốt con voi qua cầu, cùng nhiều lạc đà. Đi cuối là Jumbo, con voi nổi tiếng nhất.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "P. T. Barnum",
+      "initials": "PTB",
+      "role": "Ông bầu gánh xiếc",
+      "years": "17/5/1884",
+      "action": "khắc"
+     },
+     {
+      "type": "icon",
+      "concept": "bien_an_toan",
+      "kicker": "Buổi tối · 17/5/1884",
+      "cue": "dắt",
+      "line": "21 con voi, nhiều lạc đà",
+      "line_cue": "hai mươi",
+      "action": "nối hai bờ"
+     },
+     {
+      "type": "icon",
+      "icon": "star",
+      "kicker": "Đi cuối",
+      "cue": "đi cuối",
+      "line": "Jumbo",
+      "line_cue": "jumbo",
+      "action": "tỏa sáng"
+     }
+    ]
+   },
+   "sources": [
+    "barnum",
+    "wiki_bb"
+   ]
+  },
+  {
+   "id": "b10",
+   "act": "story",
+   "narration": "Barnum muốn quảng cáo gánh xiếc, và cho dân New York thấy cầu an toàn. Nhưng voi không làm cầu chắc hơn. Chúng chỉ phơi ra thứ đã có từ bàn vẽ: phần dư.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "eye",
+      "kicker": "Barnum muốn",
+      "line": "Cho dân thấy cầu an toàn",
+      "line_cue": "cho dân",
+      "action": "nhìn rõ"
+     },
+     {
+      "type": "statement",
+      "kicker": "Hay bị hiểu sai",
+      "cue": "nhưng voi",
+      "text": "Voi làm cầu chắc hơn",
+      "strike": "Voi làm cầu chắc hơn",
+      "replace": "Voi cho thấy phần dư",
+      "strike_cue": "không làm",
+      "action": "gạch bỏ"
+     },
+     {
+      "type": "icon",
+      "concept": "bien_an_toan",
+      "kicker": "Có từ trên bàn vẽ",
+      "cue": "chúng chỉ",
+      "line": "Phần dư",
+      "line_cue": "phần dư",
+      "action": "hiện ra"
+     }
+    ]
+   },
+   "sources": [
+    "barnum"
+   ]
+  },
+  {
+   "id": "b11",
+   "act": "context",
+   "narration": "Phần dư ấy gọi là biên an toàn: khoảng cách giữa sức chịu thật và tải mình dự tính. Nó không dành cho ngày thường. Nó dành cho chiếc xe quá tải, sợi dây xấu, cái lỗi chưa ai thấy.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "bien_an_toan",
+      "kicker": "Biên an toàn",
+      "line": "Sức chịu thật − tải dự tính",
+      "line_cue": "khoảng cách",
+      "action": "đo"
+     },
+     {
+      "type": "trio",
+      "kicker": "Không dành cho ngày thường",
+      "heading": "Dành cho ngày xấu",
+      "cue": "nó dành",
+      "action": "xếp hàng",
+      "items": [
+       {
+        "icon": "anchor",
+        "label": "Quá tải",
+        "cue": "chiếc xe"
+       },
+       {
+        "icon": "mask",
+        "label": "Dây xấu",
+        "cue": "sợi dây"
+       },
+       {
+        "icon": "magnifier",
+        "label": "Lỗi chưa thấy",
+        "cue": "cái lỗi"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "mccullough1972"
+   ]
+  },
+  {
+   "id": "b12",
+   "act": "context",
+   "narration": "Benjamin Graham mượn đúng chữ ấy cho đầu tư; tập bốn Review sách đã kể. Warren Buffett từng ví: xây cầu chịu được ba mươi nghìn pound, rồi chỉ cho xe mười nghìn pound đi qua.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "book",
+      "kicker": "Benjamin Graham · đầu tư",
+      "line": "Review sách, tập 4",
+      "line_cue": "tập bốn",
+      "action": "lật trang"
+     },
+     {
+      "type": "quote",
+      "text": "Xây cầu chịu được 30.000 pound, rồi chỉ cho xe 10.000 pound đi qua.",
+      "by": "Warren Buffett, 1984 (lược dịch)",
+      "cue": "warren",
+      "action": "hiện chữ"
+     }
+    ]
+   },
+   "sources": [
+    "graham",
+    "buffett1984"
+   ]
+  },
+  {
+   "id": "b13",
+   "act": "principle",
+   "narration": "Từ cây cầu ấy, có ba nguyên tắc. Thứ nhất: để dư nhiều lần. Ước tính tải nặng nhất có thể, rồi làm cho chịu được hơn hẳn thế. Như Roebling: khoảng sáu lần.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "focus": [
+     0
+    ],
+    "action": "lướt tới",
+    "regions": [
+     {
+      "concept": "bien_an_toan",
+      "label": "Để dư nhiều lần",
+      "note": "Tải thật là bao?",
+      "cue": "thứ nhất",
+      "note_cue": "ước tính"
+     },
+     {
+      "icon": "magnifier",
+      "label": "Phòng cái chưa thấy",
+      "note": "Lỡ sai ở đâu?",
+      "cue": "thứ hai",
+      "note_cue": "biên an"
+     },
+     {
+      "icon": "hammer",
+      "label": "Mỏng đi thì bù lại",
+      "note": "Còn dư bao nhiêu?",
+      "cue": "thứ ba",
+      "note_cue": "đừng tiêu"
+     }
+    ],
+    "start": "overview"
+   },
+   "sources": [
+    "structure",
+    "mccullough1972"
+   ]
+  },
+  {
+   "id": "b14",
+   "act": "principle",
+   "narration": "Thứ hai: phòng cái chưa thấy. Biên an toàn không dành cho rủi ro đã biết, mà cho thứ không ai lường trước. Roebling không biết sẽ có Haigh; phần dư vẫn đỡ được.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "focus": [
+     1
+    ],
+    "action": "lướt sang"
+   },
+   "sources": [
+    "mccullough1972"
+   ]
+  },
+  {
+   "id": "b15",
+   "act": "example",
+   "narration": "Thử với một buổi hẹn, số minh họa thôi. Đường thường mất ba mươi phút. Đi sát giờ, phần dư là không. Một hôm kẹt xe mười phút, bạn trễ mười phút. Giờ đi sớm mười lăm phút: kẹt mười phút, bạn vẫn kịp.",
+   "visual": {
+    "type": "scenario",
+    "kicker": "Số minh họa",
+    "heading": "Một buổi hẹn",
+    "action": "kéo",
+    "before_label": "Đi sát giờ",
+    "after_label": "Đi sớm 15 phút",
+    "cue": "giờ đi",
+    "suffix": " phút",
+    "bars": [
+     {
+      "label": "Đường thường ngày",
+      "before": 30,
+      "after": 30,
+      "color": "#CFC6B8"
+     },
+     {
+      "label": "Phần dư",
+      "before": 0,
+      "after": 15,
+      "concept": "bien_an_toan",
+      "cue": "phần dư"
+     },
+     {
+      "label": "Trễ, nếu kẹt 10 phút",
+      "before": 10,
+      "after": 0,
+      "concept": "vua_khit",
+      "cue": "một hôm"
+     }
+    ],
+    "takeaway": "Kẹt 10 phút: phần dư đỡ hết.",
+    "takeaway_cue": "vẫn kịp"
+   },
+   "sources": [
+    "minhhoa"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b16",
+   "act": "principle",
+   "narration": "Thứ ba: mỏng đi thì bù lại. Biên an toàn bị ăn mòn dần, bởi một sợi dây xấu, một khoản chi phát sinh. Washington không coi như không sao: ông thêm dây. Đừng tiêu hết phần dư rồi quên.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "focus": [
+     2
+    ],
+    "action": "lướt xuống"
+   },
+   "sources": [
+    "mccullough1972"
+   ]
+  },
+  {
+   "id": "b17",
+   "act": "complication",
+   "narration": "Nhưng hình ảnh cây cầu cũng có chỗ dừng. Dư bao nhiêu cũng không miễn phí. Một cây cầu chịu gấp năm mươi lần có lẽ tốn thép đến mức không ai xây nổi. Đi sớm hai tiếng là mất cả buổi sáng.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "bien_an_toan",
+      "kicker": "Ẩn dụ dừng ở đâu?",
+      "line": "Dư cũng có giá",
+      "line_cue": "dư bao",
+      "action": "cân nhắc"
+     },
+     {
+      "type": "icon",
+      "icon": "coins",
+      "kicker": "Gấp 50 lần · minh họa",
+      "cue": "một cây",
+      "line": "Tốn đến mức không xây nổi",
+      "line_cue": "tốn thép",
+      "action": "chất đống"
+     },
+     {
+      "type": "icon",
+      "icon": "clock",
+      "kicker": "Đi sớm 2 tiếng",
+      "cue": "đi sớm",
+      "line": "Mất cả buổi sáng",
+      "line_cue": "mất cả",
+      "action": "quay kim"
+     }
+    ]
+   },
+   "sources": [
+    "minhhoa"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b18",
+   "act": "complication",
+   "narration": "Đời thật cũng không treo biển báo tải. Bạn phải tự ước tính, và chọn dư bao nhiêu là một phán đoán, không có công thức chung. Phần dư cũng không thay được thiết kế đúng: nó đỡ cái sai nhỏ, không cứu cái sai gốc.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "compass",
+      "kicker": "Đời thật",
+      "line": "Không có biển báo tải",
+      "line_cue": "không treo",
+      "action": "dò hướng"
+     },
+     {
+      "type": "icon",
+      "icon": "brain",
+      "kicker": "Dư bao nhiêu?",
+      "cue": "bạn phải",
+      "line": "Một phán đoán, không công thức",
+      "line_cue": "một phán",
+      "action": "cân nhắc"
+     },
+     {
+      "type": "icon",
+      "icon": "shield",
+      "kicker": "Phần dư không thay thiết kế đúng",
+      "cue": "phần dư",
+      "line": "Đỡ sai nhỏ, không cứu sai gốc",
+      "line_cue": "nó đỡ",
+      "action": "đỡ lấy"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b19",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Sếp hỏi dự án bao giờ xong. Bạn ước tính hai tuần, nếu mọi thứ suôn sẻ. Bạn nên hứa thế nào?",
+   "visual": {
+    "type": "question",
+    "question": "Ước tính 2 tuần nếu suôn sẻ. Hứa với sếp thế nào?",
+    "choices": [
+     "Đúng 2 tuần, như ước tính",
+     "Khoảng 3 tuần, chừa chỗ cho cái chưa thấy",
+     "2 tháng, cho thật chắc"
+    ],
+    "answer": "B — để dư hợp lý; C dư đến mức mất giá trị.",
+    "think_seconds": 5
+   },
+   "sources": [
+    "minhhoa"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b20",
+   "act": "recap",
+   "narration": "Đáp án là B: dư đủ để đỡ cái chưa thấy, nhưng không dư đến vô dụng. Vậy là ba nguyên tắc. Để dư nhiều lần. Phòng cái chưa thấy. Và mỏng đi thì bù lại.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "action": "lùi xa",
+    "focus": [
+     {
+      "region": 0,
+      "cue": "dư đủ"
+     }
+    ],
+    "overview": true,
+    "overview_cue": "vậy là",
+    "line": "Ba câu hỏi trước một kế hoạch",
+    "line_cue": "và mỏng"
+   }
+  },
+  {
+   "id": "b21",
+   "act": "close",
+   "narration": "Hai mươi mốt con voi không làm cây cầu chắc hơn. Chúng chỉ cho thấy phần dư mà nhà Roebling đã để lại từ trên bàn vẽ. Lần tới, trước một kế hoạch vừa khít, hãy hỏi: cây cầu của mình chịu được bao nhiêu lần?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "bien_an_toan",
+      "kicker": "Brooklyn · 1884",
+      "line": "21 con voi qua cầu",
+      "action": "nối hai bờ"
+     },
+     {
+      "type": "icon",
+      "icon": "compass",
+      "kicker": "Phần dư",
+      "cue": "chúng chỉ",
+      "line": "Có từ trên bàn vẽ",
+      "line_cue": "bàn vẽ",
+      "action": "xoay"
+     },
+     {
+      "type": "icon",
+      "concept": "bien_an_toan",
+      "kicker": "Lần tới, hãy hỏi",
+      "cue": "lần tới",
+      "line": "Chịu được bao nhiêu lần?",
+      "line_cue": "hãy hỏi",
+      "action": "đứng vững"
+     }
+    ]
+   },
+   "sources": [
+    "barnum",
+    "mccullough1972"
+   ]
+  },
+  {
+   "id": "b22",
+   "act": "close",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
+   "visual": {
+    "type": "end",
+    "kicker": "Khung tư duy · Tập 6",
+    "title": "Biên an toàn",
+    "ask": "Bạn muốn tập sau về khung tư duy nào?",
+    "ask_hint": "Thiên kiến kẻ sống sót · tối thiểu hóa hối tiếc · tư duy bậc hai",
+    "ask_cue": "hay chủ",
+    "sources_line": "Nguồn: McCullough (1972) · STRUCTURE · History.com · Graham · Buffett (1984) · xem mô tả",
+    "disclaimer": "Nội dung giáo dục; câu chuyện kể lại từ nguồn công khai; không phải lời khuyên đầu tư.",
+    "sources_cue": "còn bạn"
+   }
+  }
+ ],
+ "pronounce": {}
+}

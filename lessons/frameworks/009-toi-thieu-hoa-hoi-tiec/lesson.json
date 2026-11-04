@@ -1,0 +1,880 @@
+{
+ "meta": {
+  "series": "Khung tư duy · Tập 9",
+  "title": "Tối thiểu hóa hối tiếc",
+  "subtitle": "Regret minimization — một công việc tốt, bốn mươi tám tiếng và cái nhìn từ tuổi tám mươi",
+  "topic": "books",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt đi làm đang đứng trước một ngã rẽ (nghỉ việc ổn định, đi học, mở tiệm, chuyển nghề); thích chuyện doanh nhân, khoa học và cách nghĩ",
+  "aspect": "4:3",
+  "target_minutes": [
+   3,
+   5
+  ],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
+  "learning_goals": [
+   "Kể lại câu chuyện năm 1994: Jeff Bezos, 30 tuổi, phó chủ tịch cấp cao ở D. E. Shaw, đọc rằng lượng dùng web tăng khoảng 2.300% một năm (theo lời ông); sếp David Shaw đi bộ cùng ông khoảng hai tiếng ở Central Park và khuyên nghĩ thêm 48 tiếng; ông hình dung mình ở tuổi 80 nhìn lại (Academy of Achievement, 2001); lập công ty 7/1994 ở Bellevue, trang bán sách mở 7/1995; tự đánh giá cơ hội thành công khoảng 30%",
+   "Phân biệt cái cân đặt ở hôm nay (cân cái mất trước mắt: lương, thưởng, nỗi sợ) với đồng hồ cát nhìn từ tuổi 80 (nhìn lại cả đời: điều gì mình sẽ tiếc)",
+   "Dùng ba nguyên tắc: đứng ở tuổi 80; tách hai loại tiếc; chỉ liều phần mất được; và biết chỗ ẩn dụ dừng lại (hợp với quyết định 'không thử thì tiếc', không biến mọi rủi ro thành đáng liều; Bezos có học vấn, kinh nghiệm và người thân góp vốn)"
+  ],
+  "disclaimer": "Nội dung giáo dục; câu chuyện kể lại từ nguồn công khai; không phải lời khuyên đầu tư.",
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người kể chuyện lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively. Nothing in the script depends on this particular voice.",
+  "concepts": [
+   {
+    "id": "nhin_lai",
+    "visual": "hourglass",
+    "color": "a",
+    "shows": "đồng hồ cát gần cạn: đứng ở tuổi tám mươi nhìn lại cả đời, thấy điều gì thật sự đáng tiếc, và thấy nhiều cái mất hôm nay nhẹ đi",
+    "omits": "chỉ hợp với quyết định kiểu 'không thử thì tiếc', không biến mọi rủi ro thành đáng liều (tuổi tám mươi cũng tiếc một khoản nợ không trả nổi); không ai thật sự biết mình lúc tám mươi nghĩ gì; Bezos có học vấn, kinh nghiệm và người thân góp vốn"
+   },
+   {
+    "id": "truoc_mat",
+    "visual": "scale",
+    "color": "b",
+    "shows": "cái cân đặt ở hôm nay: một bên lương, thưởng, sự ổn định; một bên nỗi sợ thất bại; bên nào nặng hơn thì chọn",
+    "omits": "cân cái mất trước mắt thường là đúng, nhất là khi có người phụ thuộc vào mình; tiền thưởng và sự ổn định là thật"
+   }
+  ],
+  "brief": {
+   "target_viewer": "Người Việt 22–40 tuổi đi làm, đang có việc ổn nhưng ấp ủ một điều khác (học tiếp, mở tiệm, chuyển nghề) và hay quyết định bằng cách cân cái mất ngay trước mắt (giả định của người viết, chủ kênh xác nhận lại)",
+   "format": "Giải thích một khung tư duy qua một câu chuyện thật (concept explainer), 4–5 phút, 4:3, minh họa icon vẽ tay, một bảng xuyên suốt cho ba nguyên tắc, một ví dụ đổi trạng thái, một giọng đọc",
+   "central_question": "Trước một ngã rẽ lớn, làm sao cân cho đúng, khi cái mất hôm nay luôn có vẻ nặng nhất, và cách nhìn từ tuổi tám mươi giúp đến đâu?",
+   "transformation": "Trước khi xem, họ nghĩ 'tối thiểu hóa hối tiếc' là câu khẩu hiệu 'cứ liều đi' của tỷ phú. Sau khi xem, họ kể lại được câu chuyện 1994 (con số 2.300%, buổi đi bộ ở Central Park, 48 tiếng, tuổi 80, gara ở Bellevue, 30% cơ hội), phân biệt cái cân hôm nay với đồng hồ cát tuổi 80, tự áp dụng cho một quyết định thường ngày (Lan và tiệm bánh), và biết khung này dừng ở đâu (không cho mọi rủi ro, nhất là nợ; Bezos có đệm)",
+   "discovery_goal": "Tìm kiếm (\"tối thiểu hóa hối tiếc\", \"regret minimization framework\", \"Jeff Bezos 80 tuổi\", \"Bezos bỏ việc lập Amazon\", \"có nên nghỉ việc\", \"khung tư duy\") và đề xuất từ video tư duy, khởi nghiệp, phát triển bản thân; tập 9 của series Khung tư duy, khán giả series Review sách",
+   "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn tập sau về khung tư duy nào?\" (comment answering the end-card question)",
+   "share_recipient": "Một người bạn đang phân vân nghỉ việc ổn định để làm điều mình ấp ủ: ba câu hỏi (tuổi tám mươi sẽ tiếc gì; tiếc vì chưa thử hay vì đã làm; thất bại thì còn gì) giúp hai người bàn chuyện ấy mà không ai bị coi là liều hay hèn",
+   "evidence": "Bezos, phỏng vấn Academy of Achievement 2001 (tuổi 80, 'regret minimization framework', đi bộ khoảng hai tiếng ở Central Park, 48 tiếng, bỏ việc giữa năm mất tiền thưởng); Bezos, bài nói ở Princeton 2010 (2.300% một năm, lời sếp 'hợp hơn với người chưa có việc tốt'); Brad Stone, The Everything Store 2013; HistoryLink (Bellevue, 1994–1995); Bloomberg 7/2018 (bố mẹ góp 245.573 đô năm 1995, báo trước ~70% khả năng mất); Bezos tự đánh giá ~30% cơ hội thành công (nhiều phỏng vấn); Gilovich & Medvec 1995 Psychological Review 102:379–395 (trước mắt tiếc việc đã làm, lâu dài tiếc việc chưa làm) và tranh luận với Kahneman 1995/1998; chuyện Lan và các điểm 'độ nặng' là minh họa của kênh",
+   "constraints": "4–5 phút, 4:3, icon vẽ, không khuôn mặt người thật (Bezos là huy hiệu chữ cái), một giọng đọc (OmniVoice seed 99 speed 0.88), tên tiếng Anh giữ nguyên chính tả, số đọc bằng chữ và làm tròn khi đọc, số chính xác trên màn hình; một câu trung lập về Bezos, không chính trị, không nói về tài sản hay công ty hôm nay; nói rõ ông có đệm (học vấn, kinh nghiệm, người thân góp vốn) và tự cho cơ hội chỉ khoảng 30%; không khuyên ai nghỉ việc; không lời khuyên đầu tư; giữ lời miễn trừ"
+  },
+  "youtube": {
+   "title": "Tối thiểu hóa hối tiếc: cách Bezos rời một công việc tốt",
+   "thumbnail_text": "30 tuổi, việc tốt ở phố Wall. Nhưng anh bỏ đi bán sách.",
+   "description": "Năm 1994, Jeff Bezos 30 tuổi, là phó chủ tịch cấp cao ở công ty đầu tư D. E. Shaw ở New York. Theo lời ông, ông đọc được rằng lượng dùng web tăng khoảng 2.300% một năm, và nghĩ tới một hiệu sách trên mạng. Sếp ông, David Shaw, đi bộ cùng ông khoảng hai tiếng ở Central Park và khuyên nghĩ thêm 48 tiếng. Bezos hình dung mình ở tuổi 80 nhìn lại đời mình, và thấy điều ông có thể tiếc không phải là thất bại, mà là chưa từng thử. Video kể lại quyết định ấy, giải thích khung tối thiểu hóa hối tiếc bằng hình ảnh cái cân hôm nay và đồng hồ cát tuổi 80, ba nguyên tắc (đứng ở tuổi 80; tách hai loại tiếc; chỉ liều phần mất được), một ví dụ với Lan và tiệm bánh, và một câu hỏi để bạn tự thử.\n\nẨn dụ dừng ở đâu: khung này hợp với những quyết định kiểu 'không thử thì tiếc' (học một nghề, mở lời, đi một chuyến), không biến mọi rủi ro thành đáng liều: người tám mươi tuổi cũng tiếc một khoản nợ không trả nổi. Và Bezos không nhảy tay không: ông có bằng Princeton, kinh nghiệm phố Wall, khoản để dành, người thân sẵn sàng góp vốn; chính ông tự cho cơ hội thành công chỉ khoảng 30%.\n\nLưu ý về số liệu: lời kể về buổi đi bộ, 48 tiếng và tuổi 80 là của chính Bezos (Academy of Achievement 2001; Princeton 2010); câu trích trên màn hình là lược dịch. Con số 2.300% là lời Bezos (Princeton 2010 nói 'mỗi năm'; vài nguồn ghi 'mỗi tháng'). Bố mẹ ông góp 245.573 đô năm 1995 (Bloomberg 2018), đọc tròn là 'gần hai trăm năm mươi nghìn đô'. Chuyện Lan và các điểm 'độ nặng' là minh họa. Nghiên cứu của Gilovich & Medvec (1995) cho thấy trước mắt người ta hay tiếc việc đã làm, về lâu dài lại hay tiếc việc chưa làm; Daniel Kahneman từng phản biện một phần kết luận này. Jeff Bezos là người gây nhiều tranh cãi; video chỉ kể một quyết định năm 1994, không đánh giá một con người. Nội dung giáo dục, không phải lời khuyên đầu tư hay lời khuyên nghỉ việc.\n\nChương:\n30 tuổi, việc tốt ở phố Wall\nĐiều ta hay làm\nCái cân và đồng hồ cát\nD. E. Shaw, 1994\nMột con số 2.300%\nCentral Park và 48 tiếng\nNhìn từ tuổi 80\nGara ở Bellevue\nĐừng kể thiếu: 30% cơ hội\nNguyên tắc 1: đứng ở tuổi 80\nNguyên tắc 2: tách hai loại tiếc\nLan và tiệm bánh (số minh họa)\nNguyên tắc 3: chỉ liều phần mất được\nẨn dụ dừng ở đâu\nThử một chút\nBa nguyên tắc\nNăm tám mươi tuổi, mình có tiếc không?\n\nNguồn:\n- Jeff Bezos, phỏng vấn Academy of Achievement, 2001: https://achievement.org/achiever/jeffrey-p-bezos/\n- Jeff Bezos, We Are What We Choose, bài nói ở Princeton, 30/5/2010: https://www.princeton.edu/news/2010/05/30/2010-baccalaureate-remarks\n- Brad Stone, The Everything Store: Jeff Bezos and the Age of Amazon, Little, Brown, 2013\n- HistoryLink, Amazon: The Early Years (1995–1999): https://historylink.org/File/23230\n- Bloomberg, A Hidden Amazon Fortune: Bezos' Parents Could Be Worth Billions, 31/7/2018\n- Thomas Gilovich & Victoria Husted Medvec, The Experience of Regret: What, When, and Why, Psychological Review 102(2), 1995, tr. 379–395\n- Daniel Kahneman, Varieties of Counterfactual Thinking (1995); Gilovich, Medvec & Kahneman, Varieties of Regret, Psychological Review, 1998\n\nBạn muốn tập sau về khung tư duy nào? Để lại bình luận nhé.",
+   "tags": [
+    "tối thiểu hóa hối tiếc",
+    "regret minimization framework",
+    "Jeff Bezos",
+    "Bezos 80 tuổi",
+    "khung tư duy",
+    "mô hình tư duy",
+    "ra quyết định",
+    "có nên nghỉ việc",
+    "hối tiếc",
+    "khởi nghiệp",
+    "tư duy dài hạn",
+    "kỹ năng tư duy",
+    "Amazon 1994"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "aoa2001",
+   "cite": "Jeff Bezos, interview with the Academy of Achievement (Class of 2001; transcript parts on achievement.org): told his boss at D. E. Shaw he was going to start an online bookstore; the boss suggested a walk and they walked about two hours in Central Park; the boss said it 'sounds like it would be a better idea for somebody who didn't already have a good job' and convinced him to think about it for 48 hours; leaving a Wall Street firm mid-year means walking away from the annual bonus; 'I wanted to project myself forward to age 80 and say, OK, now I'm looking back on my life. I want to have minimized the number of regrets I have'; 'I knew that if I failed I wouldn't regret that, but I knew the one thing I might regret is not ever having tried'; he called it a 'regret minimization framework' (wording cross-read from several pages reproducing the transcript, incl. CNBC 2017, Business Insider 2017, GoBankingRates/Nasdaq; page not opened directly)",
+   "url": "https://achievement.org/achiever/jeffrey-p-bezos/"
+  },
+  {
+   "id": "princeton2010",
+   "cite": "Jeff Bezos, 'We Are What We Choose', Princeton baccalaureate remarks, 30 May 2010: 'I came across the fact that Web usage was growing at 2,300 percent per year'; decided to start an online bookstore; his boss: 'That sounds like a really good idea, but it would be an even better idea for someone who didn't already have a good job'; took 48 hours to decide (transcripts at rev.com, jamesclear.com, singjupost.com)",
+   "url": "https://www.princeton.edu/news/2010/05/30/2010-baccalaureate-remarks"
+  },
+  {
+   "id": "bezos_bio",
+   "cite": "Brad Stone, The Everything Store: Jeff Bezos and the Age of Amazon (Little, Brown, 2013); Wikipedia 'Jeff Bezos' and 'History of Amazon': born 12 January 1964 (so 30 in 1994); Princeton graduate (1986); senior vice president at D. E. Shaw & Co., New York; company incorporated July 1994 (as Cadabra) and run from the garage of a rented house in Bellevue, Washington; Amazon.com opened to the public in July 1995 (HistoryLink, 'Amazon: The Early Years')",
+   "url": "https://historylink.org/File/23230"
+  },
+  {
+   "id": "odds",
+   "cite": "Bezos's own odds: 'I thought there was a 30% chance that we might build a successful company' (repeated in several interviews; quoted by Benzinga, Business Insider); Bloomberg, 'A Hidden Amazon Fortune: Bezos' Parents Could Be Worth Billions', 31 July 2018: his parents invested $245,573 in 1995; he told investors it was very likely they would lose their money (accounts give a ~70% chance of losing it; Stone 2013)",
+   "url": "https://www.bloomberg.com/news/articles/2018-07-31/a-hidden-amazon-fortune-bezos-parents-could-be-worth-billions"
+  },
+  {
+   "id": "cushion",
+   "cite": "Bezos's cushion: Princeton degree and Wall Street experience (Stone 2013; Wikipedia); a personal stake of about $10,000 plus loans in 1994–95 and money from family and some twenty friends (GoBankingRates; SCMP 2018; figures vary); that he could probably have found a good job again after a failure is this channel's inference, said with 'có lẽ'"
+  },
+  {
+   "id": "gilovich1995",
+   "cite": "Thomas Gilovich and Victoria Husted Medvec, 'The Experience of Regret: What, When, and Why', Psychological Review 102(2), 1995, pp. 379–395: actions generate more regret in the short term, inactions more regret in the long run; disputed in part by Daniel Kahneman (1995), partial resolution in Gilovich, Medvec & Kahneman, 'Varieties of Regret: A Debate and Partial Resolution', Psychological Review, 1998"
+  },
+  {
+   "id": "minhhoa",
+   "cite": "Ví dụ minh họa của kênh (không phải khảo sát): Lan, 27 tuổi, làm ngân hàng, muốn nghỉ một năm học làm bánh và mở tiệm nhỏ; 'độ nặng trong lòng' chấm trên thang 10 (mất một năm lương 8 → 2; chưa từng thử 3 → 8)"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Đứng ở tuổi tám mươi",
+   "line": "Trước một ngã rẽ lớn, hỏi: nhìn lại từ cuối đời, mình sẽ tiếc điều gì?"
+  },
+  {
+   "name": "Tách hai loại tiếc",
+   "line": "Tiếc vì chưa thử khác tiếc vì đã làm; về lâu dài, cái trước thường nặng hơn."
+  },
+  {
+   "name": "Chỉ liều phần mất được",
+   "line": "Trước khi nhảy, tính xem nếu thất bại mình còn gì; đừng đặt cược thứ không thể mất."
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Ba mươi tuổi, việc tốt ở phố Wall. Nhưng anh bỏ đi để bán sách trên mạng.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "chart",
+      "color": "b",
+      "kicker": "Một việc tốt ở phố Wall",
+      "line": "30 tuổi",
+      "line_cue": "ba mươi",
+      "action": "đi lên"
+     },
+     {
+      "type": "icon",
+      "icon": "book",
+      "color": "a",
+      "kicker": "Nhưng anh bỏ đi",
+      "cue": "nhưng anh",
+      "line": "Để bán sách trên mạng",
+      "line_cue": "bán sách",
+      "action": "mở ra"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "bán sách",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "aoa2001",
+    "bezos_bio"
+   ]
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Cách anh quyết định mới lạ: không hỏi mình có thành công không, mà hỏi năm tám mươi tuổi, mình có tiếc không?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "truoc_mat",
+      "kicker": "Không hỏi",
+      "line": "Mình có thành công không?",
+      "line_cue": "mình có thành",
+      "action": "cân"
+     },
+     {
+      "type": "icon",
+      "concept": "nhin_lai",
+      "kicker": "Mà hỏi",
+      "cue": "mà hỏi",
+      "line": "Năm 80 tuổi, có tiếc không?",
+      "line_cue": "tám mươi",
+      "action": "lật ngược"
+     }
+    ]
+   },
+   "sources": [
+    "aoa2001"
+   ]
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Khung tư duy · Tập 9",
+    "title": "Tối thiểu hóa hối tiếc",
+    "subtitle": "Regret minimization",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Ta hay quyết định lớn bằng một cái cân đặt ở hôm nay. Một bên là lương, tiền thưởng, sự ổn định. Bên kia là nỗi sợ thất bại. Cái cân ấy hay quên một người: chính mình, nhiều năm sau.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "truoc_mat",
+      "kicker": "Điều ta hay làm",
+      "line": "Một cái cân ở hôm nay",
+      "line_cue": "một cái",
+      "action": "cân"
+     },
+     {
+      "type": "trio",
+      "kicker": "Hai đĩa cân",
+      "cue": "một bên",
+      "action": "đặt lên",
+      "items": [
+       {
+        "icon": "coins",
+        "label": "Lương, thưởng, ổn định"
+       },
+       {
+        "icon": "lightning",
+        "label": "Nỗi sợ thất bại",
+        "cue": "bên kia"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "mirror",
+      "kicker": "Cái cân hay quên",
+      "cue": "cái cân",
+      "line": "Chính mình, nhiều năm sau",
+      "line_cue": "chính mình",
+      "action": "soi lại"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "Có một cách cân khác. Hình dung bạn ở tuổi tám mươi, cát trong đồng hồ gần cạn, nhìn lại cả đời mình. Từ chỗ ấy, nhiều thứ hôm nay rất nặng bỗng nhẹ đi, và vài thứ nhỏ lại nặng lên.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "nhin_lai",
+      "kicker": "Một cách cân khác",
+      "line": "Bạn ở tuổi 80, nhìn lại",
+      "line_cue": "tám mươi",
+      "action": "cát chảy"
+     },
+     {
+      "type": "trio",
+      "kicker": "Hai cách nhìn",
+      "cue": "từ chỗ",
+      "action": "đặt cạnh",
+      "items": [
+       {
+        "concept": "truoc_mat",
+        "label": "Cân ở hôm nay"
+       },
+       {
+        "concept": "nhin_lai",
+        "label": "Nhìn từ tuổi 80",
+        "cue": "nhẹ đi"
+       }
+      ],
+      "line": "Thứ nặng nhẹ đi, thứ nhỏ nặng lên",
+      "line_cue": "và vài"
+     }
+    ]
+   }
+  },
+  {
+   "id": "b03",
+   "act": "context",
+   "narration": "Năm một nghìn chín trăm chín mươi tư, Jeff Bezos ba mươi tuổi, là phó chủ tịch cấp cao ở D. E. Shaw, một công ty đầu tư ở New York. Bezos là người gây nhiều tranh cãi; ở đây mình chỉ kể một quyết định năm ấy.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "portrait",
+      "name": "Jeff Bezos",
+      "initials": "JB",
+      "role": "Doanh nhân",
+      "years": "Câu chuyện năm 1994",
+      "action": "khắc"
+     },
+     {
+      "type": "icon",
+      "icon": "chart",
+      "kicker": "D. E. Shaw · New York",
+      "cue": "phó",
+      "line": "Phó chủ tịch cấp cao",
+      "line_cue": "phó",
+      "action": "đi lên"
+     },
+     {
+      "type": "icon",
+      "icon": "lantern",
+      "kicker": "Chỉ một quyết định",
+      "cue": "bezos là",
+      "line": "Không đánh giá một con người",
+      "line_cue": "ở đây",
+      "action": "soi sáng"
+     }
+    ]
+   },
+   "sources": [
+    "bezos_bio"
+   ]
+  },
+  {
+   "id": "b04",
+   "act": "story",
+   "narration": "Mùa xuân năm ấy, theo lời ông, ông đọc được rằng lượng dùng web tăng khoảng hai nghìn ba trăm phần trăm một năm. Ông nghĩ tới một hiệu sách trên mạng.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "sprout",
+      "motion": "grow",
+      "kicker": "Mùa xuân 1994 · theo lời Bezos",
+      "line": "Một con số",
+      "line_cue": "ông đọc",
+      "action": "nảy mầm"
+     },
+     {
+      "type": "stat",
+      "value": 2300,
+      "suffix": "%",
+      "color": "a",
+      "label": "lượng dùng web tăng mỗi năm",
+      "note": "theo lời Bezos · Princeton, 2010",
+      "cue": "lượng dùng",
+      "action": "đếm lên"
+     },
+     {
+      "type": "icon",
+      "icon": "store",
+      "kicker": "Ông nghĩ tới",
+      "cue": "ông nghĩ",
+      "line": "Một hiệu sách trên mạng",
+      "line_cue": "hiệu sách",
+      "action": "mở cửa"
+     }
+    ]
+   },
+   "sources": [
+    "princeton2010",
+    "aoa2001"
+   ],
+   "certainty": "attributed"
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Ông nói với sếp, David Shaw. Theo Bezos kể, hai người đi bộ khoảng hai tiếng trong Central Park. Shaw bảo: ý tưởng hay, nhưng hợp hơn với người chưa có việc tốt. Rồi khuyên ông nghĩ thêm bốn mươi tám tiếng.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "tree",
+      "kicker": "Central Park · theo Bezos kể",
+      "line": "Đi bộ khoảng hai tiếng",
+      "line_cue": "hai người",
+      "action": "rảo bước"
+     },
+     {
+      "type": "quote",
+      "text": "Ý tưởng hay, nhưng hợp hơn với người chưa có việc tốt.",
+      "by": "David Shaw, theo lời Bezos (lược dịch)",
+      "cue": "shaw bảo",
+      "action": "hiện chữ"
+     },
+     {
+      "type": "icon",
+      "icon": "clock",
+      "kicker": "Lời khuyên",
+      "cue": "rồi khuyên",
+      "line": "Nghĩ thêm 48 tiếng",
+      "line_cue": "bốn mươi",
+      "action": "quay kim"
+     }
+    ]
+   },
+   "sources": [
+    "aoa2001",
+    "princeton2010"
+   ],
+   "certainty": "attributed"
+  },
+  {
+   "id": "b06",
+   "act": "story",
+   "narration": "Trong hai ngày ấy, ông dùng một cách nghĩ mà sau này ông gọi là khung tối thiểu hóa hối tiếc. Ông hình dung mình ở tuổi tám mươi, nhìn lại đời mình, và muốn có ít điều hối tiếc nhất.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "nhin_lai",
+      "kicker": "Trong hai ngày ấy",
+      "line": "Tối thiểu hóa hối tiếc",
+      "line_cue": "khung",
+      "action": "cát chảy"
+     },
+     {
+      "type": "quote",
+      "text": "Hình dung mình ở tuổi 80, nhìn lại đời mình, và muốn có ít điều hối tiếc nhất.",
+      "by": "Jeff Bezos, Academy of Achievement 2001 (lược dịch)",
+      "cue": "ông hình",
+      "action": "hiện chữ"
+     }
+    ]
+   },
+   "sources": [
+    "aoa2001"
+   ]
+  },
+  {
+   "id": "b07",
+   "act": "turn",
+   "narration": "Từ chỗ ấy nhìn lại, câu trả lời rõ ra. Thất bại, ông sẽ không tiếc. Điều ông có thể tiếc là chưa từng thử. Còn tiền thưởng cuối năm, mất vì nghỉ giữa chừng? Ở tuổi tám mươi, nó chẳng còn đáng kể.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "door",
+      "kicker": "Nếu thất bại",
+      "line": "Sẽ không tiếc",
+      "line_cue": "thất bại",
+      "action": "mở cửa"
+     },
+     {
+      "type": "icon",
+      "concept": "nhin_lai",
+      "kicker": "Điều có thể tiếc",
+      "cue": "điều ông",
+      "line": "Chưa từng thử",
+      "line_cue": "chưa từng",
+      "action": "cát chảy"
+     },
+     {
+      "type": "swap",
+      "kicker": "Nhìn từ tuổi 80",
+      "cue": "còn tiền",
+      "strike_cue": "ở tuổi",
+      "action": "buông",
+      "from": {
+       "concept": "truoc_mat",
+       "label": "Tiền thưởng năm nay"
+      },
+      "to": {
+       "concept": "nhin_lai",
+       "label": "Được thử",
+       "cue": "chẳng"
+      }
+     }
+    ]
+   },
+   "sources": [
+    "aoa2001"
+   ]
+  },
+  {
+   "id": "b08",
+   "act": "story",
+   "narration": "Năm ấy, ông rời D. E. Shaw. Tháng bảy, ông lập công ty trong gara một căn nhà thuê ở Bellevue, gần Seattle. Tháng bảy năm sau, trang bán sách mở cửa.",
+   "visual": {
+    "type": "timeline",
+    "title": "Từ phố Wall tới một gara",
+    "action": "chấm mốc",
+    "events": [
+     {
+      "year": "1994",
+      "text": "Rời D. E. Shaw",
+      "cue": "năm ấy"
+     },
+     {
+      "year": "7/1994",
+      "text": "Lập công ty · gara ở Bellevue",
+      "cue": "ông lập"
+     },
+     {
+      "year": "7/1995",
+      "text": "Trang bán sách mở cửa",
+      "cue": "năm sau"
+     }
+    ]
+   },
+   "sources": [
+    "bezos_bio"
+   ]
+  },
+  {
+   "id": "b09",
+   "act": "complication",
+   "narration": "Nhưng đừng kể thiếu. Chính Bezos nói ông nghĩ cơ hội thành công chỉ khoảng ba mươi phần trăm. Năm một nghìn chín trăm chín mươi lăm, bố mẹ ông góp gần hai trăm năm mươi nghìn đô, và được báo trước: rất có thể mất trắng.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stat",
+      "value": 30,
+      "prefix": "~",
+      "suffix": "%",
+      "color": "b",
+      "label": "cơ hội thành công, theo Bezos",
+      "note": "lời Bezos, nhiều phỏng vấn",
+      "action": "đếm lên"
+     },
+     {
+      "type": "icon",
+      "icon": "coins",
+      "kicker": "1995 · bố mẹ góp vốn",
+      "cue": "năm một",
+      "line": "245.573 $",
+      "line_cue": "gần hai",
+      "action": "rót vào"
+     },
+     {
+      "type": "icon",
+      "icon": "dice",
+      "color": "b",
+      "kicker": "Được báo trước",
+      "cue": "và được",
+      "line": "Rất có thể mất trắng",
+      "line_cue": "rất có",
+      "action": "lăn"
+     }
+    ]
+   },
+   "sources": [
+    "odds"
+   ],
+   "certainty": "attributed"
+  },
+  {
+   "id": "b10",
+   "act": "principle",
+   "narration": "Từ câu chuyện ấy, có ba nguyên tắc. Thứ nhất: đứng ở tuổi tám mươi. Trước một ngã rẽ lớn, hãy hỏi: nhìn lại từ cuối đời, mình sẽ tiếc điều gì?",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "focus": [
+     0
+    ],
+    "action": "lướt tới",
+    "regions": [
+     {
+      "concept": "nhin_lai",
+      "label": "Đứng ở tuổi 80",
+      "note": "Mình sẽ tiếc gì?",
+      "cue": "thứ nhất",
+      "note_cue": "mình sẽ"
+     },
+     {
+      "icon": "fork",
+      "label": "Tách hai loại tiếc",
+      "note": "Tiếc vì chưa thử?",
+      "cue": "thứ hai",
+      "note_cue": "tiếc vì"
+     },
+     {
+      "icon": "shield",
+      "label": "Liều phần mất được",
+      "note": "Thất bại còn gì?",
+      "cue": "thứ ba",
+      "note_cue": "nếu thất"
+     }
+    ],
+    "start": "overview"
+   },
+   "sources": [
+    "aoa2001"
+   ]
+  },
+  {
+   "id": "b11",
+   "act": "principle",
+   "narration": "Thứ hai: tách hai loại tiếc. Tiếc vì chưa thử, hay tiếc vì đã làm? Theo nghiên cứu của Thomas Gilovich, trước mắt ta hay tiếc việc đã làm; về lâu dài, lại hay tiếc việc chưa làm.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "focus": [
+     1
+    ],
+    "action": "lướt sang"
+   },
+   "sources": [
+    "gilovich1995"
+   ]
+  },
+  {
+   "id": "b12",
+   "act": "example",
+   "narration": "Thử với Lan, hai mươi bảy tuổi, số minh họa thôi. Lan làm ngân hàng, muốn nghỉ một năm học làm bánh, mở tiệm nhỏ. Nhìn từ hôm nay, mất một năm lương nặng tám trên mười; chưa thử chỉ nặng ba. Đứng ở tuổi tám mươi nhìn lại, một năm lương còn khoảng hai, còn chưa từng thử thì nặng lên tám.",
+   "visual": {
+    "type": "scenario",
+    "kicker": "Số minh họa · độ nặng trong lòng",
+    "heading": "Lan, 27 tuổi, muốn mở tiệm bánh",
+    "action": "kéo",
+    "before_label": "Nhìn từ hôm nay",
+    "after_label": "Nhìn từ tuổi 80",
+    "cue": "đứng ở",
+    "suffix": "/10",
+    "max": 10,
+    "bars": [
+     {
+      "label": "Mất một năm lương",
+      "before": 8,
+      "after": 2,
+      "concept": "truoc_mat",
+      "cue": "mất một"
+     },
+     {
+      "label": "Chưa từng thử",
+      "before": 3,
+      "after": 8,
+      "concept": "nhin_lai",
+      "cue": "chưa thử"
+     }
+    ],
+    "takeaway": "Lương nhẹ đi. Chưa thử nặng lên.",
+    "takeaway_cue": "nặng lên"
+   },
+   "sources": [
+    "minhhoa"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b13",
+   "act": "principle",
+   "narration": "Thứ ba: chỉ liều phần mất được. Trước khi nhảy, hãy tính: nếu thất bại, mình còn gì? Lan để dành đủ sống một năm, và biết nếu tiệm đóng, cô vẫn xin lại được việc văn phòng.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "focus": [
+     2
+    ],
+    "action": "lướt xuống"
+   },
+   "sources": [
+    "minhhoa"
+   ]
+  },
+  {
+   "id": "b14",
+   "act": "complication",
+   "narration": "Nhưng hình ảnh tuổi tám mươi cũng có giới hạn. Nó hợp với những quyết định kiểu không thử thì tiếc: học một nghề, mở lời, đi một chuyến. Nó không biến mọi rủi ro thành đáng liều. Người tám mươi tuổi cũng sẽ tiếc một khoản nợ không trả nổi.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "nhin_lai",
+      "kicker": "Ẩn dụ dừng ở đâu?",
+      "line": "Hợp với: không thử thì tiếc",
+      "line_cue": "nó hợp",
+      "action": "cát chảy"
+     },
+     {
+      "type": "trio",
+      "kicker": "Không thử thì tiếc",
+      "cue": "học",
+      "action": "lần lượt",
+      "items": [
+       {
+        "icon": "book",
+        "label": "Học một nghề"
+       },
+       {
+        "icon": "letter",
+        "label": "Mở lời",
+        "cue": "mở lời"
+       },
+       {
+        "icon": "compass",
+        "label": "Đi một chuyến",
+        "cue": "đi một"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "anchor",
+      "color": "b",
+      "kicker": "Không phải mọi rủi ro",
+      "cue": "nó không",
+      "line": "Một khoản nợ không trả nổi",
+      "line_cue": "người tám",
+      "action": "kéo xuống"
+     }
+    ]
+   },
+   "sources": [
+    "gilovich1995"
+   ]
+  },
+  {
+   "id": "b15",
+   "act": "complication",
+   "narration": "Và Bezos không nhảy tay không. Ông có bằng Princeton, kinh nghiệm phố Wall, một khoản để dành, người thân sẵn sàng góp vốn; thất bại, có lẽ ông vẫn tìm lại được việc tốt. Người ít đệm hơn cần tính kỹ hơn.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "umbrella",
+      "kicker": "Ẩn dụ dừng ở đâu?",
+      "line": "Bezos không nhảy tay không",
+      "line_cue": "không nhảy",
+      "action": "bung dù"
+     },
+     {
+      "type": "trio",
+      "kicker": "Tấm đệm của ông",
+      "cue": "ông có",
+      "action": "xếp lớp",
+      "items": [
+       {
+        "icon": "key",
+        "label": "Học vấn, kinh nghiệm"
+       },
+       {
+        "icon": "coins",
+        "label": "Để dành, người thân góp",
+        "cue": "một khoản"
+       },
+       {
+        "icon": "house",
+        "label": "Có lẽ dễ tìm lại việc",
+        "cue": "thất bại"
+       }
+      ],
+      "line": "Ít đệm hơn: tính kỹ hơn",
+      "line_cue": "người ít"
+     }
+    ]
+   },
+   "sources": [
+    "cushion",
+    "odds"
+   ],
+   "certainty": "attributed"
+  },
+  {
+   "id": "b16",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Câu hỏi năm tám mươi tuổi mình có tiếc không, hợp nhất với tình huống nào?",
+   "visual": {
+    "type": "question",
+    "question": "Câu hỏi 'tuổi 80 có tiếc không?' hợp nhất với?",
+    "choices": [
+     "Vay nóng để lướt sóng chứng khoán",
+     "Lớp vẽ buổi tối mình ấp ủ mấy năm",
+     "Chọn mua nước mắm hãng nào"
+    ],
+    "answer": "B — không thử thì tiếc, và cái mất (vài buổi tối, học phí) mất được.",
+    "think_seconds": 5
+   },
+   "sources": [
+    "minhhoa"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b17",
+   "act": "recap",
+   "narration": "Đáp án là B: chuyện nước mắm không cần tới tuổi tám mươi, còn vay nóng thì tuổi tám mươi sẽ tiếc. Vậy là ba nguyên tắc. Đứng ở tuổi tám mươi. Tách hai loại tiếc. Và chỉ liều phần mất được.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "action": "lùi xa",
+    "focus": [
+     {
+      "region": 0,
+      "cue": "đáp án"
+     }
+    ],
+    "overview": true,
+    "overview_cue": "vậy là",
+    "line": "Ba câu hỏi trước một ngã rẽ",
+    "line_cue": "và chỉ"
+   }
+  },
+  {
+   "id": "b18",
+   "act": "close",
+   "narration": "Năm một nghìn chín trăm chín mươi tư, Bezos không hỏi mình có thành công không. Ông hỏi: năm tám mươi tuổi, mình có tiếc không? Lần tới, trước một ngã rẽ, hãy thử đứng ở tuổi tám mươi mà nhìn lại.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "truoc_mat",
+      "kicker": "1994 · ông không hỏi",
+      "line": "Có thành công không?",
+      "line_cue": "mình có",
+      "action": "đứng yên"
+     },
+     {
+      "type": "icon",
+      "concept": "nhin_lai",
+      "kicker": "Ông hỏi",
+      "cue": "ông hỏi",
+      "line": "Năm 80 tuổi, có tiếc không?",
+      "line_cue": "năm tám",
+      "action": "cát chảy"
+     },
+     {
+      "type": "icon",
+      "icon": "fork",
+      "color": "a",
+      "kicker": "Lần tới, trước một ngã rẽ",
+      "cue": "lần tới",
+      "line": "Đứng ở tuổi 80 mà nhìn lại",
+      "line_cue": "hãy thử",
+      "action": "rẽ lối"
+     }
+    ]
+   },
+   "sources": [
+    "aoa2001"
+   ]
+  },
+  {
+   "id": "b19",
+   "act": "close",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
+   "visual": {
+    "type": "end",
+    "kicker": "Khung tư duy · Tập 9",
+    "title": "Tối thiểu hóa hối tiếc",
+    "ask": "Bạn muốn tập sau về khung tư duy nào?",
+    "ask_hint": "Tư duy ngược · hiệu ứng mỏ neo · dao cạo Occam",
+    "ask_cue": "hay chủ",
+    "sources_line": "Nguồn: Bezos, Academy of Achievement (2001) · Princeton (2010) · Stone (2013) · Gilovich (1995) · xem mô tả",
+    "disclaimer": "Nội dung giáo dục; câu chuyện kể lại từ nguồn công khai; không phải lời khuyên đầu tư.",
+    "sources_cue": "còn bạn"
+   }
+  }
+ ],
+ "pronounce": {}
+}

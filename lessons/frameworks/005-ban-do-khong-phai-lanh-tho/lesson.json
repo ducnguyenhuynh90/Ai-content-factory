@@ -1,0 +1,185 @@
+{
+ "meta": {
+  "series": "Khung tư duy · Tập 5",
+  "title": "Bản đồ không phải lãnh thổ",
+  "subtitle": "The map is not the territory — hòn đảo California và một bờ biển vẫn nằm đó",
+  "topic": "books",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt đi làm, sống giữa ứng dụng bản đồ, tin đăng, bảng số liệu và lời kể lại; muốn biết khi nào tin bản đồ và khi nào phải đi xem tận nơi",
+  "aspect": "4:3",
+  "target_minutes": [3, 5],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {"primary_color": "#E8B06A", "secondary_color": "#12100E"},
+  "learning_goals": [
+   "Kể lại câu chuyện hòn đảo California: năm 1539 Ulloa đi tới cuối vịnh và bản đồ giữa thế kỷ 16 vẽ đúng một bán đảo; khoảng 1620 tu sĩ Antonio de la Ascensión được cho là vẽ nó thành đảo, từ 1622 hòn đảo lên bản đồ in, Briggs 1625 phổ biến nó; Kino đi đường bộ khoảng 1701 (bản đồ in ở Paris 1705); Consag 1746 và sắc lệnh 1747 của vua Ferdinand VI (theo nhiều tài liệu); Korzybski đặt tên 'bản đồ không phải lãnh thổ' năm 1931",
+   "Phân biệt tin bản đồ vì nó được in và được chép lại (tấm bản đồ chép lại) với đối chiếu bản đồ với thực địa (ống nhòm: đi xem tận nơi)",
+   "Dùng ba nguyên tắc: hỏi ai đã tận mắt; đi xem tận nơi; sửa bản đồ khi đất nói khác; và biết chỗ ẩn dụ dừng lại (không ai đi hết mọi bờ biển, ta vẫn phải dùng bản đồ của người khác; bản đồ sai vẫn hơn không có gì nếu bạn kiểm tra dọc đường)"
+  ],
+  "disclaimer": "Nội dung giáo dục; câu chuyện kể lại từ nguồn công khai.",
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người kể chuyện lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "pronounce_note": "English and Spanish names stay as written: OmniVoice reads them natively. Nothing in the script depends on this particular voice.",
+  "concepts": [
+   {
+    "id": "di_xem",
+    "visual": "binoculars",
+    "color": "a",
+    "shows": "đi xem tận nơi: đặt bản đồ cạnh bờ biển thật và để thực địa chấm điểm; Ulloa, Kino, Consag đều tới chỗ bản đồ nói và nhìn",
+    "omits": "không ai đi hết mọi bờ biển, phần lớn thời gian ta vẫn phải dùng bản đồ của người khác; đi xem một lần cũng có thể nhìn sai; bản đồ đúng thì rất có ích"
+   },
+   {
+    "id": "ban_do",
+    "visual": "map",
+    "color": "b",
+    "shows": "tấm bản đồ in, chép từ tấm này sang tấm khác: tin nó vì nó được in, được nhiều người chép, không vì ai đã đi xem",
+    "omits": "bản đồ không xấu, phần lớn bản đồ đủ đúng để dùng; bản đồ sai vẫn hơn không có gì nếu bạn kiểm tra dọc đường; các nhà in thời ấy có ít cách kiểm tra"
+   }
+  ],
+  "brief": {
+   "target_viewer": "Người Việt 20–40 tuổi đi làm, quyết định hằng ngày dựa trên ứng dụng bản đồ, tin đăng, bảng số liệu, lời kể lại; nghĩ rằng thứ gì đã in ra và được nhiều người nhắc lại thì chắc là đúng (giả định của người viết, chủ kênh xác nhận lại)",
+   "format": "Giải thích một khung tư duy qua một câu chuyện thật (concept explainer), 4–5 phút, 4:3, minh họa icon vẽ tay, một bảng xuyên suốt cho ba nguyên tắc, một ví dụ đổi trạng thái, một giọng đọc",
+   "central_question": "Vì sao cả châu Âu vẽ California là một hòn đảo suốt hơn một thế kỷ, dù trước đó đã vẽ đúng, và mình tránh lỗi ấy thế nào?",
+   "transformation": "Trước khi xem, họ nghĩ đã in thành bản đồ, được nhiều người chép thì chắc đúng. Sau khi xem, họ kể lại được câu chuyện Ulloa – Ascensión – 1622 – Kino – 1747, hiểu câu của Korzybski, tự đối chiếu một 'bản đồ' thường ngày (tin đăng phòng trọ, ứng dụng chỉ đường) với thực địa, và biết vì sao vẫn cần bản đồ",
+   "discovery_goal": "Tìm kiếm (\"the map is not the territory\", \"bản đồ không phải lãnh thổ\", \"California island map\", \"Korzybski\", \"khung tư duy\", \"mô hình tư duy\") và đề xuất từ video lịch sử, tư duy; tập 5 của series Khung tư duy, khán giả series Review sách",
+   "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn tập sau về khung tư duy nào?\" (comment answering the end-card question)",
+   "share_recipient": "Một người bạn sắp thuê nhà, mua đồ hay tin một con số chỉ vì 'trên mạng ai cũng nói': câu hỏi 'đã có ai đi xem chưa?' giúp hai người kiểm tra mà không ai bị coi là đa nghi",
+   "evidence": "Wikipedia Island of California, Francisco de Ulloa, Fernando Consag; Stanford Libraries, Glen McLaughlin Map Collection of California as an Island (mua 12/2011, khoảng 700–800 tấm) và Stanford Magazine; David Rumsey Map Center, California as an Island; Rare maps (Barry Ruderman): Kino 'A passage by land to California' (1701, in ở Paris 1705), bản đồ chấm dứt huyền thoại; NPS, Eusebio Francisco Kino; SoCalGIS, The Large and Goodly Island of California (Briggs); Old World Auctions (Consag 1746, sắc lệnh 1747); Alfred Korzybski, bài báo 1931 (New Orleans) in lại trong Science and Sanity 1933; số phòng trọ và ứng dụng bản đồ là số minh họa của kênh",
+   "constraints": "4–5 phút, 4:3, icon vẽ, không khuôn mặt người thật (Kino, Ascensión, Korzybski là huy hiệu chữ cái), một giọng đọc (OmniVoice seed 99 speed 0.88), tên riêng giữ nguyên chính tả, số đọc bằng chữ và làm tròn khi đọc, số chính xác trên màn hình; sắc lệnh 1747 nói 'theo nhiều tài liệu' (chưa thấy văn bản gốc); nguồn gốc hòn đảo nói 'được cho là' từ Ascensión; số bản đồ trong bộ sưu tập nói 'hàng trăm'; không chính trị, không bàn chuyện thuộc địa"
+  },
+  "youtube": {
+   "title": "Bản đồ không phải lãnh thổ: hòn đảo chưa từng tồn tại",
+   "thumbnail_text": "Hơn 100 năm, bản đồ vẽ California là một hòn đảo.",
+   "description": "Năm 1539, nhà hàng hải Francisco de Ulloa đi thuyền tới tận cuối vịnh California, và bản đồ giữa thế kỷ 16 vẽ đúng một bán đảo. Vậy mà từ khoảng năm 1622, hơn một thế kỷ, bản đồ châu Âu vẽ California thành một hòn đảo, chép từ tấm này sang tấm khác. Video kể lại câu chuyện ấy (tu sĩ Antonio de la Ascensión, bản đồ của Henry Briggs năm 1625, chuyến đi đường bộ của linh mục Eusebio Kino khoảng năm 1701, chuyến thuyền của Fernando Consag năm 1746 và sắc lệnh năm 1747), giải thích khung tư duy 'bản đồ không phải lãnh thổ' của Alfred Korzybski (1931), ba nguyên tắc (hỏi ai đã tận mắt; đi xem tận nơi; sửa bản đồ khi đất nói khác), một ví dụ với tin đăng phòng trọ, và một câu hỏi để bạn tự thử.\n\nẨn dụ dừng ở đâu: không ai đi hết mọi bờ biển, phần lớn thời gian ta vẫn phải dùng bản đồ của người khác (chính Korzybski nói bản đồ đúng thì có ích vì nó giống cấu trúc của vùng đất); và một bản đồ sai vẫn hơn không có gì, nếu bạn cầm nó lên đường và kiểm tra dọc đường: Kino khởi hành với niềm tin vào hòn đảo, và chính chuyến đi đã sửa nó.\n\nLưu ý về nguồn: việc hòn đảo bắt nguồn từ tấm bản đồ của Ascensión là cách giải thích phổ biến của các nhà nghiên cứu bản đồ. Bản đồ in đầu tiên có hòn đảo thường được ghi năm 1622. Sắc lệnh năm 1747 của vua Ferdinand VI tuyên bố California không phải là đảo được nhiều nguồn nhắc lại, nhưng mình chưa đọc được văn bản gốc. Kino lúc đầu cũng tin California là đảo theo các nhà nghiên cứu bản đồ. Bộ sưu tập Glen McLaughlin ở Đại học Stanford có khoảng 700 đến 800 tấm (các nguồn ghi khác nhau). Câu của Korzybski là lược dịch. Số trong ví dụ phòng trọ và ứng dụng bản đồ là số minh họa.\n\nChương:\nHơn một trăm năm, một hòn đảo\nĐiều ta hay nghĩ\nBản đồ và bờ biển\n1539: đã từng vẽ đúng\nMột tu sĩ và một hòn đảo\nBriggs, 1625: chép đi chép lại\nHàng trăm tấm bản đồ\nKino đi đường bộ\nBản đồ cũ không chịu biến mất\nKorzybski đặt tên\nNguyên tắc 1: hỏi ai đã tận mắt\nNguyên tắc 2: đi xem tận nơi\nPhòng trọ 25 m² (số minh họa)\nNguyên tắc 3: sửa bản đồ khi đất nói khác\nẨn dụ dừng ở đâu\nThử một chút: trời mưa và ứng dụng bản đồ\nBa nguyên tắc\nĐã có ai đi xem chưa?\n\nNguồn:\n- Wikipedia, Island of California: https://en.wikipedia.org/wiki/Island_of_California\n- Wikipedia, Francisco de Ulloa: https://en.wikipedia.org/wiki/Francisco_de_Ulloa\n- Stanford Libraries, The Glen McLaughlin Map Collection of California as an Island: https://purl.stanford.edu/zb871zd0767\n- David Rumsey Map Center, California as an Island: https://davidrumseymapcenter.github.io/california-as-an-island/\n- Barry Ruderman Antique Maps, Kino, A Passage by Land to California: https://www.raremaps.com/gallery/detail/83274\n- National Park Service, Eusebio Francisco Kino: https://www.nps.gov/articles/padre-kino.htm\n- Wikipedia, Fernando Consag: https://en.wikipedia.org/wiki/Fernando_Consag\n- Alfred Korzybski, A Non-Aristotelian System and Its Necessity for Rigour in Mathematics and Physics (1931), in lại trong Science and Sanity (1933); Wikipedia, Map–territory relation: https://en.wikipedia.org/wiki/Map%E2%80%93territory_relation\n\nBạn muốn tập sau về khung tư duy nào? Để lại bình luận nhé.",
+   "tags": ["bản đồ không phải lãnh thổ", "the map is not the territory", "Korzybski", "California hòn đảo", "island of California", "lịch sử bản đồ", "Eusebio Kino", "khung tư duy", "mô hình tư duy", "tư duy phản biện", "ra quyết định", "kỹ năng tư duy", "kiểm chứng thông tin"]
+  }
+ },
+ "sources": [
+  {"id": "island", "cite": "Wikipedia, 'Island of California': sixteenth-century maps after the Ulloa voyage show a peninsula; the island idea is traced to the Carmelite friar Antonio de la Ascensión (on Vizcaíno's 1602–03 expedition), whose chart of about 1620 drew California as an island; the first printed island maps appear in 1622 (title pages of Herrera's Descripción de las Indias Occidentales and Le Maire's Spieghel); Henry Briggs's map in Purchas's Hakluytus Posthumus (1625); Kino; the 1747 royal decree (cross-read with Geography Realm and Stanford Magazine; page not opened directly)", "url": "https://en.wikipedia.org/wiki/Island_of_California"},
+  {"id": "ulloa", "cite": "Wikipedia, 'Francisco de Ulloa'; Open Oregon, 'Hispanic Origins of Oregon': in 1539, sent by Cortés, Ulloa sailed to the head of the Gulf of California and found Baja California to be a peninsula; a manuscript map of the period (Domingo del Castillo, 1539/1541) shows the peninsula", "url": "https://en.wikipedia.org/wiki/Francisco_de_Ulloa"},
+  {"id": "briggs", "cite": "Henry Briggs, 'The North part of America', in Samuel Purchas, Hakluytus Posthumus (London, 1625): a note calls California 'a goodly Ilande', citing a Spanish chart taken by the Dutch; widely copied (SoCalGIS, 'The Large and Goodly Island of California', 2019; Wikipedia)", "url": "https://socalgis.org/2019/11/01/the-large-and-goodly-island-of-california"},
+  {"id": "stanford", "cite": "Stanford Libraries, 'The Glen McLaughlin Map Collection of California as an Island' (acquired December 2011; about 700–800 maps by different counts, assembled over some 40 years); Stanford Magazine, 'California Dreaming': California widely drawn as an island from about 1622 until the mid-18th century, largely through uncritical copying", "url": "https://purl.stanford.edu/zb871zd0767"},
+  {"id": "kino", "cite": "National Park Service, 'Eusebio Francisco Kino' (1645–1711): Jesuit missionary in the Pimería Alta; journeys of 1701–1702 to the Colorado River and its mouth; Barry Ruderman Antique Maps, 'A Passage by Land to California discoverd by the Rev. Father Kino' (map of 1701, published in Paris 1705); Geography Realm and Rare Maps: Kino at first held the island view and was convinced otherwise by his own journeys", "url": "https://www.nps.gov/articles/padre-kino.htm"},
+  {"id": "consag", "cite": "Wikipedia, 'Fernando Consag'; Old World Auctions, 'The Map That Put an End to the Island of California Myth': in June–July 1746 Consag sailed to the head of the Gulf and concluded California is a peninsula; a royal decree of 1747 under Ferdinand VI is widely reported as declaring that California is not an island (primary text not seen); island maps still appeared into the mid-18th century", "url": "https://en.wikipedia.org/wiki/Fernando_Consag"},
+  {"id": "rumsey", "cite": "David Rumsey Map Center (Stanford), 'California as an Island' presentation: the island's spread through copying among European mapmakers, and its correction", "url": "https://davidrumseymapcenter.github.io/california-as-an-island/assets/pdf/California_as_an_Island_Presentation.pdf"},
+  {"id": "korzybski", "cite": "Alfred Korzybski (1879–1950), 'A Non-Aristotelian System and Its Necessity for Rigour in Mathematics and Physics', paper presented in New Orleans, 28 December 1931 (most sources: AAAS meeting), reprinted in Science and Sanity (1933): 'A map is not the territory it represents, but, if correct, it has a similar structure to the territory, which accounts for its usefulness' (Wikipedia 'Map–territory relation' and 'Alfred Korzybski'; page not opened directly)", "url": "https://en.wikipedia.org/wiki/Map%E2%80%93territory_relation"},
+  {"id": "minhhoa", "cite": "Số minh họa của kênh (không phải khảo sát): tin đăng phòng trọ ghi 25 m² và 15 phút tới chỗ làm, xem tận nơi thấy 18 m² và 35 phút giờ cao điểm; ứng dụng bản đồ báo 15 phút qua cầu"}
+ ],
+ "principles": [
+  {"name": "Hỏi ai đã tận mắt", "line": "Nhiều bản sao không làm một điều thành đúng hơn: lần về người đã thật sự đi xem."},
+  {"name": "Đi xem tận nơi", "line": "Tới chỗ bản đồ nói, và nhìn: thực địa là người chấm điểm cuối cùng."},
+  {"name": "Sửa bản đồ khi đất nói khác", "line": "Cái khó không phải là thấy, mà là chịu vẽ lại."}
+ ],
+ "beats": [
+  {"id": "h1", "act": "hook", "narration": "Hơn một trăm năm, bản đồ châu Âu vẽ sai California: thành một hòn đảo.",
+   "visual": {"type": "shots", "shots": [
+    {"type": "icon", "concept": "ban_do", "kicker": "Bản đồ châu Âu", "line": "Hơn 100 năm", "line_cue": "hơn một", "action": "trải ra"},
+    {"type": "icon", "icon": "wave", "kicker": "California", "cue": "california", "line": "Thành một hòn đảo", "line_cue": "thành một", "action": "dâng sóng"}
+   ]},
+   "sfx": [{"kind": "hit", "cue": "hòn đảo", "gain_db": -6}], "sources": ["island", "stanford"]},
+  {"id": "h2", "act": "context", "narration": "Lạ hơn: trước đó, họ từng vẽ đúng. Bài học ấy có tên: bản đồ không phải lãnh thổ.",
+   "visual": {"type": "shots", "shots": [
+    {"type": "icon", "icon": "bridge", "kicker": "Trước đó", "line": "Từng vẽ đúng", "line_cue": "từng vẽ", "action": "nối liền"},
+    {"type": "icon", "concept": "di_xem", "kicker": "Bài học ấy có tên", "cue": "bài học", "line": "Bản đồ không phải lãnh thổ", "line_cue": "bản đồ", "action": "nhìn xa"}
+   ]}, "sources": ["ulloa"]},
+  {"id": "t0", "act": "context", "narration": "", "visual": {"type": "title", "kicker": "Khung tư duy · Tập 5", "title": "Bản đồ không phải lãnh thổ", "subtitle": "The map is not the territory", "hold": 3.0}, "sfx": [{"kind": "whoosh", "at": 0.0, "gain_db": -12}]},
+  {"id": "b01", "act": "misconception", "narration": "Ta hay nghĩ: đã in thành bản đồ, đã nằm trong sách, thì chắc là đúng. Nhiều người chép lại, càng chắc. Nhưng chép lại không phải là đi xem.",
+   "visual": {"type": "shots", "shots": [
+    {"type": "icon", "concept": "ban_do", "kicker": "Điều ta hay nghĩ", "line": "Đã in ra là đúng", "line_cue": "đã in", "action": "mở ra"},
+    {"type": "icon", "icon": "people", "kicker": "Nhiều người chép lại", "cue": "nhiều người", "line": "Càng chắc?", "line_cue": "càng chắc", "action": "xếp hàng"},
+    {"type": "swap", "kicker": "Nhưng", "cue": "nhưng chép", "strike_cue": "không phải", "action": "đổi chỗ", "from": {"concept": "ban_do", "label": "Chép lại"}, "to": {"concept": "di_xem", "label": "Đi xem", "cue": "đi xem"}}
+   ]}},
+  {"id": "b02", "act": "context", "narration": "Hình dung một tấm bản đồ, và bờ biển thật. Bản đồ là nét mực ai đó vẽ, từ những gì họ thấy, hoặc nghe kể. Bờ biển thì không quan tâm ai vẽ gì: nó vẫn nằm đó. Muốn biết, phải đến xem.",
+   "visual": {"type": "shots", "shots": [
+    {"type": "icon", "concept": "ban_do", "kicker": "Một tấm bản đồ", "line": "Nét mực ai đó vẽ", "line_cue": "bản đồ là", "action": "vẽ"},
+    {"type": "icon", "icon": "wave", "kicker": "Bờ biển thật", "cue": "bờ biển thì", "line": "Vẫn nằm đó", "line_cue": "nó vẫn", "action": "vỗ bờ"},
+    {"type": "icon", "concept": "di_xem", "kicker": "Muốn biết", "cue": "muốn biết", "line": "Phải đến xem", "line_cue": "phải đến", "action": "nhìn xa"}
+   ]}},
+  {"id": "b03", "act": "story", "narration": "Năm một nghìn năm trăm ba mươi chín, nhà hàng hải Tây Ban Nha Francisco de Ulloa đi thuyền tới tận cuối vịnh California. Ông thấy vịnh khép lại, đất nối vào lục địa. Bản đồ giữa thế kỷ mười sáu vẽ một bán đảo: đúng.",
+   "visual": {"type": "shots", "shots": [
+    {"type": "icon", "icon": "ship", "kicker": "1539 · Francisco de Ulloa", "line": "Tới tận cuối vịnh", "line_cue": "tới tận", "action": "giương buồm"},
+    {"type": "icon", "concept": "di_xem", "kicker": "Ông tận mắt thấy", "cue": "ông thấy", "line": "Đất nối vào lục địa", "line_cue": "đất nối", "action": "nhìn xa"},
+    {"type": "icon", "icon": "bridge", "kicker": "Bản đồ giữa thế kỷ 16", "cue": "bản đồ giữa", "line": "Một bán đảo: đúng", "line_cue": "một bán", "action": "nối liền"}
+   ]}, "sources": ["ulloa", "island"]},
+  {"id": "b04", "act": "story", "narration": "Rồi khoảng năm một nghìn sáu trăm hai mươi, tu sĩ Antonio de la Ascensión, người từng đi dọc bờ biển này, được cho là đã vẽ California thành một hòn đảo. Từ năm một nghìn sáu trăm hai mươi hai, hòn đảo lên bản đồ in.",
+   "visual": {"type": "shots", "shots": [
+    {"type": "portrait", "name": "Antonio de la Ascensión", "initials": "AA", "role": "Tu sĩ dòng Cát Minh", "years": "Đi cùng Vizcaíno 1602–1603", "action": "khắc"},
+    {"type": "icon", "icon": "wave", "kicker": "Khoảng 1620 · được cho là", "cue": "được cho", "line": "California thành hòn đảo", "line_cue": "thành một", "action": "dâng sóng"},
+    {"type": "icon", "concept": "ban_do", "kicker": "1622", "cue": "từ năm", "line": "Lên bản đồ in", "line_cue": "lên bản", "action": "in ra"}
+   ]}, "sources": ["island", "stanford"], "certainty": "attributed"},
+  {"id": "b05", "act": "story", "narration": "Năm một nghìn sáu trăm hai mươi lăm, một bản đồ của Henry Briggs in ở London được cho là đã gọi California là một hòn đảo lớn và đẹp. Các nhà in khắp châu Âu chép lại. Chép từ bản đồ, không phải từ bờ biển.",
+   "visual": {"type": "shots", "shots": [
+    {"type": "icon", "concept": "ban_do", "kicker": "1625 · Henry Briggs, London", "line": "Một hòn đảo lớn và đẹp", "line_cue": "một hòn", "action": "trải ra"},
+    {"type": "icon", "icon": "cards", "kicker": "Khắp châu Âu", "cue": "các nhà", "line": "Chép đi chép lại", "line_cue": "chép lại", "action": "nhân bản"},
+    {"type": "swap", "kicker": "Chép từ đâu?", "cue": "chép từ", "strike_cue": "không phải", "action": "đổi chỗ", "from": {"icon": "wave", "label": "Bờ biển"}, "to": {"concept": "ban_do", "label": "Bản đồ khác", "cue": "bản đồ"}}
+   ]}, "sources": ["briggs", "island"], "certainty": "attributed"},
+  {"id": "b06", "act": "story", "narration": "Một nhà sưu tập ở Mỹ, Glen McLaughlin, đã gom được hàng trăm tấm bản đồ vẽ California là đảo; bộ sưu tập nay ở Đại học Stanford. Hơn một thế kỷ, lỗi ấy được in đi in lại.",
+   "visual": {"type": "shots", "shots": [
+    {"type": "icon", "icon": "haystack", "kicker": "Bộ sưu tập Glen McLaughlin", "line": "Hàng trăm tấm bản đồ", "line_cue": "hàng trăm", "action": "chất đống"},
+    {"type": "icon", "icon": "house", "kicker": "Đại học Stanford · từ 2011", "cue": "bộ sưu", "line": "Một hòn đảo trên mọi tấm", "line_cue": "nay ở", "action": "cất giữ"},
+    {"type": "stat", "value": 100, "from": 0, "prefix": "> ", "suffix": " năm", "color": "b", "label": "California được vẽ là đảo", "note": "khoảng 1622 → giữa thế kỷ 18", "cue": "hơn một thế", "action": "đếm lên"}
+   ]}, "sources": ["stanford", "island"]},
+  {"id": "b07", "act": "story", "narration": "Rồi một linh mục dòng Tên, Eusebio Kino. Theo các nhà nghiên cứu bản đồ, lúc đầu chính ông cũng tin California là đảo. Khoảng năm một nghìn bảy trăm lẻ một, ông đi ngựa lên phía bắc, tới sông Colorado, và thấy đất liền một dải. Ông vẽ lại bản đồ: có đường bộ sang California.",
+   "visual": {"type": "shots", "shots": [
+    {"type": "portrait", "name": "Eusebio Kino", "initials": "EK", "role": "Linh mục dòng Tên, người vẽ bản đồ", "years": "1645–1711", "action": "khắc"},
+    {"type": "icon", "concept": "ban_do", "kicker": "Lúc đầu", "cue": "theo các", "line": "Ông cũng tin là đảo", "line_cue": "lúc đầu", "action": "mở ra"},
+    {"type": "icon", "concept": "di_xem", "kicker": "Khoảng 1701 · sông Colorado", "cue": "khoảng năm", "line": "Đất liền một dải", "line_cue": "và thấy", "action": "nhìn xa"},
+    {"type": "icon", "icon": "compass", "kicker": "Bản đồ mới · in ở Paris 1705", "cue": "ông vẽ", "line": "Có đường bộ sang California", "line_cue": "có đường", "action": "xoay hướng"}
+   ]}, "sources": ["kino"], "certainty": "attributed"},
+  {"id": "b08", "act": "story", "narration": "Nhưng bản đồ cũ không chịu biến mất. Năm một nghìn bảy trăm bốn mươi sáu, linh mục Fernando Consag lại đi thuyền tới cuối vịnh. Năm sau, theo nhiều tài liệu, vua Ferdinand Sáu được cho là đã ra sắc lệnh: California không phải là đảo.",
+   "visual": {"type": "shots", "shots": [
+    {"type": "icon", "concept": "ban_do", "kicker": "Sau Kino", "line": "Vẫn in hòn đảo", "line_cue": "không chịu", "action": "in lại"},
+    {"type": "icon", "icon": "ship", "kicker": "1746 · Fernando Consag", "cue": "năm một", "line": "Lại tới cuối vịnh", "line_cue": "lại đi", "action": "giương buồm"},
+    {"type": "icon", "icon": "letter", "kicker": "1747 · vua Ferdinand VI, theo nhiều tài liệu", "cue": "năm sau", "line": "California không phải đảo", "line_cue": "california không", "action": "đóng dấu"}
+   ]}, "sources": ["consag", "island"], "certainty": "attributed"},
+  {"id": "b09", "act": "context", "narration": "Gần hai trăm năm sau, năm một nghìn chín trăm ba mươi mốt, học giả Alfred Korzybski đặt tên cho bài học ấy: bản đồ không phải lãnh thổ. Nhưng ông nói thêm: nếu đúng, bản đồ có cấu trúc giống vùng đất, nên mới có ích.",
+   "visual": {"type": "shots", "shots": [
+    {"type": "portrait", "name": "Alfred Korzybski", "initials": "AK", "role": "Học giả Mỹ gốc Ba Lan", "years": "1879–1950", "action": "khắc"},
+    {"type": "icon", "concept": "di_xem", "kicker": "1931 · New Orleans", "cue": "đặt tên", "line": "Bản đồ không phải lãnh thổ", "line_cue": "bản đồ không", "action": "nhìn xa"},
+    {"type": "quote", "text": "Nếu đúng, bản đồ có cấu trúc giống lãnh thổ; vì thế nó có ích.", "by": "Alfred Korzybski, 1931; Science and Sanity, 1933 (lược dịch)", "cue": "nhưng ông", "action": "hiện chữ"}
+   ]}, "sources": ["korzybski"]},
+  {"id": "b10", "act": "principle", "narration": "Từ câu chuyện ấy, có ba nguyên tắc. Thứ nhất: hỏi ai đã tận mắt. Hàng trăm tấm bản đồ, nhưng phần lớn chép từ vài tấm. Nhiều bản sao không làm một điều thành đúng hơn.",
+   "visual": {"type": "board", "board_id": "ba-nguyen-tac", "kicker": "Ba nguyên tắc", "focus": [0], "action": "lướt tới", "start": "overview", "regions": [
+    {"icon": "magnifier", "label": "Hỏi nguồn", "note": "Ai đã tận mắt?", "cue": "thứ nhất", "note_cue": "hỏi ai"},
+    {"concept": "di_xem", "label": "Đi xem tận nơi", "note": "Đất nói gì?", "cue": "thứ hai", "note_cue": "tới chỗ"},
+    {"icon": "hammer", "label": "Sửa bản đồ", "note": "Chỗ nào phải sửa?", "cue": "thứ ba", "note_cue": "cái khó"}
+   ]}, "sources": ["stanford", "rumsey"]},
+  {"id": "b11", "act": "principle", "narration": "Thứ hai: đi xem tận nơi. Ulloa, Kino, Consag đều làm một việc giống nhau: tới chỗ bản đồ nói, và nhìn. Thực địa là người chấm điểm cuối cùng.",
+   "visual": {"type": "board", "board_id": "ba-nguyen-tac", "kicker": "Ba nguyên tắc", "focus": [1], "action": "lướt sang"}, "sources": ["ulloa", "kino", "consag"]},
+  {"id": "b12", "act": "example", "narration": "Thử với việc thuê phòng trọ, số minh họa thôi. Tin đăng ghi hai mươi lăm mét vuông, mười lăm phút tới chỗ làm. Bạn đến xem, và đi thử vào giờ cao điểm: phòng chỉ mười tám mét vuông, đường đi mất ba mươi lăm phút.",
+   "visual": {"type": "scenario", "kicker": "Số minh họa", "heading": "Một phòng trọ", "action": "kéo", "before_label": "Theo tin đăng", "after_label": "Xem tận nơi", "cue": "bạn đến", "bars": [
+    {"label": "Diện tích, m²", "before": 25, "after": 18, "color": "#CFC6B8", "cue": "hai mươi"},
+    {"label": "Phút tới chỗ làm", "before": 15, "after": 35, "concept": "di_xem", "cue": "mười lăm"}
+   ], "takeaway": "Tin đăng là bản đồ. Căn phòng là đất.", "takeaway_cue": "đường đi"}, "sources": ["minhhoa"], "certainty": "estimate"},
+  {"id": "b13", "act": "principle", "narration": "Thứ ba: sửa bản đồ khi đất nói khác. Kino từng tin hòn đảo, rồi tự vẽ lại. Còn nhiều nhà in giữ bản đồ cũ thêm mấy chục năm. Cái khó không phải là thấy, mà là chịu sửa.",
+   "visual": {"type": "board", "board_id": "ba-nguyen-tac", "kicker": "Ba nguyên tắc", "focus": [2], "action": "lướt xuống"}, "sources": ["kino", "consag"]},
+  {"id": "b14", "act": "complication", "narration": "Nhưng hình ảnh này cũng có chỗ dừng. Không ai đi hết mọi bờ biển: phần lớn thời gian, ta vẫn phải dùng bản đồ của người khác. Chính Korzybski nói: bản đồ đúng thì có ích.",
+   "visual": {"type": "shots", "shots": [
+    {"type": "icon", "icon": "mountain", "kicker": "Ẩn dụ dừng ở đâu?", "line": "Không ai đi hết mọi bờ", "line_cue": "không ai", "action": "trải dài"},
+    {"type": "icon", "concept": "ban_do", "kicker": "Phần lớn thời gian", "cue": "phần lớn", "line": "Vẫn cần bản đồ", "line_cue": "ta vẫn", "action": "trải ra"},
+    {"type": "icon", "icon": "checklist", "kicker": "Theo Korzybski", "cue": "chính korzybski", "line": "Bản đồ đúng thì có ích", "line_cue": "bản đồ đúng", "action": "đánh dấu"}
+   ]}, "sources": ["korzybski"]},
+  {"id": "b15", "act": "complication", "narration": "Và một bản đồ sai vẫn hơn không có gì, nếu bạn cầm nó lên đường và kiểm tra dọc đường. Kino khởi hành với niềm tin vào một hòn đảo; chính chuyến đi đã sửa tấm bản đồ ấy.",
+   "visual": {"type": "shots", "shots": [
+    {"type": "trio", "kicker": "Bản đồ sai vẫn hơn không có gì", "action": "ghép đôi", "items": [{"concept": "ban_do", "label": "Bản đồ sai"}, {"concept": "di_xem", "label": "Kiểm tra dọc đường", "cue": "kiểm tra"}], "line": "Cầm nó lên đường", "line_cue": "nếu bạn"},
+    {"type": "icon", "icon": "compass", "kicker": "Eusebio Kino", "cue": "kino khởi", "line": "Chuyến đi sửa bản đồ", "line_cue": "chính chuyến", "action": "xoay hướng"}
+   ]}, "sources": ["kino"]},
+  {"id": "b16", "act": "question", "narration": "Giờ thử một chút nhé. Ứng dụng bản đồ báo: qua cầu mất mười lăm phút. Hôm nay mưa lớn, mà đoạn đó hay ngập. Bạn làm gì?",
+   "visual": {"type": "question", "question": "App báo 15 phút qua cầu. Trời mưa, đoạn đó hay ngập. Bạn làm gì?", "choices": ["Cứ tin app, đi luôn", "Bỏ app, đi theo cảm giác", "Dùng app, nhưng hỏi xem có ngập"], "answer": "C — dùng bản đồ, nhưng đối chiếu với thực địa.", "think_seconds": 5}, "sources": ["minhhoa"], "certainty": "estimate"},
+  {"id": "b17", "act": "recap", "narration": "Đáp án là C: bản đồ vẫn có ích, miễn là bạn kiểm tra. Vậy là ba nguyên tắc. Hỏi ai đã tận mắt. Đi xem tận nơi. Và sửa bản đồ khi đất nói khác.",
+   "visual": {"type": "board", "board_id": "ba-nguyen-tac", "kicker": "Ba nguyên tắc", "action": "lùi xa", "focus": [{"region": 1, "cue": "miễn là"}], "overview": true, "overview_cue": "vậy là", "line": "Đã có ai đi xem chưa?", "line_cue": "và sửa"}},
+  {"id": "b18", "act": "close", "narration": "Hơn một trăm năm, châu Âu tin vào một hòn đảo không có thật. Bờ biển vẫn nằm đó, chờ người đến xem. Lần tới, trước một điều ai cũng chép lại, hãy hỏi: đã có ai đi xem chưa?",
+   "visual": {"type": "shots", "shots": [
+    {"type": "icon", "concept": "ban_do", "kicker": "Hơn 100 năm", "line": "Một hòn đảo không có thật", "line_cue": "một hòn", "action": "gấp lại"},
+    {"type": "icon", "icon": "wave", "kicker": "Bờ biển", "cue": "bờ biển", "line": "Vẫn nằm đó", "line_cue": "vẫn nằm", "action": "vỗ bờ"},
+    {"type": "icon", "concept": "di_xem", "kicker": "Lần tới, hãy hỏi", "cue": "lần tới", "line": "Đã có ai đi xem chưa?", "line_cue": "hãy hỏi", "action": "nhìn xa"}
+   ]}, "sources": ["stanford"]},
+  {"id": "b19", "act": "close", "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
+   "visual": {"type": "end", "kicker": "Khung tư duy · Tập 5", "title": "Bản đồ không phải lãnh thổ", "ask": "Bạn muốn tập sau về khung tư duy nào?", "ask_hint": "Biên an toàn · thiên kiến kẻ sống sót · chi phí cơ hội", "ask_cue": "hay chủ", "sources_line": "Nguồn: Stanford (McLaughlin) · NPS (Kino) · Korzybski (1933) · xem mô tả", "disclaimer": "Nội dung giáo dục; câu chuyện kể lại từ nguồn công khai.", "sources_cue": "còn bạn"}}
+ ],
+ "pronounce": {}
+}
