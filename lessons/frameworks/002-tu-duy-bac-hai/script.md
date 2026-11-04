@@ -1,5 +1,5 @@
 # Tư duy bậc hai
-_Khung tư duy · Tập 2 · 855 words · ~3.68 min · 4:3_
+_Khung tư duy · Tập 2 · 863 words · ~3.72 min · 4:3_
 
 ## Learning goals
 - Kể lại câu chuyện Yellowstone: những con sói cuối cùng bị giết năm 1926; 14 con từ Alberta (1/1995) và 17 con từ British Columbia (1996) được thả về, tổng 31; đàn nai sừng tấm phía bắc giảm từ 19.359 (1994) xuống khoảng 4.000 sau 2010 vì nhiều nguyên nhân
@@ -14,19 +14,19 @@ _Khung tư duy · Tập 2 · 855 words · ~3.68 min · 4:3_
 ## Script
 | # | act | narration | on screen |
 |---|---|---|---|
-| h1 | hook | Ba mươi mốt con sói được thả vào Yellowstone. Người ta kể: chúng đổi cả dòng sông. Thật vậy sao? | shots: shots |
+| h1 | hook | Ba mươi mốt con sói được thả về Yellowstone. Người ta kể: chúng làm cả dòng sông đổi khác. Thật vậy sao? | shots: shots |
 | h2 | context | Câu trả lời thú vị hơn lời kể. Và nó dạy một cách nghĩ rất đáng có: tư duy bậc hai. | shots: shots |
 | t0 | context |  | title: Tư duy bậc hai |
 | b01 | misconception | Ta hay nghĩ: làm một việc, được một kết quả. Bắn sói thì còn nhiều nai hơn. Đó là tư duy bậc một: chỉ nhìn chỗ hòn đá rơi, rồi dừng. | shots: shots |
 | b02 | context | Hình dung ném một hòn đá xuống ao. Tiếng tõm là hệ quả bậc một. Rồi gợn sóng lan ra, chạm bờ, dội lại. Tư duy bậc hai là hỏi tiếp: rồi sao nữa? Và sau đó nữa? | shots: shots |
-| b03 | context | Đầu thế kỷ hai mươi, sói bị coi là kẻ hại gia súc và thú săn. Chúng bị săn, bẫy, đánh thuốc. Năm một nghìn chín trăm hai mươi sáu, những con sói cuối cùng trong vườn quốc gia Yellowstone bị giết. | shots: shots |
+| b03 | context | Đầu thế kỷ hai mươi, sói bị coi là kẻ hại gia súc và thú săn. Chúng bị săn, bẫy, đầu độc. Năm một nghìn chín trăm hai mươi sáu, những con sói cuối cùng trong vườn quốc gia Yellowstone bị giết. | shots: shots |
 | b04 | story | Không còn sói, nai sừng tấm đông lên và gặm nhiều liễu, cây dương non ven suối. Liễu thưa dần. Hải ly mất thức ăn và vật liệu làm đập, rồi bỏ đi. | shots: shots |
 | b05 | story | Gần bảy mươi năm sau, tháng một năm một nghìn chín trăm chín mươi lăm, mười bốn con sói từ Canada được thả về. Năm sau, thêm mười bảy con. Tổng cộng ba mươi mốt. | timeline: Sói trở lại Yellowstone |
 | b06 | story | Hệ quả bậc một khá rõ: sói săn nai. Đàn nai phía bắc giảm từ khoảng mười chín nghìn con xuống khoảng bốn nghìn, sau năm hai nghìn mười. Nhưng không chỉ vì sói: còn gấu, báo sư tử, hạn hán và người đi săn. _(disputed)_ | shots: shots |
 | b07 | story | Rồi đến gợn sóng bậc hai. Theo Ripple và Beschta, năm hai nghìn mười hai, ở nhiều nơi dương non bị gặm ít hẳn và cao lên. Số đàn hải ly ở vùng phía bắc tăng từ một lên mười hai. | shots: shots |
 | b08 | story | Năm hai nghìn mười bốn, một video lan khắp mạng: sói làm nai sợ, cây mọc lại, bờ sông vững hơn, và cả dòng sông đổi khác. Một câu chuyện rất đẹp. | shots: shots |
 | b09 | complication | Nhưng chuyện này còn gây tranh cãi: chuỗi ấy mạnh đến đâu? Năm hai nghìn hai mươi hai, nhóm của Dan MacNulty chỉ ra: chỉ đo những cây cao nhất đã thổi phồng sự hồi phục của dương bốn đến bảy lần. Hiệu ứng có thật, nhưng yếu hơn. _(disputed)_ | shots: shots |
-| b10 | complication | Với liễu, nhóm của Thompson Hobbs rào cây khỏi nai từ năm hai nghìn lẻ một. Chỉ rào thôi chưa đủ: liễu chỉ cao lại ở nơi có thêm đập giữ nước, như đập hải ly. Mất hải ly lâu năm, mực nước ngầm đã hạ. | shots: shots |
+| b10 | complication | Với liễu, nhóm của Thompson Hobbs rào cây khỏi nai từ năm hai nghìn lẻ một. Trong thí nghiệm ấy, chỉ rào thôi chưa đủ: liễu chỉ cao hẳn lên ở những ô có thêm đập giữ nước, như đập hải ly. Mất hải ly lâu năm, mực nước ngầm đã hạ. | shots: shots |
 | b11 | complication | Vì vậy, chuyện sói đổi cả dòng sông là phần gây tranh cãi nhất. Nhiều nghiên cứu cho thấy hải ly, dòng nước và thời gian cũng quyết định. Sói là một hòn đá lớn, không phải hòn duy nhất. _(disputed)_ | shots: shots |
 | b12 | principle | Từ câu chuyện ấy, có ba nguyên tắc. Thứ nhất: hỏi rồi sao nữa, ít nhất hai lần. Bắn sói, nai đông lên. Rồi sao nữa? Liễu mất, hải ly đi. | board: board |
 | b13 | principle | Thứ hai: hệ quả đến muộn. Sói về từ năm một nghìn chín trăm chín mươi lăm; dương non cần hơn mười năm mới đổi rõ, liễu còn lâu hơn. Hãy đợi gợn sóng xa, đừng chấm điểm quá sớm. | board: board |
@@ -35,7 +35,7 @@ _Khung tư duy · Tập 2 · 855 words · ~3.68 min · 4:3_
 | b16 | principle | Thứ ba: gỡ dễ, ghép khó. Đưa sói về không lập tức trả lại hệ cũ, vì trong lúc vắng sói, hải ly và nước ngầm cũng đã mất. Hãy tìm mắt xích đã mất, trước khi mong mọi thứ quay về. | board: board |
 | b17 | complication | Nhưng hình ảnh hòn đá cũng có giới hạn. Ao ngoài đời không bao giờ yên: cùng lúc có gấu, hạn hán, thợ săn, đàn bò rừng ngày càng đông. Nhiều hòn đá rơi một lúc, gợn sóng chồng lên nhau. | shots: shots |
 | b18 | complication | Nên khó tách gợn nào của hòn nào. Người kể chuyện hay chọn một hòn đẹp nhất. Tư duy bậc hai tốt thì khiêm tốn: nói có lẽ, rồi đo tiếp. | shots: shots |
-| b19 | question | Giờ thử một chút nhé. Chung cư cấm đỗ xe máy dưới sảnh, sảnh thoáng ngay. Câu hỏi bậc hai bạn nên hỏi là gì? | question: Chung cư cấm đỗ xe máy dưới sảnh. Câu hỏi bậc hai? |
+| b19 | question | Giờ thử một chút nhé. Chung cư cấm đỗ xe máy dưới sảnh, sảnh thoáng ngay. Câu hỏi bậc hai bạn nên hỏi là gì? | question: Cấm đỗ xe dưới sảnh: hỏi gì tiếp? |
 | b20 | recap | Đáp án là B: sảnh thoáng là tiếng tõm, xe đi đâu mới là gợn sóng. Vậy là ba nguyên tắc. Hỏi rồi sao nữa. Hệ quả đến muộn. Và gỡ dễ, ghép khó. | board: board |
 | b21 | close | Ba mươi mốt con sói không một mình sửa cả Yellowstone. Nhưng chúng nhắc ta: mỗi quyết định là một hòn đá ném xuống ao. Lần tới, sau câu hỏi được gì, hãy hỏi thêm: rồi sao nữa? | shots: shots |
 | b25 | close | Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau. | end: Tư duy bậc hai |
