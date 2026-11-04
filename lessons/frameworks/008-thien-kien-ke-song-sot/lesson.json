@@ -1,0 +1,853 @@
+{
+ "meta": {
+  "series": "Khung tư duy · Tập 8",
+  "title": "Thiên kiến kẻ sống sót",
+  "subtitle": "Survivorship bias — những chiếc máy bay trở về và chỗ không có lỗ",
+  "topic": "books",
+  "angle": "concept",
+  "lang": "vi",
+  "audience": "người trẻ Việt đi làm, hay học theo câu chuyện thành công, hay nghe 'ai làm cũng thắng', 'đồ ngày xưa bền hơn'; thích chuyện lịch sử, khoa học và cách nghĩ",
+  "aspect": "4:3",
+  "target_minutes": [
+   3,
+   5
+  ],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "speed": 0.88,
+  "music": "chill",
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
+  "learning_goals": [
+   "Kể lại câu chuyện Abraham Wald và Statistical Research Group (Đại học Columbia, 1942–1945): dữ liệu duy nhất là vết đạn trên những chiếc máy bay trở về; Wald giả định đạn trúng gần như ngẫu nhiên, nên phần ít lỗ trên chiếc trở về là phần mà trúng vào thì máy bay không về; nguồn thật là các bản ghi nhớ của Wald (1943, in lại năm 1980) và bài phân tích của Mangel & Samaniego (1984)",
+   "Sửa hai chuyện hay bị kể sai: hình máy bay chấm đỏ là tranh minh họa vẽ khoảng năm 2005, không có trong báo cáo của Wald; đoạn đối thoại kịch tính giữa Wald và sĩ quan phần lớn là kể lại về sau",
+   "Phân biệt soi kỹ cái còn lại (kính lúp: chỉ thấy chiếc đã về) với nhìn cả cái đã mất (ống nhòm: hỏi chiếc không về); dùng ba nguyên tắc: hỏi ai đã rơi khỏi mẫu; đọc cả chỗ trống; so với cả nhóm ban đầu; và biết chỗ ẩn dụ dừng lại (kẻ sống sót có khi giỏi thật; phần đã mất thường phải ước đoán)"
+  ],
+  "disclaimer": "Nội dung giáo dục; câu chuyện kể lại từ nguồn công khai.",
+  "voice_style": "Đọc bằng giọng nam trầm, ấm, chậm rãi và thư thái như người kể chuyện lúc đêm khuya; ngắt nghỉ tự nhiên ở dấu câu, truyền cảm hứng nhẹ nhàng, không kịch tính.",
+  "voice_fallback": "piper:vi_VN-vais1000-medium (offline, female) · gemini:Charon (needs GEMINI_API_KEY)",
+  "captions": true,
+  "voice_seed": 99,
+  "pronounce_note": "English names stay in English: OmniVoice reads them natively. Nothing in the script depends on this particular voice.",
+  "concepts": [
+   {
+    "id": "nhin_ca",
+    "visual": "binoculars",
+    "color": "a",
+    "shows": "ống nhòm: nhìn xa hơn đường băng, tới những chiếc không về; hỏi phần đã bị lọc mất trước khi kết luận từ phần còn lại",
+    "omits": "không phải lúc nào cũng thấy được phần đã mất: Wald phải ước đoán nó bằng toán và giả định, giả định sai thì kết luận sai; nhìn cả phần đã mất không có nghĩa kẻ sống sót chỉ là may"
+   },
+   {
+    "id": "chi_thay",
+    "visual": "magnifier",
+    "color": "b",
+    "shows": "kính lúp: soi thật kỹ những gì đang ở trước mặt (lỗ trên chiếc đã về, người thành công đang kể chuyện) mà quên rằng chúng đã qua một bộ lọc",
+    "omits": "soi kỹ không có gì sai; dữ liệu về kẻ sống sót vẫn có ích nếu biết nó đã bị lọc; có khi kẻ sống sót giỏi hơn thật"
+   }
+  ],
+  "brief": {
+   "target_viewer": "Người Việt 20–40 tuổi đi làm, hay đọc chuyện 'bỏ học vẫn thành tỷ phú', 'phố này ai mở quán cũng đông', 'đồ ngày xưa bền hơn' và rút ra bài học từ những ai còn đứng lại (giả định của người viết, chủ kênh xác nhận lại)",
+   "format": "Giải thích một khung tư duy qua một câu chuyện thật (concept explainer), 4–5 phút, 4:3, minh họa icon vẽ tay, một bảng xuyên suốt cho ba nguyên tắc, một ví dụ đổi trạng thái, một giọng đọc",
+   "central_question": "Khi chỉ nhìn thấy những gì còn lại, làm sao biết mình đang thiếu gì, và thiên kiến kẻ sống sót dừng ở đâu?",
+   "transformation": "Trước khi xem, họ nghĩ muốn biết cách thắng thì cứ soi kỹ người thắng, và biết chuyện Wald qua hình máy bay chấm đỏ. Sau khi xem, họ kể lại được câu chuyện Columbia – vết đạn – chỗ không có lỗ, biết hình chấm đỏ là tranh minh họa về sau và đoạn đối thoại là kể lại, phân biệt kính lúp với ống nhòm, tự hỏi 'ai không về để kể?' trước một câu chuyện thành công (con phố cà phê, cái quạt của bà), và biết khi nào kẻ sống sót thật sự giỏi hơn",
+   "discovery_goal": "Tìm kiếm (\"thiên kiến kẻ sống sót\", \"survivorship bias\", \"Abraham Wald\", \"máy bay lỗ đạn\", \"survivorship bias plane\", \"khung tư duy\") và đề xuất từ video tư duy, lịch sử, thống kê; tập 8 của series Khung tư duy, khán giả series Review sách",
+   "primary_conversion": "Bình luận trả lời câu hỏi cuối: \"Bạn muốn tập sau về khung tư duy nào?\" (comment answering the end-card question)",
+   "share_recipient": "Một người bạn sắp làm theo một câu chuyện thành công (bỏ việc mở quán, theo một 'bí quyết' trên mạng): câu hỏi 'ai đã không về để kể?' giúp hai người bàn chuyện ấy mà không ai phải dập tắt ước mơ của ai",
+   "evidence": "Wald 1943, A Method of Estimating Plane Vulnerability Based on Damage of Survivors (SRG, Columbia; in lại: Center for Naval Analyses, CRC 432, 7/1980, DTIC AD-A091073); Mangel & Samaniego 1984, JASA 79(386):259–267; Wallis 1980, JASA 75(370):320–330 (lịch sử SRG, thành viên); Casselman 2016, AMS Feature Column 'The Legend of Abraham Wald' (chuyện kể phần lớn là 'tái dựng hợp lý'); lời kể của Cameron Moll về hình chấm đỏ (~2005) và bản đưa lên Wikimedia 12/11/2016; tiểu sử Wald (MacTutor, Wikipedia); Ellenberg 2014 How Not to Be Wrong (bản kể phổ biến); số quán cà phê và chuyện cái quạt là minh họa của kênh",
+   "constraints": "4–5 phút, 4:3, icon vẽ, không khuôn mặt người thật (Wald là huy hiệu chữ cái), không vẽ lại hình máy bay chấm đỏ như thể là của Wald, một giọng đọc (OmniVoice seed 99 speed 0.88), tên tiếng Anh giữ nguyên chính tả, số đọc bằng chữ, số chính xác trên màn hình; không nói Wald 'cứu hàng nghìn phi công' (không có nguồn); không lặp hình nghĩa địa (tập sách 17) hay ví dụ quỹ đầu tư tung đồng xu (tập sách 8); không lời khuyên đầu tư; giữ lời miễn trừ"
+  },
+  "youtube": {
+   "title": "Thiên kiến kẻ sống sót: Wald, máy bay và chỗ không có lỗ",
+   "thumbnail_text": "Máy bay về đầy lỗ đạn. Bọc giáp chỗ không có lỗ.",
+   "description": "Trong Thế chiến II, ở Đại học Columbia, một nhóm nhỏ các nhà thống kê (Statistical Research Group) làm việc cho quân đội Mỹ. Abraham Wald nhận một câu hỏi: trúng đạn vào phần nào thì máy bay dễ rơi nhất, khi dữ liệu duy nhất là vết đạn trên những chiếc trở về? Ý của ông: phần ít lỗ trên chiếc trở về là phần mà trúng vào thì máy bay đã không về. Video kể lại câu chuyện ấy, sửa hai chuyện hay bị kể sai, giải thích thiên kiến kẻ sống sót bằng hình ảnh kính lúp và ống nhòm, ba nguyên tắc (hỏi ai đã rơi khỏi mẫu; đọc cả chỗ trống; so với cả nhóm ban đầu), một ví dụ với con phố cà phê, và một câu hỏi để bạn tự thử.\n\nHay bị kể sai: hình máy bay chấm đỏ nổi tiếng không có trong báo cáo của Wald. Theo lời tác giả Cameron Moll, đó là tranh minh họa ông vẽ khoảng năm 2005 với các chấm tự đặt; một phiên bản được đưa lên Wikimedia năm 2016. Đoạn đối thoại kịch tính (sĩ quan muốn bọc chỗ nhiều lỗ, Wald bảo ngược lại) phần lớn là cách kể lại về sau; nguồn còn lại là các bản ghi nhớ toán học của Wald (1943) và bài phân tích của Mangel & Samaniego (1984).\n\nẨn dụ dừng ở đâu: chiếc máy bay trở về không giỏi hơn chiếc rơi, nó chỉ trúng đạn ở chỗ khác; ngoài đời, kẻ sống sót có khi giỏi hơn thật, nên hãy kiểm tra, đừng mặc định. Và phần đã mất thường không nhìn thấy được: Wald phải ước đoán nó bằng toán và giả định.\n\nLưu ý: số quán cà phê (10 quán còn mở trong khoảng 40 quán từng mở) và chuyện cái quạt là ví dụ minh họa của kênh. Hình ảnh trong video là icon vẽ, không phải hình tư liệu.\n\nChương:\nMáy bay về đầy lỗ đạn\nĐiều ta hay nghĩ\nKính lúp và ống nhòm\nColumbia, 1943\nDữ liệu duy nhất\nWald đọc khác\nHình chấm đỏ: hay bị kể sai\nNguyên tắc 1: hỏi ai đã rơi khỏi mẫu\nNguyên tắc 2: đọc cả chỗ trống\nCon phố cà phê (số minh họa)\nNguyên tắc 3: so với cả nhóm ban đầu\nẨn dụ dừng ở đâu\nThử một chút: cái quạt của bà\nBa nguyên tắc\nAi đã không về để kể?\n\nNguồn:\n- Abraham Wald, A Method of Estimating Plane Vulnerability Based on Damage of Survivors (Statistical Research Group, Columbia University, 1943); in lại: Center for Naval Analyses, CRC 432, 7/1980: https://apps.dtic.mil/sti/pdfs/ADA091073.pdf\n- Marc Mangel & Francisco J. Samaniego, Abraham Wald's Work on Aircraft Survivability, Journal of the American Statistical Association 79(386), 1984, tr. 259–267\n- W. Allen Wallis, The Statistical Research Group, 1942–1945, Journal of the American Statistical Association 75(370), 1980, tr. 320–330\n- Bill Casselman, The Legend of Abraham Wald, AMS Feature Column, 6/2016: https://www.ams.org/publicoutreach/feature-column/fc-2016-06\n- Cameron Moll, Abraham Wald and the airplane diagram with red bullet holes: the origin story: https://cameronmoll.com/journal/abraham-wald-red-bullet-holes-origin-story\n- Jordan Ellenberg, How Not to Be Wrong, Penguin, 2014 (bản kể phổ biến)\n- MacTutor History of Mathematics, Abraham Wald: https://mathshistory.st-andrews.ac.uk/Biographies/Wald/\n\nBạn muốn tập sau về khung tư duy nào? Để lại bình luận nhé.",
+   "tags": [
+    "thiên kiến kẻ sống sót",
+    "survivorship bias",
+    "Abraham Wald",
+    "máy bay lỗ đạn",
+    "survivorship bias plane",
+    "khung tư duy",
+    "mô hình tư duy",
+    "tư duy phản biện",
+    "thống kê",
+    "thiên kiến nhận thức",
+    "ra quyết định",
+    "kỹ năng tư duy",
+    "Thế chiến II"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "wald1943",
+   "cite": "Abraham Wald, 'A Method of Estimating Plane Vulnerability Based on Damage of Survivors', memoranda for the Statistical Research Group, Columbia University (Applied Mathematics Panel, NDRC), 1943; unillustrated mathematical memoranda; declassified and reprinted by the Center for Naval Analyses as CRC 432, July 1980 (DTIC AD-A091073). Records the method: estimate how likely a hit in each part downs a plane, using the damage on planes that returned and the assumption that hits are spread roughly at random (method summarised by Mangel & Samaniego 1984 and several secondary pages; PDF not opened in this session)",
+   "url": "https://apps.dtic.mil/sti/pdfs/ADA091073.pdf"
+  },
+  {
+   "id": "mangel1984",
+   "cite": "Marc Mangel and Francisco J. Samaniego, 'Abraham Wald's Work on Aircraft Survivability', Journal of the American Statistical Association 79(386), June 1984, pp. 259–267 (doi 10.1080/01621459.1984.10478038; JSTOR 2288257): an accessible guide to Wald's memoranda"
+  },
+  {
+   "id": "wallis1980",
+   "cite": "W. Allen Wallis, 'The Statistical Research Group, 1942–1945', Journal of the American Statistical Association 75(370), June 1980, pp. 320–330: the group at Columbia University, supported by the Applied Mathematics Panel of the National Defense Research Committee; members included Milton Friedman, L. J. Savage and Abraham Wald; Wallis directed research. Its mentions of aircraft vulnerability are brief and do not name Wald (per Casselman 2016)"
+  },
+  {
+   "id": "casselman2016",
+   "cite": "Bill Casselman, 'The Legend of Abraham Wald', AMS Feature Column, June 2016: very little source material exists; beyond Wald's memoranda and two vague mentions in Wallis's memoir, much of the popular story is 'plausible reconstruction' (wording cross-read from several pages quoting it; page not opened directly)",
+   "url": "https://www.ams.org/publicoutreach/feature-column/fc-2016-06"
+  },
+  {
+   "id": "moll",
+   "cite": "Cameron Moll's own account of the red-dot plane diagram: he drew fictitious red dots on an arbitrary aircraft outline around 2005 for slides and blog posts (earliest known use: a 2006 presentation); a version on a Lockheed PV-1 Ventura outline was uploaded to Wikimedia Commons by user McGeddon on 12 November 2016 and used on Wikipedia's 'Survivorship bias' article (also Know Your Meme, 'Survivorship Bias Plane'; page not opened directly)",
+   "url": "https://cameronmoll.com/journal/abraham-wald-red-bullet-holes-origin-story"
+  },
+  {
+   "id": "ellenberg2014",
+   "cite": "Jordan Ellenberg, How Not to Be Wrong: The Power of Mathematical Thinking, Penguin Press, 2014, chapter 1: the popular dramatic retelling ('The armor doesn't go where the bullet holes are. It goes where the bullet holes aren't: on the engines'); details differ between retellings (Navy or Army Air Forces, engines or cockpit)"
+  },
+  {
+   "id": "wald_bio",
+   "cite": "MacTutor History of Mathematics (St Andrews), 'Abraham Wald'; Wikipedia 'Abraham Wald'; Deutsche Biographie: born 31 October 1902 in Kolozsvár (then Kingdom of Hungary, now Cluj-Napoca, Romania); left Austria for the United States in 1938 (Cowles Commission, then Columbia); died 13 December 1950 in an air crash in India",
+   "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Wald/"
+  },
+  {
+   "id": "minhhoa",
+   "cite": "Ví dụ minh họa của kênh (không phải khảo sát): một con phố có 10 quán cà phê đang mở, trong khoảng 40 quán đã mở ở đó trong ba năm, 30 quán đã đóng; chuyện cái quạt điện 40 năm của bà"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Hỏi ai đã rơi khỏi mẫu",
+   "line": "Thứ mình đang thấy đã qua bộ lọc nào, và ai không còn ở đây để kể?"
+  },
+  {
+   "name": "Đọc cả chỗ trống",
+   "line": "Sự vắng mặt cũng là dữ liệu: chỗ không có lỗ nói nhiều hơn chỗ có lỗ."
+  },
+  {
+   "name": "So với cả nhóm ban đầu",
+   "line": "Đặt kẻ sống sót cạnh những ai đã rơi rồi mới kết luận: giỏi thật, hay chỉ còn lại?"
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "narration": "Những chiếc máy bay trở về đầy lỗ đạn. Chỗ cần bọc giáp lại là chỗ không có lỗ.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "plane",
+      "color": "b",
+      "kicker": "Những chiếc trở về",
+      "line": "Đầy lỗ đạn",
+      "line_cue": "đầy",
+      "action": "trúng đạn"
+     },
+     {
+      "type": "icon",
+      "icon": "shield",
+      "color": "a",
+      "kicker": "Bọc giáp ở đâu?",
+      "cue": "chỗ cần",
+      "line": "Chỗ không có lỗ",
+      "line_cue": "không có",
+      "action": "che chắn"
+     }
+    ]
+   },
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "không có",
+     "gain_db": -6
+    }
+   ],
+   "sources": [
+    "wald1943",
+    "mangel1984"
+   ]
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "narration": "Vì những chiếc trúng đạn ở chỗ ấy đã không về. Cái bẫy ở đây có một cái tên: thiên kiến kẻ sống sót.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "nhin_ca",
+      "kicker": "Vì sao?",
+      "line": "Chiếc trúng chỗ ấy không về",
+      "line_cue": "đã không",
+      "action": "nhìn xa"
+     },
+     {
+      "type": "icon",
+      "concept": "chi_thay",
+      "kicker": "Cái bẫy có một cái tên",
+      "cue": "cái bẫy",
+      "line": "Thiên kiến kẻ sống sót",
+      "line_cue": "thiên kiến",
+      "action": "soi gần"
+     }
+    ]
+   },
+   "sources": [
+    "mangel1984"
+   ]
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "kicker": "Khung tư duy · Tập 8",
+    "title": "Thiên kiến kẻ sống sót",
+    "subtitle": "Survivorship bias",
+    "hold": 3.0
+   },
+   "sfx": [
+    {
+     "kind": "whoosh",
+     "at": 0.0,
+     "gain_db": -12
+    }
+   ]
+  },
+  {
+   "id": "b01",
+   "act": "misconception",
+   "narration": "Ta hay nghĩ: muốn biết điều gì làm nên thành công, hãy nhìn kỹ những người thành công. Muốn biết máy bay yếu ở đâu, hãy đếm lỗ trên chiếc trở về. Nghe rất hợp lý. Nhưng ta chỉ thấy những ai còn ở lại để kể.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "star",
+      "kicker": "Điều ta hay nghĩ",
+      "line": "Nhìn kỹ người thành công",
+      "line_cue": "hãy nhìn",
+      "action": "tỏa sáng"
+     },
+     {
+      "type": "icon",
+      "concept": "chi_thay",
+      "kicker": "Đếm lỗ trên chiếc trở về",
+      "cue": "máy bay",
+      "line": "Nghe rất hợp lý",
+      "line_cue": "nghe",
+      "action": "soi từng lỗ"
+     },
+     {
+      "type": "icon",
+      "icon": "eye",
+      "color": "b",
+      "kicker": "Nhưng",
+      "cue": "nhưng ta",
+      "line": "Chỉ thấy ai còn ở lại",
+      "line_cue": "còn ở",
+      "action": "nhìn hẹp"
+     }
+    ]
+   },
+   "sources": [
+    "ellenberg2014"
+   ]
+  },
+  {
+   "id": "b02",
+   "act": "context",
+   "narration": "Hình dung bạn đứng ở đường băng, cầm kính lúp soi từng chiếc hạ cánh. Bạn thấy rất rõ. Nhưng những chiếc rơi ngoài kia không hạ cánh để bạn soi. Muốn thấy chúng, bạn cần một cái ống nhòm.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "chi_thay",
+      "kicker": "Ở đường băng",
+      "line": "Soi từng chiếc hạ cánh",
+      "line_cue": "cầm",
+      "action": "soi"
+     },
+     {
+      "type": "icon",
+      "icon": "wave",
+      "kicker": "Ngoài kia",
+      "cue": "nhưng những",
+      "line": "Không hạ cánh để bạn soi",
+      "line_cue": "không hạ",
+      "action": "nhấn chìm"
+     },
+     {
+      "type": "trio",
+      "kicker": "Hai cách nhìn",
+      "cue": "muốn thấy",
+      "action": "đặt cạnh",
+      "items": [
+       {
+        "concept": "chi_thay",
+        "label": "Soi chiếc đã về"
+       },
+       {
+        "concept": "nhin_ca",
+        "label": "Hỏi chiếc không về",
+        "cue": "ống nhòm"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "b03",
+   "act": "context",
+   "narration": "Năm một nghìn chín trăm bốn mươi ba, ở Đại học Columbia, New York, một nhóm nhỏ các nhà thống kê làm việc cho quân đội Mỹ. Trong nhóm có Milton Friedman, và Abraham Wald, một nhà toán học di cư từ châu Âu.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "people",
+      "kicker": "Columbia · 1942–1945",
+      "line": "Nhóm Nghiên cứu Thống kê",
+      "line_cue": "một nhóm",
+      "action": "tụ lại"
+     },
+     {
+      "type": "portrait",
+      "name": "Abraham Wald",
+      "initials": "AW",
+      "role": "Nhà toán học, thống kê",
+      "years": "1902–1950",
+      "cue": "abraham",
+      "action": "khắc"
+     }
+    ]
+   },
+   "sources": [
+    "wallis1980",
+    "wald_bio"
+   ]
+  },
+  {
+   "id": "b04",
+   "act": "story",
+   "narration": "Câu hỏi là: trúng đạn vào phần nào thì máy bay dễ rơi nhất? Dữ liệu duy nhất trong tay là vết đạn trên những chiếc trở về. Mà giáp thì nặng, không thể bọc khắp thân.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "plane",
+      "kicker": "Câu hỏi",
+      "line": "Trúng đâu thì dễ rơi nhất?",
+      "line_cue": "trúng",
+      "action": "trúng đạn"
+     },
+     {
+      "type": "icon",
+      "concept": "chi_thay",
+      "kicker": "Dữ liệu duy nhất",
+      "cue": "dữ liệu",
+      "line": "Vết đạn trên chiếc trở về",
+      "line_cue": "vết đạn",
+      "action": "đếm lỗ"
+     },
+     {
+      "type": "icon",
+      "icon": "anchor",
+      "kicker": "Mà giáp thì nặng",
+      "cue": "mà giáp",
+      "line": "Không bọc khắp thân được",
+      "line_cue": "không thể",
+      "action": "kéo xuống"
+     }
+    ]
+   },
+   "sources": [
+    "wald1943",
+    "mangel1984"
+   ]
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "narration": "Cách đọc tự nhiên: chỗ nào nhiều lỗ, chỗ ấy cần bảo vệ. Wald đọc khác. Ông coi như đạn trúng khắp thân máy bay, gần như ngẫu nhiên. Vậy nếu chiếc trở về hiếm khi có lỗ ở một phần nào đó, thì những chiếc trúng vào phần ấy đã rơi.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "chi_thay",
+      "kicker": "Cách đọc tự nhiên",
+      "line": "Nhiều lỗ thì bảo vệ",
+      "line_cue": "chỗ nào",
+      "action": "soi"
+     },
+     {
+      "type": "icon",
+      "icon": "dice",
+      "kicker": "Wald giả định",
+      "cue": "ông coi",
+      "line": "Đạn trúng gần như ngẫu nhiên",
+      "line_cue": "gần như",
+      "action": "lăn"
+     },
+     {
+      "type": "icon",
+      "concept": "nhin_ca",
+      "kicker": "Vậy thì",
+      "cue": "vậy nếu",
+      "line": "Chiếc trúng chỗ ít lỗ đã rơi",
+      "line_cue": "những chiếc",
+      "action": "nhìn xa"
+     }
+    ]
+   },
+   "sources": [
+    "wald1943",
+    "mangel1984"
+   ],
+   "certainty": "attributed"
+  },
+  {
+   "id": "b06",
+   "act": "turn",
+   "narration": "Nói cách khác: lỗ trên chiếc trở về chỉ ra chỗ máy bay chịu được. Chỗ ít lỗ, như quanh động cơ trong nhiều bản kể, mới là chỗ chết người.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "swap",
+      "kicker": "Wald đọc ngược lại",
+      "strike_cue": "chỗ ít",
+      "action": "đổi chỗ",
+      "from": {
+       "concept": "chi_thay",
+       "label": "Soi chỗ nhiều lỗ"
+      },
+      "to": {
+       "concept": "nhin_ca",
+       "label": "Hỏi chỗ ít lỗ",
+       "cue": "chỗ ít"
+      }
+     },
+     {
+      "type": "icon",
+      "icon": "shield",
+      "color": "a",
+      "kicker": "Nhiều bản kể: động cơ",
+      "cue": "mới là",
+      "line": "Chỗ chết người",
+      "line_cue": "chết",
+      "action": "che chắn"
+     }
+    ]
+   },
+   "sources": [
+    "mangel1984",
+    "ellenberg2014"
+   ],
+   "certainty": "attributed"
+  },
+  {
+   "id": "b07",
+   "act": "complication",
+   "narration": "Giờ là phần hay bị kể sai. Hình máy bay chấm đỏ nổi tiếng trên mạng không phải của Wald. Đó là tranh minh họa vẽ khoảng năm hai nghìn lẻ năm, các chấm do người vẽ tự đặt. Báo cáo của Wald là những trang toán, không có hình ấy.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "statement",
+      "kicker": "Hay bị kể sai",
+      "text": "Hình chấm đỏ của Wald",
+      "strike": "Hình chấm đỏ của Wald",
+      "replace": "Tranh vẽ khoảng 2005",
+      "strike_cue": "đó là",
+      "action": "gạch bỏ"
+     },
+     {
+      "type": "icon",
+      "icon": "letter",
+      "kicker": "Báo cáo của Wald · 1943",
+      "cue": "báo cáo",
+      "line": "Những trang toán, không hình",
+      "line_cue": "những trang",
+      "action": "mở thư"
+     }
+    ]
+   },
+   "sources": [
+    "moll",
+    "wald1943"
+   ]
+  },
+  {
+   "id": "b08",
+   "act": "complication",
+   "narration": "Còn đoạn đối thoại kịch tính, sĩ quan đòi bọc chỗ nhiều lỗ, Wald bảo ngược lại, phần lớn là lối kể lại về sau. Cái còn lại là các bản ghi nhớ năm một nghìn chín trăm bốn mươi ba, và bài phân tích của Mangel và Samaniego năm một nghìn chín trăm tám mươi tư.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "mask",
+      "kicker": "Đoạn đối thoại kịch tính",
+      "line": "Phần lớn là kể lại về sau",
+      "line_cue": "phần lớn",
+      "action": "đeo mặt nạ"
+     },
+     {
+      "type": "trio",
+      "kicker": "Cái còn lại",
+      "cue": "cái còn",
+      "action": "xếp chồng",
+      "items": [
+       {
+        "icon": "letter",
+        "label": "Ghi nhớ của Wald · 1943",
+        "cue": "các bản"
+       },
+       {
+        "icon": "book",
+        "label": "Mangel & Samaniego · 1984",
+        "cue": "mangel"
+       }
+      ]
+     }
+    ]
+   },
+   "sources": [
+    "casselman2016",
+    "wallis1980",
+    "wald1943",
+    "mangel1984"
+   ],
+   "certainty": "disputed"
+  },
+  {
+   "id": "b09",
+   "act": "principle",
+   "narration": "Từ câu chuyện ấy, có ba nguyên tắc. Thứ nhất: hỏi ai đã rơi khỏi mẫu. Thứ mình đang thấy đã qua bộ lọc nào, và ai không còn ở đây để kể?",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "focus": [
+     0
+    ],
+    "action": "lướt tới",
+    "regions": [
+     {
+      "concept": "nhin_ca",
+      "label": "Ai rơi khỏi mẫu?",
+      "note": "Ai không về để kể?",
+      "cue": "thứ nhất",
+      "note_cue": "ai không"
+     },
+     {
+      "icon": "puzzle",
+      "label": "Đọc cả chỗ trống",
+      "note": "Vắng mặt nói gì?",
+      "cue": "thứ hai",
+      "note_cue": "sự vắng"
+     },
+     {
+      "icon": "scale",
+      "label": "So với nhóm đầu",
+      "note": "Giỏi thật hay may?",
+      "cue": "thứ ba",
+      "note_cue": "giỏi thật"
+     }
+    ],
+    "start": "overview"
+   },
+   "sources": [
+    "mangel1984"
+   ]
+  },
+  {
+   "id": "b10",
+   "act": "principle",
+   "narration": "Thứ hai: đọc cả chỗ trống. Sự vắng mặt cũng là dữ liệu. Trên thân máy bay, chỗ không có lỗ nói nhiều hơn chỗ có lỗ.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "focus": [
+     1
+    ],
+    "action": "lướt sang"
+   },
+   "sources": [
+    "wald1943"
+   ]
+  },
+  {
+   "id": "b11",
+   "act": "example",
+   "narration": "Thử với một con phố cà phê, số minh họa thôi. Đi dọc phố, bạn thấy mười quán, quán nào cũng đông. Dễ kết luận: mở quán ở đây là thắng. Nhưng hỏi bà bán nước đầu phố: ba năm qua, ở đây đã mở khoảng bốn mươi quán. Ba mươi quán đã đóng, không còn biển hiệu nào để bạn thấy.",
+   "visual": {
+    "type": "scenario",
+    "kicker": "Số minh họa",
+    "heading": "Một con phố cà phê",
+    "action": "kéo",
+    "before_label": "Đi dọc phố",
+    "after_label": "Hỏi bà bán nước",
+    "cue": "nhưng hỏi",
+    "suffix": " quán",
+    "bars": [
+     {
+      "label": "Quán đang mở",
+      "before": 10,
+      "after": 10,
+      "concept": "chi_thay",
+      "cue": "bạn thấy"
+     },
+     {
+      "label": "Quán từng mở",
+      "before": 10,
+      "after": 40,
+      "color": "#CFC6B8",
+      "cue": "quán nào"
+     },
+     {
+      "label": "Quán đã đóng",
+      "before": 0,
+      "after": 30,
+      "concept": "nhin_ca",
+      "cue": "dễ kết"
+     }
+    ],
+    "takeaway": "10 quán đông, trong 40 quán từng mở",
+    "takeaway_cue": "ba mươi quán"
+   },
+   "sources": [
+    "minhhoa"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b12",
+   "act": "example",
+   "narration": "Không phải đừng mở quán. Chỉ là câu hỏi đổi đi: ba mươi quán kia đóng vì sao, và mười quán này khác chúng ở đâu?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "store",
+      "kicker": "Không phải: đừng mở quán",
+      "line": "Câu hỏi đổi đi",
+      "line_cue": "câu hỏi",
+      "action": "mở cửa"
+     },
+     {
+      "type": "icon",
+      "concept": "nhin_ca",
+      "kicker": "Câu hỏi mới",
+      "cue": "ba mươi",
+      "line": "Ba mươi quán kia đóng vì sao?",
+      "line_cue": "đóng",
+      "action": "nhìn xa"
+     }
+    ]
+   },
+   "sources": [
+    "minhhoa"
+   ]
+  },
+  {
+   "id": "b13",
+   "act": "principle",
+   "narration": "Thứ ba: so với cả nhóm ban đầu. Mười quán còn lại có thể giỏi thật, cũng có thể chỉ may. Chỉ khi đặt cạnh những quán đã đóng, bạn mới biết điều gì thật sự khác.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "focus": [
+     2
+    ],
+    "action": "lướt xuống"
+   },
+   "sources": [
+    "minhhoa"
+   ]
+  },
+  {
+   "id": "b14",
+   "act": "complication",
+   "narration": "Nhưng hình ảnh lỗ đạn cũng có giới hạn. Chiếc máy bay trở về không giỏi hơn chiếc rơi; nó chỉ trúng đạn ở chỗ khác. Ngoài đời, kẻ sống sót có khi giỏi hơn thật: quán đông có thể vì cà phê ngon. Thiên kiến này không bảo thành công là may. Nó bảo: kiểm tra, đừng mặc định.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "plane",
+      "kicker": "Ẩn dụ dừng ở đâu?",
+      "line": "Chỉ trúng đạn chỗ khác",
+      "line_cue": "nó chỉ",
+      "action": "trúng đạn"
+     },
+     {
+      "type": "icon",
+      "icon": "tea",
+      "steam": true,
+      "kicker": "Ngoài đời",
+      "cue": "ngoài đời",
+      "line": "Có khi giỏi hơn thật",
+      "line_cue": "có khi",
+      "action": "bốc hơi"
+     },
+     {
+      "type": "icon",
+      "icon": "checklist",
+      "color": "a",
+      "kicker": "Thiên kiến này bảo",
+      "cue": "thiên kiến",
+      "line": "Kiểm tra, đừng mặc định",
+      "line_cue": "kiểm tra",
+      "action": "đánh dấu"
+     }
+    ]
+   },
+   "sources": [
+    "mangel1984"
+   ]
+  },
+  {
+   "id": "b15",
+   "act": "complication",
+   "narration": "Và ống nhòm không phải lúc nào cũng thấy được những chiếc không về. Wald phải dùng toán và giả định để ước đoán phần đã mất. Giả định sai, kết luận cũng sai.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "nhin_ca",
+      "kicker": "Ẩn dụ dừng ở đâu?",
+      "line": "Không phải lúc nào cũng thấy",
+      "line_cue": "không phải",
+      "action": "dò tìm"
+     },
+     {
+      "type": "icon",
+      "icon": "puzzle",
+      "kicker": "Phần đã mất",
+      "cue": "wald phải",
+      "line": "Phải ước đoán, cần giả định",
+      "line_cue": "ước đoán",
+      "action": "ghép mảnh"
+     }
+    ]
+   },
+   "sources": [
+    "wald1943",
+    "mangel1984"
+   ]
+  },
+  {
+   "id": "b16",
+   "act": "question",
+   "narration": "Giờ thử một chút nhé. Bà bảo: đồ ngày xưa bền lắm, cái quạt bốn mươi năm vẫn chạy. Câu hỏi đầu tiên bạn nên hỏi là gì?",
+   "visual": {
+    "type": "question",
+    "question": "Bà bảo: quạt 40 năm vẫn chạy. Hỏi gì đầu tiên?",
+    "choices": [
+     "Quạt ấy hiệu gì?",
+     "Những cái quạt cùng thời giờ ở đâu?",
+     "Quạt bây giờ giá bao nhiêu?"
+    ],
+    "answer": "B — hỏi ai đã rơi khỏi mẫu: quạt hỏng đã bị bỏ đi từ lâu.",
+    "think_seconds": 5
+   },
+   "sources": [
+    "minhhoa"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b17",
+   "act": "recap",
+   "narration": "Đáp án là B: những cái quạt hỏng đã bị bỏ đi từ lâu, chỉ cái bền còn lại để khoe. Vậy là ba nguyên tắc. Hỏi ai đã rơi khỏi mẫu. Đọc cả chỗ trống. Và so với cả nhóm ban đầu.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba nguyên tắc",
+    "action": "lùi xa",
+    "focus": [
+     {
+      "region": 0,
+      "cue": "đáp án"
+     }
+    ],
+    "overview": true,
+    "overview_cue": "vậy là",
+    "line": "Ba câu hỏi trước một thành công",
+    "line_cue": "và so"
+   }
+  },
+  {
+   "id": "b18",
+   "act": "close",
+   "narration": "Những chiếc máy bay trở về kể chuyện của chúng. Câu trả lời lại nằm ở những chiếc không về. Lần tới, trước một câu chuyện thành công, hãy hỏi: ai đã không về để kể?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "plane",
+      "color": "b",
+      "kicker": "Những chiếc trở về",
+      "line": "Kể chuyện của chúng",
+      "action": "đứng yên"
+     },
+     {
+      "type": "icon",
+      "icon": "wave",
+      "kicker": "Câu trả lời",
+      "cue": "câu trả",
+      "line": "Ở những chiếc không về",
+      "line_cue": "những chiếc không",
+      "action": "lặng xuống"
+     },
+     {
+      "type": "icon",
+      "concept": "nhin_ca",
+      "kicker": "Lần tới, hãy hỏi",
+      "cue": "lần tới",
+      "line": "Ai đã không về để kể?",
+      "line_cue": "hãy hỏi",
+      "action": "nhìn xa"
+     }
+    ]
+   },
+   "sources": [
+    "wald1943"
+   ]
+  },
+  {
+   "id": "b19",
+   "act": "close",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
+   "visual": {
+    "type": "end",
+    "kicker": "Khung tư duy · Tập 8",
+    "title": "Thiên kiến kẻ sống sót",
+    "ask": "Bạn muốn tập sau về khung tư duy nào?",
+    "ask_hint": "Tư duy ngược · dao cạo Occam · hiệu ứng mỏ neo",
+    "ask_cue": "hay chủ",
+    "sources_line": "Nguồn: Wald (1943) · Mangel & Samaniego (1984) · Wallis (1980) · Casselman (2016) · xem mô tả",
+    "disclaimer": "Nội dung giáo dục; câu chuyện kể lại từ nguồn công khai.",
+    "sources_cue": "còn bạn"
+   }
+  }
+ ],
+ "pronounce": {}
+}
