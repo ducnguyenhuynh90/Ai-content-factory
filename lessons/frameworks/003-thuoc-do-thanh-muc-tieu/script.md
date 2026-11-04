@@ -1,5 +1,5 @@
 # Khi thước đo thành mục tiêu
-_Khung tư duy · Tập 3 · 844 words · ~3.64 min · 4:3_
+_Khung tư duy · Tập 3 · 849 words · ~3.66 min · 4:3_
 
 ## Learning goals
 - Kể lại câu chuyện Hà Nội 1902 theo nghiên cứu của Michael G. Vann: cống ngầm khu phố Tây thành nhà của chuột; thuê người bắt chuột, có ngày khoảng 20.000 con; thưởng 1 xu mỗi con, nộp đuôi làm bằng; chuột cụt đuôi, trại nuôi chuột; chương trình thưởng bị dừng
@@ -23,7 +23,7 @@ _Khung tư duy · Tập 3 · 844 words · ~3.64 min · 4:3_
 | b04 | context | Câu chuyện được nhà sử học Michael G. Vann tìm lại trong lưu trữ thuộc địa, kể trong bài báo năm hai nghìn lẻ ba và cuốn sách The Great Hanoi Rat Hunt. Mình kể theo nghiên cứu của ông. | shots: shots |
 | b05 | story | Mùa xuân năm một nghìn chín trăm lẻ hai, chính quyền thuê người Việt xuống cống bắt chuột. Số chuột bị giết mỗi ngày tăng dần. Có ngày khoảng hai mươi nghìn con. _(disputed)_ | shots: shots |
 | b06 | story | Rồi chính quyền mở thưởng cho mọi người: mỗi con chuột một xu. Để đỡ phải nhận cả đống xác chuột, chỉ cần nộp cái đuôi. | shots: shots |
-| b07 | story | Và người ta làm đúng điều được trả tiền. Theo Vann, quan chức bắt đầu thấy chuột không đuôi chạy trong phố: bắt, cắt đuôi, thả ra cho chúng đẻ tiếp. Rồi có cả trại nuôi chuột ở ngoại ô. | shots: shots |
+| b07 | story | Và người ta làm đúng điều được trả tiền. Theo Vann, quan chức bắt đầu thấy chuột không đuôi chạy trong phố. Có người bắt chuột, cắt đuôi, rồi thả ra cho chúng đẻ tiếp. Rồi có cả trại nuôi chuột ở ngoại ô. | shots: shots |
 | b08 | story | Chương trình thưởng bị dừng. Người ta kể rằng lúc ấy chuột không hề ít đi, và dịch hạch vẫn đến Hà Nội. Thước đo đã đổi việc: từ đếm chuột chết thành đếm đuôi. _(attributed)_ | shots: shots |
 | b09 | complication | Ý này hay được kể bằng chuyện rắn hổ mang ở Delhi, gọi là hiệu ứng rắn hổ mang. Theo Vann, chuyện ấy chưa kiểm chứng được. Ông đề nghị gọi là hiệu ứng chuột, vì vụ Hà Nội có giấy tờ lưu trữ. _(attributed)_ | shots: shots |
 | b10 | context | Quy luật này mang tên một nhà kinh tế người Anh, Charles Goodhart. Năm một nghìn chín trăm bảy mươi lăm, khi bàn về chính sách tiền tệ, ông viết: một quy luật thống kê sẽ sụp khi bị dùng để điều khiển. | shots: shots |
@@ -37,7 +37,7 @@ _Khung tư duy · Tập 3 · 844 words · ~3.64 min · 4:3_
 | b18 | complication | Và không phải ai bị đo cũng tìm đường tắt. Nhiều người vẫn làm thật. Quy luật chỉ nói: khi tiền và áp lực dồn vào một con số, sẽ có người tìm ra đường tắt. | shots: shots |
 | b19 | question | Giờ thử một chút nhé. Bố mẹ thưởng con mười nghìn đồng cho mỗi trang vở viết xong. Điều gì dễ xảy ra nhất? | question: Thưởng con 10.000đ mỗi trang vở viết xong. Dễ xảy ra nhất? |
 | b20 | recap | Đáp án là B: trang vở là cái đuôi, bài con hiểu mới là con chuột. Vậy là ba nguyên tắc. Hỏi con số thay cho gì. Nghĩ như người bị đo. Và dùng nhiều thước đo, nhìn tận nơi. | board: board |
-| b21 | close | Ở Hà Nội năm ấy, đuôi chuột nhiều lên mà chuột không ít đi. Lần tới, khi đặt một con số làm mục tiêu, hãy hỏi: mình đang chữa bệnh, hay đang hơ nhiệt kế trên nến? | shots: shots |
+| b21 | close | Ở Hà Nội năm ấy, đuôi chuột nhiều lên mà chuột chẳng thấy ít đi. Lần tới, khi đặt một con số làm mục tiêu, hãy hỏi: mình đang chữa bệnh, hay đang hơ nhiệt kế trên nến? | shots: shots |
 | b25 | close | Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau. | end: Khi thước đo thành mục tiêu |
 
 ## Sources
