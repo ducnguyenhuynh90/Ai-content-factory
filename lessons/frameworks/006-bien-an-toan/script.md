@@ -1,5 +1,5 @@
 # Biên an toàn
-_Khung tư duy · Tập 6 · 927 words · ~3.98 min · 4:3_
+_Khung tư duy · Tập 6 · 936 words · ~4.02 min · 4:3_
 
 ## Learning goals
 - Kể lại câu chuyện cầu Brooklyn: John Roebling thiết kế cáp chịu khoảng sáu lần tải dự tính (theo nhiều nguồn; có nguồn ghi sáu đến tám), mất năm 1869; năm 1878 phát hiện J. Lloyd Haigh tráo dây thép bị loại, biên an toàn của cáp mỏng đi (ước tính còn khoảng bốn đến năm lần); Washington Roebling cho thêm khoảng 150 sợi dây tốt mỗi cáp; khánh thành 24/5/1883, vụ chen lấn 30/5/1883; P. T. Barnum dắt 21 con voi qua cầu ngày 17/5/1884
@@ -26,7 +26,7 @@ _Khung tư duy · Tập 6 · 927 words · ~3.98 min · 4:3_
 | b07 | turn | Washington không phá cáp làm lại, cũng không coi như không sao. Ông cho thêm khoảng một trăm năm mươi sợi dây tốt vào mỗi sợi cáp, và theo nhiều nguồn, Haigh phải chịu chi phí. Phần dư bị ăn mất được bù lại. _(attributed)_ | shots: shots |
 | b08 | story | Ngày hai mươi tư tháng năm, năm một nghìn tám trăm tám mươi ba, cầu khánh thành. Sáu ngày sau, có người hô cầu sắp sập. Đám đông chen nhau; mười hai người chết. Cầu không sập. Nhưng nỗi sợ thì ở lại. | shots: shots |
 | b09 | story | Gần một năm sau, ngày mười bảy tháng năm, năm một nghìn tám trăm tám mươi tư, ông bầu gánh xiếc P. T. Barnum dắt hai mươi mốt con voi qua cầu, cùng nhiều lạc đà. Đi cuối là Jumbo, con voi nổi tiếng nhất. | shots: shots |
-| b10 | story | Barnum muốn quảng cáo gánh xiếc, và cho dân New York thấy cầu an toàn. Nhưng voi không làm cầu chắc hơn. Chúng chỉ phơi ra thứ đã có từ bàn vẽ: phần dư. | shots: shots |
+| b10 | misconception | Barnum muốn quảng cáo gánh xiếc, và cho dân New York thấy cầu an toàn. Dễ nghĩ rằng chính những con voi đã làm cây cầu chắc hơn. Không phải vậy. Chúng chỉ phơi ra thứ đã có từ bàn vẽ: phần dư. | shots: shots |
 | b11 | context | Phần dư ấy gọi là biên an toàn: khoảng cách giữa sức chịu thật và tải mình dự tính. Nó không dành cho ngày thường. Nó dành cho chiếc xe quá tải, sợi dây xấu, cái lỗi chưa ai thấy. | shots: shots |
 | b12 | context | Benjamin Graham mượn đúng chữ ấy cho đầu tư; tập bốn Review sách đã kể. Warren Buffett từng ví: xây cầu chịu được ba mươi nghìn pound, rồi chỉ cho xe mười nghìn pound đi qua. | shots: shots |
 | b13 | principle | Từ cây cầu ấy, có ba nguyên tắc. Thứ nhất: để dư nhiều lần. Ước tính tải nặng nhất có thể, rồi làm cho chịu được hơn hẳn thế. Như Roebling: khoảng sáu lần. | board: board |
