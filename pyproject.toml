@@ -12,6 +12,7 @@ youtube = ["yt-dlp"]
 editor = ["faster-whisper>=1.0", "opencv-python-headless<5"]
 lesson = ["kokoro-onnx>=0.4", "soundfile"]
 dev = ["pytest>=7"]
+agent = ["anthropic"]  # optional: only for the Claude provider of vfactory.agent
 
 [project.scripts]
 vfactory = "vfactory.cli:main"
@@ -24,7 +25,7 @@ build-backend = "setuptools.build_meta"
 include = ["vfactory*"]
 
 [tool.setuptools.package-data]
-vfactory = ["assets/fonts/*.ttf", "assets/fonts/licenses/*.txt"]
+vfactory = ["assets/fonts/*.ttf", "assets/fonts/licenses/*.txt", "agent/prompts/*.md", "agent/agent.example.toml"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

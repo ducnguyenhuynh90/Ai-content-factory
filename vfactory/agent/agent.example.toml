@@ -1,0 +1,62 @@
+# Copy to ./agent.toml (or ~/.config/vfactory/agent.toml) and edit. Never put a key here: name the environment
+# variable that holds it (api_key_env). See docs/agent.md.
+
+[defaults]
+provider = "claude"          # used by every stage unless [stages] says otherwise
+runs_dir = "runs"            # keep outside the repo for real work, e.g. "~/Videos/agent-runs"
+series = "Khung tư duy · Tập mới"
+repair_tries = 3             # JSON / lint repair attempts per call
+critique_rounds = 1
+fix_rounds = 3               # gate → fix → rebuild rounds before handing over to a human
+lint_mode = "auto"           # auto | strict | shadow (shadow lints `stage` beats as icon beats)
+lint_warnings_block = false  # true: lint warnings must be fixed too (slower, stricter)
+vision_review = true         # send gate contact sheets to the gate model when it can see images
+build = true
+max_images = 4
+profile = "full"             # full | compact (smaller system prompt, slimmer inputs for small local models)
+
+[providers.claude]
+type = "anthropic"
+model = "claude-opus-5-5"
+effort = "high"              # low | medium | high | xhigh | max (Opus 5.5's own default is medium)
+fallbacks = true             # server-side refusal fallbacks (beta), on by default
+api_key_env = "ANTHROPIC_API_KEY"
+
+[providers.local]
+type = "openai"
+preset = "ollama"            # http://localhost:11434/v1, no key
+model = "qwen3:32b"
+json_mode = "schema"         # schema | schema_strict | object | none
+profile = "compact"
+timeout = 1800
+
+[providers.lmstudio]
+type = "openai"
+preset = "lmstudio"          # http://localhost:1234/v1
+model = "local-model"
+
+[providers.openrouter]
+type = "openai"
+preset = "openrouter"        # key from OPENROUTER_API_KEY
+model = "anthropic/claude-opus-5-5"
+supports_images = true
+headers = { "X-Title" = "vfactory-agent" }
+
+[providers.gemini]
+type = "openai"
+preset = "gemini"            # key from GEMINI_API_KEY
+model = "gemini-model-name"
+supports_images = true
+json_mode = "object"
+
+# Different models per stage: a cheap local model drafts, a strong one writes, critiques and reviews frames.
+[stages]
+idea = "local"
+spine = "local"
+beats = "local"
+research = "claude"
+lesson = "claude"
+critique = { provider = "claude", effort = "xhigh" }
+gate = "claude"              # needs a vision model to look at the frames
+fix = "claude"
+package = "local"
