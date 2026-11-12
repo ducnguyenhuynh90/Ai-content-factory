@@ -81,9 +81,43 @@ scrubs from `before_label` to `after_label` while the bars and numbers move; `ta
 camera glides to each region on its cue word and the region draws itself; `overview: true` + `overview_cue` pulls back to
 the whole board for a recap, with an optional `line`; `board_id` + `focus: [indices]` continue the same board over
 several beats). Example: `docs/examples/engine-check.lesson.json`.
+`stage` (sticker story films; see below) · any beat may carry `transition`.
 `cue` fields name a word in that beat's narration; the visual lands when the word is spoken.
 Any picture may carry `concept` (one registered picture + colour per idea, `meta.concepts`), `color` (`"a"` gold,
 `"b"` coral) and `action` (the verb its object does); a beat may declare `"hold": true` for a deliberate still.
+
+## Sticker story films (`"style": "sticker"`)
+
+`meta.style: "sticker"` switches the whole film to the light sticker look: cream paper with a fibre texture, Inter
+600/800 (draws every Vietnamese glyph; never 700), ink text with a white sticker rim, every picture die-cut with a
+white outline and a soft shadow, line-art fills turned into pastel tints, gold `a` / coral `b` darkened to read on
+cream, white sticker captions. Every existing visual type renders this way; the dark look stays the default. Aspect
+defaults to 16:9 (1920×1080); 4:3 and 9:16 work too (`meta.aspect`). Tokens: `vfactory/lesson/sticker.py`.
+
+**Cast** — register every character once in `meta.cast`: `{id, name, look, role, tag?, real?}`. `look`: `skin`,
+`hair` (short, bob, long, bun, ponytail, cap, spiky, bald, non_la), `hair_color`, `shirt`, `pants`, `shoes`, `outfit`
+(tee, shirt, dress, ao_dai, jacket), `age` (child, adult, older), `glasses`, `hat_color`. A character's name tag
+(`tag`, else `name`) shows on its first appearance; a real person (`real: true`) is never caricatured — the same
+generic figure, always with its name tag. Lint: an unknown id is an ERROR; a beat may restate the look but it must
+match (one look per character for the whole film).
+
+**`stage`** — `{"type": "stage", "set": "street|office|cafe|room|phone|plain", "characters": [{id, look?, x,
+expression, action, cues: [{cue, expression?, action?, x?, toward?}]}], "props": [{icon|concept, x, y, cue, size?,
+color?, out_cue?}], "bubble": {who, text, cue, until?, style?: "think"}, "bubbles": [...], "caption", "caption_cue",
+"transition"}`. 1-3 characters (x = 0-1 of the width, ≥ 0.16 apart). Expressions: neutral, happy, worried,
+surprised, thinking, sad. Actions: idle (breathe + blink, always on), talk (mouth on every spoken word, head bob, an
+explaining hand), wave, point (at the props, else the partner; `toward` = an x), shrug, nod, facepalm, think (hand on
+chin), jump, sit / stand (a red plastic stool appears), walk_in / walk_out, and a cue with `x` walks there. The
+speaker's mouth moves while the bubble's words are spoken, so write the bubble as words the narrator says ("…thở dài:
+tháng này lỗ rồi anh ơi" + bubble "Tháng này lỗ rồi anh ơi!"). Props are the shared `ICONS` as sticker badges, plus
+everyday ones (phone, coffee, phin, scooter, laptop, cash, receipt, bag, heart, parcel, cart, banhmi, chat). Sets carry
+Vietnamese everyday life (shophouses, PHỞ / CÀ PHÊ signs, a passing xe máy, cà phê sữa đá under a dripping phin, plastic
+stools, a standing fan); their lettering steps back under a bubble or a prop. A stage can be a shot inside `shots`.
+
+**Transitions** — `"transition": "whip|zoom|circle|slide|cut"` on a beat (or its visual, or a shot): how it enters
+(~0.4-0.6 s; the outgoing picture leaves in lockstep). Sticker films default to a slide / whip mix; dark films keep the
+blur swap unless a beat asks. Example (all actions, expressions and transitions):
+`docs/examples/sticker-check.lesson.json`.
 
 ## Hard rules
 

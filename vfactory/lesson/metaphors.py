@@ -974,3 +974,4 @@ METAPHORS = {"funnel": funnel, "ladder": ladder, "venn": venn, "flywheel": flywh
 GENERATORS.update(METAPHORS)
 
 from . import canvas  # noqa: E402,F401  (scenario, board: built on the icons above; registers itself in GENERATORS)
+from . import stage  # noqa: E402,F401  (rigged characters on a sticker set: everyday icons, registers "stage")

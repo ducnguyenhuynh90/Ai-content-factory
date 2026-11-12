@@ -60,6 +60,12 @@ def _texts(v, out: list[str]) -> list[str]:
     return out
 
 
+def screen_strings(lesson: dict) -> list[str]:
+    """Everything that will be drawn as text: visuals, narration (captions) and the cast's name tags."""
+    cast = [x for c in (lesson.get("meta") or {}).get("cast") or [] if isinstance(c, dict) for x in (c.get("name"), c.get("tag")) if isinstance(x, str)]
+    return _texts([b["visual"] for b in lesson["beats"]], []) + [b["narration"] for b in lesson["beats"]] + cast
+
+
 def font_coverage(lesson: dict) -> dict:
     """Every character that will be drawn (on-screen text and captions) must exist in the bundled fonts; a missing
     Vietnamese glyph falls back to another font and looks broken."""
@@ -79,7 +85,7 @@ def font_coverage(lesson: dict) -> dict:
             fonts[d.name] = cmap
     if not fonts:
         return {"checked": False, "reason": "no HyperFrames font cache yet (build once)"}
-    strings = _texts([b["visual"] for b in lesson["beats"]], []) + [b["narration"] for b in lesson["beats"]]
+    strings = screen_strings(lesson)
     chars = {unicodedata.normalize("NFC", c) for s in strings for c in unicodedata.normalize("NFC", s)} - SAFE
     missing = {name: sorted(c for c in chars if ord(c) not in cmap) for name, cmap in fonts.items()}
     return {"checked": True, "missing": {k: v for k, v in missing.items() if v}}

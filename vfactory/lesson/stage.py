@@ -101,9 +101,12 @@ def _icon_at(key: str, x: float, y: float, s: float, c: str, gid: str = "") -> s
     return f'<g transform="translate({x:.1f},{y:.1f})"><g{idattr}>{art}</g></g>'
 
 
-def _sign(x, y, w, h, fill, text, fs, color="#FFFFFF") -> str:
+def _sign(x, y, w, h, fill, text, fs, color="#FFFFFF", tid="", zones=None) -> str:
+    """A shop sign (bảng hiệu). Its words are a text zone: they fade while a speech bubble covers them."""
+    if zones is not None and tid:
+        zones.append((tid, x, y, x + w, y + h))
     return (_r(x, y, w, h, fill, h * 0.18, LINE, 3) +
-            f'<text x="{x + w / 2:.1f}" y="{y + h / 2 + fs * 0.36:.1f}" text-anchor="middle" font-family="Inter" font-weight="800" '
+            f'<text id="{tid}" x="{x + w / 2:.1f}" y="{y + h / 2 + fs * 0.36:.1f}" text-anchor="middle" font-family="Inter" font-weight="800" '
             f'font-size="{fs}" fill="{color}" letter-spacing="2">{E(text)}</text>')
 
 
@@ -157,9 +160,10 @@ def set_street(sid, W, H, fy, dur, u):
         m.append(_r(x + hw * 0.1, base - 0.085 * H, hw * 0.76, 0.085 * H, shade(c, 0.1), 3, shade(c, 0.35), 2.5))
         m.append("".join(f'<path d="M{x + hw * 0.1:.0f} {base - 0.085 * H + k * 0.017 * H:.0f} L{x + hw * 0.86:.0f} {base - 0.085 * H + k * 0.017 * H:.0f}" '
                          f'stroke="{shade(c, .3)}" stroke-width="2"/>' for k in range(1, 5)))
-    fs = max(36, round(0.045 * H))
-    m.append(_sign(0.03 * W + 1 * hw, base - 0.28 * H, hw * 0.75, fs * 1.6, "#E5554F", "PHỞ", fs))
-    m.append(_sign(-0.01 * W + 4 * hw, base - 0.3 * H, hw * 0.88, fs * 1.6, "#3E8E7E", "CÀ PHÊ", fs))
+    fs = max(36, round(0.045 * u))
+    zones: list = []
+    m.append(_sign(-0.03 * W + 1.12 * hw, base - 0.27 * H, hw * 0.73, fs * 1.6, "#E5554F", "PHỞ", fs, tid=f"{sid}-z0", zones=zones))
+    m.append(_sign(-0.03 * W + 3.06 * hw, base - 0.29 * H, hw * 0.88, fs * 1.6, "#3E8E7E", "CÀ PHÊ", fs, tid=f"{sid}-z1", zones=zones))
     # power lines
     m.append(f'<path d="M0 {0.2 * H:.0f} Q{W * 0.5:.0f} {0.3 * H:.0f} {W:.0f} {0.18 * H:.0f} M0 {0.24 * H:.0f} Q{W * 0.45:.0f} {0.34 * H:.0f} {W:.0f} {0.23 * H:.0f}" '
              f'fill="none" stroke="{LINE}" stroke-width="2.5" opacity="0.55"/>')
@@ -173,11 +177,11 @@ def set_street(sid, W, H, fy, dur, u):
     m.append(_r(0, fy - 0.03 * H, W, 0.014 * H, "#D9C7AC", 0, LINE, 2))
     m.append("".join(f'<path d="M{x:.0f} {fy - 0.016 * H:.0f} L{x - 0.03 * W:.0f} {H:.0f}" stroke="#D9C7AC" stroke-width="3"/>' for x in [W * k / 7 for k in range(1, 8)]))
     # a tree at the edge
-    tx = W * 0.93
+    tx = W * 0.965
     m.append(_r(tx - 0.012 * W, fy - 0.3 * H, 0.024 * W, 0.29 * H, "#A8744F", 6, LINE, 3))
     m.append("".join(f'<circle cx="{tx + dx * u:.0f}" cy="{fy - 0.36 * H + dy * u:.0f}" r="{r * u:.0f}" fill="#9FD3A8" stroke="{LINE}" stroke-width="3"/>'
-                     for dx, dy, r in ((-0.07, 0.02, 0.07), (0.05, 0.03, 0.065), (0, -0.05, 0.08))))
-    return "".join(m), tw
+                     for dx, dy, r in ((-0.06, 0.02, 0.06), (0.05, 0.03, 0.06), (0, -0.045, 0.07))))
+    return "".join(m), tw, zones
 
 
 def set_office(sid, W, H, fy, dur, u):
@@ -209,7 +213,7 @@ def set_office(sid, W, H, fy, dur, u):
     m.append(_icon_at("tea", dx0 + dw * 0.66, dy - s * 0.62, s * 0.6, "#D2643F"))
     m.append(_icon_at("sprout", W * 0.47, fy - u * 0.2, u * 0.16, "#3E8E7E"))
     m.append(_r(W * 0.47 + u * 0.035, fy - u * 0.07, u * 0.09, u * 0.07, "#E77A5F", 6, LINE, 3))
-    return "".join(m), tw
+    return "".join(m), tw, []
 
 
 def set_cafe(sid, W, H, fy, dur, u):
@@ -223,12 +227,14 @@ def set_cafe(sid, W, H, fy, dur, u):
     m.append("".join(f'<path d="M0 {y:.0f} L{W:.0f} {y:.0f}" stroke="#A9D6C0" stroke-width="2"/>' for y in [ty + k * step for k in range(int((fy - ty) / step) + 1)]))
     m.append(_r(0, ty - 8, W, 12, "#FFFFFF", 0, LINE, 2))
     # menu board
-    bx, by, bw, bh = W * 0.6, H * 0.08, W * 0.32, H * 0.3
-    fs = max(40, round(0.055 * H))
-    fs2 = max(36, round(0.036 * H))
+    fs = max(40, round(0.055 * u))
+    fs2 = max(36, round(0.036 * u))
+    bw, bh = max(W * 0.3, fs2 * 9.5), u * 0.21
+    bx, by = min(W * 0.6, W * 0.97 - bw), H * 0.05
     m.append(_r(bx - 10, by - 10, bw + 20, bh + 20, "#A8744F", 10, LINE, 3) + _r(bx, by, bw, bh, "#2F5D50", 6))
-    m.append(f'<text x="{bx + bw / 2:.0f}" y="{by + bh * 0.42:.0f}" text-anchor="middle" font-family="Inter" font-weight="800" font-size="{fs}" fill="#FFF7E8">CÀ PHÊ</text>')
-    m.append(f'<text x="{bx + bw / 2:.0f}" y="{by + bh * 0.78:.0f}" text-anchor="middle" font-family="Inter" font-weight="600" font-size="{fs2}" fill="#FBE3A1">sữa đá · đen đá</text>')
+    m.append(f'<g id="{sid}-z0"><text x="{bx + bw / 2:.0f}" y="{by + bh * 0.46:.0f}" text-anchor="middle" font-family="Inter" font-weight="800" font-size="{fs}" fill="#FFF7E8">CÀ PHÊ</text>'
+             f'<text x="{bx + bw / 2:.0f}" y="{by + bh * 0.82:.0f}" text-anchor="middle" font-family="Inter" font-weight="600" font-size="{fs2}" fill="#FBE3A1">sữa đá · đen đá</text></g>')
+    zones = [(f"{sid}-z0", bx, by, bx + bw, by + bh)]
     # two pendant lamps that sway a little
     for i, lx in enumerate((W * 0.22, W * 0.44)):
         m.append(f'<g transform="translate({lx:.0f},0)"><g id="{sid}-lp{i}"><path d="M0 0 L0 {H * 0.14:.0f}" stroke="{LINE}" stroke-width="3"/>'
@@ -244,18 +250,19 @@ def set_cafe(sid, W, H, fy, dur, u):
     m.append(_r(tx - tw_ / 2, th, tw_, 0.022 * H, "#C99A6B", 6, LINE, 3))
     m.append(f'<path d="M{tx - tw_ * 0.38:.0f} {th + 0.02 * H:.0f} L{tx - tw_ * 0.44:.0f} {fy - 0.01 * H:.0f} M{tx + tw_ * 0.38:.0f} {th + 0.02 * H:.0f} L{tx + tw_ * 0.44:.0f} {fy - 0.01 * H:.0f}" '
              f'stroke="#A8744F" stroke-width="8" stroke-linecap="round"/>')
-    s = u * 0.12
-    m.append(_icon_at("coffee", tx - s * 0.5, th - s * 0.95, s, "#8A5A2B"))
-    # dripping drops (the phin): a drop falls every ~0.8 s
+    s = u * 0.13
+    # cà phê phin: the filter sits on the glass and drips into it, a drop every ~0.8 s; an iced glass beside it
+    m.append(_icon_at("phin", tx - s * 0.95, th - s * 0.95, s, "#8A5A2B"))
+    m.append(_icon_at("coffee", tx + s * 0.02, th - s * 0.82, s * 0.85, "#8A5A2B"))
     for k in range(2):
         did = f"{sid}-dr{k}"
-        m.append(f'<circle id="{did}" cx="{tx + s * 0.06:.0f}" cy="{th - s * 1.05:.0f}" r="{u * 0.006:.1f}" fill="#6B3E1E" opacity="0"/>')
-        tw.append(f'tl.fromTo("#{did}", {{ y: 0, opacity: 0.9 }}, {{ y: {s * 0.3:.0f}, opacity: 0, duration: 0.8, ease: "power2.in", '
+        m.append(f'<circle id="{did}" cx="{tx - s * 0.45:.0f}" cy="{th - s * 0.95 + s * 0.6:.0f}" r="{u * 0.005:.1f}" fill="#6B3E1E" opacity="0"/>')
+        tw.append(f'tl.fromTo("#{did}", {{ y: 0, opacity: 0.9 }}, {{ y: {s * 0.18:.0f}, opacity: 0, duration: 0.8, ease: "power2.in", '
                   f'repeat: {max(0, int(dur / 1.6) - 1)}, repeatDelay: 0.8 }}, {0.4 + 0.8 * k:.2f});')
     for j in range(3):
         m.append(_stool(W * 0.93, fy - j * u * 0.022, u * 0.0022, "#E5554F" if j % 2 == 0 else "#4A7DBA"))
     m.append(_icon_at("sprout", W * 0.02, fy - u * 0.2, u * 0.14, "#3E8E7E"))
-    return "".join(m), tw
+    return "".join(m), tw, zones
 
 
 def set_room(sid, W, H, fy, dur, u):
@@ -290,7 +297,7 @@ def set_room(sid, W, H, fy, dur, u):
                      for a in (0, 120, 240))
     m.append(f'<g transform="translate({fx:.0f},{fy0:.0f})"><g id="{sid}-fan">{blades}<circle r="{fr * 0.14:.0f}" fill="#FFFFFF" stroke="{LINE}" stroke-width="3"/></g></g>')
     tw.append(_ft(f"#{sid}-fan", 'rotation: 0, svgOrigin: "0 0"', f'rotation: {dur * 400:.0f}, svgOrigin: "0 0", duration: {dur:.2f}, ease: "none"', 0))
-    return "".join(m), tw
+    return "".join(m), tw, []
 
 
 def set_phone(sid, W, H, fy, dur, u):
@@ -299,7 +306,7 @@ def set_phone(sid, W, H, fy, dur, u):
     m.append("".join(f'<circle cx="{W * x:.0f}" cy="{H * y:.0f}" r="{u * r:.0f}" fill="#CBE7DA"/>' for x, y, r in
                      ((0.1, 0.18, 0.12), (0.38, 0.86, 0.16), (0.95, 0.1, 0.1), (0.5, 0.2, 0.05))))
     m.append(_r(0, fy, W, H, "#CFE6DA"))
-    ph = H * 0.8
+    ph = min(H * 0.8, W * 0.84)
     pw = ph * 0.5
     px, py = W * 0.72 - pw / 2, fy - ph - 0.01 * H
     m.append(_r(px, py, pw, ph, "#2E2A35", pw * 0.12, LINE, 4))
@@ -318,7 +325,7 @@ def set_phone(sid, W, H, fy, dur, u):
     m.append(f'<g transform="translate({hx:.0f},{hy:.0f})"><g id="{sid}-hrt">{_icon_at("heart", -hs / 2, -hs / 2, hs, "#E5554F")}</g></g>')
     tw.append(f'tl.fromTo("#{sid}-hrt", {{ scale: 0.85, svgOrigin: "0 0" }}, {{ scale: 1.15, svgOrigin: "0 0", duration: 0.6, ease: "sine.inOut", '
               f'repeat: {max(0, int(dur / 0.6))}, yoyo: true }}, 0);')
-    return "".join(m), tw
+    return "".join(m), tw, []
 
 
 def set_plain(sid, W, H, fy, dur, u):
@@ -333,7 +340,7 @@ def set_plain(sid, W, H, fy, dur, u):
         c = P[["mint", "pink", "sky", "lilac", "peach"][k % 5]]
         m.append(f'<circle id="{cid}" cx="{x:.0f}" cy="{y:.0f}" r="{u * rng.uniform(0.008, 0.016):.1f}" fill="{c}"/>')
         tw.append(f'tl.fromTo("#{cid}", {{ y: 0 }}, {{ y: {-u * 0.03:.0f}, duration: {2 + k % 3 * 0.5:.2f}, ease: "sine.inOut", repeat: {max(0, int(dur / 2))}, yoyo: true }}, {0.2 * k:.2f});')
-    return "".join(m), tw
+    return "".join(m), tw, []
 
 
 SET_FN = {"street": set_street, "office": set_office, "cafe": set_cafe, "room": set_room, "phone": set_phone, "plain": set_plain}
@@ -347,7 +354,7 @@ def floor_y(L) -> float:
 
 def char_scale(L, look: dict) -> float:
     k = 0.74 if C.norm_look(look)["age"] == "child" else 1.0
-    return 0.46 * L.u / C.RIG_H * k
+    return (0.5 if L.w > L.h else 0.46) * L.u / C.RIG_H * k
 
 
 def default_xs(n: int) -> list[float]:
@@ -398,7 +405,7 @@ def stage(L, sid, v, dur, cue):
     xs = default_xs(len(chars))
     tw, html_parts = [], []
     set_name = v.get("set", "plain") if v.get("set") in SETS else "plain"
-    set_svg, set_tw = SET_FN[set_name](sid, W, H, fy, dur, u)
+    set_svg, set_tw, zones = SET_FN[set_name](sid, W, H, fy, dur, u)
     tw += set_tw
     tw.append(_ft(f"#{sid}-set", f'scale: 1, svgOrigin: "{W / 2:.0f} {fy:.0f}"', f'scale: 1.03, svgOrigin: "{W / 2:.0f} {fy:.0f}", duration: {dur:.2f}, ease: "none"', 0))
 
@@ -460,20 +467,26 @@ def stage(L, sid, v, dur, cue):
             e = {"t": max(0.05, t), "expression": c.get("expression"), "action": c.get("action")}
             if c.get("x") is not None:
                 e["x"] = float(c["x"]) * W
+            if c.get("toward") is not None:
+                e["toward"] = float(c["toward"]) * W
             events.append(e)
         if (ch.get("action") == "walk_in") and ch.get("x") is not None:
             events[0]["x"] = r["X"]
         spans = [b["span"] for b in bubs if b.get("who") == ch["id"] and b.get("style") != "think"]
         ch2 = {**ch, "_long_hair": r["look"]["hair"] == "long"}
+        pxs = [float(p.get("x", 0.5)) for p in v.get("props") or [] if isinstance(p, dict)]
+        point_side = (1 if sum(pxs) / len(pxs) * W >= r["X"] else -1) if pxs else None  # point at the props, else the partner
         ctw, K, xtrack = C.choreograph(r["cid"], ch2, x_px=r["X"], scale=r["scale"], W=W, dur=dur, events=events, words=words,
                                        talk_spans=spans, speech_end=speech_end, seed=7 + 13 * i, partner_side=r["side"],
-                                       extra_x=[r["tag"]] if r.get("tag") else None)
+                                       extra_x=[r["tag"]] if r.get("tag") else None, point_side=point_side)
         r["K"] = K
         tw += ctw
         if r.get("tag"):
             tw.append(_ft(r["tag"], "opacity: 0, scale: 0.6", 'opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2)"', 0.5))
 
     # props: sticker badges that pop in on their word, then float
+    ZK = C.Keys()
+    prop_hidden: set[str] = set()
     props_svg = []
     for i, p in enumerate(v.get("props") or []):
         key = L.icon_of(p)
@@ -489,6 +502,10 @@ def stage(L, sid, v, dur, cue):
                          f'<circle cx="0" cy="0" r="{s * 0.56:.1f}" fill="{disc}" stroke="{C.INK}" stroke-width="3"/>'
                          f'<g transform="translate({-s * 0.39:.1f},{-s * 0.39:.1f})">{art}</g></g></g></g>')
         t = cue(p["cue"], 0.4 + 0.3 * i) if p.get("cue") else 0.4 + 0.3 * i
+        for zid, zx0, zy0, zx1, zy1 in zones:  # a prop that lands on set lettering hides it
+            if zx0 < px_ + s * 0.62 and zx1 > px_ - s * 0.62 and zy0 < py_ + s * 0.62 and zy1 > py_ - s * 0.62:
+                ZK.add(f"#{zid}", "opacity", t, 0, 0.2, "power2.out")
+                prop_hidden.add(zid)
         tw.append(_ft(f"#{pid}", 'opacity: 0, scale: 0.2, rotation: -14, svgOrigin: "0 0"',
                       'opacity: 1, scale: 1, rotation: 0, svgOrigin: "0 0", duration: 0.5, ease: "back.out(2.2)"', t))
         reps = max(0, int((dur - t) / 1.4) - 1)
@@ -536,8 +553,16 @@ def stage(L, sid, v, dur, cue):
             f'font-size:{fsb}px;line-height:1.22;font-weight:800;color:{PALETTE["ink"]};text-shadow:none;text-wrap:balance;">{E(b["text"])}</div>'
             f'{tail_html}</div>')
         tw.append(_ft(f"#{bid}", "opacity: 0, scale: 0.4, y: 20", 'opacity: 1, scale: 1, y: 0, duration: 0.42, ease: "back.out(2)"', b["t"]))
+        bh_ = lines * fsb * 1.22 + 2 * L.px(0.018) + 8
+        for zid, zx0, zy0, zx1, zy1 in zones:  # set lettering under the bubble steps back: never words over words
+            if zid in prop_hidden:
+                continue
+            if zx0 < left + bw_ + 10 and zx1 > left - 10 and zy0 < bottom + 10 and zy1 > bottom - bh_ - 10:
+                ZK.add(f"#{zid}", "opacity", b["t"], 0, 0.2, "power2.out")
+                ZK.add(f"#{zid}", "opacity", b["end"], 1, 0.3, "power2.in")
         tw.append(_ft(f"#{bid}", "opacity: 1, scale: 1", 'opacity: 0, scale: 0.85, duration: 0.2, ease: "power2.in"', b["end"] - 0.2, later=True))
 
+    tw += ZK.tweens()
     cap_html = ""
     if v.get("caption"):
         speaker_left = any(rigs.get(b.get("who"), {}).get("X", W) < W * 0.5 for b in bubs)

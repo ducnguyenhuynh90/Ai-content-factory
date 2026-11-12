@@ -113,7 +113,7 @@ def _hair_front(lk) -> str:
     hi = _darker(c, -0.25)
     if h in ("bob", "long"):  # straight fringe, sides down past the ears
         return (f'<path d="M-68 -50 C-74 -128 74 -128 68 -50 L60 -50 C58 -70 52 -80 42 -84 L-42 -84 C-52 -80 -58 -70 -60 -50 Z" fill="{c}" {_st()}/>'
-                f'<path d="M-30 -112 Q-10 -120 12 -116" fill="none" stroke="{hi}" stroke-width="5" stroke-linecap="round" opacity="0.7"/>')
+                f'<path d="M-36 -100 Q-24 -110 -10 -112" fill="none" stroke="{hi}" stroke-width="4.5" stroke-linecap="round" opacity="0.45"/>')
     if h in ("bun", "ponytail"):  # pulled back, middle part
         return (f'<path d="M-66 -58 C-70 -124 70 -124 66 -58 C60 -80 36 -100 0 -98 C-36 -100 -60 -80 -66 -58 Z" fill="{c}" {_st()}/>'
                 f'<path d="M0 -118 L0 -100" stroke="{_darker(c, .35)}" stroke-width="3"/>')
@@ -156,11 +156,11 @@ def _eyes(expr: str, dx: float) -> str:
         elif expr == "surprised":
             out.append(f'<ellipse cx="{x}" cy="0" rx="7.5" ry="9.5" fill="{INK}"/><circle cx="{x + 2.5}" cy="-3.5" r="2.8" fill="#fff"/>')
         elif expr == "thinking":
-            out.append(f'<ellipse cx="{x + 3}" cy="-3" rx="5.2" ry="7" fill="{INK}"/><circle cx="{x + 5}" cy="-6" r="1.9" fill="#fff"/>')
+            out.append(f'<ellipse cx="{x + 3}" cy="-3" rx="6" ry="7.8" fill="{INK}"/><circle cx="{x + 5.2}" cy="-6.2" r="2.2" fill="#fff"/>')
         elif expr == "worried":
-            out.append(f'<ellipse cx="{x}" cy="1" rx="5" ry="6.6" fill="{INK}"/><circle cx="{x + 1.8}" cy="-1.5" r="1.8" fill="#fff"/>')
+            out.append(f'<ellipse cx="{x}" cy="1" rx="5.8" ry="7.4" fill="{INK}"/><circle cx="{x + 2}" cy="-1.8" r="2.2" fill="#fff"/>')
         else:  # neutral
-            out.append(f'<ellipse cx="{x}" cy="0" rx="5.6" ry="7.6" fill="{INK}"/><circle cx="{x + 2}" cy="-3" r="2" fill="#fff"/>')
+            out.append(f'<ellipse cx="{x}" cy="0" rx="6.4" ry="8.4" fill="{INK}"/><circle cx="{x + 2.2}" cy="-3.2" r="2.4" fill="#fff"/>')
     return "".join(out)
 
 
@@ -409,7 +409,7 @@ def merge_spans(spans: list[tuple[float, float]]) -> list[tuple[float, float]]:
 
 def choreograph(cid: str, ch: dict, *, x_px: float, scale: float, W: float, dur: float, events: list[dict],
                 words: list[dict], talk_spans: list[tuple[float, float]], speech_end: float, seed: int = 1,
-                partner_side: int = 1, extra_x: list[str] | None = None) -> tuple[list[str], "Keys", list]:
+                partner_side: int = 1, extra_x: list[str] | None = None, point_side: int | None = None) -> tuple[list[str], "Keys", list]:
     """Turn a character's timeline of events ({t, expression?, action?, x?}) into tweens. Returns (tweens, keys,
     x track) where the x track is [(t, offset px, duration)] for anything that follows the character (its name tag).
     `partner_side` is +1 when the rest of the stage lies to the right (point and explaining hands go that way)."""
@@ -478,7 +478,7 @@ def choreograph(cid: str, ch: dict, *, x_px: float, scale: float, W: float, dur:
         base_arms(t0 + d, 0.25)
         return t0 + d
 
-    def gesture(t, act):
+    def gesture(t, act, toward=None):
         g = GESTURES[act]
         t = max(t, state["busy"])
         end = t + g
@@ -493,12 +493,15 @@ def choreograph(cid: str, ch: dict, *, x_px: float, scale: float, W: float, dur:
                 k += 1
             K.add(f"#{cid}-{fore}", "rotation", end - 0.4, FORE_REST[side_arm], 0.25, "sine.inOut")
         elif act == "point":
-            if side_arm == "R":
+            ps = point_side or partner_side
+            if toward is not None:
+                ps = 1 if toward >= x_px + state["x"] else -1
+            if ps > 0:
                 _arms(K, cid, t, {"armR": -96, "foreR": -6}, 0.35, "back.out(1.8)")
             else:
                 _arms(K, cid, t, {"armL": 96, "foreL": 6}, 0.35, "back.out(1.8)")
             for sel in head_targets:
-                K.add(sel, "rotation", t, 5 * partner_side, 0.35)
+                K.add(sel, "rotation", t, 5 * ps, 0.35)
                 K.add(sel, "rotation", end - 0.3, 0, 0.35)
         elif act == "shrug":
             _arms(K, cid, t, {"armL": 42, "foreL": 80, "armR": -42, "foreR": -80}, 0.3, "back.out(1.6)")
@@ -594,7 +597,7 @@ def choreograph(cid: str, ch: dict, *, x_px: float, scale: float, W: float, dur:
         elif a == "walk_out":
             walk(t, exit_side)
         elif a in GESTURES:
-            gesture(t, a)
+            gesture(t, a, float(e["toward"]) if e.get("toward") is not None else None)
         if a in ("idle", "think") and state["activity"] != "talk":
             pass
     if talk_from is not None:

@@ -652,14 +652,13 @@ def shots(L, sid, v, dur, cue):
 
 GENERATORS["shots"] = shots
 
-from . import stage  # noqa: E402,F401  (rigged characters on a sticker set; registers itself in GENERATORS)
-
 
 # ---------------------------------------------------------------- transitions between beats
 
 TRANSITIONS = ("whip", "zoom", "circle", "slide", "cut")
 # how long the outgoing scene stays on screen after the boundary (its host is extended by this much)
-OVERLAP = {"slide": 0.5, "whip": 0.1, "zoom": 0.25, "circle": 0.62, "cut": 0.0}
+OVERLAP = {"slide": 0.58, "whip": 0.44, "zoom": 0.25, "circle": 0.62, "cut": 0.0}
+SLIDE_S, WHIP_S = 0.56, 0.42
 
 
 def transition_of(beat: dict, i: int, style: str = "dark") -> str | None:
@@ -675,10 +674,11 @@ def transition_of(beat: dict, i: int, style: str = "dark") -> str | None:
 
 def enter_tweens(L: Look, sid: str, kind: str, at: list | None = None, sel: str | None = None) -> list[str]:
     sel = sel or f"#{sid}-tx"
-    if kind == "slide":  # a page slides in from the right while the last one slides out to the left
-        return [_ft(sel, f"x: {L.w}", 'x: 0, duration: 0.55, ease: "power2.inOut"', 0)]
-    if kind == "whip":  # a fast pan with motion blur, settling hard
-        return [_ft(sel, f'x: {L.w * 0.55:.0f}, opacity: 0, filter: "blur(18px)"', 'x: 0, opacity: 1, filter: "blur(0px)", duration: 0.42, ease: "expo.out"', 0)]
+    if kind == "slide":  # a page slides in from the right, pushing the last one out to the left in lockstep
+        return [_ft(sel, f"x: {L.w}", f'x: 0, duration: {SLIDE_S}, ease: "power2.inOut"', 0)]
+    if kind == "whip":  # a fast pan: both pictures rush left together, blurred at full speed, sharp at rest
+        return [_ft(sel, f'x: {L.w}, filter: "blur(22px)"', f'x: 0, duration: {WHIP_S}, ease: "expo.inOut"', 0),
+                _ft(sel, 'filter: "blur(22px)"', f'filter: "blur(0px)", duration: {WHIP_S / 2:.2f}, ease: "power2.in"', WHIP_S / 2, later=True)]
     if kind == "zoom":  # through the last picture into this one
         return [_ft(sel, 'scale: 0.72, opacity: 0, transformOrigin: "50% 50%"', 'scale: 1, opacity: 1, transformOrigin: "50% 50%", duration: 0.5, ease: "power3.out"', 0)]
     if kind == "circle":  # an iris opening on the new picture
@@ -691,10 +691,10 @@ def enter_tweens(L: Look, sid: str, kind: str, at: list | None = None, sel: str 
 def exit_tweens(L: Look, sid: str, kind: str, dur: float, sel: str | None = None) -> list[str]:
     sel = sel or f"#{sid}-tx"
     if kind == "slide":
-        return [_ft(sel, "x: 0", f'x: {-L.w}, duration: 0.55, ease: "power2.inOut"', dur - 0.05, later=True)]
+        return [_ft(sel, "x: 0", f'x: {-L.w}, duration: {SLIDE_S}, ease: "power2.inOut"', dur, later=True)]
     if kind == "whip":
-        return [_ft(sel, 'x: 0, opacity: 1, filter: "blur(0px)"', f'x: {-L.w * 0.55:.0f}, opacity: 0, filter: "blur(18px)", duration: 0.22, ease: "power3.in"',
-                    dur - 0.14, later=True)]
+        return [_ft(sel, "x: 0", f'x: {-L.w}, duration: {WHIP_S}, ease: "expo.inOut"', dur, later=True),
+                _ft(sel, 'filter: "blur(0px)"', f'filter: "blur(22px)", duration: {WHIP_S / 2:.2f}, ease: "power2.out"', dur, later=True)]
     if kind == "zoom":
         return [_ft(sel, 'scale: 1, opacity: 1, transformOrigin: "50% 50%"', 'scale: 2.4, opacity: 0, transformOrigin: "50% 50%", duration: 0.42, ease: "power2.in"',
                     dur - 0.2, later=True)]

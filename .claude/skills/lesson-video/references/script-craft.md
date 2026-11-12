@@ -104,6 +104,29 @@ whole film, and where each picture stops being true. Register them once:
   board per chapter with `board` (the camera travels between regions; the recap pulls back to the whole board).
 - Text a viewer must read is ≥ 36 px at 1080 (the engine's floor); check `gate/phone.jpg` (480 px wide).
 
+## 3d. Story scenes with characters (`"style": "sticker"`, `stage`)
+
+The everyday thread of a story (a fictional Vietnamese protagonist in 2026) is acted on a `stage`; the real story and
+the framework stay in the explainer scenes (icons, boards, scenarios), drawn as stickers too.
+
+- **Cast once, by id.** `meta.cast: [{"id": "linh", "name": "Linh", "tag": "Linh · 27 · kế toán", "role": "…",
+  "look": {"skin": "#F1C9A5", "hair": "bob", "hair_color": "#2B2321", "shirt": "#E77A5F", "pants": "#3D4B63"}}]`.
+  Beats say `{"id": "linh"}`; lint fails on an unknown id or a look that changes between beats. Real people get the
+  generic figure + `real: true` (a name tag), never a likeness.
+- **One verb per cue.** A character's state changes on a word: `"cues": [{"cue": "nhưng", "expression": "surprised",
+  "action": "jump"}]`. Expressions: neutral, happy, worried, surprised, thinking, sad. Actions: idle, talk, wave, point,
+  shrug, nod, facepalm, think, jump, sit, stand, walk_in, walk_out (and `x` on a cue walks there).
+- **The bubble is said aloud.** Put the bubble's words in the narration ("Linh thở dài: tháng này lỗ rồi anh ơi.");
+  the speaker's mouth moves on exactly those words. One short line per bubble (≤ 60 chars, lint warns); several in
+  turn with `bubbles`. `style: "think"` draws a thought cloud.
+- **Props land on their word** (`"props": [{"icon": "receipt", "x": 0.66, "y": 0.4, "cue": "hóa đơn"}]`); keep them
+  off the characters (x away from theirs) and in the upper half when a bubble is on the same side.
+- **Composition:** 1-3 characters, x ≥ 0.16 apart (lint warns), heads clear of the top ~30 % (bubbles live there),
+  the bottom band belongs to captions. A `caption` pill ("Q.7 · 7 giờ sáng") sets time and place.
+- **Transitions carry the cut:** `whip` for a jump in place or time, `zoom` into a screen or an object (a match cut),
+  `circle` to open on a reveal, `slide` to turn the page to the next step, `cut` for a reaction. Sticker films
+  alternate slide / whip by default; name the one the story needs.
+
 ## 4. Facts
 
 - Primary first (the paper, the letter, the filing, the person's book); two sources for anything central.
