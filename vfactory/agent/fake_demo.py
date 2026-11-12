@@ -8,7 +8,9 @@ from __future__ import annotations
 
 import copy
 
-END = "Còn bạn, bạn muốn tập sau về khung tư duy nào? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau."
+from .config import SIGN_OFF
+
+END = SIGN_OFF  # the cached series sign-off
 SERIES = "Khung tư duy · Tập mới"
 
 IDEA = {
@@ -94,7 +96,7 @@ SPINE = {
 
 CAST = [{"id": "linh", "name": "Linh", "role": "protagonist",
          "look": {"skin": "#F1C9A5", "hair": "bob", "hair_color": "#2B2321", "shirt": "#E77A5F", "pants": "#3D4B63"}},
-        {"id": "musk", "name": "Elon Musk", "role": "real person", "real": True, "name_tag": "Elon Musk",
+        {"id": "musk", "name": "Elon Musk", "role": "real person", "real": True, "tag": "Elon Musk",
          "look": {"shirt": "#5B6B7F"}}]
 
 
@@ -132,7 +134,7 @@ BEATS = [
      "narration": "Ai cũng bảo: mở quán là phải tốn rất nhiều tiền, giá xưa nay vẫn thế. Linh tin vậy, nên cô cứ hoãn mãi.",
      "visual": stage("cafe", expression="worried", action="shrug",
                      cues=[{"cue": "hoãn", "expression": "sad", "action": "sit"}],
-                     bubble={"who": "linh", "text": "Chắc mình chưa đủ tiền", "cue": "linh tin"})},
+                     bubble={"who": "linh", "text": "Phải tốn rất nhiều tiền", "cue": "linh tin"})},
     {"id": "b03", "act": "complication", "spine": "vi_vay",
      "narration": "Vì vậy cô so giá với các quán khác. Mỗi lần so, con số lại cao hơn. Làm giống người khác, chỉ sửa chút ít.",
      "visual": {"type": "icon", "icon": "packet", "concept": "loi_mon", "kicker": "Lối mòn",
@@ -172,7 +174,7 @@ BEATS = [
     {"id": "b12", "act": "question", "spine": "va_gio",
      "narration": "Giờ thử nhé. Một khóa học báo giá rất cao. Câu hỏi từ gốc đầu tiên bạn nên hỏi là gì?",
      "visual": {"type": "question", "question": "Khóa học báo giá rất cao. Hỏi gì trước?",
-                "choices": ["A. Ai cũng học, chắc đáng", "B. Khóa này gồm những gì?", "C. Có giảm giá không?"],
+                "choices": ["Ai cũng học, chắc đáng", "Khóa này gồm những gì?", "Có giảm giá không?"],
                 "answer": "B", "think_seconds": 5}},
     {"id": "b13", "act": "recap", "spine": "va_gio",
      "narration": "Đáp án là B. Ba việc: tách tới nguyên liệu, tách luật khỏi thói quen, lắp lại rồi để thực tế chấm.",
@@ -199,7 +201,6 @@ LESSON = {
              "topic": "books", "angle": "concept", "lang": "vi", "style": "sticker", "aspect": "16:9",
              "target_minutes": [2, 6], "voice": "omnivoice:male, middle-aged, very low pitch", "voice_seed": 99,
              "speed": 0.88, "music": "chill", "captions": True,
-             "look": {"primary_color": "#E8B06A", "secondary_color": "#12100E"},
              "disclaimer": "Nội dung giáo dục; nhân vật hư cấu, câu chuyện thật kể lại từ nguồn công khai.",
              "learning_goals": ["Tách một cái giá thường ngày theo ba bước"],
              "cast": CAST,

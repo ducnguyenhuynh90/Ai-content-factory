@@ -4,6 +4,8 @@ All state lives in a run directory (default runs/<slug>/):
 
     run.json            topic, story hint, per-stage status/attempts/provider, config snapshot (no keys)
     notes.md, notes/, urls.txt   optional human input (read by idea + research; treated as data)
+    brief.toml, brief.md         optional owner's production constraints (length, aspect, kicker, voice, end card,
+                                 must-keep notes): INSTRUCTIONS for every writing stage, also set by CLI flags
     idea.json research.json research.md spine.json beats.json
     lesson.json script.md        the lesson (stage output) and lint's approval view
     critique.json build.json gate.json fix.json package.json package.md
@@ -92,7 +94,9 @@ def system_prompt(profile: str = "full") -> str:
                             "phin", "cart", "chat", "heart") if k in v["icons"]]
     return render(prompt("system_compact" if profile == "compact" else "system"),
                   expressions=", ".join(v["expressions"]), actions=", ".join(v["actions"]), sets="|".join(v["sets"]),
-                  transitions="|".join(v["transitions"]), props=", ".join(everyday) or "phone, coffee")
+                  transitions="|".join(v["transitions"]), props=", ".join(everyday) or "phone, coffee",
+                  look_keys=", ".join(v["look_keys"]), hairs="|".join(v["hairs"]), outfits="|".join(v["outfits"]),
+                  ages="|".join(v["ages"]))
 
 
 # ------------------------------------------------------------------------------------------------- lint (engine CLI)
@@ -173,7 +177,8 @@ class Pipeline:
     # ---- creation / persistence
     @classmethod
     def create(cls, topic: str, cfg: C.Config | None = None, *, story_hint: str = "", slug: str | None = None,
-               runs_dir: str | Path | None = None, series: str | None = None, **kw) -> "Pipeline":
+               runs_dir: str | Path | None = None, series: str | None = None, brief: dict | None = None,
+               **kw) -> "Pipeline":
         cfg = cfg or C.Config()
         root = Path(runs_dir or cfg.get("runs_dir"))
         d = root / (slug or slugify(topic))
@@ -184,8 +189,57 @@ class Pipeline:
                        "series": series or cfg.get("series", "Khung tư duy · Tập mới"), "stages": {}}
         else:  # an existing run: keep its topic unless the caller changes it explicitly
             p.state.setdefault("stages", {})
+        if brief:
+            p.set_brief(brief, save=False)
         p.save()
         return p
+
+    # ---- the owner's brief (production constraints: instructions, not data)
+    def set_brief(self, brief: dict, save: bool = True) -> None:
+        """Store CLI brief flags in run.json (they win over brief.toml/brief.md and survive resume)."""
+        cur = dict(self.state.get("brief") or {})
+        new = C.normalize_brief(brief)
+        if "must_keep" in new:
+            new["must_keep"] = list(dict.fromkeys(cur.get("must_keep", []) + new["must_keep"]))
+        cur.update(new)
+        self.state["brief"] = cur
+        if save:
+            self.save()
+
+    def brief(self) -> dict:
+        """Series defaults < brief.toml/brief.md < CLI flags. `owner_set` lists the keys the owner gave (enforced)."""
+        series = self.state.get("series") or self.cfg.get("series", "Khung tư duy · Tập mới")
+        b = {"target_minutes": [4, 6], "aspect": "16:9", "kicker": series, "voice": C.DEFAULT_VOICE,
+             "end_narration": self.cfg.get("end_narration") or C.SIGN_OFF, "end_ask": C.DEFAULT_ASK,
+             "end_ask_hint": "", "must_keep": []}
+        files = C.load_brief_files(self.dir)
+        cli = self.state.get("brief") or {}
+        keep = list(dict.fromkeys(files.get("must_keep", []) + cli.get("must_keep", [])))
+        b.update(files)
+        b.update(cli)
+        b["must_keep"] = keep
+        b["owner_set"] = sorted(k for k in (set(files) | set(cli)) if k != "must_keep")
+        return b
+
+    def brief_text(self) -> str:
+        """The brief as the prompts show it: the owner's instructions for this episode."""
+        b = self.brief()
+        lo, hi = b["target_minutes"][0], b["target_minutes"][-1]
+        syl = (round(lo * 60 * rules.FILM_SYL_PER_MIN / 60), round(hi * 60 * rules.FILM_SYL_PER_MIN / 60))
+        lines = [f"- Length: {lo}–{hi} minutes. Plan on about {syl[0]}–{syl[1]} Vietnamese syllables of narration in "
+                 f"total (measured: the films run ~{rules.FILM_SYL_PER_MIN:.0f} syllables per minute at speed 0.88 once "
+                 "pauses, the title sting and the question are counted).",
+                 f"- Aspect: {b['aspect']}.",
+                 f"- Series kicker (title sting and end card): \"{b['kicker']}\".",
+                 f"- Voice (meta.voice): \"{b['voice']}\".",
+                 f"- End-card narration, word for word (a cached voice take): \"{b['end_narration']}\".",
+                 f"- End-card ask (the one CTA): \"{b['end_ask']}\"."]
+        if b.get("end_ask_hint"):
+            lines.append(f"- End-card ask_hint: \"{b['end_ask_hint']}\".")
+        if b["must_keep"]:
+            lines.append("- Must keep (the owner's notes; follow them):")
+            lines += ["  " + ln for k in b["must_keep"] for ln in ("- " + k.strip()).splitlines()]
+        return "\n".join(lines)
 
     def save(self) -> None:
         self.state["updated"] = _now()
@@ -341,7 +395,7 @@ class Pipeline:
         return res
 
     def check_lesson(self, L: dict, research: dict | None) -> tuple[list[str], dict]:
-        errs, warns = rules.check_lesson(L, research=research, end_narration=self.cfg.get("end_narration"))
+        errs, warns = rules.check_lesson(L, research=research, brief=self.brief())
         lint = {"errors": [], "warnings": [], "story": []}
         if not errs:  # lint only a lesson that passes the cheap checks (saves a subprocess per bad draft)
             lint = self.lint(L)
@@ -356,6 +410,7 @@ class Pipeline:
         return errs, {"rules_warnings": warns, "lint": lint}
 
     def _save_lesson(self, L: dict, why: str) -> None:
+        L = rules.normalize_lesson(L)
         cur = self.path("lesson.json")
         if cur.exists():
             h = self.dir / "history"
@@ -370,33 +425,45 @@ class Pipeline:
     def stage_idea(self):
         user = render(prompt("idea"), topic=self.state["topic"], story_hint=self.state.get("story_hint") or "(none)",
                       series=self.state.get("series", ""), notes=self.notes(), icons=self.icons(),
+                      brief=self.brief_text(),
                       schema=json.dumps(schemas.IDEA, ensure_ascii=False))
         self.write("idea", self.ask_json("idea", user, schemas.IDEA, check=_check_idea))
 
     def stage_research(self):
-        user = render(prompt("research"), idea=self.read("idea"), notes=self.notes(),
+        user = render(prompt("research"), idea=self.read("idea"), notes=self.notes(), brief=self.brief_text(),
                       schema=json.dumps(schemas.RESEARCH, ensure_ascii=False))
         R = self.ask_json("research", user, schemas.RESEARCH, check=_check_research)
         self.write("research", R)
         self.path("research.md").write_text(research_markdown(R, self.state))
 
     def stage_spine(self):
+        b = self.brief()
+        lo, hi = b["target_minutes"][0] * 60, b["target_minutes"][-1] * 60
         user = render(prompt("spine"), idea=self.read("idea"), research=self.research_view("spine"),
+                      brief=self.brief_text(), seconds=f"{lo:.0f}–{hi:.0f}",
                       schema=json.dumps(schemas.SPINE_SCHEMA, ensure_ascii=False))
         research = self.read("research")
-        self.write("spine", self.ask_json("spine", user, schemas.SPINE_SCHEMA, check=lambda d: _check_spine(d, research)))
+        win = rules.length_window(b["target_minutes"])
+        self.write("spine", self.ask_json("spine", user, schemas.SPINE_SCHEMA,
+                                          check=lambda d: _check_spine(d, research, win)))
 
     def stage_beats(self):
         user = render(prompt("beats"), idea=self.read("idea"), research=self.research_view("beats"),
-                      spine=self.read("spine"), schema=json.dumps(schemas.BEATS, ensure_ascii=False))
+                      spine=self.read("spine"), brief=self.brief_text(),
+                      schema=json.dumps(schemas.BEATS, ensure_ascii=False))
         research = self.read("research")
-        self.write("beats", self.ask_json("beats", user, schemas.BEATS, check=lambda d: _check_beats(d, research)))
+        win = rules.length_window(self.brief()["target_minutes"])
+        self.write("beats", self.ask_json("beats", user, schemas.BEATS, check=lambda d: _check_beats(d, research, win)))
 
     def stage_lesson(self):
         research = self.read("research")
+        b = self.brief()
         user = render(prompt("lesson"), idea=self.read("idea"), research=self.research_view("lesson"),
                       spine=self.read("spine"), beats=self.read("beats"), series=self.state.get("series", ""),
-                      end_narration=self.cfg.get("end_narration"), icons=self.icons())
+                      brief=self.brief_text(), kicker=b["kicker"], aspect=b["aspect"], voice=b["voice"],
+                      target_minutes=json.dumps(b["target_minutes"]), end_narration=b["end_narration"],
+                      ask=b["end_ask"], ask_hint=b["end_ask_hint"] or "<three other frameworks, ' · ' separated>",
+                      icons=self.icons())
         report: dict = {}
 
         def check(L):
@@ -416,6 +483,7 @@ class Pipeline:
             L = self.read("lesson")
             chk = self.read("lesson_check") if self.path("lesson_check.json").exists() else {}
             user = render(prompt("critique"), research=self.research_view("critique"), lesson=L, notes=chk or "(none)",
+                          brief=self.brief_text(),
                           schema=json.dumps(schemas.CRITIQUE, ensure_ascii=False))
             patched: dict = {}
 
@@ -529,7 +597,7 @@ class Pipeline:
             r += 1
             L = self.read("lesson")
             user = render(prompt("fix"), round=str(r), rounds=str(n), gate=g, research=self.research_view("fix"),
-                          lesson=L, schema=json.dumps(schemas.FIX, ensure_ascii=False))
+                          lesson=L, brief=self.brief_text(), schema=json.dumps(schemas.FIX, ensure_ascii=False))
             patched: dict = {}
 
             def check(d):
@@ -564,6 +632,7 @@ class Pipeline:
         L = self.read("lesson")
         g = self.read("gate") if self.path("gate.json").exists() else {}
         user = render(prompt("package"), lesson=L, gate={k: g.get(k) for k in ("verdict", "review")} if g else "(none)",
+                      brief=self.brief_text(),
                       schema=json.dumps(schemas.PACKAGE, ensure_ascii=False))
         P = self.ask_json("package", user, schemas.PACKAGE, check=lambda d: rules.check_package(d, L))
         self.write("package", P)
@@ -627,8 +696,9 @@ def _check_research(R: dict) -> list[str]:
             e.append(f"claim {c['id']}: 'verified' is true only when a source from the human notes backs it")
         if c["certainty"] == "disputed" and c["use"] == "voice":
             e.append(f"claim {c['id']}: disputed claims are hedged or cut, never voiced as fact")
-        if c["certainty"] in ("attributed", "estimate") and c["use"] == "voice" and not re.search(
-                r"theo|được cho là|khoảng|ước tính|tương truyền|có lẽ|người ta kể|minh họa", c.get("say", ""), re.I):
+        say = c.get("say", "")
+        if c["certainty"] in ("attributed", "estimate") and c["use"] == "voice" and not (
+                rules.HEDGE_RE.search(say) or (c["certainty"] == "estimate" and re.search(r"minh họa", say, re.I))):
             e.append(f"claim {c['id']}: {c['certainty']} — its 'say' must hedge out loud (theo…, khoảng, ước tính…) "
                      "or set use to 'hedge'")
         if re.search(r"\d", c.get("say", "")):
@@ -639,7 +709,11 @@ def _check_research(R: dict) -> list[str]:
     return e
 
 
-def _check_spine(d: dict, research: dict) -> list[str]:
+def _window_msg(win: tuple[float, float]) -> str:
+    return f"aim for {win[0] / 0.9:.0f}-{win[1] / 1.05:.0f} s (the owner's target length)"
+
+
+def _check_spine(d: dict, research: dict, win: tuple[float, float] = (216.0, 378.0)) -> list[str]:
     e = []
     acts = [a["act"] for a in d["acts"]]
     if acts != list(rules.SPINE):
@@ -650,12 +724,12 @@ def _check_spine(d: dict, research: dict) -> list[str]:
             if c not in known:
                 e.append(f"act {a['act']}: unknown claim id {c!r} (use the research pack's ids)")
     total = sum(a.get("seconds", 0) for a in d["acts"])
-    if not 200 <= total <= 380:
-        e.append(f"total length {total:.0f}s: aim for 240-330 s (4-6 minutes)")
+    if not win[0] <= total <= win[1]:
+        e.append(f"total length {total:.0f}s: {_window_msg(win)}")
     return e
 
 
-def _check_beats(d: dict, research: dict) -> list[str]:
+def _check_beats(d: dict, research: dict, win: tuple[float, float] = (216.0, 378.0)) -> list[str]:
     e = []
     beats = d["beats"]
     ids = [b["id"] for b in beats]
@@ -684,8 +758,8 @@ def _check_beats(d: dict, research: dict) -> list[str]:
         if need not in [b["act"] for b in beats]:
             e.append(f"no {need!r} beat")
     total = sum(b.get("seconds", 0) for b in beats)
-    if not 200 <= total <= 380:
-        e.append(f"total {total:.0f}s: aim for 240-330 s")
+    if not win[0] <= total <= win[1]:
+        e.append(f"total {total:.0f}s: {_window_msg(win)}")
     return e
 
 

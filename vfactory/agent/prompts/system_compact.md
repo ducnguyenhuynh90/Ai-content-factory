@@ -9,10 +9,11 @@ Rules:
 - Numbers in narration as Vietnamese words, never digits; round long numbers in speech.
 - No previews, greetings, filler or calls to action; one CTA only: the end card's `ask` (a comment question).
 - Never invent facts, numbers, quotes or sources. Hedge uncertain claims out loud ("theo lời…", "khoảng") or cut them.
-- Real people are never drawn as likenesses: generic figure + name_tag.
+- Real people are never drawn as likenesses: generic figure + "tag" (name tag) in meta.cast.
 - Sticker visuals: {"type":"stage","set":"{{sets}}","characters":[{"id","x","expression","action","cues"}],
   "props":[{"icon","x","y","cue"}],"bubble":{"who","text","cue"},"caption","transition":"{{transitions}}"}.
-  expressions: {{expressions}}. actions: {{actions}}.
+  expressions: {{expressions}}. actions: {{actions}}. look keys: {{look_keys}}.
+  Bubbles quote the beat's narration. Quiz choices are bare text (no "A." prefix). No meta.look.
   Every cue is a word from that beat's narration. On-screen text is short.
 
 Reply with ONE JSON object only, no Markdown, no commentary.

@@ -6,6 +6,10 @@
   status RUN                                                       the stage table of a run
   providers [--no-network]                                         configured providers and whether they answer
 
+brief flags (the owner's production constraints; also <run>/brief.toml, <run>/brief.md; stored in run.json):
+                --minutes 4-5 --aspect 16:9 --kicker "Khung tư duy · Tập 1" --voice V --end-narration TEXT
+                --ask TEXT --ask-hint TEXT --keep NOTE (repeatable)
+
 provider flags: --config agent.toml --provider NAME --model M --base-url URL --api-key-env VAR
                 --effort low|medium|high|xhigh|max --stage STAGE=PROVIDER (repeatable)
 Stages: idea research spine beats lesson critique build gate fix package
@@ -41,6 +45,25 @@ def _provider_flags(p: argparse.ArgumentParser) -> None:
     p.add_argument("--no-vision", action="store_true", help="gate review without sending frames to the model")
     p.add_argument("--fix-rounds", type=int)
     p.add_argument("--lint-mode", choices=["auto", "strict", "shadow"])
+
+
+def _brief_flags(p: argparse.ArgumentParser) -> None:
+    g = p.add_argument_group("brief (the owner's production constraints: instructions for every writing stage)")
+    g.add_argument("--minutes", help="target length in minutes, e.g. 4-5")
+    g.add_argument("--aspect", choices=["16:9", "9:16", "4:3", "1:1"])
+    g.add_argument("--kicker", help="series kicker on the title sting and the end card")
+    g.add_argument("--voice", help="meta.voice")
+    g.add_argument("--end-narration", help="end-card narration, word for word (default: the cached sign-off)")
+    g.add_argument("--ask", help="the end card's one question for the comments")
+    g.add_argument("--ask-hint", help="the end card's hint line (e.g. three other frameworks, ' · ' separated)")
+    g.add_argument("--keep", action="append", default=[], metavar="NOTE",
+                   help="a must-keep note from the owner (repeatable)")
+
+
+def _brief(a) -> dict:
+    return C.normalize_brief({"target_minutes": a.minutes, "aspect": a.aspect, "kicker": a.kicker, "voice": a.voice,
+                              "end_narration": a.end_narration, "end_ask": a.ask, "end_ask_hint": a.ask_hint,
+                              "must_keep": a.keep})
 
 
 def _cfg(a) -> C.Config:
@@ -113,9 +136,11 @@ def main(argv=None) -> int:
     r.add_argument("--series")
     r.add_argument("--slug")
     _provider_flags(r)
+    _brief_flags(r)
     s = sub.add_parser("resume", help="continue a run where it stopped")
     s.add_argument("run")
     _provider_flags(s)
+    _brief_flags(s)
     st = sub.add_parser("status")
     st.add_argument("run")
     st.add_argument("--config")
@@ -136,9 +161,11 @@ def main(argv=None) -> int:
             return 0
         cfg = _cfg(a)
         if a.cmd == "run":
-            p = Pipeline.create(a.topic, cfg, story_hint=a.story_hint, slug=a.slug, series=a.series)
+            p = Pipeline.create(a.topic, cfg, story_hint=a.story_hint, slug=a.slug, series=a.series, brief=_brief(a))
         else:
             p = Pipeline(_run_dir(a.run, cfg), cfg)
+            if _brief(a):
+                p.set_brief(_brief(a))
         print(f"run directory: {p.dir}")
         return _drive(p, a)
     except ProviderError as e:

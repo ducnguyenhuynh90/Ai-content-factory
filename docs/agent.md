@@ -41,6 +41,10 @@ python -m vfactory.agent status runs/tu-duy-tu-goc
 python -m vfactory.agent providers
 ```
 
+Brief flags for `run` and `resume` (the owner's production constraints, see below): `--minutes 4-5`,
+`--aspect 16:9`, `--kicker "Khung tư duy · Tập 1"`, `--voice V`, `--end-narration TEXT`, `--ask TEXT`,
+`--ask-hint TEXT`, `--keep NOTE` (repeatable). They are stored in `run.json` (`brief`), so a later `resume` keeps them.
+
 Flags for `run` and `resume`: `--provider NAME`, `--model M`, `--base-url URL`, `--api-key-env VAR`,
 `--effort low|medium|high|xhigh|max`, `--stage STAGE=PROVIDER` (repeatable), `--config FILE`, `--runs-dir DIR`,
 `--from STAGE`, `--until STAGE`, `--no-build` (text only, which skips build, gate and fix), `--no-vision`,
@@ -114,14 +118,58 @@ Weaker models get help in three ways. They get the compact profile. They get str
 server takes one and a stdlib validator either way. And they get repair loops: each validation, rule or lint error
 is sent back verbatim, at most `repair_tries` times, before the stage stops.
 
+## The owner's brief (production constraints)
+
+Notes (`notes.md`, `notes/`, `urls.txt`) are **data**: facts and sources the research may use. The brief is
+**instructions** from the channel owner, and every writing stage (idea, research, spine, beats, lesson, critique,
+fix, package) gets it in an `<owner_brief>` block, separate from the notes. Sources, later ones winning:
+
+1. series defaults: 4–6 minutes, 16:9, the run's series as kicker, the series voice, the cached sign-off as the end
+   narration (`config.SIGN_OFF`, the last beat of `lessons/frameworks/001-tu-duy-tu-goc`, already voiced), the
+   default ask;
+2. `<run>/brief.toml` and `<run>/brief.md` (free text: every line of it is a must-keep note);
+3. the CLI brief flags.
+
+```toml
+# <run>/brief.toml
+minutes = "4-5"                       # or target_minutes = [4, 5]
+aspect = "16:9"
+kicker = "Khung tư duy · Tập 1"       # title sting and end card
+voice = "omnivoice:male, middle-aged, very low pitch"
+must_keep = ["Carry the phở metaphor through the whole film", "One scenario worked example (minh họa)"]
+
+[end]
+narration = "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau."
+ask = "Bạn muốn tập sau về khung tư duy nào?"
+ask_hint = "Tư duy bậc hai · vòng tròn năng lực · chi phí cơ hội"
+```
+
+The checks use it: the spine and the beat sheet must sum to the length window (target −10 % / +5 %, the engine
+lint's tolerances), the lesson's calibrated length estimate must not run over it, and the lesson's `meta.aspect`,
+`meta.voice`, `meta.target_minutes`, the title-sting and end-card kicker, the end narration, `ask` and `ask_hint`
+must match. What the owner set is an error when it differs; a series default only warns. The must-keep notes cannot
+be checked mechanically: the critique is told to check them.
+
+### Length estimate (calibrated)
+
+`rules.estimate_seconds` was fitted on the ten built framework episodes (`lessons/frameworks/001–010`, speed 0.88:
+every beat's `timing.json` against its narration): speech runs at **~211 syllables/min at speed 0.88** (240 × speed),
+each narrated beat adds ~1.3 s, the retrieval question `think_seconds` + ~4.5 s, the end card ~2.6 s, a silent beat
+its `hold`. Over a whole film that is **~180 syllables/min**. Mean absolute error on the ten episodes: 1.4 %. The
+sticker pilot (854 syllables) built to 286.7 s; the model says 291 s. The prompts plan with these numbers.
+
+The engine lint (`vfactory/lesson/schema.py`: 270 syllables/min × speed, no gaps) reads the same episodes ~22 %
+short (e.g. 240 s for a 311 s film). Proposed, not yet changed: `WPM_BY_LANG["vi"] = 240` plus ~1.3 s per narrated
+beat and ~4.5 s on the question, which would make its over-length error fire where the film really runs long.
+
 ## What each stage does and writes
 
 | Stage | Output | Checked by |
 |---|---|---|
 | idea | `idea.json`: 3 storylines (fictional protagonist with want/flaw + a real story), the chosen one, the metaphor (shows/omits), the misconception | schema |
-| research | `research.json` + `research.md`: claims with sources, certainty (established/attributed/disputed/estimate), `verified`, `use` (voice/screen/hedge/cut), `say`; myths; open items | schema + rules: every claim cites a listed source; `verified` only when your notes back it; disputed claims are never voiced as fact; attributed/estimate claims hedge out loud; spoken numbers in words |
-| spine | `spine.json`: the six Pixar acts in order, want/flaw/stakes, 3 moves, worked example, metaphor limit, Pixar checks | schema + known claim ids + 240–330 s |
-| beats | `beats.json`: 18–30 beats with spine act, teaching act, thread (fiction/real/card), narration draft, visual idea, claim ids; the cast | schema + hook first, end card last, fiction labelled, misconception/question/recap present, no cut claims |
+| research | `research.json` + `research.md`: claims with sources, certainty (established/attributed/disputed/estimate), `verified`, `use` (voice/screen/hedge/cut), `say`; myths; open items | schema + rules: every claim cites a listed source; `verified` only when your notes back it; disputed claims are never voiced as fact; attributed/estimate claims hedge out loud (the engine's shared hedge list); spoken numbers in words |
+| spine | `spine.json`: the six Pixar acts in order, want/flaw/stakes, 3 moves, worked example, metaphor limit, Pixar checks | schema + known claim ids + the brief's length window |
+| beats | `beats.json`: 18–30 beats with spine act, teaching act, thread (fiction/real/card), narration draft, visual idea, claim ids; the cast | schema + hook first, end card last, fiction labelled, misconception/question/recap present, no cut claims, the brief's length window |
 | lesson | `lesson.json` (+ `script.md`, `lesson_check.json`): `meta.style: "sticker"`, `meta.cast`, `stage` beats, `spine` on every beat | schema + series rules (`rules.py`) + `python -m vfactory.lesson lint` |
 | critique | `critique.json`; edits `lesson.json` with patch ops (old copy in `history/`) | ops must apply and leave rules + lint clean |
 | build | `build/` via `python -m vfactory.lesson build lesson.json --out build --final` | exit code; refuses while the engine lacks `stage` |
@@ -131,7 +179,26 @@ is sent back verbatim, at most `repair_tries` times, before the stage stops.
 
 The series rules are enforced in code (`vfactory/agent/rules.py`). The writers' briefs learned them the hard way:
 
-- Numbers in narration are spoken Vietnamese, never digits, and long numbers are rounded in speech.
+- Numbers in narration are spoken Vietnamese, never digits, and long numbers are rounded in speech. "Long" means one
+  quantity of ≥ 4 number words with ≥ 3 significant digits ("một nghìn bốn trăm ba mươi lăm"); years after "năm"
+  ("năm hai nghìn lẻ tám"), "năm" meaning years ("mười năm"), ordinals ("lần thứ tư"), round amounts ("năm mươi lăm
+  nghìn") and look-alike words ("Linh", "đầu tư") are not counted.
+- Attributed and disputed beats hedge out loud. The hedge words are ONE list, `HEDGES`/`HEDGE_RE` in
+  `vfactory/lesson/schema.py` ("theo lời", "theo ước tính", "theo", "được cho là", "người ta kể", "khoảng", "có lẽ",
+  "chính … nói/kể", …), used by the engine lint, the lesson rules and the research check alike.
+- A sticker film has no dark `meta.look`: a `secondary_color` with luminance < 0.5 is the page background and turns
+  every scene dark (the pilot copied one from the prompt template). Leave `meta.look` out.
+- Quiz choices are bare text; "A. …", "B) …" double the engine's own letter badges.
+- Real people have a `tag` in `meta.cast` (the engine's key; `name_tag` is accepted as an alias with a warning and
+  renamed on save). Look keys are the engine's (`skin, hair, hair_color, shirt, pants, shoes, outfit, age, glasses,
+  hat_color`, with its hair/outfit/age values); the system prompt lists them from `vfactory/lesson/characters.py`.
+- A stage prop is an `icon` or a `concept` registered in `meta.concepts` (the engine draws that concept's icon).
+- Bubbles are spoken (the speaker's mouth moves on their words): a bubble whose words are mostly not in its beat's
+  narration is a warning.
+- A `scenario` shows a number for both `before` and `after` on every bar (missing = error; a before of 0 hides the
+  starting state = warning; `delta` = warning).
+- The first beat of a `board` opens on the overview (`"start": "overview"`), or a warning says so.
+- The lesson's calibrated length estimate stays inside the target window (over = error, under = warning).
 - No previews, greetings or filler.
 - One CTA only: the end card's `ask`, with no `cta` field and no "đăng ký/chia sẻ" anywhere else.
 - The fictional thread is labelled once ("hư cấu").
@@ -201,7 +268,7 @@ Measure your own runs with `log.jsonl` and the API's usage reports.
 ## Files
 
 - `vfactory/agent/providers.py`: `Provider`, `AnthropicProvider`, `OpenAICompatProvider`, `FakeProvider`
-- `vfactory/agent/config.py`: `agent.toml` + CLI flags → a provider per stage
+- `vfactory/agent/config.py`: `agent.toml` + CLI flags → a provider per stage; the brief loader and `SIGN_OFF`
 - `vfactory/agent/pipeline.py`: stages, run directory, repair loop, lint/build/gate integration
 - `vfactory/agent/rules.py`: deterministic series rules and the `stage` contract
 - `vfactory/agent/schemas.py`, `jsonutil.py`, `patch.py`: stage schemas, the validator and JSON extraction, patch ops

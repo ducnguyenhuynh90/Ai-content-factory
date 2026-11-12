@@ -616,3 +616,284 @@ def test_cli_dry_run_and_providers(tmp_path, monkeypatch, capsys):
     assert main(["providers", "--no-network"]) in (0, 1)
     out = capsys.readouterr().out
     assert "stage → provider" in out and "ollama" in out
+
+
+# ------------------------------------------------------------------------------------------------ sticker pilot fixes
+
+REPO = Path(__file__).resolve().parents[1]
+
+
+def _lesson():
+    return copy.deepcopy(fake_demo.LESSON)
+
+
+def _by(L):
+    return {b["id"]: b for b in L["beats"]}
+
+
+def test_pilot_dark_look_removed_from_prompt_and_caught_by_rules():
+    tpl = (REPO / "vfactory/agent/prompts/lesson.md").read_text()
+    assert "#12100E" not in tpl and '"look": {"primary_color"' not in tpl and "No `meta.look`" in tpl
+    L = _lesson()
+    assert "look" not in L["meta"]
+    L["meta"]["look"] = {"primary_color": "#E8B06A", "secondary_color": "#12100E"}  # what the pilot copied
+    errs, _ = rules.check_lesson(L)
+    assert any("secondary_color" in e and "dark" in e for e in errs), errs
+    L["meta"]["look"]["secondary_color"] = "#F7F0E3"  # light paper is fine
+    assert not any("secondary_color" in e for e in rules.check_lesson(L)[0])
+    L["meta"]["style"] = "dark"  # a dark film may be dark (other errors aside)
+    L["meta"]["look"]["secondary_color"] = "#12100E"
+    assert not any("secondary_color" in e for e in rules.check_lesson(L)[0])
+    assert rules.luminance("#12100E") < 0.1 and rules.luminance("#FFFFFF") == pytest.approx(1.0)
+
+
+def test_quiz_choices_are_bare_text():
+    assert 'never\n  start a choice with "A."' in (REPO / "vfactory/agent/prompts/lesson.md").read_text()
+    L = _lesson()
+    q = _by(L)["b12"]["visual"]
+    assert not any(e for e in rules.check_lesson(L)[0] if "starts with its letter" in e)
+    for bad in ("A. Ai cũng học", "B) Khóa này", "c: Có giảm giá", "(A) Ai"):
+        q["choices"][0] = bad
+        assert any("starts with its letter" in e for e in rules.check_lesson(L)[0]), bad
+    q["choices"][0] = "Ai cũng học, chắc đáng"
+    q["choices"][1] = "Bảo hiểm: có cần không?"  # a word starting with B is not a badge
+    assert not any("starts with its letter" in e for e in rules.check_lesson(L)[0])
+
+
+def test_stage_prop_may_give_only_a_registered_concept():
+    L = _lesson()
+    v = _by(L)["b08"]["visual"]
+    v["props"] = [{"concept": "tu_goc", "x": 0.7, "y": 0.6}]  # the engine draws the concept's icon (pot)
+    errs, warns = rules.check_lesson(L)
+    assert not any("prop" in e for e in errs), errs
+    assert not any("prop icon" in x for x in warns)
+    v["props"] = [{"concept": "khong_co", "x": 0.7, "y": 0.6}]
+    assert any("prop concept 'khong_co' is not registered" in e for e in rules.check_lesson(L)[0])
+    v["props"] = [{"x": 0.7, "y": 0.6}]
+    assert any("every prop needs an 'icon'" in e for e in rules.check_lesson(L)[0])
+
+
+@pytest.mark.parametrize("text,flag", [
+    ("Năm hai nghìn lẻ tám, lần thứ tư, nó vào quỹ đạo.", False),          # a year after "năm" + an ordinal
+    ("Năm một nghìn chín trăm chín mươi lăm ông viết thư.", False),       # a long year, still a year
+    ("Mười năm hai nghìn lẻ hai, ông thắng.", False),                       # "năm" = years
+    ("Ly cà phê năm mươi lăm nghìn.", False),                               # a round amount
+    ("Ba trăm sáu mươi triệu đồng.", False),
+    ("Linh, hai mươi bảy tuổi, đầu tư bốn mươi triệu.", False),            # Linh / đầu tư are not numbers
+    ("Thứ tư, thứ năm, thứ sáu cô đều bán.", False),                        # weekdays / ordinals
+    ("Giá là một nghìn bốn trăm ba mươi lăm đô.", True),                   # a genuine long cardinal
+    ("Họ bán một trăm sáu mươi ba nghìn cuốn.", True),
+    ("Năm hai nghìn lẻ tám, họ bán một nghìn bốn trăm ba mươi lăm chiếc.", True),
+])
+def test_long_number_check_counts_only_genuine_long_amounts(text, flag):
+    assert bool(rules.long_numbers(text)) is flag, rules.long_numbers(text)
+
+
+def test_long_number_warning_in_lesson_rules():
+    L = _lesson()
+    _by(L)["b10"]["narration"] = "Năm hai nghìn lẻ tám, lần thứ tư. Thứ ba, lắp lại rồi để thực tế chấm."
+    assert not any("long number" in x for x in rules.check_lesson(L)[1])
+    _by(L)["b10"]["narration"] = "Thứ ba, cô tính ra một nghìn bốn trăm ba mươi lăm nghìn đồng."
+    assert any("long number" in x for x in rules.check_lesson(L)[1])
+
+
+def test_one_hedge_list_shared_by_agent_and_engine_lint():
+    from vfactory.lesson import schema
+
+    assert rules.HEDGE_RE is schema.HEDGE_RE
+    for h in ("theo lời", "theo ước tính", "theo", "được cho là", "người ta kể", "khoảng", "có lẽ"):
+        assert h in schema.HEDGES
+    for said in ("theo Jim Cantrell, giá rất cao", "chính Musk nói giá quá cao", "chính ông kể lại như vậy"):
+        assert schema.HEDGE_RE.search(said), said
+    assert not schema.HEDGE_RE.search("Giá là hai mươi triệu đô.")
+    # the engine lint now accepts "theo …" on an attributed beat (it used to say "states it as fact")
+    L = _lesson()
+    b = _by(L)["b07"]
+    b["certainty"], b["narration"] = "attributed", "Theo Jim Cantrell, Musk gọi đó là first principles."
+    assert not any("states it as fact" in e for e in schema.lint(L)["errors"])
+    assert not any("says it as fact" in e for e in rules.check_lesson(L)[0])
+    b["narration"] = "Musk gọi đó là first principles."
+    assert any("states it as fact" in e for e in schema.lint(L)["errors"])
+    assert any("says it as fact" in e for e in rules.check_lesson(L)[0])
+    # and the research check uses the same list
+    R = copy.deepcopy(fake_demo.RESEARCH)
+    R["claims"][0].update(use="voice", say="chính Musk nói ông sang Nga ba lần")
+    assert pipeline._check_research(R) == []
+    R["claims"][0]["say"] = "ông sang Nga ba lần"
+    assert any("must hedge out loud" in e for e in pipeline._check_research(R))
+
+
+def test_real_person_tag_alias_and_look_keys():
+    from vfactory.lesson import characters
+
+    L = _lesson()
+    musk = next(c for c in L["meta"]["cast"] if c["id"] == "musk")
+    assert musk["tag"] == "Elon Musk" and "name_tag" not in musk
+    assert rules.check_lesson(L)[0] == []
+    musk.pop("tag")
+    assert any("give a 'tag'" in e for e in rules.check_lesson(L)[0])
+    musk["name_tag"] = "Elon Musk"  # the old key: accepted with a warning, renamed on save
+    errs, warns = rules.check_lesson(L)
+    assert errs == [] and any("'name_tag' is an alias" in x for x in warns)
+    assert next(c for c in rules.normalize_lesson(L)["meta"]["cast"] if c["id"] == "musk")["tag"] == "Elon Musk"
+    musk["look"]["hat"] = "#000000"
+    musk["look"]["outfit"] = "suit"
+    errs = "\n".join(rules.check_lesson(L)[0])
+    assert "unknown look key 'hat'" in errs and "look.outfit 'suit'" in errs
+    # the system prompt lists every look key the engine draws, and documents `tag`
+    sp = pipeline.system_prompt()
+    for k in characters.DEFAULT_LOOK:
+        assert k in sp, k
+    for v in characters.OUTFITS + characters.AGES:
+        assert v in sp
+    assert '"tag"' in sp and "`tag`" in sp and "name_tag" not in sp
+    assert "name_tag" not in pipeline.system_prompt("compact")
+
+
+def test_lesson_saved_with_name_tag_gets_tag(tmp_path):
+    script = fake_demo.demo_script()
+    for c in script["lesson"][0]["meta"]["cast"]:
+        if c.get("real"):
+            c["name_tag"] = c.pop("tag")
+    p, _ = make(tmp_path, script=script)
+    p.run(until="lesson")
+    musk = next(c for c in json.loads((p.dir / "lesson.json").read_text())["meta"]["cast"] if c["id"] == "musk")
+    assert musk["tag"] == "Elon Musk"
+
+
+def test_bubbles_must_be_spoken_words():
+    L = _lesson()
+    v = _by(L)["b02"]["visual"]
+    assert not any("bubble" in x and "narration" in x for x in rules.check_lesson(L)[1])
+    v["bubble"]["text"] = "Chắc mình chưa đủ tiền"  # never said in b02
+    assert any("is not (roughly) in this beat's narration" in x for x in rules.check_lesson(L)[1])
+
+
+def test_scenario_shows_before_and_after_for_every_bar():
+    L = _lesson()
+    sc = {"type": "scenario", "kicker": "Số minh họa", "cue": "thứ ba", "suffix": " nghìn",
+          "bars": [{"label": "Nguyên liệu", "before": 10, "after": 10}, {"label": "Mặt bằng", "before": 30, "after": 5}]}
+    _by(L)["b10"]["visual"] = sc
+    errs, warns = rules.check_lesson(L)
+    assert not any("scenario" in e for e in errs) and not any("scenario" in x for x in warns)
+    sc["bars"][1].pop("before")  # a hidden before
+    assert any("scenario bar 'Mặt bằng' needs a number for 'before'" in e for e in rules.check_lesson(L)[0])
+    sc["bars"][1]["before"] = None
+    assert any("needs a number for 'before'" in e for e in rules.check_lesson(L)[0])
+    sc["bars"][1]["before"] = 0
+    assert any("hides the before state" in x for x in rules.check_lesson(L)[1])
+    sc["bars"][1].update(before=30, delta="-25")
+    assert any("'delta'" in x for x in rules.check_lesson(L)[1])
+
+
+def test_board_first_beat_starts_on_overview():
+    L = _lesson()
+    regions = [{"icon": "pot", "label": "Tách nguyên liệu"}, {"icon": "scale", "label": "Luật hay thói quen"},
+               {"icon": "hammer", "label": "Lắp lại"}]
+    by = _by(L)
+    by["b08"]["visual"] = {"type": "board", "board_id": "ba", "regions": regions, "focus": [0]}
+    by["b09"]["visual"] = {"type": "board", "board_id": "ba", "focus": [1]}
+    warns = rules.check_lesson(L)[1]
+    assert sum("should open on the overview" in x for x in warns) == 1 and any("b08" in x and "overview" in x
+                                                                             for x in warns)
+    by["b08"]["visual"]["start"] = "overview"
+    assert not any("should open on the overview" in x for x in rules.check_lesson(L)[1])
+
+
+def test_calibrated_length_estimate():
+    # constants fitted on 10 built episodes (speed 0.88): ~211 syllables/min of speech, ~180 over the whole film
+    assert rules.SPEECH_SYL_PER_MIN * 0.88 == pytest.approx(211, abs=1)
+    beat = {"narration": " ".join(["ba"] * 40), "visual": {"type": "stage"}}
+    assert rules.beat_seconds(beat, 0.88) == pytest.approx(40 / (240 * 0.88) * 60 + rules.BEAT_GAP_S)
+    q = {"narration": "ba ba", "visual": {"type": "question", "think_seconds": 5}}
+    assert rules.beat_seconds(q, 0.88) == pytest.approx(2 / (240 * 0.88) * 60 + 5 + rules.QUESTION_EXTRA_S)
+    assert rules.beat_seconds({"narration": "", "visual": {"type": "title", "hold": 3.0}}) == 3.0
+    # a pilot-shaped film: 854 syllables over 27 narrated beats + a question + a title sting + the end card
+    # (the sticker pilot built to 286.7 s; the engine lint's 270 x speed would say ~216 s)
+    sizes = [31] * 26 + [8]
+    beats = [{"narration": " ".join(["ba"] * n), "visual": {"type": "stage"}} for n in sizes]
+    beats += [{"narration": " ".join(["ba"] * 20), "visual": {"type": "question", "think_seconds": 5}},
+              {"narration": "", "visual": {"type": "title", "hold": 3.0}},
+              {"narration": " ".join(["ba"] * 20), "visual": {"type": "end"}}]
+    L = {"meta": {"speed": 0.88}, "beats": beats}
+    assert sum(sizes) + 40 == 854
+    assert 286.7 * 0.95 < rules.estimate_seconds(L) < 286.7 * 1.05
+    assert rules.length_window([4, 5]) == (216.0, 315.0)
+
+
+def test_lesson_over_the_target_length_is_an_error():
+    L = _lesson()
+    L["meta"]["target_minutes"] = [1, 1]
+    assert any("over the 1-1 min target" in e for e in rules.check_lesson(L)[0])
+    L["meta"]["target_minutes"] = [6, 8]
+    errs, warns = rules.check_lesson(L)
+    assert not any("target" in e for e in errs) and any("under the 6-8 min target" in x for x in warns)
+
+
+def test_default_sign_off_is_the_cached_take():
+    last = json.loads((REPO / "lessons/frameworks/001-tu-duy-tu-goc/lesson.json").read_text())["beats"][-1]
+    assert C.SIGN_OFF == last["narration"]
+    assert fake_demo.END == C.SIGN_OFF
+
+
+def test_brief_files_cli_and_prompts(tmp_path):
+    p, fake = make(tmp_path)
+    (p.dir / "brief.toml").write_text('minutes = "4-5"\naspect = "16:9"\nkicker = "Khung tư duy · Tập 1"\n'
+                                      'must_keep = ["Giữ ẩn dụ nồi phở suốt phim"]\n[end]\nask_hint = "A · B · C"\n')
+    (p.dir / "brief.md").write_text("Musk là hình sticker chung với thẻ tên.")
+    (p.dir / "notes.md").write_text("Wired 2012: giá mười lăm đến hai mươi triệu đô.")
+    p.set_brief({"voice": "omnivoice:female", "must_keep": ["Một ví dụ scenario duy nhất"]})
+    b = p.brief()
+    assert b["target_minutes"] == [4, 5] and b["kicker"] == "Khung tư duy · Tập 1" and b["voice"] == "omnivoice:female"
+    assert b["end_ask_hint"] == "A · B · C" and b["end_narration"] == C.SIGN_OFF  # default: the cached take
+    assert b["must_keep"] == ["Giữ ẩn dụ nồi phở suốt phim", "Musk là hình sticker chung với thẻ tên.",
+                              "Một ví dụ scenario duy nhất"]
+    assert set(b["owner_set"]) == {"target_minutes", "aspect", "kicker", "voice", "end_ask_hint"}
+    assert json.loads((p.dir / "run.json").read_text())["brief"]["voice"] == "omnivoice:female"
+    p.run(until="beats")
+    for c in fake.calls:  # every writing stage gets the brief as instructions, separate from the notes (data)
+        u = c["messages"][0]["content"]
+        assert "<owner_brief>" in u and "Giữ ẩn dụ nồi phở" in u and "4–5 minutes" in u
+        assert "Giữ ẩn dụ nồi phở" not in u.split("<owner_brief>")[0]
+    spine_prompt = next(c for c in fake.calls if c["stage"] == "spine")["messages"][0]["content"]
+    assert "total 240–300 s" in spine_prompt
+    # the lesson prompt fills the meta and the end card from the brief
+    lesson_user = pipeline.render(pipeline.prompt("lesson"), kicker=b["kicker"], aspect=b["aspect"], voice=b["voice"],
+                                  target_minutes=json.dumps(b["target_minutes"]), end_narration=b["end_narration"],
+                                  ask=b["end_ask"], ask_hint=b["end_ask_hint"], brief=p.brief_text())
+    assert '"target_minutes": [4, 5]' in lesson_user and '"voice": "omnivoice:female"' in lesson_user
+    assert '"kicker": "Khung tư duy · Tập 1"' in lesson_user and C.SIGN_OFF in lesson_user
+
+
+def test_brief_drives_spine_window_and_lesson_checks(tmp_path):
+    win = rules.length_window([4, 5])
+    spine = copy.deepcopy(fake_demo.SPINE)
+    for a in spine["acts"]:
+        a["seconds"] = 60  # 360 s: inside 4-6, outside 4-5
+    assert pipeline._check_spine(spine, fake_demo.RESEARCH) == []
+    assert any("aim for 240-300 s" in e for e in pipeline._check_spine(spine, fake_demo.RESEARCH, win))
+    L = _lesson()
+    brief = {"kicker": "Khung tư duy · Tập 9", "end_narration": "Hẹn gặp bạn.", "end_ask": C.DEFAULT_ASK,
+             "aspect": "9:16", "owner_set": ["kicker", "end_narration", "aspect"]}
+    errs = "\n".join(rules.check_lesson(L, brief=brief)[0])
+    assert "end narration differs from the sign-off" in errs and "kicker should be" in errs and "meta.aspect" in errs
+    errs, warns = rules.check_lesson(L, brief=dict(brief, owner_set=[]))  # defaults only warn
+    assert errs == [] and any("end narration differs" in x for x in warns)
+
+
+def test_cli_brief_flags(tmp_path, monkeypatch):
+    from vfactory.agent.__main__ import main
+
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.setattr(pipeline.subprocess, "run", Runner(lint=[CLEAN_LINT]))
+    rc = main(["run", "Tư duy từ gốc", "--provider", "fake", "--runs-dir", str(tmp_path / "runs"), "--until", "idea",
+               "--minutes", "4-5", "--kicker", "Khung tư duy · Tập 1", "--keep", "Giữ ẩn dụ nồi phở",
+               "--keep", "Musk có thẻ tên"])
+    assert rc == 0
+    d = tmp_path / "runs" / "tu-duy-tu-goc"
+    br = json.loads((d / "run.json").read_text())["brief"]
+    assert br == {"target_minutes": [4, 5], "kicker": "Khung tư duy · Tập 1",
+                  "must_keep": ["Giữ ẩn dụ nồi phở", "Musk có thẻ tên"]}
+    assert main(["resume", str(d), "--provider", "fake", "--until", "idea", "--ask", "Bạn chọn khung nào?"]) == 0
+    br = json.loads((d / "run.json").read_text())["brief"]
+    assert br["end_ask"] == "Bạn chọn khung nào?" and br["kicker"] == "Khung tư duy · Tập 1"

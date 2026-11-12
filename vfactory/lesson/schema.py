@@ -69,6 +69,16 @@ SHOT_MAX_S = 8.0  # one picture held longer than this, with no declared hold, re
 WPM = 150.0  # documentary narration pace (Vox guide; Kokoro at speed 0.95 lands close)
 # words (Vietnamese: syllables) per minute at speed 1.0; Piper vi_VN-vais1000 measured ~270, so speed 0.82 ≈ 220
 WPM_BY_LANG = {"en": WPM, "vi": 270.0}
+# Words that say a claim out loud as attributed, estimated or uncertain. ONE list, shared with the episode agent
+# (vfactory/agent: its research check and series rules import HEDGES / HEDGE_RE from here), so the writer's checks and
+# this lint never disagree about what counts as hedged.
+HEDGES_VI = (r"theo lời", r"theo ước tính", r"theo", r"được cho là", r"người ta kể", r"khoảng", r"có lẽ",
+             r"chính\s+(?:\w+\s+){0,3}?(?:nói|kể|viết|thừa nhận|cho biết)",  # "chính Musk nói", "chính ông kể lại"
+             r"ước tính", r"tương truyền", r"gây tranh cãi", r"chưa kiểm chứng")
+HEDGES_EN = (r"reportedly", r"attributed", r"legend", r"lore", r"probably", r"may have", r"story goes", r"is said",
+             r"disputed", r"estimate", r"about", r"roughly", r"according to")
+HEDGES = HEDGES_VI + HEDGES_EN
+HEDGE_RE = re.compile(r"\b(?:" + "|".join(HEDGES) + r")\b", re.I)
 
 
 class LessonError(ValueError):
@@ -325,10 +335,7 @@ def lint(L: dict) -> dict:
                            b["narration"] + screen, re.I)
         if claims and not b.get("sources") and b["act"] not in ("question", "recap", "close", "principle"):
             warns.append(f"{b['id']}: contains a number or date with no source id")
-        if b.get("certainty") in ("disputed", "attributed") and not re.search(
-                r"\b(reportedly|attributed|legend|lore|probably|may have|story goes|is said|disputed|estimate|about|roughly|"
-                r"khoảng|ước tính|được cho là|tương truyền|có lẽ|người ta kể|gây tranh cãi|chưa kiểm chứng)\b",
-                b["narration"], re.I):
+        if b.get("certainty") in ("disputed", "attributed") and not HEDGE_RE.search(b["narration"]):
             errors.append(f"{b['id']}: marked {b['certainty']} but the narration states it as fact; say so out loud")
     if meta.get("topic", "").lower() in ("investing", "investment", "finance", "money") and not meta.get("disclaimer"):
         errors.append("finance lesson without a disclaimer (educational, not financial advice)")

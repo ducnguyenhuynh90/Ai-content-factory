@@ -57,8 +57,86 @@ DEFAULTS = {
     "build": True,
     "profile": "full",
     "max_images": 4,
-    "end_narration": "Còn bạn, bạn muốn tập sau về khung tư duy nào? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
+    "end_narration": None,  # None = SIGN_OFF (the cached take); set it in agent.toml to change the series default
 }
+
+# The series sign-off: the end-card narration of lessons/frameworks/001-tu-duy-tu-goc (its last beat). Its voice take is
+# already rendered and cached, so every episode reuses it word for word unless the owner's brief says otherwise.
+SIGN_OFF = ("Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. "
+            "Hẹn gặp bạn ở tập sau.")
+DEFAULT_ASK = "Bạn muốn tập sau về khung tư duy nào?"
+DEFAULT_VOICE = "omnivoice:male, middle-aged, very low pitch"
+
+# The owner's production constraints for one episode: INSTRUCTIONS (unlike notes, which are data). From
+# <run>/brief.toml and <run>/brief.md, and from CLI flags (stored in run.json "brief"); later sources win.
+BRIEF_KEYS = ("target_minutes", "aspect", "kicker", "voice", "end_narration", "end_ask", "end_ask_hint", "must_keep")
+
+
+def _toml():
+    try:
+        import tomllib  # Python 3.11+
+    except ImportError:  # Python 3.10
+        try:
+            import tomli as tomllib  # type: ignore
+        except ImportError as e:
+            raise ProviderError("reading a .toml file on Python 3.10 needs `pip install tomli`") from e
+    return tomllib
+
+
+def parse_minutes(x) -> list[float] | None:
+    """"4-5", "4–5", "5", [4, 5] or 5 -> [lo, hi] minutes."""
+    if x is None or x == "":
+        return None
+    if isinstance(x, (int, float)):
+        return [x, x]
+    if isinstance(x, (list, tuple)) and 1 <= len(x) <= 2:
+        return [x[0], x[-1]]
+    parts = [p for p in str(x).replace("–", "-").replace(",", "-").split("-") if p.strip()]
+    try:
+        vals = [float(p) for p in parts]
+    except ValueError as e:
+        raise ProviderError(f"target length {x!r}: give minutes like 4-5") from e
+    vals = [int(v) if v == int(v) else v for v in vals]
+    return [vals[0], vals[-1]] if vals else None
+
+
+def normalize_brief(d: dict) -> dict:
+    """Accept flat keys and an [end] table (narration/ask/ask_hint); `minutes`/`length` as aliases of target_minutes;
+    `series_kicker` of kicker; must_keep as a string or a list."""
+    out = {}
+    d = dict(d or {})
+    end = d.pop("end", None) or {}
+    for k, v in (("end_narration", end.get("narration")), ("end_ask", end.get("ask")),
+                 ("end_ask_hint", end.get("ask_hint"))):
+        if v:
+            out[k] = v
+    for alias, key in (("minutes", "target_minutes"), ("length", "target_minutes"), ("series_kicker", "kicker"),
+                       ("ask", "end_ask"), ("ask_hint", "end_ask_hint"), ("keep", "must_keep")):
+        if alias in d and key not in d:
+            d[key] = d.pop(alias)
+    for k in BRIEF_KEYS:
+        v = d.get(k)
+        if v in (None, "", []):
+            continue
+        if k == "target_minutes":
+            v = parse_minutes(v)
+        elif k == "must_keep":
+            v = [v] if isinstance(v, str) else [str(x) for x in v]
+        out[k] = v
+    return out
+
+
+def load_brief_files(run_dir: str | Path) -> dict:
+    """<run>/brief.toml (structured) + <run>/brief.md (free text: owner notes, all of it a must-keep instruction)."""
+    d = Path(run_dir)
+    out: dict = {}
+    t = d / "brief.toml"
+    if t.is_file():
+        out.update(normalize_brief(_toml().loads(t.read_text())))
+    m = d / "brief.md"
+    if m.is_file() and m.read_text(errors="replace").strip():
+        out["must_keep"] = list(out.get("must_keep", [])) + [m.read_text(errors="replace").strip()]
+    return out
 
 # output budgets per stage (thinking shares max_tokens on Claude; streaming makes large values safe)
 MAX_TOKENS = {"idea": 16000, "research": 32000, "spine": 16000, "beats": 32000, "lesson": 64000, "critique": 32000,
@@ -133,15 +211,7 @@ def load(path: str | Path | None = None, cli: dict | None = None) -> Config:
     cfg = Config(cli=dict(cli or {}))
     for c in cands:
         if c and Path(c).is_file():
-            try:
-                import tomllib  # Python 3.11+
-            except ImportError:  # Python 3.10
-                try:
-                    import tomli as tomllib  # type: ignore
-                except ImportError as e:
-                    raise ProviderError("reading agent.toml on Python 3.10 needs `pip install tomli` "
-                                        "(or use CLI flags only)") from e
-            data = tomllib.loads(Path(c).read_text())
+            data = _toml().loads(Path(c).read_text())
             cfg.defaults.update(data.get("defaults", {}))
             cfg.providers = data.get("providers", {})
             cfg.stages = data.get("stages", {})

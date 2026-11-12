@@ -88,7 +88,8 @@ LESSON = {
                      "cast": {"type": "array", "minItems": 1, "items": {
                          "type": "object", "required": ["id", "name", "look", "role"],
                          "properties": {"id": S1, "name": S1, "role": S1, "look": {"type": "object"},
-                                        "real": {"type": "boolean"}, "name_tag": S}}},
+                                        "real": {"type": "boolean"}, "tag": S,
+                                        "name_tag": S}}},  # name_tag: an alias of tag (renamed on save)
                      "concepts": {"type": "array", "items": {"type": "object", "required": ["id", "visual"]}},
                      "youtube": {"type": "object"}, "brief": {"type": "object"},
                  }},

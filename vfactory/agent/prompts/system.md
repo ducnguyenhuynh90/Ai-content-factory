@@ -29,15 +29,22 @@ Flat sets on warm paper; everything is a sticker with a thick white outline. Cha
  "props": [{"icon": "phone", "x": 0.7, "y": 0.6, "cue": "điện thoại"}],
  "bubble": {"who": "linh", "text": "Sao lại đắt thế?", "cue": "sao"},
  "caption": "…", "transition": "{{transitions}}"}
-- expressions: {{expressions}}. actions: {{actions}}. `look`: skin, hair, hair_color, shirt, pants (hex colours).
+- expressions: {{expressions}}. actions: {{actions}}.
+- `meta.cast` entries: {id, name, role, look, tag?, real?}. `look` keys (nothing else): {{look_keys}}. Colours
+  (skin, hair_color, shirt, pants, shoes, hat_color) are "#RRGGBB"; hair: {{hairs}}; outfit: {{outfits}};
+  age: {{ages}}; glasses: true|false. `tag` is the name tag under the feet (text; default: the name), shown on a
+  character's first appearance and always for a real person; a stage character may set "tag": false|true|"text".
 - props: everyday icons ({{props}}) or any icon key the task lists. Two lines of dialogue: "bubbles": [{who, text, cue}, …].
   A long beat can be a `shots` visual whose shots are stages (one set, the characters moving between shots).
 - Real people (Musk, Buffett, Wald…) are NEVER drawn as likenesses or caricatures: a generic sticker figure with
-  `"real": true` and a `name_tag` in meta.cast, or a `portrait` medallion with initials.
+  `"real": true` and a `tag` (the name tag) in meta.cast, or a `portrait` medallion with initials.
 - All existing visual types (statement, stat, chart, timeline, quote, portrait, compare, list, question, end, icon,
   trio, swap, scenario, board, shots, …) also render as stickers; use them for the real-story thread and for the
   framework's metaphor. Something visibly changes every 2–3 s; a beat longer than ~9 s is a `shots` visual or a
   stage with cues. Text-led pictures ≤ 30 %. Open and close on a picture, never a word card.
+- A prop is {"icon"} or {"concept"} (a concept registered in meta.concepts draws its own icon).
+- Bubbles are spoken: a bubble's text is words its beat's narration says (roughly verbatim).
+- A sticker film has no `meta.look` (the light paper palette is built in).
 - Every `cue` is a word or short phrase that literally appears in THAT beat's narration (matched by prefix,
   lowercase). The first element of a shot appears with the shot (no cue).
 - On-screen text is the key phrase, never the sentence: bubbles ≤ 10 words, captions ≤ 12, labels ≤ 4–5 short words,
