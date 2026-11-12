@@ -12,11 +12,28 @@ from .. import ffmpeg as ff
 from ..editor import brand as B
 from ..editor import hyperframes as H
 from ..editor.enhance import mix_stems
-from . import canvas, music, schema, voice
-from .scenes import Look, highlights, scene_file
+from . import canvas, music, schema, stage, sticker, voice
+from .scenes import OVERLAP, Look, highlights, scene_file, transition_of
 
 ASPECTS = {"4:3": (1440, 1080), "16:9": (1920, 1080), "9:16": (1080, 1920), "1:1": (1080, 1080)}
 LEAD, TAIL = 0.45, 0.65  # seconds of picture before / after each narration line
+
+
+def style_of(meta: dict) -> str:
+    return "sticker" if meta.get("style") == "sticker" else "dark"
+
+
+def aspect_of(meta: dict) -> str:
+    """The frame: meta.aspect, else 16:9 for sticker films (YouTube main) and 4:3 for the dark lessons."""
+    a = meta.get("aspect") or ("16:9" if style_of(meta) == "sticker" else "4:3")
+    return a if a in ASPECTS else "4:3"
+
+
+def make_look(meta: dict, W: int, Hh: int) -> Look:
+    if style_of(meta) == "sticker":  # the sticker tokens; only the lesson's own meta.look overrides them
+        return Look(dict(meta.get("look", {})), W, Hh, meta.get("lang", "en"), meta.get("concepts"), style="sticker",
+                    cast=meta.get("cast"))
+    return Look({**brand(), **meta.get("look", {})}, W, Hh, meta.get("lang", "en"), meta.get("concepts"), cast=meta.get("cast"))
 
 
 def brand() -> dict:
@@ -62,6 +79,17 @@ def plan_timing(L: dict, durs: dict[str, float]) -> list[dict]:
     return out
 
 
+def background_css(look: Look) -> str:
+    """The world behind the pictures: warm dark light for the Ledger look; cream paper with fibres for stickers."""
+    if look.style == "sticker":
+        return f"""#bg {{ background: radial-gradient(130% 100% at 40% 30%, #FFF9EE 0%, {look.bg} 55%, #F3E6CF 100%); }}
+      #glow {{ background: radial-gradient(closest-side, #FFFFFF55, transparent); }}
+      #grain {{ background-image: url('assets/paper.png'); background-repeat: repeat; opacity: 0.55; }}"""
+    return f"""#bg {{ background: radial-gradient(120% 90% at 30% 20%, #1c1a18 0%, {look.bg} 60%, #050505 100%); }}
+      #glow {{ background: radial-gradient(closest-side, {look.accent}22, transparent); }}
+      #grain {{ background-image: url('assets/grain.png'); background-repeat: repeat; opacity: 0.06; }}"""
+
+
 def dust(look: Look, total: float, n: int = 18, seed: int = 5) -> tuple[str, str]:
     """Out-of-focus motes drifting up through warm light: the world behind the words keeps moving (a chill, lived-in
     room) while every title stays still. Seeded and tweened, so any frame renders the same."""
@@ -101,6 +129,8 @@ def captions_file(look: Look, L: dict, timing: list[dict], times: dict, total: f
     from html import escape as E
 
     fs = look.fs(0.036)
+    light = look.style == "sticker"
+    dim = "rgba(46,42,53,0.38)" if light else "rgba(242,237,228,0.42)"
     items, tw = [], []
     k = 0
     for b, tm in zip(L["beats"], timing):
@@ -122,11 +152,20 @@ def captions_file(look: Look, L: dict, timing: list[dict], times: dict, total: f
                 wid = f"{gid}w{wi}"
                 lit = hlc.get(w["word"].lower().strip(".,;:?!…\"'“”"), look.ink)
                 words.append(f'<span id="{wid}" class="cw">{E(w["word"])}</span>')
-                tw.append(f'tl.fromTo("#{wid}", {{ color: "rgba(242,237,228,0.42)" }}, {{ color: "{lit}", duration: 0.12, ease: "none" }}, {base + w["start"]:.3f});')
+                tw.append(f'tl.fromTo("#{wid}", {{ color: "{dim}" }}, {{ color: "{lit}", duration: 0.12, ease: "none" }}, {base + w["start"]:.3f});')
             items.append(f'<div id="{gid}" class="clip cap" data-start="{t_in:.3f}" data-duration="{max(0.3, t_out - t_in):.3f}" data-track-index="0">'
                          f'<div id="{gid}i" class="capi">{" ".join(words)}</div></div>')
             tw.append(f'tl.fromTo("#{gid}i", {{ opacity: 0, y: 10, filter: "blur(6px)" }}, {{ opacity: 1, y: 0, filter: "blur(0px)", duration: 0.18, ease: "power2.out" }}, {t_in:.3f});')
             k += 1
+    if light:  # a white sticker strip with ink words
+        style = f"""#root {{ position: absolute; inset: 0; }}
+    #capband {{ display: none; }}
+    .cap {{ position: absolute; left: {int(W * 0.06)}px; right: {int(W * 0.06)}px; bottom: {int(Hh * 0.035)}px; text-align: center; }}
+    .capi {{ display: inline-block; font-family: '{look.sans.strip("'")}'; font-weight: 800; font-size: {fs}px; line-height: 1.25;
+      padding: {look.px(0.008)}px {look.px(0.026)}px; border-radius: {look.px(0.02)}px; background: #FFFFFF; border: 3px solid #3B302C;
+      box-shadow: 0 0 0 {look.px(0.005)}px #fff, 0 {look.px(0.008)}px {look.px(0.018)}px rgba(84,62,38,0.22); }}
+    .cw {{ color: {dim}; }}"""
+        return captions_template(style, items, tw, W, Hh)
     return f"""<template>
   <style>
     #root {{ position: absolute; inset: 0; }}
@@ -150,6 +189,24 @@ def captions_file(look: Look, L: dict, timing: list[dict], times: dict, total: f
 """
 
 
+def captions_template(style: str, items: list[str], tw: list[str], W: int, Hh: int) -> str:
+    return f"""<template>
+  <style>
+    {style}
+  </style>
+  <div id="root" data-composition-id="captions" data-width="{W}" data-height="{Hh}">
+    <div id="capband"></div>
+    {"".join(items)}
+  </div>
+  <script>
+    const tl = gsap.timeline({{ paused: true }});
+    {chr(10).join('    ' + t for t in tw)}
+    window.__timelines["captions"] = tl;
+  </script>
+</template>
+"""
+
+
 def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: bool = False, render: str | None = "draft",
           log=print) -> dict:
     lesson_path = Path(lesson_path)
@@ -158,7 +215,9 @@ def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: 
     if rep["errors"] and not force:
         raise schema.LessonError("lint errors:\n- " + "\n- ".join(rep["errors"]))
     meta = L["meta"]
-    W, Hh = ASPECTS.get(meta.get("aspect", "4:3"), ASPECTS["4:3"])
+    style = style_of(meta)
+    aspect = aspect_of(meta)
+    W, Hh = ASPECTS[aspect]
     out = Path(out_dir or lesson_path.parent / "build")
     proj = out / "hf"
     vo_dir = out / "vo"
@@ -205,15 +264,24 @@ def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: 
         stems.append({"file": str(out / "sfx.wav"), "role": "sfx", "gain_db": -8})
     mix_stems(stems, total, str(proj / "assets" / "mix.wav"), voice_lufs=-16.0, target_lufs=-16.0)
     # 3. scenes
-    look = Look({**brand(), **meta.get("look", {})}, W, Hh, meta.get("lang", "en"), meta.get("concepts"))
+    look = make_look(meta, W, Hh)
     H.ensure_gsap(proj / "assets" / "vendor")
     grain_png(proj / "assets" / "grain.png")
+    if style == "sticker":
+        sticker.paper_png(proj / "assets" / "paper.png")
     hosts = []
     visuals = canvas.resolve_boards([b["visual"] for b in L["beats"]])  # boards that run over several beats
+    visuals = stage.prepare(visuals, meta.get("cast"))  # where each character first appears (its name tag)
+    trans = [None if (i and visuals[i - 1].get("_cont_next")) else transition_of(b, i, style) for i, b in enumerate(L["beats"])]
     for i, (b, tm) in enumerate(zip(L["beats"], timing)):
         sid = b["id"]
         vis = {**visuals[i], **({"_hold": True} if b.get("hold") else {})}
         wt = times[sid]
+        if stage.has_stage(vis):  # the characters' mouths follow the spoken words
+            vis["_words"] = [{"word": w["word"], "start": round(tm["lead"] + w["start"], 3), "end": round(tm["lead"] + w["end"], 3)} for w in wt]
+        tr_in = trans[i]
+        tr_out = trans[i + 1] if i + 1 < len(trans) else None
+        host_dur = tm["dur"] + (OVERLAP.get(tr_out, 0.0) if tr_out else 0.0)
 
         def cue(word: str, default: float, after: float | None = None, wt=wt, lead=tm["lead"]) -> float:
             if not word or not wt:
@@ -221,12 +289,12 @@ def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: 
             return lead + voice.find_word(wt, word, default - lead, after=None if after is None else after - lead)
 
         (proj / "compositions" / f"{sid}.html").write_text(
-            scene_file(look, sid, vis, tm["dur"], cue, tm["lead"] + tm["narr"], last=i == len(L["beats"]) - 1))
+            scene_file(look, sid, vis, tm["dur"], cue, tm["lead"] + tm["narr"], last=i == len(L["beats"]) - 1, tr_in=tr_in, tr_out=tr_out))
         hosts.append(f'<div id="{sid}" data-composition-id="{sid}" data-composition-src="compositions/{sid}.html" '
-                     f'data-start="{tm["start"]:.3f}" data-duration="{tm["dur"]:.3f}" data-track-index="{10 + i % 2}" '
+                     f'data-start="{tm["start"]:.3f}" data-duration="{min(host_dur, total - tm["start"]):.3f}" data-track-index="{10 + i % 2}" '
                      f'data-track-kind="graphics" data-width="{W}" data-height="{Hh}" style="z-index:10"></div>')
     series = meta.get("series", "")
-    dust_html, dust_tw = dust(look, total, int(meta.get("dust", 18)))
+    dust_html, dust_tw = dust(look, total, int(meta.get("dust", 0 if style == "sticker" else 18)))
     captions_host = ""
     if meta.get("captions"):
         (proj / "compositions" / "captions.html").write_text(captions_file(look, L, timing, times, total, W, Hh))
@@ -242,9 +310,7 @@ def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: 
     <style>
       * {{ margin: 0; padding: 0; box-sizing: border-box; }}
       html, body {{ margin: 0; width: {W}px; height: {Hh}px; overflow: hidden; background: {look.bg}; }}
-      #bg {{ background: radial-gradient(120% 90% at 30% 20%, #1c1a18 0%, {look.bg} 60%, #050505 100%); }}
-      #glow {{ background: radial-gradient(closest-side, {look.accent}22, transparent); }}
-      #grain {{ background-image: url('assets/grain.png'); background-repeat: repeat; opacity: 0.06; }}
+      {background_css(look)}
     </style>
   </head>
   <body>
@@ -277,7 +343,7 @@ def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: 
     #chrome-prog {{ position: absolute; left: 0; bottom: 0; width: {W}px; height: 6px; background: {look.accent}; transform-origin: 0 50%; }}
   </style>
   <div id="root" data-composition-id="chrome" data-width="{W}" data-height="{Hh}">
-    <div id="chrome-rail">{series}</div>
+    <div id="chrome-rail">{series if style != "sticker" else ""}</div>
     <div id="chrome-prog" data-layout-ignore></div>
   </div>
   <script>
@@ -300,7 +366,7 @@ def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: 
     result["gates"] = H.gates(proj, mids)
     if render:
         name = Path(lesson_path).parent.name
-        target = out / f"{name}_{meta.get('aspect', '4:3').replace(':', 'x')}{'' if render == 'final' else '_draft'}.mp4"
+        target = out / f"{name}_{aspect.replace(':', 'x')}{'' if render == 'final' else '_draft'}.mp4"
         log(f"  rendering ({render}) -> {target}")
         H.render(proj, target, render)
         thumb = target.with_name(target.stem + "_thumbnail.png")
@@ -323,7 +389,7 @@ def script_markdown(L: dict) -> str:
         rows.append(f"| {b['id']} | {b['act']} | {b['narration']}{flag} | {v['type']}: {screen} |")
     rep = schema.lint(L)
     out = [f"# {L['meta']['title']}", f"_{L['meta'].get('series', '')} · {rep['stats']['words']} words · "
-           f"~{rep['stats']['est_minutes']} min · {L['meta'].get('aspect', '4:3')}_", "",
+           f"~{rep['stats']['est_minutes']} min · {aspect_of(L['meta'])}_", "",
            "## Learning goals", *[f"- {g}" for g in L["meta"].get("learning_goals", [])], "",
            "## Principles", *[f"{i + 1}. **{p['name']}** — {p.get('line', '')}" for i, p in enumerate(L.get("principles", []))], "",
            "## Script", *rows, "", "## Sources", *[f"- [{s['id']}] {s['cite']}" + (f" — {s['url']}" if s.get('url') else '')

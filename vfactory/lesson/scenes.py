@@ -27,19 +27,28 @@ class Look:
     READ = 1 / 30  # the readable floor: 36 px on a 1080 short side (a 4:3 frame seen ~480 px wide on a phone)
     CONCEPT_B = "#E77A5F"  # coral: the second idea's colour (the first is the brand accent, gold in the book series)
 
-    def __init__(self, brand: dict, width: int, height: int, lang: str = "en", concepts: list[dict] | None = None):
+    def __init__(self, brand: dict, width: int, height: int, lang: str = "en", concepts: list[dict] | None = None,
+                 style: str = "dark", cast: list[dict] | None = None):
         self.w, self.h = width, height
         self.t = LABELS.get(lang, LABELS["en"])
+        self.style = style if style in ("dark", "sticker") else "dark"
+        sticker = self.style == "sticker"
+        if sticker:  # light paper: the sticker tokens; `brand` holds only the lesson's own overrides (meta.look)
+            from .sticker import PALETTE as P
+
+            brand = {"primary_color": P["gold"], "secondary_color": P["bg"], "text_color": P["ink"], "font": "Inter",
+                     "concept_b": P["coral"], **brand}
         self.accent = brand.get("primary_color", "#FF4F00")
         self.bg = brand.get("secondary_color", "#0E0E0E")
         self.ink = brand.get("text_color", "#F2EDE4")
-        self.muted = "#9A9388"
+        self.muted = "#6F6559" if sticker else "#9A9388"
         self.sans = f"'{brand.get('font', 'Inter')}'"
-        self.serif = "'EB Garamond'"
+        self.serif = self.sans if sticker else "'EB Garamond'"
         self.u = min(width, height)  # layout unit
         # two concept colours held for the whole film: idea A in the accent, idea B in coral (pictures, numbers, highlights)
         self.colors = {"a": brand.get("concept_a", self.accent), "b": brand.get("concept_b", self.CONCEPT_B)}
         self.concepts = {c["id"]: c for c in (concepts or []) if isinstance(c, dict) and c.get("id")}
+        self.cast = {c["id"]: c for c in (cast or []) if isinstance(c, dict) and c.get("id")}
 
     def px(self, f: float) -> int:
         return int(round(self.u * f))
@@ -98,7 +107,13 @@ def base_css(L: Look, sid: str) -> str:
     #{sid}-wrap .serif {{ font-family: {L.serif}; font-weight: 500; }}
     #{sid}-wrap .muted {{ color: {L.muted}; }}
     #{sid}-wrap .acc {{ color: {L.accent}; }}
-    """
+    """ + (_sticker_css(L, sid) if L.style == "sticker" else "")
+
+
+def _sticker_css(L: Look, sid: str) -> str:
+    from .sticker import base_css as sticker_css
+
+    return sticker_css(L, sid)
 
 
 # ---------------------------------------------------------------- scene types
@@ -606,29 +621,102 @@ def shots(L, sid, v, dur, cue):
         local = (lambda w, d, after=0.0, t0=t0: (_cue_after(cue, w, d + t0, t0 + after - 0.6) - t0) if w else d)
         # the shot's `cue` opens the shot; inside it, its own timings use their own cue fields (e.g. a swap's strike_cue)
         inner = {k: x for k, x in sh.items() if k != "cue"}
+        if sh["type"] == "stage" and v.get("_words"):  # a stage shot's mouths follow the words, on the shot's clock
+            inner["_words"] = [{**w, "start": w["start"] - t0, "end": w["end"] - t0} for w in v["_words"]]
+            inner["_tags"] = sh.get("_tags", [])
         gm, gcss, gtw = GENERATORS[sh["type"]](L, ssid, inner, t1 - t0, local)
         m.append(f'<div id="{ssid}-shot" style="position:absolute;inset:0;"><div id="{ssid}-wrap" style="position:absolute;inset:0;">{gm}</div></div>')
         css.append(gcss)
         tw += [_shift(t, t0) for t in gtw]
-        if i:
-            tw.append(_ft(f"#{ssid}-shot", 'opacity: 0, filter: "blur(8px)"', 'opacity: 1, filter: "blur(0px)", duration: 0.25, ease: "power2.out"', t0))
-        if i < n - 1:
-            tw.append(_ft(f"#{ssid}-shot", 'opacity: 1, filter: "blur(0px)"', 'opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power2.in"',
+        kind_in = sh.get("transition") if sh.get("transition") in TRANSITIONS else None
+        nxt = items[i + 1] if i + 1 < n else {}
+        kind_out = nxt.get("transition") if nxt.get("transition") in TRANSITIONS else None
+        sel = f"#{ssid}-shot"
+        if i and kind_in:  # a shot may enter with a beat transition instead of the blur swap
+            if kind_in == "cut":
+                tw.append(_ft(sel, "opacity: 0", 'opacity: 1, duration: 0.01, ease: "none"', t0))
+            else:
+                tw += [_shift(t, t0) for t in enter_tweens(L, ssid, kind_in, sh.get("transition_at"), sel)]
+        elif i:
+            tw.append(_ft(sel, 'opacity: 0, filter: "blur(8px)"', 'opacity: 1, filter: "blur(0px)", duration: 0.25, ease: "power2.out"', t0))
+        if i < n - 1 and kind_out:
+            ex = exit_tweens(L, ssid, kind_out, t1, sel)
+            if kind_out in ("cut", "circle"):  # the old shot holds (under the iris) and then goes
+                ex = [_ft(sel, "opacity: 1", 'opacity: 0, duration: 0.01, ease: "none"', t1 + (0.62 if kind_out == "circle" else 0.0), later=True)]
+            tw += ex
+        elif i < n - 1:
+            tw.append(_ft(sel, 'opacity: 1, filter: "blur(0px)"', 'opacity: 0, filter: "blur(8px)", duration: 0.2, ease: "power2.in"',
                           t1 - 0.05, later=True))
     return f'<div id="{sid}-c" style="position:absolute;inset:0;">{"".join(m)}</div>', "\n".join(css), tw
 
 
 GENERATORS["shots"] = shots
 
+from . import stage  # noqa: E402,F401  (rigged characters on a sticker set; registers itself in GENERATORS)
 
-def scene_file(L: Look, sid: str, visual: dict, dur: float, cue, narr: float, last: bool) -> str:
+
+# ---------------------------------------------------------------- transitions between beats
+
+TRANSITIONS = ("whip", "zoom", "circle", "slide", "cut")
+# how long the outgoing scene stays on screen after the boundary (its host is extended by this much)
+OVERLAP = {"slide": 0.5, "whip": 0.1, "zoom": 0.25, "circle": 0.62, "cut": 0.0}
+
+
+def transition_of(beat: dict, i: int, style: str = "dark") -> str | None:
+    """How beat i enters: its own `transition` (on the beat or on its visual), else in a sticker film a page slide and a
+    whip-pan in turn, else None (the default blur swap of the dark look)."""
+    t = beat.get("transition") or (beat.get("visual") or {}).get("transition")
+    if t in TRANSITIONS:
+        return t
+    if i == 0:
+        return None
+    return ("slide" if i % 2 else "whip") if style == "sticker" else None
+
+
+def enter_tweens(L: Look, sid: str, kind: str, at: list | None = None, sel: str | None = None) -> list[str]:
+    sel = sel or f"#{sid}-tx"
+    if kind == "slide":  # a page slides in from the right while the last one slides out to the left
+        return [_ft(sel, f"x: {L.w}", 'x: 0, duration: 0.55, ease: "power2.inOut"', 0)]
+    if kind == "whip":  # a fast pan with motion blur, settling hard
+        return [_ft(sel, f'x: {L.w * 0.55:.0f}, opacity: 0, filter: "blur(18px)"', 'x: 0, opacity: 1, filter: "blur(0px)", duration: 0.42, ease: "expo.out"', 0)]
+    if kind == "zoom":  # through the last picture into this one
+        return [_ft(sel, 'scale: 0.72, opacity: 0, transformOrigin: "50% 50%"', 'scale: 1, opacity: 1, transformOrigin: "50% 50%", duration: 0.5, ease: "power3.out"', 0)]
+    if kind == "circle":  # an iris opening on the new picture
+        cx, cy = (at or [0.5, 0.55])[:2]
+        return [_ft(sel, f'clipPath: "circle(0% at {cx * 100:.0f}% {cy * 100:.0f}%)"',
+                    f'clipPath: "circle(78% at {cx * 100:.0f}% {cy * 100:.0f}%)", duration: 0.6, ease: "power2.inOut"', 0)]
+    return []
+
+
+def exit_tweens(L: Look, sid: str, kind: str, dur: float, sel: str | None = None) -> list[str]:
+    sel = sel or f"#{sid}-tx"
+    if kind == "slide":
+        return [_ft(sel, "x: 0", f'x: {-L.w}, duration: 0.55, ease: "power2.inOut"', dur - 0.05, later=True)]
+    if kind == "whip":
+        return [_ft(sel, 'x: 0, opacity: 1, filter: "blur(0px)"', f'x: {-L.w * 0.55:.0f}, opacity: 0, filter: "blur(18px)", duration: 0.22, ease: "power3.in"',
+                    dur - 0.14, later=True)]
+    if kind == "zoom":
+        return [_ft(sel, 'scale: 1, opacity: 1, transformOrigin: "50% 50%"', 'scale: 2.4, opacity: 0, transformOrigin: "50% 50%", duration: 0.42, ease: "power2.in"',
+                    dur - 0.2, later=True)]
+    return []  # circle: the old picture holds while the iris opens over it; cut: nothing
+
+
+def scene_file(L: Look, sid: str, visual: dict, dur: float, cue, narr: float, last: bool,
+               tr_in: str | None = None, tr_out: str | None = None) -> str:
     gen = GENERATORS[visual["type"]]
     if visual["type"] == "question":
         markup, css, tweens = gen(L, sid, visual, dur, cue, narr)
     else:
         markup, css, tweens = gen(L, sid, visual, dur, cue)
+    if L.style == "sticker":
+        from .sticker import stickerize
+
+        markup = stickerize(markup)
+    if tr_in or tr_out:  # one layer that carries the whole picture in and out
+        markup = f'<div id="{sid}-tx" style="position:absolute;inset:0;">{markup}</div>'
+        tweens += enter_tweens(L, sid, tr_in, visual.get("transition_at")) if tr_in else []
     if not last and not visual.get("_cont_next"):  # a board that the next beat continues does not blur away
-        tweens.append(_exit(f"#{sid}-c", dur))
+        tweens += exit_tweens(L, sid, tr_out, dur) if tr_out else [_exit(f"#{sid}-c", dur)]
     hold = ' data-hold="true"' if visual.get("_hold") else ""  # a declared still moment (the gate does not flag it)
     return f"""<template>
   <style>

@@ -58,6 +58,9 @@ VISUALS = {
                                                     "prefix", "suffix", "decimals", "max"]},
     "board": {"required": [], "optional": ["regions", "board_id", "focus", "overview", "overview_cue", "line", "line_cue", "kicker",
                                            "start"]},
+    # sticker story scenes (stage.py, characters.py): rigged characters act on a flat set (docs/plans/story-sticker-agent.md §3)
+    "stage": {"required": ["characters"], "optional": ["set", "props", "bubble", "bubbles", "caption", "caption_cue", "transition",
+                                                       "transition_at"]},
 }
 # fields any picture (a visual, a shot, an item, a region) may carry
 COMMON = ["concept", "color", "action"]
@@ -252,7 +255,9 @@ def storyboard_lint(L: dict) -> list[str]:
         if text_led(s["v"]):
             w.append(f"{s['beat']}: the {which} content picture is text-led ({s['v']['type']}): open and close on an image")
     for s in shots:
-        if s["seconds"] > SHOT_MAX_S and not s["hold"] and s["v"].get("type") not in ("board", "scenario", "chart", "timeline"):
+        moving_stage = s["v"].get("type") == "stage" and (s["v"].get("bubble") or s["v"].get("bubbles") or s["v"].get("props")
+                                                          or any(c.get("cues") for c in s["v"].get("characters") or [] if isinstance(c, dict)))
+        if s["seconds"] > SHOT_MAX_S and not s["hold"] and not moving_stage and s["v"].get("type") not in ("board", "scenario", "chart", "timeline"):
             where = f"{s['beat']}" + (f" shot {s['i']}" if s["i"] else "")
             w.append(f"{where}: one picture held ~{s['seconds']:.1f}s (> {SHOT_MAX_S:.0f}s): add a shot on a cue word, or "
                      "declare 'hold' on the beat")
@@ -335,6 +340,9 @@ def lint(L: dict) -> dict:
     ce, cw = concept_lint(L)
     errors += ce
     warns += cw
+    se, sw = story_lint(L)
+    errors += se
+    warns += sw
     for b in beats:  # a strike that waits for a word the narrator never says lands at a guess
         for _, path, el in pictures({"beats": [b]}):
             for k in ("strike_cue",):
@@ -407,3 +415,115 @@ def _overlap(a: str, b: str) -> float:
     wa = [w.lower() for w in words(a)]
     wb = {w.lower() for w in words(b)}
     return sum(1 for w in wa if w in wb) / max(1, len(wa))
+
+
+def _stages(v: dict):
+    if v.get("type") == "stage":
+        yield "visual", v
+    elif v.get("type") == "shots":
+        for j, sh in enumerate(v.get("shots") or []):
+            if isinstance(sh, dict) and sh.get("type") == "stage":
+                yield f"visual.shots[{j}]", sh
+
+
+def story_lint(L: dict) -> tuple[list[str], list[str]]:
+    """The sticker story layer: `meta.style`, `meta.cast` (one registry of characters; a beat refers to them by id and its
+    look must match), `stage` scenes (set, characters, expressions, actions, cues, bubble, props) and beat transitions."""
+    from .characters import ACTIONS, EXPRESSIONS, look_problems
+    from .metaphors import ICONS
+    from .scenes import TRANSITIONS
+    from .stage import SETS, bubbles_of
+
+    errors, warns = [], []
+    meta = L["meta"]
+    if meta.get("style") not in (None, "dark", "sticker"):
+        errors.append(f"meta.style '{meta['style']}' is 'dark' (default) or 'sticker'")
+    if meta.get("aspect") not in (None, "4:3", "16:9", "9:16", "1:1"):
+        errors.append(f"meta.aspect '{meta['aspect']}' is one of 4:3, 16:9, 9:16, 1:1")
+    cast_list = meta.get("cast")
+    cast: dict[str, dict] = {}
+    if cast_list is not None:
+        if not isinstance(cast_list, list):
+            errors.append("meta.cast is a list of {id, name, look, role}")
+            cast_list = []
+        for c in cast_list:
+            if not isinstance(c, dict) or not c.get("id"):
+                errors.append(f"meta.cast: every character needs an 'id': {c!r}")
+                continue
+            if c["id"] in cast:
+                errors.append(f"meta.cast: duplicate id '{c['id']}'")
+            cast[c["id"]] = c
+            if not c.get("name"):
+                warns.append(f"meta.cast '{c['id']}': give the character a 'name' (its name tag)")
+            errors += [f"meta.cast '{c['id']}': {p}" for p in look_problems(c.get("look") or {})]
+    seen_look: dict[str, dict] = {cid: dict(c.get("look") or {}) for cid, c in cast.items()}
+    for b in L["beats"]:
+        bid = b["id"]
+        tr = b.get("transition") or (b.get("visual") or {}).get("transition")
+        if tr is not None and tr not in TRANSITIONS:
+            errors.append(f"{bid}: transition '{tr}' is one of {TRANSITIONS}")
+        narr = b.get("narration", "").lower()
+
+        def said(word: str) -> bool:
+            return bool(re.search(r"(?<!\w)" + re.escape(word.lower()), narr))
+
+        for path, st in _stages(b["visual"]):
+            where = f"{bid}: {path}"
+            if st.get("set", "plain") not in SETS:
+                errors.append(f"{where}: set '{st.get('set')}' is one of {SETS}")
+            chars = st.get("characters")
+            if not isinstance(chars, list) or not 1 <= len(chars) <= 3:
+                errors.append(f"{where}: a stage has 1-3 characters")
+                chars = chars if isinstance(chars, list) else []
+            ids = []
+            for k, ch in enumerate(chars):
+                if not isinstance(ch, dict) or not ch.get("id"):
+                    errors.append(f"{where}.characters[{k}]: needs an 'id' from meta.cast")
+                    continue
+                cid = ch["id"]
+                ids.append(cid)
+                if cid not in cast:
+                    errors.append(f"{where}: unknown character '{cid}' (register it once in meta.cast: id, name, look, role)")
+                lk = ch.get("look") or {}
+                errors += [f"{where} '{cid}': {p}" for p in look_problems(lk)]
+                prev = seen_look.setdefault(cid, {})
+                for key, val in lk.items():
+                    if key in prev and prev[key] != val:
+                        errors.append(f"{where} '{cid}': look.{key} is {val!r} here but {prev[key]!r} elsewhere "
+                                      "(one look per character for the whole film)")
+                    prev.setdefault(key, val)
+                if ch.get("x") is not None and not (isinstance(ch["x"], (int, float)) and 0 <= ch["x"] <= 1):
+                    errors.append(f"{where} '{cid}': x is a fraction of the width (0-1)")
+                for e in [ch] + [c for c in ch.get("cues") or [] if isinstance(c, dict)]:
+                    if e.get("expression") not in (None, *EXPRESSIONS):
+                        errors.append(f"{where} '{cid}': expression '{e['expression']}' is one of {EXPRESSIONS}")
+                    if e.get("action") not in (None, *ACTIONS):
+                        errors.append(f"{where} '{cid}': action '{e['action']}' is one of {ACTIONS}")
+                for c in ch.get("cues") or []:
+                    if not isinstance(c, dict) or not (c.get("cue") or c.get("at") is not None):
+                        errors.append(f"{where} '{cid}': every cue names its word ('cue') or a time ('at')")
+                    elif c.get("cue") and not said(c["cue"]):
+                        warns.append(f"{where} '{cid}': cue '{c['cue']}' is not in the narration")
+            xs = sorted(float(c.get("x")) for c in chars if isinstance(c, dict) and isinstance(c.get("x"), (int, float)))
+            if any(b2 - a < 0.16 for a, b2 in zip(xs, xs[1:])):
+                warns.append(f"{where}: two characters stand closer than 0.16 of the width: they will overlap")
+            for bub in bubbles_of(st):
+                if bub.get("who") not in ids:
+                    errors.append(f"{where}: bubble 'who' must be one of this stage's characters {ids}, not {bub.get('who')!r}")
+                if len(bub["text"]) > 60:
+                    warns.append(f"{where}: bubble text {len(bub['text'])} chars: keep a speech bubble to one short line")
+                if bub.get("cue") and not said(bub["cue"]):
+                    warns.append(f"{where}: bubble cue '{bub['cue']}' is not in the narration")
+            for k, p in enumerate(st.get("props") or []):
+                key = p.get("icon") or (meta.get("concepts") and next((c.get("visual") for c in meta["concepts"]
+                                                                       if c.get("id") == p.get("concept")), None))
+                if key not in ICONS:
+                    errors.append(f"{where}.props[{k}]: icon '{key}' is not in ICONS")
+                for ax in ("x", "y"):
+                    if p.get(ax) is not None and not (isinstance(p[ax], (int, float)) and 0 <= p[ax] <= 1):
+                        errors.append(f"{where}.props[{k}]: {ax} is a fraction (0-1)")
+                if p.get("cue") and not said(p["cue"]):
+                    warns.append(f"{where}.props[{k}]: cue '{p['cue']}' is not in the narration")
+    if any(True for b in L["beats"] for _ in _stages(b["visual"])) and cast_list is None:
+        errors.append("stage scenes need meta.cast: register every character once (id, name, look, role)")
+    return errors, warns
