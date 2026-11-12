@@ -1,0 +1,1526 @@
+{
+ "meta": {
+  "series": "Khung tư duy · Tập 1",
+  "title": "Tư duy từ gốc",
+  "subtitle": "Trăm rưỡi triệu, một tên lửa và một nồi phở",
+  "topic": "books",
+  "angle": "concept",
+  "lang": "vi",
+  "style": "sticker",
+  "aspect": "16:9",
+  "target_minutes": [
+   4,
+   5
+  ],
+  "voice": "omnivoice:male, middle-aged, very low pitch",
+  "voice_seed": 99,
+  "speed": 0.88,
+  "music": "chill",
+  "captions": true,
+  "look": {
+   "primary_color": "#E8B06A",
+   "secondary_color": "#12100E"
+  },
+  "disclaimer": "Nội dung giáo dục; nhân vật hư cấu, câu chuyện thật kể lại từ nguồn công khai.",
+  "learning_goals": [
+   "Kể lại câu chuyện kỹ thuật 2001–2008: Musk được báo giá khoảng 15–20 triệu đô mỗi tên lửa (theo lời ông), tự hỏi tên lửa làm từ gì, ước tính vật liệu chỉ khoảng 2% giá một tên lửa thông thường; Falcon 1 hỏng ba lần rồi lên quỹ đạo 28/9/2008; NASA góp tiền",
+   "Phân biệt lối mòn (gói gia vị: làm giống người khác, sửa chút ít) với tư duy từ gốc (nồi xương: biết từng nguyên liệu và giá của nó)",
+   "Dùng ba việc trước một cái giá trọn gói: tách tới nguyên liệu; tách luật khỏi thói quen; lắp lại, rồi để thực tế chấm; và biết chỗ ẩn dụ dừng lại"
+  ],
+  "cast": [
+   {
+    "id": "linh",
+    "name": "Linh",
+    "tag": "Linh · 27 · kế toán",
+    "role": "protagonist",
+    "look": {
+     "skin": "#F1C9A5",
+     "hair": "bob",
+     "hair_color": "#2B2321",
+     "shirt": "#E77A5F",
+     "pants": "#3D4B63",
+     "outfit": "shirt"
+    }
+   },
+   {
+    "id": "vy",
+    "name": "Vy",
+    "tag": "Vy · đồng nghiệp",
+    "role": "friend",
+    "look": {
+     "skin": "#EBC09A",
+     "hair": "ponytail",
+     "hair_color": "#3A2A24",
+     "shirt": "#7DB892",
+     "pants": "#4A4655",
+     "outfit": "tee",
+     "glasses": true
+    }
+   },
+   {
+    "id": "me",
+    "name": "Mẹ Linh",
+    "tag": "Mẹ Linh",
+    "role": "family",
+    "look": {
+     "skin": "#E2B48C",
+     "hair": "bun",
+     "hair_color": "#8A8580",
+     "shirt": "#C98BB0",
+     "pants": "#3D4B63",
+     "outfit": "shirt",
+     "age": "older"
+    }
+   },
+   {
+    "id": "musk",
+    "name": "Elon Musk",
+    "role": "real person",
+    "real": true,
+    "name_tag": "Elon Musk",
+    "tag": "Elon Musk",
+    "look": {
+     "skin": "#F1C9A5",
+     "hair": "short",
+     "hair_color": "#5A4A42",
+     "shirt": "#5B6B7F",
+     "pants": "#2F3542",
+     "outfit": "jacket"
+    }
+   }
+  ],
+  "concepts": [
+   {
+    "id": "tu_goc",
+    "visual": "pot",
+    "color": "a",
+    "shows": "nồi nước dùng ninh từ xương: biết nồi có gì, mỗi thứ góp gì và giá bao nhiêu, nên tự lắp được phương án khác",
+    "omits": "ninh xương chậm và tốn sức, không ai làm vậy cho mọi bữa; đầu bếp giỏi vẫn học người đi trước; có món phải theo đúng công thức (an toàn thực phẩm)"
+   },
+   {
+    "id": "loi_mon",
+    "visual": "packet",
+    "color": "b",
+    "shows": "gói gia vị (và gói nhượng quyền trọn gói): nấu đúng hướng dẫn, trả cái giá ai cũng trả, không cần biết bên trong có gì",
+    "omits": "đi theo lối mòn thường đúng và tiết kiệm sức; một thương hiệu có thể đáng tiền khi mở mặt bằng; gói không có gì xấu"
+   }
+  ],
+  "brief": {
+   "target_viewer": "Người Việt 20–35 tuổi đi làm, đang nghĩ tới việc kinh doanh nhỏ hoặc sắp trả một khoản lớn vì 'ai cũng thế' (giả định của người viết, chủ kênh xác nhận lại)",
+   "format": "Chuyện đời thường kiểu sticker, 16:9, 4–5 phút: một nhân vật hư cấu (Linh) bện với câu chuyện có thật (SpaceX 2001–2008), Pixar story spine, một ẩn dụ (gói gia vị và nồi xương), một bảng ba việc, một ví dụ đổi trạng thái",
+   "central_question": "Trước một cái giá trọn gói ai cũng trả, nên hỏi gì, và tư duy từ gốc giúp tới đâu?",
+   "transformation": "Trước: giá đắt là vì nó vốn đắt, ai cũng làm thế thì làm theo. Sau: kể lại được Moscow – làm từ gì – 2% – ba lần hỏng – NASA, tách một báo giá thường ngày thành nguyên liệu, luật và thói quen, lắp lại và thử, và biết khi nào cứ dùng gói gia vị",
+   "discovery_goal": "Tìm kiếm (\"tư duy từ gốc\", \"first principles thinking\", \"nhượng quyền trà sữa\", \"Elon Musk first principles\") và đề xuất từ video tư duy, kinh doanh nhỏ",
+   "primary_conversion": "comment answering the end-card question",
+   "share_recipient": "Một người bạn sắp mua một gói nhượng quyền hay một khóa học đắt vì 'ai cũng làm thế'",
+   "evidence": "Wired 10/2012 (ba chuyến sang Nga, 15–20 triệu đô mỗi quả, vật liệu ~2% giá thường thấy); TED 2013 (định nghĩa); Vance 2015; Wikipedia Falcon 1 / Spaceflight Now; NASA COTS 2006, CRS 23/12/2008; Musk / Kevin Rose 2012 (tốn sức); Wikipedia SpaceX Merlin; Tim Urban 2015; các con số của Linh là số minh họa",
+   "constraints": "16:9 sticker, nhân vật hư cấu được nói rõ một lần; Musk là hình sticker chung có bảng tên, không chân dung; chỉ dùng con số của chính Musk (15–20 triệu đô), nói rõ 2% so với cái gì; nói rõ vai trò của NASA; một câu trung lập về Musk; số đọc bằng chữ; một CTA ở thẻ cuối"
+  },
+  "youtube": {
+   "title": "Tư duy từ gốc: trăm rưỡi triệu, một tên lửa và nồi phở",
+   "thumbnail_text": "Trăm rưỡi triệu. Làm từ gì?",
+   "description": "Linh (nhân vật hư cấu) được mời mua một gói nhượng quyền trà sữa trăm rưỡi triệu, vì ai cũng làm thế. Câu chuyện có thật giúp cô: năm 2001–2002, Elon Musk sang Nga hỏi mua tên lửa và, theo lời ông, được báo giá khoảng 15–20 triệu đô mỗi quả; ông tự hỏi tên lửa làm từ gì. Nguồn: xem danh sách nguồn bên dưới.",
+   "chapters": [],
+   "tags": [
+    "tư duy từ gốc",
+    "first principles",
+    "first principles thinking",
+    "khung tư duy",
+    "Elon Musk",
+    "SpaceX",
+    "Falcon 1",
+    "nhượng quyền",
+    "kinh doanh nhỏ",
+    "trà sữa online",
+    "ra quyết định",
+    "kỹ năng tư duy"
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "wired2012",
+   "cite": "Chris Anderson, 'Elon Musk's Mission to Mars' (Q&A), Wired, October 2012: 'I went to Russia three times, in late 2001 and 2002, to see if I could negotiate the purchase of two ICBMs'; 'They would have cost me $15 million to $20 million each'; rocket made of aerospace-grade aluminum alloys, plus some titanium, copper and carbon fiber; materials cost 'around 2 percent of the typical price' (wording cross-read from several pages quoting it; page not opened directly)",
+   "url": "https://www.wired.com/2012/10/ff-elon-musk-qa/"
+  },
+  {
+   "id": "ted2013",
+   "cite": "Elon Musk in conversation with Chris Anderson, TED 2013: first principles = 'boil things down to their fundamental truths and reason up from there, as opposed to reasoning by analogy'; through most of life we reason by analogy, 'copying what other people do with slight variations' (quoted by CNBC 2020, NBC Chicago, Business Insider 2013)",
+   "url": "https://www.ted.com/talks/elon_musk_the_mind_behind_tesla_spacex_solarcity"
+  },
+  {
+   "id": "rose2012",
+   "cite": "Elon Musk, interview with Kevin Rose (Foundation, 2012), quoted by CNBC (2020) and Weinberg & McCann, Super Thinking (2019): first principles 'takes a lot more mental energy'; in daily life we reason by analogy"
+  },
+  {
+   "id": "vance2015",
+   "cite": "Ashlee Vance, Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future, Ecco, 2015; Bloomberg excerpt (May 2015): Moscow trips with Jim Cantrell and Adeo Ressi (October 2001) and Mike Griffin (February 2002)"
+  },
+  {
+   "id": "falcon1",
+   "cite": "Wikipedia 'Falcon 1' and 'RatSat'; Spaceflight Now launch reports: flight 1, 24 March 2006 (fuel leak, fire); flight 2, 21 March 2007 (reached space, no orbit); flight 3, 2 August 2008 US time / 3 August UTC (stages collided); flight 4, 28 September 2008: first privately developed liquid-fuel rocket to reach Earth orbit, carrying RatSat, a 165 kg dummy payload",
+   "url": "https://en.wikipedia.org/wiki/Falcon_1"
+  },
+  {
+   "id": "musk_money",
+   "cite": "Elon Musk, CBS 60 Minutes (2012, via Space.com) and IAC 2017: SpaceX had money for about three launch attempts (his words; phrasing varies)"
+  },
+  {
+   "id": "nasa_cots",
+   "cite": "NASA Commercial Orbital Transportation Services award, August 2006: SpaceX about $278 million (later about $396 million) (Wikipedia 'COTS'; SpaceNews)",
+   "url": "https://en.wikipedia.org/wiki/Commercial_Orbital_Transportation_Services"
+  },
+  {
+   "id": "nasa_crs",
+   "cite": "NASA release, 23 December 2008: Commercial Resupply Services — SpaceX 12 flights, about $1.6 billion (reported by Spaceflight Now, NASASpaceflight.com, SpaceNews)"
+  },
+  {
+   "id": "urban2015",
+   "cite": "Tim Urban, 'The Cook and the Chef: Musk's Secret Sauce', Wait But Why, November 2015: the chef reasons from first principles (raw edible ingredients), the cook follows recipes; this episode's phở packet vs bone broth is our Vietnamese adaptation",
+   "url": "https://waitbutwhy.com/2015/11/the-cook-and-the-chef-musks-secret-sauce.html"
+  },
+  {
+   "id": "merlin",
+   "cite": "Wikipedia, 'SpaceX Merlin': the Merlin engine's pintle injector traces back to the Apollo lunar module descent engine; propulsion led by experienced engineer Tom Mueller",
+   "url": "https://en.wikipedia.org/wiki/SpaceX_Merlin"
+  },
+  {
+   "id": "minhhoa",
+   "cite": "Số minh họa của kênh (ước tính làm tròn, không phải khảo sát giá): gói nhượng quyền trà sữa 150 triệu đồng = nguyên liệu ban đầu 10 + máy móc 40 + thương hiệu, công thức 100; bản tự dựng bán online 10 + 25 + 5 = khoảng 40 triệu; khóa học tiếng Anh 30 triệu đồng"
+  }
+ ],
+ "principles": [
+  {
+   "name": "Tách tới nguyên liệu",
+   "line": "Thứ này làm từ gì, và mỗi phần thật sự giá bao nhiêu?"
+  },
+  {
+   "name": "Tách luật khỏi thói quen",
+   "line": "Cái gì là giới hạn thật, cái gì chỉ là ai cũng làm thế?"
+  },
+  {
+   "name": "Lắp lại, rồi để thực tế chấm",
+   "line": "Dựng phương án mới từ những mảnh bắt buộc, rồi thử."
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "act": "hook",
+   "spine": "cho_den_mot_ngay",
+   "narration": "Linh soát hóa đơn mỗi ngày. Vậy mà trước báo giá trăm rưỡi triệu, cô suýt ký mà không hỏi gì.",
+   "visual": {
+    "type": "stage",
+    "set": "office",
+    "characters": [
+     {
+      "id": "linh",
+      "x": 0.36,
+      "expression": "neutral",
+      "action": "idle",
+      "cues": [
+       {
+        "cue": "vậy mà",
+        "expression": "worried"
+       },
+       {
+        "cue": "suýt ký",
+        "expression": "surprised",
+        "action": "jump"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "icon": "receipt",
+      "x": 0.62,
+      "y": 0.36,
+      "size": 0.13
+     },
+     {
+      "icon": "cash",
+      "x": 0.8,
+      "y": 0.5,
+      "cue": "trăm rưỡi",
+      "color": "b",
+      "size": 0.14
+     }
+    ],
+    "caption": "Báo giá: 150 triệu",
+    "caption_cue": "báo giá",
+    "action": "sững người"
+   },
+   "sources": [
+    "minhhoa"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "h2",
+   "act": "context",
+   "spine": "cho_den_mot_ngay",
+   "narration": "Có người từng đứng trước một báo giá tên lửa, và hỏi: nó làm từ gì? Cách nghĩ đó có tên: tư duy từ gốc.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "rocket",
+      "color": "b",
+      "kicker": "Một báo giá khác · 2001",
+      "line": "Tên lửa làm từ gì?",
+      "line_cue": "nó làm",
+      "action": "hiện giá"
+     },
+     {
+      "type": "icon",
+      "concept": "tu_goc",
+      "steam": true,
+      "kicker": "Có một cái tên",
+      "cue": "cách nghĩ",
+      "line": "Tư duy từ gốc",
+      "line_cue": "tư duy",
+      "action": "bốc hơi"
+     }
+    ]
+   },
+   "transition": "whip",
+   "sources": [
+    "wired2012"
+   ]
+  },
+  {
+   "id": "t0",
+   "act": "context",
+   "spine": "cho_den_mot_ngay",
+   "narration": "",
+   "visual": {
+    "type": "title",
+    "title": "Tư duy từ gốc",
+    "kicker": "Khung tư duy · Tập 1",
+    "subtitle": "Trà sữa, tên lửa và một nồi phở",
+    "hold": 3.0
+   }
+  },
+  {
+   "id": "b01",
+   "act": "context",
+   "spine": "ngay_xua",
+   "narration": "Mỗi ngày, Linh, hai mươi bảy tuổi, làm kế toán ở quận Bảy. Tối về phòng trọ, cô pha thử trà sữa, mơ một quán online nhỏ của riêng mình.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stage",
+      "set": "office",
+      "characters": [
+       {
+        "id": "linh",
+        "x": 0.34,
+        "expression": "neutral",
+        "action": "talk"
+       }
+      ],
+      "props": [
+       {
+        "icon": "laptop",
+        "x": 0.62,
+        "y": 0.5,
+        "size": 0.14
+       }
+      ],
+      "caption": "Q.7 · kế toán",
+      "action": "làm việc"
+     },
+     {
+      "type": "stage",
+      "set": "room",
+      "characters": [
+       {
+        "id": "linh",
+        "x": 0.34,
+        "expression": "happy",
+        "action": "idle",
+        "cues": [
+         {
+          "cue": "mơ một",
+          "action": "think"
+         }
+        ]
+       }
+      ],
+      "props": [
+       {
+        "icon": "tea",
+        "x": 0.6,
+        "y": 0.5,
+        "cue": "trà sữa",
+        "size": 0.14
+       },
+       {
+        "icon": "phone",
+        "x": 0.78,
+        "y": 0.34,
+        "cue": "online"
+       }
+      ],
+      "bubble": {
+       "who": "linh",
+       "text": "Một quán online nhỏ",
+       "cue": "mơ một",
+       "style": "think"
+      },
+      "transition": "whip",
+      "cue": "tối về",
+      "action": "pha thử"
+     }
+    ]
+   },
+   "transition": "slide"
+  },
+  {
+   "id": "b02",
+   "act": "story",
+   "spine": "cho_den_mot_ngay",
+   "narration": "Cho đến một ngày, Vy, đồng nghiệp, gửi cô một gói nhượng quyền trà sữa: máy, công thức, thương hiệu, trọn gói trăm rưỡi triệu. Vy bảo: ai cũng làm thế cho nhanh.",
+   "visual": {
+    "type": "stage",
+    "set": "cafe",
+    "characters": [
+     {
+      "id": "linh",
+      "x": 0.3,
+      "expression": "neutral",
+      "action": "idle",
+      "cues": [
+       {
+        "cue": "trăm rưỡi",
+        "expression": "surprised"
+       }
+      ]
+     },
+     {
+      "id": "vy",
+      "x": 0.68,
+      "expression": "happy",
+      "action": "talk",
+      "cues": [
+       {
+        "cue": "vy bảo",
+        "action": "point"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "icon": "phone",
+      "x": 0.5,
+      "y": 0.3,
+      "cue": "gửi cô",
+      "size": 0.12
+     }
+    ],
+    "bubble": {
+     "who": "vy",
+     "text": "Ai cũng làm thế cho nhanh!",
+     "cue": "ai cũng"
+    },
+    "caption": "Trọn gói: 150 triệu",
+    "caption_cue": "trọn gói",
+    "action": "gửi báo giá"
+   },
+   "transition": "slide",
+   "sources": [
+    "minhhoa"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b03",
+   "act": "complication",
+   "spine": "vi_vay",
+   "narration": "Vì vậy Linh hỏi trong nhóm bán hàng. Ai cũng bảo: giá thị trường thế đấy. Gói ấy ngốn gần hết tiền tiết kiệm, và ưu đãi chỉ đến Chủ nhật.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stage",
+      "set": "phone",
+      "characters": [
+       {
+        "id": "linh",
+        "x": 0.24,
+        "expression": "thinking",
+        "action": "think"
+       }
+      ],
+      "props": [
+       {
+        "icon": "chat",
+        "x": 0.62,
+        "y": 0.36,
+        "cue": "hỏi trong",
+        "size": 0.14
+       }
+      ],
+      "caption": "Giá thị trường thế đấy",
+      "caption_cue": "ai cũng",
+      "action": "hỏi nhóm"
+     },
+     {
+      "type": "stage",
+      "set": "room",
+      "characters": [
+       {
+        "id": "linh",
+        "x": 0.36,
+        "expression": "worried",
+        "action": "idle",
+        "cues": [
+         {
+          "cue": "ưu đãi",
+          "expression": "sad",
+          "action": "facepalm"
+         }
+        ]
+       }
+      ],
+      "props": [
+       {
+        "icon": "cash",
+        "x": 0.64,
+        "y": 0.4,
+        "size": 0.13
+       },
+       {
+        "icon": "clock",
+        "x": 0.8,
+        "y": 0.28,
+        "cue": "chủ nhật",
+        "color": "b"
+       }
+      ],
+      "caption": "Ưu đãi đến Chủ nhật",
+      "caption_cue": "ưu đãi",
+      "transition": "cut",
+      "cue": "gói ấy",
+      "action": "đếm tiền"
+     }
+    ]
+   },
+   "transition": "whip"
+  },
+  {
+   "id": "b04",
+   "act": "misconception",
+   "spine": "vi_vay",
+   "narration": "Ta hay nghĩ: thứ gì đắt là vì nó vốn đắt; ai cũng trả, chắc giá ấy đúng. Nhưng chưa ai hỏi: cái giá này làm từ gì?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "concept": "loi_mon",
+      "kicker": "Điều ta hay nghĩ",
+      "line": "Đắt vì nó vốn đắt",
+      "line_cue": "thứ gì",
+      "action": "mở gói"
+     },
+     {
+      "type": "icon",
+      "icon": "people",
+      "kicker": "Ai cũng trả giá ấy",
+      "cue": "ai cũng",
+      "line": "Chắc giá ấy đúng?",
+      "line_cue": "chắc",
+      "action": "xếp hàng"
+     },
+     {
+      "type": "icon",
+      "icon": "magnifier",
+      "color": "a",
+      "kicker": "Câu chưa ai hỏi",
+      "cue": "nhưng",
+      "line": "Làm từ gì?",
+      "line_cue": "làm từ",
+      "action": "soi"
+     }
+    ]
+   },
+   "transition": "slide"
+  },
+  {
+   "id": "b05",
+   "act": "story",
+   "spine": "vi_vay",
+   "narration": "Thứ Bảy, Linh về nhà mẹ. Thấy mẹ ninh nồi xương từ sáng, cô bảo: mẹ dùng gói gia vị cho nhanh! Mẹ cười: gói thì nhanh, nhưng con biết trong gói có gì không?",
+   "visual": {
+    "type": "stage",
+    "set": "room",
+    "characters": [
+     {
+      "id": "linh",
+      "x": 0.28,
+      "expression": "happy",
+      "action": "talk"
+     },
+     {
+      "id": "me",
+      "x": 0.72,
+      "expression": "happy",
+      "action": "idle",
+      "cues": [
+       {
+        "cue": "mẹ cười",
+        "action": "nod"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "icon": "pot",
+      "x": 0.5,
+      "y": 0.62,
+      "concept": "tu_goc",
+      "cue": "nồi xương",
+      "size": 0.14
+     },
+     {
+      "icon": "packet",
+      "x": 0.44,
+      "y": 0.3,
+      "concept": "loi_mon",
+      "cue": "gói gia vị",
+      "size": 0.11
+     }
+    ],
+    "bubbles": [
+     {
+      "who": "linh",
+      "text": "Mẹ dùng gói cho nhanh!",
+      "cue": "mẹ dùng"
+     },
+     {
+      "who": "me",
+      "text": "Con biết trong gói có gì không?",
+      "cue": "nhưng con"
+     }
+    ],
+    "caption": "Thứ Bảy · nhà mẹ",
+    "action": "ninh xương"
+   },
+   "transition": "whip"
+  },
+  {
+   "id": "b06",
+   "act": "turn",
+   "spine": "cho_den_khi",
+   "narration": "Cho đến khi, đêm ấy, Linh đọc về một báo giá đắt khác. Linh là nhân vật hư cấu; chuyện cô đọc thì có thật.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stage",
+      "set": "room",
+      "characters": [
+       {
+        "id": "linh",
+        "x": 0.36,
+        "expression": "thinking",
+        "action": "sit"
+       }
+      ],
+      "props": [
+       {
+        "icon": "phone",
+        "x": 0.6,
+        "y": 0.42,
+        "cue": "đọc về",
+        "size": 0.13
+       }
+      ],
+      "caption": "Đêm thứ Bảy",
+      "action": "đọc"
+     },
+     {
+      "type": "icon",
+      "icon": "rocket",
+      "color": "b",
+      "kicker": "Nhân vật hư cấu · chuyện có thật",
+      "cue": "chuyện cô",
+      "line": "Moscow · 2001",
+      "action": "hiện ra",
+      "transition": "zoom"
+     }
+    ]
+   },
+   "transition": "circle"
+  },
+  {
+   "id": "b07",
+   "act": "story",
+   "spine": "cho_den_khi",
+   "narration": "Cuối năm hai nghìn lẻ một, Elon Musk sang Nga hỏi mua tên lửa cũ đã cải tạo. Musk là người gây nhiều tranh cãi; ở đây mình chỉ kể một câu chuyện kỹ thuật.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stage",
+      "set": "plain",
+      "characters": [
+       {
+        "id": "musk",
+        "x": 0.38,
+        "expression": "neutral",
+        "action": "walk_in"
+       }
+      ],
+      "props": [
+       {
+        "icon": "rocket",
+        "x": 0.7,
+        "y": 0.4,
+        "cue": "hỏi mua",
+        "size": 0.16
+       }
+      ],
+      "caption": "Moscow · cuối 2001",
+      "action": "đi tới"
+     },
+     {
+      "type": "icon",
+      "icon": "scale",
+      "kicker": "Một câu chuyện kỹ thuật",
+      "cue": "musk là",
+      "line": "Không đánh giá một con người",
+      "line_cue": "ở đây",
+      "action": "cân"
+     }
+    ]
+   },
+   "transition": "slide",
+   "sources": [
+    "wired2012",
+    "vance2015"
+   ]
+  },
+  {
+   "id": "b08",
+   "act": "story",
+   "spine": "cho_den_khi",
+   "narration": "Theo lời Musk, ông sang Nga ba lần. Giá ông kể lại là khoảng mười lăm đến hai mươi triệu đô mỗi quả. Nguồn khác ghi số khác.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "compass",
+      "kicker": "Theo lời Musk",
+      "line": "Ba chuyến sang Nga",
+      "line_cue": "theo lời",
+      "action": "xoay hướng"
+     },
+     {
+      "type": "stat",
+      "value": 20,
+      "from": 20,
+      "prefix": "15–",
+      "suffix": " triệu $",
+      "color": "b",
+      "label": "mỗi quả · theo lời Musk",
+      "note": "Wired, 2012",
+      "cue": "giá ông",
+      "action": "hiện số"
+     },
+     {
+      "type": "icon",
+      "icon": "book",
+      "kicker": "Các nguồn khác",
+      "cue": "nguồn khác",
+      "line": "Ghi số khác nhau",
+      "line_cue": "ghi số",
+      "action": "lật trang"
+     }
+    ]
+   },
+   "transition": "slide",
+   "sources": [
+    "wired2012",
+    "vance2015"
+   ],
+   "certainty": "attributed"
+  },
+  {
+   "id": "b09",
+   "act": "turn",
+   "spine": "cho_den_khi",
+   "narration": "Thay vì trả giá ấy, ông tự hỏi: tên lửa làm từ gì? Theo ông: nhôm hàng không, một ít titan, đồng và sợi carbon. Ngoài thị trường, những thứ ấy giá bao nhiêu?",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stage",
+      "set": "plain",
+      "characters": [
+       {
+        "id": "musk",
+        "x": 0.36,
+        "expression": "thinking",
+        "action": "think"
+       }
+      ],
+      "props": [
+       {
+        "icon": "rocket",
+        "x": 0.7,
+        "y": 0.42,
+        "size": 0.15
+       }
+      ],
+      "bubble": {
+       "who": "musk",
+       "text": "Tên lửa làm từ gì?",
+       "cue": "tên lửa",
+       "style": "think"
+      },
+      "action": "tự hỏi"
+     },
+     {
+      "type": "icon",
+      "icon": "puzzle",
+      "kicker": "Theo Musk",
+      "cue": "theo ông",
+      "line": "Nhôm · titan · đồng · carbon",
+      "line_cue": "nhôm",
+      "action": "tách mảnh"
+     },
+     {
+      "type": "icon",
+      "icon": "coins",
+      "color": "a",
+      "kicker": "Mua ngoài thị trường",
+      "cue": "ngoài thị",
+      "line": "Mỗi thứ giá bao nhiêu?",
+      "line_cue": "những thứ",
+      "action": "chồng lên"
+     }
+    ]
+   },
+   "transition": "whip",
+   "sources": [
+    "wired2012"
+   ]
+  },
+  {
+   "id": "b10",
+   "act": "story",
+   "spine": "cho_den_khi",
+   "narration": "Kết quả, theo ước tính của Musk: tiền vật liệu chỉ khoảng hai phần trăm giá một tên lửa thông thường. Không phải giá SpaceX bán, cũng không so với giá của Nga.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stat",
+      "value": 2,
+      "prefix": "~",
+      "suffix": "%",
+      "color": "a",
+      "label": "tiền vật liệu / giá một tên lửa thông thường",
+      "note": "ước tính của Musk · Wired, 2012",
+      "action": "đếm lên"
+     },
+     {
+      "type": "statement",
+      "kicker": "Hay bị kể sai",
+      "cue": "không phải",
+      "text": "SpaceX bán giá 2%",
+      "strike": "SpaceX bán giá 2%",
+      "replace": "Vật liệu / giá thường thấy",
+      "strike_cue": "cũng không",
+      "action": "gạch bỏ"
+     }
+    ]
+   },
+   "transition": "slide",
+   "sources": [
+    "wired2012"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b11",
+   "act": "turn",
+   "spine": "cho_den_khi",
+   "narration": "Musk gọi đó là first principles; mình gọi là tư duy từ gốc: quy mọi thứ về sự thật nền tảng, rồi suy luận lên từ đó. Ông không nhìn gói gia vị, mà nhìn vào nồi xương.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "quote",
+      "text": "Quy mọi thứ về những sự thật nền tảng, rồi suy luận lên từ đó.",
+      "by": "Elon Musk, TED 2013 (lược dịch)",
+      "action": "hiện chữ"
+     },
+     {
+      "type": "swap",
+      "kicker": "Ông nhìn chỗ khác",
+      "cue": "ông không",
+      "strike_cue": "mà nhìn",
+      "action": "đổi chỗ",
+      "from": {
+       "concept": "loi_mon",
+       "label": "Gói gia vị"
+      },
+      "to": {
+       "concept": "tu_goc",
+       "label": "Nồi xương",
+       "cue": "nồi xương"
+      }
+     }
+    ]
+   },
+   "transition": "slide",
+   "sources": [
+    "ted2013"
+   ]
+  },
+  {
+   "id": "b12",
+   "act": "turn",
+   "spine": "cho_den_khi",
+   "narration": "Linh nhớ bếp của mẹ. Gói gia vị: nấu theo hướng dẫn, ai cũng như ai. Nồi xương: biết từng thứ trong nồi, mỗi thứ giá bao nhiêu. Gói nhượng quyền kia, hóa ra, là một gói gia vị.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "trio",
+      "kicker": "Phỏng theo Tim Urban · 2015",
+      "heading": "Hai cách nấu phở",
+      "action": "đặt cạnh",
+      "items": [
+       {
+        "concept": "loi_mon",
+        "label": "Theo gói",
+        "cue": "gói gia vị"
+       },
+       {
+        "concept": "tu_goc",
+        "label": "Biết từng thứ",
+        "cue": "nồi xương"
+       }
+      ],
+      "line": "Mỗi thứ giá bao nhiêu?",
+      "line_cue": "mỗi thứ"
+     },
+     {
+      "type": "stage",
+      "set": "room",
+      "characters": [
+       {
+        "id": "linh",
+        "x": 0.34,
+        "expression": "thinking",
+        "action": "think",
+        "cues": [
+         {
+          "cue": "hóa ra",
+          "expression": "surprised",
+          "action": "jump"
+         }
+        ]
+       }
+      ],
+      "props": [
+       {
+        "icon": "packet",
+        "x": 0.66,
+        "y": 0.4,
+        "concept": "loi_mon",
+        "cue": "gói nhượng",
+        "size": 0.14
+       }
+      ],
+      "transition": "cut",
+      "cue": "gói nhượng",
+      "action": "nhận ra"
+     }
+    ]
+   },
+   "transition": "whip",
+   "sources": [
+    "urban2015"
+   ]
+  },
+  {
+   "id": "b13",
+   "act": "principle",
+   "spine": "tu_do",
+   "narration": "Từ đó, Linh làm ba việc. Thứ nhất: tách tới nguyên liệu. Trăm rưỡi triệu ấy gồm những gì?",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba việc Linh làm",
+    "focus": [
+     0
+    ],
+    "action": "lướt tới",
+    "regions": [
+     {
+      "concept": "tu_goc",
+      "label": "Tách nguyên liệu",
+      "note": "Làm từ gì?",
+      "cue": "thứ nhất",
+      "note_cue": "trăm rưỡi"
+     },
+     {
+      "icon": "scale",
+      "label": "Luật hay thói quen",
+      "note": "Cái gì bắt buộc?"
+     },
+     {
+      "icon": "hammer",
+      "label": "Lắp lại, rồi thử",
+      "note": "Thực tế chấm điểm"
+     }
+    ],
+    "start": "overview"
+   },
+   "transition": "circle",
+   "sources": [
+    "minhhoa"
+   ]
+  },
+  {
+   "id": "b14",
+   "act": "example",
+   "spine": "tu_do",
+   "narration": "Bảng chi tiết về, số minh họa: nguyên liệu mười triệu, máy bốn mươi, còn một trăm triệu là thương hiệu và công thức. Linh sững người.",
+   "visual": {
+    "type": "stage",
+    "set": "office",
+    "characters": [
+     {
+      "id": "linh",
+      "x": 0.28,
+      "expression": "neutral",
+      "action": "idle",
+      "cues": [
+       {
+        "cue": "sững",
+        "expression": "surprised",
+        "action": "jump"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "icon": "tea",
+      "x": 0.52,
+      "y": 0.34,
+      "cue": "nguyên liệu",
+      "size": 0.12
+     },
+     {
+      "icon": "gear",
+      "x": 0.68,
+      "y": 0.34,
+      "cue": "máy bốn",
+      "size": 0.12
+     },
+     {
+      "icon": "star",
+      "x": 0.84,
+      "y": 0.34,
+      "cue": "thương hiệu",
+      "color": "b",
+      "size": 0.15
+     }
+    ],
+    "caption": "Số minh họa",
+    "action": "tách giá"
+   },
+   "transition": "slide",
+   "sources": [
+    "minhhoa"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b15",
+   "act": "principle",
+   "spine": "tu_do",
+   "narration": "Thứ hai: tách luật khỏi thói quen. Cái gì là giới hạn thật? Cái gì chỉ là ai cũng làm thế?",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba việc Linh làm",
+    "focus": [
+     1
+    ],
+    "action": "lướt sang"
+   },
+   "transition": "slide"
+  },
+  {
+   "id": "b16",
+   "act": "story",
+   "spine": "tu_do",
+   "narration": "Với quán có mặt bằng, thương hiệu có thể đáng tiền. Nhưng bán online từ phòng trọ, cô không cần biển hiệu hay quầy trong trung tâm thương mại. Phần lớn cái giá là thói quen, không phải luật.",
+   "visual": {
+    "type": "stage",
+    "set": "room",
+    "characters": [
+     {
+      "id": "linh",
+      "x": 0.3,
+      "expression": "thinking",
+      "action": "talk",
+      "cues": [
+       {
+        "cue": "phần lớn",
+        "expression": "happy",
+        "action": "point"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "icon": "store",
+      "x": 0.66,
+      "y": 0.36,
+      "cue": "biển hiệu",
+      "color": "b",
+      "size": 0.15,
+      "out_cue": "phần lớn"
+     },
+     {
+      "icon": "parcel",
+      "x": 0.72,
+      "y": 0.56,
+      "cue": "bán online",
+      "size": 0.12
+     }
+    ],
+    "action": "gạt bỏ"
+   },
+   "transition": "whip"
+  },
+  {
+   "id": "b17",
+   "act": "principle",
+   "spine": "tu_do",
+   "narration": "Thứ ba: lắp lại, rồi để thực tế chấm. Dựng phương án mới từ những mảnh bắt buộc, rồi thử.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba việc Linh làm",
+    "focus": [
+     2
+    ],
+    "action": "lướt xuống"
+   },
+   "transition": "slide"
+  },
+  {
+   "id": "b18",
+   "act": "story",
+   "spine": "tu_do",
+   "narration": "Falcon One hỏng ba lần; theo lời Musk, tiền chỉ đủ cho khoảng ba lần phóng. Năm hai nghìn lẻ tám, lần thứ tư, nó vào quỹ đạo.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "timeline",
+      "title": "Falcon 1 · đảo Omelek",
+      "action": "chấm mốc",
+      "events": [
+       {
+        "year": "3/2006",
+        "text": "Rò nhiên liệu, cháy"
+       },
+       {
+        "year": "3/2007",
+        "text": "Không vào quỹ đạo"
+       },
+       {
+        "year": "8/2008",
+        "text": "Hai tầng va nhau"
+       }
+      ]
+     },
+     {
+      "type": "icon",
+      "icon": "hourglass",
+      "kicker": "Theo lời Musk",
+      "cue": "theo lời",
+      "line": "Tiền đủ cho ~3 lần phóng",
+      "line_cue": "tiền chỉ",
+      "action": "cạn dần"
+     },
+     {
+      "type": "icon",
+      "icon": "rocket",
+      "motion": "rise",
+      "color": "a",
+      "kicker": "28/9/2008 · lần thứ tư",
+      "cue": "lần thứ tư",
+      "line": "Vào quỹ đạo",
+      "line_cue": "nó vào",
+      "action": "bay lên"
+     }
+    ]
+   },
+   "transition": "whip",
+   "sources": [
+    "falcon1",
+    "musk_money"
+   ],
+   "certainty": "attributed"
+  },
+  {
+   "id": "b19",
+   "act": "example",
+   "spine": "tu_do",
+   "narration": "Linh lắp lại từ những mảnh bắt buộc: nguyên liệu vẫn mười triệu, máy nhỏ hai mươi lăm, một khóa pha chế năm triệu. Cả gói còn khoảng bốn mươi triệu.",
+   "visual": {
+    "type": "scenario",
+    "kicker": "Số minh họa",
+    "heading": "Gói 150 triệu, tách ra",
+    "action": "kéo",
+    "before_label": "Gói nhượng quyền",
+    "after_label": "Linh tự dựng",
+    "cue": "nguyên liệu vẫn",
+    "suffix": " triệu",
+    "bars": [
+     {
+      "label": "Nguyên liệu",
+      "before": 10,
+      "after": 10,
+      "concept": "tu_goc",
+      "cue": "nguyên liệu"
+     },
+     {
+      "label": "Máy móc",
+      "before": 40,
+      "after": 25,
+      "cue": "máy nhỏ"
+     },
+     {
+      "label": "Thương hiệu, công thức",
+      "before": 100,
+      "after": 5,
+      "concept": "loi_mon",
+      "cue": "khóa pha"
+     }
+    ],
+    "takeaway": "Nguyên liệu vẫn thế. Phần kia co lại.",
+    "takeaway_cue": "cả gói"
+   },
+   "transition": "slide",
+   "sources": [
+    "minhhoa"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b20",
+   "act": "story",
+   "spine": "tu_do",
+   "narration": "Chủ nhật, Linh không ký. Cô bán thử từ phòng trọ. Mẻ đầu ngọt quá, khách chê. Linh chỉnh lại công thức, mẻ thứ ba bán hết trong một tối.",
+   "visual": {
+    "type": "stage",
+    "set": "room",
+    "characters": [
+     {
+      "id": "linh",
+      "x": 0.3,
+      "expression": "neutral",
+      "action": "idle",
+      "cues": [
+       {
+        "cue": "khách chê",
+        "expression": "sad",
+        "action": "shrug"
+       },
+       {
+        "cue": "chỉnh lại",
+        "expression": "thinking",
+        "action": "think"
+       },
+       {
+        "cue": "bán hết",
+        "expression": "happy",
+        "action": "jump"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "icon": "parcel",
+      "x": 0.56,
+      "y": 0.5,
+      "cue": "bán thử",
+      "size": 0.12
+     },
+     {
+      "icon": "chat",
+      "x": 0.72,
+      "y": 0.3,
+      "cue": "khách chê",
+      "color": "b"
+     },
+     {
+      "icon": "heart",
+      "x": 0.84,
+      "y": 0.5,
+      "cue": "bán hết",
+      "color": "a"
+     }
+    ],
+    "action": "bán thử",
+    "caption": "Chủ nhật · không ký"
+   },
+   "transition": "whip"
+  },
+  {
+   "id": "b21",
+   "act": "complication",
+   "spine": "va_gio",
+   "narration": "Và giờ, Linh vẫn dùng gói gia vị cho bữa tối vội: nồi xương phải ninh cả đêm. Theo chính Musk, phần lớn thời gian ta vẫn đi theo lối mòn, vì từ gốc tốn sức.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "stage",
+      "set": "room",
+      "characters": [
+       {
+        "id": "linh",
+        "x": 0.34,
+        "expression": "happy",
+        "action": "idle",
+        "cues": [
+         {
+          "cue": "bữa tối",
+          "action": "nod"
+         }
+        ]
+       }
+      ],
+      "props": [
+       {
+        "icon": "packet",
+        "x": 0.62,
+        "y": 0.38,
+        "concept": "loi_mon",
+        "cue": "gói gia vị",
+        "size": 0.13
+       }
+      ],
+      "caption": "Và giờ",
+      "action": "nấu vội"
+     },
+     {
+      "type": "icon",
+      "concept": "tu_goc",
+      "steam": true,
+      "kicker": "Ẩn dụ dừng ở đây",
+      "cue": "nồi xương",
+      "line": "Ninh cả đêm",
+      "line_cue": "ninh",
+      "action": "sôi lâu"
+     },
+     {
+      "type": "icon",
+      "icon": "clock",
+      "kicker": "Theo Musk · phần lớn thời gian",
+      "cue": "theo chính",
+      "line": "Từ gốc tốn sức",
+      "line_cue": "vì từ",
+      "action": "quay kim"
+     }
+    ]
+   },
+   "transition": "slide",
+   "sources": [
+    "ted2013",
+    "rose2012"
+   ]
+  },
+  {
+   "id": "b22",
+   "act": "complication",
+   "spine": "va_gio",
+   "narration": "Đầu bếp giỏi vẫn học người đi trước: SpaceX thuê kỹ sư lão luyện, dùng ý tưởng từ thời Apollo, và tiền của NASA giúp công ty sống sót. Có món phải theo đúng công thức, như y tế, luật hay an toàn thực phẩm.",
+   "visual": {
+    "type": "shots",
+    "shots": [
+     {
+      "type": "icon",
+      "icon": "book",
+      "kicker": "Đầu bếp giỏi vẫn học",
+      "line": "Kỹ sư lão luyện · ý tưởng Apollo",
+      "line_cue": "spacex",
+      "action": "lật trang"
+     },
+     {
+      "type": "icon",
+      "icon": "shield",
+      "kicker": "Không đi một mình",
+      "cue": "và tiền",
+      "line": "NASA: 2006 · 12/2008",
+      "line_cue": "giúp công",
+      "action": "che chắn"
+     },
+     {
+      "type": "trio",
+      "kicker": "Có món phải theo đúng công thức",
+      "cue": "có món",
+      "action": "khóa lại",
+      "items": [
+       {
+        "icon": "thermometer",
+        "label": "Y tế",
+        "cue": "y tế"
+       },
+       {
+        "icon": "scale",
+        "label": "Luật",
+        "cue": "luật"
+       },
+       {
+        "icon": "lock",
+        "label": "An toàn thực phẩm",
+        "cue": "hay an"
+       }
+      ]
+     }
+    ]
+   },
+   "transition": "slide",
+   "sources": [
+    "merlin",
+    "vance2015",
+    "nasa_cots",
+    "nasa_crs"
+   ]
+  },
+  {
+   "id": "b23",
+   "act": "question",
+   "spine": "va_gio",
+   "narration": "Giờ thử một chút nhé. Một khóa học tiếng Anh báo giá ba mươi triệu đồng. Câu hỏi từ gốc đầu tiên bạn nên hỏi là gì?",
+   "visual": {
+    "type": "question",
+    "question": "Khóa tiếng Anh 30 triệu đồng. Câu hỏi từ gốc đầu tiên?",
+    "choices": [
+     "A. Người khác thường trả bao nhiêu?",
+     "B. Mình cần kỹ năng gì, mỗi phần cần gì?",
+     "C. Có mã giảm giá không?"
+    ],
+    "answer": "B",
+    "think_seconds": 5
+   },
+   "transition": "slide",
+   "sources": [
+    "minhhoa"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b24",
+   "act": "recap",
+   "spine": "va_gio",
+   "narration": "Đáp án là B: tách ra rồi, bạn vẫn có thể chọn khóa ấy, nhưng vì hiểu. Vậy là ba việc. Tách tới nguyên liệu. Tách luật khỏi thói quen. Và lắp lại, rồi để thực tế chấm.",
+   "visual": {
+    "type": "board",
+    "board_id": "ba-nguyen-tac",
+    "kicker": "Ba việc Linh làm",
+    "action": "lùi xa",
+    "focus": [
+     {
+      "region": 0,
+      "cue": "tách tới"
+     }
+    ],
+    "overview": true,
+    "overview_cue": "vậy là",
+    "line": "Ba câu hỏi trước một cái giá",
+    "line_cue": "và lắp"
+   },
+   "transition": "slide"
+  },
+  {
+   "id": "b25",
+   "act": "close",
+   "spine": "va_gio",
+   "narration": "Linh vẫn soát hóa đơn mỗi ngày. Nhưng giờ, trước một cái giá ai cũng trả, cô hỏi thêm một câu: trong nồi này thật sự có gì?",
+   "visual": {
+    "type": "stage",
+    "set": "office",
+    "characters": [
+     {
+      "id": "linh",
+      "x": 0.36,
+      "expression": "happy",
+      "action": "idle",
+      "cues": [
+       {
+        "cue": "cô hỏi",
+        "action": "talk"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "icon": "receipt",
+      "x": 0.62,
+      "y": 0.38,
+      "size": 0.12
+     },
+     {
+      "icon": "pot",
+      "x": 0.8,
+      "y": 0.5,
+      "concept": "tu_goc",
+      "cue": "trong nồi",
+      "size": 0.14
+     }
+    ],
+    "bubble": {
+     "who": "linh",
+     "text": "Trong nồi này thật sự có gì?",
+     "cue": "trong nồi"
+    },
+    "action": "hỏi"
+   },
+   "transition": "circle"
+  },
+  {
+   "id": "end",
+   "act": "close",
+   "spine": "va_gio",
+   "narration": "Còn bạn, bạn muốn mình làm clip về cuốn sách nào, hay chủ đề gì tiếp theo? Để lại bình luận cho mình nhé. Hẹn gặp bạn ở tập sau.",
+   "visual": {
+    "type": "end",
+    "kicker": "Khung tư duy · Tập 1",
+    "title": "Tư duy từ gốc",
+    "ask": "Bạn muốn tập sau về khung tư duy nào?",
+    "ask_hint": "Tư duy bậc hai · vòng tròn năng lực · chi phí cơ hội",
+    "ask_cue": "hay chủ",
+    "sources_line": "Nguồn: Wired (2012) · TED (2013) · Vance (2015) · NASA · xem mô tả",
+    "sources_cue": "còn bạn",
+    "disclaimer": "Nội dung giáo dục; nhân vật hư cấu, câu chuyện thật kể lại từ nguồn công khai."
+   },
+   "transition": "slide"
+  }
+ ],
+ "pronounce": {}
+}
