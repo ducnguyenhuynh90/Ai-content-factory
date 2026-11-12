@@ -17,10 +17,6 @@
   "speed": 0.88,
   "music": "chill",
   "captions": true,
-  "look": {
-   "primary_color": "#E8B06A",
-   "secondary_color": "#12100E"
-  },
   "disclaimer": "Nội dung giáo dục; nhân vật hư cấu, câu chuyện thật kể lại từ nguồn công khai.",
   "learning_goals": [
    "Kể lại câu chuyện kỹ thuật 2001–2008: Musk được báo giá khoảng 15–20 triệu đô mỗi tên lửa (theo lời ông), tự hỏi tên lửa làm từ gì, ước tính vật liệu chỉ khoảng 2% giá một tên lửa thông thường; Falcon 1 hỏng ba lần rồi lên quỹ đạo 28/9/2008; NASA góp tiền",
@@ -233,7 +229,7 @@
     ],
     "props": [
      {
-      "icon": "receipt",
+      "icon": "checklist",
       "x": 0.62,
       "y": 0.36,
       "size": 0.13
@@ -1480,7 +1476,7 @@
     ],
     "props": [
      {
-      "icon": "receipt",
+      "icon": "checklist",
       "x": 0.62,
       "y": 0.38,
       "size": 0.12
