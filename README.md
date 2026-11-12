@@ -63,6 +63,7 @@ Override anything per film: `"look_overrides": {"grain": 0, "letterbox": null, "
 | `.claude/skills/video-vision` | Let Claude *see* a video: structure first (cuts, silences, motion, exposure, loudness), then a budgeted set of timestamped scene-aware frames, a filmstrip, and filmstrip+waveform drill-downs (`vision`, `vision-timeline`) |
 | `.claude/skills/lesson-video` | Research → script (lint enforces misconception-first, retrieval question, recap, sourced facts, spoken uncertainty) → local voice → HyperFrames scenes → render |
 | `.claude/skills/video-editor` | Your persistent editor for raw recordings: protected originals, Whisper transcript, retakes, pauses, reframing, brand captions, edit log |
+| `.claude/skills/tiktok-shorts` | Faceless TikTok/Reels/Shorts channel: ideas → script → voice → 9:16 animation → publish kit → analytics loop |
 | `.claude/skills/trend-research` | What's trending in the last N days across Reddit, Hacker News, YouTube and GitHub → stories clustered across platforms → Claude judges and writes video concepts (hook, format, look, opening, ending) |
 
 ```bash
@@ -103,6 +104,23 @@ python -m vfactory.lesson build lessons/investing/001-newton-south-sea-bubble/le
 Craft rules: `.claude/skills/lesson-video/references/script-craft.md`; investing series bible:
 `.claude/skills/lesson-video/references/investing-series.md`.
 
+## TikTok / Reels / Shorts agent (`python -m vfactory.shorts`)
+
+A faceless short-form channel run by one person: channel bible → trend-backed ideas → fact-checked 25-60 s script
+(lint enforces a ≤ 3 s hook on frame 0, a new picture every 2-4 s, ≤ 8 words of on-screen text, spoken uncertainty,
+one CTA at the end) → AI voice (edge-tts Vietnamese/English, Kokoro, or your own takes) → animated 9:16 render with
+karaoke captions and an original score → cover, caption, hashtags, pinned-sources comment and checklist → TikTok Studio
+CSV import → insights ranked on watched %, shares and follows → `learnings.md` for the next scripts.
+
+```bash
+pip install -e .[shorts]
+python -m vfactory.shorts lint  shorts/examples/001-newton-bong-bong/short.json
+python -m vfactory.shorts build shorts/examples/001-newton-bong-bong/short.json --final
+```
+
+Skill: `.claude/skills/tiktok-shorts`; delegated producer: `.claude/agents/tiktok-content-agent.md`;
+Vietnamese guide: [`docs/TIKTOK_AGENT.md`](docs/TIKTOK_AGENT.md).
+
 ## Captions
 
 Pass word timings (any word-level ASR: ElevenLabs Scribe, Deepgram, WhisperX, faster-whisper) in source time:
@@ -124,6 +142,7 @@ vfactory/
   vision.py      video investigation for Claude (report + frames + filmstrip + timeline)
   trends.py      multi-source trend research (last N days)
   styles.py      the looks
+  shorts/        TikTok agent: schema+lint, voice (edge-tts/kokoro/own takes), 9:16 renderer, publish kit, analytics
   assets/fonts/  OFL fonts with licenses
 tests/           unit tests + an end-to-end render smoke test
 ```

@@ -60,6 +60,8 @@ YouTube items (lengths, vertical vs horizontal) when the data shows them.
 
 When the user picks a concept, carry its title, kicker, CTA, look and aspect straight into the
 `video-factory` skill (`python -m vfactory direct ... --look L --title T --kicker K --cta C --aspect A`).
+For a faceless TikTok/Reels/Shorts channel (no footage: voice + animated pictures), hand it to the `tiktok-shorts`
+skill instead and append the concept to the channel's `ideas.md`.
 
 ## Safety
 

@@ -1,0 +1,251 @@
+{
+ "meta": {
+  "title": "Thiên tài Newton và bong bóng 1720",
+  "lang": "vi",
+  "pillar": "lịch sử đầu tư",
+  "topic": "đầu tư",
+  "format": "story",
+  "hook_type": "contrarian",
+  "target_seconds": [
+   35,
+   60
+  ],
+  "theme": "night",
+  "voice": "vi-VN-NamMinhNeural",
+  "rate": "+8%",
+  "music": "tense",
+  "series": "Bài học từ lịch sử",
+  "part": 1,
+  "caption": "Người hiểu trọng lực hơn ai hết vẫn thua đám đông. Nếu là bạn, tháng 6/1720 bạn có mua lại không? 👇",
+  "hashtags": [
+   "#lichsu",
+   "#dautu",
+   "#kienthuctaichinh",
+   "#baihoctulichsu"
+  ],
+  "cover_text": "Newton mất một gia tài",
+  "disclaimer": "Nội dung giáo dục, không phải lời khuyên đầu tư. Giá lịch sử là số ước tính.",
+  "handle": "@tenkenh"
+ },
+ "sources": [
+  {
+   "id": "odlyzko2019",
+   "cite": "Andrew Odlyzko, 'Newton's financial misadventures in the South Sea Bubble', Notes and Records of the Royal Society 73(1), 2019",
+   "url": "https://www-users.cse.umn.edu/~odlyzko/doc/mania13.pdf"
+  },
+  {
+   "id": "harvard",
+   "cite": "Harvard Business School, Baker Library: The South Sea Bubble, 'The Crash'",
+   "url": "https://curiosity.lib.harvard.edu/south-sea-bubble/feature/the-crash"
+  },
+  {
+   "id": "ssc",
+   "cite": "South Sea Company (thành lập 1711; kế hoạch chuyển đổi nợ quốc gia 1720)",
+   "url": "https://en.wikipedia.org/wiki/South_Sea_Company"
+  }
+ ],
+ "beats": [
+  {
+   "id": "h1",
+   "narration": "Thiên tài Newton từng mất một gia tài vì cổ phiếu.",
+   "visual": {
+    "type": "hook",
+    "lines": [
+     "Thiên tài Newton",
+     "mất một gia tài"
+    ],
+    "punch_cue": "mất",
+    "picture": "Chart decreasing",
+    "kicker": "Năm 1720"
+   },
+   "sources": [
+    "odlyzko2019"
+   ]
+  },
+  {
+   "id": "b2",
+   "narration": "Không phải vì lừa đảo. Mà vì một sai lầm có thể bạn cũng đang mắc.",
+   "visual": {
+    "type": "text",
+    "text": "Sai lầm bạn cũng đang mắc",
+    "highlight": [
+     "bạn"
+    ],
+    "picture": "Thinking face"
+   }
+  },
+  {
+   "id": "b3",
+   "narration": "Đầu năm 1720, cổ phiếu Công ty South Sea có giá khoảng 128 bảng.",
+   "visual": {
+    "type": "stat",
+    "value": 128,
+    "prefix": "£",
+    "label": "Tháng 1/1720",
+    "cue": "128"
+   },
+   "sources": [
+    "odlyzko2019",
+    "ssc"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b4",
+   "narration": "Vài tháng sau, nó đã lên gần 1.000 bảng.",
+   "visual": {
+    "type": "stat",
+    "value": 1000,
+    "from": 128,
+    "prefix": "£",
+    "label": "Đầu mùa hè 1720",
+    "cue": "lên"
+   },
+   "sources": [
+    "odlyzko2019",
+    "harvard"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b5",
+   "narration": "Newton bán sớm và chốt lời đậm.",
+   "visual": {
+    "type": "picture",
+    "asset": "Money bag",
+    "act": "grow",
+    "cue": "chốt",
+    "caption": "Newton chốt lời",
+    "highlight": [
+     "chốt",
+     "lời"
+    ]
+   },
+   "sources": [
+    "odlyzko2019"
+   ]
+  },
+  {
+   "id": "b6",
+   "narration": "Rồi ông nhìn bạn bè tiếp tục mua, và giàu lên từng tuần.",
+   "visual": {
+    "type": "picture",
+    "asset": "Star-struck",
+    "count": 3,
+    "act": "bounce",
+    "cue": "giàu",
+    "caption": "Bạn bè giàu lên",
+    "highlight": [
+     "giàu"
+    ]
+   }
+  },
+  {
+   "id": "b7",
+   "narration": "Tháng 6, gần đỉnh, ông mua lại, với giá gấp khoảng hai lần lúc bán.",
+   "visual": {
+    "type": "text",
+    "kicker": "Tháng 6/1720",
+    "text": "Mua lại gần đỉnh, giá gấp đôi",
+    "highlight": [
+     "gần",
+     "đỉnh"
+    ],
+    "picture": "Chart increasing"
+   },
+   "sources": [
+    "odlyzko2019"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b8",
+   "narration": "Tháng 9, bong bóng vỡ. Đến tháng 12, cổ phiếu còn dưới 200 bảng.",
+   "visual": {
+    "type": "picture",
+    "asset": "Balloon",
+    "act": "fall",
+    "cue": "vỡ",
+    "caption": "Bong bóng vỡ",
+    "highlight": [
+     "vỡ"
+    ]
+   },
+   "sources": [
+    "harvard"
+   ],
+   "certainty": "estimate",
+   "sfx": [
+    {
+     "kind": "hit",
+     "cue": "vỡ",
+     "gain_db": -3
+    }
+   ]
+  },
+  {
+   "id": "b9",
+   "narration": "Theo sử gia Andrew Odlyzko, Newton mất hơn 10.000 bảng.",
+   "visual": {
+    "type": "stat",
+    "value": 10000,
+    "prefix": "£",
+    "suffix": "+",
+    "label": "Ước tính Newton thua lỗ",
+    "cue": "mất"
+   },
+   "sources": [
+    "odlyzko2019"
+   ],
+   "certainty": "estimate"
+  },
+  {
+   "id": "b10",
+   "narration": "Bài học thứ nhất: giá không phải giá trị. Thứ hai: đám đông giàu lên không phải bằng chứng.",
+   "visual": {
+    "type": "list",
+    "title": "2 bài học",
+    "items": [
+     "Giá không phải giá trị",
+     "Đám đông không phải bằng chứng"
+    ],
+    "cues": [
+     "giá",
+     "đám"
+    ]
+   }
+  },
+  {
+   "id": "b11",
+   "narration": "Cổ phiếu bạn giữ tăng gấp đôi, ai cũng đang mua. Bạn làm gì?",
+   "visual": {
+    "type": "question",
+    "question": "Gấp đôi, ai cũng mua. Bạn làm gì?",
+    "choices": [
+     "Mua thêm ngay",
+     "Theo quy tắc đặt từ trước",
+     "Hỏi bạn bè"
+    ],
+    "answer": "Theo quy tắc đặt từ trước",
+    "think_seconds": 3
+   }
+  },
+  {
+   "id": "end",
+   "narration": "Newton đoán được quỹ đạo sao chổi, nhưng không đoán được chính mình. Phần 2: cơn sốt hoa tulip.",
+   "visual": {
+    "type": "end",
+    "text": "Không đoán được chính mình",
+    "highlight": [
+     "chính",
+     "mình"
+    ],
+    "cta": "Theo dõi · Phần 2: Hoa tulip",
+    "handle": "@tenkenh"
+   }
+  }
+ ],
+ "pronounce": {
+  "Odlyzko": "Ốt-lít-skô"
+ }
+}

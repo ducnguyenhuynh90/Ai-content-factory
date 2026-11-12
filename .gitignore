@@ -12,3 +12,6 @@ qa_*/
 *.mkv
 *.wav
 edit/
+shorts/**/build/
+shorts/**/publish/
+.short.override.json
