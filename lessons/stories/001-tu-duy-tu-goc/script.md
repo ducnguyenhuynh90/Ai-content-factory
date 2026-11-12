@@ -1,5 +1,5 @@
 # Tư duy từ gốc
-_Khung tư duy · Tập 1 · 854 words · ~3.68 min · 16:9_
+_Khung tư duy · Tập 1 · 863 words · ~3.72 min · 16:9_
 
 ## Learning goals
 - Kể lại câu chuyện kỹ thuật 2001–2008: Musk được báo giá khoảng 15–20 triệu đô mỗi tên lửa (theo lời ông), tự hỏi tên lửa làm từ gì, ước tính vật liệu chỉ khoảng 2% giá một tên lửa thông thường; Falcon 1 hỏng ba lần rồi lên quỹ đạo 28/9/2008; NASA góp tiền
@@ -14,11 +14,10 @@ _Khung tư duy · Tập 1 · 854 words · ~3.68 min · 16:9_
 ## Script
 | # | act | narration | on screen |
 |---|---|---|---|
-| h1 | hook | Linh soát hóa đơn mỗi ngày. Vậy mà trước báo giá trăm rưỡi triệu, cô suýt ký mà không hỏi gì. _(estimate)_ | stage: stage |
+| h1 | hook | Linh soát hóa đơn mỗi ngày. Vậy mà trước gói nhượng quyền trà sữa một trăm năm mươi triệu, cô suýt ký mà không hỏi gì. _(estimate)_ | stage: stage |
 | h2 | context | Có người từng đứng trước một báo giá tên lửa, và hỏi: nó làm từ gì? Cách nghĩ đó có tên: tư duy từ gốc. | shots: shots |
-| t0 | context |  | title: Tư duy từ gốc |
 | b01 | context | Mỗi ngày, Linh, hai mươi bảy tuổi, làm kế toán ở quận Bảy. Tối về phòng trọ, cô pha thử trà sữa, mơ một quán online nhỏ của riêng mình. | shots: shots |
-| b02 | story | Cho đến một ngày, Vy, đồng nghiệp, gửi cô một gói nhượng quyền trà sữa: máy, công thức, thương hiệu, trọn gói trăm rưỡi triệu. Vy bảo: ai cũng làm thế cho nhanh. _(estimate)_ | stage: stage |
+| b02 | story | Cho đến một ngày, Vy, đồng nghiệp, gửi cô một gói nhượng quyền trà sữa: máy, công thức, thương hiệu, trọn gói một trăm năm mươi triệu. Vy bảo: ai cũng làm thế cho nhanh. _(estimate)_ | stage: stage |
 | b03 | complication | Vì vậy Linh hỏi trong nhóm bán hàng. Ai cũng bảo: giá thị trường thế đấy. Gói ấy ngốn gần hết tiền tiết kiệm, và ưu đãi chỉ đến Chủ nhật. | shots: shots |
 | b04 | misconception | Ta hay nghĩ: thứ gì đắt là vì nó vốn đắt; ai cũng trả, chắc giá ấy đúng. Nhưng chưa ai hỏi: cái giá này làm từ gì? | shots: shots |
 | b05 | story | Thứ Bảy, Linh về nhà mẹ. Thấy mẹ ninh nồi xương từ sáng, cô bảo: mẹ dùng gói gia vị cho nhanh! Mẹ cười: gói thì nhanh, nhưng con biết trong gói có gì không? | stage: stage |
@@ -29,8 +28,8 @@ _Khung tư duy · Tập 1 · 854 words · ~3.68 min · 16:9_
 | b10 | story | Kết quả, theo ước tính của Musk: tiền vật liệu chỉ khoảng hai phần trăm giá một tên lửa thông thường. Không phải giá SpaceX bán, cũng không so với giá của Nga. _(estimate)_ | shots: shots |
 | b11 | turn | Musk gọi đó là first principles; mình gọi là tư duy từ gốc: quy mọi thứ về sự thật nền tảng, rồi suy luận lên từ đó. Ông không nhìn gói gia vị, mà nhìn vào nồi xương. | shots: shots |
 | b12 | turn | Linh nhớ bếp của mẹ. Gói gia vị: nấu theo hướng dẫn, ai cũng như ai. Nồi xương: biết từng thứ trong nồi, mỗi thứ giá bao nhiêu. Gói nhượng quyền kia, hóa ra, là một gói gia vị. | shots: shots |
-| b13 | principle | Từ đó, Linh làm ba việc. Thứ nhất: tách tới nguyên liệu. Trăm rưỡi triệu ấy gồm những gì? | board: board |
-| b14 | example | Bảng chi tiết về, số minh họa: nguyên liệu mười triệu, máy bốn mươi, còn một trăm triệu là thương hiệu và công thức. Linh sững người. _(estimate)_ | stage: stage |
+| b13 | principle | Từ đó, Linh làm ba việc. Thứ nhất: tách tới nguyên liệu. Một trăm năm mươi triệu ấy gồm những gì? | board: board |
+| b14 | example | Bảng chi tiết về, số minh họa: nguyên liệu mười triệu, máy bốn mươi, còn một trăm triệu là thương hiệu và công thức. Linh sững người. _(estimate)_ | shots: shots |
 | b15 | principle | Thứ hai: tách luật khỏi thói quen. Cái gì là giới hạn thật? Cái gì chỉ là ai cũng làm thế? | board: board |
 | b16 | story | Với quán có mặt bằng, thương hiệu có thể đáng tiền. Nhưng bán online từ phòng trọ, cô không cần biển hiệu hay quầy trong trung tâm thương mại. Phần lớn cái giá là thói quen, không phải luật. | stage: stage |
 | b17 | principle | Thứ ba: lắp lại, rồi để thực tế chấm. Dựng phương án mới từ những mảnh bắt buộc, rồi thử. | board: board |
