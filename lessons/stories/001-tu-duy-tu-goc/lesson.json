@@ -115,8 +115,24 @@
   "youtube": {
    "title": "Tư duy từ gốc: gói 150 triệu, một tên lửa và nồi phở",
    "thumbnail_text": "150 triệu. Làm từ gì?",
-   "description": "Linh (nhân vật hư cấu) được mời mua một gói nhượng quyền trà sữa trăm rưỡi triệu, vì ai cũng làm thế. Câu chuyện có thật giúp cô: năm 2001–2002, Elon Musk sang Nga hỏi mua tên lửa và, theo lời ông, được báo giá khoảng 15–20 triệu đô mỗi quả; ông tự hỏi tên lửa làm từ gì. Nguồn: xem danh sách nguồn bên dưới.",
-   "chapters": [],
+   "description": "Linh (nhân vật hư cấu) suýt ký một gói nhượng quyền trà sữa 150 triệu vì \"ai cũng làm thế\". Câu chuyện có thật giúp cô dừng lại: cuối năm 2001, Elon Musk sang Nga hỏi mua tên lửa và, theo lời ông, được báo giá khoảng 15–20 triệu đô mỗi quả; ông tự hỏi tên lửa làm từ gì. Số trong chuyện của Linh là số minh họa. Nguồn: Wired 2012, TED 2013, Vance 2015, NASA, Tim Urban 2015 (chi tiết trong mô tả).",
+   "chapters": [
+    "0:00 Gói trà sữa 150 triệu",
+    "0:15 Linh và quán online nhỏ",
+    "0:46 Đắt vì nó vốn đắt?",
+    "0:55 Nồi xương của mẹ",
+    "1:06 Moscow, 2001",
+    "1:33 Tên lửa làm từ gì?",
+    "1:45 Khoảng 2%: so với cái gì?",
+    "1:55 Tư duy từ gốc",
+    "2:19 Việc 1: tách tới nguyên liệu",
+    "2:37 Việc 2: tách luật khỏi thói quen",
+    "2:57 Việc 3: lắp lại, rồi để thực tế chấm",
+    "3:14 Linh tự dựng (số minh họa)",
+    "3:35 Ẩn dụ dừng ở đâu",
+    "3:59 Thử một chút: khóa học 30 triệu",
+    "4:27 Trong nồi này thật sự có gì?"
+   ],
    "tags": [
     "tư duy từ gốc",
     "first principles",
@@ -125,9 +141,9 @@
     "Elon Musk",
     "SpaceX",
     "Falcon 1",
-    "nhượng quyền",
+    "nhượng quyền trà sữa",
     "kinh doanh nhỏ",
-    "trà sữa online",
+    "bán hàng online",
     "ra quyết định",
     "kỹ năng tư duy"
    ]
@@ -579,9 +595,9 @@
       "icon": "magnifier",
       "color": "a",
       "kicker": "Câu chưa ai hỏi",
-      "cue": "nhưng",
+      "cue": "chưa ai",
       "line": "Làm từ gì?",
-      "line_cue": "chưa ai",
+      "line_cue": "cái giá",
       "action": "soi",
       "transition": "zoom"
      }
@@ -1069,8 +1085,7 @@
      {
       "concept": "tu_goc",
       "label": "Tách nguyên liệu",
-      "note": "Làm từ gì?",
-      "note_cue": "gồm những"
+      "note": "Làm từ gì?"
      },
      {
       "icon": "scale",
@@ -1104,18 +1119,18 @@
       "items": [
        {
         "icon": "tea",
-        "label": "Nguyên liệu: 10 triệu",
+        "label": "Nguyên liệu: 10 triệu",
         "cue": "nguyên liệu"
        },
        {
         "icon": "gear",
-        "label": "Máy: 40 triệu",
+        "label": "Máy: 40 triệu",
         "cue": "máy bốn"
        },
        {
         "icon": "star",
         "color": "b",
-        "label": "Thương hiệu, công thức: 100 triệu",
+        "label": "Thương hiệu: 100 triệu",
         "cue": "một trăm"
        }
       ]
