@@ -7,7 +7,8 @@ description: Research, write and produce a narrated, animated lesson video (defa
 
 A lesson video is a story that leaves a principle behind. The viewer should finish it able to say the
 principle in their own words and recognise it in their own life. Read `references/script-craft.md`
-before writing; for investing read `references/investing-series.md` too.
+before writing; for investing read `references/investing-series.md` too; for founder/startup stories read
+`references/founder-series.md` (stickman cast on paper).
 
 Engine: `python -m vfactory.lesson` (repo root on PYTHONPATH). Scenes render with HyperFrames; narration is
 local Kokoro TTS; music is synthesized. Nothing is uploaded.
@@ -52,7 +53,8 @@ narration: a silent sting) · · `statement` (key phrase, highlighted words unde
 generated likeness of a real person) · `principle` · `compare` · `list` (recap with checks) · `question` (pause
 and think, countdown, answer) · `end` (next episode, CTA, sources, disclaimer).
 · `stage` (a picture-book world where familiar 3D characters and objects act the idea out on cue words: a balloon
-that pops, sheep that follow, a face that cries; see `references/script-craft.md` §3b).
+that pops, sheep that follow, a face that cries; see `references/script-craft.md` §3b). People can also be
+code-drawn stickmen (`"Stick <pose> <face> <colour>"`, `vfactory/lesson/stick.py`) on the `paper` world.
 `cue` fields name a word in that beat's narration; the visual lands when the word is spoken.
 
 **Pictures a four-year-old understands.** Charts prove; pictures make the idea stick. Every principle and every turn

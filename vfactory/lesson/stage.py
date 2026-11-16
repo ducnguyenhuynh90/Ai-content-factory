@@ -19,7 +19,7 @@ from __future__ import annotations
 
 import html
 
-from .assets import slug
+from .assets import filename
 
 E = html.escape
 
@@ -30,6 +30,8 @@ WORLDS = {
     "sea": ("#8FD3FF", "#E3F5FF", "#1F5F8B", "#3D8FC6", "#FFFFFF", "#FFE39A"),
     "room": ("#FBEBD6", "#F6DDBE", "#8A5A35", "#B07A4D", "#FFFFFF", "#FFE39A"),
     "night": ("#0E1638", "#26346E", "#141B3D", "#1F2A5A", "#FFFFFF", "#FFB27A"),
+    # minimal line art: warm white paper, a hand-drawn ground line, black ink and one red accent
+    "paper": ("#FBF8F1", "#F4EFE3", "#1A1A1A", None, "#1A1A1A", "#D7263D"),
     "plain": (None, None, None, None, None, None),
 }
 GROUND = 0.68  # where feet stand and the caption band begins
@@ -39,7 +41,7 @@ ENTERS = ("pop", "drop", "rise", "slide-left", "slide-right", "fade", "none")
 
 
 def src(name: str) -> str:
-    return f"assets/img/{slug(name)}.png"
+    return f"assets/img/{filename(name)}"
 
 
 def expand(actors: list[dict]) -> list[dict]:
@@ -105,6 +107,16 @@ def world_markup(L, sid, world) -> tuple[str, str, list[str]]:
         return "", "", []
     top, bot, gnd, far, _, _ = WORLDS[world]
     W, H = L.w, L.h
+    if world == "paper":
+        gy = H * GROUND
+        line = (f'<path d="M{W * 0.04:.0f} {gy + 2:.0f} C {W * 0.25:.0f} {gy - 4:.0f}, {W * 0.5:.0f} {gy + 5:.0f}, {W * 0.72:.0f} {gy:.0f} '
+                f'S {W * 0.9:.0f} {gy - 3:.0f}, {W * 0.96:.0f} {gy + 1:.0f}" stroke="{gnd}" stroke-width="{L.px(0.005)}" fill="none" '
+                f'stroke-linecap="round"/>')
+        specks = "".join(f'<circle cx="{W * x:.0f}" cy="{H * y:.0f}" r="{L.px(0.0025)}" fill="#D8D0BF"/>'
+                         for x, y in ((0.07, 0.15), (0.31, 0.08), (0.58, 0.19), (0.83, 0.12), (0.93, 0.33), (0.18, 0.4)))
+        m = (f'<div id="{sid}-world" style="position:absolute;inset:0;background:linear-gradient(180deg,{top} 0%,{bot} 100%);">'
+             f'<svg width="{W}" height="{H}" viewBox="0 0 {W} {H}" style="position:absolute;left:0;top:0">{specks}{line}</svg></div>')
+        return m, "", []
     gy = H * GROUND
     hills = (f'<path d="M0 {gy - H * 0.06:.0f} C {W * 0.25:.0f} {gy - H * 0.16:.0f}, {W * 0.45:.0f} {gy - H * 0.02:.0f}, {W * 0.62:.0f} {gy - H * 0.09:.0f} '
              f'S {W * 0.9:.0f} {gy - H * 0.12:.0f}, {W} {gy - H * 0.07:.0f} L {W} {H} L 0 {H} Z" fill="{far}"/>'
@@ -288,7 +300,7 @@ def stage(L, sid, v, dur, cue):
     #{sid}-wrap .cnt {{ position: absolute; left: -50%; right: -50%; text-align: center; font-family: {L.serif}; font-weight: 600;
       font-size: {L.fs(0.06)}px; color: #FFFFFF; text-shadow: 0 2px {L.px(0.012)}px rgba(0,0,0,0.55); font-variant-numeric: tabular-nums; }}
     #{sid}-wrap .glow {{ position: absolute; inset: -30%; border-radius: 50%; background: radial-gradient(closest-side, {L.accent}66, transparent); }}
-    #{sid}-cap .serif {{ color: {ink}; text-shadow: 0 2px {L.px(0.014)}px rgba(0,0,0,0.35); }}
+    #{sid}-cap .serif {{ color: {ink}; text-shadow: {"none" if world == "paper" else f"0 2px {L.px(0.014)}px rgba(0,0,0,0.35)"}; }}
     #{sid}-cap .kicker {{ color: {kick}; }}
     #{sid}-cap .acc {{ color: {kick if world != "plain" else L.accent}; }}
     """ + wcss

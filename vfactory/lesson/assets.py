@@ -14,6 +14,8 @@ import urllib.request
 from functools import lru_cache
 from pathlib import Path
 
+from . import stick
+
 CATALOG = Path(__file__).with_name("data") / "fluent_3d.tsv"
 CACHE = Path.home() / ".cache" / "vfactory" / "fluent"
 BASE = "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/"
@@ -52,14 +54,23 @@ def catalog() -> dict[str, str]:
 
 
 def exists(name: str) -> bool:
+    if stick.is_stick(name):
+        return stick.exists(name)
     return name.lower() in catalog()
 
 
 def search(word: str, limit: int = 20) -> list[str]:
     """Names containing every word of the query: search("sad face") -> ["Sad but relieved face", ...]."""
+    if stick.is_stick(word) or word.lower().strip() == "stick":
+        return stick.search(word.split()[1] if len(word.split()) > 1 else "")
     ws = word.lower().split()
     names = [line.split("\t")[0] for line in CATALOG.read_text().splitlines()]
     return [n for n in names if all(w in n.lower() for w in ws)][:limit]
+
+
+def filename(name: str) -> str:
+    """File name of a picture inside <proj>/assets/img (stickmen are SVG, emoji are PNG)."""
+    return f"{slug(name)}.svg" if stick.is_stick(name) else f"{slug(name)}.png"
 
 
 def slug(name: str) -> str:
@@ -93,6 +104,10 @@ def install(names: set[str], proj: Path) -> dict[str, str]:
     (out_dir / "LICENSE-fluentui-emoji.txt").write_text(LICENSE)
     srcs = {}
     for n in sorted(names):
+        if stick.is_stick(n):
+            (out_dir / filename(n)).write_text(stick.svg(n))
+            srcs[n] = f"assets/img/{filename(n)}"
+            continue
         p = fetch(n)
         shutil.copy2(p, out_dir / p.name)
         srcs[n] = f"assets/img/{p.name}"

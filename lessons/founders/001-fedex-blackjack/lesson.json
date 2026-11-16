@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "series": "Founder Stories · No. 1",
+    "title": "The Night FedEx Went to Vegas",
+    "subtitle": "What really saved FedEx, and three rules every founder can use",
+    "topic": "startups",
+    "angle": "person",
+    "audience": "aspiring founders and curious viewers; no business background needed",
+    "aspect": "16:9",
+    "target_minutes": [3, 5],
+    "voice": "am_michael",
+    "speed": 0.95,
+    "music": "reflective",
+    "disclaimer": "Educational storytelling. Disputed and attributed details are labelled. Not business or financial advice.",
+    "learning_goals": [
+      "Explain why a startup with a good idea can still die: cash, not the idea, sets the deadline",
+      "Tell the difference between buying time and building a business",
+      "Recognise network ideas that only work at full size, and why they need long funding"
+    ]
+  },
+  "pronounce": {"FedEx": "fed ex"},
+  "sources": [
+    {"id": "frock2006", "cite": "Roger J. Frock (FedEx founding executive), 'Changing How the World Does Business: FedEx's Incredible Journey to Success', Berrett-Koehler, 2006: the blackjack account (as reported by secondary sources; book not checked directly)"},
+    {"id": "britannica", "cite": "Encyclopaedia Britannica, 'Frederick W. Smith': blackjack winnings 'reportedly'; losses of nearly $30 million in the first 26 months; first profit in 1976", "url": "https://www.britannica.com/money/Frederick-W-Smith"},
+    {"id": "qi2017", "cite": "Quote Investigator, 'I Don't Know, Probably Made My Usual C' (12 Dec 2017): the Yale term-paper grade", "url": "https://quoteinvestigator.com/2017/12/12/fedex/"},
+    {"id": "ebsco", "cite": "EBSCO Research Starters, 'Federal Express Begins Operations': April 1973 launch; about $30 million lost in the first two years", "url": "https://ebsco.com/research-starters/history/federal-express-begins-operations"},
+    {"id": "fool2013", "cite": "The Motley Fool, 'The Big Idea That Delivered a Business Legend', 17 Apr 2013: 186 packages on the first night", "url": "https://www.fool.com/investing/general/2013/04/17/the-big-idea-that-delivered-a-business-legend.aspx"},
+    {"id": "fedexexpress", "cite": "FedEx Express (Wikipedia): operations began 17 April 1973 with 14 Dassault Falcon 20 jets serving 25 US cities", "url": "https://en.wikipedia.org/wiki/FedEx_Express"},
+    {"id": "refbiz", "cite": "Reference for Business, 'Fred Smith 1944- Biography': Marine Corps service in Vietnam; about $4 million of his inheritance; venture capital raised", "url": "https://www.referenceforbusiness.com/biography/S-Z/Smith-Fred-1944.html"},
+    {"id": "entrepreneur", "cite": "Entrepreneur, 'Fred Smith: An Overnight Success': 'The $27,000 wasn't decisive, but it was an omen that things would get better'", "url": "https://entrepreneur.com/growing-a-business/fred-smith/197542"},
+    {"id": "scb2025", "cite": "SupplyChainBrain, 'FedEx Founder Fred Smith Dies at 80' (2025)", "url": "https://www.supplychainbrain.com/articles/42014-fedex-founder-fred-smith-dies-at-80"}
+  ],
+  "principles": [
+    {"name": "Cash is oxygen", "line": "A startup doesn't die when its idea is bad. It dies when the money runs out."},
+    {"name": "A gamble buys time, not a business", "line": "Luck can buy a week. Only people who believe in the plan buy years."},
+    {"name": "Some ideas only work at full size", "line": "Half a network is worth almost nothing, so plan to survive the expensive years."}
+  ],
+  "beats": [
+    {"id": "h1", "act": "hook",
+     "narration": "FedEx had about five thousand dollars left. Then its founder flew to Las Vegas.",
+     "visual": {"type": "stage", "world": "paper", "kicker": "FedEx · 1973", "caption": "$5,000 left. Next stop: Vegas.", "highlight": ["Vegas."],
+       "actors": [
+         {"id": "fred", "asset": "Stick stand worried red", "x": 0.3, "size": 0.42, "label": "Fred Smith", "enter": "none",
+          "do": [{"act": "swap", "asset": "Stick point determined red", "cue": "Then"}]},
+         {"id": "bat", "asset": "Low battery", "x": 0.12, "y": 0.5, "size": 0.16, "enter": "none", "label": "$5,000", "do": [{"act": "shake", "cue": "left"}]},
+         {"id": "slot", "asset": "Slot machine", "x": 0.7, "size": 0.36, "enter": "drop", "cue": "Vegas", "delay": -0.3},
+         {"id": "plane", "asset": "Airplane", "x": 0.5, "y": 0.3, "size": 0.14, "enter": "none", "do": [{"act": "fly", "to": [0.7, 0.18], "cue": "flew", "dur": 1.0}]}
+       ]},
+     "sfx": [{"kind": "hit", "cue": "Vegas", "gain_db": -2}],
+     "sources": ["frock2006", "britannica"], "certainty": "attributed"},
+
+    {"id": "h2", "act": "context",
+     "narration": "It sounds like the greatest comeback in business. It's also the most misunderstood. In the next four minutes, you'll see what really saved FedEx, and three rules every founder can use.",
+     "visual": {"type": "statement", "kicker": "In the next four minutes", "text": "One bet. Three rules.", "highlight": ["Three rules."]}},
+
+    {"id": "t0", "act": "context", "narration": "",
+     "visual": {"type": "title", "kicker": "Founder Stories · No. 1", "title": "The Night FedEx Went to Vegas", "hold": 3.0},
+     "sfx": [{"kind": "whoosh", "at": 0.0, "gain_db": -10}]},
+
+    {"id": "b02", "act": "misconception",
+     "narration": "We love the legend of the founder who bets everything and wins. One brilliant idea, one bold move, and the rest is history. This story says otherwise.",
+     "visual": {"type": "stage", "world": "paper", "kicker": "The legend", "caption": "Bet it all. Win it all?", "highlight": ["Win it all?"],
+       "actors": [
+         {"id": "fred", "asset": "Stick cheer joy red", "x": 0.5, "size": 0.42, "at": 0.1, "do": [{"act": "jump", "cue": "wins"}, {"act": "swap", "asset": "Stick shrug neutral red", "cue": "otherwise"}]},
+         {"id": "idea", "asset": "Light bulb", "x": 0.22, "y": 0.5, "size": 0.18, "cue": "idea", "do": [{"act": "glow", "cue": "brilliant"}]},
+         {"id": "die", "asset": "Game die", "x": 0.78, "y": 0.62, "size": 0.16, "cue": "bold", "do": [{"act": "tilt", "to": 360, "cue": "move"}]}
+       ]}},
+
+    {"id": "b03", "act": "context",
+     "narration": "Fred Smith was a former Marine officer who served two tours in Vietnam. In nineteen seventy one he founded Federal Express, putting in about four million dollars of his own inheritance.",
+     "visual": {"type": "portrait", "name": "Fred Smith", "years": "1944–2025", "role": "Marine officer · Founder of Federal Express", "initials": "FS"},
+     "sources": ["refbiz", "scb2025"], "certainty": "estimate"},
+
+    {"id": "b04", "act": "story",
+     "narration": "You may have heard he first described the idea in a Yale paper, and got a C. The paper was real. The C is legend. Asked years later, Smith said he didn't know his grade. He had probably made his usual C.",
+     "visual": {"type": "compare", "title": "The Yale paper", "left": {"label": "The legend", "text": "His professor gave the idea a C"}, "right": {"label": "The record", "text": "\"Probably made my usual C\""}},
+     "sources": ["qi2017"], "certainty": "disputed"},
+
+    {"id": "b05", "act": "story",
+     "narration": "His idea was simple, and a little strange. Fly every package to one city, Memphis, in the middle of the night. Sort it. Then fly it out again before morning. Even a package going next door would travel through Memphis.",
+     "visual": {"type": "stage", "world": "paper", "kicker": "The idea", "caption": "Everything through Memphis", "highlight": ["Memphis"],
+       "actors": [
+         {"id": "hub", "asset": "Airplane", "x": 0.5, "y": 0.6, "size": 0.2, "label": "Memphis", "cue": "Memphis"},
+         {"id": "p1", "asset": "Package", "x": 0.1, "y": 0.4, "size": 0.1, "cue": "every", "do": [{"act": "fly", "to": [0.44, 0.55], "cue": "one city", "dur": 1.0}, {"act": "fly", "to": [0.9, 0.36], "cue": "fly it out", "dur": 1.0}]},
+         {"id": "p2", "asset": "Package", "x": 0.9, "y": 0.42, "size": 0.1, "cue": "package", "do": [{"act": "fly", "to": [0.56, 0.55], "cue": "one city", "dur": 1.0}, {"act": "fly", "to": [0.12, 0.34], "cue": "fly it out", "dur": 1.0}]},
+         {"id": "fred", "asset": "Stick think happy red", "x": 0.18, "size": 0.34, "at": 0.1, "do": [{"act": "swap", "asset": "Stick point happy red", "cue": "Sort"}]},
+         {"id": "moon", "asset": "Crescent moon", "x": 0.85, "y": 0.22, "size": 0.12, "cue": "night"}
+       ]},
+     "sources": ["britannica", "fedexexpress"]},
+
+    {"id": "b06", "act": "story",
+     "narration": "On April seventeenth, nineteen seventy three, fourteen small jets took off to serve twenty five cities. That first night, they carried one hundred and eighty six packages.",
+     "visual": {"type": "stat", "value": 186, "label": "packages on the first night", "note": "14 jets · 25 cities · 17 April 1973"},
+     "sources": ["ebsco", "fool2013", "fedexexpress"]},
+
+    {"id": "b07", "act": "story",
+     "narration": "And the money started burning. The planes flew every night, full or not. Fuel kept getting more expensive. Within about two years, the company had lost close to thirty million dollars.",
+     "visual": {"type": "stage", "world": "paper", "kicker": "1973–1975", "caption": "Flying full or empty", "highlight": ["empty"],
+       "actors": [
+         {"id": "cash", "asset": "Battery", "x": 0.22, "y": 0.6, "size": 0.24, "label": "Cash", "at": 0.1, "do": [{"act": "swap", "asset": "Low battery", "cue": "burning"}, {"act": "shake", "cue": "lost"}]},
+         {"id": "fire", "asset": "Fire", "x": 0.22, "y": 0.4, "size": 0.12, "enter": "pop", "cue": "burning"},
+         {"id": "plane", "asset": "Airplane", "x": 0.1, "y": 0.3, "size": 0.14, "cue": "planes", "do": [{"act": "fly", "to": [0.9, 0.2], "cue": "every night", "dur": 2.0}]},
+         {"id": "pump", "asset": "Fuel pump", "x": 0.55, "size": 0.22, "cue": "Fuel", "do": [{"act": "grow", "to": 1.3, "cue": "expensive", "dur": 0.8}]},
+         {"id": "fred", "asset": "Stick stand worried red", "x": 0.8, "size": 0.38, "at": 0.2, "do": [{"act": "swap", "asset": "Stick facepalm sad red", "cue": "lost"}]}
+       ]},
+     "sources": ["britannica", "ebsco"], "certainty": "estimate"},
+
+    {"id": "b08", "act": "turn",
+     "narration": "Then came the week the story is famous for. By one account, FedEx had about five thousand dollars in the bank, and a fuel bill of some twenty four thousand due on Monday. Smith asked the conglomerate General Dynamics for more money. They said no.",
+     "visual": {"type": "stage", "world": "paper", "kicker": "The worst week", "caption": "Bill due Monday", "highlight": ["Monday"],
+       "actors": [
+         {"id": "fred", "asset": "Stick hold worried red", "x": 0.3, "size": 0.4, "label": "Smith", "at": 0.1, "do": [{"act": "swap", "asset": "Stick slump sad red", "cue": "no"}]},
+         {"id": "bat", "asset": "Low battery", "x": 0.1, "y": 0.5, "size": 0.14, "cue": "five thousand"},
+         {"id": "bill", "asset": "Memo", "x": 0.5, "y": 0.45, "size": 0.14, "cue": "fuel bill", "do": [{"act": "shake", "cue": "Monday"}]},
+         {"id": "gd", "asset": "Stick stand neutral grey glasses", "x": 0.75, "size": 0.4, "label": "General Dynamics", "cue": "conglomerate",
+          "do": [{"act": "say", "text": "No.", "cue": "no", "side": "left", "hold": 1.8}]}
+       ]},
+     "sources": ["frock2006"], "certainty": "attributed"},
+
+    {"id": "b09", "act": "complication",
+     "narration": "So, as founding executive Roger Frock tells it, Smith reportedly took the last five thousand dollars to Las Vegas, played blackjack, and won about twenty seven thousand. Enough to pay for the fuel. The planes kept flying.",
+     "visual": {"type": "stage", "world": "paper", "kicker": "Las Vegas · as the story goes", "caption": "$5,000 became $32,000", "highlight": ["$32,000"],
+       "actors": [
+         {"id": "fred", "asset": "Stick hold determined red", "x": 0.3, "size": 0.4, "label": "Smith", "at": 0.1, "do": [{"act": "swap", "asset": "Stick cheer joy red", "cue": "won"}]},
+         {"id": "cards", "asset": "Joker", "x": 0.52, "y": 0.5, "size": 0.14, "cue": "blackjack", "do": [{"act": "wobble", "cue": "blackjack"}]},
+         {"id": "bag", "asset": "Money bag", "x": 0.75, "size": 0.3, "cue": "Las Vegas",
+          "do": [{"act": "count", "from": 5000, "to": 5000, "prefix": "$", "cue": "Las Vegas", "pos": 0.55}, {"act": "count", "from": 5000, "to": 32000, "prefix": "$", "cue": "won", "dur": 1.0}, {"act": "grow", "to": 1.3, "cue": "won", "dur": 0.6}]},
+         {"id": "plane", "asset": "Airplane", "x": 0.1, "y": 0.28, "size": 0.12, "cue": "planes", "do": [{"act": "fly", "to": [0.9, 0.16], "cue": "flying", "dur": 1.4}]}
+       ]},
+     "sfx": [{"kind": "hit", "cue": "won", "gain_db": -4}],
+     "sources": ["frock2006", "britannica"], "certainty": "attributed"},
+
+    {"id": "b10", "act": "story",
+     "narration": "Here's the part the legend skips. Twenty seven thousand dollars bought FedEx about one more week. The company was losing far more than that. Even Smith reportedly called the win not decisive. Just an omen.",
+     "visual": {"type": "quote", "text": "The $27,000 wasn't decisive, but it was an omen that things would get better.", "by": "Fred Smith", "attribution": "attributed"},
+     "sources": ["entrepreneur", "britannica"], "certainty": "attributed"},
+
+    {"id": "b11", "act": "story",
+     "narration": "What really saved FedEx was slower, and far less exciting. Smith kept pitching investors, again and again, and raised tens of millions of dollars more, enough to keep the network flying until the planes filled up. In nineteen seventy six, FedEx made its first profit, about three point six million dollars.",
+     "visual": {"type": "stage", "world": "paper", "kicker": "The real rescue", "caption": "Pitch. Again. And again.", "highlight": ["again."],
+       "actors": [
+         {"id": "fred", "asset": "Stick walk determined red", "x": 0.15, "size": 0.38, "at": 0.1, "do": [{"act": "walk", "to": 0.35, "cue": "pitching", "dur": 1.6}, {"act": "swap", "asset": "Stick cheer joy red", "cue": "profit"}]},
+         {"id": "inv", "asset": "Stick stand neutral grey", "x": 0.6, "size": 0.34, "repeat": 3, "dx": 0.11, "cue": "investors", "do": [{"act": "swap", "asset": "Stick stand happy grey", "cue": "raised"}]},
+         {"id": "deal", "asset": "Handshake", "x": 0.47, "y": 0.4, "size": 0.12, "cue": "raised"},
+         {"id": "bat", "asset": "Low battery", "x": 0.12, "y": 0.3, "size": 0.12, "at": 0.2, "do": [{"act": "swap", "asset": "Battery", "cue": "flying"}]},
+         {"id": "up", "asset": "Chart increasing", "x": 0.88, "y": 0.34, "size": 0.14, "cue": "profit", "label": "1976"}
+       ]},
+     "sources": ["refbiz", "britannica"], "certainty": "estimate"},
+
+    {"id": "b12", "act": "principle",
+     "narration": "Lesson one. Cash is oxygen. FedEx's idea was right, and it still almost died. A company doesn't die when its idea is bad. It dies when the money runs out. So always know how many weeks of cash you have left.",
+     "visual": {"type": "stage", "world": "paper", "kicker": "Lesson 1", "caption": "Cash is oxygen", "highlight": ["oxygen"],
+       "actors": [
+         {"id": "idea", "asset": "Light bulb", "x": 0.25, "y": 0.6, "size": 0.22, "label": "Idea", "cue": "idea", "do": [{"act": "glow", "cue": "right"}]},
+         {"id": "cash", "asset": "Battery", "x": 0.5, "y": 0.62, "size": 0.24, "label": "Cash", "cue": "Cash", "do": [{"act": "swap", "asset": "Low battery", "cue": "runs out"}]},
+         {"id": "fred", "asset": "Stick stand happy red", "x": 0.76, "size": 0.4, "at": 0.2, "do": [{"act": "swap", "asset": "Stick slump sad red", "cue": "runs out"}, {"act": "swap", "asset": "Stick point determined red", "cue": "weeks"}]}
+       ]}},
+
+    {"id": "b13", "act": "principle",
+     "narration": "Lesson two. A gamble buys time, not a business. The blackjack win bought one week. Investors who believed in the plan bought years. Take luck when it comes, but never make it your plan.",
+     "visual": {"type": "stage", "world": "paper", "kicker": "Lesson 2", "caption": "A gamble buys time, not a business", "highlight": ["time,"],
+       "actors": [
+         {"id": "joker", "asset": "Joker", "x": 0.2, "y": 0.6, "size": 0.16, "cue": "blackjack"},
+         {"id": "glass", "asset": "Hourglass not done", "x": 0.4, "y": 0.62, "size": 0.2, "label": "1 week", "cue": "one week", "do": [{"act": "tilt", "to": 180, "cue": "week", "dur": 0.6}]},
+         {"id": "deal", "asset": "Handshake", "x": 0.62, "y": 0.6, "size": 0.18, "label": "Years", "cue": "Investors", "do": [{"act": "grow", "to": 1.3, "cue": "years", "dur": 0.8}]},
+         {"id": "fred", "asset": "Stick think neutral red", "x": 0.84, "size": 0.38, "at": 0.2, "do": [{"act": "swap", "asset": "Stick wave smirk red", "cue": "luck"}]}
+       ]}},
+
+    {"id": "b14", "act": "principle",
+     "narration": "Lesson three. Some ideas only work at full size. One plane to Memphis is useless. Twenty five cities connected every night is a network. Half a network is worth almost nothing, so FedEx had to survive the expensive years while it grew.",
+     "visual": {"type": "stage", "world": "paper", "kicker": "Lesson 3", "caption": "Some ideas only work at full size", "highlight": ["full size"],
+       "actors": [
+         {"id": "one", "asset": "Airplane", "x": 0.2, "y": 0.6, "size": 0.16, "cue": "One plane", "do": [{"act": "wobble", "cue": "useless"}]},
+         {"id": "pz", "asset": "Puzzle piece", "x": 0.42, "y": 0.62, "size": 0.12, "repeat": 4, "dx": 0.1, "stagger": 0.25, "cue": "connected"},
+         {"id": "fred", "asset": "Stick stand happy red", "x": 0.86, "size": 0.38, "at": 0.2, "do": [{"act": "swap", "asset": "Stick cheer joy red", "cue": "network"}, {"act": "swap", "asset": "Stick stand determined red", "cue": "survive"}]}
+       ]}},
+
+    {"id": "b15", "act": "question",
+     "narration": "Now test yourself. Your startup has three weeks of cash, and your biggest customer just said maybe. Which move actually saves you?",
+     "visual": {"type": "question", "question": "Three weeks of cash. Your biggest customer said maybe. Which move saves you?",
+       "choices": ["One big bet to win cash fast", "Cut costs and raise money from people who believe in the plan", "Launch a second product"],
+       "answer": "Cut costs and raise money. A gamble buys time, not a business.", "think_seconds": 5}},
+
+    {"id": "b16", "act": "recap",
+     "narration": "So, three lessons from the night FedEx went to Vegas. Cash is oxygen. A gamble buys time, not a business. And some ideas only work at full size.",
+     "visual": {"type": "list", "title": "Three lessons", "check": true, "items": [
+       {"text": "Cash is oxygen", "cue": "cash is", "icon": "Battery"},
+       {"text": "A gamble buys time, not a business", "cue": "a gamble", "icon": "Hourglass not done"},
+       {"text": "Some ideas only work at full size", "cue": "some ideas", "icon": "Puzzle piece"}]}},
+
+    {"id": "b17", "act": "close",
+     "narration": "Fred Smith did go to Las Vegas. But a lucky night is not why FedEx flies today. The bet made the legend. Surviving made the company.",
+     "visual": {"type": "stage", "world": "paper", "kicker": "Founder Stories", "caption": "The bet made the legend. Surviving made the company.", "highlight": ["Surviving"],
+       "actors": [
+         {"id": "slot", "asset": "Slot machine", "x": 0.2, "size": 0.26, "at": 0.1, "do": [{"act": "fade", "to": 0.25, "cue": "Surviving"}]},
+         {"id": "fred", "asset": "Stick stand smirk red", "x": 0.5, "size": 0.42, "label": "Fred Smith", "at": 0.2, "do": [{"act": "swap", "asset": "Stick wave happy red", "cue": "Surviving"}]},
+         {"id": "plane", "asset": "Airplane", "x": 0.72, "y": 0.5, "size": 0.16, "cue": "flies", "do": [{"act": "fly", "to": [0.92, 0.18], "cue": "company", "dur": 1.4}]}
+       ]},
+     "sources": ["frock2006", "britannica"]},
+
+    {"id": "b18", "act": "close",
+     "narration": "Next time: three broke founders, a box of cereal, and how Airbnb stayed alive when every investor said no.",
+     "visual": {"type": "end", "kicker": "Founder Stories", "title": "The Night FedEx Went to Vegas",
+       "next": "No. 2: Airbnb and the cereal boxes",
+       "cta": "Follow for the next founder story",
+       "sources_line": "Sources: Frock, Changing How the World Does Business (2006); Britannica; Quote Investigator (2017); EBSCO; Motley Fool (2013); Entrepreneur.",
+       "disclaimer": "Educational storytelling. The blackjack account is attributed, not verified."}}
+  ]
+}

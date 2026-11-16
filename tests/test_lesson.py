@@ -176,3 +176,30 @@ def test_silent_title_beat_is_allowed_only_with_hold():
     L["beats"][1]["visual"].pop("hold")
     with pytest.raises(schema.LessonError):
         schema.validate(L)
+
+
+def test_stickman_actors_parse_draw_and_install(tmp_path):
+    from vfactory.lesson import assets, stage, stick
+
+    assert assets.exists("Stick slump sad red cap") and assets.exists("stick CHEER joy")
+    assert not assets.exists("Stick moonwalk happy") and not assets.exists("Stick stand furious")
+    for pose in stick.POSES:
+        for face in stick.FACES:
+            s = stick.svg(f"Stick {pose} {face} blue glasses cap")
+            assert s.startswith("<svg") and s.endswith("</svg>")
+    assert assets.search("stick sl")[0].startswith("Stick slump")
+    names = {"Stick stand happy red", "Stick slump sad red"}
+    srcs = assets.install(names, tmp_path)
+    assert all(v.endswith(".svg") and (tmp_path / v).read_text().startswith("<svg") for v in srcs.values())
+    assert stage.src("Stick stand happy red") == "assets/img/stick-stand-happy-red.svg"
+
+
+def test_paper_world_stage_with_stickman_swap_renders():
+    v = {"type": "stage", "world": "paper", "caption": "Cash is oxygen",
+         "actors": [{"id": "fred", "asset": "Stick stand worried red", "label": "Fred Smith",
+                     "do": [{"act": "swap", "asset": "Stick cheer joy red", "at": 1.0}]},
+                    {"id": "bag", "asset": "Money bag", "x": 0.7}]}
+    schema._validate_stage("t", v)
+    look = scenes.Look({"font": "Inter"}, 1920, 1080)
+    html = scenes.scene_file(look, "p1", v, 4.0, lambda w, d: d, 3.0, last=False)
+    assert "assets/img/stick-cheer-joy-red.svg" in html and "assets/img/money-bag.png" in html and "#FBF8F1" in html
