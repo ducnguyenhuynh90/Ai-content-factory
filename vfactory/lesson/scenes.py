@@ -434,6 +434,8 @@ def stage(L, sid, v, dur, cue):
         {f'<div id="{sid}-k" class="kicker" style="margin-bottom:{L.px(0.016)}px">{E(v["kicker"])}</div>' if v.get('kicker') else ''}
         {f'<div id="{sid}-t" class="serif" style="font-size:{L.fs(0.062)}px;line-height:1.15;text-wrap:balance;">{cap}</div>' if cap else ''}</div></div>"""
     at = cue(v["caption_cue"], 0.5) if v.get("caption_cue") else 0.35
+    if v.get("frame0"):  # a hook / thumbnail: the claim is already composed on frame 0, no fade-in
+        return m, css, tw
     if v.get("kicker"):
         tw.append(_fade(f"#{sid}-k", 0.15))
     if cap:

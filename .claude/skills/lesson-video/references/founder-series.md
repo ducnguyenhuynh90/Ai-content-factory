@@ -16,6 +16,7 @@ principles = turn, close = release.
   Poses: stand, wave, cheer, point, think, shrug, shocked, hold, facepalm, slump, run, walk, sit.
   Faces: happy, joy, sad, worried, shocked, neutral, determined, smirk, tired.
   Act a mood change with `swap` on the cue word: `Stick hold worried red` → `Stick cheer joy red` on "won".
+- Hook stage: `"frame0": true` and actors with `"enter": "none"`, so frame 0 (the thumbnail) already shows the claim.
 - Props are Fluent Emoji 3D (airplane, money bag, battery, light bulb...).
 - No likenesses: the founder is a generic stickman with a name label (or the `portrait` medallion).
 

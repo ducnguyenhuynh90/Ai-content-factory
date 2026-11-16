@@ -114,7 +114,7 @@ def _face(cx, cy, face) -> str:
                 f'<circle cx="{cx + ex}" cy="{ey}" r="6" fill="#FFF" stroke="{INK}" stroke-width="2.6"/>{dot(cx + ex, ey, 2.6)}'
                 f'<ellipse cx="{cx}" cy="{m + 2}" rx="4.5" ry="6" fill="{INK}"/>')
     if face == "determined":
-        return (eyes + f'<path d="M{cx - 14} {ey - 10} L{cx - 4} {ey - 6}" {s}/><path d="M{cx + 14} {ey - 10} L{cx + 4} {ey - 6}" {s}/>'
+        return (eyes + f'<path d="M{cx - 13} {ey - 10} L{cx - 4} {ey - 8}" {s}/><path d="M{cx + 13} {ey - 10} L{cx + 4} {ey - 8}" {s}/>'
                 f'<path d="M{cx - 7} {m + 1} L{cx + 7} {m + 1}" {s}/>')
     if face == "smirk":
         return eyes + f'<path d="M{cx - 7} {m + 1} Q{cx + 3} {m + 3} {cx + 9} {m - 4}" {s}/>'

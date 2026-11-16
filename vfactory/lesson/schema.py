@@ -37,7 +37,7 @@ VISUALS = {
     "question": {"required": ["question"], "optional": ["choices", "answer", "think_seconds"]},
     "end": {"required": ["title"], "optional": ["cta", "next", "sources_line", "disclaimer"]},
     # the idea acted out by familiar pictures in a picture-book world (vfactory/lesson/stage.py)
-    "stage": {"required": ["actors"], "optional": ["world", "caption", "highlight", "kicker", "caption_cue"]},
+    "stage": {"required": ["actors"], "optional": ["world", "caption", "highlight", "kicker", "caption_cue", "frame0"]},
 }
 TEXT_ONLY = ("statement", "stat", "quote", "principle", "compare", "list")  # words or one number, no picture
 WPM = 150.0  # documentary narration pace (Vox guide; Kokoro at speed 0.95 lands close)
