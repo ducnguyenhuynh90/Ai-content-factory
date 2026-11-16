@@ -73,7 +73,7 @@
 
     {"id": "b04", "act": "story",
      "narration": "You may have heard he first described the idea in a Yale paper, and got a C. The paper was real. The C is legend. Asked years later, Smith said he didn't know his grade. He had probably made his usual C.",
-     "visual": {"type": "compare", "title": "The Yale paper", "left": {"label": "The legend", "text": "His professor gave the idea a C"}, "right": {"label": "The record", "text": "\"Probably made my usual C\""}},
+     "visual": {"type": "compare", "title": "The Yale paper", "left": {"title": "The legend", "items": ["His professor gave the idea a C", "Retold in business books for decades"]}, "right": {"title": "The record", "items": ["Smith: he didn't know his grade", "\"Probably made my usual C\""]}},
      "sources": ["qi2017"], "certainty": "disputed"},
 
     {"id": "b05", "act": "story",

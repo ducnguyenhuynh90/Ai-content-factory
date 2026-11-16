@@ -182,8 +182,8 @@ def build(lesson_path: str | Path, out_dir: str | Path | None = None, *, force: 
   <style>
     #root {{ position: absolute; inset: 0; }}
     #chrome-rail {{ position: absolute; left: {look.px(0.05)}px; top: {look.px(0.045)}px; font-family: '{brand()['font']}';
-      font-weight: 700; font-size: {look.fs(0.026)}px; letter-spacing: 0.28em; text-transform: uppercase; color: #CFC8BC;
-      background: rgba(10,10,10,0.55); padding: {look.px(0.006)}px {look.px(0.016)}px; border-radius: 999px; }}
+      font-weight: 700; font-size: {look.fs(0.026)}px; letter-spacing: 0.28em; text-transform: uppercase; color: #EDE7DC;
+      background: rgba(10,10,10,0.82); padding: {look.px(0.006)}px {look.px(0.016)}px; border-radius: 999px; }}
     #chrome-prog {{ position: absolute; left: 0; bottom: 0; width: {W}px; height: 6px; background: {look.accent}; transform-origin: 0 50%; }}
   </style>
   <div id="root" data-composition-id="chrome" data-width="{W}" data-height="{Hh}">

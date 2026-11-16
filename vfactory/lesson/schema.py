@@ -77,6 +77,11 @@ def validate(L: dict) -> None:
                 raise LessonError(f"{where}: visual '{t}' needs '{r}'")
         if t == "stage":
             _validate_stage(where, v)
+        if t == "compare":
+            for side in ("left", "right"):
+                col = v[side]
+                if not isinstance(col, dict) or "title" not in col or not isinstance(col.get("items", []), list):
+                    raise LessonError(f"{where}: compare '{side}' must be {{\"title\": ..., \"items\": [...]}}")
         for s in b.get("sources", []):
             if s not in src_ids:
                 raise LessonError(f"{where}: unknown source '{s}'")

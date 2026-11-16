@@ -203,3 +203,10 @@ def test_paper_world_stage_with_stickman_swap_renders():
     look = scenes.Look({"font": "Inter"}, 1920, 1080)
     html = scenes.scene_file(look, "p1", v, 4.0, lambda w, d: d, 3.0, last=False)
     assert "assets/img/stick-cheer-joy-red.svg" in html and "assets/img/money-bag.png" in html and "#FBF8F1" in html
+
+
+def test_compare_columns_need_title_and_items():
+    L = _mini()
+    L["beats"][1]["visual"] = {"type": "compare", "left": {"label": "x", "text": "y"}, "right": {"title": "r", "items": []}}
+    with pytest.raises(schema.LessonError, match="compare 'left'"):
+        schema.validate(L)

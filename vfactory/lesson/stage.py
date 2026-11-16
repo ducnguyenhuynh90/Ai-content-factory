@@ -298,7 +298,8 @@ def stage(L, sid, v, dur, cue):
     #{sid}-wrap .say-right {{ border-bottom-left-radius: {L.px(0.004)}px; }}
     #{sid}-wrap .say-left {{ border-bottom-right-radius: {L.px(0.004)}px; }}
     #{sid}-wrap .cnt {{ position: absolute; left: -50%; right: -50%; text-align: center; font-family: {L.serif}; font-weight: 600;
-      font-size: {L.fs(0.06)}px; color: #FFFFFF; text-shadow: 0 2px {L.px(0.012)}px rgba(0,0,0,0.55); font-variant-numeric: tabular-nums; }}
+      font-size: {L.fs(0.06)}px; color: {"#1A1A1A" if world == "paper" else "#FFFFFF"};
+      text-shadow: {"none" if world == "paper" else f"0 2px {L.px(0.012)}px rgba(0,0,0,0.55)"}; font-variant-numeric: tabular-nums; }}
     #{sid}-wrap .glow {{ position: absolute; inset: -30%; border-radius: 50%; background: radial-gradient(closest-side, {L.accent}66, transparent); }}
     #{sid}-cap .serif {{ color: {ink}; text-shadow: {"none" if world == "paper" else f"0 2px {L.px(0.014)}px rgba(0,0,0,0.35)"}; }}
     #{sid}-cap .kicker {{ color: {kick}; }}
